@@ -3,7 +3,9 @@ package com.example.androidpoint.Activity;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Build;
 import android.os.Bundle;
 import android.text.Html;
@@ -28,11 +30,46 @@ public class OnBoardingScreenActivity extends AppCompatActivity {
     TextView[] dots;
     ViewPagerAdapter viewPagerAdapter;
 
+    String prevStarted = "yes";
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        SharedPreferences sharedpreferences = getSharedPreferences(getString(R.string.app_name), Context.MODE_PRIVATE);
+        if (!sharedpreferences.getBoolean(prevStarted, false)) {
+            SharedPreferences.Editor editor = sharedpreferences.edit();
+            editor.putBoolean(prevStarted, Boolean.TRUE);
+            editor.apply();
+        } else {
+            moveToSecondary();
+        }
+    }
+
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_on_boarding_screen);
 
+
+
+      /*  SharedPreferences preferences= getSharedPreferences("PREFERENCE",MODE_PRIVATE);
+        String FirstTime= preferences.getString("FirstTimeInstall","");
+
+        if (FirstTime.equals("yes"))
+        {
+            Intent i = new Intent(OnBoardingScreenActivity.this, MainActivity.class);
+            startActivity(i);
+//            finish();
+        }
+        else {
+            SharedPreferences.Editor editor=preferences.edit();
+            editor.putString("FirstTimeInstall","Yes");
+            editor.apply();
+        }
+*/
 
         backbtn = findViewById(R.id.btn_back);
         nextbtn = findViewById(R.id.btn_next);
@@ -54,7 +91,7 @@ public class OnBoardingScreenActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                if (getitem(0) < 3)
+                if (getitem(0) < 2)
                     mslideviewPager.setCurrentItem(getitem(1), true);
 
                 else {
@@ -90,7 +127,7 @@ public class OnBoardingScreenActivity extends AppCompatActivity {
     }
 
     public void setUpindicator(int position) {
-        dots = new TextView[4];
+        dots = new TextView[3];
         mDotLayout.removeAllViews();
 
 
@@ -140,6 +177,13 @@ public class OnBoardingScreenActivity extends AppCompatActivity {
     private int getitem(int i) {
 
         return mslideviewPager.getCurrentItem() + i;
+
+    }
+
+    private void moveToSecondary() {
+
+        Intent i = new Intent(OnBoardingScreenActivity.this, MainActivity.class);
+        startActivity(i);
 
     }
 }

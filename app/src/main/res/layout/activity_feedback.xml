@@ -64,51 +64,7 @@
                     android:background="@drawable/drawer">
 
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginEnd="10dp"
-                        android:layout_marginTop="20dp"
-                        android:padding="7dp"
-                        android:background="@color/offwhite"
-                        android:orientation="horizontal">
 
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:hint="@string/To"
-                            android:layout_gravity="center_vertical"
-                            android:textStyle="bold"
-                            android:textColor="@color/blackalpha"
-                            android:textSize="16sp" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginStart="10dp"
-                        android:background="@drawable/boder_sos"
-                        android:layout_marginEnd="10dp"
-                        android:padding="7dp"
-                        android:orientation="horizontal">
-
-                        <EditText
-                            android:id="@+id/email"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:hint="@string/Email_Address"
-                            android:gravity="clip_vertical"
-                            android:textSize="14sp"
-                            android:inputType="textEmailAddress"
-                            android:textColor="#333333"
-                            android:scrollbars="vertical"
-                            />
-
-
-                    </LinearLayout>
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -123,7 +79,7 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:hint="@string/Subject"
+                            android:hint="@string/Name"
                             android:layout_gravity="center_vertical"
                             android:textStyle="bold"
                             android:textColor="@color/blackalpha"
@@ -144,9 +100,10 @@
                         android:orientation="horizontal">
 
                         <EditText
+                            android:id="@+id/name"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:hint="@string/Subject"
+                            android:hint="@string/Name"
                             android:gravity="clip_vertical"
                             android:textSize="14sp"
                             android:textColor="#333333"
@@ -167,7 +124,7 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:hint="@string/Message"
+                            android:hint="@string/FeedBack"
                             android:layout_gravity="center_vertical"
                             android:textStyle="bold"
                             android:textColor="@color/blackalpha"
@@ -188,7 +145,7 @@
 
 
                         <EditText
-                            android:id="@+id/message"
+                            android:id="@+id/feedBack"
                             android:layout_width="match_parent"
                             android:layout_height="90dp"
                             android:padding="10dp"

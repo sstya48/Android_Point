@@ -7,6 +7,7 @@ import androidx.fragment.app.Fragment;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.CompoundButton;
@@ -75,9 +76,17 @@ public class MenuActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
+              /*  Intent intent = new Intent(Intent.ACTION_SEND);
+                String UriText = "mailto:" + Uri.encode("vinaykumarmori1511@gmail.com") + "?sunject="+
+                        Uri.encode("Feedback") + "$body=" + Uri.encode("");
+                Uri uri = Uri.parse(UriText);
+                intent.setData(uri);
+                startActivity(Intent.createChooser(intent, "send email"));*/
 
                 Intent i = new Intent(MenuActivity.this, Feedback.class);
                 startActivity(i);
+
+
             }
         });
 

@@ -382,8 +382,13 @@
     <string name="Devloper">Devloper</string>
     <string name="Social_Media">Social Media</string>
     <string name="Android_Alians">Android_Alians</string>
-    <!--    <string name="Android_Alians">@Android_Alians</string>-->
-    <string name="Follow_me_on">Follow me on…</string>
+    <string name="Follow_me_on">Follow me on...</string>
+    <string name="To">To:</string>
+    <string name="Email_Address">Email Address</string>
+    <string name="Subject">Subject</string>
+    <string name="Message">Message:</string>
+    <string name="SEND">SEND</string>
+    <string name="Type_your_message_here">Type_your_message_here....:</string>
 
 
     //Headings

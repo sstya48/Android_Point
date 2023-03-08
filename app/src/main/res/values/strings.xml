@@ -61,6 +61,7 @@
     <string name="Message">Message:</string>
     <string name="SEND">SEND</string>
     <string name="Name">Name</string>
+    <string name="version">Version</string>
     <string name="Type_your_message_here">Type_your_message_here....:</string>
 
 
@@ -85,5 +86,22 @@
     <string name="normal">normal screens are at least 320dp x 470dp</string>
     <string name="small">small screens are at least 320dp x 426dp</string>
 
+
+    <string name="tip_title2">If you want to add different sizes of images, put them in following folder accordingly, Android OS will automatically take the
+    most suitable image out of them.</string>
+
+    <string name="ldpi">res/drawble-ldpi/my_image.png</string>
+    <string name="mdpi">res/drawble-mdpi/my_image.png</string>
+    <string name="hdpi">res/drawble-hdpi/my_image.png</string>
+    <string name="xhdpi">res/drawble-xhdpi/my_image.png</string>
+
+
+    <string name="tip_title3">If you want to make application which support for multiple devices, also you have to create
+        different layout directories for put diffrent layouts.</string>
+
+    <string name="layout">res/layout/my_layout.xml</string>
+    <string name="layout_small">res/layout-small/my_layout.xml</string>
+    <string name="layout_large">res/layout-large/my_layout.xml</string>
+    <string name="layout_xlarge">res/layout-xlarge/my_layout.xml</string>
 
 </resources>

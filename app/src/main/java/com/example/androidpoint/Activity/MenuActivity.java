@@ -22,10 +22,9 @@ import com.example.androidpoint.SaveState;
 
 public class MenuActivity extends AppCompatActivity {
 
-    LinearLayout about_us;
-    LinearLayout rate_us;
-    LinearLayout shareapp;
-    LinearLayout feedback;
+
+    LinearLayout shareapp,tips,feedback,rate_us, about_us ;
+
     FrameLayout frameLayout;
 
     MainActivity mContext;
@@ -71,6 +70,18 @@ public class MenuActivity extends AppCompatActivity {
         light = findViewById(R.id.light);
         shareapp = (LinearLayout) findViewById(R.id.shareapp);
         feedback = (LinearLayout) findViewById(R.id.feedback);
+        tips = (LinearLayout) findViewById(R.id.tips);
+
+
+        tips.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+
+                Intent tips = new Intent(MenuActivity.this, TipsActivity.class);
+                startActivity(tips);
+            }
+        });
 
         feedback.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -50,8 +50,8 @@
     <color name="header">#ffe1aa</color>
     <color name="blue_dark">#3668D9</color>
     <color name="menu_text">#333333</color>
-    <color name="sub_toolbar">#DCDCDC</color>
-    <color name="btn">#DCDCDC</color>
+<!--    <color name="sub_toolbar">#DCDCDC</color>-->
+<!--    <color name="btn">#DCDCDC</color>-->
     <color name="selected_menu">#DCDCDC</color>
 
 
@@ -61,6 +61,7 @@
 
 
     <color name="background">#F0F4F3</color>
+    <color name="background1">#80F0F4F3</color>
     <color name="buttontext">#50C2C9</color>
 
     //indicator color

@@ -13,6 +13,7 @@
         android:layout_height="match_parent"
         android:layout_gravity="start"
         android:background="@drawable/drawerbck"
+        android:layout_margin="10dp"
         android:fitsSystemWindows="true">
 
 
@@ -240,6 +241,7 @@
                         android:layout_marginRight="10dp"/>
 
                     <LinearLayout
+                        android:id="@+id/tips"
                         android:layout_width="match_parent"
                         android:layout_height="55dp"
                         android:orientation="horizontal"
@@ -585,14 +587,14 @@
                     </LinearLayout>
 
 
-                    <View
+                    <!--<View
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
                         android:background="#c4c4c4"
                         android:layout_marginLeft="10dp"
                         android:layout_marginTop="5dp"
                         android:layout_marginRight="10dp"/>
-
+-->
                 </LinearLayout>
 
 

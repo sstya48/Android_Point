@@ -43,7 +43,7 @@
                     android:layout_height="wrap_content"
                     android:maxLines="1"
                     android:paddingStart="7dp"
-                    android:text="@string/taylor_albert_johanson"
+                    android:text="taylor_albert_johanson"
                     android:textColor="#181A20"
                     android:textSize="18sp"
                     android:textStyle="bold" />
@@ -59,7 +59,7 @@
                         android:drawablePadding="5dp"
                         android:maxLength="10"
                         android:layout_marginStart="10dp"
-                        android:text="@string/class_4"
+                        android:text="class_4"
                         android:textColor="@color/alphaback"
                         android:textSize="16sp" />
 
@@ -117,7 +117,7 @@
                         android:layout_height="wrap_content"
                         android:maxLines="1"
                         android:paddingStart="7dp"
-                        android:text="@string/taylor_albert_johanson"
+                        android:text="taylor_albert_johanson"
                         android:textColor="#181A20"
                         android:textSize="18sp"
                         android:textStyle="bold" />
@@ -133,7 +133,7 @@
                             android:drawablePadding="5dp"
                             android:maxLength="10"
                             android:layout_marginStart="10dp"
-                            android:text="@string/class_4"
+                            android:text="class_4"
                             android:textColor="@color/alphaback"
                             android:textSize="16sp" />
 
@@ -191,7 +191,7 @@
                         android:layout_height="wrap_content"
                         android:maxLines="1"
                         android:paddingStart="7dp"
-                        android:text="@string/taylor_albert_johanson"
+                        android:text="taylor_albert_johanson"
                         android:textColor="#181A20"
                         android:textSize="18sp"
                         android:textStyle="bold" />
@@ -207,7 +207,7 @@
                             android:drawablePadding="5dp"
                             android:maxLength="10"
                             android:layout_marginStart="10dp"
-                            android:text="@string/class_4"
+                            android:text="class_4"
                             android:textColor="@color/alphaback"
                             android:textSize="16sp" />
 

@@ -4,187 +4,194 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activity.Feedback"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context=".Activity.Feedback">
 
 
-        <LinearLayout
-            android:id="@+id/header1"
-            android:layout_width="match_parent"
+    <LinearLayout
+        android:id="@+id/header1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/student_attendance"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="2dp"
+            android:padding="7dp"
+            android:src="@drawable/arrow" />
+
+        <TextView
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="center_vertical"
-            android:padding="10dp"
-            android:orientation="horizontal">
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="5dp"
+            android:includeFontPadding="false"
+            android:text="@string/FeedBack"
+            android:textColor="#03A9F4"
+            android:textSize="18sp"
+            android:textStyle="bold" />
 
-            <androidx.appcompat.widget.AppCompatImageView
-                android:id="@+id/student_attendance"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_marginStart="2dp"
-                android:padding="7dp"
-                android:src="@drawable/arrow" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:layout_marginStart="5dp"
-                android:text="@string/FeedBack"
-                android:textColor="#03A9F4"
-                android:includeFontPadding="false"
-                android:textSize="18sp"
-                android:textStyle="bold" />
-
-        </LinearLayout>
-
-<ScrollView
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    </LinearLayout>
 
 
-        <LinearLayout
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/gray"
+        android:orientation="vertical"
+        android:gravity="center_horizontal|center_vertical"
+
+        >
+
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:background="@color/gray">
+            android:layout_height="match_parent">
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:orientation="vertical"
-                android:layout_marginBottom="100dp"
-                android:layout_marginTop="40dp">
+                android:layout_gravity="center"
+               >
 
-                <LinearLayout
+              <!--  <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginEnd="20dp"
-                    android:background="@drawable/drawer">
-
-
-
+                    >-->
 
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="20dp"
-                        android:layout_marginStart="10dp"
-                        android:background="@color/offwhite"
-                        android:layout_marginEnd="10dp"
-                        android:padding="7dp"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:hint="@string/Name"
-                            android:layout_gravity="center_vertical"
-                            android:textStyle="bold"
-                            android:textColor="@color/blackalpha"
-                            android:textSize="16sp" />
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginEnd="20dp"
+                        android:background="@drawable/drawer"
+                        android:orientation="vertical">
 
 
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:id="@+id/subject"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginEnd="10dp"
-                        android:padding="7dp"
-                        android:background="@drawable/boder_sos"
-                        android:orientation="horizontal">
-
-                        <EditText
-                            android:id="@+id/name"
+                        <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:hint="@string/Name"
-                            android:gravity="clip_vertical"
-                            android:textSize="14sp"
-                            android:textColor="#333333"
-                            android:scrollbars="vertical"
-                            />
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginEnd="10dp"
+                            android:background="@color/offwhite"
+                            android:orientation="horizontal"
+                            android:padding="7dp">
 
-                    </LinearLayout>
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="20dp"
-                        android:layout_marginStart="10dp"
-                        android:background="@color/offwhite"
-                        android:layout_marginEnd="10dp"
-                        android:padding="7dp"
-                        android:orientation="horizontal">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center_vertical"
+                                android:hint="@string/Name"
+                                android:textColor="@color/blackalpha"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
 
-                        <TextView
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/subject"
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:hint="@string/FeedBack"
-                            android:layout_gravity="center_vertical"
-                            android:textStyle="bold"
-                            android:textColor="@color/blackalpha"
-                            android:textSize="16sp" />
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="5dp"
+                            android:padding="7dp">
 
+                            <EditText
+                                android:id="@+id/name"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                android:hint="@string/Name"
+                                android:scrollbars="vertical"
+                                android:textColor="#333333"
+                                android:padding="10dp"
+                                android:background="@drawable/boder_sos"
+                                android:textSize="14sp" />
 
+                        </LinearLayout>
 
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginStart="5dp"
-                        android:layout_marginEnd="5dp"
-                        android:padding="7dp"
-                        android:orientation="horizontal">
-
-
-                        <EditText
-                            android:id="@+id/feedBack"
+                        <LinearLayout
                             android:layout_width="match_parent"
-                            android:layout_height="90dp"
-                            android:padding="10dp"
-                            android:gravity="clip_vertical"
-                            android:hint="@string/Type_your_message_here"
-                            android:textSize="14sp"
-                            android:textColor="#333333"
-                            android:background="@drawable/boder_sos"
-                            android:overScrollMode="always"
-                            android:scrollbarStyle="insideInset"
-                            android:scrollbars="vertical"
-                            />
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginEnd="10dp"
+                            android:background="@color/offwhite"
+                            android:orientation="horizontal"
+                            android:padding="7dp">
 
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center_vertical"
+                                android:hint="@string/FeedBack"
+                                android:textColor="@color/blackalpha"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="5dp"
+                            android:orientation="horizontal"
+                            android:padding="7dp">
+
+
+                            <EditText
+                                android:id="@+id/feedBack"
+                                android:layout_width="match_parent"
+                                android:layout_height="90dp"
+                                android:background="@drawable/boder_sos"
+                                android:gravity="center_vertical"
+                                android:hint="@string/Type_your_message_here"
+                                android:overScrollMode="always"
+                                android:padding="10dp"
+                                android:scrollbarStyle="insideInset"
+                                android:scrollbars="vertical"
+                                android:textColor="#333333"
+                                android:textSize="14sp" />
+
+                        </LinearLayout>
+
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/sendBtn"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/message"
+                            android:layout_marginStart="22dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginEnd="22dp"
+                            android:layout_marginBottom="50dp"
+                            android:background="@drawable/button_bg"
+                            android:backgroundTint="@color/button"
+                            android:gravity="center"
+                            android:text="@string/SEND"
+                            android:textColor="@color/white"
+                            android:textSize="20sp" />
                     </LinearLayout>
 
-
-                    <androidx.appcompat.widget.AppCompatButton
-                        android:id="@+id/sendBtn"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@+id/message"
-                        android:layout_marginStart="22dp"
-                        android:layout_marginTop="20dp"
-                        android:layout_marginEnd="22dp"
-                        android:background="@drawable/button_bg"
-                        android:backgroundTint="@color/button"
-                        android:gravity="center"
-                        android:layout_marginBottom="50dp"
-                        android:text="@string/SEND"
-                        android:textColor="@color/white"
-                        android:textSize="20sp" />
-                </LinearLayout>
+<!--                </LinearLayout>-->
 
             </LinearLayout>
-
-
-
-        </LinearLayout>
 
         </ScrollView>
 
     </LinearLayout>
+
+
+</LinearLayout>

@@ -62,7 +62,7 @@
     <string name="SEND">SEND</string>
     <string name="Name">Name</string>
     <string name="version">Version</string>
-    <string name="Type_your_message_here">Type_your_message_here....:</string>
+    <string name="Type_your_message_here">Type Your Message Here....:</string>
 
 
     //Headings
@@ -79,7 +79,7 @@
 
 
     //Tips
-    <string name="tip_title1">Diffrent Screen sizes are as follows</string>
+    <string name="tip_title1">Different Screen sizes are as follows</string>
 
     <string name="xlarge">xlarge screens are at least 720dp x 960dp</string>
     <string name="large">large screens are at least 480dp x 640dp</string>
@@ -97,7 +97,7 @@
 
 
     <string name="tip_title3">If you want to make application which support for multiple devices, also you have to create
-        different layout directories for put diffrent layouts.</string>
+        different layout directories for put different layouts.</string>
 
     <string name="layout">res/layout/my_layout.xml</string>
     <string name="layout_small">res/layout-small/my_layout.xml</string>

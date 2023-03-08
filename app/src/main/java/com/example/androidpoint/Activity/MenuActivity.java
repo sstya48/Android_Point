@@ -192,3 +192,90 @@ public class MenuActivity extends AppCompatActivity {
     }
 
 }
+
+ // Dark mode==========================================================================================================
+
+      /*  saveState = new SaveState(this);
+        if (saveState.getState()==true) {
+            getDelegate().setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+        }else{
+            getDelegate().setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+        }
+*/
+
+/*
+        if (AppCompatDelegate.getDefaultNightMode() == AppCompatDelegate.MODE_NIGHT_YES) {
+            isNightModeOn = false;
+
+        } else if (AppCompatDelegate.getDefaultNightMode() == AppCompatDelegate.MODE_NIGHT_NO) {
+            isNightModeOn = true;
+        } else {
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+
+        }*/
+
+
+        /*mode_change.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                if (isNightModeOn) {
+                    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+                    isNightModeOn = false;
+
+
+                } else {
+                    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+                    isNightModeOn = true;
+                }
+
+            }
+        });*/
+
+
+
+/// for dakr mode=========================================================================================
+
+        /*if (saveState.getState()==true) {
+            mode_dark.setChecked(true);
+        }*/
+
+
+/*
+        mode_dark.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked) {
+                    saveState.setState(true);
+//                    getDelegate().setLocalNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+                    getDelegate().setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+                    Intent i= new Intent(MenuActivity.this,MainActivity.class);
+                    startActivity(i);
+//                    mContext.btnMenu.setImageDrawable(getResources().getDrawable(R.drawable.menu_dark));
+
+                }
+                else{
+                    saveState.setState(false);
+//                    getDelegate().setLocalNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+                    getDelegate().setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+                    Intent i= new Intent(MenuActivity.this,MainActivity.class);
+                    startActivity(i);
+
+                }
+            }
+        });
+*/
+
+        /*mode_dark.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (mode_dark.isChecked())
+                {
+                    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+                }
+                else{
+                    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+
+                }
+            }
+        });*/

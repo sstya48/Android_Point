@@ -332,7 +332,8 @@
 
     <!--    new my 2-  ==================================================================  -->
 
-    <string name="HelloWord_Toast_Message">HelloWord \nToast Message</string>
+    <string name="HelloWord_Toast_Message">Hello World \nToast Message</string>
+    <string name="HelloWord_Toast">hello World Toast Message</string>
     <string name="Activity_LifeCycle">Activity LifeCycle</string>
     <string name="Hide_TitleBar">Hide TitleBar</string>
     <string name="Screen_Orientation">Screen Orientation</string>

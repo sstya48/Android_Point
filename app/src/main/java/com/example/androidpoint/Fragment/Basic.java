@@ -3,11 +3,13 @@ package com.example.androidpoint.Fragment;
 import android.annotation.SuppressLint;
 import android.os.Bundle;
 
+import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import com.denzcoskun.imageslider.ImageSlider;
 import com.denzcoskun.imageslider.constants.ScaleTypes;
@@ -17,7 +19,6 @@ import com.example.androidpoint.R;
 import java.util.ArrayList;
 
 public class Basic extends Fragment {
-
     ImageSlider imageslider;
 
     @SuppressLint("MissingInflatedId")
@@ -27,17 +28,25 @@ public class Basic extends Fragment {
 
     }
 
+    CardView card_view1, card_view2, card_view3, card_view4;
+
+    public Basic() {
+        // Required empty public constructor
+    }
+
     public static Basic newInstance() {
         Basic fragment = new Basic();
         Bundle args = new Bundle();
         fragment.setArguments(args);
         return fragment;
     }
+
+    @SuppressLint("MissingInflatedId")
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        View view= inflater.inflate(R.layout.fragment_basic, container, false);
+        View view = inflater.inflate(R.layout.fragment_basic, container, false);
 
 
         imageslider = view.findViewById(R.id.imageslider);
@@ -49,10 +58,61 @@ public class Basic extends Fragment {
         slideModels.add(new SlideModel("https://images.pexels.com/photos/1181271/pexels-photo-1181271.jpeg?auto=compress&cs=tinysrgb&w=600", ScaleTypes.FIT));
         slideModels.add(new SlideModel("https://images.pexels.com/photos/226232/pexels-photo-226232.jpeg?auto=compress&cs=tinysrgb&w=600", ScaleTypes.FIT));
 
-        imageslider.setImageList(slideModels,ScaleTypes.FIT);
+        imageslider.setImageList(slideModels, ScaleTypes.FIT);
 
-    return view;
+        card_view1 = view.findViewById(R.id.card_view1);
+        card_view2 = view.findViewById(R.id.card_view2);
+        card_view3 = view.findViewById(R.id.card_view3);
+        card_view4 = view.findViewById(R.id.card_view4);
+
+
+        card_view1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                B_card_1_Fragment nextFrag= new B_card_1_Fragment();
+                getActivity().getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.frame_container, nextFrag, "findThisFragment")
+                        .addToBackStack(null)
+                        .commit();
+                Toast.makeText(getActivity().getBaseContext(), "Hello World..!",Toast.LENGTH_SHORT).show();
+            }
+        });
+        card_view2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                B_card_2_Fragment nextFrag= new B_card_2_Fragment();
+                getActivity().getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.frame_container, nextFrag, "findThisFragment")
+                        .addToBackStack(null)
+                        .commit();
+            }
+        });
+        card_view3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                B_card_3_Fragment nextFrag= new B_card_3_Fragment();
+                getActivity().getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.frame_container, nextFrag, "findThisFragment")
+                        .addToBackStack(null)
+                        .commit();
+            }
+        });
+        card_view4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                B_card_4_Fragment nextFrag= new B_card_4_Fragment();
+                getActivity().getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.frame_container, nextFrag, "findThisFragment")
+                        .addToBackStack(null)
+                        .commit();
+            }
+        });
+
+
+        return view;
 
 
     }
+
 }
+

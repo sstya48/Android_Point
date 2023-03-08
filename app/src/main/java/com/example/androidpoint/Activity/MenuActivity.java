@@ -183,7 +183,7 @@ public class MenuActivity extends AppCompatActivity {
         sendIntent.setType("text/plain");
         context.startActivity(sendIntent);
     }
-//===========
+
 }
 
  // Dark mode==========================================================================================================

@@ -430,13 +430,13 @@
                             <ImageView
                                 android:layout_width="62dp"
                                 android:layout_height="62dp"
-                                android:src="@drawable/searchview" />
+                                android:src="@drawable/currenlocation" />
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="24dp"
-                                android:text="@string/Search_View"
+                                android:text="@string/Curren_Location"
                                 android:textColor="#0B204C"
                                 android:textSize="16dp"
                                 android:textStyle="bold" />

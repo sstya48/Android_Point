@@ -375,6 +375,7 @@
     <string name="Support_US">Support US</string>
     <string name="Share">Share</string>
     <string name="Rate_US">Rate US</string>
+    <string name="Curren_Location">Curren Location</string>
     <string name="Ads">Ads</string>
     <string name="About_US">About US</string>
     <string name="About__US">About US</string>
@@ -399,13 +400,12 @@
     <string name="heading_three">Cashless Payment</string>
     <string name="heading_fourth">Pay Anywhere</string>
 
+
     //Description
     <string name="desc_one">Grow your Business By Accepting Card Payments with The New Card Reader</string>
     <string name="desc_two">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</string>
     <string name="desc_three">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</string>
     <string name="desc_fourth">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</string>
-
-
 
 
 </resources>

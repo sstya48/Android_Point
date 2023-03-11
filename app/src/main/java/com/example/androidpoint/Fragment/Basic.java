@@ -20,6 +20,8 @@ import java.util.ArrayList;
 
 public class Basic extends Fragment {
     ImageSlider imageslider;
+    CardView card_view1, card_view2, card_view3, card_view4,card_view5,card_view6,card_view7,card_view8,card_view9,card_view10,card_view11,card_view12,card_view13,card_view14,card_view15,card_view16;
+
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -28,7 +30,6 @@ public class Basic extends Fragment {
 
     }
 
-    CardView card_view1, card_view2, card_view3, card_view4;
 
     public Basic() {
         // Required empty public constructor
@@ -64,6 +65,18 @@ public class Basic extends Fragment {
         card_view2 = view.findViewById(R.id.card_view2);
         card_view3 = view.findViewById(R.id.card_view3);
         card_view4 = view.findViewById(R.id.card_view4);
+        card_view5 = view.findViewById(R.id.card_view5);
+        card_view6 = view.findViewById(R.id.card_view6);
+        card_view7 = view.findViewById(R.id.card_view7);
+        card_view8 = view.findViewById(R.id.card_view8);
+        card_view9 = view.findViewById(R.id.card_view9);
+        card_view10 = view.findViewById(R.id.card_view10);
+        card_view11 = view.findViewById(R.id.card_view11);
+        card_view12 = view.findViewById(R.id.card_view12);
+        card_view13 = view.findViewById(R.id.card_view13);
+        card_view14 = view.findViewById(R.id.card_view14);
+        card_view15 = view.findViewById(R.id.card_view15);
+        card_view16 = view.findViewById(R.id.card_view16);
 
 
         card_view1.setOnClickListener(new View.OnClickListener() {
@@ -74,7 +87,7 @@ public class Basic extends Fragment {
                         .replace(R.id.frame_container, nextFrag, "findThisFragment")
                         .addToBackStack(null)
                         .commit();
-                Toast.makeText(getActivity().getBaseContext(), "Hello World..!",Toast.LENGTH_SHORT).show();
+
             }
         });
         card_view2.setOnClickListener(new View.OnClickListener() {
@@ -107,12 +120,129 @@ public class Basic extends Fragment {
                         .commit();
             }
         });
+        card_view5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                B_card_5_Fragment nextFrag= new B_card_5_Fragment();
+                getActivity().getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.frame_container, nextFrag, "findThisFragment")
+                        .addToBackStack(null)
+                        .commit();
+            }
+        });
+        card_view6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                B_card_6_Fragment nextFrag= new B_card_6_Fragment();
+                getActivity().getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.frame_container, nextFrag, "findThisFragment")
+                        .addToBackStack(null)
+                        .commit();
+            }
+        });
+        card_view7.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                B_card_7_Fragment nextFrag= new B_card_7_Fragment();
+                getActivity().getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.frame_container, nextFrag, "findThisFragment")
+                        .addToBackStack(null)
+                        .commit();
+            }
+        });
+        card_view8.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                B_card_8_Fragment nextFrag= new B_card_8_Fragment();
+                getActivity().getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.frame_container, nextFrag, "findThisFragment")
+                        .addToBackStack(null)
+                        .commit();
+            }
+        });
+        card_view9.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                B_card_9_Fragment nextFrag= new B_card_9_Fragment();
+                getActivity().getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.frame_container, nextFrag, "findThisFragment")
+                        .addToBackStack(null)
+                        .commit();
+            }
+        });
+        card_view10.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                B_card_10_Fragment nextFrag= new B_card_10_Fragment();
+                getActivity().getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.frame_container, nextFrag, "findThisFragment")
+                        .addToBackStack(null)
+                        .commit();
+            }
+        });
+        card_view11.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                B_card_11_Fragment nextFrag= new B_card_11_Fragment();
+                getActivity().getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.frame_container, nextFrag, "findThisFragment")
+                        .addToBackStack(null)
+                        .commit();
+            }
+        });
+        card_view12.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                B_card_12_Fragment nextFrag= new B_card_12_Fragment();
+                getActivity().getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.frame_container, nextFrag, "findThisFragment")
+                        .addToBackStack(null)
+                        .commit();
+            }
+        });
+        card_view13.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                B_card_13_Fragment nextFrag= new B_card_13_Fragment();
+                getActivity().getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.frame_container, nextFrag, "findThisFragment")
+                        .addToBackStack(null)
+                        .commit();
+            }
+        });
+        card_view14.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                B_card_14_Fragment nextFrag= new B_card_14_Fragment();
+                getActivity().getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.frame_container, nextFrag, "findThisFragment")
+                        .addToBackStack(null)
+                        .commit();
+            }
+        });
+        card_view15.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                B_card_15_Fragment nextFrag= new B_card_15_Fragment();
+                getActivity().getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.frame_container, nextFrag, "findThisFragment")
+                        .addToBackStack(null)
+                        .commit();
+            }
+        });
+        card_view16.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                B_card_16_Fragment nextFrag= new B_card_16_Fragment();
+                getActivity().getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.frame_container, nextFrag, "findThisFragment")
+                        .addToBackStack(null)
+                        .commit();
+            }
+        });
 
 
         return view;
-
-
     }
-
 }
 

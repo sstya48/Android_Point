@@ -54,7 +54,7 @@
                     android:layout_height="650dp"
                     android:padding="10dp"
                     android:gravity="clip_vertical"
-                    android:text="hello"
+                    android:text="Toast_message"
                     android:textSize="14sp"
                     android:textColor="#333333"
                     android:background="@drawable/boder_sos"

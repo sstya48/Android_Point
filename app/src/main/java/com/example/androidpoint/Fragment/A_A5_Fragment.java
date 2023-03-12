@@ -23,9 +23,6 @@ public class A_A5_Fragment extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_a__a5, container, false);
 
-        //String[] courses = { "C", "Data structures", "Interview prep", "Algorithms", "DSA with java", "OS" };
-
-
         String [] values =
                 {"Your Bank","BOI","SBI","HDFC","PNB","OBC","BOB","ICICI","BOA",};
         Spinner spinner = (Spinner) view.findViewById(R.id.spinner);

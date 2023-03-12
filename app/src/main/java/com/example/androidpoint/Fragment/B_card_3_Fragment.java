@@ -10,13 +10,15 @@ import android.widget.TextView;
 import androidx.appcompat.widget.AppCompatImageView;
 import androidx.fragment.app.Fragment;
 
+import com.example.androidpoint.DemoFragments.Hello_World_Fragment;
+import com.example.androidpoint.DemoFragments.Hide_Title_Demo_Fragment;
 import com.example.androidpoint.R;
 
 public class B_card_3_Fragment extends Fragment {
 
     TextView hide_title_xml,hide_title_java;
 
-    AppCompatImageView Btn_arrow;
+    AppCompatImageView Btn_arrow,hide_title_demo;
 
     @SuppressLint("SetTextI18n")
     @Override
@@ -27,6 +29,8 @@ public class B_card_3_Fragment extends Fragment {
 
         hide_title_xml= view.findViewById(R.id.hide_title_xml);
         hide_title_java= view.findViewById(R.id.hide_title_java);
+
+        hide_title_demo=view.findViewById(R.id.hide_title_demo);
 
         Btn_arrow=view.findViewById(R.id.Btn_arrow);
 
@@ -41,9 +45,19 @@ public class B_card_3_Fragment extends Fragment {
             }
         });
 
+        hide_title_demo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Hide_Title_Demo_Fragment hello_world_demo= new Hide_Title_Demo_Fragment();
+                getActivity().getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.frame_container, hello_world_demo, "Hide Title DEMO")
+                        .addToBackStack(null)
+                        .commit();
+            }
+        });
 
 
-        hide_title_java.setText("package first.javatpoint.com.hidetitlebar;  \n" +
+        hide_title_java.setText("package first.androidalians.com.hidetitlebar;  \n" +
                 "  \n" +
                 "import android.support.v7.app.AppCompatActivity;  \n" +
                 "import android.os.Bundle;  \n" +
@@ -72,7 +86,7 @@ public class B_card_3_Fragment extends Fragment {
                 "    xmlns:tools=\"http://schemas.android.com/tools\"  \n" +
                 "    android:layout_width=\"match_parent\"  \n" +
                 "    android:layout_height=\"match_parent\"  \n" +
-                "    tools:context=\"first.javatpoint.com.hidetitlebar.MainActivity\">  \n" +
+                "    tools:context=\"first.androidalians.com.hidetitlebar.MainActivity\">  \n" +
                 "  \n" +
                 "    <TextView  \n" +
                 "        android:layout_width=\"wrap_content\"  \n" +

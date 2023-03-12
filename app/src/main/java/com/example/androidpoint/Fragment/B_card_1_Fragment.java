@@ -11,6 +11,7 @@ import android.widget.SearchView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.appcompat.widget.AppCompatImageView;
 import androidx.fragment.app.Fragment;
 
 import com.example.androidpoint.R;
@@ -26,6 +27,8 @@ public class B_card_1_Fragment extends Fragment {
 
     ArrayAdapter<String> adapter;
 
+
+    AppCompatImageView Btn_arrow;
 
     @SuppressLint("SetTextI18n")
     @Override
@@ -46,6 +49,22 @@ public class B_card_1_Fragment extends Fragment {
         adapter = new ArrayAdapter<String>(R.layout.fragment_b_card_1_,list);
         feedBack.setAdapter(adapter);
 */
+
+
+        Btn_arrow=view.findViewById(R.id.Btn_arrow);
+
+        Btn_arrow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Basic basic= new Basic();
+                getActivity().getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.frame_container, basic, "Back Button Basic")
+                        .addToBackStack(null)
+                        .commit();
+            }
+        });
+
+
 
         hello_toast_java.setText("package com.example.helloworld;\n" +
                 "\n" +

@@ -5,6 +5,7 @@
     <!--    new my 2-  ==================================================================  -->
 
     <string name="HelloWord_Toast_Message">HelloWord \nToast Message</string>
+    <string name="HelloWord_Toast">HelloWord Toast Message</string>
     <string name="Activity_LifeCycle">Activity LifeCycle</string>
     <string name="Hide_TitleBar">Hide TitleBar</string>
     <string name="Screen_Orientation">Screen Orientation</string>
@@ -57,6 +58,7 @@
     <string name="Follow_me_on">Follow me on...</string>
     <string name="To">To:</string>
     <string name="Email_Address">Email Address</string>
+    <string name="Curren_Location">Curren Location</string>
     <string name="Subject">Subject</string>
     <string name="Message">Message:</string>
     <string name="SEND">SEND</string>
@@ -103,5 +105,14 @@
     <string name="layout_small">res/layout-small/my_layout.xml</string>
     <string name="layout_large">res/layout-large/my_layout.xml</string>
     <string name="layout_xlarge">res/layout-xlarge/my_layout.xml</string>
+
+
+    //Code-- String==============================================================================================
+
+
+    <string name="mainactivity">MainActivity.java</string>
+    <string name="activity_main">activity_main.xml</string>
+
+
 
 </resources>

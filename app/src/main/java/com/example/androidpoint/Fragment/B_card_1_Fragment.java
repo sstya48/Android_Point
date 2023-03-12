@@ -1,5 +1,6 @@
 package com.example.androidpoint.Fragment;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -17,18 +18,24 @@ import com.example.androidpoint.R;
 import java.util.ArrayList;
 
 public class B_card_1_Fragment extends Fragment {
-    TextView feedBack;
+
+
+    TextView hello_toast_java,hello_toast_xml;
 
     ArrayList<String> list;
 
     ArrayAdapter<String> adapter;
 
 
+    @SuppressLint("SetTextI18n")
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
         View view = inflater.inflate(R.layout.fragment_b_card_1_, container, false);
+
+        hello_toast_java= view.findViewById(R.id.hello_toast_java);
+        hello_toast_xml= view.findViewById(R.id.hello_toast_xml);
 
 
         /*feedBack = (TextView) view.findViewById(R.id.feedBack);
@@ -39,6 +46,36 @@ public class B_card_1_Fragment extends Fragment {
         adapter = new ArrayAdapter<String>(R.layout.fragment_b_card_1_,list);
         feedBack.setAdapter(adapter);
 */
+
+        hello_toast_java.setText("package com.example.helloworld;\n" +
+                "\n" +
+                "import android.support.v7.app.AppCompatActivity;\n" +
+                "import android.os.Bundle;\n" +
+                "\n" +
+                "public class MainActivity extends AppCompatActivity {\n" +
+                "   @Override\n" +
+                "   protected void onCreate(Bundle savedInstanceState) {\n" +
+                "      super.onCreate(savedInstanceState);\n" +
+                "      setContentView(R.layout.activity_main);\n" +
+                "   }\n" +
+                "}");
+
+        hello_toast_xml.setText("<RelativeLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\n" +
+                "   xmlns:tools=\"http://schemas.android.com/tools\"\n" +
+                "   android:layout_width=\"match_parent\"\n" +
+                "   android:layout_height=\"match_parent\" >\n" +
+                "   \n" +
+                "   <TextView\n" +
+                "      android:layout_width=\"wrap_content\"\n" +
+                "      android:layout_height=\"wrap_content\"\n" +
+                "      android:layout_centerHorizontal=\"true\"\n" +
+                "      android:layout_centerVertical=\"true\"\n" +
+                "      android:padding=\"@dimen/padding_medium\"\n" +
+                "      android:text=\"@string/hello_world\"\n" +
+                "      tools:context=\".MainActivity\" />\n" +
+                "      \n" +
+                "</RelativeLayout>");
+
 
 
 

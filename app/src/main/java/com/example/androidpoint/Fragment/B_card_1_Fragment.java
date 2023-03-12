@@ -5,30 +5,20 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
-import android.widget.ListView;
-import android.widget.SearchView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.appcompat.widget.AppCompatImageView;
 import androidx.fragment.app.Fragment;
 
+import com.example.androidpoint.DemoFragments.Hello_World_Fragment;
 import com.example.androidpoint.R;
-
-import java.util.ArrayList;
 
 public class B_card_1_Fragment extends Fragment {
 
 
     TextView hello_toast_java,hello_toast_xml;
 
-    ArrayList<String> list;
-
-    ArrayAdapter<String> adapter;
-
-
-    AppCompatImageView Btn_arrow;
+    AppCompatImageView Btn_arrow,hello_world_demo;
 
     @SuppressLint("SetTextI18n")
     @Override
@@ -49,6 +39,7 @@ public class B_card_1_Fragment extends Fragment {
         adapter = new ArrayAdapter<String>(R.layout.fragment_b_card_1_,list);
         feedBack.setAdapter(adapter);
 */
+        hello_world_demo= view.findViewById(R.id.hello_world_demo);
 
 
         Btn_arrow=view.findViewById(R.id.Btn_arrow);
@@ -64,6 +55,17 @@ public class B_card_1_Fragment extends Fragment {
             }
         });
 
+
+        hello_world_demo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Hello_World_Fragment hello_world_demo= new Hello_World_Fragment();
+                getActivity().getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.frame_container, hello_world_demo, "SCROLL DEMO")
+                        .addToBackStack(null)
+                        .commit();
+            }
+        });
 
 
         hello_toast_java.setText("package com.example.helloworld;\n" +

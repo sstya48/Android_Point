@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/container_b_card1"
     android:orientation="vertical"
     android:background="#FFFFFF"
@@ -36,9 +37,9 @@
 
     </LinearLayout>
 
-        <!--<RelativeLayout
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">-->
+            android:layout_height="match_parent">
 
 
             <ScrollView
@@ -121,11 +122,10 @@
 
             </LinearLayout>
 
-
             </ScrollView>
 
-          <!--  <androidx.appcompat.widget.AppCompatImageView
-                android:id="@+id/movableSOS"
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/hello_world_demo"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
                 android:layout_alignParentEnd="true"
@@ -137,8 +137,8 @@
                 android:focusable="true"
                 android:visibility="visible"
                 app:srcCompat="@drawable/codepart" />
--->
 
-<!--    </RelativeLayout>-->
+
+    </RelativeLayout>
 
 </LinearLayout>

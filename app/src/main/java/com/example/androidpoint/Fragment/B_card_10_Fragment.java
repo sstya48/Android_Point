@@ -3,7 +3,6 @@ package com.example.androidpoint.Fragment;
 import android.annotation.SuppressLint;
 import android.os.Bundle;
 
-import androidx.appcompat.widget.AppCompatButton;
 import androidx.appcompat.widget.AppCompatImageView;
 import androidx.fragment.app.Fragment;
 
@@ -12,6 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.example.androidpoint.DemoFragments.Scroll_Demo_Fragment;
 import com.example.androidpoint.R;
 
 public class B_card_10_Fragment extends Fragment {

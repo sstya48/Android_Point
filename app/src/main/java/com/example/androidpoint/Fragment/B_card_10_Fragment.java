@@ -19,7 +19,7 @@ public class B_card_10_Fragment extends Fragment {
 
     TextView scroll_java,scroll_xml;
 
-    AppCompatImageView Btn_arrow;
+    AppCompatImageView Btn_arrow,scroll_demo;
 
 
 
@@ -33,6 +33,8 @@ public class B_card_10_Fragment extends Fragment {
         scroll_java=view.findViewById(R.id.scroll_java);
         scroll_xml=view.findViewById(R.id.scroll_xml);
 
+        scroll_demo=view.findViewById(R.id.scroll_demo);
+
         Btn_arrow=view.findViewById(R.id.Btn_arrow);
 
         Btn_arrow.setOnClickListener(new View.OnClickListener() {
@@ -43,6 +45,19 @@ public class B_card_10_Fragment extends Fragment {
                         .replace(R.id.frame_container, basic, "Back Button Basic")
                         .addToBackStack(null)
                         .commit();
+            }
+        });
+
+        scroll_demo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Scroll_Demo_Fragment scroll_demo= new Scroll_Demo_Fragment();
+                getActivity().getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.frame_container, scroll_demo, "SCROLL DEMO")
+                        .addToBackStack(null)
+                        .commit();
+
             }
         });
 

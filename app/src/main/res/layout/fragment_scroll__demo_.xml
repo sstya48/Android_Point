@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    tools:context=".Fragment.Scroll_Demo_Fragment">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Vertical ScrollView example"
+        android:id="@+id/textView"
+        android:layout_gravity="center_horizontal"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true" />
+
+
+    <ScrollView android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollView">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Button 1"
+                android:background="@color/mango"
+                android:layout_margin="8dp"
+                android:textColor="@color/white"
+                />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Button 2"
+                android:background="@color/purple_200"
+                android:layout_margin="8dp"
+                android:textColor="@color/white"
+                />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Button 3"
+                android:background="@color/teal_700"
+                android:layout_margin="8dp"
+                android:textColor="@color/white"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Button 4"
+                android:background="@color/lightpeach"
+                android:layout_margin="8dp"
+                android:textColor="@color/white"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Button 5"
+                android:background="@color/active"
+                android:layout_margin="8dp"
+                android:textColor="@color/white"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Button 6"
+                android:background="@color/mango"
+                android:layout_margin="8dp"
+                android:textColor="@color/white"
+                />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Button 7"
+                android:background="@color/purple_200"
+                android:layout_margin="8dp"
+                android:textColor="@color/white"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Button 8"
+                android:background="@color/teal_700"
+                android:layout_margin="8dp"
+                android:textColor="@color/white"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Button 9"
+                android:background="@color/lightpeach"
+                android:layout_margin="8dp"
+                android:textColor="@color/white"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Button 10"
+                android:background="@color/active"
+                android:layout_margin="8dp"
+                android:textColor="@color/white"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Button 11"
+                android:background="@color/mango"
+                android:layout_margin="8dp"
+                android:textColor="@color/white"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Button 12"
+                android:background="@color/purple_200"
+                android:layout_margin="8dp"
+                android:textColor="@color/white"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Button 13"
+                android:background="@color/teal_700"
+                android:layout_margin="8dp"
+                android:textColor="@color/white"/>
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Button 14"
+                android:background="@color/lightpeach"
+                android:layout_margin="8dp"
+                android:textColor="@color/white"/>
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Button 15"
+                android:background="@color/active"
+                android:layout_margin="8dp"
+                android:textColor="@color/white"/>
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Button 16"
+                android:background="@color/mango"
+                android:layout_margin="8dp"
+                android:textColor="@color/white"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Button 17"
+                android:background="@color/purple_200"
+                android:layout_margin="8dp"
+                android:textColor="@color/white"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Button 18"
+                android:background="@color/teal_700"
+                android:layout_margin="8dp"
+                android:textColor="@color/white"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Button 19"
+                android:background="@color/lightpeach"
+                android:layout_margin="8dp"
+                android:textColor="@color/white"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Button 20"
+                android:background="@color/active"
+                android:layout_margin="8dp"
+                android:textColor="@color/white"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</FrameLayout>

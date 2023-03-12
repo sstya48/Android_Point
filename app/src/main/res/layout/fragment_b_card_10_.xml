@@ -126,7 +126,7 @@
 
 
             <androidx.appcompat.widget.AppCompatImageView
-                android:id="@+id/movableSOS"
+                android:id="@+id/scroll_demo"
                 app:srcCompat="@drawable/codepart"
                 android:layout_width="60dp"
                 android:layout_height="60dp"

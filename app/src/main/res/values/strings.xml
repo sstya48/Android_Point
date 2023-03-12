@@ -107,7 +107,7 @@
     <string name="layout_xlarge">res/layout-xlarge/my_layout.xml</string>
 
 
-    //Code-- String==============================================================================================
+    //Code==============================================================================================
 
 
     <string name="mainactivity">MainActivity.java</string>

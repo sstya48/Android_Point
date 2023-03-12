@@ -1,4 +1,4 @@
-package com.example.androidpoint.Fragment;
+package com.example.androidpoint.DemoFragments;
 
 import android.os.Bundle;
 
@@ -11,13 +11,9 @@ import android.view.ViewGroup;
 import com.example.androidpoint.R;
 
 
-public class Scroll_Demo_Fragment extends Fragment {
-
-    public Scroll_Demo_Fragment() {
-        // Required empty public constructor
-    }
-   public static Scroll_Demo_Fragment newInstance() {
-        Scroll_Demo_Fragment fragment = new Scroll_Demo_Fragment();
+public class Hello_World_Fragment extends Fragment {
+    public static Hello_World_Fragment newInstance() {
+        Hello_World_Fragment fragment = new Hello_World_Fragment();
         Bundle args = new Bundle();
         fragment.setArguments(args);
         return fragment;
@@ -33,7 +29,7 @@ public class Scroll_Demo_Fragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view= inflater.inflate(R.layout.fragment_scroll__demo_, container, false);
+        View view= inflater.inflate(R.layout.fragment_hello__world_, container, false);
 
         return view;
     }

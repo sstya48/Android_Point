@@ -30,7 +30,7 @@ public class B_card_1_Fragment extends Fragment {
 
     AppCompatImageView Btn_arrow;
 
-    @SuppressLint({"SetTextI18n", "MissingInflatedId"})
+    @SuppressLint("SetTextI18n")
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -40,6 +40,15 @@ public class B_card_1_Fragment extends Fragment {
         hello_toast_java= view.findViewById(R.id.hello_toast_java);
         hello_toast_xml= view.findViewById(R.id.hello_toast_xml);
 
+
+        /*feedBack = (TextView) view.findViewById(R.id.feedBack);
+
+        list = new ArrayList<>();
+        list.add("Lion");
+
+        adapter = new ArrayAdapter<String>(R.layout.fragment_b_card_1_,list);
+        feedBack.setAdapter(adapter);
+*/
 
 
         Btn_arrow=view.findViewById(R.id.Btn_arrow);
@@ -91,5 +100,4 @@ public class B_card_1_Fragment extends Fragment {
 
         return view;
     }
-
 }

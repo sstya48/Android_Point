@@ -38,8 +38,93 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:padding="7dp"
+                android:layout_marginBottom="20dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/java_code"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="20dp"
+                    android:padding="10dp"
+                    android:gravity="clip_vertical"
+                    android:text="@string/mainactivity"
+                    android:textSize="16sp"
+                    android:background="@drawable/code_title_bg"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:layout_marginBottom="15dp"
+                    />
+
+                <TextView
+                    android:id="@+id/activity_lifecycle_java"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:gravity="clip_vertical"
+                    android:text="hello"
+                    android:textSize="14sp"
+                    android:textColor="#333333"
+                    android:background="@drawable/boder_sos"
+                    android:overScrollMode="always"
+                    android:scrollbarStyle="insideInset"
+                    android:layout_marginBottom="20dp"
+                    android:scrollbars="vertical" />
+
+
+
+                <TextView
+                    android:id="@+id/xml_code"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="20dp"
+                    android:padding="10dp"
+                    android:gravity="clip_vertical"
+                    android:text="@string/activity_main"
+                    android:textSize="16sp"
+                    android:background="@drawable/code_title_bg"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:layout_marginBottom="15dp"
+                    />
+
+                <TextView
+                    android:id="@+id/activity_lifecycle_xml"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:gravity="clip_vertical"
+                    android:text="hello"
+                    android:textSize="14sp"
+                    android:textColor="#333333"
+                    android:background="@drawable/boder_sos"
+                    android:overScrollMode="always"
+                    android:scrollbarStyle="insideInset"
+                    android:layout_marginBottom="20dp"
+                    android:scrollbars="vertical" />
+
+            </LinearLayout>
+
+        </ScrollView>
+
+
+
         <androidx.appcompat.widget.AppCompatImageView
-            android:id="@+id/movableSOS"
+            android:id="@+id/activity_cycle_demo"
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:layout_alignParentEnd="true"

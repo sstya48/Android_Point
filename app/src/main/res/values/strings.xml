@@ -113,6 +113,9 @@
 
     <string name="mainactivity">MainActivity.java</string>
     <string name="activity_main">activity_main.xml</string>
+    <string name="activity_second">activity_second.xml</string>
+    <string name="SecondActivity">SecondActivity.java</string>
+    <string name="manifest">AndroidManifest.xml</string>
     <string name="spashactivity">SplashActivity.java</string>
     <string name="spash_activity">splashfile.xml</string>
 

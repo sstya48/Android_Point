@@ -85,8 +85,7 @@ public class B_card_3_Fragment extends Fragment {
                 "    xmlns:app=\"http://schemas.android.com/apk/res-auto\"  \n" +
                 "    xmlns:tools=\"http://schemas.android.com/tools\"  \n" +
                 "    android:layout_width=\"match_parent\"  \n" +
-                "    android:layout_height=\"match_parent\"  \n" +
-                "    tools:context=\"first.androidalians.com.hidetitlebar.MainActivity\">  \n" +
+                "    android:layout_height=\"match_parent\">  \n" +
                 "  \n" +
                 "    <TextView  \n" +
                 "        android:layout_width=\"wrap_content\"  \n" +

@@ -1,5 +1,6 @@
 package com.example.androidpoint.Fragment;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -7,60 +8,94 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.example.androidpoint.R;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link A_card_5_Fragment#newInstance} factory method to
- * create an instance of this fragment.
- */
+
 public class A_card_5_Fragment extends Fragment {
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
+    TextView spinner_java, spinner_xml;
 
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
+    ImageView spinner_output;
 
-    public A_card_5_Fragment() {
-        // Required empty public constructor
-    }
-
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment A_card_5_Fragment.
-     */
-    // TODO: Rename and change types and number of parameters
-    public static A_card_5_Fragment newInstance(String param1, String param2) {
-        A_card_5_Fragment fragment = new A_card_5_Fragment();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
-    }
-
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
-    }
-
+    @SuppressLint("SetTextI18n")
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_a_card_5_, container, false);
+        View view = inflater.inflate(R.layout.fragment_a_card_5_, container, false);
+
+        spinner_output = view.findViewById(R.id.spinner_output);
+        spinner_java = view.findViewById(R.id.spinner_java);
+        spinner_xml = view.findViewById(R.id.spinner_xml);
+
+        spinner_output.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                A_A5_Fragment scroll_demo= new A_A5_Fragment();
+                getActivity().getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.frame_container, scroll_demo, "SCROLL DEMO")
+                        .addToBackStack(null)
+                        .commit();
+            }
+        });
+
+        spinner_java.setText("package example.abhiandriod.spinnerexample;\n" +
+                "\n" +
+                "import android.support.v7.app.AppCompatActivity;\n" +
+                "import android.os.Bundle;\n" +
+                "import android.view.View;\n" +
+                "import android.widget.AdapterView;\n" +
+                "import android.widget.ArrayAdapter;\n" +
+                "import android.widget.Spinner;\n" +
+                "import android.widget.Toast;\n" +
+                "\n" +
+                "public class MainActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener{\n" +
+                "\n" +
+                "String[] bankNames={\"Your Bank \"BOI \",\"SBI \",\"HDFC \",\"PNB \",\"OBC \",\"BOB \",\"ICICI \",\"BOA \"};\n" +
+                "\n" +
+                "@Override\n" +
+                "protected void onCreate(Bundle savedInstanceState) {\n" +
+                "super.onCreate(savedInstanceState);\n" +
+                "setContentView(R.layout.activity_main);\n" +
+                "Spinner spin = (Spinner) findViewById(R.id.simpleSpinner);\n" +
+                "spin.setOnItemSelectedListener(this);\n" +
+                "\n" +
+                "ArrayAdapter aa = new ArrayAdapter(this,android.R.layout.simple_spinner_item,bankNames);\n" +
+                "aa.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);\n" +
+                "spin.setAdapter(aa);\n" +
+                "}\n" +
+                "\n" +
+                "@Override\n" +
+                "public void onItemSelected(AdapterView<?> arg0, View arg1, int position,long id) {\n" +
+                "Toast.makeText(getApplicationContext(), bankNames[position], Toast.LENGTH_LONG).show();\n" +
+                "}\n" +
+                "\n" +
+                "@Override\n" +
+                "public void onNothingSelected(AdapterView<?> arg0) {\n" +
+                "// TODO Auto-generated method stub\n" +
+                "\n" +
+                "}\n" +
+                "}");
+
+        spinner_xml.setText("<?xml version=\"1.0\" encoding=\"utf-8\"?>\n" +
+                "<LinearLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\n" +
+                "    xmlns:tools=\"http://schemas.android.com/tools\"\n" +
+                "    android:layout_width=\"match_parent\"\n" +
+                "    android:layout_height=\"match_parent\"\n" +
+                "    android:orientation=\"vertical\">\n" +
+                "\n" +
+                "    <Spinner\n" +
+                "        android:id=\"@+id/spinner\"\n" +
+                "        android:layout_width=\"149dp\"\n" +
+                "        android:layout_height=\"40dp\"\n" +
+                "        android:layout_gravity=\"center\"\n" +
+                "        android:layout_marginTop=\"100dp\" />\n" +
+                "\n" +
+                "</LinearLayout>");
+
+        return view;
     }
 }

@@ -1,5 +1,6 @@
 package com.example.androidpoint.Fragment;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -7,60 +8,141 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.TextView;
+import android.widget.ToggleButton;
 
 import com.example.androidpoint.R;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link A_card_3_Fragment#newInstance} factory method to
- * create an instance of this fragment.
- */
 public class A_card_3_Fragment extends Fragment {
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
-
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
-
-    public A_card_3_Fragment() {
-        // Required empty public constructor
-    }
-
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment A_card_3_Fragment.
-     */
-    // TODO: Rename and change types and number of parameters
-    public static A_card_3_Fragment newInstance(String param1, String param2) {
-        A_card_3_Fragment fragment = new A_card_3_Fragment();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
-    }
-
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
-    }
-
+    TextView radio_java, radio_xml;
+    ImageView radio_btn_output;
+    @SuppressLint({"MissingInflatedId", "SetTextI18n"})
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_a_card_3_, container, false);
+
+        View view = inflater.inflate(R.layout.fragment_a_card_3_, container, false);
+
+
+        radio_btn_output = view.findViewById(R.id.radio_btn_output);
+        radio_java = view.findViewById(R.id.radio_java);
+        radio_xml = view.findViewById(R.id.radio_xml);
+
+        radio_btn_output.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                A_A3_Fragment scroll_demo= new A_A3_Fragment();
+                getActivity().getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.frame_container, scroll_demo, "SCROLL DEMO")
+                        .addToBackStack(null)
+                        .commit();
+
+            }
+        });
+        radio_java.setText("package example.javatpoint.com.radiogroup;  \n" +
+                "  \n" +
+                "import android.os.Bundle;\n" +
+                "import android.widget.RadioButton;\n" +
+                "import android.widget.RadioGroup;\n" +
+                "import android.widget.Toast;\n" +
+                "import androidx.appcompat.app.AppCompatActivity;\n" +
+                "  \n" +
+                "public class MainActivity extends AppCompatActivity {\n" +
+                "  \n" +
+                "    private RadioGroup radioGroup;\n" +
+                "  \n" +
+                "    @Override\n" +
+                "    protected void onCreate(Bundle savedInstanceState) {\n" +
+                "        super.onCreate(savedInstanceState);\n" +
+                "        setContentView(R.layout.activity_main);\n" +
+                "          \n" +
+                "        radioGroup = findViewById(R.id.idRVLanguages);\n" +
+                "          \n" +
+                "        radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {\n" +
+                "            @Override\n" +
+                "            public void onCheckedChanged(RadioGroup group, int checkedId) {\n" +
+                "                  \n" +
+                "                RadioButton radioButton = findViewById(checkedId);\n" +
+                "                  \n" +
+                "                Toast.makeText(MainActivity.this, \"Selected Radio Button is : \" + radioButton.getText(), Toast.LENGTH_SHORT).show();\n" +
+                "            }\n" +
+                "        });\n" +
+                "    }\n" +
+                "}");
+
+
+        radio_xml.setText("<?xml version=\"1.0\" encoding=\"utf-8\"?>\n" +
+                "<RelativeLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\n" +
+                "    xmlns:tools=\"http://schemas.android.com/tools\"\n" +
+                "    android:layout_width=\"match_parent\"\n" +
+                "    android:layout_height=\"match_parent\"\n" +
+                "    android:orientation=\"vertical\">\n" +
+                "\n" +
+                "    <TextView\n" +
+                "        android:layout_width=\"match_parent\"\n" +
+                "        android:layout_height=\"wrap_content\"\n" +
+                "        android:layout_above=\"@id/radioGroup\"\n" +
+                "        android:layout_margin=\"15dp\"\n" +
+                "        android:text=\"Radio Group in Android\"\n" +
+                "        android:textAlignment=\"center\"\n" +
+                "        android:textColor=\"@color/black\"\n" +
+                "        android:textSize=\"20sp\"\n" +
+                "        android:textStyle=\"bold\" />\n" +
+                "\n" +
+                "    <RadioGroup\n" +
+                "        android:id=\"@+id/radioGroup\"\n" +
+                "        android:layout_width=\"match_parent\"\n" +
+                "        android:layout_height=\"wrap_content\"\n" +
+                "        android:layout_centerInParent=\"true\"\n" +
+                "        android:layout_gravity=\"center\"\n" +
+                "        android:layout_marginStart=\"10dp\"\n" +
+                "        android:layout_marginTop=\"40dp\"\n" +
+                "        android:layout_marginEnd=\"10dp\"\n" +
+                "        android:gravity=\"center\">\n" +
+                "\n" +
+                "        <RadioButton\n" +
+                "            android:id=\"@+id/javaRB\"\n" +
+                "            android:layout_width=\"200dp\"\n" +
+                "            android:layout_height=\"wrap_content\"\n" +
+                "            android:layout_gravity=\"center\"\n" +
+                "            android:checked=\"false\"\n" +
+                "            android:padding=\"4dp\"\n" +
+                "            android:text=\"Kotlin\"\n" +
+                "            android:textAlignment=\"center\"\n" +
+                "            android:textSize=\"20sp\" />\n" +
+                "\n" +
+                "        <RadioButton\n" +
+                "            android:id=\"@+id/cRB\"\n" +
+                "            android:layout_width=\"200dp\"\n" +
+                "            android:layout_height=\"wrap_content\"\n" +
+                "            android:layout_gravity=\"center\"\n" +
+                "            android:checked=\"false\"\n" +
+                "            android:padding=\"4dp\"\n" +
+                "            android:text=\"Android\"\n" +
+                "            android:textAlignment=\"center\"\n" +
+                "            android:textSize=\"20sp\" />\n" +
+                "\n" +
+                "        <RadioButton\n" +
+                "            android:id=\"@+id/pythonRB\"\n" +
+                "            android:layout_width=\"200dp\"\n" +
+                "            android:layout_height=\"wrap_content\"\n" +
+                "            android:layout_gravity=\"center\"\n" +
+                "            android:checked=\"false\"\n" +
+                "            android:padding=\"4dp\"\n" +
+                "            android:text=\"Flutter\"\n" +
+                "            android:textAlignment=\"center\"\n" +
+                "            android:textSize=\"20sp\" />\n" +
+                "\n" +
+                "    </RadioGroup>\n" +
+                "\n" +
+                "</RelativeLayout>");
+
+        
+
+        return view;
     }
 }

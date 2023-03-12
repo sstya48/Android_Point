@@ -107,12 +107,18 @@
     <string name="layout_xlarge">res/layout-xlarge/my_layout.xml</string>
 
 
-    //Code==============================================================================================
+    //Code Show only
+    ==============================================================================================
 
 
     <string name="mainactivity">MainActivity.java</string>
     <string name="activity_main">activity_main.xml</string>
+    <string name="spashactivity">SplashActivity.java</string>
+    <string name="spash_activity">splashfile.xml</string>
 
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 
 </resources>

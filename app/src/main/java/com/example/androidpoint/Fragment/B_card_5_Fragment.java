@@ -65,7 +65,7 @@ public class B_card_5_Fragment extends Fragment {
                 "    android:layout_height=\"match_parent\"\n" +
                 "    android:orientation=\"vertical\"\n" +
                 "    android:gravity=\"center\"\n" +
-                "    tools:context=\".CheckBox_Fragment\">\n" +
+                "      tools:context=\"example.androidalians.com.checkbox.MainActivity\">\n" +
                 "\n" +
                 "    <CheckBox\n" +
                 "        android:id=\"@+id/checkBox\"\n" +

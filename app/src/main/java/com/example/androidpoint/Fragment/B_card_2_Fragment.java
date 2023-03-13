@@ -104,14 +104,12 @@ public class B_card_2_Fragment extends Fragment {
                 "    xmlns:app=\"http://schemas.android.com/apk/res-auto\"  \n" +
                 "    xmlns:tools=\"http://schemas.android.com/tools\"  \n" +
                 "    android:layout_width=\"match_parent\"  \n" +
-                "    android:layout_height=\"match_parent\"  \n" +
-                "    tools:context=\"example.androidalians.com.activitylifecycle.MainActivity\">  \n" +
+                "    android:layout_height=\"match_parent\" > \n" +
                 "  \n" +
                 "    <TextView  \n" +
                 "        android:layout_width=\"wrap_content\"  \n" +
                 "        android:layout_height=\"wrap_content\"  \n" +
                 "        android:text=\"Hello World!\"  \n" +
-                "        app:layout_constraintBottom_toBottomOf=\"parent\"  \n" +
                 "        app:layout_constraintLeft_toLeftOf=\"parent\"  \n" +
                 "        app:layout_constraintRight_toRightOf=\"parent\"  \n" +
                 "        app:layout_constraintTop_toTopOf=\"parent\" />  \n" +

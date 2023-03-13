@@ -69,10 +69,16 @@ public class B_card_3_Fragment extends Fragment {
                 "    @Override  \n" +
                 "    protected void onCreate(Bundle savedInstanceState) {  \n" +
                 "        super.onCreate(savedInstanceState);  \n" +
-                "        requestWindowFeature(Window.FEATURE_NO_TITLE); //will hide the title   \n" +
-                "        getSupportActionBar().hide(); // hide the title bar  \n" +
+                "  \n" +
+                "        //will hide the title  \n" +
+                "        requestWindowFeature(Window.FEATURE_NO_TITLE);    \n" +
+                "  \n" +
+                "       // hide the title bar     \n" +
+                "        getSupportActionBar().hide();  \n" +
+                "  \n" +
+                "        //enable full screen  \n" +
                 "        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,  \n" +
-                "               WindowManager.LayoutParams.FLAG_FULLSCREEN); //enable full screen  \n" +
+                "               WindowManager.LayoutParams.FLAG_FULLSCREEN);  \n" +
                 "        setContentView(R.layout.activity_main);  \n" +
                 "  \n" +
                 "  \n" +
@@ -91,7 +97,6 @@ public class B_card_3_Fragment extends Fragment {
                 "        android:layout_width=\"wrap_content\"  \n" +
                 "        android:layout_height=\"wrap_content\"  \n" +
                 "        android:text=\"Hello World!\"  \n" +
-                "        app:layout_constraintBottom_toBottomOf=\"parent\"  \n" +
                 "        app:layout_constraintLeft_toLeftOf=\"parent\"  \n" +
                 "        app:layout_constraintRight_toRightOf=\"parent\"  \n" +
                 "        app:layout_constraintTop_toTopOf=\"parent\" />  \n" +

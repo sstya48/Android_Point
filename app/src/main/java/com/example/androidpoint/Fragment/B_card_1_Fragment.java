@@ -89,7 +89,6 @@ public class B_card_1_Fragment extends Fragment {
                 "      android:layout_height=\"wrap_content\"\n" +
                 "      android:layout_centerHorizontal=\"true\"\n" +
                 "      android:layout_centerVertical=\"true\"\n" +
-                "      android:padding=\"@dimen/padding_medium\"\n" +
                 "      android:text=\"@string/hello_world\"\n" +
                 "      tools:context=\".MainActivity\" />\n" +
                 "      \n" +

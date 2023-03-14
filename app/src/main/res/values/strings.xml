@@ -118,6 +118,7 @@
     <string name="manifest">AndroidManifest.xml</string>
     <string name="spashactivity">SplashActivity.java</string>
     <string name="spash_activity">splashfile.xml</string>
+    <string name="Gridal_Permission">Gridal Permission</string>
 
 
     <!-- TODO: Remove or change this placeholder text -->

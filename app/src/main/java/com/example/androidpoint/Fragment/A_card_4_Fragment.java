@@ -39,7 +39,7 @@ public class A_card_4_Fragment extends Fragment {
             }
         });
 
-        alert_java.setText("");
+        alert_java.setText("package example.androidalians.alertdemo");
         alert_xml.setText("");
 
         return view;

@@ -61,7 +61,7 @@ public class A_card_2_Fragment extends Fragment {
         toggle_java= view.findViewById(R.id.toggle_java);
         toggle_xml= view.findViewById(R.id.toggle_xml);
 
-        toggle_java.setText("package example.javatpoint.com.togglebutton;  \n" +
+        toggle_java.setText("package example.androidalians.togglebutton;  \n" +
                 "  \n" +
                 "import android.support.v7.app.AppCompatActivity;  \n" +
                 "import android.os.Bundle;  \n" +
@@ -82,18 +82,20 @@ public class A_card_2_Fragment extends Fragment {
                 "    }  \n" +
                 "  \n" +
                 "    public void addListenerOnButtonClick(){  \n" +
+                "  \n" +
                 "        toggleButton1=(ToggleButton)findViewById(R.id.toggleButton);  \n" +
                 "        toggleButton2=(ToggleButton)findViewById(R.id.toggleButton2);  \n" +
+                "  \n" +
                 "        buttonSubmit=(Button)findViewById(R.id.button);  \n" +
                 "  \n" +
-                "        buttonSubmit.setOnClickListener(new View.OnClickListener(){  \n" +
-                "  \n" +
+                "        buttonSubmit.setOnClickListener(new View.  OnClickListener(){  \n" +
                 "            @Override  \n" +
                 "            public void onClick(View view) {  \n" +
                 "                StringBuilder result = new StringBuilder();  \n" +
-                "                result.append(\"ToggleButton1 : \").append(toggleButton1.getText());  \n" +
-                "                result.append(\"\\nToggleButton2 : \").append(toggleButton2.getText());  \n" +
-                "                Toast.makeText(getApplicationContext(), result.toString(),Toast.LENGTH_LONG).show();  \n" +
+                "                result.append(\"ToggleButton1 : \") .append(toggleButton1.getText());  \n" +
+                "                result.append(\"\\nToggleButton2 : \") .append(toggleButton2.getText());  \n" +
+                "  \n" +
+                "                Toast.makeText(getApplicationContext(), result.toString(), Toast.LENGTH_LONG).show();  \n" +
                 "            }  \n" +
                 "  \n" +
                 "        });  \n" +

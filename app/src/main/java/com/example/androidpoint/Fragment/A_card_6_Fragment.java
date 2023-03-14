@@ -16,12 +16,12 @@ import com.example.androidpoint.R;
 
 public class A_card_6_Fragment extends Fragment {
 
-    TextView webview_java, webview_xml;
+    TextView webview_java, webview_xml, manifest_xml;
 
     ImageView webview_output;
 
 
-    @SuppressLint("SetTextI18n")
+    @SuppressLint({"SetTextI18n", "MissingInflatedId"})
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -30,6 +30,7 @@ public class A_card_6_Fragment extends Fragment {
         webview_output = view.findViewById(R.id.webview_output);
         webview_java = view.findViewById(R.id.webview_java);
         webview_xml = view.findViewById(R.id.webview_xml);
+        manifest_xml = view.findViewById(R.id.manifest_xml);
 
         webview_output.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -42,6 +43,39 @@ public class A_card_6_Fragment extends Fragment {
                         .commit();
             }
         });
+
+        manifest_xml.setText("<?xml version=\"1.0\" encoding=\"utf-8\"?>\n" +
+                "<manifest xmlns:android=\"http://schemas.android.com/apk/res/android\"\n" +
+                "    xmlns:tools=\"http://schemas.android.com/tools\"\n" +
+                "    package=\"com.example.geeksforgeeks\"\n" +
+                "    android:versionCode=\"1\"\n" +
+                "    android:versionName=\"1.0\"\n" +
+                "    android:installLocation=\"preferExternal\">\n" +
+                "   \n" +
+                "       <uses-permission android:name=\"android.permission.INTERNET\" /> \n" +
+                " \n" +
+                "    <application\n" +
+                "        android:allowBackup=\"true\"\n" +
+                "        android:dataExtractionRules=\"@xml/data_extraction_rules\"\n" +
+                "        android:fullBackupContent=\"@xml/backup_rules\"\n" +
+                "        android:icon=\"@mipmap/ic_launcher\"\n" +
+                "        android:label=\"@string/app_name\"\n" +
+                "        android:roundIcon=\"@mipmap/ic_launcher_round\"\n" +
+                "        android:supportsRtl=\"true\"\n" +
+                "        android:theme=\"@style/Theme.MyApplication\"\n" +
+                "        tools:targetApi=\"31\">\n" +
+                "        <activity\n" +
+                "            android:name=\".MainActivity\"\n" +
+                "            android:exported=\"true\">\n" +
+                "            <intent-filter>\n" +
+                "                <action android:name=\"android.intent.action.MAIN\" />\n" +
+                " \n" +
+                "                <category android:name=\"android.intent.category.LAUNCHER\" />\n" +
+                "            </intent-filter>\n" +
+                "        </activity>\n" +
+                "    </application>\n" +
+                " \n" +
+                "</manifest>");
 
         webview_java.setText("package com.example.krishna.webviewdemo;\n" +
                 "import android.app.Activity;\n" +

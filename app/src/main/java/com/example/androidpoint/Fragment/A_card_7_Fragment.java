@@ -42,7 +42,7 @@ public class A_card_7_Fragment extends Fragment {
             }
         });
 
-        progress_java.setText("package com.example.sairamkrishna.myapplication;\n" +
+        progress_java.setText("package example.androidalians.progressbar;\n" +
                 "\n" +
                 "import android.app.ProgressDialog;\n" +
                 "import android.support.v7.app.ActionBarActivity;\n" +

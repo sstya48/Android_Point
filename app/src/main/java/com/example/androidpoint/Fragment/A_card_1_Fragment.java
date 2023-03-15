@@ -15,7 +15,7 @@ import com.example.androidpoint.R;
 
 public class A_card_1_Fragment extends Fragment {
 
-    TextView splash_xml,splash_java,splash_main_java,splash_main_xml;
+    TextView splash_xml, splash_java, splash_main_java, splash_main_xml, gridal_permission;
     ImageView spalshscreen_output;
 
     public A_card_1_Fragment() {
@@ -47,6 +47,7 @@ public class A_card_1_Fragment extends Fragment {
         splash_main_java= view.findViewById(R.id.splash_main_java);
         splash_main_xml= view.findViewById(R.id.splash_main_xml);
         spalshscreen_output= view.findViewById(R.id.spalshscreen_output);
+        gridal_permission= view.findViewById(R.id.gridal_permission);
 
         spalshscreen_output.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -61,20 +62,20 @@ public class A_card_1_Fragment extends Fragment {
             }
         });
 
+        gridal_permission.setText("// Lottie animation\n" +
+                "    implementation 'com.airbnb.android:lottie:3.7.0'");
 
-        splash_java.setText("package abhiandroid.com.splashscreen;\n" +
+        splash_java.setText("package example.androidalians.splashscreen;\n" +
                 "\n" +
                 "import android.support.v7.app.AppCompatActivity;\n" +
                 "import android.os.Bundle;\n" +
                 "\n" +
                 "public class MainActivity extends AppCompatActivity {\n" +
                 "\n" +
-                "\n" +
                 "    @Override\n" +
                 "    protected void onCreate(Bundle savedInstanceState) {\n" +
-                "        super.onCreate(savedInstanceState);\n" +
-                "        setContentView(R.layout.activity_main);\n" +
-                "\n" +
+                "    super.onCreate(savedInstanceState);\n" +
+                "    setContentView(R.layout.activity_main);\n" +
                 "\n" +
                 "    }\n" +
                 "}");
@@ -91,14 +92,14 @@ public class A_card_1_Fragment extends Fragment {
                 "    <TextView\n" +
                 "        android:layout_width=\"wrap_content\"\n" +
                 "        android:layout_height=\"wrap_content\"\n" +
-                "        android:text=\"Hello World by AbhiAndroid!\"\n" +
+                "        android:text=\"Hello World by AndroidAlians!\"\n" +
                 "        android:textSize=\"20sp\"\n" +
                 "        android:layout_centerInParent=\"true\"/>\n" +
                 "</RelativeLayout>");
 
 
 
-        splash_main_java.setText("package abhiandroid.com.splashscreen;\n" +
+        splash_main_java.setText("package example.androidalians.splashscreen;\n" +
                 "\n" +
                 "import android.app.Activity;\n" +
                 "import android.content.Intent;\n" +
@@ -108,6 +109,7 @@ public class A_card_1_Fragment extends Fragment {
                 "public class SplashActivity extends Activity {\n" +
                 "\n" +
                 "    Handler handler;\n" +
+                "\n" +
                 "    @Override\n" +
                 "    protected void onCreate(Bundle savedInstanceState) {\n" +
                 "        super.onCreate(savedInstanceState);\n" +
@@ -152,9 +154,6 @@ public class A_card_1_Fragment extends Fragment {
                 "        android:textColor=\"@color/blue\"/>\n" +
                 "\n" +
                 "</RelativeLayout>");
-
-
-
 
         return view;
     }

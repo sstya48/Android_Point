@@ -43,7 +43,7 @@ public class A_card_3_Fragment extends Fragment {
 
             }
         });
-        radio_java.setText("package example.javatpoint.com.radiogroup;  \n" +
+        radio_java.setText("package example.androidalians.radiogroup;  \n" +
                 "  \n" +
                 "import android.os.Bundle;\n" +
                 "import android.widget.RadioButton;\n" +

@@ -186,7 +186,8 @@
             android:background="?android:attr/selectableItemBackgroundBorderless"
             android:clickable="true"
             android:focusable="true"
-            android:visibility="visible" />
+            android:visibility="visible"
+            tools:ignore="ExtraText" />
 
 
 

@@ -120,6 +120,7 @@
     <string name="spash_activity">splashfile.xml</string>
     <string name="strings">strings.xml</string>
     <string name="mylist"> mylist.xml</string>
+    <string name="gradle">build.gradle(Module:app)</string>
 
 
     //radio-button===================================================================================================================
@@ -142,8 +143,6 @@
         <item>Neptune</item>
     </string-array>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 
 </resources>

@@ -31,7 +31,10 @@ public class B_card_10_Fragment extends Fragment {
         View view= inflater.inflate(R.layout.fragment_b_card_10_, container, false);
 
         scroll_java=view.findViewById(R.id.scroll_java);
+        scroll_java.setTextIsSelectable(true);
+
         scroll_xml=view.findViewById(R.id.scroll_xml);
+        scroll_xml.setTextIsSelectable(true);
 
         scroll_demo=view.findViewById(R.id.scroll_demo);
 

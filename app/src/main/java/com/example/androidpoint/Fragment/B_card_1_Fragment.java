@@ -38,7 +38,10 @@ public class B_card_1_Fragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_b_card_1_, container, false);
 
         hello_toast_java= view.findViewById(R.id.hello_toast_java);
+        hello_toast_java.setTextIsSelectable(true);
         hello_toast_xml= view.findViewById(R.id.hello_toast_xml);
+        hello_toast_xml.setTextIsSelectable(true);
+
 
 
         /*feedBack = (TextView) view.findViewById(R.id.feedBack);

@@ -29,7 +29,10 @@ public class B_card_5_Fragment extends Fragment {
 
 
         checkbox_java=view.findViewById(R.id.checkbox_java);
+        checkbox_java.setTextIsSelectable(true);
+
         checkbox_xml=view.findViewById(R.id.checkbox_xml);
+        checkbox_xml.setTextIsSelectable(true);
 
         checkbox_demo=view.findViewById(R.id.checkbox_demo);
 

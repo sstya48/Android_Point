@@ -28,12 +28,20 @@ public class B_card_4_Fragment extends Fragment {
         View view= inflater.inflate(R.layout.fragment_b_card_4_, container, false);
 
         screen_orientation_xml= view.findViewById(R.id.screen_orientation_xml);
+        screen_orientation_xml.setTextIsSelectable(true);
+
         screen_orientation_java= view.findViewById(R.id.screen_orientation_java);
+        screen_orientation_java.setTextIsSelectable(true);
 
         screen_orientation_second_xml= view.findViewById(R.id.screen_orientation_second_xml);
+        screen_orientation_second_xml.setTextIsSelectable(true);
+
         screen_orientation_second_java= view.findViewById(R.id.screen_orientation_second_java);
+        screen_orientation_second_java.setTextIsSelectable(true);
 
         manifest_xml_code= view.findViewById(R.id.manifest_xml_code);
+        manifest_xml_code.setTextIsSelectable(true);
+
 
         screen_orientation_demo= view.findViewById(R.id.screen_orientation_demo);
 

@@ -51,7 +51,6 @@ public class ScrrenLandscape_Fragment extends Fragment {
         Landscape1 = view.findViewById(R.id.Landscape1);
 //        landscape.setText("This activity is Landscape orientation");
 
-        getActivity().setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
 
 
         Landscape1.setOnClickListener(new View.OnClickListener() {
@@ -65,8 +64,21 @@ public class ScrrenLandscape_Fragment extends Fragment {
             }
         });
 
-
-
         return  view;
     }
+
+  /*  @Override
+    public void onResume() {
+        super.onResume();
+        getActivity().setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
+    }
+*/
+  /*  @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+
+        getActivity().setRequestedOrientation(
+                ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+
+    }*/
 }

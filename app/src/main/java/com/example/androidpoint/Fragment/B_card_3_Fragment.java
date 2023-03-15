@@ -28,7 +28,10 @@ public class B_card_3_Fragment extends Fragment {
         View view= inflater.inflate(R.layout.fragment_b_card_3_, container, false);
 
         hide_title_xml= view.findViewById(R.id.hide_title_xml);
+        hide_title_xml.setTextIsSelectable(true);
+
         hide_title_java= view.findViewById(R.id.hide_title_java);
+        hide_title_java.setTextIsSelectable(true);
 
         hide_title_demo=view.findViewById(R.id.hide_title_demo);
 

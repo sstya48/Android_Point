@@ -28,7 +28,10 @@ public class B_card_2_Fragment extends Fragment {
         View view= inflater.inflate(R.layout.fragment_b_card_2_, container, false);
 
         activity_lifecycle_xml= view.findViewById(R.id.activity_lifecycle_xml);
+        activity_lifecycle_xml.setTextIsSelectable(true);
         activity_lifecycle_java= view.findViewById(R.id.activity_lifecycle_java);
+        activity_lifecycle_java.setTextIsSelectable(true);
+
 
         activity_cycle_demo= view.findViewById(R.id.activity_cycle_demo);
 

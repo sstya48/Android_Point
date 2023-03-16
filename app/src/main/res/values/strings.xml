@@ -12,8 +12,8 @@
     <string name="Check_Box">Check Box</string>
     <string name="Radio_Button">Radio Button</string>
     <string name="ListView">ListView</string>
-    <string name="Date_Piker">Date Piker</string>
-    <string name="Time_Piker">Time Piker</string>
+    <string name="Date_Piker">Date Picker</string>
+    <string name="Time_Piker">Time Picker</string>
     <string name="ScrollView">ScrollView</string>
     <string name="SerchView">SerchView</string>
     <string name="Implicit_Intent">Implicit Intent</string>
@@ -142,6 +142,8 @@
         <item>Uranus</item>
         <item>Neptune</item>
     </string-array>
+
+
 
 
 

@@ -55,7 +55,7 @@ public class B_card_8_Fragment extends Fragment {
             public void onClick(View view) {
                 DatePickerFragment datePickerFragment= new DatePickerFragment();
                 getActivity().getSupportFragmentManager().beginTransaction()
-                        .replace(R.id.frame_container, datePickerFragment, "ListView DEMO")
+                        .replace(R.id.frame_container, datePickerFragment, "Date Picker DEMO")
                         .addToBackStack(null)
                         .commit();
             }

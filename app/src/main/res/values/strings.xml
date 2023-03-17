@@ -31,10 +31,13 @@
     <string name="Image_Slider">Image Slider</string>
     <string name="Search_View">Search View</string>
     <string name="Registation_Page">Registation Page</string>
+    <string name="Gallery_Camera">Gallery and Camera</string>
     <string name="Bar_Chart">Bar Chart</string>
     <string name="Line_Chart">Line Chart</string>
     <string name="Pie_Chart">Pie Chart</string>
+    <string name="Gallery">Gallery</string>
     <string name="Instagram_Login">Instagram Login</string>
+    <string name="flash">Flash Lite</string>
     <string name="Phone_Call">Phone Call</string>
     <string name="Send_SMS">Send SMS</string>
     <string name="Send_Email">Send Email</string>

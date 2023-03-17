@@ -29,6 +29,7 @@ public class B_card_2_Fragment extends Fragment {
 
         activity_lifecycle_xml= view.findViewById(R.id.activity_lifecycle_xml);
         activity_lifecycle_xml.setTextIsSelectable(true);
+
         activity_lifecycle_java= view.findViewById(R.id.activity_lifecycle_java);
         activity_lifecycle_java.setTextIsSelectable(true);
 

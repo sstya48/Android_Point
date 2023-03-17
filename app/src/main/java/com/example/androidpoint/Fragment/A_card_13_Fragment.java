@@ -42,10 +42,13 @@ public class A_card_13_Fragment extends Fragment {
         });
 
         pie_java.setText("");
+        pie_java.setTextIsSelectable(true);
 
         pie_xml.setText("");
+        pie_xml.setTextIsSelectable(true);
 
         pie_gridal_permission.setText("");
+        pie_gridal_permission.setTextIsSelectable(true);
 
         return view;
     }

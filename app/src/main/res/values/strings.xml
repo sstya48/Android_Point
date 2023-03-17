@@ -121,6 +121,20 @@
     <string name="Gridal_Permission">Gridal Permission</string>
 
 
+    <string name="Drawable_Border">Drawable Border</string>
+    <string name="custom_alert_xml">custom_alert.xml</string>
+    <string name="Drawable_arrow">Drawable Arrow</string>
+    <string name="Drawable_Color">Drawable Background Color</string>
+    <string name="Item_Java">Item.java</string>
+    <string name="Update_Java">Update.java</string>
+    <string name="activityitem_main">activity_item.xml</string>
+    <string name="activityitem_update">activity_update.xml</string>
+    <string name="rowlist_xml">rowlist.xml</string>
+    <string name="DatabaseHelper_java">DatabaseHelper.java</string>
+    <string name="Student_java">StudentModel.java</string>
+    <string name="ArrayAdapter_java">ArrayAdapter.java</string>
+
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 

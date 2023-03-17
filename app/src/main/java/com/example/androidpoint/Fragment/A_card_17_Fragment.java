@@ -42,7 +42,7 @@ public class A_card_17_Fragment extends Fragment {
                         .commit();
             }
         });
-
+        email_java.setTextIsSelectable(true);
         email_java.setText("package example.androidaians.emaildemo;\n" +
                 "\n" +
                 "import android.net.Uri;\n" +
@@ -90,7 +90,7 @@ public class A_card_17_Fragment extends Fragment {
                 "      }\n" +
                 "   }\n" +
                 "}");
-
+        email_xml.setTextIsSelectable(true);
         email_xml.setText("<?xml version=\"1.0\" encoding=\"utf-8\"?>\n" +
                 "<LinearLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\n" +
                 "    xmlns:tools=\"http://schemas.android.com/tools\"\n" +
@@ -117,7 +117,7 @@ public class A_card_17_Fragment extends Fragment {
                 "        android:text=\"compose_email\"/>\n" +
                 "\n" +
                 "</LinearLayout>");
-
+        email_manifest.setTextIsSelectable(true);
         email_manifest.setText("<?xml version=\"1.0\" encoding=\"utf-8\"?>\n" +
                 "<manifest xmlns:android=\"http://schemas.android.com/apk/res/android\"\n" +
                 "   package=\"exaple.androidalians.emaildemo\" >\n" +

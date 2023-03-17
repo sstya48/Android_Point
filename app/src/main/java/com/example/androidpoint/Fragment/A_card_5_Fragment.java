@@ -42,6 +42,7 @@ public class A_card_5_Fragment extends Fragment {
             }
         });
 
+        spinner_java.setTextIsSelectable(true);
         spinner_java.setText("package example.androidalians.spinnerexample;\n" +
                 "\n" +
                 "import android.support.v7.app.AppCompatActivity;\n" +
@@ -79,7 +80,7 @@ public class A_card_5_Fragment extends Fragment {
                 "\n" +
                 "     }\n" +
                 "}");
-
+        spinner_xml.setTextIsSelectable(true);
         spinner_xml.setText("<?xml version=\"1.0\" encoding=\"utf-8\"?>\n" +
                 "<LinearLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\n" +
                 "    xmlns:tools=\"http://schemas.android.com/tools\"\n" +

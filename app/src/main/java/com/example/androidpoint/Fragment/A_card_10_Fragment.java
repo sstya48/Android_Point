@@ -42,7 +42,7 @@ public class A_card_10_Fragment extends Fragment {
                         .commit();
             }
         });
-
+        reg_java.setTextIsSelectable(true);
         reg_java.setText("package example.androidalians.registation;\n" +
                 "\n" +
                 "import android.content.Intent;\n" +
@@ -99,7 +99,7 @@ public class A_card_10_Fragment extends Fragment {
                 "    };\n" +
                 "\n" +
                 "}\n");
-
+        reg_xml.setTextIsSelectable(true);
         reg_xml.setText("<?xml version=\"1.0\" encoding=\"utf-8\"?>\n" +
                 "<LinearLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\n" +
                 "    xmlns:tools=\"http://schemas.android.com/tools\"\n" +
@@ -229,8 +229,7 @@ public class A_card_10_Fragment extends Fragment {
                 "    \n" +
                 "</LinearLayout>");
 
-
-
+        reg_gridal_permission.setTextIsSelectable(true);
         reg_gridal_permission.setText("dependencies {\n" +
                 "    implementation 'de.hdodenhof:circleimageview:3.0.0'\n" +
                 "}");

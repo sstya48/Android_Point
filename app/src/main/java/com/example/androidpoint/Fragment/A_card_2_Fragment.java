@@ -102,6 +102,9 @@ public class A_card_2_Fragment extends Fragment {
                 "  \n" +
                 "    }  \n" +
                 "}  ");
+        toggle_java.setTextIsSelectable(true);
+
+
 
         toggle_xml.setText("<?xml version=\"1.0\" encoding=\"utf-8\"?>\n" +
                 "<RelativeLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\n" +
@@ -144,6 +147,7 @@ public class A_card_2_Fragment extends Fragment {
                 "        android:text=\"Submit\" />\n" +
                 "\n" +
                 "</RelativeLayout>");
+        toggle_xml.setTextIsSelectable(true);
 
         return view;
     }

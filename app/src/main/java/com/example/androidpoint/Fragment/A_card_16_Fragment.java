@@ -43,10 +43,14 @@ public class A_card_16_Fragment extends Fragment {
         });
 
         sms_java.setText("");
+        sms_java.setTextIsSelectable(true);
+
 
         sms_xml.setText("");
+        sms_xml.setTextIsSelectable(true);
 
         sms_gridal_permission.setText("");
+        sms_gridal_permission.setTextIsSelectable(true);
 
 
         return view;

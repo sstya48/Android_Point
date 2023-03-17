@@ -9,6 +9,7 @@
     <!-- shirish-->
 
     <color name="orange">#EF7222</color>
+    <color name="red">#E45959</color>
     <color name="light_gray">#D1D1D1</color>
     <color name="light_gray_high">#BFBFBF</color>
     <color name="dark_gray">#666666</color>

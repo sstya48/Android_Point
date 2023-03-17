@@ -41,10 +41,13 @@ public class A_card_11_Fragment extends Fragment {
         });
 
         bar_java.setText("");
+        bar_java.setTextIsSelectable(true);
 
         bar_xml.setText("");
+        bar_xml.setTextIsSelectable(true);
 
         bar_gridal_permission.setText("");
+        bar_gridal_permission.setTextIsSelectable(true);
 
         return view;
     }

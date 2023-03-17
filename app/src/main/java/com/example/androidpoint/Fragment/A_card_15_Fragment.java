@@ -43,7 +43,7 @@ public class A_card_15_Fragment extends Fragment {
                         .commit();
             }
         });
-
+        phone_java.setTextIsSelectable(true);
         phone_java.setText("package example.androidalians.phonecall;  \n" +
                 "  \n" +
                 "import android.net.Uri;  \n" +
@@ -87,7 +87,7 @@ public class A_card_15_Fragment extends Fragment {
                 "        return true;  \n" +
                 "    }  \n" +
                 "}  ");
-
+        phone_xml.setTextIsSelectable(true);
         phone_xml.setText("<?xml version=\"1.0\" encoding=\"utf-8\"?>\n" +
                 "<LinearLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\n" +
                 "    xmlns:tools=\"http://schemas.android.com/tools\"\n" +
@@ -114,7 +114,7 @@ public class A_card_15_Fragment extends Fragment {
                 "        android:layout_gravity=\"center\" />\n" +
                 "\n" +
                 "</LinearLayout>");
-
+        phone_manifest.setTextIsSelectable(true);
         phone_manifest.setText("<?xml version=\"1.0\" encoding=\"utf-8\"?>  \n" +
                 "  \n" +
                 "<manifest xmlns:androclass=\"http://schemas.android.com/apk/res/android\"  \n" +

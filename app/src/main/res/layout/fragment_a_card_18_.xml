@@ -119,7 +119,7 @@
                     android:paddingBottom="20dp"
                     android:padding="10dp"
                     android:gravity="clip_vertical"
-                    android:text="@string/Gridal_Permission"
+                    android:text="@string/Item_Java"
                     android:textSize="16sp"
                     android:background="@drawable/code_title_bg"
                     android:textColor="@color/white"
@@ -127,7 +127,231 @@
                     android:layout_marginBottom="15dp" />
 
                 <TextView
-                    android:id="@+id/db_gridal_permission"
+                    android:id="@+id/Item_Java"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:gravity="clip_vertical"
+                    android:text="hello"
+                    android:textSize="14sp"
+                    android:textColor="#333333"
+                    android:background="@drawable/boder_sos"
+                    android:overScrollMode="always"
+                    android:scrollbarStyle="insideInset"
+                    android:layout_marginBottom="20dp"
+                    android:scrollbars="vertical" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="20dp"
+                    android:padding="10dp"
+                    android:gravity="clip_vertical"
+                    android:text="@string/Update_Java"
+                    android:textSize="16sp"
+                    android:background="@drawable/code_title_bg"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:layout_marginBottom="15dp" />
+
+                <TextView
+                    android:id="@+id/Update_Java"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:gravity="clip_vertical"
+                    android:text="hello"
+                    android:textSize="14sp"
+                    android:textColor="#333333"
+                    android:background="@drawable/boder_sos"
+                    android:overScrollMode="always"
+                    android:scrollbarStyle="insideInset"
+                    android:layout_marginBottom="20dp"
+                    android:scrollbars="vertical" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="20dp"
+                    android:padding="10dp"
+                    android:gravity="clip_vertical"
+                    android:text="@string/DatabaseHelper_java"
+                    android:textSize="16sp"
+                    android:background="@drawable/code_title_bg"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:layout_marginBottom="15dp" />
+
+                <TextView
+                    android:id="@+id/DatabaseHelper_java"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:gravity="clip_vertical"
+                    android:text="hello"
+                    android:textSize="14sp"
+                    android:textColor="#333333"
+                    android:background="@drawable/boder_sos"
+                    android:overScrollMode="always"
+                    android:scrollbarStyle="insideInset"
+                    android:layout_marginBottom="20dp"
+                    android:scrollbars="vertical" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="20dp"
+                    android:padding="10dp"
+                    android:gravity="clip_vertical"
+                    android:text="@string/Student_java"
+                    android:textSize="16sp"
+                    android:background="@drawable/code_title_bg"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:layout_marginBottom="15dp" />
+
+                <TextView
+                    android:id="@+id/Student_java"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:gravity="clip_vertical"
+                    android:text="hello"
+                    android:textSize="14sp"
+                    android:textColor="#333333"
+                    android:background="@drawable/boder_sos"
+                    android:overScrollMode="always"
+                    android:scrollbarStyle="insideInset"
+                    android:layout_marginBottom="20dp"
+                    android:scrollbars="vertical" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="20dp"
+                    android:padding="10dp"
+                    android:gravity="clip_vertical"
+                    android:text="@string/ArrayAdapter_java"
+                    android:textSize="16sp"
+                    android:background="@drawable/code_title_bg"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:layout_marginBottom="15dp" />
+
+                <TextView
+                    android:id="@+id/ArrayAdapter_java"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:gravity="clip_vertical"
+                    android:text="hello"
+                    android:textSize="14sp"
+                    android:textColor="#333333"
+                    android:background="@drawable/boder_sos"
+                    android:overScrollMode="always"
+                    android:scrollbarStyle="insideInset"
+                    android:layout_marginBottom="20dp"
+                    android:scrollbars="vertical" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="20dp"
+                    android:padding="10dp"
+                    android:gravity="clip_vertical"
+                    android:text="@string/activity_main"
+                    android:textSize="16sp"
+                    android:background="@drawable/code_title_bg"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:layout_marginBottom="15dp" />
+
+                <TextView
+                    android:id="@+id/activity_main"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:gravity="clip_vertical"
+                    android:text="hello"
+                    android:textSize="14sp"
+                    android:textColor="#333333"
+                    android:background="@drawable/boder_sos"
+                    android:overScrollMode="always"
+                    android:scrollbarStyle="insideInset"
+                    android:layout_marginBottom="20dp"
+                    android:scrollbars="vertical" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="20dp"
+                    android:padding="10dp"
+                    android:gravity="clip_vertical"
+                    android:text="@string/activityitem_main"
+                    android:textSize="16sp"
+                    android:background="@drawable/code_title_bg"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:layout_marginBottom="15dp" />
+
+                <TextView
+                    android:id="@+id/activityitem_main"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:gravity="clip_vertical"
+                    android:text="hello"
+                    android:textSize="14sp"
+                    android:textColor="#333333"
+                    android:background="@drawable/boder_sos"
+                    android:overScrollMode="always"
+                    android:scrollbarStyle="insideInset"
+                    android:layout_marginBottom="20dp"
+                    android:scrollbars="vertical" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="20dp"
+                    android:padding="10dp"
+                    android:gravity="clip_vertical"
+                    android:text="@string/activityitem_update"
+                    android:textSize="16sp"
+                    android:background="@drawable/code_title_bg"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:layout_marginBottom="15dp" />
+
+                <TextView
+                    android:id="@+id/activityitem_update"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:gravity="clip_vertical"
+                    android:text="hello"
+                    android:textSize="14sp"
+                    android:textColor="#333333"
+                    android:background="@drawable/boder_sos"
+                    android:overScrollMode="always"
+                    android:scrollbarStyle="insideInset"
+                    android:layout_marginBottom="20dp"
+                    android:scrollbars="vertical" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="20dp"
+                    android:padding="10dp"
+                    android:gravity="clip_vertical"
+                    android:text="@string/rowlist_xml"
+                    android:textSize="16sp"
+                    android:background="@drawable/code_title_bg"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:layout_marginBottom="15dp" />
+
+                <TextView
+                    android:id="@+id/rowlist_xml"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:padding="10dp"

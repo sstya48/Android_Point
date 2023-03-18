@@ -111,6 +111,65 @@
                     android:textColor="#333333"
                     android:textSize="14sp" />
 
+                <TextView
+                    android:id="@+id/java_code2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    android:background="@drawable/code_title_bg"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:gravity="clip_vertical"
+                    android:padding="10dp"
+                    android:paddingBottom="20dp"
+                    android:text="@string/SecondActivity"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/explicit2_java"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:background="@drawable/boder_sos"
+                    android:gravity="clip_vertical"
+                    android:overScrollMode="always"
+                    android:padding="10dp"
+                    android:scrollbarStyle="insideInset"
+                    android:scrollbars="vertical"
+                    android:text="hello"
+                    android:textColor="#333333"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/xml_code2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    android:background="@drawable/code_title_bg"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:gravity="clip_vertical"
+                    android:padding="10dp"
+                    android:paddingBottom="20dp"
+                    android:text="@string/activity_second"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/explicit2_xml"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:background="@drawable/boder_sos"
+                    android:gravity="clip_vertical"
+                    android:overScrollMode="always"
+                    android:padding="10dp"
+                    android:scrollbarStyle="insideInset"
+                    android:scrollbars="vertical"
+                    android:text="hello"
+                    android:textColor="#333333"
+                    android:textSize="14sp" />
+
+
             </LinearLayout>
 
         </ScrollView>

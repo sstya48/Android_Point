@@ -18,9 +18,9 @@
     <string name="SerchView">SerchView</string>
     <string name="Implicit_Intent">Implicit Intent</string>
     <string name="Explicit_Intent">Explicit Intent</string>
-    <string name="Option_Manu">Option Manu</string>
-    <string name="Context_Manu">Context Manu</string>
-    <string name="Popup_Manu">Popup Manu</string>
+    <string name="Option_Manu">Option Menu</string>
+    <string name="Context_Manu">Context Menu</string>
+    <string name="Popup_Manu">Popup Menu</string>
     <string name="Splash_Screen">Splash Screen</string>
     <string name="Toggle_Button">Toggle Button</string>
     <string name="Radio_Group">Radio Group</string>
@@ -120,6 +120,7 @@
     <string name="spash_activity">splashfile.xml</string>
     <string name="strings">strings.xml</string>
     <string name="mylist"> mylist.xml</string>
+    <string name="menu"> menu.xml</string>
     <string name="gradle">build.gradle(Module:app)</string>
 
 
@@ -142,5 +143,11 @@
         <item>Uranus</item>
         <item>Neptune</item>
     </string-array>
+
+    <string name="first_activity">Welcome to First Activity</string>
+    <string name="second_activity">Welcome to Second Activity</string>
+
+    <string name="go_to_second_activity">Go to Second Activity</string>
+    <string name="go_to_first_activity">Go to First Activity</string>
 
 </resources>

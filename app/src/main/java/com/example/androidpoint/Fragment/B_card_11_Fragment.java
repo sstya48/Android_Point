@@ -17,7 +17,7 @@ import com.example.androidpoint.R;
 
 public class B_card_11_Fragment extends Fragment {
 
-    AppCompatImageView serchview_demo;
+    AppCompatImageView serchview_demo,Btn_arrow;
 
     TextView serchview_java,serchview_xml;
 
@@ -35,6 +35,19 @@ public class B_card_11_Fragment extends Fragment {
         serchview_xml.setTextIsSelectable(true);
 
         serchview_demo= view.findViewById(R.id.serchview_demo);
+
+        Btn_arrow=view.findViewById(R.id.Btn_arrow);
+
+        Btn_arrow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Basic basic= new Basic();
+                getActivity().getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.frame_container, basic, "Back Button Basic")
+                        .addToBackStack(null)
+                        .commit();
+            }
+        });
 
         serchview_demo.setOnClickListener(new View.OnClickListener() {
             @Override

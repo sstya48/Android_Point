@@ -3,6 +3,7 @@ package com.example.androidpoint.Fragment;
 import android.annotation.SuppressLint;
 import android.os.Bundle;
 
+import androidx.appcompat.widget.AppCompatImageView;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
@@ -19,11 +20,26 @@ public class A_card_4_Fragment extends Fragment {
     TextView alert_java, alert_xml, custom_alert_xml;
     ImageView alert_output;
 
+    AppCompatImageView Btn_arrow;
+
     @SuppressLint({"MissingInflatedId", "SetTextI18n"})
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_a_card_4_, container, false);
+
+        Btn_arrow=view.findViewById(R.id.Btn_arrow);
+
+        Btn_arrow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Advance advance= new Advance();
+                getActivity().getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.frame_container, advance, "Back Button Basic")
+                        .addToBackStack(null)
+                        .commit();
+            }
+        });
 
         alert_output = view.findViewById(R.id.alert_output);
         alert_java = view.findViewById(R.id.alert_java);

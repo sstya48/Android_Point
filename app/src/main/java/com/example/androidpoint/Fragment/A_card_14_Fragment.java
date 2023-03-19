@@ -3,6 +3,7 @@ package com.example.androidpoint.Fragment;
 import android.annotation.SuppressLint;
 import android.os.Bundle;
 
+import androidx.appcompat.widget.AppCompatImageView;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
@@ -17,6 +18,8 @@ import com.example.androidpoint.R;
 public class A_card_14_Fragment extends Fragment {
 
     TextView insta_java, insta_xml, Drawable_Color, Drawable_Border, Drawable_arrow;
+
+    AppCompatImageView Btn_arrow;
     ImageView insta_output;
 
     @SuppressLint({"MissingInflatedId", "SetTextI18n"})
@@ -24,6 +27,19 @@ public class A_card_14_Fragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_a_card_14_, container, false);
+
+        Btn_arrow=view.findViewById(R.id.Btn_arrow);
+
+        Btn_arrow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Advance advance= new Advance();
+                getActivity().getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.frame_container, advance, "Back Button Basic")
+                        .addToBackStack(null)
+                        .commit();
+            }
+        });
 
         insta_output = view.findViewById(R.id.insta_output);
         insta_java = view.findViewById(R.id.insta_java);

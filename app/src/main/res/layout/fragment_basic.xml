@@ -82,14 +82,14 @@
                                 android:orientation="vertical">
 
                                 <FrameLayout
-                                    android:layout_width="70dp"
-                                    android:layout_height="70dp"
+                                    android:layout_width="60dp"
+                                    android:layout_height="60dp"
                                     android:background="@drawable/menu_icon_bg"
                                     android:backgroundTint="#5665">
 
                                     <ImageView
-                                        android:layout_width="60dp"
-                                        android:layout_height="60dp"
+                                        android:layout_width="50dp"
+                                        android:layout_height="50dp"
                                         android:src="@drawable/world"
                                         android:layout_gravity="center" />
 
@@ -98,7 +98,6 @@
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:layout_below="@id/ivcardimg1"
                                     android:layout_centerHorizontal="true"
                                     android:layout_marginTop="16dp"
                                     android:text="@string/HelloWord_Toast_Message"
@@ -134,14 +133,14 @@
 
 
                                 <FrameLayout
-                                    android:layout_width="70dp"
-                                    android:layout_height="70dp"
+                                    android:layout_width="60dp"
+                                    android:layout_height="60dp"
                                     android:background="@drawable/menu_icon_bg"
                                     android:backgroundTint="#5665">
 
                                     <ImageView
-                                        android:layout_width="60dp"
-                                        android:layout_height="60dp"
+                                        android:layout_width="40dp"
+                                        android:layout_height="40dp"
                                         android:src="@drawable/cycle"
                                         android:layout_gravity="center" />
 
@@ -150,7 +149,6 @@
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:layout_below="@id/ivcardimg2"
                                     android:layout_centerHorizontal="true"
                                     android:layout_marginTop="24dp"
                                     android:text="@string/Activity_LifeCycle"
@@ -194,14 +192,14 @@
                                 android:orientation="vertical">
 
                                 <FrameLayout
-                                    android:layout_width="70dp"
-                                    android:layout_height="70dp"
+                                    android:layout_width="60dp"
+                                    android:layout_height="60dp"
                                     android:background="@drawable/menu_icon_bg"
                                     android:backgroundTint="#5665">
 
                                     <ImageView
-                                        android:layout_width="60dp"
-                                        android:layout_height="60dp"
+                                        android:layout_width="50dp"
+                                        android:layout_height="50dp"
                                         android:src="@drawable/hide"
                                         android:layout_gravity="center" />
 
@@ -242,14 +240,14 @@
                                 android:orientation="vertical">
 
                                 <FrameLayout
-                                    android:layout_width="70dp"
-                                    android:layout_height="70dp"
+                                    android:layout_width="60dp"
+                                    android:layout_height="60dp"
                                     android:background="@drawable/menu_icon_bg"
                                     android:backgroundTint="#5665">
 
                                     <ImageView
-                                        android:layout_width="60dp"
-                                        android:layout_height="60dp"
+                                        android:layout_width="45dp"
+                                        android:layout_height="45dp"
                                         android:src="@drawable/screen"
                                         android:layout_gravity="center" />
 
@@ -300,14 +298,14 @@
                                 android:orientation="vertical">
 
                                 <FrameLayout
-                                    android:layout_width="70dp"
-                                    android:layout_height="70dp"
+                                    android:layout_width="60dp"
+                                    android:layout_height="60dp"
                                     android:background="@drawable/menu_icon_bg"
                                     android:backgroundTint="#5665">
 
                                     <ImageView
-                                        android:layout_width="60dp"
-                                        android:layout_height="60dp"
+                                        android:layout_width="50dp"
+                                        android:layout_height="50dp"
                                         android:src="@drawable/checkbox"
                                         android:layout_gravity="center" />
 
@@ -350,14 +348,14 @@
                                 android:orientation="vertical">
 
                                 <FrameLayout
-                                    android:layout_width="70dp"
-                                    android:layout_height="70dp"
+                                    android:layout_width="60dp"
+                                    android:layout_height="60dp"
                                     android:background="@drawable/menu_icon_bg"
                                     android:backgroundTint="#5665">
 
                                     <ImageView
-                                        android:layout_width="60dp"
-                                        android:layout_height="60dp"
+                                        android:layout_width="50dp"
+                                        android:layout_height="50dp"
                                         android:src="@drawable/radiobutton"
                                         android:layout_gravity="center" />
 
@@ -378,6 +376,7 @@
                     </androidx.cardview.widget.CardView>
 
                 </androidx.appcompat.widget.LinearLayoutCompat>
+
 
                 <androidx.appcompat.widget.LinearLayoutCompat
                     android:layout_width="match_parent"
@@ -409,14 +408,14 @@
                                 android:orientation="vertical">
 
                                 <FrameLayout
-                                    android:layout_width="70dp"
-                                    android:layout_height="70dp"
+                                    android:layout_width="60dp"
+                                    android:layout_height="60dp"
                                     android:background="@drawable/menu_icon_bg"
                                     android:backgroundTint="#5665">
 
                                     <ImageView
-                                        android:layout_width="60dp"
-                                        android:layout_height="60dp"
+                                        android:layout_width="50dp"
+                                        android:layout_height="50dp"
                                         android:src="@drawable/list"
                                         android:layout_gravity="center" />
 
@@ -425,7 +424,6 @@
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:layout_below="@id/ivcardimg1"
                                     android:layout_centerHorizontal="true"
                                     android:layout_marginTop="24dp"
                                     android:text="@string/ListView"
@@ -460,14 +458,14 @@
                                 android:orientation="vertical">
 
                                 <FrameLayout
-                                    android:layout_width="70dp"
-                                    android:layout_height="70dp"
+                                    android:layout_width="60dp"
+                                    android:layout_height="60dp"
                                     android:background="@drawable/menu_icon_bg"
                                     android:backgroundTint="#5665">
 
                                     <ImageView
-                                        android:layout_width="60dp"
-                                        android:layout_height="60dp"
+                                        android:layout_width="50dp"
+                                        android:layout_height="50dp"
                                         android:src="@drawable/date"
                                         android:layout_gravity="center" />
 
@@ -476,7 +474,6 @@
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:layout_below="@id/ivcardimg2"
                                     android:layout_centerHorizontal="true"
                                     android:layout_marginTop="24dp"
                                     android:text="@string/Date_Piker"
@@ -519,14 +516,14 @@
                                 android:orientation="vertical">
 
                                 <FrameLayout
-                                    android:layout_width="70dp"
-                                    android:layout_height="70dp"
+                                    android:layout_width="60dp"
+                                    android:layout_height="60dp"
                                     android:background="@drawable/menu_icon_bg"
                                     android:backgroundTint="#5665">
 
                                     <ImageView
-                                        android:layout_width="60dp"
-                                        android:layout_height="60dp"
+                                        android:layout_width="50dp"
+                                        android:layout_height="50dp"
                                         android:src="@drawable/time"
                                         android:layout_gravity="center" />
 
@@ -567,14 +564,14 @@
                                 android:orientation="vertical">
 
                                 <FrameLayout
-                                    android:layout_width="70dp"
-                                    android:layout_height="70dp"
+                                    android:layout_width="60dp"
+                                    android:layout_height="60dp"
                                     android:background="@drawable/menu_icon_bg"
                                     android:backgroundTint="#5665">
 
                                     <ImageView
-                                        android:layout_width="60dp"
-                                        android:layout_height="60dp"
+                                        android:layout_width="50dp"
+                                        android:layout_height="50dp"
                                         android:src="@drawable/scroll"
                                         android:layout_gravity="center" />
 
@@ -624,14 +621,14 @@
                                 android:orientation="vertical">
 
                                 <FrameLayout
-                                    android:layout_width="70dp"
-                                    android:layout_height="70dp"
+                                    android:layout_width="60dp"
+                                    android:layout_height="60dp"
                                     android:background="@drawable/menu_icon_bg"
                                     android:backgroundTint="#5665">
 
                                     <ImageView
-                                        android:layout_width="60dp"
-                                        android:layout_height="60dp"
+                                        android:layout_width="50dp"
+                                        android:layout_height="50dp"
                                         android:src="@drawable/search"
                                         android:layout_gravity="center" />
 
@@ -674,14 +671,14 @@
                                 android:orientation="vertical">
 
                                 <FrameLayout
-                                    android:layout_width="70dp"
-                                    android:layout_height="70dp"
+                                    android:layout_width="60dp"
+                                    android:layout_height="60dp"
                                     android:background="@drawable/menu_icon_bg"
                                     android:backgroundTint="#5665">
 
                                     <ImageView
-                                        android:layout_width="60dp"
-                                        android:layout_height="60dp"
+                                        android:layout_width="45dp"
+                                        android:layout_height="45dp"
                                         android:src="@drawable/squreoutarrow"
                                         android:layout_gravity="center" />
 
@@ -702,7 +699,6 @@
                     </androidx.cardview.widget.CardView>
 
                 </androidx.appcompat.widget.LinearLayoutCompat>
-
 
                 <androidx.appcompat.widget.LinearLayoutCompat
                     android:layout_width="match_parent"
@@ -734,14 +730,14 @@
                                 android:orientation="vertical">
 
                                 <FrameLayout
-                                    android:layout_width="70dp"
-                                    android:layout_height="70dp"
+                                    android:layout_width="60dp"
+                                    android:layout_height="60dp"
                                     android:background="@drawable/menu_icon_bg"
                                     android:backgroundTint="#5665">
 
                                     <ImageView
-                                        android:layout_width="60dp"
-                                        android:layout_height="60dp"
+                                        android:layout_width="45dp"
+                                        android:layout_height="45dp"
                                         android:src="@drawable/squreinarrow"
                                         android:layout_gravity="center" />
 
@@ -750,7 +746,6 @@
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:layout_below="@id/ivcardimg1"
                                     android:layout_centerHorizontal="true"
                                     android:layout_marginTop="24dp"
                                     android:text="@string/Explicit_Intent"
@@ -785,14 +780,14 @@
                                 android:orientation="vertical">
 
                                 <FrameLayout
-                                    android:layout_width="70dp"
-                                    android:layout_height="70dp"
+                                    android:layout_width="60dp"
+                                    android:layout_height="60dp"
                                     android:background="@drawable/menu_icon_bg"
                                     android:backgroundTint="#5665">
 
                                     <ImageView
-                                        android:layout_width="50dp"
-                                        android:layout_height="50dp"
+                                        android:layout_width="40dp"
+                                        android:layout_height="40dp"
                                         android:src="@drawable/option"
                                         android:layout_gravity="center" />
 
@@ -801,7 +796,6 @@
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:layout_below="@id/ivcardimg2"
                                     android:layout_centerHorizontal="true"
                                     android:layout_marginTop="24dp"
                                     android:text="@string/Option_Manu"
@@ -844,8 +838,8 @@
                                 android:orientation="vertical">
 
                                 <FrameLayout
-                                    android:layout_width="70dp"
-                                    android:layout_height="70dp"
+                                    android:layout_width="60dp"
+                                    android:layout_height="60dp"
                                     android:background="@drawable/menu_icon_bg"
                                     android:backgroundTint="#5665">
 

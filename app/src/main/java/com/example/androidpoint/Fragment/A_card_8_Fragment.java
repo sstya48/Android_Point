@@ -5,6 +5,7 @@ import static com.example.androidpoint.R.*;
 import android.annotation.SuppressLint;
 import android.os.Bundle;
 
+import androidx.appcompat.widget.AppCompatImageView;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
@@ -20,11 +21,26 @@ public class A_card_8_Fragment extends Fragment {
 
     TextView imageslider_java, imageslider_xml, manifest_xml;
     ImageView imageslider_output;
+
+    AppCompatImageView Btn_arrow;
     @SuppressLint({"SetTextI18n", "MissingInflatedId"})
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(layout.fragment_a_card_8_, container, false);
+
+        Btn_arrow=view.findViewById(R.id.Btn_arrow);
+
+        Btn_arrow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Advance advance= new Advance();
+                getActivity().getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.frame_container, advance, "Back Button Basic")
+                        .addToBackStack(null)
+                        .commit();
+            }
+        });
 
         imageslider_output = view.findViewById(id.imageslider_output);
         imageslider_java = view.findViewById(id.imageslider_java);

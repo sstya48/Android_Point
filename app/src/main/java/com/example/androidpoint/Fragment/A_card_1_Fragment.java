@@ -3,6 +3,7 @@ package com.example.androidpoint.Fragment;
 import android.annotation.SuppressLint;
 import android.os.Bundle;
 
+import androidx.appcompat.widget.AppCompatImageView;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
@@ -18,22 +19,8 @@ public class A_card_1_Fragment extends Fragment {
     TextView splash_xml, splash_java, splash_main_java, splash_main_xml, gridal_permission;
     ImageView spalshscreen_output;
 
-    public A_card_1_Fragment() {
-        // Required empty public constructor
-    }
+    AppCompatImageView Btn_arrow;
 
-    public static A_card_1_Fragment newInstance() {
-        A_card_1_Fragment fragment = new A_card_1_Fragment();
-        Bundle args = new Bundle();
-        fragment.setArguments(args);
-        return fragment;
-    }
-
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-
-    }
 
     @SuppressLint({"MissingInflatedId", "SetTextI18n"})
     @Override
@@ -48,6 +35,20 @@ public class A_card_1_Fragment extends Fragment {
         splash_main_xml= view.findViewById(R.id.splash_main_xml);
         spalshscreen_output= view.findViewById(R.id.spalshscreen_output);
         gridal_permission= view.findViewById(R.id.gridal_permission);
+
+
+        Btn_arrow=view.findViewById(R.id.Btn_arrow);
+
+        Btn_arrow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Advance advance= new Advance();
+                getActivity().getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.frame_container, advance, "Back Button Basic")
+                        .addToBackStack(null)
+                        .commit();
+            }
+        });
 
         spalshscreen_output.setOnClickListener(new View.OnClickListener() {
             @Override

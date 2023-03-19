@@ -3,6 +3,7 @@ package com.example.androidpoint.Fragment;
 import android.annotation.SuppressLint;
 import android.os.Bundle;
 
+import androidx.appcompat.widget.AppCompatImageView;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
@@ -18,6 +19,8 @@ import com.example.androidpoint.R;
 public class A_card_3_Fragment extends Fragment {
 
     TextView radio_java, radio_xml;
+
+    AppCompatImageView Btn_arrow;
     ImageView radio_btn_output;
     @SuppressLint({"MissingInflatedId", "SetTextI18n"})
     @Override
@@ -26,6 +29,18 @@ public class A_card_3_Fragment extends Fragment {
 
         View view = inflater.inflate(R.layout.fragment_a_card_3_, container, false);
 
+        Btn_arrow=view.findViewById(R.id.Btn_arrow);
+
+        Btn_arrow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Advance advance= new Advance();
+                getActivity().getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.frame_container, advance, "Back Button Basic")
+                        .addToBackStack(null)
+                        .commit();
+            }
+        });
 
         radio_btn_output = view.findViewById(R.id.radio_btn_output);
         radio_java = view.findViewById(R.id.radio_java);

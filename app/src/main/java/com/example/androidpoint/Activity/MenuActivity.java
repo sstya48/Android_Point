@@ -23,7 +23,7 @@ import com.example.androidpoint.SaveState;
 public class MenuActivity extends AppCompatActivity {
 
 
-    LinearLayout shareapp,tips,feedback,rate_us, about_us ;
+    LinearLayout shareapp,tips,feedback,rate_us, about_us,ads_show ;
 
     FrameLayout frameLayout;
 
@@ -71,6 +71,7 @@ public class MenuActivity extends AppCompatActivity {
         shareapp = (LinearLayout) findViewById(R.id.shareapp);
         feedback = (LinearLayout) findViewById(R.id.feedback);
         tips = (LinearLayout) findViewById(R.id.tips);
+        ads_show = (LinearLayout) findViewById(R.id.ads_show);
 
 
         tips.setOnClickListener(new View.OnClickListener() {
@@ -90,6 +91,15 @@ public class MenuActivity extends AppCompatActivity {
 
                 Intent i = new Intent(MenuActivity.this, Feedback.class);
                 startActivity(i);
+            }
+        });
+
+        ads_show.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent ads = new Intent(MenuActivity.this, AdsActivity.class);
+                startActivity(ads);
             }
         });
 

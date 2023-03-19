@@ -57,7 +57,6 @@
                 android:textSize="20sp"
                 android:singleLine="true"
                 android:ellipsize="marquee"
-
                 android:textStyle="bold" />
 
 
@@ -109,12 +108,28 @@
         android:id="@+id/frame_container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_above="@+id/adView_main"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:layout_below="@+id/included">
+        android:layout_below="@+id/included"
+        tools:ignore="NotSibling">
 
     </FrameLayout>
-</RelativeLayout>
+
+        <com.google.android.gms.ads.AdView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/adView_main"
+            android:layout_alignParentBottom="true"
+            app:adSize="BANNER"
+            android:layout_gravity="bottom"
+            app:adUnitId="ca-app-pub-3940256099942544/6300978111"
+            />
+
+    </RelativeLayout>
+
 </LinearLayout>
+
+
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 </androidx.drawerlayout.widget.DrawerLayout>

@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -15,6 +16,9 @@ import com.example.androidpoint.Fragment.Advance;
 import com.example.androidpoint.Fragment.Basic;
 import com.example.androidpoint.Fragment.Learn;
 import com.example.androidpoint.R;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
 import com.google.android.material.tabs.TabLayout;
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     TabLayout included;
@@ -27,8 +31,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private MainActivity mcontext;
 
+    AdView adView_main;
+
+
     FragmentTransaction fragmentTransaction;
 
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,6 +53,21 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         fragmentTransaction.replace(R.id.frame_container, fragment);
         fragmentTransaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
         fragmentTransaction.commit();
+
+
+        //Banner Ad id====================================
+        adView_main=findViewById(R.id.adView_main);
+
+        //====================================================
+
+        MobileAds.initialize(this);
+
+        AdRequest adRequest=new AdRequest.Builder().build();
+
+
+        //banner ad load
+        adView_main.loadAd(adRequest);
+
 
     /*    int width = (int) (getResources().getDisplayMetrics().widthPixels * (0.85));
         DrawerLayout.LayoutParams params = (DrawerLayout.LayoutParams)

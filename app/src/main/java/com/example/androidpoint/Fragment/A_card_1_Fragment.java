@@ -64,6 +64,7 @@ public class A_card_1_Fragment extends Fragment {
 
         gridal_permission.setText("// Lottie animation\n" +
                 "    implementation 'com.airbnb.android:lottie:3.7.0'");
+        gridal_permission.setTextIsSelectable(true);
 
         splash_java.setText("package example.androidalians.splashscreen;\n" +
                 "\n" +
@@ -79,7 +80,7 @@ public class A_card_1_Fragment extends Fragment {
                 "\n" +
                 "    }\n" +
                 "}");
-
+        splash_java.setTextIsSelectable(true);
 
 
         splash_xml.setText("<?xml version=\"1.0\" encoding=\"utf-8\"?>\n" +
@@ -96,7 +97,7 @@ public class A_card_1_Fragment extends Fragment {
                 "        android:textSize=\"20sp\"\n" +
                 "        android:layout_centerInParent=\"true\"/>\n" +
                 "</RelativeLayout>");
-
+        splash_xml.setTextIsSelectable(true);
 
 
         splash_main_java.setText("package example.androidalians.splashscreen;\n" +
@@ -127,6 +128,7 @@ public class A_card_1_Fragment extends Fragment {
                 "\n" +
                 "    }\n" +
                 "}");
+        splash_main_java.setTextIsSelectable(true);
 
 
 
@@ -154,6 +156,7 @@ public class A_card_1_Fragment extends Fragment {
                 "        android:textColor=\"@color/blue\"/>\n" +
                 "\n" +
                 "</RelativeLayout>");
+        splash_main_xml.setTextIsSelectable(true);
 
         return view;
     }

@@ -41,7 +41,7 @@ public class A_card_7_Fragment extends Fragment {
                         .commit();
             }
         });
-
+        progress_java.setTextIsSelectable(true);
         progress_java.setText("package example.androidalians.progressbar;\n" +
                 "\n" +
                 "import android.app.ProgressDialog;\n" +
@@ -90,7 +90,7 @@ public class A_card_7_Fragment extends Fragment {
                 "      t.start();\n" +
                 "   }\n" +
                 "}");
-
+        progress_xml.setTextIsSelectable(true);
         progress_xml.setText("<?xml version=\"1.0\" encoding=\"utf-8\"?>\n" +
                 "<RelativeLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\n" +
                 "    xmlns:tools=\"http://schemas.android.com/tools\"\n" +

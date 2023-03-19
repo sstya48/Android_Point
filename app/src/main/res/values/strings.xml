@@ -31,10 +31,13 @@
     <string name="Image_Slider">Image Slider</string>
     <string name="Search_View">Search View</string>
     <string name="Registation_Page">Registation Page</string>
+    <string name="Gallery_Camera">Gallery and Camera</string>
     <string name="Bar_Chart">Bar Chart</string>
     <string name="Line_Chart">Line Chart</string>
     <string name="Pie_Chart">Pie Chart</string>
+    <string name="Gallery">Gallery</string>
     <string name="Instagram_Login">Instagram Login</string>
+    <string name="flash">Flash Lite</string>
     <string name="Phone_Call">Phone Call</string>
     <string name="Send_SMS">Send SMS</string>
     <string name="Send_Email">Send Email</string>
@@ -130,6 +133,22 @@
     <string name="correct_answer">Correct Answer</string>
     <string name="incorrect_answer">Incorrect Answer</string>
     <string name="missing_answer">Missing Answer</string>
+    <string name="Drawable_Border">Drawable Border</string>
+    <string name="custom_alert_xml">custom_alert.xml</string>
+    <string name="Drawable_arrow">Drawable Arrow</string>
+    <string name="Drawable_Color">Drawable Background Color</string>
+    <string name="Item_Java">Item.java</string>
+    <string name="Update_Java">Update.java</string>
+    <string name="activityitem_main">activity_item.xml</string>
+    <string name="activityitem_update">activity_update.xml</string>
+    <string name="rowlist_xml">rowlist.xml</string>
+    <string name="DatabaseHelper_java">DatabaseHelper.java</string>
+    <string name="Student_java">StudentModel.java</string>
+    <string name="ArrayAdapter_java">ArrayAdapter.java</string>
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
     //list-view===========================================================================================================
     <string-array name="Planets">

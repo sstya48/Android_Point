@@ -43,10 +43,13 @@ public class A_card_12_Fragment extends Fragment {
         });
 
         line_java.setText("");
+        line_java.setTextIsSelectable(true);
 
         line_xml.setText("");
+        line_xml.setTextIsSelectable(true);
 
         line_gridal_permission.setText("");
+        line_gridal_permission.setTextIsSelectable(true);
 
         return view;
     }

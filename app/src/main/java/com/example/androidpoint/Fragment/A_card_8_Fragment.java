@@ -42,7 +42,7 @@ public class A_card_8_Fragment extends Fragment {
                         .commit();
             }
         });
-
+        imageslider_java.setTextIsSelectable(true);
         imageslider_java.setText("package example.androidalians.imageslider;  \n" +
                 "  \n" +
                 "import android.support.v4.view.ViewPager;  \n" +
@@ -70,7 +70,7 @@ public class A_card_8_Fragment extends Fragment {
                 "        return view;\n" +
                 "    }\n" +
                 "}");
-
+        manifest_xml.setTextIsSelectable(true);
         manifest_xml.setText("<?xml version=\"1.0\" encoding=\"utf-8\"?>\n" +
                 "<manifest xmlns:android=\"http://schemas.android.com/apk/res/android\"\n" +
                 "    xmlns:tools=\"http://schemas.android.com/tools\"\n" +
@@ -103,7 +103,7 @@ public class A_card_8_Fragment extends Fragment {
                 "    </application>\n" +
                 " \n" +
                 "</manifest>");
-
+        imageslider_xml.setTextIsSelectable(true);
         imageslider_xml.setText("<?xml version=\"1.0\" encoding=\"utf-8\"?>\n" +
                 "<LinearLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\n" +
                 "    xmlns:tools=\"http://schemas.android.com/tools\"\n" +

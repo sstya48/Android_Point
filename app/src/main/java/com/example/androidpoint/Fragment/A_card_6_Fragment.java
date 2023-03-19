@@ -43,7 +43,7 @@ public class A_card_6_Fragment extends Fragment {
                         .commit();
             }
         });
-
+        manifest_xml.setTextIsSelectable(true);
         manifest_xml.setText("<?xml version=\"1.0\" encoding=\"utf-8\"?>\n" +
                 "<manifest xmlns:android=\"http://schemas.android.com/apk/res/android\"\n" +
                 "    xmlns:tools=\"http://schemas.android.com/tools\"\n" +
@@ -76,7 +76,7 @@ public class A_card_6_Fragment extends Fragment {
                 "    </application>\n" +
                 " \n" +
                 "</manifest>");
-
+        webview_java.setTextIsSelectable(true);
         webview_java.setText("package com.example.krishna.webviewdemo;\n" +
                 "import android.app.Activity;\n" +
                 "import android.os.Bundle;\n" +
@@ -124,7 +124,7 @@ public class A_card_6_Fragment extends Fragment {
                 "      }\n" +
                 "   }\n" +
                 "}");
-
+        webview_xml.setTextIsSelectable(true);
         webview_xml.setText("<?xml version=\"1.0\" encoding=\"utf-8\"?>\n" +
                 "<LinearLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\n" +
                 "    xmlns:tools=\"http://schemas.android.com/tools\"\n" +

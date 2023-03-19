@@ -73,6 +73,8 @@ public class A_card_3_Fragment extends Fragment {
                 "        });\n" +
                 "    }\n" +
                 "}");
+        radio_java.setTextIsSelectable(true);
+
 
 
         radio_xml.setText("<?xml version=\"1.0\" encoding=\"utf-8\"?>\n" +
@@ -140,8 +142,10 @@ public class A_card_3_Fragment extends Fragment {
                 "    </RadioGroup>\n" +
                 "\n" +
                 "</RelativeLayout>");
+        radio_xml.setTextIsSelectable(true);
 
-        
+
+
 
         return view;
     }

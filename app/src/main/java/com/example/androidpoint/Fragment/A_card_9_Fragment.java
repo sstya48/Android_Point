@@ -44,7 +44,7 @@ public class A_card_9_Fragment extends Fragment {
                         .commit();
             }
         });
-
+        location_java.setTextIsSelectable(true);
         location_java.setText("import example.androidalians.Manifest;\n" +
                 "import android.content.pm.PackageManager;\n" +
                 "import android.location.Location;\n" +
@@ -116,7 +116,7 @@ public class A_card_9_Fragment extends Fragment {
                 "      }\n" +
                 "   }\n" +
                 "}");
-
+        location_xml.setTextIsSelectable(true);
         location_xml.setText(" <?xml version=\"1.0\" encoding=\"utf-8\"?>\n" +
                 "<fragment xmlns:android=\"http://schemas.android.com/apk/res/android\"\n" +
                 "   xmlns:tools=\"http://schemas.android.com/tools\"\n" +
@@ -125,7 +125,7 @@ public class A_card_9_Fragment extends Fragment {
                 "   android:layout_width=\"match_parent\"\n" +
                 "   android:layout_height=\"match_parent\"\n" +
                 "   tools:context=\".MainActivity\" />");
-
+        manifest_xml.setTextIsSelectable(true);
         manifest_xml.setText("<?xml version=\"1.0\" encoding=\"utf-8\"?>\n" +
                 "<manifest xmlns:android=\"http://schemas.android.com/apk/res/android\"\n" +
                 "    xmlns:tools=\"http://schemas.android.com/tools\"\n" +
@@ -159,7 +159,7 @@ public class A_card_9_Fragment extends Fragment {
                 "    </application>\n" +
                 " \n" +
                 "</manifest>");
-
+        gridal_permission.setTextIsSelectable(true);
         gridal_permission.setText("// Google map" +
                 "implementation 'com.google.android.gms:play-services-maps:17.0.0'\n"+
                 "implementation 'com.google.android.gms:play-services-location:17.0.0'\n");

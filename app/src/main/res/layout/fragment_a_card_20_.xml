@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    tools:context=".Fragment.A_card_14_Fragment">
+    tools:context=".Fragment.A_card_20_Fragment">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -27,7 +27,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="5dp"
-            android:text="@string/Instagram_Login"
+            android:text="@string/flash"
             android:layout_gravity="center_vertical"
             android:textColor="#181A20"
             android:textSize="20sp"
@@ -41,9 +41,7 @@
 
         <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-
-            >
+            android:layout_height="wrap_content">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -56,7 +54,6 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/java_code"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:paddingBottom="20dp"
@@ -70,7 +67,7 @@
                     android:layout_marginBottom="15dp" />
 
                 <TextView
-                    android:id="@+id/insta_java"
+                    android:id="@+id/flash_java"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:padding="10dp"
@@ -85,7 +82,6 @@
                     android:scrollbars="vertical" />
 
                 <TextView
-                    android:id="@+id/xml_code"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:paddingBottom="20dp"
@@ -99,7 +95,7 @@
                     android:layout_marginBottom="15dp" />
 
                 <TextView
-                    android:id="@+id/insta_xml"
+                    android:id="@+id/flash_xml"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:padding="10dp"
@@ -119,7 +115,7 @@
                     android:paddingBottom="20dp"
                     android:padding="10dp"
                     android:gravity="clip_vertical"
-                    android:text="@string/Drawable_Color"
+                    android:text="@string/Gridal_Permission"
                     android:textSize="16sp"
                     android:background="@drawable/code_title_bg"
                     android:textColor="@color/white"
@@ -127,7 +123,7 @@
                     android:layout_marginBottom="15dp" />
 
                 <TextView
-                    android:id="@+id/Drawable_Color"
+                    android:id="@+id/Gridal_Permission"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:padding="10dp"
@@ -141,68 +137,13 @@
                     android:layout_marginBottom="20dp"
                     android:scrollbars="vertical" />
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:paddingBottom="20dp"
-                    android:padding="10dp"
-                    android:gravity="clip_vertical"
-                    android:text="@string/Drawable_Border"
-                    android:textSize="16sp"
-                    android:background="@drawable/code_title_bg"
-                    android:textColor="@color/white"
-                    android:fontFamily="@font/poppins_semibold"
-                    android:layout_marginBottom="15dp" />
-
-                <TextView
-                    android:id="@+id/Drawable_Border"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:padding="10dp"
-                    android:gravity="clip_vertical"
-                    android:text="hello"
-                    android:textSize="14sp"
-                    android:textColor="#333333"
-                    android:background="@drawable/boder_sos"
-                    android:overScrollMode="always"
-                    android:scrollbarStyle="insideInset"
-                    android:layout_marginBottom="20dp"
-                    android:scrollbars="vertical" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:paddingBottom="20dp"
-                    android:padding="10dp"
-                    android:gravity="clip_vertical"
-                    android:text="@string/Drawable_arrow"
-                    android:textSize="16sp"
-                    android:background="@drawable/code_title_bg"
-                    android:textColor="@color/white"
-                    android:fontFamily="@font/poppins_semibold"
-                    android:layout_marginBottom="15dp" />
-
-                <TextView
-                    android:id="@+id/Drawable_arrow"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:padding="10dp"
-                    android:gravity="clip_vertical"
-                    android:text="hello"
-                    android:textSize="14sp"
-                    android:textColor="#333333"
-                    android:background="@drawable/boder_sos"
-                    android:overScrollMode="always"
-                    android:scrollbarStyle="insideInset"
-                    android:layout_marginBottom="20dp"
-                    android:scrollbars="vertical" />
 
             </LinearLayout>
 
 
         </ScrollView>
         <androidx.appcompat.widget.AppCompatImageView
-            android:id="@+id/insta_output"
+            android:id="@+id/flash_output"
             app:srcCompat="@drawable/codepart"
             android:layout_width="60dp"
             android:layout_height="60dp"
@@ -217,5 +158,6 @@
             tools:ignore="ExtraText" />
 
     </RelativeLayout>
+
 
 </LinearLayout>

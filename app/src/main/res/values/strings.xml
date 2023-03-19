@@ -12,15 +12,15 @@
     <string name="Check_Box">Check Box</string>
     <string name="Radio_Button">Radio Button</string>
     <string name="ListView">ListView</string>
-    <string name="Date_Piker">Date Piker</string>
-    <string name="Time_Piker">Time Piker</string>
+    <string name="Date_Piker">Date Picker</string>
+    <string name="Time_Piker">Time Picker</string>
     <string name="ScrollView">ScrollView</string>
     <string name="SerchView">SerchView</string>
     <string name="Implicit_Intent">Implicit Intent</string>
     <string name="Explicit_Intent">Explicit Intent</string>
-    <string name="Option_Manu">Option Manu</string>
-    <string name="Context_Manu">Context Manu</string>
-    <string name="Popup_Manu">Popup Manu</string>
+    <string name="Option_Manu">Option Menu</string>
+    <string name="Context_Manu">Context Menu</string>
+    <string name="Popup_Manu">Popup Menu</string>
     <string name="Splash_Screen">Splash Screen</string>
     <string name="Toggle_Button">Toggle Button</string>
     <string name="Radio_Group">Radio Group</string>
@@ -121,9 +121,18 @@
     <string name="manifest">AndroidManifest.xml</string>
     <string name="spashactivity">SplashActivity.java</string>
     <string name="spash_activity">splashfile.xml</string>
-    <string name="Gridal_Permission">Gridal Permission</string>
+    <string name="strings">strings.xml</string>
+    <string name="mylist"> mylist.xml</string>
+    <string name="menu"> menu.xml</string>
+    <string name="gradle">build.gradle(Module:app)</string>
 
 
+    //radio-button===================================================================================================================
+
+    <string name="answer3">Mount Everest</string>
+    <string name="correct_answer">Correct Answer</string>
+    <string name="incorrect_answer">Incorrect Answer</string>
+    <string name="missing_answer">Missing Answer</string>
     <string name="Drawable_Border">Drawable Border</string>
     <string name="custom_alert_xml">custom_alert.xml</string>
     <string name="Drawable_arrow">Drawable Arrow</string>
@@ -141,5 +150,23 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
+    //list-view===========================================================================================================
+    <string-array name="Planets">
+        <item>Sun</item>
+        <item>Mercury</item>
+        <item>Venus</item>
+        <item>Earth</item>
+        <item>Mars</item>
+        <item>Jupiter</item>
+        <item>Saturn</item>
+        <item>Uranus</item>
+        <item>Neptune</item>
+    </string-array>
+
+    <string name="first_activity">Welcome to First Activity</string>
+    <string name="second_activity">Welcome to Second Activity</string>
+
+    <string name="go_to_second_activity">Go to Second Activity</string>
+    <string name="go_to_first_activity">Go to First Activity</string>
 
 </resources>

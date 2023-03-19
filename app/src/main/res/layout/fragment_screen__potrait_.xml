@@ -7,32 +7,20 @@
     android:gravity="center"
     tools:context=".DemoFragments.Screen_Orientation_Fragment">
 
-    <ScrollView
+    <TextView
+        android:id="@+id/editText1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="22sp"
+        android:text="This activity is portrait orientation"
+       />
+
+    <Button
+        android:id="@+id/portrait"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        >
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            >
-
-            <androidx.appcompat.widget.AppCompatImageView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:src="@drawable/potrait_orientation"
-                android:layout_marginBottom="20dp"
-                android:layout_marginTop="10dp"
-                />
-
-            <androidx.appcompat.widget.AppCompatImageView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:src="@drawable/landscap_orientation"
-                android:layout_marginBottom="20dp"/>
-
-        </LinearLayout>
-    </ScrollView>>
+        android:text="Launch LandScape Activity"
+        android:layout_marginTop="20dp"
+        />
 
 </LinearLayout>

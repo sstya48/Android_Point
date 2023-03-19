@@ -29,7 +29,10 @@ public class B_card_5_Fragment extends Fragment {
 
 
         checkbox_java=view.findViewById(R.id.checkbox_java);
+        checkbox_java.setTextIsSelectable(true);
+
         checkbox_xml=view.findViewById(R.id.checkbox_xml);
+        checkbox_xml.setTextIsSelectable(true);
 
         checkbox_demo=view.findViewById(R.id.checkbox_demo);
 
@@ -64,8 +67,7 @@ public class B_card_5_Fragment extends Fragment {
                 "    android:layout_width=\"match_parent\"\n" +
                 "    android:layout_height=\"match_parent\"\n" +
                 "    android:orientation=\"vertical\"\n" +
-                "    android:gravity=\"center\"\n" +
-                "      tools:context=\"example.androidalians.com.checkbox.MainActivity\">\n" +
+                "    android:gravity=\"center\">\n" +
                 "\n" +
                 "    <CheckBox\n" +
                 "        android:id=\"@+id/checkBox\"\n" +
@@ -123,13 +125,11 @@ public class B_card_5_Fragment extends Fragment {
                "        addListenerOnButtonClick();  \n" +
                "    }  \n" +
                "    public void addListenerOnButtonClick(){  \n" +
-               "        //Getting instance of CheckBoxes and Button from the activty_main.xml file  \n" +
                "        pizza=(CheckBox)findViewById(R.id.checkBox);  \n" +
                "        coffe=(CheckBox)findViewById(R.id.checkBox2);  \n" +
                "        burger=(CheckBox)findViewById(R.id.checkBox3);  \n" +
                "        buttonOrder=(Button)findViewById(R.id.button);  \n" +
                "  \n" +
-               "        //Applying the Listener on the Button click  \n" +
                "        buttonOrder.setOnClickListener(new View.OnClickListener(){  \n" +
                "  \n" +
                "            @Override  \n" +
@@ -150,7 +150,6 @@ public class B_card_5_Fragment extends Fragment {
                "                    totalamount+=120;  \n" +
                "                }  \n" +
                "                result.append(\"\\nTotal: \"+totalamount+\"Rs\");  \n" +
-               "                //Displaying the message on the toast  \n" +
                "                Toast.makeText(getApplicationContext(), result.toString(), Toast.LENGTH_LONG).show();  \n" +
                "            }  \n" +
                "  \n" +

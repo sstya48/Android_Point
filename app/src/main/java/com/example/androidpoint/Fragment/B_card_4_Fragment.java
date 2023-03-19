@@ -28,12 +28,20 @@ public class B_card_4_Fragment extends Fragment {
         View view= inflater.inflate(R.layout.fragment_b_card_4_, container, false);
 
         screen_orientation_xml= view.findViewById(R.id.screen_orientation_xml);
+        screen_orientation_xml.setTextIsSelectable(true);
+
         screen_orientation_java= view.findViewById(R.id.screen_orientation_java);
+        screen_orientation_java.setTextIsSelectable(true);
 
         screen_orientation_second_xml= view.findViewById(R.id.screen_orientation_second_xml);
+        screen_orientation_second_xml.setTextIsSelectable(true);
+
         screen_orientation_second_java= view.findViewById(R.id.screen_orientation_second_java);
+        screen_orientation_second_java.setTextIsSelectable(true);
 
         manifest_xml_code= view.findViewById(R.id.manifest_xml_code);
+        manifest_xml_code.setTextIsSelectable(true);
+
 
         screen_orientation_demo= view.findViewById(R.id.screen_orientation_demo);
 
@@ -63,46 +71,31 @@ public class B_card_4_Fragment extends Fragment {
             }
         });
 
-        screen_orientation_xml.setText("<?xml version=\"1.0\" encoding=\"utf-8\"?>  \n" +
-                "<android.support.constraint.ConstraintLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"  \n" +
-                "    xmlns:app=\"http://schemas.android.com/apk/res-auto\"  \n" +
-                "    xmlns:tools=\"http://schemas.android.com/tools\"  \n" +
-                "    android:layout_width=\"match_parent\"  \n" +
-                "    android:layout_height=\"match_parent\"  \n" +
-                "    tools:context=\"example.androidalians.com.screenorientation.MainActivity\">  \n" +
-                "  \n" +
-                "  \n" +
-                "    <Button  \n" +
-                "        android:id=\"@+id/button1\"  \n" +
-                "        android:layout_width=\"wrap_content\"  \n" +
-                "        android:layout_height=\"wrap_content\"  \n" +
-                "        android:layout_marginBottom=\"8dp\"  \n" +
-                "        android:layout_marginTop=\"112dp\"  \n" +
-                "        android:onClick=\"onClick\"  \n" +
-                "        android:text=\"Launch next activity\"  \n" +
-                "        app:layout_constraintBottom_toBottomOf=\"parent\"  \n" +
-                "        app:layout_constraintEnd_toEndOf=\"parent\"  \n" +
-                "        app:layout_constraintHorizontal_bias=\"0.612\"  \n" +
-                "        app:layout_constraintStart_toStartOf=\"parent\"  \n" +
-                "        app:layout_constraintTop_toBottomOf=\"@+id/editText1\"  \n" +
-                "        app:layout_constraintVertical_bias=\"0.613\" />  \n" +
-                "  \n" +
-                "    <TextView  \n" +
-                "        android:id=\"@+id/editText1\"  \n" +
-                "        android:layout_width=\"wrap_content\"  \n" +
-                "        android:layout_height=\"wrap_content\"  \n" +
-                "        android:layout_centerHorizontal=\"true\"  \n" +
-                "        android:layout_marginEnd=\"8dp\"  \n" +
-                "        android:layout_marginStart=\"8dp\"  \n" +
-                "        android:layout_marginTop=\"124dp\"  \n" +
-                "        android:ems=\"10\"  \n" +
-                "        android:textSize=\"22dp\"  \n" +
-                "        android:text=\"This activity is portrait orientation\"  \n" +
-                "        app:layout_constraintEnd_toEndOf=\"parent\"  \n" +
-                "        app:layout_constraintHorizontal_bias=\"0.502\"  \n" +
-                "        app:layout_constraintStart_toStartOf=\"parent\"  \n" +
-                "        app:layout_constraintTop_toTopOf=\"parent\" />  \n" +
-                "</android.support.constraint.ConstraintLayout>  \n");
+        screen_orientation_xml.setText("<?xml version=\"1.0\" encoding=\"utf-8\"?>\n" +
+                "<LinearLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\n" +
+                "    xmlns:tools=\"http://schemas.android.com/tools\"\n" +
+                "    android:layout_width=\"match_parent\"\n" +
+                "    android:layout_height=\"match_parent\"\n" +
+                "    android:orientation=\"vertical\"\n" +
+                "    android:gravity=\"center\"> \n" +
+                "\n" +
+                "    <TextView\n" +
+                "        android:id=\"@+id/editText1\"\n" +
+                "        android:layout_width=\"wrap_content\"\n" +
+                "        android:layout_height=\"wrap_content\"\n" +
+                "        android:textSize=\"22sp\"\n" +
+                "        android:text=\"This activity is portrait orientation\"\n" +
+                "       />\n" +
+                "\n" +
+                "    <Button\n" +
+                "        android:id=\"@+id/portrait\"\n" +
+                "        android:layout_width=\"match_parent\"\n" +
+                "        android:layout_height=\"wrap_content\"\n" +
+                "        android:text=\"Launch LandScape Activity\"\n" +
+                "        android:layout_marginTop=\"20dp\"\n" +
+                "        />\n" +
+                "    \n" +
+                "</LinearLayout>");
 
 
         screen_orientation_java.setText("package example.androidalians.com.screenorientation;  \n" +
@@ -144,28 +137,24 @@ public class B_card_4_Fragment extends Fragment {
                 "    }  \n" +
                 "}  ");
 
-        screen_orientation_second_xml.setText("<?xml version=\"1.0\" encoding=\"utf-8\"?>  \n" +
-                "<android.support.constraint.ConstraintLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"  \n" +
-                "    xmlns:app=\"http://schemas.android.com/apk/res-auto\"  \n" +
-                "    xmlns:tools=\"http://schemas.android.com/tools\"  \n" +
-                "    android:layout_width=\"match_parent\"  \n" +
-                "    android:layout_height=\"match_parent\"  \n" +
-                "    tools:context=\"example.androidalians.com.screenorientation.SecondActivity\">  \n" +
-                "  \n" +
-                "    <TextView  \n" +
-                "        android:id=\"@+id/textView\"  \n" +
-                "        android:layout_width=\"wrap_content\"  \n" +
-                "        android:layout_height=\"wrap_content\"  \n" +
-                "        android:layout_marginEnd=\"8dp\"  \n" +
-                "        android:layout_marginStart=\"8dp\"  \n" +
-                "        android:layout_marginTop=\"180dp\"  \n" +
-                "        android:text=\"this is landscape orientation\"  \n" +
-                "        android:textSize=\"22dp\"  \n" +
-                "        app:layout_constraintEnd_toEndOf=\"parent\"  \n" +
-                "        app:layout_constraintHorizontal_bias=\"0.502\"  \n" +
-                "        app:layout_constraintStart_toStartOf=\"parent\"  \n" +
-                "        app:layout_constraintTop_toTopOf=\"parent\" />  \n" +
-                "</android.support.constraint.ConstraintLayout>");
+        screen_orientation_second_xml.setText("<?xml version=\"1.0\" encoding=\"utf-8\"?>\n" +
+                "<LinearLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\n" +
+                "    xmlns:tools=\"http://schemas.android.com/tools\"\n" +
+                "    android:layout_width=\"match_parent\"\n" +
+                "    android:layout_height=\"match_parent\"\n" +
+                "    android:gravity=\"center\"\n" +
+                "    android:orientation=\"vertical\"> \n" +
+                "\n" +
+                "\n" +
+                "    <TextView\n" +
+                "        android:id=\"@+id/editText1\"\n" +
+                "        android:layout_width=\"wrap_content\"\n" +
+                "        android:layout_height=\"wrap_content\"\n" +
+                "        android:layout_centerHorizontal=\"true\"\n" +
+                "        android:text=\"This activity is Landscape orientation\"\n" +
+                "        android:textSize=\"22dp\" />\n" +
+                "\n" +
+                "</LinearLayout>\n");
 
         manifest_xml_code.setText("<?xml version=\"1.0\" encoding=\"utf-8\"?>  \n" +
                 "<manifest xmlns:android=\"http://schemas.android.com/apk/res/android\"  \n" +

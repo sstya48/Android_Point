@@ -28,7 +28,11 @@ public class B_card_2_Fragment extends Fragment {
         View view= inflater.inflate(R.layout.fragment_b_card_2_, container, false);
 
         activity_lifecycle_xml= view.findViewById(R.id.activity_lifecycle_xml);
+        activity_lifecycle_xml.setTextIsSelectable(true);
+
         activity_lifecycle_java= view.findViewById(R.id.activity_lifecycle_java);
+        activity_lifecycle_java.setTextIsSelectable(true);
+
 
         activity_cycle_demo= view.findViewById(R.id.activity_cycle_demo);
 
@@ -104,14 +108,12 @@ public class B_card_2_Fragment extends Fragment {
                 "    xmlns:app=\"http://schemas.android.com/apk/res-auto\"  \n" +
                 "    xmlns:tools=\"http://schemas.android.com/tools\"  \n" +
                 "    android:layout_width=\"match_parent\"  \n" +
-                "    android:layout_height=\"match_parent\"  \n" +
-                "    tools:context=\"example.androidalians.com.activitylifecycle.MainActivity\">  \n" +
+                "    android:layout_height=\"match_parent\" > \n" +
                 "  \n" +
                 "    <TextView  \n" +
                 "        android:layout_width=\"wrap_content\"  \n" +
                 "        android:layout_height=\"wrap_content\"  \n" +
                 "        android:text=\"Hello World!\"  \n" +
-                "        app:layout_constraintBottom_toBottomOf=\"parent\"  \n" +
                 "        app:layout_constraintLeft_toLeftOf=\"parent\"  \n" +
                 "        app:layout_constraintRight_toRightOf=\"parent\"  \n" +
                 "        app:layout_constraintTop_toTopOf=\"parent\" />  \n" +

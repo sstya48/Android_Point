@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".Fragment.B_card_14_Fragment">
-
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -17,9 +16,9 @@
             android:id="@+id/Btn_arrow"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:layout_marginTop="13dp"
-            android:layout_marginStart="10dp"
             android:layout_gravity="center_vertical"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="13dp"
             android:layout_marginBottom="12dp"
             android:padding="6dp"
             android:src="@drawable/arrow" />
@@ -27,9 +26,9 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
             android:layout_marginStart="5dp"
             android:text="@string/Option_Manu"
-            android:layout_gravity="center_vertical"
             android:textColor="#181A20"
             android:textSize="20sp"
             android:textStyle="bold" />
@@ -38,37 +37,129 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        >
+        android:layout_height="match_parent">
 
-        <TextView
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Hello World..!"
-            android:gravity="center"
-            android:textSize="15sp"
-            android:layout_marginTop="250dp"/>
+            android:layout_height="wrap_content">
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="20dp"
+                android:orientation="vertical"
+                android:padding="7dp">
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+                <TextView
+                    android:id="@+id/java_code"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    android:background="@drawable/code_title_bg"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:gravity="clip_vertical"
+                    android:padding="10dp"
+                    android:paddingBottom="20dp"
+                    android:text="@string/mainactivity"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
 
-            <androidx.appcompat.widget.AppCompatImageView
-                app:srcCompat="@drawable/codepart"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentBottom="true"
-                android:layout_marginEnd="30dp"
-                android:layout_marginBottom="30dp"
-                android:background="?android:attr/selectableItemBackgroundBorderless"
-                android:clickable="true"
-                android:focusable="true"
-                android:visibility="visible" />
+                <TextView
+                    android:id="@+id/optionMenu_java"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:background="@drawable/boder_sos"
+                    android:gravity="clip_vertical"
+                    android:overScrollMode="always"
+                    android:padding="10dp"
+                    android:scrollbarStyle="insideInset"
+                    android:scrollbars="vertical"
+                    android:text="hello"
+                    android:textColor="#333333"
+                    android:textSize="14sp" />
+                <!--
 
+                                <TextView
+                                    android:id="@+id/xml_code"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="15dp"
+                                    android:background="@drawable/code_title_bg"
+                                    android:fontFamily="@font/poppins_semibold"
+                                    android:gravity="clip_vertical"
+                                    android:padding="10dp"
+                                    android:paddingBottom="20dp"
+                                    android:text="@string/activity_main"
+                                    android:textColor="@color/white"
+                                    android:textSize="16sp" />
 
-        </RelativeLayout>
+                                <TextView
+                                    android:id="@+id/optionMenu_xml"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="20dp"
+                                    android:background="@drawable/boder_sos"
+                                    android:gravity="clip_vertical"
+                                    android:overScrollMode="always"
+                                    android:padding="10dp"
+                                    android:scrollbarStyle="insideInset"
+                                    android:scrollbars="vertical"
+                                    android:text="hello"
+                                    android:textColor="#333333"
+                                    android:textSize="14sp" />
+                -->
+
+                <TextView
+                    android:id="@+id/menu_xml_code"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    android:background="@drawable/code_title_bg"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:gravity="clip_vertical"
+                    android:padding="10dp"
+                    android:paddingBottom="20dp"
+                    android:text="@string/menu"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/option_xml_menu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:background="@drawable/boder_sos"
+                    android:gravity="clip_vertical"
+                    android:overScrollMode="always"
+                    android:padding="10dp"
+                    android:scrollbarStyle="insideInset"
+                    android:scrollbars="vertical"
+                    android:text="hello"
+                    android:textColor="#333333"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+        </ScrollView>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/optionMenu_demo"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="30dp"
+            android:layout_marginBottom="30dp"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:focusable="true"
+            android:visibility="visible"
+            app:srcCompat="@drawable/codepart" />
+
     </RelativeLayout>
 
 </LinearLayout>

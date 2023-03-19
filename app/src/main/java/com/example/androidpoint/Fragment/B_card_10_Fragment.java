@@ -31,7 +31,10 @@ public class B_card_10_Fragment extends Fragment {
         View view= inflater.inflate(R.layout.fragment_b_card_10_, container, false);
 
         scroll_java=view.findViewById(R.id.scroll_java);
+        scroll_java.setTextIsSelectable(true);
+
         scroll_xml=view.findViewById(R.id.scroll_xml);
+        scroll_xml.setTextIsSelectable(true);
 
         scroll_demo=view.findViewById(R.id.scroll_demo);
 
@@ -77,127 +80,187 @@ public class B_card_10_Fragment extends Fragment {
                 "}  ");
 
 
-        scroll_xml.setText("<?xml version=\"1.0\" encoding=\"utf-8\"?>  \n" +
-                "<RelativeLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"  \n" +
-                "    xmlns:tools=\"http://schemas.android.com/tools\"  \n" +
-                "    android:layout_width=\"match_parent\"  \n" +
-                "    android:layout_height=\"match_parent\"  \n" +
-                "    android:paddingBottom=\"@dimen/activity_vertical_margin\"  \n" +
-                "    android:paddingLeft=\"@dimen/activity_horizontal_margin\"  \n" +
-                "    android:paddingRight=\"@dimen/activity_horizontal_margin\"  \n" +
-                "    android:paddingTop=\"@dimen/activity_vertical_margin\"  \n" +
-                "    tools:context=\"com.example.test.scrollviews.MainActivity\">  \n" +
-                "  \n" +
-                "  \n" +
-                "    <TextView  \n" +
-                "        android:layout_width=\"wrap_content\"  \n" +
-                "        android:layout_height=\"wrap_content\"  \n" +
-                "        android:textAppearance=\"?android:attr/textAppearanceMedium\"  \n" +
-                "        android:text=\"Vertical ScrollView example\"  \n" +
-                "        android:id=\"@+id/textView\"  \n" +
-                "        android:layout_gravity=\"center_horizontal\"  \n" +
-                "        android:layout_centerHorizontal=\"true\"  \n" +
-                "        android:layout_alignParentTop=\"true\" />  \n" +
-                "  \n" +
-                "  \n" +
-                "    <ScrollView android:layout_marginTop=\"30dp\"  \n" +
-                "        android:layout_width=\"fill_parent\"  \n" +
-                "        android:layout_height=\"wrap_content\"  \n" +
-                "        android:id=\"@+id/scrollView\">  \n" +
-                "  \n" +
-                "  \n" +
-                "        <LinearLayout  \n" +
-                "            android:layout_width=\"fill_parent\"  \n" +
-                "            android:layout_height=\"fill_parent\"  \n" +
-                "            android:orientation=\"vertical\" >  \n" +
-                "  \n" +
-                "            <Button  \n" +
-                "                android:layout_width=\"fill_parent\"  \n" +
-                "                android:layout_height=\"wrap_content\"  \n" +
-                "                android:text=\"Button 1\" />  \n" +
-                "            <Button  \n" +
-                "                android:layout_width=\"fill_parent\"  \n" +
-                "                android:layout_height=\"wrap_content\"  \n" +
-                "                android:text=\"Button 2\" />  \n" +
-                "            <Button  \n" +
-                "                android:layout_width=\"fill_parent\"  \n" +
-                "                android:layout_height=\"wrap_content\"  \n" +
-                "                android:text=\"Button 3\" />  \n" +
-                "            <Button  \n" +
-                "                android:layout_width=\"fill_parent\"  \n" +
-                "                android:layout_height=\"wrap_content\"  \n" +
-                "                android:text=\"Button 4\" />  \n" +
-                "            <Button  \n" +
-                "                android:layout_width=\"fill_parent\"  \n" +
-                "                android:layout_height=\"wrap_content\"  \n" +
-                "                android:text=\"Button 5\" />  \n" +
-                "            <Button  \n" +
-                "                android:layout_width=\"fill_parent\"  \n" +
-                "                android:layout_height=\"wrap_content\"  \n" +
-                "                android:text=\"Button 6\" />  \n" +
-                "            <Button  \n" +
-                "                android:layout_width=\"fill_parent\"  \n" +
-                "                android:layout_height=\"wrap_content\"  \n" +
-                "                android:text=\"Button 7\" />  \n" +
-                "            <Button  \n" +
-                "                android:layout_width=\"fill_parent\"  \n" +
-                "                android:layout_height=\"wrap_content\"  \n" +
-                "                android:text=\"Button 8\" />  \n" +
-                "            <Button  \n" +
-                "                android:layout_width=\"fill_parent\"  \n" +
-                "                android:layout_height=\"wrap_content\"  \n" +
-                "                android:text=\"Button 9\" />  \n" +
-                "            <Button  \n" +
-                "                android:layout_width=\"fill_parent\"  \n" +
-                "                android:layout_height=\"wrap_content\"  \n" +
-                "                android:text=\"Button 10\" />  \n" +
-                "            <Button  \n" +
-                "                android:layout_width=\"fill_parent\"  \n" +
-                "                android:layout_height=\"wrap_content\"  \n" +
-                "                android:text=\"Button 11\" />  \n" +
-                "            <Button  \n" +
-                "                android:layout_width=\"fill_parent\"  \n" +
-                "                android:layout_height=\"wrap_content\"  \n" +
-                "                android:text=\"Button 12\" />  \n" +
-                "            <Button  \n" +
-                "                android:layout_width=\"fill_parent\"  \n" +
-                "                android:layout_height=\"wrap_content\"  \n" +
-                "                android:text=\"Button 13\" />  \n" +
-                "            <Button  \n" +
-                "                android:layout_width=\"fill_parent\"  \n" +
-                "                android:layout_height=\"wrap_content\"  \n" +
-                "                android:text=\"Button 14\" />  \n" +
-                "            <Button  \n" +
-                "                android:layout_width=\"fill_parent\"  \n" +
-                "                android:layout_height=\"wrap_content\"  \n" +
-                "                android:text=\"Button 15\" />  \n" +
-                "            <Button  \n" +
-                "                android:layout_width=\"fill_parent\"  \n" +
-                "                android:layout_height=\"wrap_content\"  \n" +
-                "                android:text=\"Button 16\" />  \n" +
-                "            <Button  \n" +
-                "                android:layout_width=\"fill_parent\"  \n" +
-                "                android:layout_height=\"wrap_content\"  \n" +
-                "                android:text=\"Button 17\" />  \n" +
-                "            <Button  \n" +
-                "                android:layout_width=\"fill_parent\"  \n" +
-                "                android:layout_height=\"wrap_content\"  \n" +
-                "                android:text=\"Button 18\" />  \n" +
-                "  \n" +
-                "            <Button  \n" +
-                "                android:layout_width=\"fill_parent\"  \n" +
-                "                android:layout_height=\"wrap_content\"  \n" +
-                "                android:text=\"Button 19\" />  \n" +
-                "            <Button  \n" +
-                "                android:layout_width=\"fill_parent\"  \n" +
-                "                android:layout_height=\"wrap_content\"  \n" +
-                "                android:text=\"Button 20\" />  \n" +
-                "  \n" +
-                "        </LinearLayout>  \n" +
-                "  \n" +
-                "    </ScrollView>  \n" +
-                "  \n" +
-                "</RelativeLayout> ");
+        scroll_xml.setText("<?xml version=\"1.0\" encoding=\"utf-8\"?>\n" +
+                "<LinearLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\n" +
+                "    xmlns:tools=\"http://schemas.android.com/tools\"\n" +
+                "    android:layout_width=\"match_parent\"\n" +
+                "    android:layout_height=\"match_parent\"\n" +
+                "    android:padding=\"10dp\"\n" +
+                "    android:orientation=\"vertical\"> \n" +
+                "\n" +
+                "\n" +
+                "    <TextView\n" +
+                "        android:layout_width=\"wrap_content\"\n" +
+                "        android:layout_height=\"wrap_content\"\n" +
+                "        android:textAppearance=\"?android:attr/textAppearanceMedium\"\n" +
+                "        android:text=\"Vertical ScrollView example\"\n" +
+                "        android:id=\"@+id/textView\"\n" +
+                "        android:layout_gravity=\"center_horizontal\"\n" +
+                "        android:layout_centerHorizontal=\"true\"\n" +
+                "        android:layout_alignParentTop=\"true\" />\n" +
+                "\n" +
+                "\n" +
+                "    <ScrollView android:layout_marginTop=\"30dp\"\n" +
+                "        android:layout_width=\"match_parent\"\n" +
+                "        android:layout_height=\"wrap_content\"\n" +
+                "        android:id=\"@+id/scrollView\">\n" +
+                "\n" +
+                "\n" +
+                "        <LinearLayout\n" +
+                "            android:layout_width=\"match_parent\"\n" +
+                "            android:layout_height=\"match_parent\"\n" +
+                "            android:orientation=\"vertical\" >\n" +
+                "\n" +
+                "            <Button\n" +
+                "                android:layout_width=\"match_parent\"\n" +
+                "                android:layout_height=\"wrap_content\"\n" +
+                "                android:text=\"Button 1\"\n" +
+                "                android:background=\"@color/mango\"\n" +
+                "                android:layout_margin=\"8dp\"\n" +
+                "                android:textColor=\"@color/white\"\n" +
+                "                />\n" +
+                "            <Button\n" +
+                "                android:layout_width=\"match_parent\"\n" +
+                "                android:layout_height=\"wrap_content\"\n" +
+                "                android:text=\"Button 2\"\n" +
+                "                android:background=\"@color/purple_200\"\n" +
+                "                android:layout_margin=\"8dp\"\n" +
+                "                android:textColor=\"@color/white\"\n" +
+                "                />\n" +
+                "            <Button\n" +
+                "                android:layout_width=\"match_parent\"\n" +
+                "                android:layout_height=\"wrap_content\"\n" +
+                "                android:text=\"Button 3\"\n" +
+                "                android:background=\"@color/teal_700\"\n" +
+                "                android:layout_margin=\"8dp\"\n" +
+                "                android:textColor=\"@color/white\"/>\n" +
+                "            <Button\n" +
+                "                android:layout_width=\"match_parent\"\n" +
+                "                android:layout_height=\"wrap_content\"\n" +
+                "                android:text=\"Button 4\"\n" +
+                "                android:background=\"@color/lightpeach\"\n" +
+                "                android:layout_margin=\"8dp\"\n" +
+                "                android:textColor=\"@color/white\"/>\n" +
+                "            <Button\n" +
+                "                android:layout_width=\"match_parent\"\n" +
+                "                android:layout_height=\"wrap_content\"\n" +
+                "                android:text=\"Button 5\"\n" +
+                "                android:background=\"@color/active\"\n" +
+                "                android:layout_margin=\"8dp\"\n" +
+                "                android:textColor=\"@color/white\"/>\n" +
+                "            <Button\n" +
+                "                android:layout_width=\"match_parent\"\n" +
+                "                android:layout_height=\"wrap_content\"\n" +
+                "                android:text=\"Button 6\"\n" +
+                "                android:background=\"@color/mango\"\n" +
+                "                android:layout_margin=\"8dp\"\n" +
+                "                android:textColor=\"@color/white\"\n" +
+                "                />\n" +
+                "            <Button\n" +
+                "                android:layout_width=\"match_parent\"\n" +
+                "                android:layout_height=\"wrap_content\"\n" +
+                "                android:text=\"Button 7\"\n" +
+                "                android:background=\"@color/purple_200\"\n" +
+                "                android:layout_margin=\"8dp\"\n" +
+                "                android:textColor=\"@color/white\"/>\n" +
+                "            <Button\n" +
+                "                android:layout_width=\"match_parent\"\n" +
+                "                android:layout_height=\"wrap_content\"\n" +
+                "                android:text=\"Button 8\"\n" +
+                "                android:background=\"@color/teal_700\"\n" +
+                "                android:layout_margin=\"8dp\"\n" +
+                "                android:textColor=\"@color/white\"/>\n" +
+                "            <Button\n" +
+                "                android:layout_width=\"match_parent\"\n" +
+                "                android:layout_height=\"wrap_content\"\n" +
+                "                android:text=\"Button 9\"\n" +
+                "                android:background=\"@color/lightpeach\"\n" +
+                "                android:layout_margin=\"8dp\"\n" +
+                "                android:textColor=\"@color/white\"/>\n" +
+                "            <Button\n" +
+                "                android:layout_width=\"match_parent\"\n" +
+                "                android:layout_height=\"wrap_content\"\n" +
+                "                android:text=\"Button 10\"\n" +
+                "                android:background=\"@color/active\"\n" +
+                "                android:layout_margin=\"8dp\"\n" +
+                "                android:textColor=\"@color/white\"/>\n" +
+                "            <Button\n" +
+                "                android:layout_width=\"match_parent\"\n" +
+                "                android:layout_height=\"wrap_content\"\n" +
+                "                android:text=\"Button 11\"\n" +
+                "                android:background=\"@color/mango\"\n" +
+                "                android:layout_margin=\"8dp\"\n" +
+                "                android:textColor=\"@color/white\"/>\n" +
+                "            <Button\n" +
+                "                android:layout_width=\"match_parent\"\n" +
+                "                android:layout_height=\"wrap_content\"\n" +
+                "                android:text=\"Button 12\"\n" +
+                "                android:background=\"@color/purple_200\"\n" +
+                "                android:layout_margin=\"8dp\"\n" +
+                "                android:textColor=\"@color/white\"/>\n" +
+                "            <Button\n" +
+                "                android:layout_width=\"match_parent\"\n" +
+                "                android:layout_height=\"wrap_content\"\n" +
+                "                android:text=\"Button 13\"\n" +
+                "                android:background=\"@color/teal_700\"\n" +
+                "                android:layout_margin=\"8dp\"\n" +
+                "                android:textColor=\"@color/white\"/>\n" +
+                "            <Button\n" +
+                "                android:layout_width=\"fill_parent\"\n" +
+                "                android:layout_height=\"wrap_content\"\n" +
+                "                android:text=\"Button 14\"\n" +
+                "                android:background=\"@color/lightpeach\"\n" +
+                "                android:layout_margin=\"8dp\"\n" +
+                "                android:textColor=\"@color/white\"/>\n" +
+                "            <Button\n" +
+                "                android:layout_width=\"fill_parent\"\n" +
+                "                android:layout_height=\"wrap_content\"\n" +
+                "                android:text=\"Button 15\"\n" +
+                "                android:background=\"@color/active\"\n" +
+                "                android:layout_margin=\"8dp\"\n" +
+                "                android:textColor=\"@color/white\"/>\n" +
+                "            <Button\n" +
+                "                android:layout_width=\"fill_parent\"\n" +
+                "                android:layout_height=\"wrap_content\"\n" +
+                "                android:text=\"Button 16\"\n" +
+                "                android:background=\"@color/mango\"\n" +
+                "                android:layout_margin=\"8dp\"\n" +
+                "                android:textColor=\"@color/white\"/>\n" +
+                "            <Button\n" +
+                "                android:layout_width=\"match_parent\"\n" +
+                "                android:layout_height=\"wrap_content\"\n" +
+                "                android:text=\"Button 17\"\n" +
+                "                android:background=\"@color/purple_200\"\n" +
+                "                android:layout_margin=\"8dp\"\n" +
+                "                android:textColor=\"@color/white\"/>\n" +
+                "            <Button\n" +
+                "                android:layout_width=\"match_parent\"\n" +
+                "                android:layout_height=\"wrap_content\"\n" +
+                "                android:text=\"Button 18\"\n" +
+                "                android:background=\"@color/teal_700\"\n" +
+                "                android:layout_margin=\"8dp\"\n" +
+                "                android:textColor=\"@color/white\"/>\n" +
+                "\n" +
+                "            <Button\n" +
+                "                android:layout_width=\"match_parent\"\n" +
+                "                android:layout_height=\"wrap_content\"\n" +
+                "                android:text=\"Button 19\"\n" +
+                "                android:background=\"@color/lightpeach\"\n" +
+                "                android:layout_margin=\"8dp\"\n" +
+                "                android:textColor=\"@color/white\"/>\n" +
+                "            <Button\n" +
+                "                android:layout_width=\"match_parent\"\n" +
+                "                android:layout_height=\"wrap_content\"\n" +
+                "                android:text=\"Button 20\"\n" +
+                "                android:background=\"@color/active\"\n" +
+                "                android:layout_margin=\"8dp\"\n" +
+                "                android:textColor=\"@color/white\"/>\n" +
+                "\n" +
+                "        </LinearLayout>\n" +
+                "\n" +
+                "    </ScrollView>\n" +
+                "\n" +
+                "</LinearLayout>");
 
 
 

@@ -3,6 +3,7 @@ package com.example.androidpoint.Fragment;
 import android.annotation.SuppressLint;
 import android.os.Bundle;
 
+import androidx.appcompat.widget.AppCompatImageView;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
@@ -18,6 +19,7 @@ public class A_card_15_Fragment extends Fragment {
 
     TextView phone_java, phone_xml, phone_manifest;
 
+    AppCompatImageView Btn_arrow;
     ImageView phone_output;
 
     @SuppressLint({"MissingInflatedId", "SetTextI18n"})
@@ -25,6 +27,18 @@ public class A_card_15_Fragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_a_card_15_, container, false);
+
+        Btn_arrow=view.findViewById(R.id.Btn_arrow);
+        Btn_arrow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Advance advance= new Advance();
+                getActivity().getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.frame_container, advance, "Back Button Basic")
+                        .addToBackStack(null)
+                        .commit();
+            }
+        });
 
         phone_output = view.findViewById(R.id.phone_output);
         phone_java = view.findViewById(R.id.phone_java);

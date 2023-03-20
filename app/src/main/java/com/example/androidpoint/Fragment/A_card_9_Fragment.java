@@ -3,6 +3,7 @@ package com.example.androidpoint.Fragment;
 import android.annotation.SuppressLint;
 import android.os.Bundle;
 
+import androidx.appcompat.widget.AppCompatImageView;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
@@ -18,6 +19,7 @@ public class A_card_9_Fragment extends Fragment {
 
     TextView location_java, location_xml, manifest_xml, gridal_permission;
 
+    AppCompatImageView Btn_arrow;
     ImageView location_output;
     @SuppressLint({"MissingInflatedId", "SetTextI18n"})
     @Override
@@ -25,6 +27,19 @@ public class A_card_9_Fragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_a_card_9_, container, false);
+
+        Btn_arrow=view.findViewById(R.id.Btn_arrow);
+
+        Btn_arrow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Advance advance= new Advance();
+                getActivity().getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.frame_container, advance, "Back Button Basic")
+                        .addToBackStack(null)
+                        .commit();
+            }
+        });
 
         location_output = view.findViewById(R.id.location_output);
         location_java = view.findViewById(R.id.location_java);

@@ -79,20 +79,26 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_gravity="center"
-                                android:background="@drawable/cv1bg"
                                 android:gravity="center"
                                 android:orientation="vertical">
 
-                                <ImageView
-                                    android:id="@+id/ivcardimg1"
-                                    android:layout_width="62dp"
-                                    android:layout_height="62dp"
-                                    android:src="@drawable/world" />
+                                <FrameLayout
+                                    android:layout_width="60dp"
+                                    android:layout_height="60dp"
+                                    android:background="@drawable/menu_icon_bg"
+                                    android:backgroundTint="#5665">
+
+                                    <ImageView
+                                        android:layout_width="50dp"
+                                        android:layout_height="50dp"
+                                        android:src="@drawable/world"
+                                        android:layout_gravity="center" />
+
+                                </FrameLayout>
 
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:layout_below="@id/ivcardimg1"
                                     android:layout_centerHorizontal="true"
                                     android:layout_marginTop="16dp"
                                     android:text="@string/HelloWord_Toast_Message"
@@ -123,20 +129,27 @@
                             <androidx.appcompat.widget.LinearLayoutCompat
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:background="@drawable/cv2bg"
                                 android:gravity="center"
                                 android:orientation="vertical">
 
-                                <ImageView
-                                    android:id="@+id/ivcardimg2"
-                                    android:layout_width="62dp"
-                                    android:layout_height="62dp"
-                                    android:src="@drawable/cycle" />
+
+                                <FrameLayout
+                                    android:layout_width="60dp"
+                                    android:layout_height="60dp"
+                                    android:background="@drawable/menu_icon_bg"
+                                    android:backgroundTint="#5665">
+
+                                    <ImageView
+                                        android:layout_width="40dp"
+                                        android:layout_height="40dp"
+                                        android:src="@drawable/cycle"
+                                        android:layout_gravity="center" />
+
+                                </FrameLayout>
 
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:layout_below="@id/ivcardimg2"
                                     android:layout_centerHorizontal="true"
                                     android:layout_marginTop="24dp"
                                     android:text="@string/Activity_LifeCycle"
@@ -176,15 +189,22 @@
                             <androidx.appcompat.widget.LinearLayoutCompat
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:background="@drawable/cv3bg"
                                 android:gravity="center"
                                 android:orientation="vertical">
 
-                                <ImageView
-                                    android:id="@+id/ivcardimg3"
-                                    android:layout_width="62dp"
-                                    android:layout_height="62dp"
-                                    android:src="@drawable/hide" />
+                                <FrameLayout
+                                    android:layout_width="60dp"
+                                    android:layout_height="60dp"
+                                    android:background="@drawable/menu_icon_bg"
+                                    android:backgroundTint="#5665">
+
+                                    <ImageView
+                                        android:layout_width="50dp"
+                                        android:layout_height="50dp"
+                                        android:src="@drawable/hide"
+                                        android:layout_gravity="center" />
+
+                                </FrameLayout>
 
                                 <TextView
                                     android:layout_width="wrap_content"
@@ -217,15 +237,22 @@
                             <androidx.appcompat.widget.LinearLayoutCompat
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:background="@drawable/cv4bg"
                                 android:gravity="center"
                                 android:orientation="vertical">
 
-                                <ImageView
-                                    android:id="@+id/ivcardimg4"
-                                    android:layout_width="62dp"
-                                    android:layout_height="62dp"
-                                    android:src="@drawable/screen" />
+                                <FrameLayout
+                                    android:layout_width="60dp"
+                                    android:layout_height="60dp"
+                                    android:background="@drawable/menu_icon_bg"
+                                    android:backgroundTint="#5665">
+
+                                    <ImageView
+                                        android:layout_width="45dp"
+                                        android:layout_height="45dp"
+                                        android:src="@drawable/screen"
+                                        android:layout_gravity="center" />
+
+                                </FrameLayout>
 
                                 <TextView
                                     android:layout_width="wrap_content"
@@ -268,15 +295,22 @@
                             <androidx.appcompat.widget.LinearLayoutCompat
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:background="@drawable/cv3bg"
                                 android:gravity="center"
                                 android:orientation="vertical">
 
-                                <ImageView
-                                    android:id="@+id/ivcardimg5"
-                                    android:layout_width="62dp"
-                                    android:layout_height="62dp"
-                                    android:src="@drawable/checkbox" />
+                                <FrameLayout
+                                    android:layout_width="60dp"
+                                    android:layout_height="60dp"
+                                    android:background="@drawable/menu_icon_bg"
+                                    android:backgroundTint="#5665">
+
+                                    <ImageView
+                                        android:layout_width="50dp"
+                                        android:layout_height="50dp"
+                                        android:src="@drawable/checkbox"
+                                        android:layout_gravity="center" />
+
+                                </FrameLayout>>
 
                                 <TextView
                                     android:layout_width="wrap_content"
@@ -311,15 +345,22 @@
                             <androidx.appcompat.widget.LinearLayoutCompat
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:background="@drawable/cv6bg"
                                 android:gravity="center"
                                 android:orientation="vertical">
 
-                                <ImageView
-                                    android:id="@+id/ivcardimg6"
-                                    android:layout_width="62dp"
-                                    android:layout_height="62dp"
-                                    android:src="@drawable/radiobutton" />
+                                <FrameLayout
+                                    android:layout_width="60dp"
+                                    android:layout_height="60dp"
+                                    android:background="@drawable/menu_icon_bg"
+                                    android:backgroundTint="#5665">
+
+                                    <ImageView
+                                        android:layout_width="50dp"
+                                        android:layout_height="50dp"
+                                        android:src="@drawable/radiobutton"
+                                        android:layout_gravity="center" />
+
+                                </FrameLayout>
 
                                 <TextView
                                     android:layout_width="wrap_content"
@@ -336,6 +377,7 @@
                     </androidx.cardview.widget.CardView>
 
                 </androidx.appcompat.widget.LinearLayoutCompat>
+
 
                 <androidx.appcompat.widget.LinearLayoutCompat
                     android:layout_width="match_parent"
@@ -363,19 +405,26 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_gravity="center"
-                                android:background="@drawable/cv1bg"
                                 android:gravity="center"
                                 android:orientation="vertical">
 
-                                <ImageView
-                                    android:layout_width="62dp"
-                                    android:layout_height="62dp"
-                                    android:src="@drawable/list" />
+                                <FrameLayout
+                                    android:layout_width="60dp"
+                                    android:layout_height="60dp"
+                                    android:background="@drawable/menu_icon_bg"
+                                    android:backgroundTint="#5665">
+
+                                    <ImageView
+                                        android:layout_width="50dp"
+                                        android:layout_height="50dp"
+                                        android:src="@drawable/list"
+                                        android:layout_gravity="center" />
+
+                                </FrameLayout>
 
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:layout_below="@id/ivcardimg1"
                                     android:layout_centerHorizontal="true"
                                     android:layout_marginTop="24dp"
                                     android:text="@string/ListView"
@@ -406,19 +455,26 @@
                             <androidx.appcompat.widget.LinearLayoutCompat
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:background="@drawable/cv2bg"
                                 android:gravity="center"
                                 android:orientation="vertical">
 
-                                <ImageView
-                                    android:layout_width="62dp"
-                                    android:layout_height="62dp"
-                                    android:src="@drawable/date" />
+                                <FrameLayout
+                                    android:layout_width="60dp"
+                                    android:layout_height="60dp"
+                                    android:background="@drawable/menu_icon_bg"
+                                    android:backgroundTint="#5665">
+
+                                    <ImageView
+                                        android:layout_width="50dp"
+                                        android:layout_height="50dp"
+                                        android:src="@drawable/date"
+                                        android:layout_gravity="center" />
+
+                                </FrameLayout>
 
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:layout_below="@id/ivcardimg2"
                                     android:layout_centerHorizontal="true"
                                     android:layout_marginTop="24dp"
                                     android:text="@string/Date_Piker"
@@ -457,14 +513,22 @@
                             <androidx.appcompat.widget.LinearLayoutCompat
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:background="@drawable/cv3bg"
                                 android:gravity="center"
                                 android:orientation="vertical">
 
-                                <ImageView
-                                    android:layout_width="62dp"
-                                    android:layout_height="62dp"
-                                    android:src="@drawable/time" />
+                                <FrameLayout
+                                    android:layout_width="60dp"
+                                    android:layout_height="60dp"
+                                    android:background="@drawable/menu_icon_bg"
+                                    android:backgroundTint="#5665">
+
+                                    <ImageView
+                                        android:layout_width="50dp"
+                                        android:layout_height="50dp"
+                                        android:src="@drawable/time"
+                                        android:layout_gravity="center" />
+
+                                </FrameLayout>
 
                                 <TextView
                                     android:layout_width="wrap_content"
@@ -497,14 +561,22 @@
                             <androidx.appcompat.widget.LinearLayoutCompat
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:background="@drawable/cv4bg"
                                 android:gravity="center"
                                 android:orientation="vertical">
 
-                                <ImageView
-                                    android:layout_width="62dp"
-                                    android:layout_height="62dp"
-                                    android:src="@drawable/scroll" />
+                                <FrameLayout
+                                    android:layout_width="60dp"
+                                    android:layout_height="60dp"
+                                    android:background="@drawable/menu_icon_bg"
+                                    android:backgroundTint="#5665">
+
+                                    <ImageView
+                                        android:layout_width="50dp"
+                                        android:layout_height="50dp"
+                                        android:src="@drawable/scroll"
+                                        android:layout_gravity="center" />
+
+                                </FrameLayout>
 
                                 <TextView
                                     android:layout_width="wrap_content"
@@ -546,14 +618,22 @@
                             <androidx.appcompat.widget.LinearLayoutCompat
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:background="@drawable/cv3bg"
                                 android:gravity="center"
                                 android:orientation="vertical">
 
-                                <ImageView
-                                    android:layout_width="62dp"
-                                    android:layout_height="62dp"
-                                    android:src="@drawable/search" />
+                                <FrameLayout
+                                    android:layout_width="60dp"
+                                    android:layout_height="60dp"
+                                    android:background="@drawable/menu_icon_bg"
+                                    android:backgroundTint="#5665">
+
+                                    <ImageView
+                                        android:layout_width="50dp"
+                                        android:layout_height="50dp"
+                                        android:src="@drawable/search"
+                                        android:layout_gravity="center" />
+
+                                </FrameLayout>
 
                                 <TextView
                                     android:layout_width="wrap_content"
@@ -588,14 +668,22 @@
                             <androidx.appcompat.widget.LinearLayoutCompat
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:background="@drawable/cv6bg"
                                 android:gravity="center"
                                 android:orientation="vertical">
 
-                                <ImageView
-                                    android:layout_width="62dp"
-                                    android:layout_height="62dp"
-                                    android:src="@drawable/squreoutarrow" />
+                                <FrameLayout
+                                    android:layout_width="60dp"
+                                    android:layout_height="60dp"
+                                    android:background="@drawable/menu_icon_bg"
+                                    android:backgroundTint="#5665">
+
+                                    <ImageView
+                                        android:layout_width="45dp"
+                                        android:layout_height="45dp"
+                                        android:src="@drawable/squreoutarrow"
+                                        android:layout_gravity="center" />
+
+                                </FrameLayout>
 
                                 <TextView
                                     android:layout_width="wrap_content"
@@ -639,19 +727,26 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_gravity="center"
-                                android:background="@drawable/cv1bg"
                                 android:gravity="center"
                                 android:orientation="vertical">
 
-                                <ImageView
-                                    android:layout_width="62dp"
-                                    android:layout_height="62dp"
-                                    android:src="@drawable/squreinarrow" />
+                                <FrameLayout
+                                    android:layout_width="60dp"
+                                    android:layout_height="60dp"
+                                    android:background="@drawable/menu_icon_bg"
+                                    android:backgroundTint="#5665">
+
+                                    <ImageView
+                                        android:layout_width="45dp"
+                                        android:layout_height="45dp"
+                                        android:src="@drawable/squreinarrow"
+                                        android:layout_gravity="center" />
+
+                                </FrameLayout>
 
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:layout_below="@id/ivcardimg1"
                                     android:layout_centerHorizontal="true"
                                     android:layout_marginTop="24dp"
                                     android:text="@string/Explicit_Intent"
@@ -682,19 +777,26 @@
                             <androidx.appcompat.widget.LinearLayoutCompat
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:background="@drawable/cv2bg"
                                 android:gravity="center"
                                 android:orientation="vertical">
 
-                                <ImageView
-                                    android:layout_width="62dp"
-                                    android:layout_height="62dp"
-                                    android:src="@drawable/option" />
+                                <FrameLayout
+                                    android:layout_width="60dp"
+                                    android:layout_height="60dp"
+                                    android:background="@drawable/menu_icon_bg"
+                                    android:backgroundTint="#5665">
+
+                                    <ImageView
+                                        android:layout_width="40dp"
+                                        android:layout_height="40dp"
+                                        android:src="@drawable/option"
+                                        android:layout_gravity="center" />
+
+                                </FrameLayout>
 
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:layout_below="@id/ivcardimg2"
                                     android:layout_centerHorizontal="true"
                                     android:layout_marginTop="24dp"
                                     android:text="@string/Option_Manu"
@@ -733,14 +835,22 @@
                             <androidx.appcompat.widget.LinearLayoutCompat
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:background="@drawable/cv3bg"
                                 android:gravity="center"
                                 android:orientation="vertical">
 
-                                <ImageView
-                                    android:layout_width="62dp"
-                                    android:layout_height="62dp"
-                                    android:src="@drawable/menu" />
+                                <FrameLayout
+                                    android:layout_width="60dp"
+                                    android:layout_height="60dp"
+                                    android:background="@drawable/menu_icon_bg"
+                                    android:backgroundTint="#5665">
+
+                                    <ImageView
+                                        android:layout_width="50dp"
+                                        android:layout_height="50dp"
+                                        android:src="@drawable/menu"
+                                        android:layout_gravity="center" />
+
+                                </FrameLayout>
 
                                 <TextView
                                     android:layout_width="wrap_content"
@@ -773,14 +883,22 @@
                             <androidx.appcompat.widget.LinearLayoutCompat
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:background="@drawable/cv4bg"
                                 android:gravity="center"
                                 android:orientation="vertical">
 
-                                <ImageView
-                                    android:layout_width="62dp"
-                                    android:layout_height="62dp"
-                                    android:src="@drawable/popup" />
+                                <FrameLayout
+                                    android:layout_width="70dp"
+                                    android:layout_height="70dp"
+                                    android:background="@drawable/menu_icon_bg"
+                                    android:backgroundTint="#5665">
+
+                                    <ImageView
+                                        android:layout_width="50dp"
+                                        android:layout_height="50dp"
+                                        android:src="@drawable/popup"
+                                        android:layout_gravity="center" />
+
+                                </FrameLayout>
 
                                 <TextView
                                     android:layout_width="wrap_content"

@@ -19,22 +19,8 @@ public class A_card_2_Fragment extends Fragment {
 
     ImageView toggle_btn_output;
     TextView toggle_java,toggle_xml;
-    public A_card_2_Fragment() {
 
-    }
-
-    public static A_card_2_Fragment newInstance(String param1, String param2) {
-        A_card_2_Fragment fragment = new A_card_2_Fragment();
-        Bundle args = new Bundle();
-        fragment.setArguments(args);
-        return fragment;
-    }
-
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-
-    }
+    AppCompatImageView Btn_arrow;
 
     @SuppressLint("SetTextI18n")
     @Override
@@ -42,6 +28,18 @@ public class A_card_2_Fragment extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_a_card_2_, container, false);
 
+        Btn_arrow=view.findViewById(R.id.Btn_arrow);
+
+        Btn_arrow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Advance advance= new Advance();
+                getActivity().getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.frame_container, advance, "Back Button Basic")
+                        .addToBackStack(null)
+                        .commit();
+            }
+        });
 
         toggle_btn_output = view.findViewById(R.id.toggle_btn_output);
 

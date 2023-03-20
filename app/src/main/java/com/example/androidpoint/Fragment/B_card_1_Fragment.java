@@ -28,6 +28,8 @@ public class B_card_1_Fragment extends Fragment {
     ArrayAdapter<String> adapter;
 
 
+
+
     AppCompatImageView Btn_arrow;
 
     @SuppressLint("SetTextI18n")

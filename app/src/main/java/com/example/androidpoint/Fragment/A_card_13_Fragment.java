@@ -2,6 +2,7 @@ package com.example.androidpoint.Fragment;
 
 import android.os.Bundle;
 
+import androidx.appcompat.widget.AppCompatImageView;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
@@ -17,11 +18,26 @@ public class A_card_13_Fragment extends Fragment {
 
     TextView pie_java, pie_xml, pie_gridal_permission;
 
+    AppCompatImageView Btn_arrow;
+
     ImageView pie_output;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_a_card_13_, container, false);
+
+        Btn_arrow=view.findViewById(R.id.Btn_arrow);
+
+        Btn_arrow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Advance advance= new Advance();
+                getActivity().getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.frame_container, advance, "Back Button Basic")
+                        .addToBackStack(null)
+                        .commit();
+            }
+        });
 
         pie_output = view.findViewById(R.id.pie_output);
         pie_java = view.findViewById(R.id.pie_java);

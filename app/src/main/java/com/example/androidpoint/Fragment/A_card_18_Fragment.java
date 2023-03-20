@@ -3,6 +3,7 @@ package com.example.androidpoint.Fragment;
 import android.annotation.SuppressLint;
 import android.os.Bundle;
 
+import androidx.appcompat.widget.AppCompatImageView;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
@@ -20,12 +21,26 @@ public class A_card_18_Fragment extends Fragment {
             DatabaseHelper_java, Student_java, ArrayAdapter_java, activity_main,
             activityitem_main, activityitem_update, rowlist_xml;
 
+    AppCompatImageView Btn_arrow;
+
     ImageView db_output;
     @SuppressLint({"MissingInflatedId", "SetTextI18n"})
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_a_card_18_, container, false);
+
+        Btn_arrow=view.findViewById(R.id.Btn_arrow);
+        Btn_arrow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Advance advance= new Advance();
+                getActivity().getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.frame_container, advance, "Back Button Basic")
+                        .addToBackStack(null)
+                        .commit();
+            }
+        });
 
         db_output = view.findViewById(R.id.db_output);
         rowlist_xml = view.findViewById(R.id.rowlist_xml);

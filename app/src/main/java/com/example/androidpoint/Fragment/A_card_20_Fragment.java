@@ -2,6 +2,7 @@ package com.example.androidpoint.Fragment;
 
 import android.os.Bundle;
 
+import androidx.appcompat.widget.AppCompatImageView;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
@@ -17,10 +18,24 @@ public class A_card_20_Fragment extends Fragment {
     TextView flash_java, flash_xml, Gridal_Permission;
     ImageView flash_output;
 
+    AppCompatImageView Btn_arrow;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_a_card_20_, container, false);
+
+        Btn_arrow=view.findViewById(R.id.Btn_arrow);
+        Btn_arrow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Advance advance= new Advance();
+                getActivity().getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.frame_container, advance, "Back Button Basic")
+                        .addToBackStack(null)
+                        .commit();
+            }
+        });
 
         flash_java = view.findViewById(R.id.flash_java);
         flash_xml = view.findViewById(R.id.flash_xml);

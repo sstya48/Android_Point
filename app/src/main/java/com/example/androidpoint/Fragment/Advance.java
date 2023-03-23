@@ -17,7 +17,8 @@ public class Advance extends Fragment {
 
     CardView card_view1, card_view2, card_view3, card_view4,card_view5,card_view6,
             card_view7,card_view8,card_view9,card_view10,card_view11,card_view12,
-            card_view13,card_view14,card_view15,card_view16,card_view17,card_view18, card_view19, card_view20, card_view21, card_view22 ;
+            card_view13,card_view14,card_view15,card_view16,card_view17,card_view18, card_view19,
+            card_view20, card_view21, card_view22 ;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -289,6 +290,17 @@ public class Advance extends Fragment {
             }
         });
 
+        card_view22.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                A_card_22_Fragment nextFrag= new A_card_22_Fragment();
+                getActivity().getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.frame_container, nextFrag, "findThisFragment")
+                        .addToBackStack(null)
+                        .commit();
+
+            }
+        });
         return view;
     }
 }

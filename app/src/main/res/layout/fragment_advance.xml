@@ -1215,7 +1215,7 @@
                                 <ImageView
                                     android:layout_width="50dp"
                                     android:layout_height="50dp"
-                                    android:src="@drawable/alert"
+                                    android:src="@drawable/ratingicon"
                                     android:layout_gravity="center" />
 
                             </FrameLayout>
@@ -1224,7 +1224,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="24dp"
-                                android:text="@string/Alert_Dialog"
+                                android:text="@string/Rating_App"
                                 android:textColor="#0B204C"
                                 android:textSize="16dp"
                                 android:textStyle="bold" />

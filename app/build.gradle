@@ -45,4 +45,12 @@ dependencies {
     implementation 'com.github.denzcoskun:ImageSlideshow:0.1.0'
 
     implementation "androidx.cardview:cardview:1.0.0"
+
+    // Text animation
+    //implementation 'com.tomer:fadingtextview:2.5'
+
+
+    //Fingurprint
+    implementation "androidx.biometric:biometric:1.1.0"
+
 }

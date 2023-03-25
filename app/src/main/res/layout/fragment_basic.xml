@@ -378,7 +378,6 @@
 
                 </androidx.appcompat.widget.LinearLayoutCompat>
 
-
                 <androidx.appcompat.widget.LinearLayoutCompat
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -412,7 +411,7 @@
                                     android:layout_width="60dp"
                                     android:layout_height="60dp"
                                     android:background="@drawable/menu_icon_bg"
-                                    android:backgroundTint="#5665">
+                                    android:backgroundTint="#3644CB7F">
 
                                     <ImageView
                                         android:layout_width="50dp"
@@ -462,7 +461,7 @@
                                     android:layout_width="60dp"
                                     android:layout_height="60dp"
                                     android:background="@drawable/menu_icon_bg"
-                                    android:backgroundTint="#5665">
+                                    android:backgroundTint="#1D7A26FF">
 
                                     <ImageView
                                         android:layout_width="50dp"
@@ -520,7 +519,7 @@
                                     android:layout_width="60dp"
                                     android:layout_height="60dp"
                                     android:background="@drawable/menu_icon_bg"
-                                    android:backgroundTint="#5665">
+                                    android:backgroundTint="#28FFA94D">
 
                                     <ImageView
                                         android:layout_width="50dp"
@@ -568,7 +567,7 @@
                                     android:layout_width="60dp"
                                     android:layout_height="60dp"
                                     android:background="@drawable/menu_icon_bg"
-                                    android:backgroundTint="#5665">
+                                    android:backgroundTint="#2C1BC3FF">
 
                                     <ImageView
                                         android:layout_width="50dp"
@@ -625,7 +624,7 @@
                                     android:layout_width="60dp"
                                     android:layout_height="60dp"
                                     android:background="@drawable/menu_icon_bg"
-                                    android:backgroundTint="#5665">
+                                    android:backgroundTint="#25FFB80B">
 
                                     <ImageView
                                         android:layout_width="50dp"
@@ -675,7 +674,7 @@
                                     android:layout_width="60dp"
                                     android:layout_height="60dp"
                                     android:background="@drawable/menu_icon_bg"
-                                    android:backgroundTint="#5665">
+                                    android:backgroundTint="#52FAFA33">
 
                                     <ImageView
                                         android:layout_width="45dp"
@@ -734,7 +733,7 @@
                                     android:layout_width="60dp"
                                     android:layout_height="60dp"
                                     android:background="@drawable/menu_icon_bg"
-                                    android:backgroundTint="#5665">
+                                    android:backgroundTint="#3644CB7F">
 
                                     <ImageView
                                         android:layout_width="45dp"
@@ -784,7 +783,7 @@
                                     android:layout_width="60dp"
                                     android:layout_height="60dp"
                                     android:background="@drawable/menu_icon_bg"
-                                    android:backgroundTint="#5665">
+                                    android:backgroundTint="#1D7A26FF">
 
                                     <ImageView
                                         android:layout_width="40dp"
@@ -842,7 +841,7 @@
                                     android:layout_width="60dp"
                                     android:layout_height="60dp"
                                     android:background="@drawable/menu_icon_bg"
-                                    android:backgroundTint="#5665">
+                                    android:backgroundTint="#28FFA94D">
 
                                     <ImageView
                                         android:layout_width="50dp"
@@ -890,7 +889,7 @@
                                     android:layout_width="70dp"
                                     android:layout_height="70dp"
                                     android:background="@drawable/menu_icon_bg"
-                                    android:backgroundTint="#5665">
+                                    android:backgroundTint="#2C1BC3FF">
 
                                     <ImageView
                                         android:layout_width="50dp"
@@ -916,96 +915,7 @@
 
                 </androidx.appcompat.widget.LinearLayoutCompat>
 
-                <!--                <androidx.appcompat.widget.LinearLayoutCompat-->
-                <!--                    android:layout_width="match_parent"-->
-                <!--                    android:layout_height="wrap_content"-->
-                <!--                    android:layout_below="@+id/ll2"-->
-                <!--                    android:layout_marginHorizontal="20dp"-->
-                <!--                    android:layout_marginTop="12dp"-->
-                <!--                    android:gravity="center_horizontal">-->
 
-                <!--                    <androidx.cardview.widget.CardView-->
-                <!--                        android:id="@+id/card17"-->
-                <!--                        android:layout_width="0dp"-->
-                <!--                        android:layout_height="160dp"-->
-                <!--                        android:layout_weight="1"-->
-                <!--                        app:cardCornerRadius="14dp"-->
-                <!--                        app:cardUseCompatPadding="true">-->
-
-                <!--                        <FrameLayout-->
-                <!--                            android:layout_width="match_parent"-->
-                <!--                            android:layout_height="match_parent"-->
-                <!--                            android:background="#25FFB80B">-->
-
-                <!--                            <androidx.appcompat.widget.LinearLayoutCompat-->
-                <!--                                android:layout_width="match_parent"-->
-                <!--                                android:layout_height="match_parent"-->
-                <!--                                android:background="@drawable/cv3bg"-->
-                <!--                                android:gravity="center"-->
-                <!--                                android:orientation="vertical">-->
-
-                <!--                                <ImageView-->
-                <!--                                    android:layout_width="62dp"-->
-                <!--                                    android:layout_height="62dp"-->
-                <!--                                    android:src="@drawable/cvlogo5" />-->
-
-                <!--                                <TextView-->
-                <!--                                    android:layout_width="wrap_content"-->
-                <!--                                    android:layout_height="wrap_content"-->
-                <!--                                    android:layout_centerHorizontal="true"-->
-                <!--                                    android:layout_marginTop="24dp"-->
-                <!--                                    android:text="@string/Check_Box"-->
-                <!--                                    android:textColor="#0B204C"-->
-                <!--                                    android:textSize="16dp"-->
-                <!--                                    android:textStyle="bold" />-->
-                <!--                            </androidx.appcompat.widget.LinearLayoutCompat>-->
-
-                <!--                        </FrameLayout>-->
-
-                <!--                    </androidx.cardview.widget.CardView>-->
-
-                <!--                    <androidx.cardview.widget.CardView-->
-                <!--                        android:id="@+id/card18"-->
-                <!--                        android:layout_width="0dp"-->
-                <!--                        android:layout_height="160dp"-->
-                <!--                        android:layout_below="@id/card4"-->
-                <!--                        android:layout_marginStart="12dp"-->
-                <!--                        android:layout_weight="1"-->
-                <!--                        app:cardCornerRadius="14dp"-->
-                <!--                        app:cardUseCompatPadding="true">-->
-
-                <!--                        <FrameLayout-->
-                <!--                            android:layout_width="match_parent"-->
-                <!--                            android:layout_height="match_parent"-->
-                <!--                            android:background="#52FAFA33">-->
-
-                <!--                            <androidx.appcompat.widget.LinearLayoutCompat-->
-                <!--                                android:layout_width="match_parent"-->
-                <!--                                android:layout_height="match_parent"-->
-                <!--                                android:background="@drawable/cv6bg"-->
-                <!--                                android:gravity="center"-->
-                <!--                                android:orientation="vertical">-->
-
-                <!--                                <ImageView-->
-                <!--                                    android:layout_width="62dp"-->
-                <!--                                    android:layout_height="62dp"-->
-                <!--                                    android:src="@drawable/cvlogo6" />-->
-
-                <!--                                <TextView-->
-                <!--                                    android:layout_width="wrap_content"-->
-                <!--                                    android:layout_height="wrap_content"-->
-                <!--                                    android:layout_marginTop="24dp"-->
-                <!--                                    android:text="@string/Radio_Button"-->
-                <!--                                    android:textColor="#0B204C"-->
-                <!--                                    android:textSize="16dp"-->
-                <!--                                    android:textStyle="bold" />-->
-                <!--                            </androidx.appcompat.widget.LinearLayoutCompat>-->
-
-                <!--                        </FrameLayout>-->
-
-                <!--                    </androidx.cardview.widget.CardView>-->
-
-                <!--                </androidx.appcompat.widget.LinearLayoutCompat>-->
 
             </androidx.appcompat.widget.LinearLayoutCompat>
 

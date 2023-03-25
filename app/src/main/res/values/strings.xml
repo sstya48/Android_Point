@@ -167,10 +167,55 @@
         <item>Neptune</item>
     </string-array>
 
-    <string name="first_activity">Welcome to First Activity</string>
+    <string name="first_activity">Welcome to First Activity</string>d
     <string name="second_activity">Welcome to Second Activity</string>
 
     <string name="go_to_second_activity">Go to Second Activity</string>
     <string name="go_to_first_activity">Go to First Activity</string>
+
+
+
+
+
+//Ads ids============================================================================================================================
+
+    <string name="app_id">ca-app-pub-3471867131564882~3012371608</string>
+
+    // publish id Interstitial ad one==================================================================================================
+<!--    <string name="Interstitial_AdOne_unit_id">ca-app-pub-3471867131564882/1430577060</string>-->
+
+    // test id Interstitial ad one==================================================================================================
+    <string name="Interstitial_AdOne_unit_id">ca-app-pub-3940256099942544/1033173712</string>
+
+    //BannerAdOne publish id========================================================================================================================
+
+<!--    <string name="Banner_AdOne_unit_id">ca-app-pub-3471867131564882/6540816409</string>-->
+
+    //BannerAdMain publish id========================================================================================================================
+
+    <!--    <string name="Banner_AdMain">ca-app-pub-3471867131564882/7545393426</string>-->
+
+    // test id BannerAdOne ad one==================================================================================================
+
+    <string name="Banner_AdOne_unit_id">ca-app-pub-3940256099942544/6300978111</string>
+
+   //publish NativeBasic id======================================================================
+
+    <!--    <string name="NativeAdBasic_unit_id">ca-app-pub-3471867131564882/4877785910</string>-->
+
+    // test id NativeAdBasic ad one==================================================================================================
+
+    <string name="NativeAdBasic_unit_id">ca-app-pub-3940256099942544/2247696110</string>
+
+
+    //OpenAd Splash publish id========================================================================================================================
+
+<!--    <string name="AdOpen_unit_id">ca-app-pub-3471867131564882/1169070224</string>-->
+
+    // test id OpenAd ad one==================================================================================================
+    <string name="AdOpen_unit_id">ca-app-pub-3940256099942544/3419835294</string>
+
+
+
 
 </resources>

@@ -15,6 +15,9 @@ import com.denzcoskun.imageslider.ImageSlider;
 import com.denzcoskun.imageslider.constants.ScaleTypes;
 import com.denzcoskun.imageslider.models.SlideModel;
 import com.example.androidpoint.R;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
 
 import java.util.ArrayList;
 
@@ -22,6 +25,8 @@ public class Basic extends Fragment {
     ImageSlider imageslider;
     CardView card_view1, card_view2, card_view3, card_view4,card_view5,card_view6,card_view7,card_view8,card_view9,card_view10,card_view11,card_view12,card_view13,card_view14,card_view15,card_view16;
 
+
+    AdView adView_basic;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -50,7 +55,25 @@ public class Basic extends Fragment {
         View view = inflater.inflate(R.layout.fragment_basic, container, false);
 
 
+
         imageslider = view.findViewById(R.id.imageslider);
+
+        //Adss=============================================
+        //Banner Ad id====================================
+        adView_basic=view.findViewById(R.id.adView_basic);
+
+        //====================================================
+
+        MobileAds.initialize(getContext());
+
+        AdRequest adRequest=new AdRequest.Builder().build();
+
+
+        //banner ad load
+        adView_basic.loadAd(adRequest);
+//========================================================
+
+
 
         ArrayList<SlideModel> slideModels = new ArrayList<>();
 

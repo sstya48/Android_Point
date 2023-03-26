@@ -1,5 +1,6 @@
 package com.example.androidpoint.Activity;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
 import androidx.fragment.app.Fragment;
@@ -9,6 +10,8 @@ import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Handler;
+import android.util.Log;
 import android.view.View;
 import android.widget.CompoundButton;
 import android.widget.FrameLayout;
@@ -19,6 +22,12 @@ import android.widget.TextView;
 
 import com.example.androidpoint.R;
 import com.example.androidpoint.SaveState;
+import com.google.android.gms.ads.AdError;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.FullScreenContentCallback;
+import com.google.android.gms.ads.LoadAdError;
+import com.google.android.gms.ads.interstitial.InterstitialAd;
+import com.google.android.gms.ads.interstitial.InterstitialAdLoadCallback;
 
 public class MenuActivity extends AppCompatActivity {
 
@@ -36,6 +45,9 @@ public class MenuActivity extends AppCompatActivity {
     //dark mode
     boolean isNightModeOn;
     SaveState saveState;
+
+    InterstitialAd mInterstitialAd;
+
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -94,12 +106,77 @@ public class MenuActivity extends AppCompatActivity {
             }
         });
 
+
+        AdRequest adRequest=new AdRequest.Builder().build();
+
+
         ads_show.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-                Intent ads = new Intent(MenuActivity.this, AdsActivity.class);
-                startActivity(ads);
+                InterstitialAd.load(MenuActivity.this, getString(R.string.Interstitial_AdOne_unit_id), adRequest, new InterstitialAdLoadCallback() {
+                    @Override
+                    public void onAdFailedToLoad(@NonNull LoadAdError loadAdError) {
+                        super.onAdFailedToLoad(loadAdError);
+                        Log.e("Error",loadAdError.toString());
+                    }
+
+                    @Override
+                    public void onAdLoaded(@NonNull InterstitialAd interstitialAd) {
+                        super.onAdLoaded(interstitialAd);
+
+                        mInterstitialAd = interstitialAd;
+
+                        mInterstitialAd.setFullScreenContentCallback(new FullScreenContentCallback() {
+                            @Override
+                            public void onAdClicked() {
+                                super.onAdClicked();
+                            }
+
+                            @Override
+                            public void onAdDismissedFullScreenContent() {
+                                super.onAdDismissedFullScreenContent();
+                            }
+
+                            @Override
+                            public void onAdFailedToShowFullScreenContent(@NonNull AdError adError) {
+                                super.onAdFailedToShowFullScreenContent(adError);
+                            }
+
+                            @Override
+                            public void onAdImpression() {
+                                super.onAdImpression();
+                            }
+
+                            @Override
+                            public void onAdShowedFullScreenContent() {
+                                super.onAdShowedFullScreenContent();
+
+                                mInterstitialAd= null;
+                            }
+                        });
+
+                        new Handler().postDelayed(new Runnable() {
+                            @Override
+                            public void run() {
+
+                                if (mInterstitialAd!= null) {
+                                    mInterstitialAd.show(MenuActivity.this);
+                                }
+                                else {
+                                    Log.e("AdPending","Ad is not ready yet!");
+
+                                }
+
+                            }
+                        },10000 );
+
+                    }
+                });
+
+
+               /* Intent ads = new Intent(MenuActivity.this, AdsActivity.class);
+                startActivity(ads);*/
             }
         });
 

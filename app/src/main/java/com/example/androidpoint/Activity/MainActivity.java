@@ -55,7 +55,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         fragmentTransaction.commit();
 
 
-        //Banner Ad id====================================
+      /*  //Banner Ad id====================================
         adView_main=findViewById(R.id.adView_main);
 
         //====================================================
@@ -67,7 +67,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         //banner ad load
         adView_main.loadAd(adRequest);
-
+*/
 
     /*    int width = (int) (getResources().getDisplayMetrics().widthPixels * (0.85));
         DrawerLayout.LayoutParams params = (DrawerLayout.LayoutParams)

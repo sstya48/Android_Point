@@ -921,6 +921,17 @@
 
         </ScrollView>
 
+        <com.google.android.gms.ads.AdView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/adView_basic"
+            android:layout_alignParentBottom="true"
+            app:adSize="BANNER"
+            android:layout_gravity="bottom"
+            app:adUnitId="ca-app-pub-3940256099942544/6300978111"
+            />
+
+<!--        app:adUnitId="@string/Banner_Ad_Basic_unit_id"-->
 
     </FrameLayout>
 </FrameLayout>

@@ -12,6 +12,9 @@ import android.view.ViewGroup;
 import android.widget.Toast;
 
 import com.example.androidpoint.R;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
 
 public class Advance extends Fragment {
 
@@ -19,6 +22,10 @@ public class Advance extends Fragment {
             card_view7,card_view8,card_view9,card_view10,card_view11,card_view12,
             card_view13,card_view14,card_view15,card_view16,card_view17,card_view18, card_view19,
             card_view20, card_view21, card_view22 ;
+
+
+    AdView adView_advance;
+
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -55,6 +62,23 @@ public class Advance extends Fragment {
         card_view20 = view.findViewById(R.id.card20);
         card_view21 = view.findViewById(R.id.card21);
         card_view22 = view.findViewById(R.id.card22);
+
+
+        //Adss=============================================
+        //Banner Ad id====================================
+        adView_advance=view.findViewById(R.id.adView_advance);
+
+        //====================================================
+
+        MobileAds.initialize(getContext());
+
+        AdRequest adRequest=new AdRequest.Builder().build();
+
+
+        //banner ad load
+        adView_advance.loadAd(adRequest);
+//========================================================
+
 
         card_view1.setOnClickListener(new View.OnClickListener() {
             @Override

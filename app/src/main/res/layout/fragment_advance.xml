@@ -20,7 +20,6 @@
             android:paddingBottom="20dp">
 
             <androidx.appcompat.widget.LinearLayoutCompat
-                android:id="@+id/ll1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="20dp"
@@ -53,7 +52,7 @@
                                 android:layout_width="60dp"
                                 android:layout_height="60dp"
                                 android:background="@drawable/menu_icon_bg"
-                                android:backgroundTint="#5665">
+                                android:backgroundTint="#3644CB7F">
 
                                 <ImageView
                                     android:layout_width="45dp"
@@ -104,7 +103,7 @@
                                 android:layout_width="60dp"
                                 android:layout_height="60dp"
                                 android:background="@drawable/menu_icon_bg"
-                                android:backgroundTint="#5665">
+                                android:backgroundTint="#1D7A26FF">
 
                                 <ImageView
                                     android:layout_width="50dp"
@@ -166,7 +165,7 @@
                                 android:layout_width="60dp"
                                 android:layout_height="60dp"
                                 android:background="@drawable/menu_icon_bg"
-                                android:backgroundTint="#5665">
+                                android:backgroundTint="#28FFA94D">
 
                                 <ImageView
                                     android:layout_width="50dp"
@@ -215,7 +214,7 @@
                                 android:layout_width="60dp"
                                 android:layout_height="60dp"
                                 android:background="@drawable/menu_icon_bg"
-                                android:backgroundTint="#5665">
+                                android:backgroundTint="#2C1BC3FF">
 
                                 <ImageView
                                     android:layout_width="50dp"
@@ -274,7 +273,7 @@
                                 android:layout_width="60dp"
                                 android:layout_height="60dp"
                                 android:background="@drawable/menu_icon_bg"
-                                android:backgroundTint="#5665">
+                                android:backgroundTint="#25FFB80B">
 
                                 <ImageView
                                     android:layout_width="50dp"
@@ -325,7 +324,7 @@
                                 android:layout_width="60dp"
                                 android:layout_height="60dp"
                                 android:background="@drawable/menu_icon_bg"
-                                android:backgroundTint="#5665">
+                                android:backgroundTint="#52FAFA33">
 
                                 <ImageView
                                     android:layout_width="40dp"
@@ -385,7 +384,7 @@
                                 android:layout_width="60dp"
                                 android:layout_height="60dp"
                                 android:background="@drawable/menu_icon_bg"
-                                android:backgroundTint="#5665">
+                                android:backgroundTint="#3644CB7F">
 
                                 <ImageView
                                     android:layout_width="45dp"
@@ -436,7 +435,7 @@
                                 android:layout_width="60dp"
                                 android:layout_height="60dp"
                                 android:background="@drawable/menu_icon_bg"
-                                android:backgroundTint="#5665">
+                                android:backgroundTint="#1D7A26FF">
 
                                 <ImageView
                                     android:layout_width="45dp"
@@ -496,7 +495,7 @@
                                 android:layout_width="60dp"
                                 android:layout_height="60dp"
                                 android:background="@drawable/menu_icon_bg"
-                                android:backgroundTint="#5665">
+                                android:backgroundTint="#28FFA94D">
 
                                 <ImageView
                                     android:layout_width="50dp"
@@ -545,7 +544,7 @@
                                 android:layout_width="60dp"
                                 android:layout_height="60dp"
                                 android:background="@drawable/menu_icon_bg"
-                                android:backgroundTint="#5665">
+                                android:backgroundTint="#2C1BC3FF">
 
                                 <ImageView
                                     android:layout_width="40dp"
@@ -604,7 +603,7 @@
                                 android:layout_width="60dp"
                                 android:layout_height="60dp"
                                 android:background="@drawable/menu_icon_bg"
-                                android:backgroundTint="#5665">
+                                android:backgroundTint="#25FFB80B">
 
                                 <ImageView
                                     android:layout_width="45dp"
@@ -655,7 +654,7 @@
                                 android:layout_width="60dp"
                                 android:layout_height="60dp"
                                 android:background="@drawable/menu_icon_bg"
-                                android:backgroundTint="#5665">
+                                android:backgroundTint="#52FAFA33">
 
                                 <ImageView
                                     android:layout_width="40dp"
@@ -717,7 +716,7 @@
                                 android:layout_width="60dp"
                                 android:layout_height="60dp"
                                 android:background="@drawable/menu_icon_bg"
-                                android:backgroundTint="#5665">
+                                android:backgroundTint="#3644CB7F">
 
                                 <ImageView
                                     android:layout_width="50dp"
@@ -769,7 +768,7 @@
                                 android:layout_width="60dp"
                                 android:layout_height="60dp"
                                 android:background="@drawable/menu_icon_bg"
-                                android:backgroundTint="#5665">
+                                android:backgroundTint="#1D7A26FF">
 
                                 <ImageView
                                     android:layout_width="45dp"
@@ -829,7 +828,7 @@
                                 android:layout_width="60dp"
                                 android:layout_height="60dp"
                                 android:background="@drawable/menu_icon_bg"
-                                android:backgroundTint="#5665">
+                                android:backgroundTint="#28FFA94D">
 
                                 <ImageView
                                     android:layout_width="45dp"
@@ -879,7 +878,7 @@
                                 android:layout_width="60dp"
                                 android:layout_height="60dp"
                                 android:background="@drawable/menu_icon_bg"
-                                android:backgroundTint="#5665">
+                                android:backgroundTint="#2C1BC3FF">
 
                                 <ImageView
                                     android:layout_width="45dp"
@@ -937,7 +936,7 @@
                                                 android:layout_width="60dp"
                                                 android:layout_height="60dp"
                                                 android:background="@drawable/menu_icon_bg"
-                                                android:backgroundTint="#5665">
+                                                android:backgroundTint="#25FFB80B">
 
                                                 <ImageView
                                                     android:layout_width="45dp"
@@ -988,7 +987,7 @@
                                                 android:layout_width="60dp"
                                                 android:layout_height="60dp"
                                                 android:background="@drawable/menu_icon_bg"
-                                                android:backgroundTint="#5665">
+                                                android:backgroundTint="#52FAFA33">
 
                                                 <ImageView
                                                     android:layout_width="45dp"
@@ -1048,7 +1047,7 @@
                                 android:layout_width="60dp"
                                 android:layout_height="60dp"
                                 android:background="@drawable/menu_icon_bg"
-                                android:backgroundTint="#5665">
+                                android:backgroundTint="#3644CB7F">
 
                                 <ImageView
                                     android:layout_width="45dp"
@@ -1100,7 +1099,7 @@
                                 android:layout_width="60dp"
                                 android:layout_height="60dp"
                                 android:background="@drawable/menu_icon_bg"
-                                android:backgroundTint="#5665">
+                                android:backgroundTint="#1D7A26FF">
 
                                 <ImageView
                                     android:layout_width="45dp"
@@ -1161,7 +1160,7 @@
                                 android:layout_width="60dp"
                                 android:layout_height="60dp"
                                 android:background="@drawable/menu_icon_bg"
-                                android:backgroundTint="#5665">
+                                android:backgroundTint="#28FFA94D">
 
                                 <ImageView
                                     android:layout_width="50dp"
@@ -1210,7 +1209,7 @@
                                 android:layout_width="60dp"
                                 android:layout_height="60dp"
                                 android:background="@drawable/menu_icon_bg"
-                                android:backgroundTint="#5665">
+                                android:backgroundTint="#2C1BC3FF">
 
                                 <ImageView
                                     android:layout_width="50dp"

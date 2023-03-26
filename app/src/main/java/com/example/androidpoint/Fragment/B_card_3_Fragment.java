@@ -51,9 +51,9 @@ public class B_card_3_Fragment extends Fragment {
         hide_title_demo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Hide_Title_Demo_Fragment hello_world_demo= new Hide_Title_Demo_Fragment();
+                Hide_Title_Demo_Fragment hideTitleDemoFragment= new Hide_Title_Demo_Fragment();
                 getActivity().getSupportFragmentManager().beginTransaction()
-                        .replace(R.id.frame_container, hello_world_demo, "Hide Title DEMO")
+                        .replace(R.id.frame_container, hideTitleDemoFragment, "Hide Title DEMO")
                         .addToBackStack(null)
                         .commit();
             }

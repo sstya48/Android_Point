@@ -29,6 +29,7 @@
             android:layout_gravity="center_vertical"
             android:layout_marginStart="5dp"
             android:text="@string/Date_Piker"
+            android:fontFamily="@font/poppins_semibold"
             android:textColor="#181A20"
             android:textSize="20sp"
             android:textStyle="bold" />

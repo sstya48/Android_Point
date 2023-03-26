@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private MainActivity mcontext;
 
-    AdView adView_main;
+    AdView adView_main_all;
 
 
     FragmentTransaction fragmentTransaction;
@@ -55,8 +55,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         fragmentTransaction.commit();
 
 
-      /*  //Banner Ad id====================================
-        adView_main=findViewById(R.id.adView_main);
+     /*   //Banner Ad id====================================
+        adView_main_all=findViewById(R.id.adView_main_all);
 
         //====================================================
 
@@ -66,14 +66,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 
         //banner ad load
-        adView_main.loadAd(adRequest);
-*/
+        adView_main_all.loadAd(adRequest);*/
 
-    /*    int width = (int) (getResources().getDisplayMetrics().widthPixels * (0.85));
-        DrawerLayout.LayoutParams params = (DrawerLayout.LayoutParams)
-                lvLeftSide.getLayoutParams();
-        params.width = width;
-        lvLeftSide.setLayoutParams(params);*/
+
+
+
+
 
         btnMenu.setOnClickListener(new View.OnClickListener() {
             @Override

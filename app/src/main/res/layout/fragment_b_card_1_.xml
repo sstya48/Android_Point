@@ -12,16 +12,15 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/layout_bg">
+        android:background="@drawable/layout_bg"
+        android:padding="13dp"
+        android:gravity="center_vertical">
 
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/Btn_arrow"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:layout_marginTop="13dp"
-            android:layout_marginStart="10dp"
             android:layout_gravity="center_vertical"
-            android:layout_marginBottom="12dp"
             android:padding="6dp"
             android:src="@drawable/arrow" />
 
@@ -30,16 +29,16 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="5dp"
             android:text="@string/HelloWord_Toast"
-            android:layout_gravity="center_vertical"
+            android:layout_gravity="center"
+            android:fontFamily="@font/poppins_semibold"
             android:textColor="#181A20"
-            android:textSize="20sp"
-            android:textStyle="bold" />
+            android:textSize="20sp"/>
 
     </LinearLayout>
 
-        <!--<RelativeLayout
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">-->
+            android:layout_height="match_parent">
 
 
             <ScrollView
@@ -125,8 +124,8 @@
 
             </ScrollView>
 
-          <!--  <androidx.appcompat.widget.AppCompatImageView
-                android:id="@+id/movableSOS"
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/hello_toast_demo"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
                 android:layout_alignParentEnd="true"
@@ -138,8 +137,7 @@
                 android:focusable="true"
                 android:visibility="visible"
                 app:srcCompat="@drawable/codepart" />
--->
 
-<!--    </RelativeLayout>-->
+    </RelativeLayout>
 
 </LinearLayout>

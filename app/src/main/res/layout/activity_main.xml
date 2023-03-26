@@ -118,7 +118,7 @@
        <!-- <com.google.android.gms.ads.AdView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/adView_main"
+            android:id="@+id/adView_main_all"
             android:layout_alignParentBottom="true"
             app:adSize="BANNER"
             android:layout_gravity="bottom"

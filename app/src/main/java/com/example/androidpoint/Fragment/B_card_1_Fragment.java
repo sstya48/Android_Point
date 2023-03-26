@@ -14,6 +14,8 @@ import android.widget.Toast;
 import androidx.appcompat.widget.AppCompatImageView;
 import androidx.fragment.app.Fragment;
 
+import com.example.androidpoint.DemoFragments.Hello_World_Fragment;
+import com.example.androidpoint.DemoFragments.Hide_Title_Demo_Fragment;
 import com.example.androidpoint.R;
 
 import java.util.ArrayList;
@@ -23,16 +25,15 @@ public class B_card_1_Fragment extends Fragment {
 
     TextView hello_toast_java,hello_toast_xml;
 
-    ArrayList<String> list;
 
-    ArrayAdapter<String> adapter;
+    AppCompatImageView hello_toast_demo;
 
 
 
 
     AppCompatImageView Btn_arrow;
 
-    @SuppressLint("SetTextI18n")
+    @SuppressLint({"SetTextI18n", "MissingInflatedId"})
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -43,6 +44,8 @@ public class B_card_1_Fragment extends Fragment {
         hello_toast_java.setTextIsSelectable(true);
         hello_toast_xml= view.findViewById(R.id.hello_toast_xml);
         hello_toast_xml.setTextIsSelectable(true);
+
+        hello_toast_demo= view.findViewById(R.id.hello_toast_demo);
 
 
 
@@ -70,6 +73,17 @@ public class B_card_1_Fragment extends Fragment {
         });
 
 
+        hello_toast_demo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Hello_World_Fragment hello_world_demo= new Hello_World_Fragment();
+                getActivity().getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.frame_container, hello_world_demo, "Hello world Toast DEMO")
+                        .addToBackStack(null)
+                        .commit();
+            }
+        });
+
 
         hello_toast_java.setText("package com.example.helloworld;\n" +
                 "\n" +
@@ -81,6 +95,8 @@ public class B_card_1_Fragment extends Fragment {
                 "   protected void onCreate(Bundle savedInstanceState) {\n" +
                 "      super.onCreate(savedInstanceState);\n" +
                 "      setContentView(R.layout.activity_main);\n" +
+                "\n" +
+                "        Toast.makeText(getApplicationContext(), \"Hello world!!\", Toast.LENGTH_LONG).show();\n"+
                 "   }\n" +
                 "}");
 
@@ -104,4 +120,5 @@ public class B_card_1_Fragment extends Fragment {
 
         return view;
     }
+
 }

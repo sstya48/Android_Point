@@ -41,7 +41,7 @@
     android:layout_height="wrap_content"
     android:layout_marginTop="60dp">
 
-    <RelativeLayout
+<!--    <RelativeLayout
         android:id="@+id/card1"
         android:layout_width="match_parent"
         android:layout_height="80dp">
@@ -79,132 +79,20 @@
                 </LinearLayout>
             </RelativeLayout>
         </androidx.cardview.widget.CardView>
-    </RelativeLayout>
+    </RelativeLayout>-->
 
-    <RelativeLayout
-        android:id="@+id/card2"
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerview"
         android:layout_width="match_parent"
-        android:layout_height="80dp"
-        android:layout_below="@+id/card1">
+        android:layout_height="match_parent"
+        tools:listitem="@layout/list_item"
+        tools:itemCount="5"
+        android:layout_above="@+id/adView_learn"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        />
 
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginEnd="8dp"
-            android:layout_marginStart="8dp"
-            app:cardCornerRadius="17dp"
-            app:cardUseCompatPadding="true"
-            app:cardElevation="1dp">
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="60dp">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:layout_marginHorizontal="6dp"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:maxLines="1"
-                        android:paddingStart="7dp"
-                        android:text="Android Introduction"
-                        android:textColor="#181A20"
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
-
-                </LinearLayout>
-            </RelativeLayout>
-        </androidx.cardview.widget.CardView>
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:id="@+id/card3"
-        android:layout_width="match_parent"
-        android:layout_height="80dp"
-        android:layout_below="@+id/card2">
-
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginEnd="8dp"
-            android:layout_marginStart="8dp"
-            app:cardCornerRadius="17dp"
-            app:cardUseCompatPadding="true"
-            app:cardElevation="1dp">
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="60dp">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:layout_marginHorizontal="6dp"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:maxLines="1"
-                        android:paddingStart="7dp"
-                        android:text="Android Introduction"
-                        android:textColor="#181A20"
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
-
-                </LinearLayout>
-            </RelativeLayout>
-        </androidx.cardview.widget.CardView>
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:id="@+id/card4"
-        android:layout_width="match_parent"
-        android:layout_height="80dp"
-        android:layout_below="@+id/card3">
-
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginEnd="8dp"
-            android:layout_marginStart="8dp"
-            app:cardCornerRadius="17dp"
-            app:cardUseCompatPadding="true"
-            app:cardElevation="1dp">
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="60dp">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:layout_marginHorizontal="6dp"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:maxLines="1"
-                        android:paddingStart="7dp"
-                        android:text="Android Introduction"
-                        android:textColor="#181A20"
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
-
-                </LinearLayout>
-            </RelativeLayout>
-        </androidx.cardview.widget.CardView>
-    </RelativeLayout>
-
-</RelativeLayout>
 
 
     <com.google.android.gms.ads.AdView
@@ -218,5 +106,8 @@
         />
 
     <!--        app:adUnitId="@string/Banner_Ad_Learn_unit_id"-->
+
+</RelativeLayout>
+
 
 </RelativeLayout>

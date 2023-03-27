@@ -58,7 +58,7 @@ public class Basic extends Fragment {
 
         imageslider = view.findViewById(R.id.imageslider);
 
-        //Adss=============================================
+      /*  //Adss=============================================
         //Banner Ad id====================================
         adView_basic=view.findViewById(R.id.adView_basic);
 
@@ -73,7 +73,7 @@ public class Basic extends Fragment {
         adView_basic.loadAd(adRequest);
 //========================================================
 
-
+*/
 
         ArrayList<SlideModel> slideModels = new ArrayList<>();
 

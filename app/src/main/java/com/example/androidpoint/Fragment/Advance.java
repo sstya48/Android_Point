@@ -64,7 +64,7 @@ public class Advance extends Fragment {
         card_view22 = view.findViewById(R.id.card22);
 
 
-        //Adss=============================================
+      /*  //Adss=============================================
         //Banner Ad id====================================
         adView_advance=view.findViewById(R.id.adView_advance);
 
@@ -79,7 +79,7 @@ public class Advance extends Fragment {
         adView_advance.loadAd(adRequest);
 //========================================================
 
-
+*/
         card_view1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

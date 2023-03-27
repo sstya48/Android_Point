@@ -26,7 +26,7 @@ public class Learn extends Fragment {
                              Bundle savedInstanceState) {
         View view= inflater.inflate(R.layout.fragment_learn, container, false);
 
-        //Adss=============================================
+      /*  //Adss=============================================
         //Banner Ad id====================================
         adView_learn=view.findViewById(R.id.adView_learn);
 
@@ -41,7 +41,7 @@ public class Learn extends Fragment {
         adView_learn.loadAd(adRequest);
 //========================================================
 
-
+*/
 
         return view;
     }

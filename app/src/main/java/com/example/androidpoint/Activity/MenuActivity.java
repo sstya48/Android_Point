@@ -206,7 +206,9 @@ public class MenuActivity extends AppCompatActivity {
               /*  Intent i = new Intent(MenuActivity.this, RatingActivity.class);
                 startActivity(i);*/
 
-                Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=com.androidappdevelopment.learnandroidstudio"));
+//                Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=com.androidappdevelopment.learnandroidstudio"));
+
+                Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=com.example.androidpoint"));
                 startActivity(i);
 
             }

@@ -1,13 +1,12 @@
 package com.example.androidpoint.Fragment;
 
 import android.os.Bundle;
-
-import androidx.appcompat.widget.AppCompatImageView;
-import androidx.fragment.app.Fragment;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import androidx.appcompat.widget.AppCompatImageView;
+import androidx.fragment.app.Fragment;
 
 import com.example.androidpoint.R;
 
@@ -26,7 +25,7 @@ public class A_A14_Fragment extends Fragment {
             public void onClick(View view) {
                 A_card_14_Fragment A_card_14_Fragment = new A_card_14_Fragment();
                 getActivity().getSupportFragmentManager().beginTransaction()
-                        .replace(R.id.frame_container, A_card_14_Fragment, "Back Button Basic")
+                        .replace(R.id.frame_container, A_card_14_Fragment, "Back Button Advance")
                         .addToBackStack(null)
                         .commit();
             }

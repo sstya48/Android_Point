@@ -17,8 +17,8 @@ import android.widget.CompoundButton;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.Switch;
-import android.widget.TextView;
 
 import com.example.androidpoint.R;
 import com.example.androidpoint.SaveState;
@@ -32,7 +32,13 @@ import com.google.android.gms.ads.interstitial.InterstitialAdLoadCallback;
 public class MenuActivity extends AppCompatActivity {
 
 
-    LinearLayout shareapp,tips,feedback,rate_us, about_us,ads_show ;
+    LinearLayout shareapp;
+    LinearLayout tips;
+    LinearLayout feedback;
+    LinearLayout rate_us;
+    LinearLayout about_us;
+    LinearLayout ads_show;
+    LinearLayout game;
 
     FrameLayout frameLayout;
 
@@ -84,6 +90,7 @@ public class MenuActivity extends AppCompatActivity {
         feedback = (LinearLayout) findViewById(R.id.feedback);
         tips = (LinearLayout) findViewById(R.id.tips);
         ads_show = (LinearLayout) findViewById(R.id.ads_show);
+        game = (LinearLayout) findViewById(R.id.game);
 
 
         tips.setOnClickListener(new View.OnClickListener() {
@@ -193,12 +200,18 @@ public class MenuActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-
                 Intent i = new Intent(MenuActivity.this, AboutUs.class);
                 startActivity(i);
             }
         });
 
+        game.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(MenuActivity.this, Game.class);
+                startActivity(i);
+            }
+        });
         rate_us.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

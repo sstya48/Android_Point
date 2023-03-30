@@ -80,14 +80,14 @@ public class Game extends AppCompatActivity implements View.OnClickListener {
                 if(playerOneActive)
                 {
                     ((Button)view).setText("X");
-                    ((Button)view).setTextColor(Color.parseColor("#ffc34a"));
+                    ((Button)view).setTextColor(Color.parseColor("#FF0000"));
                     gameState[gameStatePointer] = 0;
                 }
 
                 else
                 {
                     ((Button)view).setText("O");
-                    ((Button)view).setTextColor(Color.parseColor("#70fc3a"));
+                    ((Button)view).setTextColor(Color.parseColor("#11A33A"));
                     gameState[gameStatePointer] = 1;
                 }
                 rounds++;

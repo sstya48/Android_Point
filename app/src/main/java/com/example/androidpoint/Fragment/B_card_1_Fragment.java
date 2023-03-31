@@ -5,20 +5,13 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
-import android.widget.ListView;
-import android.widget.SearchView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.appcompat.widget.AppCompatImageView;
 import androidx.fragment.app.Fragment;
 
 import com.example.androidpoint.DemoFragments.Hello_World_Fragment;
-import com.example.androidpoint.DemoFragments.Hide_Title_Demo_Fragment;
 import com.example.androidpoint.R;
-
-import java.util.ArrayList;
 
 public class B_card_1_Fragment extends Fragment {
 
@@ -29,9 +22,9 @@ public class B_card_1_Fragment extends Fragment {
     AppCompatImageView hello_toast_demo;
 
 
-
-
     AppCompatImageView Btn_arrow;
+
+
 
     @SuppressLint({"SetTextI18n", "MissingInflatedId"})
     @Override
@@ -81,6 +74,10 @@ public class B_card_1_Fragment extends Fragment {
                         .replace(R.id.frame_container, hello_world_demo, "Hello world Toast DEMO")
                         .addToBackStack(null)
                         .commit();
+
+//                getActivity().finishAffinity();
+//                getActivity().finish();
+
             }
         });
 
@@ -115,10 +112,6 @@ public class B_card_1_Fragment extends Fragment {
                 "      \n" +
                 "</RelativeLayout>");
 
-
-
-
         return view;
     }
-
 }

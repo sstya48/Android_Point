@@ -24,11 +24,19 @@ android {
         }
     }
 
+   /* buildFeatures{
+
+        viewBinding true
+
+    }*/
+
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
 }
+
+
 
 dependencies {
 
@@ -36,7 +44,7 @@ dependencies {
     implementation 'com.google.android.material:material:1.8.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
     implementation 'com.google.android.gms:play-services-ads-lite:21.5.0'
-    implementation 'com.google.firebase:firebase-firestore:24.1.0'
+    implementation 'com.google.firebase:firebase-firestore:24.4.5'
     implementation 'com.google.firebase:firebase-firestore-ktx:24.4.5'
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
@@ -61,4 +69,9 @@ dependencies {
 
     //===================For Google ADs=============================================================================================
     implementation 'com.google.android.gms:play-services-ads:21.5.0'
+
+
+    //firebase image
+    implementation 'com.squareup.picasso:picasso:2.71828'
+
 }

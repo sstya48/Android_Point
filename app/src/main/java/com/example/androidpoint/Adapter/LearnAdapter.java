@@ -9,6 +9,7 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.AppCompatImageView;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -44,8 +45,9 @@ public class LearnAdapter extends RecyclerView.Adapter<LearnAdapter.MyViewHolder
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, @SuppressLint("RecyclerView") int position) {
 
-        holder.title_learn.setText(datalist.get(position).getTitle());
-        holder.des_learn.setText(datalist.get(position).getDescription());
+        holder.title_learn.setText(datalist.get(position).getTitle().trim());
+//        holder.des_learn.setText(datalist.get(position).getDescription());
+
 
 
         holder.card_learn.setOnClickListener(new View.OnClickListener() {
@@ -53,7 +55,15 @@ public class LearnAdapter extends RecyclerView.Adapter<LearnAdapter.MyViewHolder
             public void onClick(View view) {
 
                 AppCompatActivity appCompatActivity= (AppCompatActivity) view.getContext();
-                appCompatActivity.getSupportFragmentManager().beginTransaction().replace(R.id.frame_container, new DetailFragment(datalist.get(position).getTitle(),datalist.get(position).getDescription())).addToBackStack(null).commit();
+                appCompatActivity.getSupportFragmentManager().beginTransaction().replace(R.id.frame_container,
+                        new DetailFragment(datalist.get(position).getTitle().toString(),
+                                datalist.get(position).getDescription(),
+//                                Picasso.get().load(datalist.get(position).getImage().toString()).into(image_learn),
+                                datalist.get(position).getImage())).addToBackStack(null).commit();
+
+
+
+
 
 /*
                 Intent i=new Intent(holder.title_learn.getContext(), DetailFragment.class);
@@ -85,6 +95,7 @@ public class LearnAdapter extends RecyclerView.Adapter<LearnAdapter.MyViewHolder
         ShapeableImageView item_image;
         TextView title_learn,des_learn;
 
+        AppCompatImageView image_learn;
         CardView card_learn;
 
         public MyViewHolder(@NonNull View itemView) {
@@ -93,6 +104,7 @@ public class LearnAdapter extends RecyclerView.Adapter<LearnAdapter.MyViewHolder
 
             title_learn= itemView.findViewById(R.id.title_learn);
             des_learn= itemView.findViewById(R.id.des_learn);
+            image_learn= itemView.findViewById(R.id.image_learn);
             card_learn= itemView.findViewById(R.id.card_learn);
 //            item_image= itemView.findViewById(R.id.item_image);
 

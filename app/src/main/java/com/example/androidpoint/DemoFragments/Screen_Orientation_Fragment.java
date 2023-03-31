@@ -1,15 +1,16 @@
 package com.example.androidpoint.DemoFragments;
 
+import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
-
-import androidx.fragment.app.Fragment;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
+import androidx.fragment.app.Fragment;
+
+import com.example.androidpoint.Activity.LandscapeActivity;
 import com.example.androidpoint.R;
 
 
@@ -46,11 +47,15 @@ public class Screen_Orientation_Fragment extends Fragment {
         portrait.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                ScrrenLandscape_Fragment scrren_Landscape_fragment= new ScrrenLandscape_Fragment();
+
+                Intent landscape = new Intent(getActivity(), LandscapeActivity.class);
+                startActivity(landscape);
+
+               /* ScrrenLandscape_Fragment scrren_Landscape_fragment= new ScrrenLandscape_Fragment();
                 getActivity().getSupportFragmentManager().beginTransaction()
                         .replace(R.id.frame_container, scrren_Landscape_fragment, "screen Landscape DEMO")
                         .addToBackStack(null)
-                        .commit();
+                        .commit();*/
             }
         });
 

@@ -1,8 +1,5 @@
 package com.example.androidpoint.Activity;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.viewpager.widget.ViewPager;
-
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -14,6 +11,9 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.viewpager.widget.ViewPager;
 
 import com.example.androidpoint.Adapter.ViewPagerAdapter;
 import com.example.androidpoint.R;
@@ -184,6 +184,7 @@ public class OnBoardingScreenActivity extends AppCompatActivity {
 
         Intent i = new Intent(OnBoardingScreenActivity.this, MainActivity.class);
         startActivity(i);
+        finish();
 
     }
 }

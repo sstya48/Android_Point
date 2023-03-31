@@ -25,8 +25,7 @@
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
     <uses-permission android:name="com.huawei.permission.external_app_settings.USE_COMPONENT" />
     <uses-permission android:name="oppo.permission.OPPO_COMPONENT_SAFE" />
-    <uses-permission
-        android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE"/>
+    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" />
 
     <uses-feature android:name="android.hardware.location.network" />
     <uses-feature android:name="android.hardware.location.gps" />
@@ -40,6 +39,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidPoint"
         tools:targetApi="31">
+        <activity
+            android:name=".Activity.LandscapeActivity"
+            android:screenOrientation="landscape"
+            android:exported="false" />
         <activity
             android:name=".Activity.AdsActivity"
             android:exported="false" />
@@ -67,6 +70,7 @@
             android:exported="false" />
         <activity
             android:name=".Activity.MenuActivity"
+            android:theme="@style/Theme.AndroidPoint.TransparentCompat"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
@@ -88,12 +92,9 @@
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
             android:value="@string/app_id" />
-
         <meta-data
             android:name="com.google.android.gms.ads.AD_MANAGER_APP"
-            android:value="true"/>
-
-
+            android:value="true" />
     </application>
 
 </manifest>

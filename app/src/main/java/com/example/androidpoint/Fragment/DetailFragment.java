@@ -12,6 +12,7 @@ import androidx.fragment.app.Fragment;
 
 import com.example.androidpoint.Model.LearnModel;
 import com.example.androidpoint.R;
+import com.squareup.picasso.Picasso;
 
 public class DetailFragment extends Fragment {
 
@@ -69,6 +70,8 @@ public class DetailFragment extends Fragment {
         title_learn.setText(title.toString().replace("\n", "\n"));
 
         des_learn.setText(description.toString().replace( "\\\\n", "\n  \n" ));
+
+        Picasso.get().load(image).into(Image);
 
 
 //        Picasso.get().load(learnModel.getImage().toString()).into(Image);

@@ -2,15 +2,15 @@ package com.example.androidpoint.Fragment;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
-
-import androidx.appcompat.widget.AppCompatImageView;
-import androidx.fragment.app.Fragment;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import androidx.appcompat.widget.AppCompatImageView;
+import androidx.fragment.app.Fragment;
+
+import com.example.androidpoint.Model.LearnModel;
 import com.example.androidpoint.R;
 
 public class DetailFragment extends Fragment {
@@ -18,9 +18,13 @@ public class DetailFragment extends Fragment {
 
     TextView des_learn,title_learn;
 
-    AppCompatImageView image_learn;
+    AppCompatImageView Image;
 
     String description,title,image;
+
+    LearnModel learnModel;
+
+
 
 
     public DetailFragment() {
@@ -28,11 +32,12 @@ public class DetailFragment extends Fragment {
     }
 
 
-    public DetailFragment(String title,String description) {
+    public DetailFragment(String title,String description,String image) {
        /* this.des_learn = des_learn;
         this.title_learn = title_learn;*/
         this.title = title;
         this.description = description;
+        this.image=image;
 
     }
 
@@ -56,13 +61,25 @@ public class DetailFragment extends Fragment {
         // Inflate the layout for this fragment
         View view= inflater.inflate(R.layout.fragment_detail, container, false);
 
+
         title_learn=view.findViewById(R.id.title_learn);
         des_learn=view.findViewById(R.id.des_learn);
-        image_learn=view.findViewById(R.id.image_learn);
+        Image=view.findViewById(R.id.image_learn);
 
-        title_learn.setText(title);
+        title_learn.setText(title.toString().replace("\n", "\n"));
 
-        des_learn.setText(description);
+        des_learn.setText(description.toString().replace( "\\\\n", "\n  \n" ));
+
+
+//        Picasso.get().load(learnModel.getImage().toString()).into(Image);
+
+
+
+
+
+
+
+
 
 //        image.res(image);
 

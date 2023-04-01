@@ -2,24 +2,26 @@ package com.example.androidpoint.Model;
 
 public class LearnModel {
 
-    String Description,title;
+    String Description,title,Image;
 
-    String image;
 
     public LearnModel() {
+
     }
 
-    public LearnModel(String description, String title) {
+    public LearnModel(String description, String title,String image) {
         Description = description;
         this.title = title;
+        Image = image;
+
     }
 
     public String getImage() {
-        return image;
+        return Image;
     }
 
     public void setImage(String image) {
-        this.image = image;
+        this.Image = image;
     }
 
     public String getDescription() {

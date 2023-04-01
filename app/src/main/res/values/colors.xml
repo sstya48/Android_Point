@@ -38,10 +38,11 @@
     <color name="lightbalck">#333333</color>
     <color name="lightwhite">#DBDBDB</color>
     <color name="lightgreen">#11A33A</color>
+    <color name="greenN">#58DD5D</color>
     <color name="mango">#FFBB5D</color>
     <color name="lightpurple">#5940BB</color>
     <color name="offwhite">#F0F4FD</color>
-    <color name="green1">#1ED16F</color>
+    <color name="green1">#00DB63</color>
     <color name="RED">#FF0000</color>
     <color name="differgrey">#404040</color>
     <color name="brightpurple">#5840BB</color>

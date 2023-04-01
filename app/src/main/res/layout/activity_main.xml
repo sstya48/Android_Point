@@ -59,6 +59,13 @@
                 android:ellipsize="marquee"
                 android:textStyle="bold" />
 
+            <!--<ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="end"
+                android:backgroundTint="@color/green"
+                android:background="?android:attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/premium" />-->
 
         </LinearLayout>
 

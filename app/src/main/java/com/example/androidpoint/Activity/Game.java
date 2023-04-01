@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.androidpoint.R;
 
@@ -79,7 +80,7 @@ public class Game extends AppCompatActivity implements View.OnClickListener {
 
                 if(playerOneActive)
                 {
-                    ((Button)view).setText("X");
+                    ((Button)view).setText("✖");
                     ((Button)view).setTextColor(Color.parseColor("#FF0000"));
                     gameState[gameStatePointer] = 0;
                 }
@@ -87,7 +88,7 @@ public class Game extends AppCompatActivity implements View.OnClickListener {
                 else
                 {
                     ((Button)view).setText("O");
-                    ((Button)view).setTextColor(Color.parseColor("#11A33A"));
+                    ((Button)view).setTextColor(Color.parseColor("#FF58DD5D"));
                     gameState[gameStatePointer] = 1;
                 }
                 rounds++;
@@ -98,11 +99,14 @@ public class Game extends AppCompatActivity implements View.OnClickListener {
                         playerOneScoreCount++;
                         updatePlayerScore();
                         playerStatus.setText("Player-1 has won");
+                        Toast.makeText(getApplicationContext(),"Player-1 has won",Toast.LENGTH_SHORT).show();
                     }else
                     {
                         playerTwoScoreCount++;
                         updatePlayerScore();
                         playerStatus.setText("Player-2 has won");
+                        Toast.makeText(getApplicationContext(),"Player-2 has won",Toast.LENGTH_SHORT).show();
+
                     }
 
                 }

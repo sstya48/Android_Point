@@ -74,6 +74,7 @@
             android:exported="false" />
         <activity
             android:name=".Activity.MenuActivity"
+            android:theme="@style/Theme.AndroidPoint.TransparentCompat"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"

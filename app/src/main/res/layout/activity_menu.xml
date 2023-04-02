@@ -15,11 +15,10 @@
         android:layout_marginEnd="45dp"
         android:fitsSystemWindows="true">
 
-
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-
+            android:scrollbars="none"
             >
 
             <LinearLayout
@@ -37,7 +36,8 @@
                         android:id="@+id/navigation_profile"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="40dp"
+                        android:layout_marginTop="30dp"
+                        android:orientation="horizontal"
                         android:layout_marginBottom="30dp">
 
 
@@ -48,14 +48,14 @@
                             android:layout_height="70dp"
                             android:layout_marginStart="20dp"
                             android:scaleType="centerCrop"
-                            android:src="@drawable/appicn" />
+                            android:src="@drawable/app_icon" />
 
 
 
                         <LinearLayout
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_centerVertical="true"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
                             android:layout_marginStart="20dp"
                             android:layout_toEndOf="@id/img_user"
                             android:orientation="vertical">
@@ -71,11 +71,11 @@
                                 android:textStyle="bold" />
 
                             <TextView
-                                android:id="@+id/tvdeviceid"
+                                android:id="@+id/version1"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_marginStart="40dp"
-                                android:text="Version 1.0"
+                                android:text="Version 2"
+                                android:gravity="center"
                                 android:fontFamily="@font/poppins_semibold"
                                 android:textColor="@color/alphaback"
                                 android:textSize="16sp" />
@@ -96,6 +96,12 @@
                 </LinearLayout>
 
 
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scrollbars="none"
+                    >
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -106,7 +112,6 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
                         android:padding="6dp"
                         android:background="@color/skyblue"
                         android:orientation="vertical">
@@ -121,6 +126,8 @@
                             android:textColor="@color/alphaback"
                             android:textSize="22sp" />
                     </LinearLayout>
+
+
 
                     <LinearLayout
                         android:id="@+id/mode_change"
@@ -176,14 +183,12 @@
 
                     </LinearLayout>
 
-
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
                         android:background="#c4c4c4"
                         android:layout_marginLeft="10dp"
                         android:layout_marginRight="10dp"/>
-
 
 
                     <LinearLayout
@@ -519,6 +524,8 @@
                         android:layout_marginLeft="10dp"
                         android:layout_marginRight="10dp"/>
 
+
+
                     <LinearLayout
                         android:id="@+id/about_us"
                         android:layout_width="match_parent"
@@ -556,7 +563,29 @@
 
                     </LinearLayout>
 
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#c4c4c4"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"/>
+
                 </LinearLayout>
+
+        </ScrollView>
+
+
+                <TextView
+                    android:id="@+id/version2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Version2"
+                    android:gravity="center"
+                    android:padding="20dp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:textColor="@color/alphaback"
+                    android:textSize="16sp" />
+
 
             </LinearLayout>
 

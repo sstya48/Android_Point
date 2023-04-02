@@ -81,7 +81,7 @@ public class Learn extends Fragment {
 
         db= FirebaseFirestore.getInstance();
 
-        db.collection("LearnAndroid").orderBy("title").get()
+        db.collection("LearnAndroid").orderBy("id").get()
                 .addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
                     @Override
                     public void onSuccess(QuerySnapshot queryDocumentSnapshots) {

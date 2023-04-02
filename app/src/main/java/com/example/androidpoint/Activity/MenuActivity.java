@@ -19,7 +19,9 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.Switch;
+import android.widget.TextView;
 
+import com.example.androidpoint.BuildConfig;
 import com.example.androidpoint.R;
 import com.example.androidpoint.SaveState;
 import com.google.android.gms.ads.AdError;
@@ -32,13 +34,7 @@ import com.google.android.gms.ads.interstitial.InterstitialAdLoadCallback;
 public class MenuActivity extends AppCompatActivity {
 
 
-    LinearLayout shareapp;
-    LinearLayout tips;
-    LinearLayout feedback;
-    LinearLayout rate_us;
-    LinearLayout about_us;
-    LinearLayout ads_show;
-    LinearLayout game;
+    LinearLayout shareapp,tips,feedback,rate_us,about_us,ads_show,game;
 
     FrameLayout frameLayout;
 
@@ -52,10 +48,12 @@ public class MenuActivity extends AppCompatActivity {
     boolean isNightModeOn;
     SaveState saveState;
 
+    TextView version1,version2;
+
     InterstitialAd mInterstitialAd;
 
 
-    @SuppressLint("MissingInflatedId")
+    @SuppressLint({"MissingInflatedId", "SetTextI18n"})
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -83,15 +81,26 @@ public class MenuActivity extends AppCompatActivity {
 
         about_us = findViewById(R.id.about_us);
         rate_us = findViewById(R.id.rate_us);
+
         mode_dark = findViewById(R.id.mode_dark);
         mode_change = findViewById(R.id.mode_change);
         light = findViewById(R.id.light);
+
         shareapp = (LinearLayout) findViewById(R.id.shareapp);
         feedback = (LinearLayout) findViewById(R.id.feedback);
         tips = (LinearLayout) findViewById(R.id.tips);
         ads_show = (LinearLayout) findViewById(R.id.ads_show);
         game = (LinearLayout) findViewById(R.id.game);
 
+
+//getversion=========================================================================================
+
+        version1 = findViewById(R.id.version1);
+        version1.setText("Version : " + BuildConfig.VERSION_NAME);
+
+        version2 = findViewById(R.id.version2);
+        version2.setText("Version : " + BuildConfig.VERSION_NAME);
+//=======================================================================================================
 
         tips.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -244,6 +253,9 @@ public class MenuActivity extends AppCompatActivity {
             }
         });*/
 
+
+        //dark mode===========================================================================================
+
         if (saveState.getState() == true) {
             mode_dark.setChecked(true);
         }
@@ -268,6 +280,9 @@ public class MenuActivity extends AppCompatActivity {
                 }
             }
         });
+
+
+        //======================================================================
 
         /*mode_dark.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -19,9 +19,8 @@ public class A_card_5_Fragment extends Fragment {
 
     TextView spinner_java, spinner_xml;
 
-    ImageView spinner_output;
 
-    AppCompatImageView Btn_arrow;
+    AppCompatImageView Btn_arrow,spinner_output;
 
     @SuppressLint("SetTextI18n")
     @Override

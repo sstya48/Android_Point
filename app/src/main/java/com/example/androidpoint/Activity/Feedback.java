@@ -31,7 +31,7 @@ public class Feedback extends AppCompatActivity {
             public void onClick(View view) {
                 Intent i = new Intent(Intent.ACTION_SEND);
                 i.setType("message/html");
-                i.putExtra(Intent.EXTRA_EMAIL, new String("vinaykumarmori1511@gmail.com"));
+                i.putExtra(Intent.EXTRA_EMAIL, new String[]{"aalians940@gmail.com"});
                 i.putExtra(Intent.EXTRA_SUBJECT, "Feedback From App");
                 i.putExtra(Intent.EXTRA_TEXT, "Name:"+name.getText()+"\n Message:" + feedBack.getText());
 

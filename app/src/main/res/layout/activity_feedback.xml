@@ -31,7 +31,8 @@
             android:layout_marginStart="5dp"
             android:includeFontPadding="false"
             android:text="@string/FeedBack"
-            android:textColor="#03A9F4"
+            android:textColor="@color/lavender"
+            android:fontFamily="@font/poppins_semibold"
             android:textSize="18sp"
             android:textStyle="bold" />
 

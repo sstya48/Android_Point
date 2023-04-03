@@ -45,5 +45,36 @@ public class Feedback extends AppCompatActivity {
             }
         });
 
+       /* sendBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (!validateUsername() | !validatePassword()) {
+                } else {
+                    checkUser();
+                }
+            }
+        });
+
+        public Boolean validateUsername() {
+            String val = name.getText().toString();
+            if (val.isEmpty()) {
+                name.setError("Username cannot be empty");
+                return false;
+            } else {
+                name.setError(null);
+                return true;
+            }
+        }
+        public Boolean validatePassword(){
+            String val = loginPassword.getText().toString();
+            if (val.isEmpty()) {
+                loginPassword.setError("Password cannot be empty");
+                return false;
+            } else {
+                loginPassword.setError(null);
+                return true;
+            }
+        }*/
+
     }
 }

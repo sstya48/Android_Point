@@ -17,7 +17,7 @@ import com.squareup.picasso.Picasso;
 public class DetailFragment extends Fragment {
 
 
-    TextView des_learn,title_learn;
+    TextView des_learn,title_learn,des_title;
 
     AppCompatImageView Image;
 
@@ -64,10 +64,12 @@ public class DetailFragment extends Fragment {
 
 
         title_learn=view.findViewById(R.id.title_learn);
+        des_title=view.findViewById(R.id.title_des);
         des_learn=view.findViewById(R.id.des_learn);
         Image=view.findViewById(R.id.image_learn);
 
         title_learn.setText(title.toString().replace("\n", "\n"));
+        des_title.setText(title.toString().replace("\n", "\n"));
 
         des_learn.setText(description.toString().replace( "\\\\n", "\n  \n" ));
 

@@ -10,6 +10,7 @@ import android.widget.TextView;
 import androidx.appcompat.widget.AppCompatImageView;
 import androidx.fragment.app.Fragment;
 
+import com.example.androidpoint.Activity.MainActivity;
 import com.example.androidpoint.DemoFragments.Hello_World_Fragment;
 import com.example.androidpoint.R;
 
@@ -114,4 +115,12 @@ public class B_card_1_Fragment extends Fragment {
 
         return view;
     }
+
+
+  /*  @Override
+    public void onDestroy() {
+        super.onDestroy();
+        ((MainActivity)getActivity()).clearBackStackInclusive("tag");
+    }*/
+
 }

@@ -127,6 +127,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         }
     }
+/*
+    public void clearBackStackInclusive(String tag) {
+        getSupportFragmentManager().popBackStack(tag, FragmentManager.POP_BACK_STACK_INCLUSIVE);
+    }*/
 
     @Override
     public void onBackPressed() {

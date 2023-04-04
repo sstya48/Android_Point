@@ -19,7 +19,7 @@ public class DetailFragment extends Fragment {
 
     TextView des_learn,title_learn,des_title;
 
-    AppCompatImageView Image;
+    AppCompatImageView Image,back_learn_icon;
 
     String description,title,image;
 
@@ -67,6 +67,7 @@ public class DetailFragment extends Fragment {
         des_title=view.findViewById(R.id.title_des);
         des_learn=view.findViewById(R.id.des_learn);
         Image=view.findViewById(R.id.image_learn);
+        back_learn_icon=view.findViewById(R.id.back_learn_icon);
 
         title_learn.setText(title.toString().replace("\n", "\n"));
         des_title.setText(title.toString().replace("\n", "\n"));
@@ -76,7 +77,17 @@ public class DetailFragment extends Fragment {
         Picasso.get().load(image).into(Image);
 
 
-//        Picasso.get().load(learnModel.getImage().toString()).into(Image);
+
+        back_learn_icon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Learn learn= new Learn();
+                getActivity().getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.frame_container, learn, "Back To Learn Listing....")
+                        .addToBackStack(null)
+                        .commit();
+            }
+        });
 
 
 

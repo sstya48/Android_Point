@@ -1,5 +1,6 @@
 package com.example.androidpoint.Fragment;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 
 import androidx.appcompat.widget.AppCompatImageView;
@@ -21,6 +22,7 @@ public class A_card_12_Fragment extends Fragment {
     AppCompatImageView Btn_arrow;
 
     ImageView line_output;
+    @SuppressLint("SetTextI18n")
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -58,13 +60,91 @@ public class A_card_12_Fragment extends Fragment {
             }
         });
 
-        line_java.setText("");
+        line_java.setText("package example.androidpoint.linechart;\n" +
+                "import android.annotation.SuppressLint;\n" +
+                "import android.os.Bundle;\n" +
+                "import androidx.appcompat.widget.AppCompatImageView;\n" +
+                "import android.view.LayoutInflater;\n" +
+                "import android.view.View;\n" +
+                "import android.view.ViewGroup;\n" +
+                "import com.example.androidpoint.R;\n" +
+                "import com.github.mikephil.charting.charts.LineChart;\n" +
+                "import com.github.mikephil.charting.data.Entry;\n" +
+                "import com.github.mikephil.charting.data.LineData;\n" +
+                "import com.github.mikephil.charting.data.LineDataSet;\n" +
+                "import com.github.mikephil.charting.interfaces.datasets.ILineDataSet;\n" +
+                "\n" +
+                "import java.lang.reflect.Array;\n" +
+                "import java.util.ArrayList;\n" +
+
+                "     \"public class MainActivity extends AppCompatActivity { +\n" +
+                "                 LineChart lineChart;\n" +
+                "                 AppCompatImageView Btn_arrow;" +
+                "                \"private PieChart pieChart;\" +\n" +
+                "                \"@Override\" +\n" +
+                "                \"protected void onCreate(Bundle savedInstanceState) {\" +\n" +
+                "                \"super.onCreate(savedInstanceState);\" +\n" +
+                "                \"setContentView(R.layout.activity_main);\" +" +
+                "  lineChart=view.findViewById(R.id.lineChart);\n" +
+                "\n" +
+                "        LineDataSet lineDataSet= new LineDataSet(DataValue(),\"Data Set 1\");\n" +
+                "        ArrayList<ILineDataSet> datasets= new ArrayList<>();\n" +
+                "        datasets.add(lineDataSet);\n" +
+                "\n" +
+                "        LineData data=new LineData(datasets);\n" +
+                "        lineChart.setData(data);\n" +
+                "        lineChart.invalidate();\n" +
+                "\n" +
+                "        Btn_arrow=view.findViewById(R.id.Btn_arrow);\n" +
+                "\n" +
+                "        Btn_arrow.setOnClickListener(new View.OnClickListener() {\n" +
+                "            @Override\n" +
+                "            public void onClick(View view) {\n" +
+                "                A_card_12_Fragment A_card_12_Fragment = new A_card_12_Fragment();\n" +
+                "                getActivity().getSupportFragmentManager().beginTransaction()\n" +
+                "                        .replace(R.id.frame_container, A_card_12_Fragment, \"Back Button Basic\")\n" +
+                "                        .addToBackStack(null)\n" +
+                "                        .commit();\n" +
+                "            }\n" +
+                "        });\n" +
+                "\n" +
+                "        return view;\n" +
+                "    }\n" +
+                "\n" +
+                "   private ArrayList<Entry> DataValue()\n" +
+                "    {\n" +
+                "\n" +
+                "        ArrayList<Entry> dataval = new ArrayList<Entry>();\n" +
+                "        dataval.add(new Entry(0, 20));\n" +
+                "        dataval.add(new Entry(1, 25));\n" +
+                "        dataval.add(new Entry(2, 10));\n" +
+                "        dataval.add(new Entry(3, 24));\n" +
+                "        dataval.add(new Entry(4, 30));\n" +
+                "        dataval.add(new Entry(5, 28));\n" +
+                "\n" +
+                "    }\n" +
+                "}");
         line_java.setTextIsSelectable(true);
 
-        line_xml.setText("");
+        line_xml.setText("<?xml version=\"1.0\" encoding=\"utf-8\"?>\n" +
+                "<LinearLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\n" +
+                "    xmlns:tools=\"http://schemas.android.com/tools\"\n" +
+                "    android:layout_width=\"match_parent\"\n" +
+                "    android:layout_height=\"match_parent\"\n" +
+                "    android:orientation=\"vertical\"\n" +
+                "    \n" +
+                "    <com.github.mikephil.charting.charts.LineChart\n" +
+                "        android:id=\"@+id/lineChart\"\n" +
+                "        android:layout_width=\"match_parent\"\n" +
+                "        android:layout_height=\"match_parent\"\n" +
+                "        android:layout_margin=\"40dp\"/>\n" +
+                "\n" +
+                "</LinearLayout>");
         line_xml.setTextIsSelectable(true);
 
-        line_gridal_permission.setText("");
+        line_gridal_permission.setText("dependencies {\n" +
+                " implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'\n" +
+                "}");
         line_gridal_permission.setTextIsSelectable(true);
 
         return view;

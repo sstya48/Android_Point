@@ -1,5 +1,6 @@
 package com.example.androidpoint.Fragment;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 
 import androidx.appcompat.widget.AppCompatImageView;
@@ -15,6 +16,7 @@ import com.example.androidpoint.R;
 public class A_A11_Fragment extends Fragment {
 
     AppCompatImageView Btn_arrow;
+    @SuppressLint("MissingInflatedId")
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {

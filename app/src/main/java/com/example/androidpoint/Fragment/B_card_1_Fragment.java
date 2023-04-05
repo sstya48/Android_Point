@@ -61,7 +61,6 @@ public class B_card_1_Fragment extends Fragment {
                 Basic basic= new Basic();
                 getActivity().getSupportFragmentManager().beginTransaction()
                         .replace(R.id.frame_container, basic, "Back Button Basic")
-                        .addToBackStack(null)
                         .commit();
             }
         });
@@ -70,6 +69,7 @@ public class B_card_1_Fragment extends Fragment {
         hello_toast_demo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 Hello_World_Fragment hello_world_demo= new Hello_World_Fragment();
                 getActivity().getSupportFragmentManager().beginTransaction()
                         .replace(R.id.frame_container, hello_world_demo, "Hello world Toast DEMO")

@@ -44,7 +44,8 @@
     <string name="Send_SMS">Send SMS</string>
     <string name="Send_Email">Send Email</string>
     <string name="SQLite_DB">SQLite DB</string>
-    <string name="Learn_Android_Studio">Learn Android Studio</string>
+<!--    <string name="Learn_Android_Studio">Learn Android Studio</string>-->
+    <string name="Learn_Android_Studio">Learn Android</string>
     <string name="Account">Account</string>
     <string name="Dark_Theme">Dark Theme</string>
     <string name="Game">Game</string>

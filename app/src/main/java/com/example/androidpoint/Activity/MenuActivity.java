@@ -3,6 +3,7 @@ package com.example.androidpoint.Activity;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
+import androidx.appcompat.widget.AppCompatImageView;
 import androidx.fragment.app.Fragment;
 
 import android.annotation.SuppressLint;
@@ -44,6 +45,8 @@ public class MenuActivity extends AppCompatActivity {
     LinearLayout mode_change;
     ImageView light;
 
+
+    AppCompatImageView close_menu;
     //dark mode
     boolean isNightModeOn;
     SaveState saveState;
@@ -85,6 +88,7 @@ public class MenuActivity extends AppCompatActivity {
         mode_dark = findViewById(R.id.mode_dark);
         mode_change = findViewById(R.id.mode_change);
         light = findViewById(R.id.light);
+        close_menu = findViewById(R.id.close_menu);
 
         shareapp = (LinearLayout) findViewById(R.id.shareapp);
         feedback = (LinearLayout) findViewById(R.id.feedback);
@@ -109,6 +113,14 @@ public class MenuActivity extends AppCompatActivity {
 
                 Intent tips = new Intent(MenuActivity.this, TipsActivity.class);
                 startActivity(tips);
+            }
+        });
+
+        close_menu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                finish();
             }
         });
 
@@ -211,6 +223,7 @@ public class MenuActivity extends AppCompatActivity {
 
                 Intent i = new Intent(MenuActivity.this, AboutUs.class);
                 startActivity(i);
+
             }
         });
 
@@ -219,6 +232,7 @@ public class MenuActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent i = new Intent(MenuActivity.this, Game.class);
                 startActivity(i);
+
             }
         });
         rate_us.setOnClickListener(new View.OnClickListener() {
@@ -232,6 +246,7 @@ public class MenuActivity extends AppCompatActivity {
 
                 Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=com.example.androidpoint"));
                 startActivity(i);
+
 
             }
         });

@@ -43,7 +43,6 @@ public class B_card_3_Fragment extends Fragment {
                 Basic basic= new Basic();
                 getActivity().getSupportFragmentManager().beginTransaction()
                         .replace(R.id.frame_container, basic, "Back Button Basic")
-                        .addToBackStack(null)
                         .commit();
             }
         });

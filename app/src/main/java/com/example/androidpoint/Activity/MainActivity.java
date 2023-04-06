@@ -12,8 +12,8 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
-import com.example.androidpoint.Fragment.Advance;
-import com.example.androidpoint.Fragment.Basic;
+import com.example.androidpoint.Fragment.Advance.Advance;
+import com.example.androidpoint.Fragment.Basic.Basic;
 import com.example.androidpoint.Fragment.Learn;
 import com.example.androidpoint.R;
 import com.google.android.gms.ads.AdRequest;

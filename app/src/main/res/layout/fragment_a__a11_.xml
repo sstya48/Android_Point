@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".Fragment.A_A11_Fragment">
+    tools:context=".Fragment.Advance.A_A11_Fragment">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -33,5 +33,9 @@
             android:textStyle="bold" />
     </LinearLayout>
 
+    <com.github.mikephil.charting.charts.BarChart
+        android:id="@+id/idBarChart"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 
 </LinearLayout>

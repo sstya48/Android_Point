@@ -6,7 +6,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:id="@+id/register_activity"
-    tools:context=".Fragment.A_A10_Fragment">
+    tools:context=".Fragment.Advance.A_A10_Fragment">
 
     <LinearLayout
         android:layout_width="match_parent"

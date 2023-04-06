@@ -15,18 +15,13 @@ import com.example.androidpoint.DemoFragments.ListViewFragment;
 import com.example.androidpoint.R;
 
 public class B_card_7_Fragment extends Fragment {
-
     AppCompatImageView listview_demo,Btn_arrow;
-
     TextView list_string,list_xml,list_java,mylist_xml;
-
-
 
     @SuppressLint({"MissingInflatedId", "SetTextI18n"})
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
         View view= inflater.inflate(R.layout.fragment_b_card_7_, container, false);
 
 
@@ -88,13 +83,13 @@ public class B_card_7_Fragment extends Fragment {
         list_java.setText("package listview.example.com.listview;\n" +
                 "\n" +
                 "    import android.support.v7.app.AppCompatActivity;\n" +
-                "        import android.os.Bundle;\n" +
-                "        import android.view.View;\n" +
-                "        import android.widget.AdapterView;\n" +
-                "        import android.widget.ArrayAdapter;\n" +
-                "        import android.widget.ListView;\n" +
-                "        import android.widget.TextView;\n" +
-                "        import android.widget.Toast;\n" +
+                "    import android.os.Bundle;\n" +
+                "    import android.view.View;\n" +
+                "    import android.widget.AdapterView;\n" +
+                "    import android.widget.ArrayAdapter;\n" +
+                "    import android.widget.ListView;\n" +
+                "    import android.widget.TextView;\n" +
+                "    import android.widget.Toast;\n" +
                 "\n" +
                 "public class MainActivity extends AppCompatActivity {\n" +
                 "    ListView listView;\n" +
@@ -108,16 +103,20 @@ public class B_card_7_Fragment extends Fragment {
                 "        listView=(ListView)findViewById(R.id.listView);\n" +
                 "        textView=(TextView)findViewById(R.id.textView);\n" +
                 "        listItem = getResources().getStringArray(R.array.Planets);\n" +
-                "        final ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,\n" +
-                "                android.R.layout.simple_list_item_1, android.R.id.text1, listItem);\n" +
+                "        final ArrayAdapter<String> adapter = new \n" +
+                "                           ArrayAdapter<String>(this,\n" +
+                "                             android.R.layout.simple_list_item_1, \n" +
+                "                               android.R.id.text1, listItem);\n" +
                 "        listView.setAdapter(adapter);\n" +
                 "\n" +
-                "        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {\n" +
+                "        listView.setOnItemClickListener(new " +
+                "                           AdapterView.OnItemClickListener() {\n" +
                 "            @Override\n" +
-                "            public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {\n" +
-                "                // TODO Auto-generated method stub\n" +
+                "            public void onItemClick(AdapterView<?> adapterView, \n" +
+                "                                  View view, int position, long l) {\n" +
                 "                String value=adapter.getItem(position);\n" +
-                "                Toast.makeText(getApplicationContext(), \"Item: \" + position, Toast.LENGTH_SHORT).show();\n" +
+                "                Toast.makeText(getApplicationContext(), \"Item: \" \n" +
+                "                       + position, Toast.LENGTH_SHORT).show();\n" +
                 "\n" +
                 "            }\n" +
                 "        });\n" +
@@ -127,7 +126,8 @@ public class B_card_7_Fragment extends Fragment {
 
 
         list_xml.setText("<?xml version=\"1.0\" encoding=\"utf-8\"?>\n" +
-                "<LinearLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\n" +
+                "<LinearLayout xmlns:android=\"http://schemas.android.com\"\n" +
+                "                                        /apk/res/android\"\n" +
                 "    xmlns:tools=\"http://schemas.android.com/tools\"\n" +
                 "    android:layout_width=\"match_parent\"\n" +
                 "    android:layout_height=\"match_parent\"\n" +

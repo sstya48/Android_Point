@@ -14,16 +14,12 @@ import com.example.androidpoint.DemoFragments.Implicit_Intent_Fragment;
 import com.example.androidpoint.R;
 
 public class B_card_12_Fragment extends Fragment {
-
     TextView implicit_java, implicit_xml;
-
     AppCompatImageView implicit_demo, Btn_arrow;
-
     @SuppressLint("SetTextI18n")
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_b_card_12_, container, false);
 
         implicit_java = view.findViewById(R.id.implicit_java);
@@ -33,9 +29,7 @@ public class B_card_12_Fragment extends Fragment {
         implicit_xml.setTextIsSelectable(true);
 
         implicit_demo = view.findViewById(R.id.implicit_demo);
-
         Btn_arrow = view.findViewById(R.id.Btn_arrow);
-
         Btn_arrow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -46,7 +40,6 @@ public class B_card_12_Fragment extends Fragment {
                         .commit();
             }
         });
-
         implicit_demo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -59,7 +52,8 @@ public class B_card_12_Fragment extends Fragment {
         });
 
         implicit_xml.setText("<?xml version=\"1.0\" encoding=\"utf-8\"?>\n" +
-                "<LinearLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\n" +
+                "<LinearLayout xmlns:android=\"http://schemas.android.com\"\n" +
+                "                                       /apk/res/android\"\n" +
                 "    xmlns:tools=\"http://schemas.android.com/tools\"\n" +
                 "    android:layout_width=\"match_parent\"\n" +
                 "    android:layout_height=\"match_parent\"\n" +
@@ -77,7 +71,7 @@ public class B_card_12_Fragment extends Fragment {
                 "</LinearLayout>");
 
 
-        implicit_java.setText("package example.com.implicitintent;\n" +
+        implicit_java.setText("package example.androidalians.implicitintent;\n" +
                 "\n" +
                 "      import android.content.Intent;\n" +
                 "      import android.net.Uri;\n" +
@@ -101,12 +95,14 @@ public class B_card_12_Fragment extends Fragment {
                 "        editText =  findViewById(R.id.editText);\n" +
                 "\n" +
                 "        button.setOnClickListener(new View.OnClickListener() {\n" +
-                "            @Override\n" +
-                "            public void onClick(View view) {\n" +
-                "                Intent intent = new Intent(Intent.ACTION_VIEW);\n" +
-                "                intent.setData(Uri.parse(\"https://www.youtube.com/@Androidalians\"));\n" +
-                "                startActivity(intent);\n" +
-                "                Toast.makeText(getContext(), \"Implicit Intent\", Toast.LENGTH_SHORT).show();\n" +
+                "        @Override\n" +
+                "        public void onClick(View view) {\n" +
+                "          Intent intent = new Intent(Intent.ACTION_VIEW);\n" +
+                "          intent.setData(Uri.parse(\"https://www.youtube.com\n" +
+                "                                               /@Androidalians\"));\n" +
+                "          startActivity(intent);\n" +
+                "          Toast.makeText(getContext(), \"Implicit Intent\",\n" +
+                "                                       Toast.LENGTH_SHORT).show();\n" +
                 "            }\n" +
                 "        });\n" +
                 "    }\n" +

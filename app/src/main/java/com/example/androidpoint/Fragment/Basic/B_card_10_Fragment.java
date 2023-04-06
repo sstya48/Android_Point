@@ -15,14 +15,8 @@ import com.example.androidpoint.DemoFragments.Scroll_Demo_Fragment;
 import com.example.androidpoint.R;
 
 public class B_card_10_Fragment extends Fragment {
-
-
     TextView scroll_java,scroll_xml;
-
     AppCompatImageView Btn_arrow,scroll_demo;
-
-
-
     @SuppressLint("SetTextI18n")
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -64,7 +58,6 @@ public class B_card_10_Fragment extends Fragment {
             }
         });
 
-
         scroll_java.setText("package com.example.test.scrollviews;  \n" +
                 "  \n" +
                 "import android.support.v7.app.AppCompatActivity;  \n" +
@@ -81,13 +74,13 @@ public class B_card_10_Fragment extends Fragment {
 
 
         scroll_xml.setText("<?xml version=\"1.0\" encoding=\"utf-8\"?>\n" +
-                "<LinearLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\n" +
+                "<LinearLayout xmlns:android=\"http://schemas.android.com\"\n" +
+                "                                   /apk/res/android\"\n" +
                 "    xmlns:tools=\"http://schemas.android.com/tools\"\n" +
                 "    android:layout_width=\"match_parent\"\n" +
                 "    android:layout_height=\"match_parent\"\n" +
                 "    android:padding=\"10dp\"\n" +
                 "    android:orientation=\"vertical\"> \n" +
-                "\n" +
                 "\n" +
                 "    <TextView\n" +
                 "        android:layout_width=\"wrap_content\"\n" +
@@ -99,12 +92,10 @@ public class B_card_10_Fragment extends Fragment {
                 "        android:layout_centerHorizontal=\"true\"\n" +
                 "        android:layout_alignParentTop=\"true\" />\n" +
                 "\n" +
-                "\n" +
                 "    <ScrollView android:layout_marginTop=\"30dp\"\n" +
                 "        android:layout_width=\"match_parent\"\n" +
                 "        android:layout_height=\"wrap_content\"\n" +
                 "        android:id=\"@+id/scrollView\">\n" +
-                "\n" +
                 "\n" +
                 "        <LinearLayout\n" +
                 "            android:layout_width=\"match_parent\"\n" +
@@ -117,16 +108,16 @@ public class B_card_10_Fragment extends Fragment {
                 "                android:text=\"Button 1\"\n" +
                 "                android:background=\"@color/mango\"\n" +
                 "                android:layout_margin=\"8dp\"\n" +
-                "                android:textColor=\"@color/white\"\n" +
-                "                />\n" +
+                "                android:textColor=\"@color/white\"/>\n" +
+                "\n" +
                 "            <Button\n" +
                 "                android:layout_width=\"match_parent\"\n" +
                 "                android:layout_height=\"wrap_content\"\n" +
                 "                android:text=\"Button 2\"\n" +
                 "                android:background=\"@color/purple_200\"\n" +
                 "                android:layout_margin=\"8dp\"\n" +
-                "                android:textColor=\"@color/white\"\n" +
-                "                />\n" +
+                "                android:textColor=\"@color/white\"/>\n" +
+                "\n" +
                 "            <Button\n" +
                 "                android:layout_width=\"match_parent\"\n" +
                 "                android:layout_height=\"wrap_content\"\n" +
@@ -134,6 +125,7 @@ public class B_card_10_Fragment extends Fragment {
                 "                android:background=\"@color/teal_700\"\n" +
                 "                android:layout_margin=\"8dp\"\n" +
                 "                android:textColor=\"@color/white\"/>\n" +
+                "\n" +
                 "            <Button\n" +
                 "                android:layout_width=\"match_parent\"\n" +
                 "                android:layout_height=\"wrap_content\"\n" +
@@ -141,6 +133,7 @@ public class B_card_10_Fragment extends Fragment {
                 "                android:background=\"@color/lightpeach\"\n" +
                 "                android:layout_margin=\"8dp\"\n" +
                 "                android:textColor=\"@color/white\"/>\n" +
+                "\n" +
                 "            <Button\n" +
                 "                android:layout_width=\"match_parent\"\n" +
                 "                android:layout_height=\"wrap_content\"\n" +
@@ -148,6 +141,7 @@ public class B_card_10_Fragment extends Fragment {
                 "                android:background=\"@color/active\"\n" +
                 "                android:layout_margin=\"8dp\"\n" +
                 "                android:textColor=\"@color/white\"/>\n" +
+                "\n" +
                 "            <Button\n" +
                 "                android:layout_width=\"match_parent\"\n" +
                 "                android:layout_height=\"wrap_content\"\n" +
@@ -163,6 +157,7 @@ public class B_card_10_Fragment extends Fragment {
                 "                android:background=\"@color/purple_200\"\n" +
                 "                android:layout_margin=\"8dp\"\n" +
                 "                android:textColor=\"@color/white\"/>\n" +
+                "\n" +
                 "            <Button\n" +
                 "                android:layout_width=\"match_parent\"\n" +
                 "                android:layout_height=\"wrap_content\"\n" +
@@ -170,6 +165,7 @@ public class B_card_10_Fragment extends Fragment {
                 "                android:background=\"@color/teal_700\"\n" +
                 "                android:layout_margin=\"8dp\"\n" +
                 "                android:textColor=\"@color/white\"/>\n" +
+                "\n" +
                 "            <Button\n" +
                 "                android:layout_width=\"match_parent\"\n" +
                 "                android:layout_height=\"wrap_content\"\n" +
@@ -177,6 +173,7 @@ public class B_card_10_Fragment extends Fragment {
                 "                android:background=\"@color/lightpeach\"\n" +
                 "                android:layout_margin=\"8dp\"\n" +
                 "                android:textColor=\"@color/white\"/>\n" +
+                "\n" +
                 "            <Button\n" +
                 "                android:layout_width=\"match_parent\"\n" +
                 "                android:layout_height=\"wrap_content\"\n" +
@@ -184,6 +181,7 @@ public class B_card_10_Fragment extends Fragment {
                 "                android:background=\"@color/active\"\n" +
                 "                android:layout_margin=\"8dp\"\n" +
                 "                android:textColor=\"@color/white\"/>\n" +
+                "\n" +
                 "            <Button\n" +
                 "                android:layout_width=\"match_parent\"\n" +
                 "                android:layout_height=\"wrap_content\"\n" +
@@ -191,6 +189,7 @@ public class B_card_10_Fragment extends Fragment {
                 "                android:background=\"@color/mango\"\n" +
                 "                android:layout_margin=\"8dp\"\n" +
                 "                android:textColor=\"@color/white\"/>\n" +
+                "\n" +
                 "            <Button\n" +
                 "                android:layout_width=\"match_parent\"\n" +
                 "                android:layout_height=\"wrap_content\"\n" +
@@ -198,6 +197,7 @@ public class B_card_10_Fragment extends Fragment {
                 "                android:background=\"@color/purple_200\"\n" +
                 "                android:layout_margin=\"8dp\"\n" +
                 "                android:textColor=\"@color/white\"/>\n" +
+                "\n" +
                 "            <Button\n" +
                 "                android:layout_width=\"match_parent\"\n" +
                 "                android:layout_height=\"wrap_content\"\n" +
@@ -205,6 +205,7 @@ public class B_card_10_Fragment extends Fragment {
                 "                android:background=\"@color/teal_700\"\n" +
                 "                android:layout_margin=\"8dp\"\n" +
                 "                android:textColor=\"@color/white\"/>\n" +
+                "\n" +
                 "            <Button\n" +
                 "                android:layout_width=\"fill_parent\"\n" +
                 "                android:layout_height=\"wrap_content\"\n" +
@@ -212,6 +213,7 @@ public class B_card_10_Fragment extends Fragment {
                 "                android:background=\"@color/lightpeach\"\n" +
                 "                android:layout_margin=\"8dp\"\n" +
                 "                android:textColor=\"@color/white\"/>\n" +
+                "\n" +
                 "            <Button\n" +
                 "                android:layout_width=\"fill_parent\"\n" +
                 "                android:layout_height=\"wrap_content\"\n" +
@@ -219,6 +221,7 @@ public class B_card_10_Fragment extends Fragment {
                 "                android:background=\"@color/active\"\n" +
                 "                android:layout_margin=\"8dp\"\n" +
                 "                android:textColor=\"@color/white\"/>\n" +
+                "\n" +
                 "            <Button\n" +
                 "                android:layout_width=\"fill_parent\"\n" +
                 "                android:layout_height=\"wrap_content\"\n" +
@@ -226,6 +229,7 @@ public class B_card_10_Fragment extends Fragment {
                 "                android:background=\"@color/mango\"\n" +
                 "                android:layout_margin=\"8dp\"\n" +
                 "                android:textColor=\"@color/white\"/>\n" +
+                "\n" +
                 "            <Button\n" +
                 "                android:layout_width=\"match_parent\"\n" +
                 "                android:layout_height=\"wrap_content\"\n" +
@@ -233,6 +237,7 @@ public class B_card_10_Fragment extends Fragment {
                 "                android:background=\"@color/purple_200\"\n" +
                 "                android:layout_margin=\"8dp\"\n" +
                 "                android:textColor=\"@color/white\"/>\n" +
+                "\n" +
                 "            <Button\n" +
                 "                android:layout_width=\"match_parent\"\n" +
                 "                android:layout_height=\"wrap_content\"\n" +
@@ -248,6 +253,7 @@ public class B_card_10_Fragment extends Fragment {
                 "                android:background=\"@color/lightpeach\"\n" +
                 "                android:layout_margin=\"8dp\"\n" +
                 "                android:textColor=\"@color/white\"/>\n" +
+                "\n" +
                 "            <Button\n" +
                 "                android:layout_width=\"match_parent\"\n" +
                 "                android:layout_height=\"wrap_content\"\n" +

@@ -14,11 +14,8 @@ import com.example.androidpoint.DemoFragments.OptionMenuFragment;
 import com.example.androidpoint.R;
 
 public class B_card_14_Fragment extends Fragment {
-
     AppCompatImageView optionMenu_demo, Btn_arrow;
-
     TextView optionMenu_java, option_xml_menu;
-
     @SuppressLint({"MissingInflatedId", "SetTextI18n"})
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -28,7 +25,6 @@ public class B_card_14_Fragment extends Fragment {
 
         optionMenu_java = view.findViewById(R.id.optionMenu_java);
         optionMenu_java.setTextIsSelectable(true);
-
 
         option_xml_menu = view.findViewById(R.id.option_xml_menu);
         option_xml_menu.setTextIsSelectable(true);
@@ -45,7 +41,6 @@ public class B_card_14_Fragment extends Fragment {
                         .commit();
             }
         });
-
         optionMenu_demo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -63,7 +58,6 @@ public class B_card_14_Fragment extends Fragment {
                 "import android.view.Menu;\n" +
                 "import android.view.MenuItem;\n" +
                 "import android.widget.Toast;\n" +
-                "\n" +
                 "import androidx.appcompat.app.AppCompatActivity;\n" +
                 "\n" +
                 "public class MainActivity extends AppCompatActivity {\n" +
@@ -80,14 +74,16 @@ public class B_card_14_Fragment extends Fragment {
                 "    }\n" +
                 "    @Override\n" +
                 "    public boolean onOptionsItemSelected(MenuItem item) {\n" +
-                "        Toast.makeText(this, \"Selected Item: \" + item.getTitle(), Toast.LENGTH_SHORT).show();\n" +
+                "        Toast.makeText(this, \"Selected Item: \" + item.getTitle(), \n" +
+                "                                           Toast.LENGTH_SHORT).show();\n" +
                 "        return true;\n" +
                 "    }\n" +
                 "}");
 
 
         option_xml_menu.setText("<?xml version=\"1.0\" encoding=\"utf-8\"?>\n" +
-                "<menu xmlns:android=\"http://schemas.android.com/apk/res/android\">\n" +
+                "<menu xmlns:android=\"http://schemas.android.com\">\n" +
+                "                               /apk/res/android\">\n" +
                 "    <item\n" +
                 "        android:id=\"@+id/upload\"\n" +
                 "        android:title=\"Upload\"/>\n" +

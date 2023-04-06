@@ -83,29 +83,30 @@ public class B_card_8_Fragment extends Fragment {
                 "        super.onCreate(savedInstanceState);\n" +
                 "        setContentView(R.layout.activity_main);\n" +
                 "\n" +
-                "        btnpickdate = findViewById(R.id.btnpickdate);\n" +
-                "        selectdate = findViewById(R.id.selectdate);\n" +
+                "     btnpickdate = findViewById(R.id.btnpickdate);\n" +
+                "     selectdate = findViewById(R.id.selectdate);\n" +
                 "\n" +
-                "        btnpickdate.setOnClickListener(new View.OnClickListener() {\n" +
-                "            @RequiresApi(api = Build.VERSION_CODES.N)\n" +
-                "            @Override\n" +
-                "            public void onClick(View view) {\n" +
+                "      btnpickdate.setOnClickListener(new View.OnClickListener() {\n" +
+                "          @RequiresApi(api = Build.VERSION_CODES.N)\n" +
+                "          @Override\n" +
+                "          public void onClick(View view) {\n" +
                 "\n" +
-                "                final Calendar c = Calendar.getInstance();\n" +
+                "             final Calendar c = Calendar.getInstance();\n" +
                 "\n" +
-                "                int year = c.get(Calendar.YEAR);\n" +
-                "                int month = c.get(Calendar.MONTH);\n" +
-                "                int day = c.get(Calendar.DAY_OF_MONTH);\n" +
+                "              int year = c.get(Calendar.YEAR);\n" +
+                "              int month = c.get(Calendar.MONTH);\n" +
+                "              int day = c.get(Calendar.DAY_OF_MONTH);\n" +
                 "\n" +
-                "                DatePickerDialog datePickerDialog = new DatePickerDialog(\n" +
-                "                        MainActivity.this,\n" +
+                "              DatePickerDialog datePickerDialog = new " +
+                "                 DatePickerDialog(MainActivity.this,\n" +
+               "                   new DatePickerDialog.OnDateSetListener() {\n" +
                 "\n" +
-                "                        new DatePickerDialog.OnDateSetListener() {\n" +
+                "                  @Override\n" +
+                "                  public void onDateSet(DatePicker view, int year, \n" +
+                "                           int monthOfYear, int dayOfMonth) {\n" +
                 "\n" +
-                "                            @Override\n" +
-                "                            public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {\n" +
-                "\n" +
-                "                                selectdate.setText(dayOfMonth + \"-\" + (monthOfYear + 1) + \"-\" + year);\n" +
+                "                  selectdate.setText(dayOfMonth + \"-\" + (monthOfYear + 1)\n" +
+                "                                    + \"-\" + year);\n" +
                 "                            }\n" +
                 "                        },\n" +
                 "\n" +
@@ -119,7 +120,8 @@ public class B_card_8_Fragment extends Fragment {
                 "}");
 
         datepicker_xml.setText("<?xml version=\"1.0\" encoding=\"utf-8\"?>\n" +
-                "<RelativeLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\n" +
+                "<RelativeLayout xmlns:android=\"http://schemas.android.com\"\n" +
+                "                                         /apk/res/android\"\n" +
                 "    xmlns:app=\"http://schemas.android.com/apk/res-auto\"\n" +
                 "    xmlns:tools=\"http://schemas.android.com/tools\"\n" +
                 "    android:layout_width=\"match_parent\"\n" +

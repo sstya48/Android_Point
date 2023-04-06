@@ -15,15 +15,12 @@ import com.example.androidpoint.DemoFragments.ContextMenuFragment;
 import com.example.androidpoint.R;
 
 public class B_card_15_Fragment extends Fragment {
-
-
     TextView contextMenu_java,contextMenu_xml;
     AppCompatImageView contextMenu_demo,Btn_arrow;
     @SuppressLint("SetTextI18n")
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
         View view= inflater.inflate(R.layout.fragment_b_card_15_, container, false);
 
         contextMenu_java = view.findViewById(R.id.contextMenu_java);
@@ -57,7 +54,7 @@ public class B_card_15_Fragment extends Fragment {
             }
         });
 
-        contextMenu_java.setText("package com.example.popup;\n" +
+        contextMenu_java.setText("package example.androidalians.popup;\n" +
                 "\n" +
                 "import android.graphics.Color;\n" +
                 "import android.os.Bundle;\n" +
@@ -66,7 +63,6 @@ public class B_card_15_Fragment extends Fragment {
                 "import android.view.View;\n" +
                 "import android.widget.RelativeLayout;\n" +
                 "import android.widget.TextView;\n" +
-                "\n" +
                 "import androidx.appcompat.app.AppCompatActivity;\n" +
                 "\n" +
                 "public class MainActivity extends AppCompatActivity {\n" +
@@ -79,7 +75,8 @@ public class B_card_15_Fragment extends Fragment {
                 "        setContentView(R.layout.activity_main);\n" +
                 "\n" +
                 "        textView = (TextView) findViewById(R.id.textView);\n" +
-                "        relativeLayout = (RelativeLayout) findViewById(R.id.relLayout);\n" +
+                "        relativeLayout = (RelativeLayout) findViewById\n" +
+                "                                       (R.id.relLayout);\n" +
                 "        registerForContextMenu(textView);\n" +
                 "    }\n" +
                 "\n" +
@@ -106,7 +103,8 @@ public class B_card_15_Fragment extends Fragment {
                 "}");
 
         contextMenu_xml.setText("<?xml version=\"1.0\" encoding=\"utf-8\"?>\n" +
-                "<LinearLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\n" +
+                "<LinearLayout xmlns:android=\"http://schemas.android.com\"\n" +
+                "                                   /apk/res/android\"\n" +
                 "    xmlns:tools=\"http://schemas.android.com/tools\"\n" +
                 "    android:id=\"@+id/relLayout\"\n" +
                 "    android:layout_width=\"match_parent\"\n" +

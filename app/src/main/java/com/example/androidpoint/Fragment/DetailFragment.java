@@ -10,6 +10,7 @@ import android.widget.TextView;
 import androidx.appcompat.widget.AppCompatImageView;
 import androidx.fragment.app.Fragment;
 
+import com.example.androidpoint.Fragment.Learn.Learn;
 import com.example.androidpoint.Model.LearnModel;
 import com.example.androidpoint.R;
 import com.squareup.picasso.Picasso;

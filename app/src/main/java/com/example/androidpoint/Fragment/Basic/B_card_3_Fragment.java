@@ -14,11 +14,8 @@ import com.example.androidpoint.DemoFragments.Hide_Title_Demo_Fragment;
 import com.example.androidpoint.R;
 
 public class B_card_3_Fragment extends Fragment {
-
     TextView hide_title_xml,hide_title_java;
-
     AppCompatImageView Btn_arrow,hide_title_demo;
-
     @SuppressLint("SetTextI18n")
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -59,7 +56,7 @@ public class B_card_3_Fragment extends Fragment {
         });
 
 
-        hide_title_java.setText("package first.androidalians.com.hidetitlebar;  \n" +
+        hide_title_java.setText("package example.androidalians.hidetitlebar;  \n" +
                 "  \n" +
                 "import android.support.v7.app.AppCompatActivity;  \n" +
                 "import android.os.Bundle;  \n" +
@@ -72,24 +69,22 @@ public class B_card_3_Fragment extends Fragment {
                 "    protected void onCreate(Bundle savedInstanceState) {  \n" +
                 "        super.onCreate(savedInstanceState);  \n" +
                 "  \n" +
-                "        //will hide the title  \n" +
                 "        requestWindowFeature(Window.FEATURE_NO_TITLE);    \n" +
                 "  \n" +
-                "       // hide the title bar     \n" +
                 "        getSupportActionBar().hide();  \n" +
                 "  \n" +
-                "        //enable full screen  \n" +
-                "        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,  \n" +
-                "               WindowManager.LayoutParams.FLAG_FULLSCREEN);  \n" +
+                "        this.getWindow().setFlags(WindowManager.LayoutParams. \n" +
+                "                                              FLAG_FULLSCREEN,  \n" +
+                "        WindowManager.LayoutParams.FLAG_FULLSCREEN);  \n" +
                 "        setContentView(R.layout.activity_main);  \n" +
-                "  \n" +
                 "  \n" +
                 "    }  \n" +
                 "}  ");
 
 
         hide_title_xml.setText("<?xml version=\"1.0\" encoding=\"utf-8\"?>  \n" +
-                "<android.support.constraint.ConstraintLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"  \n" +
+                "<android.support.constraint.ConstraintLayout \"  \n" +
+                "   xmlns:android=\"http://schemas.android.com/apk/res/android\"  \n" +
                 "    xmlns:app=\"http://schemas.android.com/apk/res-auto\"  \n" +
                 "    xmlns:tools=\"http://schemas.android.com/tools\"  \n" +
                 "    android:layout_width=\"match_parent\"  \n" +

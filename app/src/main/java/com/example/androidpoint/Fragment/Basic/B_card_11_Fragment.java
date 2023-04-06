@@ -15,11 +15,8 @@ import com.example.androidpoint.DemoFragments.SearchViewFragment;
 import com.example.androidpoint.R;
 
 public class B_card_11_Fragment extends Fragment {
-
     AppCompatImageView serchview_demo,Btn_arrow;
-
     TextView serchview_java,serchview_xml;
-
     @SuppressLint({"MissingInflatedId", "SetTextI18n"})
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -60,7 +57,8 @@ public class B_card_11_Fragment extends Fragment {
         });
 
         serchview_xml.setText("<?xml version=\"1.0\" encoding=\"utf-8\"?>\n" +
-                "<RelativeLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\n" +
+                "<RelativeLayout xmlns:android=\"http://schemas.android.com\"\n" +
+                "                                       /apk/res/android\"\n" +
                 "    xmlns:app=\"http://schemas.android.com/apk/res-auto\"\n" +
                 "    xmlns:tools=\"http://schemas.android.com/tools\"\n" +
                 "    android:layout_width=\"match_parent\"\n" +
@@ -86,13 +84,11 @@ public class B_card_11_Fragment extends Fragment {
                 "        android:layout_marginStart=\"20dp\"\n" +
                 "        android:layout_alignParentTop=\"true\"/>\n" +
                 "\n" +
-                "\n" +
                 "</RelativeLayout>");
 
         serchview_java.setText("package com.example.searchview;\n" +
                 "\n" +
                 "import androidx.appcompat.app.AppCompatActivity;\n" +
-                "\n" +
                 "import android.annotation.SuppressLint;\n" +
                 "import android.os.Bundle;\n" +
                 "import android.view.View;\n" +
@@ -100,8 +96,8 @@ public class B_card_11_Fragment extends Fragment {
                 "import android.widget.ListView;\n" +
                 "import android.widget.SearchView;\n" +
                 "import android.widget.Toast;\n" +
-                "\n" +
                 "import java.util.ArrayList;\n" +
+                "\n" +
                 "public class MainActivity extends AppCompatActivity {\n" +
                 "    SearchView searchView;\n" +
                 "    ListView listView;\n" +
@@ -136,17 +132,20 @@ public class B_card_11_Fragment extends Fragment {
                 "        list.add(\"Rhinoceros\");\n" +
                 "        list.add(\"Hippopotamus\");\n" +
                 "\n" +
-                "        adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1,list);\n" +
+                "        adapter = new ArrayAdapter<String>(this, android.R.layout\n" +
+                "                                       .simple_list_item_1,list);\n" +
                 "        listView.setAdapter(adapter);\n" +
                 "\n" +
-                "        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {\n" +
+                "        searchView.setOnQueryTextListener(new SearchView \n" +
+                "                                           .OnQueryTextListener() {\n" +
                 "            @Override\n" +
                 "            public boolean onQueryTextSubmit(String query) {\n" +
                 "\n" +
                 "                if(list.contains(query)){\n" +
                 "                    adapter.getFilter().filter(query);\n" +
                 "                }else{\n" +
-                "                    Toast.makeText(MainActivity.this, \"No Match found\", Toast.LENGTH_LONG).show();\n" +
+                "                    Toast.makeText(MainActivity.this, \"No Match found\", \n" +
+                "                                           Toast.LENGTH_LONG).show();\n" +
                 "                }\n" +
                 "                return false;\n" +
                 "            }\n" +
@@ -158,6 +157,7 @@ public class B_card_11_Fragment extends Fragment {
                 "        });\n" +
                 "    }\n" +
                 "}");
+
         return  view;
     }
 }

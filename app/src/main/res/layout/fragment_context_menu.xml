@@ -4,9 +4,36 @@
     android:id="@+id/relLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center"
     android:orientation="vertical"
     tools:context=".DemoFragments.ContextMenuFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/layout_bg">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/Btn_arrow"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="13dp"
+            android:layout_marginStart="10dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginBottom="12dp"
+            android:padding="6dp"
+            android:src="@drawable/arrow" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:text="@string/Context_Manu"
+            android:layout_gravity="center_vertical"
+            android:fontFamily="@font/poppins_semibold"
+            android:textColor="#181A20"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </LinearLayout>
 
     <TextView
         android:id="@+id/textView"
@@ -15,6 +42,8 @@
         android:textColor="@color/blackalpha"
         android:fontFamily="@font/poppins_semibold"
         android:text="Long press me!"
+        android:layout_marginTop="150dp"
+        android:layout_gravity="center"
         android:textSize="25sp"
         android:padding="30dp"/>
 

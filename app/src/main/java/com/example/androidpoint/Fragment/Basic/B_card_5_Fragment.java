@@ -13,8 +13,6 @@ import android.widget.TextView;
 
 import com.example.androidpoint.DemoFragments.CheckBox_Fragment;
 import com.example.androidpoint.R;
-
-
 public class B_card_5_Fragment extends Fragment {
 
     TextView checkbox_java,checkbox_xml;
@@ -23,7 +21,6 @@ public class B_card_5_Fragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
         View view= inflater.inflate(R.layout.fragment_b_card_5_, container, false);
 
 
@@ -74,38 +71,34 @@ public class B_card_5_Fragment extends Fragment {
                 "        android:layout_height=\"wrap_content\"\n" +
                 "        android:layout_marginTop=\"68dp\"\n" +
                 "        android:text=\"Pizza\"\n" +
-                "        android:paddingLeft=\"10dp\"\n" +
-                "         />\n" +
+                "        android:paddingLeft=\"10dp\"/>\n" +
                 "\n" +
                 "    <CheckBox\n" +
                 "        android:id=\"@+id/checkBox2\"\n" +
                 "        android:layout_width=\"wrap_content\"\n" +
                 "        android:layout_height=\"wrap_content\"\n" +
                 "        android:layout_marginTop=\"28dp\"\n" +
-                "        android:text=\"Coffee\"\n" +
-                "         />\n" +
+                "        android:text=\"Coffee\" />\n" +
                 "\n" +
                 "    <CheckBox\n" +
                 "        android:id=\"@+id/checkBox3\"\n" +
                 "        android:layout_width=\"wrap_content\"\n" +
                 "        android:layout_height=\"wrap_content\"\n" +
                 "        android:layout_marginTop=\"28dp\"\n" +
-                "        android:text=\"Burger\"\n" +
-                "      />\n" +
+                "        android:text=\"Burger\" /> \n" +
                 "\n" +
                 "    <Button\n" +
                 "        android:id=\"@+id/button\"\n" +
                 "        android:layout_width=\"wrap_content\"\n" +
                 "        android:layout_height=\"wrap_content\"\n" +
                 "        android:layout_marginTop=\"184dp\"\n" +
-                "        android:text=\"Order\"\n" +
-                "     />\n" +
+                "        android:text=\"Order\" />\n" +
                 "\n" +
                 "    </LinearLayout>\n" +
                 "\n");
 
 
-       checkbox_java.setText("package example.androidalians.com.checkbox;  \n" +
+       checkbox_java.setText("package example.androidalians.checkbox;  \n" +
                "  \n" +
                "import android.support.v7.app.AppCompatActivity;  \n" +
                "import android.os.Bundle;  \n" +
@@ -149,9 +142,9 @@ public class B_card_5_Fragment extends Fragment {
                "                    totalamount+=120;  \n" +
                "                }  \n" +
                "                result.append(\"\\nTotal: \"+totalamount+\"Rs\");  \n" +
-               "                Toast.makeText(getApplicationContext(), result.toString(), Toast.LENGTH_LONG).show();  \n" +
+               "                Toast.makeText(getApplicationContext(),result.toString(),\n" +
+               "                                                Toast.LENGTH_LONG).show();\n" +
                "            }  \n" +
-               "  \n" +
                "        });  \n" +
                "    }  \n" +
                "}  \n" );

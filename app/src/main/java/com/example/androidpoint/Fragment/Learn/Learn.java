@@ -1,4 +1,4 @@
-package com.example.androidpoint.Fragment;
+package com.example.androidpoint.Fragment.Learn;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;

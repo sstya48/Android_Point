@@ -62,17 +62,15 @@ public class B_card_9_Fragment extends Fragment {
             }
         });
 
-        timepicker_java.setText("package com.example.timepicker;\n" +
+        timepicker_java.setText("package example.androidalians.timepicker;\n" +
                 "\n" +
                 "import androidx.appcompat.app.AppCompatActivity;\n" +
-                "\n" +
                 "import android.app.TimePickerDialog;\n" +
                 "import android.os.Bundle;\n" +
                 "import android.view.View;\n" +
                 "import android.widget.Button;\n" +
                 "import android.widget.TextView;\n" +
                 "import android.widget.TimePicker;\n" +
-                "\n" +
                 "import java.util.Calendar;\n" +
                 "\n" +
                 "public class MainActivity extends AppCompatActivity {\n" +
@@ -95,10 +93,13 @@ public class B_card_9_Fragment extends Fragment {
                 "                int hour = c.get(Calendar.HOUR_OF_DAY);\n" +
                 "                int minute = c.get(Calendar.MINUTE);\n" +
                 "\n" +
-                "                TimePickerDialog timePickerDialog = new TimePickerDialog(MainActivity.this, new TimePickerDialog.OnTimeSetListener() {\n" +
-                "                    @Override\n" +
-                "                    public void onTimeSet(TimePicker view, int hourOfDay, int minute) {\n" +
-                "                        selectedTimeTV.setText(hourOfDay + \":\" + minute);\n" +
+                "                TimePickerDialog timePickerDialog = new TimePickerDialog\n" +
+                "                       (MainActivity.this, new TimePickerDialog.\n" +
+                "                                           OnTimeSetListener() {\n" +
+                "                  @Override\n" +
+                "                  public void onTimeSet(TimePicker view, int hourOfDay,\n" +
+                "                                                        int minute) {\n" +
+                "                    selectedTimeTV.setText(hourOfDay + \":\" + minute);\n" +
                 "                    }\n" +
                 "                }, hour, minute, false);\n" +
                 "                timePickerDialog.show();\n" +
@@ -108,7 +109,8 @@ public class B_card_9_Fragment extends Fragment {
                 "}");
 
         timepicker_xml.setText("<?xml version=\"1.0\" encoding=\"utf-8\"?>\n" +
-                "<LinearLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\n" +
+                "<LinearLayout xmlns:android=\"http://schemas.android.com\"\n" +
+                "                                   /apk/res/android\"\n" +
                 "    xmlns:tools=\"http://schemas.android.com/tools\"\n" +
                 "    android:layout_width=\"match_parent\"\n" +
                 "    android:layout_height=\"match_parent\"\n" +
@@ -127,8 +129,7 @@ public class B_card_9_Fragment extends Fragment {
                 "            android:layout_width=\"match_parent\"\n" +
                 "            android:layout_height=\"wrap_content\"\n" +
                 "            android:padding=\"10dp\"\n" +
-                "            android:text=\"Time\"\n" +
-                "         />\n" +
+                "            android:text=\"Time\"/>\n" +
                 "\n" +
                 "        <Button\n" +
                 "            android:id=\"@+id/idBtnPickTime\"\n" +

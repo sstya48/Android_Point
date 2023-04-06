@@ -15,16 +15,12 @@ import com.example.androidpoint.DemoFragments.Popup_Menu_Fragment;
 import com.example.androidpoint.R;
 
 public class B_card_16_Fragment extends Fragment {
-
     TextView popup_java,popup_xml,popup_xml_menu;
-
     AppCompatImageView popup_demo,Btn_arrow;
-
     @SuppressLint({"SetTextI18n", "MissingInflatedId"})
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
         View view= inflater.inflate(R.layout.fragment_b_card_16_, container, false);
 
         popup_java = view.findViewById(R.id.popup_java);
@@ -37,7 +33,6 @@ public class B_card_16_Fragment extends Fragment {
         popup_xml_menu.setTextIsSelectable(true);
 
         popup_demo = view.findViewById(R.id.popup_demo);
-
         Btn_arrow = view.findViewById(R.id.Btn_arrow);
 
         Btn_arrow.setOnClickListener(new View.OnClickListener() {
@@ -50,7 +45,6 @@ public class B_card_16_Fragment extends Fragment {
                         .commit();
             }
         });
-
         popup_demo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -69,7 +63,6 @@ public class B_card_16_Fragment extends Fragment {
                 "import android.view.View;\n" +
                 "import android.widget.Button;\n" +
                 "import android.widget.Toast;\n" +
-                "\n" +
                 "import androidx.appcompat.app.AppCompatActivity;\n" +
                 "import androidx.appcompat.widget.PopupMenu;\n" +
                 "\n" +
@@ -78,22 +71,22 @@ public class B_card_16_Fragment extends Fragment {
                 "\n" +
                 "    @Override\n" +
                 "    protected void onCreate(Bundle savedInstanceState) {\n" +
-                "        super.onCreate(savedInstanceState);\n" +
-                "        setContentView(R.layout.activity_main);\n" +
+                "      super.onCreate(savedInstanceState);\n" +
+                "      setContentView(R.layout.activity_main);\n" +
                 "\n" +
-                "        button = findViewById(R.id.button);\n" +
+                "      button = findViewById(R.id.button);\n" +
                 "\n" +
-                "        button.setOnClickListener(new View.OnClickListener() {\n" +
-                "            @Override\n" +
-                "            public void onClick(View view) {\n" +
-                "                PopupMenu popup = new PopupMenu(MainActivity.this, button);\n" +
-                "                //Inflating the Popup using xml file\n" +
-                "                popup.getMenuInflater().inflate(R.menu.menu, popup.getMenu());\n" +
+                "      button.setOnClickListener(new View.OnClickListener() {\n" +
+                "       @Override\n" +
+                "       public void onClick(View view) {\n" +
+                "        PopupMenu popup = new PopupMenu(MainActivity.this, button);\n" +
+                "        popup.getMenuInflater().inflate(R.menu.menu, popup.getMenu());\n" +
                 "\n" +
-                "                //registering popup with OnMenuItemClickListener\n" +
-                "                popup.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {\n" +
-                "                    public boolean onMenuItemClick(MenuItem item) {\n" +
-                "                        Toast.makeText(MainActivity.this, \"You Clicked : \" + item.getTitle(), Toast.LENGTH_SHORT).show();\n" +
+                "        popup.setOnMenuItemClickListener(new PopupMenu.\n" +
+                "                                       OnMenuItemClickListener() {\n" +
+                "        public boolean onMenuItemClick(MenuItem item) {\n" +
+                "          Toast.makeText(MainActivity.this, \"You Clicked : \" \n" +
+                "                       + item.getTitle(), Toast.LENGTH_SHORT).show();\n" +
                 "                        return true;\n" +
                 "                    }\n" +
                 "                });\n" +
@@ -122,7 +115,8 @@ public class B_card_16_Fragment extends Fragment {
                 "</LinearLayout>");
 
         popup_xml_menu.setText("<?xml version=\"1.0\" encoding=\"utf-8\"?>\n" +
-                "<menu xmlns:android=\"http://schemas.android.com/apk/res/android\">\n" +
+                "<menu xmlns:android=\"http://schemas.android.com\n" +
+                "                                   /apk/res/android\">\n" +
                 "    <item\n" +
                 "        android:id=\"@+id/upload\"\n" +
                 "        android:title=\"Upload\"/>\n" +

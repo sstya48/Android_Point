@@ -22,7 +22,6 @@ public class Basic extends Fragment {
     ImageSlider imageslider;
     CardView card_view1, card_view2, card_view3, card_view4,card_view5,card_view6,card_view7,card_view8,card_view9,card_view10,card_view11,card_view12,card_view13,card_view14,card_view15,card_view16;
 
-
     AdView adView_basic;
 
     @SuppressLint("MissingInflatedId")
@@ -31,7 +30,6 @@ public class Basic extends Fragment {
         super.onCreate(savedInstanceState);
 
     }
-
 
     public Basic() {
         // Required empty public constructor
@@ -74,10 +72,10 @@ public class Basic extends Fragment {
 
         ArrayList<SlideModel> slideModels = new ArrayList<>();
 
-        slideModels.add(new SlideModel("https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&w=600", ScaleTypes.FIT));
-        slideModels.add(new SlideModel("https://images.pexels.com/photos/2653362/pexels-photo-2653362.jpeg?auto=compress&cs=tinysrgb&w=600", ScaleTypes.FIT));
+        slideModels.add(new SlideModel("https://c1.wallpaperflare.com/preview/595/1003/783/code-coder-coding-computer.jpg", ScaleTypes.FIT));
         slideModels.add(new SlideModel("https://images.pexels.com/photos/1181271/pexels-photo-1181271.jpeg?auto=compress&cs=tinysrgb&w=600", ScaleTypes.FIT));
-        slideModels.add(new SlideModel("https://images.pexels.com/photos/226232/pexels-photo-226232.jpeg?auto=compress&cs=tinysrgb&w=600", ScaleTypes.FIT));
+        slideModels.add(new SlideModel("https://images.pexels.com/photos/2653362/pexels-photo-2653362.jpeg?auto=compress&cs=tinysrgb&w=600", ScaleTypes.FIT));
+        slideModels.add(new SlideModel("https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&w=600", ScaleTypes.FIT));
 
         imageslider.setImageList(slideModels, ScaleTypes.FIT);
 

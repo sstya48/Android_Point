@@ -56,7 +56,7 @@ public class B_card_2_Fragment extends Fragment {
             }
         });
 
-        activity_lifecycle_java.setText("package example.androidalians.com.activitylifecycle;  \n" +
+        activity_lifecycle_java.setText("package example.androidalians.activitylifecycle;  \n" +
                 "  \n" +
                 "import android.app.Activity;  \n" +
                 "import android.os.Bundle;  \n" +

@@ -69,14 +69,11 @@ public class B_card_6_Fragment extends Fragment {
                 "    android:orientation=\"vertical\"\n" +
                 "    android:gravity=\"center\">\n" +
                 "\n" +
-                "\n" +
-                "\n" +
                 "        <TextView\n" +
                 "            android:layout_width=\"match_parent\"\n" +
                 "            android:layout_height=\"wrap_content\"\n" +
                 "            android:text=\"What is the world\\'s highest mountain?\"\n" +
-                "            android:textSize=\"28sp\"\n" +
-                "          />\n" +
+                "            android:textSize=\"28sp\"/>\n" +
                 "\n" +
                 "        <RadioGroup\n" +
                 "            android:layout_width=\"match_parent\"\n" +
@@ -103,7 +100,7 @@ public class B_card_6_Fragment extends Fragment {
                 "                android:layout_height=\"wrap_content\"\n" +
                 "                android:text=\"Mount Fuji\" />\n" +
                 "\n" +
-                "        </RadioGroup>\n" +
+                "     </RadioGroup>\n" +
                 "\n" +
                 "        <Button\n" +
                 "            android:layout_width=\"match_parent\"\n" +
@@ -114,10 +111,9 @@ public class B_card_6_Fragment extends Fragment {
                 "    </LinearLayout>\n");
 
 
-        radio_java.setText("package com.androidalians.radiobuttontutorial;\n" +
+        radio_java.setText("package example.androidalians.radiobutton;\n" +
                 "\n" +
                 "import androidx.appcompat.app.AppCompatActivity;\n" +
-                "\n" +
                 "import android.os.Bundle;\n" +
                 "import android.view.View;\n" +
                 "import android.widget.Button;\n" +
@@ -136,20 +132,27 @@ public class B_card_6_Fragment extends Fragment {
                 "\n" +
                 "        radioGroup = findViewById(R.id.activity_main_answers);\n" +
                 "\n" +
-                "        submit = findViewById(R.id.activity_main_submit);\n" +
-                "        submit.setOnClickListener(new View.OnClickListener() {\n" +
-                "            @Override\n" +
-                "            public void onClick(View v) {\n" +
-                "                int answerRadioButtonId = radioGroup.getCheckedRadioButtonId();\n" +
-                "                if (answerRadioButtonId != -1) {\n" +
-                "                    RadioButton answer = findViewById(answerRadioButtonId);\n" +
-                "                    if (answer.getText().equals(getResources().getString(R.string.answer3))) {\n" +
-                "                        Toast.makeText(getApplicationContext(), getResources().getString(R.string.correct_answer), Toast.LENGTH_SHORT).show();\n" +
-                "                    } else {\n" +
-                "                        Toast.makeText(getApplicationContext(), getResources().getString(R.string.incorrect_answer), Toast.LENGTH_SHORT).show();\n" +
+                "    submit = findViewById(R.id.activity_main_submit);\n" +
+                "    submit.setOnClickListener(new View.OnClickListener() {\n" +
+                "       @Override\n" +
+                "     public void onClick(View v) {\n" +
+                "       int answerRadioButtonId = radioGroup.\n" +
+                "                               getCheckedRadioButtonId();\n" +
+                "       if (answerRadioButtonId != -1) {\n" +
+                "          RadioButton answer = findViewById(answerRadioButtonId);\n" +
+                "          if (answer.getText().equals(getResources().getString(R.string.answer3))) {\n" +
+                "            Toast.makeText(getApplicationContext(), getResources()\n" +
+                "                               .getString(R.string.correct_answer), \n" +
+                "                                          Toast.LENGTH_SHORT).show();\n" +
+                "        } else {\n" +
+                "             Toast.makeText(getApplicationContext(), getResources()\n" +
+                "                               .getString(R.string.incorrect_answer), \n" +
+                "                                           Toast.LENGTH_SHORT).show();\n" +
                 "                    }\n" +
-                "                } else {\n" +
-                "                    Toast.makeText(getApplicationContext(), getResources().getString(R.string.missing_answer), Toast.LENGTH_SHORT).show();\n" +
+                "        } else {\n" +
+                "              Toast.makeText(getApplicationContext(), getResources()\n" +
+                "                               .getString(R.string.missing_answer),\n" +
+                "                                           Toast.LENGTH_SHORT).show();\n" +
                 "                }\n" +
                 "            }\n" +
                 "        });\n" +
@@ -158,7 +161,6 @@ public class B_card_6_Fragment extends Fragment {
 
         radio_string.setText("<resources>\n" +
                 "<string name=\"app_name\">Radio Button Tutorial</string>\n" +
-                "\n" +
                 "<string name=\"answer3\">Mount Everest</string>\n" +
                 "<string name=\"correct_answer\">Correct Answer</string>\n" +
                 "<string name=\"incorrect_answer\">Incorrect Answer</string>\n" +

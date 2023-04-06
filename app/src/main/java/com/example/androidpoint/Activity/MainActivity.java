@@ -3,6 +3,7 @@ package com.example.androidpoint.Activity;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
@@ -56,24 +57,23 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 
         //Banner Ad id====================================
-        adView_main_all=findViewById(R.id.adView_main_all);
+        adView_main_all = findViewById(R.id.adView_main_all);
 
         //====================================================
 
         MobileAds.initialize(this);
 
-        AdRequest adRequest=new AdRequest.Builder().build();
+        AdRequest adRequest = new AdRequest.Builder().build();
 
 
         //banner ad load
         adView_main_all.loadAd(adRequest);
 
 
-
         btnMenu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i= new Intent(MainActivity.this,MenuActivity.class);
+                Intent i = new Intent(MainActivity.this, MenuActivity.class);
                 startActivity(i);
             }
         });
@@ -117,24 +117,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View view) {
 
-        switch (view.getId())
-        {
+        switch (view.getId()) {
           /*  case R.id.btn_menu:
                 Intent i= new Intent(MainActivity.this,MenuActivity.class);
                 startActivity(i);*/
 
 
-
         }
-    }
-/*
-    public void clearBackStackInclusive(String tag) {
-        getSupportFragmentManager().popBackStack(tag, FragmentManager.POP_BACK_STACK_INCLUSIVE);
-    }*/
-
-    @Override
-    public void onBackPressed() {
-        super.onBackPressed();
-
     }
 }

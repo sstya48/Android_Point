@@ -21,13 +21,13 @@ public class ViewPagerAdapter extends PagerAdapter {
             R.drawable.onboard4,
             R.drawable.onboard2,
             R.drawable.onboard3,
-//            R.drawable.image4
+//            R.drawable.onboard3,
     };
 
     int heading[] = {
             R.string.heading_one,
             R.string.heading_two,
-            R.string.heading_one,
+            R.string.heading_three,
             /*R.string.heading_three,
             R.string.heading_fourth*/
     };
@@ -70,7 +70,7 @@ public class ViewPagerAdapter extends PagerAdapter {
 
             slidetitleimage.setImageResource(images[position]);
             slideheading.setText(heading[position]);
-            slideDesc.setText(description[position]);
+//            slideDesc.setText(description[position]);
 
 
             container.addView(view);

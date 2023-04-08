@@ -4,15 +4,58 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".Fragment.A_A20_Fragment">
+    tools:context=".Fragment.Advance.A_A20_Fragment">
 
-    <ToggleButton
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/layout_bg">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/Btn_arrow"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="13dp"
+            android:layout_marginStart="10dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginBottom="12dp"
+            android:padding="6dp"
+            android:src="@drawable/arrow" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:text="@string/flash"
+            android:layout_gravity="center_vertical"
+            android:textColor="#181A20"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+   <!-- <ToggleButton
         android:id="@+id/toggle_flashlight"
         android:layout_width="200dp"
         android:layout_height="75dp"
         android:layout_gravity="center"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="250dp"
+        android:textOn="Turn Off"
+        android:textOff="Turn On"
+        android:checked="false"
         android:onClick="toggleFlashLight"
-        android:textSize="25sp" />
+        android:text="Turn On/Off Camera LED/ Flashlight Android"
+        android:textSize="25sp" />-->
+    <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ON"
+        android:layout_marginTop="220dp"
+            android:id="@+id/onBtn"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="OFF"
+        android:id="@+id/offBtn"/>
 
 </LinearLayout>

@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center"
-    tools:context=".Fragment.A_A4_Fragment">
+    tools:context=".Fragment.Advance.A_A4_Fragment">
 
     <Button
         android:id="@+id/b1"

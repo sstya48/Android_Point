@@ -65,7 +65,7 @@ public class ViewPagerAdapter extends PagerAdapter {
 
             ImageView slidetitleimage = (ImageView) view.findViewById(R.id.title_image);
             TextView slideheading = (TextView) view.findViewById(R.id.text_title);
-            TextView slideDesc = (TextView) view.findViewById(R.id.text_des);
+//            TextView slideDesc = (TextView) view.findViewById(R.id.text_des);
 
 
             slidetitleimage.setImageResource(images[position]);

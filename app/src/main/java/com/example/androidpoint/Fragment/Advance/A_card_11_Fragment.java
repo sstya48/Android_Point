@@ -13,13 +13,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.androidpoint.R;
-
 public class A_card_11_Fragment extends Fragment {
-
     TextView bar_java, bar_xml, bar_gridal_permission;
-
     AppCompatImageView Btn_arrow;
-
     ImageView bar_output;
     @SuppressLint("SetTextI18n")
     @Override
@@ -28,7 +24,6 @@ public class A_card_11_Fragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_a_card_11_, container, false);
 
         Btn_arrow=view.findViewById(R.id.Btn_arrow);
-
         Btn_arrow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -64,11 +59,11 @@ public class A_card_11_Fragment extends Fragment {
                 "import android.os.Bundle;\n" +
                 "import androidx.appcompat.app.AppCompatActivity;\n" +
                 "import com.github.mikephil.charting.charts.BarChart;\n" +
-                "import com.github.mikephil.charting.components.XAxis;\n" +
+                "import com.github.mikephil.charting.components.Alin;\n" +
                 "import com.github.mikephil.charting.data.BarData;\n" +
                 "import com.github.mikephil.charting.data.BarDataSet;\n" +
                 "import com.github.mikephil.charting.data.BarEntry;\n" +
-                "import com.github.mikephil.charting.formatter.IndexAxisValueFormatter;\n" +
+                "import com.github.mikephil.charting.formatter.IndeAlinValueFormatter;\n" +
                 "import java.util.ArrayList;\n" +
                 "  \n" +
                 "public class MainActivity extends AppCompatActivity {\n" +
@@ -86,31 +81,30 @@ public class A_card_11_Fragment extends Fragment {
                 "        super.onCreate(savedInstanceState);\n" +
                 "        setContentView(R.layout.activity_main);\n" +
                 "          \n" +
-                "        // initializing variable for bar chart.\n" +
-                "        barChart = findViewById(R.id.idBarChart);\n" +
+                "    barChart = findViewById(R.id.idBarChart);\n" +
                 "          \n" +
-                "        barDataSet1 = new BarDataSet(getBarEntriesOne(), \"First Set\");\n" +
-                "        barDataSet1.setColor(getApplicationContext().getResources().getColor(R.color.purple_200));\n" +
-                "        barDataSet2 = new BarDataSet(getBarEntriesTwo(), \"Second Set\");\n" +
-                "        barDataSet2.setColor(Color.BLUE);\n" +
+                "    barDataSet1 = new BarDataSet(getBarEntriesOne(), \"First Set\");\n" +
+                "    barDataSet1.setColor(getApplicationContext().getResources().getColor(R.color.purple_200));\n" +
+                "    barDataSet2 = new BarDataSet(getBarEntriesTwo(), \"Second Set\");\n" +
+                "    barDataSet2.setColor(Color.BLUE);\n" +
                 "          \n" +
-                "        BarData data = new BarData(barDataSet1, barDataSet2);\n" +
+                "    BarData data = new BarData(barDataSet1, barDataSet2);\n" +
                 "          \n" +
-                "        barChart.setData(data);\n" +
+                "    barChart.setData(data);\n" +
                 "          \n" +
-                "        barChart.getDescription().setEnabled(false);\n" +
+                "    barChart.getDescription().setEnabled(false);\n" +
                 "          \n" +
-                "        XAxis xAxis = barChart.getXAxis();\n" +
+                "    Alin Alin = barChart.getAlin();\n" +
                 "          \n" +
-                "        xAxis.setValueFormatter(new IndexAxisValueFormatter(days));\n" +
+                "    Alin.setValueFormatter(new IndeAlinValueFormatter(days));\n" +
                 "          \n" +
-                "        xAxis.setCenterAxisLabels(true);\n" +
+                "    Alin.setCenterAxisLabels(true);\n" +
+                "         \n" +
+                "    Alin.setPosition(Alin.Alin.BOTTOM);\n" +
                 "          \n" +
-                "        xAxis.setPosition(XAxis.XAxisPosition.BOTTOM);\n" +
+                "    Alin.setGranularity(1);\n" +
                 "          \n" +
-                "        xAxis.setGranularity(1);\n" +
-                "          \n" +
-                "        xAxis.setGranularityEnabled(true);\n" +
+                "    Alin.setGranularityEnabled(true);\n" +
                 "          \n" +
                 "        barChart.setDragEnabled(true);\n" +
                 "          \n" +
@@ -122,7 +116,7 @@ public class A_card_11_Fragment extends Fragment {
                 "          \n" +
                 "        data.setBarWidth(0.15f);\n" +
                 "          \n" +
-                "        barChart.getXAxis().setAxisMinimum(0);\n" +
+                "        barChart.getAlin().setAxisMinimum(0);\n" +
                 "          \n" +
                 "        barChart.animate();\n" +
                 "          \n" +

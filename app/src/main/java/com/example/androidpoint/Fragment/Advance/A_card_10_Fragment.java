@@ -13,12 +13,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.androidpoint.R;
-
-
 public class A_card_10_Fragment extends Fragment {
-
     TextView reg_java, reg_xml, reg_gridal_permission;
-
     AppCompatImageView Btn_arrow;
     ImageView reg_output;
     @SuppressLint("SetTextI18n")
@@ -28,7 +24,6 @@ public class A_card_10_Fragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_a_card_10_, container, false);
 
         Btn_arrow=view.findViewById(R.id.Btn_arrow);
-
         Btn_arrow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -88,23 +83,28 @@ public class A_card_10_Fragment extends Fragment {
                 "        requestButton.setOnClickListener(mMyListener);\n" +
                 "        alreadySignin.setOnClickListener(mMyListener);\n" +
                 "\n" +
-                "        String regexPassword = \"(?=.*[a-z])(?=.*[A-Z])(?=.*[\\\\d])(?=.*[~`!@#\\\\$%\\\\^&\\\\*\\\\(\\\\)\\\\-_\\\\+=\\\\{\\\\}\\\\[\\\\]\\\\|\\\\;:\\\"<>,./\\\\?]).{8,}\";\n" +
-                "        //adding validation to edittexts\n" +
-                "        awesomeValidation.addValidation(this, R.id.editTextName, \"^[A-Za-z\\\\s]{1,}[\\\\.]{0,1}[A-Za-z\\\\s]{0,}$\", R.string.nameerror);\n" +
+                "        String regexPassword = \"(?=.*[a-z])(?=.*[A-Z])(?=.*[d])(?=.*[~`!@#$%^&*()-_+={}[]|;:\"<>,./?]).{8,}\";\n" +
+                "\n" +
+                "        awesomeValidation.addValidation(this, R.id.editTextName, \"^[A-Za-zs]{1,}[.]{0,1}[A-Za-zs]{0,}$\", R.string.nameerror);\n" +
+                "\n" +
                 "        awesomeValidation.addValidation(this, R.id.editTextEmail, Patterns.EMAIL_ADDRESS, R.string.emailerror);\n" +
+                "\n" +
                 "        awesomeValidation.addValidation(this, R.id.editTextMobile, \"^[2-9]{2}[0-9]{8}$\", R.string.mobileerror);\n" +
+                "\n" +
                 "        awesomeValidation.addValidation(this, R.id.editPassword, regexPassword, R.string.passworderror);\n" +
                 "    }\n" +
                 "    private View.OnClickListener mMyListener = new View.OnClickListener() {\n" +
                 "        public void onClick(View v) {\n" +
                 "            switch (v.getId()) {\n" +
                 "                case R.id.buttonSubmit:\n" +
-                "                    if (awesomeValidation.validate()) {\n" +
-                "                        Toast.makeText(getApplicationContext(), \"Its Working!\", Toast.LENGTH_LONG).show();\n" +
+                "                 if (awesomeValidation.validate()) {\n" +
+                "                   Toast.makeText(getApplicationContext(), \"Its Working!\",\n" +
+                "                               Toast.LENGTH_LONG).show();\n" +
                 "                    }\n" +
                 "                    break;\n" +
                 "                case R.id.already_signin:\n" +
-                "                    Intent i = new Intent(getApplicationContext(), LoginActivity.class);\n" +
+                "                    Intent i = new Intent(getApplicationContext(), \n" +
+                "                                   LoginActivity.class);\n" +
                 "                    startActivity(i);\n" +
                 "                    break;\n" +
                 "                default:\n" +
@@ -114,9 +114,11 @@ public class A_card_10_Fragment extends Fragment {
                 "    };\n" +
                 "\n" +
                 "}\n");
+
         reg_xml.setTextIsSelectable(true);
         reg_xml.setText("<?xml version=\"1.0\" encoding=\"utf-8\"?>\n" +
-                "<LinearLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\n" +
+                "<LinearLayout xmlns:android=\"http://schemas.android.com\n" +
+                "                                   /apk/res/android\"\n" +
                 "    xmlns:tools=\"http://schemas.android.com/tools\"\n" +
                 "    android:layout_width=\"match_parent\"\n" +
                 "    android:layout_height=\"match_parent\"\n" +

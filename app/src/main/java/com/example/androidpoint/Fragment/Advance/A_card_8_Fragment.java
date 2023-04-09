@@ -76,10 +76,14 @@ public class A_card_8_Fragment extends Fragment {
                 "\n" +
                 "        ArrayList<SlideModel> slideModels = new ArrayList<>();\n" +
                 "\n" +
-                "        slideModels.add(new SlideModel(\" YOUR GOOGLE IMAGE ADDRESS \", ScaleTypes.FIT));\n" +
-                "        slideModels.add(new SlideModel(\" YOUR GOOGLE IMAGE ADDRESS \", ScaleTypes.FIT));\n" +
-                "        slideModels.add(new SlideModel(\" YOUR GOOGLE IMAGE ADDRESS \", ScaleTypes.FIT));\n" +
-                "        slideModels.add(new SlideModel(\" YOUR GOOGLE IMAGE ADDRESS \", ScaleTypes.FIT));\n" +
+                "        slideModels.add(new SlideModel(\" YOUR GOOGLE IMAGE ADDRESS \"\n" +
+                "                                                           , ScaleTypes.FIT));\n" +
+                "        slideModels.add(new SlideModel(\" YOUR GOOGLE IMAGE ADDRESS \"\n" +
+                "                                                           , ScaleTypes.FIT));\n" +
+                "        slideModels.add(new SlideModel(\" YOUR GOOGLE IMAGE ADDRESS \"\n" +
+                "                                                           , ScaleTypes.FIT));\n" +
+                "        slideModels.add(new SlideModel(\" YOUR GOOGLE IMAGE ADDRESS \"\n" +
+                "                                                           , ScaleTypes.FIT));\n" +
                 "\n" +
                 "        imageslider.setImageList(slideModels, ScaleTypes.FIT);\n" +
                 "\n" +
@@ -88,7 +92,8 @@ public class A_card_8_Fragment extends Fragment {
                 "}");
         manifest_xml.setTextIsSelectable(true);
         manifest_xml.setText("<?xml version=\"1.0\" encoding=\"utf-8\"?>\n" +
-                "<manifest xmlns:android=\"http://schemas.android.com/apk/res/android\"\n" +
+                "<manifest xmlns:android=\"http://schemas.android.com\n" +
+                "                                       /apk/res/android\"\n" +
                 "    xmlns:tools=\"http://schemas.android.com/tools\"\n" +
                 "    package=\"com.example.geeksforgeeks\"\n" +
                 "    android:versionCode=\"1\"\n" +
@@ -111,9 +116,9 @@ public class A_card_8_Fragment extends Fragment {
                 "            android:name=\".MainActivity\"\n" +
                 "            android:exported=\"true\">\n" +
                 "            <intent-filter>\n" +
-                "                <action android:name=\"android.intent.action.MAIN\" />\n" +
+                "<action android:name=\"android.intent.action. MAIN\" />\n" +
                 " \n" +
-                "                <category android:name=\"android.intent.category.LAUNCHER\" />\n" +
+                "<category android:name=\"android.intent.category. LAUNCHER\" />\n" +
                 "            </intent-filter>\n" +
                 "        </activity>\n" +
                 "    </application>\n" +
@@ -121,7 +126,8 @@ public class A_card_8_Fragment extends Fragment {
                 "</manifest>");
         imageslider_xml.setTextIsSelectable(true);
         imageslider_xml.setText("<?xml version=\"1.0\" encoding=\"utf-8\"?>\n" +
-                "<LinearLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\n" +
+                "<LinearLayout xmlns:android=\"http://schemas.android.com\n" +
+                "                                       /apk/res/android\"\n" +
                 "    xmlns:tools=\"http://schemas.android.com/tools\"\n" +
                 "    android:layout_width=\"match_parent\"\n" +
                 "    android:layout_height=\"match_parent\"\n" +

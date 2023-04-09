@@ -12,6 +12,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.example.androidpoint.R;
 
@@ -43,16 +44,18 @@ public class A_A15_Fragment extends Fragment {
         });
 
         edittext1 = view.findViewById(R.id.editText1);
-        button1 = view.findViewById(R.id.button1);
+        button1 = view.findViewById(R.id.button);
 
         button1.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View arg0) {
                 String number = edittext1.getText().toString();
-                Intent callIntent = new Intent(Intent.ACTION_CALL);
+               /* Intent callIntent = new Intent(Intent.ACTION_CALL);
                 callIntent.setData(Uri.parse("tel:" + number));
-                startActivity(callIntent);
+                startActivity(callIntent);*/
+
+                Toast.makeText(getContext(),"Sorry this number can not enable",Toast.LENGTH_SHORT).show();
             }
 
         });

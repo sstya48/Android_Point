@@ -15,12 +15,8 @@ import com.example.androidpoint.R;
 
 
 public class A_card_5_Fragment extends Fragment {
-
     TextView spinner_java, spinner_xml;
-
-
     AppCompatImageView Btn_arrow,spinner_output;
-
     @SuppressLint("SetTextI18n")
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -28,7 +24,6 @@ public class A_card_5_Fragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_a_card_5_, container, false);
 
         Btn_arrow=view.findViewById(R.id.Btn_arrow);
-
         Btn_arrow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -43,7 +38,6 @@ public class A_card_5_Fragment extends Fragment {
         spinner_output = view.findViewById(R.id.spinner_output);
         spinner_java = view.findViewById(R.id.spinner_java);
         spinner_xml = view.findViewById(R.id.spinner_xml);
-
         spinner_output.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -57,7 +51,7 @@ public class A_card_5_Fragment extends Fragment {
         });
 
         spinner_java.setTextIsSelectable(true);
-        spinner_java.setText("package example.androidalians.spinnerexample;\n" +
+        spinner_java.setText("package example.androidalians.spinnerdemo;\n" +
                 "\n" +
                 "import android.support.v7.app.AppCompatActivity;\n" +
                 "import android.os.Bundle;\n" +
@@ -69,7 +63,8 @@ public class A_card_5_Fragment extends Fragment {
                 "\n" +
                 "public class MainActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener{\n" +
                 "\n" +
-                "       String[] bankNames={\"Your Bank \"BOI \",\"SBI \",\"HDFC \",\"PNB \",\"OBC \",\"BOB \",\"ICICI \",\"BOA \"};\n" +
+                "       String[] bankNames={\"Your Bank \"BOI \",\"SBI \",\"HDFC \",\"PNB \",\n" +
+                "                        \"OBC \",\"BOB \",\"ICICI \",\"BOA \"};\n" +
                 "\n" +
                 "       @Override\n" +
                 "       protected void onCreate(Bundle savedInstanceState) {\n" +
@@ -79,14 +74,18 @@ public class A_card_5_Fragment extends Fragment {
                 "       Spinner spin = (Spinner) findViewById(R.id.simpleSpinner);\n" +
                 "        spin.setOnItemSelectedListener(this);\n" +
                 "\n" +
-                "       ArrayAdapter aa = new ArrayAdapter(this,android.R.layout.simple_spinner_item,bankNames);\n" +
-                "       aa.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);\n" +
+                "       ArrayAdapter aa = new ArrayAdapter(this,android.R.layout\n" +
+                "                          .simple_spinner_item,bankNames);\n" +
+                "       aa.setDropDownViewResource(android.R.layout\n" +
+                "                         .simple_spinner_dropdown_item);\n" +
                 "           spin.setAdapter(aa);\n" +
                 "       }\n" +
                 "\n" +
                 "         @Override\n" +
-                "         public void onItemSelected(AdapterView<?> arg0, View arg1, int position,long id) {\n" +
-                "               Toast.makeText(getApplicationContext(), bankNames[position], Toast.LENGTH_LONG).show();\n" +
+                "         public void onItemSelected(AdapterView<?> arg0, View \n" +
+                "                                     arg1, int position,long id) {\n" +
+                "               Toast.makeText(getApplicationContext(), bankNames\n" +
+                "                           [position], Toast.LENGTH_LONG).show();\n" +
                 "           }\n" +
                 "\n" +
                 "       @Override\n" +
@@ -96,7 +95,8 @@ public class A_card_5_Fragment extends Fragment {
                 "}");
         spinner_xml.setTextIsSelectable(true);
         spinner_xml.setText("<?xml version=\"1.0\" encoding=\"utf-8\"?>\n" +
-                "<LinearLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\n" +
+                "<LinearLayout xmlns:android=\"http://schemas.android.com\n" +
+                "                               /apk/res/android\"\n" +
                 "    xmlns:tools=\"http://schemas.android.com/tools\"\n" +
                 "    android:layout_width=\"match_parent\"\n" +
                 "    android:layout_height=\"match_parent\"\n" +

@@ -5,6 +5,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".Fragment.Advance.A_A6_Fragment">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -38,7 +39,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:layout_gravity="center"
-        android:hint="Enter Text"
+        android:hint="Enter Url "
         android:focusable="true"/>
 
     <Button
@@ -46,7 +47,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="Enter"
+        android:text="Show"
         android:layout_marginTop="20dp"/>
 
     <WebView

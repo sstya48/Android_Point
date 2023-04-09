@@ -16,7 +16,7 @@ import com.example.androidpoint.R;
 public class B_card_13_Fragment extends Fragment {
     TextView explicit_java, explicit_xml;
     TextView explicit2_java, explicit2_xml;
-    AppCompatImageView explicit_demo, Btn_arrow;
+    AppCompatImageView explicit_demo, Explicit_code_arrow;
 
     @SuppressLint({"MissingInflatedId", "SetTextI18n"})
     @Override
@@ -38,15 +38,14 @@ public class B_card_13_Fragment extends Fragment {
 
         explicit_demo = view.findViewById(R.id.explicit_demo);
 
-        Btn_arrow = view.findViewById(R.id.Btn_arrow);
+        Explicit_code_arrow = view.findViewById(R.id.Explicit_code_arrow);
 
-        Btn_arrow.setOnClickListener(new View.OnClickListener() {
+        Explicit_code_arrow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Basic basic = new Basic();
                 getActivity().getSupportFragmentManager().beginTransaction()
-                        .replace(R.id.frame_container, basic, "Back Button Basic")
-                        .addToBackStack(null)
+                        .replace(R.id.frame_container, basic, "Explicit Code Back")
                         .commit();
             }
         });
@@ -56,7 +55,6 @@ public class B_card_13_Fragment extends Fragment {
                 Explicit_Intent1_Fragment explicitIntent1Fragment = new Explicit_Intent1_Fragment();
                 getActivity().getSupportFragmentManager().beginTransaction()
                         .replace(R.id.frame_container, explicitIntent1Fragment, "Explicit Demo")
-                        .addToBackStack(null)
                         .commit();
             }
         });

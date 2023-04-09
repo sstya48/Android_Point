@@ -100,9 +100,9 @@ public class Basic extends Fragment {
         card_view1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                B_card_1_Fragment nextFrag= new B_card_1_Fragment();
+                B_card_1_Fragment Helloworld= new B_card_1_Fragment();
                 getActivity().getSupportFragmentManager().beginTransaction()
-                        .replace(R.id.frame_container, nextFrag, "findThisFragment")
+                        .replace(R.id.frame_container, Helloworld, "Helloworld Code")
                         .addToBackStack(null)
                         .commit();
 
@@ -111,9 +111,9 @@ public class Basic extends Fragment {
         card_view2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                B_card_2_Fragment nextFrag= new B_card_2_Fragment();
+                B_card_2_Fragment ActivityLife= new B_card_2_Fragment();
                 getActivity().getSupportFragmentManager().beginTransaction()
-                        .replace(R.id.frame_container, nextFrag, "findThisFragment")
+                        .replace(R.id.frame_container, ActivityLife, "ActivityLife Code")
                         .addToBackStack(null)
                         .commit();
             }
@@ -121,9 +121,9 @@ public class Basic extends Fragment {
         card_view3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                B_card_3_Fragment nextFrag= new B_card_3_Fragment();
+                B_card_3_Fragment HideTitle= new B_card_3_Fragment();
                 getActivity().getSupportFragmentManager().beginTransaction()
-                        .replace(R.id.frame_container, nextFrag, "findThisFragment")
+                        .replace(R.id.frame_container, HideTitle, "HideTitle Code")
                         .addToBackStack(null)
                         .commit();
             }
@@ -131,9 +131,9 @@ public class Basic extends Fragment {
         card_view4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                B_card_4_Fragment nextFrag= new B_card_4_Fragment();
+                B_card_4_Fragment ScreenOrientation= new B_card_4_Fragment();
                 getActivity().getSupportFragmentManager().beginTransaction()
-                        .replace(R.id.frame_container, nextFrag, "findThisFragment")
+                        .replace(R.id.frame_container, ScreenOrientation, "ScreenOrientation Code")
                         .addToBackStack(null)
                         .commit();
             }
@@ -141,9 +141,9 @@ public class Basic extends Fragment {
         card_view5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                B_card_5_Fragment nextFrag= new B_card_5_Fragment();
+                B_card_5_Fragment CheckBox= new B_card_5_Fragment();
                 getActivity().getSupportFragmentManager().beginTransaction()
-                        .replace(R.id.frame_container, nextFrag, "findThisFragment")
+                        .replace(R.id.frame_container, CheckBox, "CheckBox Code")
                         .addToBackStack(null)
                         .commit();
             }
@@ -151,9 +151,9 @@ public class Basic extends Fragment {
         card_view6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                B_card_6_Fragment nextFrag= new B_card_6_Fragment();
+                B_card_6_Fragment RadioBtn= new B_card_6_Fragment();
                 getActivity().getSupportFragmentManager().beginTransaction()
-                        .replace(R.id.frame_container, nextFrag, "findThisFragment")
+                        .replace(R.id.frame_container, RadioBtn, "RadioBtn Code")
                         .addToBackStack(null)
                         .commit();
             }
@@ -161,9 +161,9 @@ public class Basic extends Fragment {
         card_view7.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                B_card_7_Fragment nextFrag= new B_card_7_Fragment();
+                B_card_7_Fragment ListView= new B_card_7_Fragment();
                 getActivity().getSupportFragmentManager().beginTransaction()
-                        .replace(R.id.frame_container, nextFrag, "findThisFragment")
+                        .replace(R.id.frame_container, ListView, "ListView Code")
                         .addToBackStack(null)
                         .commit();
             }
@@ -171,9 +171,9 @@ public class Basic extends Fragment {
         card_view8.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                B_card_8_Fragment nextFrag= new B_card_8_Fragment();
+                B_card_8_Fragment DatePicker= new B_card_8_Fragment();
                 getActivity().getSupportFragmentManager().beginTransaction()
-                        .replace(R.id.frame_container, nextFrag, "findThisFragment")
+                        .replace(R.id.frame_container, DatePicker, "DatePicker Code")
                         .addToBackStack(null)
                         .commit();
             }
@@ -181,9 +181,9 @@ public class Basic extends Fragment {
         card_view9.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                B_card_9_Fragment nextFrag= new B_card_9_Fragment();
+                B_card_9_Fragment TimePicker= new B_card_9_Fragment();
                 getActivity().getSupportFragmentManager().beginTransaction()
-                        .replace(R.id.frame_container, nextFrag, "findThisFragment")
+                        .replace(R.id.frame_container, TimePicker, "TimePicker Code")
                         .addToBackStack(null)
                         .commit();
             }
@@ -191,9 +191,9 @@ public class Basic extends Fragment {
         card_view10.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                B_card_10_Fragment nextFrag= new B_card_10_Fragment();
+                B_card_10_Fragment ScrollView= new B_card_10_Fragment();
                 getActivity().getSupportFragmentManager().beginTransaction()
-                        .replace(R.id.frame_container, nextFrag, "findThisFragment")
+                        .replace(R.id.frame_container, ScrollView, "ScrollView Code")
                         .addToBackStack(null)
                         .commit();
             }
@@ -201,9 +201,9 @@ public class Basic extends Fragment {
         card_view11.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                B_card_11_Fragment nextFrag= new B_card_11_Fragment();
+                B_card_11_Fragment SearchView= new B_card_11_Fragment();
                 getActivity().getSupportFragmentManager().beginTransaction()
-                        .replace(R.id.frame_container, nextFrag, "findThisFragment")
+                        .replace(R.id.frame_container, SearchView, "SearchView Code")
                         .addToBackStack(null)
                         .commit();
             }
@@ -211,9 +211,9 @@ public class Basic extends Fragment {
         card_view12.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                B_card_12_Fragment nextFrag= new B_card_12_Fragment();
+                B_card_12_Fragment ImplicitIntent= new B_card_12_Fragment();
                 getActivity().getSupportFragmentManager().beginTransaction()
-                        .replace(R.id.frame_container, nextFrag, "findThisFragment")
+                        .replace(R.id.frame_container, ImplicitIntent, "ImplicitIntent Code")
                         .addToBackStack(null)
                         .commit();
             }
@@ -221,9 +221,9 @@ public class Basic extends Fragment {
         card_view13.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                B_card_13_Fragment nextFrag= new B_card_13_Fragment();
+                B_card_13_Fragment ExplicitIntent= new B_card_13_Fragment();
                 getActivity().getSupportFragmentManager().beginTransaction()
-                        .replace(R.id.frame_container, nextFrag, "findThisFragment")
+                        .replace(R.id.frame_container, ExplicitIntent, "ExplicitIntent Code")
                         .addToBackStack(null)
                         .commit();
             }
@@ -258,7 +258,6 @@ public class Basic extends Fragment {
                         .commit();
             }
         });
-
 
         return view;
     }

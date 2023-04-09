@@ -8,12 +8,15 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
+import androidx.appcompat.widget.AppCompatImageView;
 import androidx.fragment.app.Fragment;
 
+import com.example.androidpoint.Fragment.Basic.B_card_13_Fragment;
 import com.example.androidpoint.R;
 
 public class Explicit_Intent2_Fragment extends Fragment {
 
+    AppCompatImageView explicit_demo_arrow;
     TextView editText2;
     Button btn2;
     public Explicit_Intent2_Fragment() {
@@ -39,6 +42,8 @@ public class Explicit_Intent2_Fragment extends Fragment {
         // Inflate the layout for this fragment
         View view= inflater.inflate(R.layout.fragment_explicit__intent2, container, false);
 
+        explicit_demo_arrow=view.findViewById(R.id.explicit_demo_arrow);
+
         editText2=view.findViewById(R.id.editText2);
         btn2=view.findViewById(R.id.btn2);
 
@@ -48,7 +53,16 @@ public class Explicit_Intent2_Fragment extends Fragment {
                 Explicit_Intent1_Fragment explicitIntent1Fragment = new Explicit_Intent1_Fragment();
                 getActivity().getSupportFragmentManager().beginTransaction()
                         .replace(R.id.frame_container, explicitIntent1Fragment, "Explicit 1 DEMO")
-                        .addToBackStack(null)
+                        .commit();
+            }
+        });
+
+        explicit_demo_arrow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                B_card_13_Fragment ExplicitIntent= new B_card_13_Fragment();
+                getActivity().getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.frame_container, ExplicitIntent, "ExplicitIntent Demo Back2")
                         .commit();
             }
         });

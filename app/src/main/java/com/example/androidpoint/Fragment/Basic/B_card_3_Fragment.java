@@ -38,7 +38,7 @@ public class B_card_3_Fragment extends Fragment {
             public void onClick(View view) {
                 Basic basic= new Basic();
                 getActivity().getSupportFragmentManager().beginTransaction()
-                        .replace(R.id.frame_container, basic, "Back Button Basic")
+                        .replace(R.id.frame_container, basic, "Hide Title Code Back")
                         .commit();
             }
         });
@@ -49,7 +49,6 @@ public class B_card_3_Fragment extends Fragment {
                 Hide_Title_Demo_Fragment hideTitleDemoFragment= new Hide_Title_Demo_Fragment();
                 getActivity().getSupportFragmentManager().beginTransaction()
                         .replace(R.id.frame_container, hideTitleDemoFragment, "Hide Title DEMO")
-                        .addToBackStack(null)
                         .commit();
             }
         });

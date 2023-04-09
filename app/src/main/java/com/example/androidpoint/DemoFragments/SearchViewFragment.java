@@ -1,7 +1,9 @@
 package com.example.androidpoint.DemoFragments;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 
+import androidx.appcompat.widget.AppCompatImageView;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
@@ -12,12 +14,15 @@ import android.widget.ListView;
 import android.widget.SearchView;
 import android.widget.Toast;
 
+import com.example.androidpoint.Fragment.Basic.B_card_11_Fragment;
 import com.example.androidpoint.R;
 
 import java.util.ArrayList;
 
 public class SearchViewFragment extends Fragment {
 
+
+    AppCompatImageView search_demo_arrow;
     SearchView searchView;
     ListView listView;
     ArrayList<String> list;
@@ -39,10 +44,13 @@ public class SearchViewFragment extends Fragment {
         super.onCreate(savedInstanceState);
     }
 
+    @SuppressLint("MissingInflatedId")
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view= inflater.inflate(R.layout.fragment_search_view, container, false);
+
+        search_demo_arrow =view.findViewById(R.id.search_demo_arrow);
 
         searchView = (SearchView) view.findViewById(R.id.searchView);
         listView = (ListView) view.findViewById(R.id.listView);
@@ -86,6 +94,17 @@ public class SearchViewFragment extends Fragment {
             public boolean onQueryTextChange(String newText) {
                 //    adapter.getFilter().filter(newText);
                 return false;
+            }
+        });
+
+        search_demo_arrow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                B_card_11_Fragment SearchView= new B_card_11_Fragment();
+                getActivity().getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.frame_container, SearchView, "SearchView Demo Back")
+                        .addToBackStack(null)
+                        .commit();
             }
         });
 

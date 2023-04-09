@@ -1,10 +1,12 @@
 package com.example.androidpoint.DemoFragments;
 
+import android.annotation.SuppressLint;
 import android.app.DatePickerDialog;
 import android.os.Build;
 import android.os.Bundle;
 
 import androidx.annotation.RequiresApi;
+import androidx.appcompat.widget.AppCompatImageView;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
@@ -14,11 +16,14 @@ import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.TextView;
 
+import com.example.androidpoint.Fragment.Basic.B_card_8_Fragment;
 import com.example.androidpoint.R;
 
 import java.util.Calendar;
 
 public class DatePickerFragment extends Fragment {
+
+    AppCompatImageView datePicker_demo_arrow;
 
     private Button btnpickdate;
     private TextView selectdate;
@@ -38,14 +43,30 @@ public class DatePickerFragment extends Fragment {
         super.onCreate(savedInstanceState);
     }
 
+    @SuppressLint("MissingInflatedId")
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view= inflater.inflate(R.layout.fragment_date_picker, container, false);
 
 
+        datePicker_demo_arrow=view.findViewById(R.id.datePicker_demo_arrow);
+
         btnpickdate=view.findViewById(R.id.btnpickdate);
         selectdate=view.findViewById(R.id.selectdate);
+
+
+        datePicker_demo_arrow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                B_card_8_Fragment DatePicker= new B_card_8_Fragment();
+                getActivity().getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.frame_container, DatePicker, "DatePicker Demo Back")
+                        .commit();
+
+            }
+        });
 
         btnpickdate.setOnClickListener(new View.OnClickListener() {
             @RequiresApi(api = Build.VERSION_CODES.N)

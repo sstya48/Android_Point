@@ -44,7 +44,7 @@
     <string name="Send_SMS">Send SMS</string>
     <string name="Send_Email">Send Email</string>
     <string name="SQLite_DB">SQLite DB</string>
-<!--    <string name="Learn_Android_Studio">Learn Android Studio</string>-->
+    <!--    <string name="Learn_Android_Studio">Learn Android Studio</string>-->
     <string name="Learn_Android_Studio">Learn Android</string>
     <string name="Account">Account</string>
     <string name="Dark_Theme">Dark Theme</string>
@@ -175,14 +175,17 @@
     <string name="go_to_first_activity">Go to First Activity</string>
 
 
-    //Ads ids============================================================================================================================
+    //Ads
+    ids============================================================================================================================
 
     <string name="app_id">ca-app-pub-3471867131564882~3012371608</string>
 
-    // publish id Interstitial ad one==================================================================================================
+    // publish id Interstitial ad
+    one==================================================================================================
     <!--    <string name="Interstitial_AdOne_unit_id">ca-app-pub-3471867131564882/1430577060</string>-->
 
-    // test id Interstitial ad one==================================================================================================
+    // test id Interstitial ad
+    one==================================================================================================
     <string name="Interstitial_AdOne_unit_id">ca-app-pub-3940256099942544/1033173712</string>
 
 
@@ -217,16 +220,19 @@
 
     <!--    <string name="NativeAdBasic_unit_id">ca-app-pub-3471867131564882/4877785910</string>-->
 
-    // test id NativeAdBasic adone==================================================================================================
+    // test id NativeAdBasic
+    adone==================================================================================================
 
     <string name="NativeAdBasic_unit_id">ca-app-pub-3940256099942544/2247696110</string>
 
 
-    //OpenAd Splash publishid========================================================================================================================
+    //OpenAd Splash
+    publishid========================================================================================================================
 
     <!--    <string name="AdOpen_unit_id">ca-app-pub-3471867131564882/1169070224</string>-->
 
-    // test id OpenAd adone==================================================================================================
+    // test id OpenAd
+    adone==================================================================================================
     <string name="AdOpen_unit_id">ca-app-pub-3940256099942544/3419835294</string>
 
 </resources>

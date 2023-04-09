@@ -44,8 +44,7 @@ public class B_card_6_Fragment extends Fragment {
             public void onClick(View view) {
                 Basic basic= new Basic();
                 getActivity().getSupportFragmentManager().beginTransaction()
-                        .replace(R.id.frame_container, basic, "Back Button Basic")
-                        .addToBackStack(null)
+                        .replace(R.id.frame_container, basic, "Radio Code Back")
                         .commit();
             }
         });
@@ -56,7 +55,6 @@ public class B_card_6_Fragment extends Fragment {
                 RadioButtonFragment radioButtonFragment= new RadioButtonFragment();
                 getActivity().getSupportFragmentManager().beginTransaction()
                         .replace(R.id.frame_container, radioButtonFragment, "Radio DEMO")
-                        .addToBackStack(null)
                         .commit();
             }
         });

@@ -48,8 +48,7 @@ public class B_card_4_Fragment extends Fragment {
             public void onClick(View view) {
                 Basic basic= new Basic();
                 getActivity().getSupportFragmentManager().beginTransaction()
-                        .replace(R.id.frame_container, basic, "Back Button Basic")
-                        .addToBackStack(null)
+                        .replace(R.id.frame_container, basic, "Orientation Code Back")
                         .commit();
             }
         });
@@ -61,7 +60,6 @@ public class B_card_4_Fragment extends Fragment {
                 Screen_Orientation_Fragment screenOrientationFragment= new Screen_Orientation_Fragment();
                 getActivity().getSupportFragmentManager().beginTransaction()
                         .replace(R.id.frame_container, screenOrientationFragment, "screen Orientation DEMO")
-                        .addToBackStack(null)
                         .commit();
 
             }

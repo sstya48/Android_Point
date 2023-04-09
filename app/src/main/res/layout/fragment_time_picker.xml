@@ -12,7 +12,7 @@
         android:background="@drawable/layout_bg">
 
         <androidx.appcompat.widget.AppCompatImageView
-            android:id="@+id/Btn_arrow"
+            android:id="@+id/timePicker_demo_arrow"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_marginTop="13dp"
@@ -71,7 +71,7 @@
         android:layout_margin="20dp"
         android:background="@color/active"
         android:fontFamily="@font/poppins_semibold"
-        android:text="Pick Date"
+        android:text="Pick Time"
         android:textAllCaps="false"
         android:textColor="@color/white"
         android:textSize="20sp" />

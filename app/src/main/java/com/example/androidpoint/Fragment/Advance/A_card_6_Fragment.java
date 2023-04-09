@@ -14,14 +14,10 @@ import android.widget.TextView;
 
 import com.example.androidpoint.R;
 
-
 public class A_card_6_Fragment extends Fragment {
-
     TextView webview_java, webview_xml, manifest_xml;
-
     AppCompatImageView Btn_arrow;
     ImageView webview_output;
-
 
     @SuppressLint({"SetTextI18n", "MissingInflatedId"})
     @Override
@@ -30,7 +26,6 @@ public class A_card_6_Fragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_a_card_6_, container, false);
 
         Btn_arrow=view.findViewById(R.id.Btn_arrow);
-
         Btn_arrow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -114,26 +109,27 @@ public class A_card_6_Fragment extends Fragment {
                 "\n" +
                 "      button = (Button)findViewById(R.id.button);\n" +
                 "      editText = (EditText)findViewById(R.id.editText);\n" +
-                "\n" +
                 "      webview = (WebView)findViewById(R.id.webView);\n" +
                 "      webview.setWebViewClient(new MyBrowser());\n" +
                 "\n" +
-                "      button.setOnClickListener(new View.OnClickListener() {\n" +
-                "         @Override\n" +
-                "         public void onClick(View v) {\n" +
-                "            String url = edittext.getText().toString();\n" +
+                "    button.setOnClickListener(new View.OnClickListener() {\n" +
+                "      @Override\n" +
+                "      public void onClick(View v) {\n" +
+                "         String url = edittext.getText().toString();\n" +
                 "\n" +
-                "            webview.getSettings().setLoadsImagesAutomatically(true);\n" +
-                "            webview.getSettings().setJavaScriptEnabled(true);\n" +
-                "            webview.setScrollBarStyle(View.SCROLLBARS_INSIDE_OVERLAY);\n" +
-                "            webview.loadUrl(url);\n" +
+                "         webview.getSettings().setLoadsImagesAutomatically(true);\n" +
+                "         webview.getSettings().setJavaScriptEnabled(true);\n" +
+                "         webview.setScrollBarStyle(View.SCROLLBARS_INSIDE\n" +
+                "                                       _OVERLAY);\n" +
+                "         webview.loadUrl(url);\n" +
                 "         }\n" +
                 "      });\n" +
                 "   }\n" +
                 "\n" +
                 "   private class MyBrowser extends WebViewClient {\n" +
                 "      @Override\n" +
-                "      public boolean shouldOverrideUrlLoading(WebView view, String url) {\n" +
+                "      public boolean shouldOverrideUrlLoading(WebView view,\n" +
+                "                                                String url) {\n" +
                 "         view.loadUrl(url);\n" +
                 "         return true;\n" +
                 "      }\n" +
@@ -141,7 +137,8 @@ public class A_card_6_Fragment extends Fragment {
                 "}");
         webview_xml.setTextIsSelectable(true);
         webview_xml.setText("<?xml version=\"1.0\" encoding=\"utf-8\"?>\n" +
-                "<LinearLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\n" +
+                "<LinearLayout xmlns:android=\"http://schemas.android.com\n" +
+                "                               /apk/res/android\"\n" +
                 "    xmlns:tools=\"http://schemas.android.com/tools\"\n" +
                 "    android:layout_width=\"match_parent\"\n" +
                 "    android:layout_height=\"match_parent\"\n" +

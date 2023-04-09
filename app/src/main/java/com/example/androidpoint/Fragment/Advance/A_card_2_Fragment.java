@@ -13,15 +13,10 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.androidpoint.R;
-
-
 public class A_card_2_Fragment extends Fragment {
-
     ImageView toggle_btn_output;
     TextView toggle_java,toggle_xml;
-
     AppCompatImageView Btn_arrow;
-
     @SuppressLint("SetTextI18n")
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -29,7 +24,6 @@ public class A_card_2_Fragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_a_card_2_, container, false);
 
         Btn_arrow=view.findViewById(R.id.Btn_arrow);
-
         Btn_arrow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -42,7 +36,6 @@ public class A_card_2_Fragment extends Fragment {
         });
 
         toggle_btn_output = view.findViewById(R.id.toggle_btn_output);
-
         toggle_btn_output.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -52,7 +45,6 @@ public class A_card_2_Fragment extends Fragment {
                         .replace(R.id.frame_container, scroll_demo, "SCROLL DEMO")
                         .addToBackStack(null)
                         .commit();
-
             }
         });
 
@@ -83,29 +75,25 @@ public class A_card_2_Fragment extends Fragment {
                 "  \n" +
                 "        toggleButton1=(ToggleButton)findViewById(R.id.toggleButton);  \n" +
                 "        toggleButton2=(ToggleButton)findViewById(R.id.toggleButton2);  \n" +
-                "  \n" +
                 "        buttonSubmit=(Button)findViewById(R.id.button);  \n" +
                 "  \n" +
-                "        buttonSubmit.setOnClickListener(new View.  OnClickListener(){  \n" +
-                "            @Override  \n" +
-                "            public void onClick(View view) {  \n" +
-                "                StringBuilder result = new StringBuilder();  \n" +
-                "                result.append(\"ToggleButton1 : \") .append(toggleButton1.getText());  \n" +
-                "                result.append(\"\\nToggleButton2 : \") .append(toggleButton2.getText());  \n" +
+                "   buttonSubmit.setOnClickListener(new View.  OnClickListener(){  \n" +
+                "    @Override  \n" +
+                "    public void onClick(View view) {  \n" +
+                "     StringBuilder result = new StringBuilder();  \n" +
+                "      result.append(\"ToggleButton1:\") .append(toggleButton1.getText());\n" +
+                "      result.append(\"\\nToggleButton2:\") .append(toggleButton2.getText());\n" +
                 "  \n" +
-                "                Toast.makeText(getApplicationContext(), result.toString(), Toast.LENGTH_LONG).show();  \n" +
-                "            }  \n" +
-                "  \n" +
+                "      Toast.makeText(getApplicationContext(),result.toString(),  Toast.LENGTH_LONG).show();  \n" +
+                "          }  \n" +
                 "        });  \n" +
-                "  \n" +
                 "    }  \n" +
                 "}  ");
         toggle_java.setTextIsSelectable(true);
 
-
-
         toggle_xml.setText("<?xml version=\"1.0\" encoding=\"utf-8\"?>\n" +
-                "<RelativeLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\n" +
+                "<RelativeLayout xmlns:android=\"http://schemas.android.com\"\n" +
+                "                                                   /apk/res/android\"\n" +
                 "    xmlns:tools=\"http://schemas.android.com/tools\"\n" +
                 "    android:layout_width=\"match_parent\"\n" +
                 "    android:layout_height=\"match_parent\">\n" +

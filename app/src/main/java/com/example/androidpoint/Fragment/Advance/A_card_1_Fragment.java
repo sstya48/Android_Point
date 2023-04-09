@@ -13,20 +13,14 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.androidpoint.R;
-
 public class A_card_1_Fragment extends Fragment {
-
     TextView splash_xml, splash_java, splash_main_java, splash_main_xml, gridal_permission;
     ImageView spalshscreen_output;
-
     AppCompatImageView Btn_arrow;
-
-
     @SuppressLint({"MissingInflatedId", "SetTextI18n"})
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
         View view= inflater.inflate(R.layout.fragment_a_card_1_, container, false);
 
         splash_xml= view.findViewById(R.id.splash_xml);
@@ -35,10 +29,7 @@ public class A_card_1_Fragment extends Fragment {
         splash_main_xml= view.findViewById(R.id.splash_main_xml);
         spalshscreen_output= view.findViewById(R.id.spalshscreen_output);
         gridal_permission= view.findViewById(R.id.gridal_permission);
-
-
         Btn_arrow=view.findViewById(R.id.Btn_arrow);
-
         Btn_arrow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -49,7 +40,6 @@ public class A_card_1_Fragment extends Fragment {
                         .commit();
             }
         });
-
         spalshscreen_output.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -59,12 +49,11 @@ public class A_card_1_Fragment extends Fragment {
                         .replace(R.id.frame_container, scroll_demo, "SCROLL DEMO")
                         .addToBackStack(null)
                         .commit();
-
             }
         });
-
-        gridal_permission.setText("// Lottie animation\n" +
-                "    implementation 'com.airbnb.android:lottie:3.7.0'");
+        gridal_permission.setText("dependencies {\n" +
+                "    implementation 'com.airbnb.android:lottie:3.7.0'\n" +
+                "}");
         gridal_permission.setTextIsSelectable(true);
 
         splash_java.setText("package example.androidalians.splashscreen;\n" +
@@ -73,7 +62,6 @@ public class A_card_1_Fragment extends Fragment {
                 "import android.os.Bundle;\n" +
                 "\n" +
                 "public class MainActivity extends AppCompatActivity {\n" +
-                "\n" +
                 "    @Override\n" +
                 "    protected void onCreate(Bundle savedInstanceState) {\n" +
                 "    super.onCreate(savedInstanceState);\n" +
@@ -85,7 +73,8 @@ public class A_card_1_Fragment extends Fragment {
 
 
         splash_xml.setText("<?xml version=\"1.0\" encoding=\"utf-8\"?>\n" +
-                "<RelativeLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\n" +
+                "<RelativeLayout xmlns:android=\"http://schemas.android.com\"\n" +
+                "                                                 /apk/res/android\"\n" +
                 "    xmlns:tools=\"http://schemas.android.com/tools\"\n" +
                 "    android:id=\"@+id/activity_main\"\n" +
                 "    android:layout_width=\"match_parent\"\n" +
@@ -111,7 +100,6 @@ public class A_card_1_Fragment extends Fragment {
                 "public class SplashActivity extends Activity {\n" +
                 "\n" +
                 "    Handler handler;\n" +
-                "\n" +
                 "    @Override\n" +
                 "    protected void onCreate(Bundle savedInstanceState) {\n" +
                 "        super.onCreate(savedInstanceState);\n" +
@@ -119,22 +107,23 @@ public class A_card_1_Fragment extends Fragment {
                 "\n" +
                 "        handler=new Handler();\n" +
                 "        handler.postDelayed(new Runnable() {\n" +
-                "            @Override\n" +
-                "            public void run() {\n" +
-                "                Intent intent=new Intent(SplashActivity.this,MainActivity.class);\n" +
-                "                startActivity(intent);\n" +
-                "                finish();\n" +
-                "            }\n" +
-                "        },3000);\n" +
-                "\n" +
-                "    }\n" +
+                "          @Override\n" +
+                "          public void run() {\n" +
+                "           Intent intent=new Intent(SplashActivity.this,\n" +
+                "                                               MainActivity.class);\n" +
+                "           startActivity(intent);\n" +
+                "            finish();\n" +
+                "          }\n" +
+                "     },3000);\n" +
+                "   }\n" +
                 "}");
         splash_main_java.setTextIsSelectable(true);
 
 
 
         splash_main_xml.setText("<?xml version=\"1.0\" encoding=\"utf-8\"?>\n" +
-                "<RelativeLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\n" +
+                "<RelativeLayout xmlns:android=\"http://schemas.android.com\"\n" +
+                "                                         /apk/res/android\"\n" +
                 "android:layout_width=\"match_parent\"\n" +
                 "android:layout_height=\"match_parent\"\n" +
                 "android:gravity=\"center\"\n" +

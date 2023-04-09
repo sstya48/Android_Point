@@ -15,7 +15,7 @@ import com.example.androidpoint.R;
 
 public class B_card_4_Fragment extends Fragment {
     TextView screen_orientation_xml,screen_orientation_java,screen_orientation_second_java,screen_orientation_second_xml,manifest_xml_code;
-    AppCompatImageView screen_orientation_demo,Btn_arrow;
+    AppCompatImageView screen_orientation_demo,Orientation_Code_arrow;
     @SuppressLint("SetTextI18n")
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -41,9 +41,9 @@ public class B_card_4_Fragment extends Fragment {
 
         screen_orientation_demo= view.findViewById(R.id.screen_orientation_demo);
 
-        Btn_arrow=view.findViewById(R.id.Btn_arrow);
+        Orientation_Code_arrow=view.findViewById(R.id.Orientation_Code_arrow);
 
-        Btn_arrow.setOnClickListener(new View.OnClickListener() {
+        Orientation_Code_arrow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Basic basic= new Basic();

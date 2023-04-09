@@ -15,7 +15,7 @@ import com.example.androidpoint.R;
 
 public class B_card_3_Fragment extends Fragment {
     TextView hide_title_xml,hide_title_java;
-    AppCompatImageView Btn_arrow,hide_title_demo;
+    AppCompatImageView Hide_title_arrow,hide_title_demo;
     @SuppressLint("SetTextI18n")
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -31,9 +31,9 @@ public class B_card_3_Fragment extends Fragment {
 
         hide_title_demo=view.findViewById(R.id.hide_title_demo);
 
-        Btn_arrow=view.findViewById(R.id.Btn_arrow);
+        Hide_title_arrow=view.findViewById(R.id.Hide_title_arrow);
 
-        Btn_arrow.setOnClickListener(new View.OnClickListener() {
+        Hide_title_arrow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Basic basic= new Basic();

@@ -59,7 +59,6 @@ public class ScrrenLandscape_Fragment extends Fragment {
                 Screen_Orientation_Fragment screen_orientation_portrait= new Screen_Orientation_Fragment();
                 getActivity().getSupportFragmentManager().beginTransaction()
                         .replace(R.id.frame_container, screen_orientation_portrait, "screen Portrait DEMO")
-                        .addToBackStack(null)
                         .commit();
             }
         });

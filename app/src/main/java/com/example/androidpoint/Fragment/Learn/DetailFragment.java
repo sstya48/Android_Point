@@ -1,4 +1,4 @@
-package com.example.androidpoint.Fragment;
+package com.example.androidpoint.Fragment.Learn;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
@@ -10,7 +10,6 @@ import android.widget.TextView;
 import androidx.appcompat.widget.AppCompatImageView;
 import androidx.fragment.app.Fragment;
 
-import com.example.androidpoint.Fragment.Learn.Learn;
 import com.example.androidpoint.Model.LearnModel;
 import com.example.androidpoint.R;
 import com.squareup.picasso.Picasso;
@@ -85,7 +84,6 @@ public class DetailFragment extends Fragment {
                 Learn learn= new Learn();
                 getActivity().getSupportFragmentManager().beginTransaction()
                         .replace(R.id.frame_container, learn, "Back To Learn Listing....")
-                        .addToBackStack(null)
                         .commit();
             }
         });

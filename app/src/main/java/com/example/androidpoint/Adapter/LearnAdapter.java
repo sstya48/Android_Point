@@ -13,7 +13,7 @@ import androidx.appcompat.widget.AppCompatImageView;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.androidpoint.Fragment.DetailFragment;
+import com.example.androidpoint.Fragment.Learn.DetailFragment;
 import com.example.androidpoint.Model.LearnModel;
 import com.example.androidpoint.R;
 import com.google.android.material.imageview.ShapeableImageView;

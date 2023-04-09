@@ -16,8 +16,8 @@ import com.example.androidpoint.R;
 
 public class B_card_15_Fragment extends Fragment {
     TextView contextMenu_java,contextMenu_xml;
-    AppCompatImageView contextMenu_demo,Btn_arrow;
-    @SuppressLint("SetTextI18n")
+    AppCompatImageView contextMenu_demo,contextMenu_Code_arrow;
+    @SuppressLint({"SetTextI18n", "MissingInflatedId"})
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -30,15 +30,14 @@ public class B_card_15_Fragment extends Fragment {
         contextMenu_xml.setTextIsSelectable(true);
 
         contextMenu_demo = view.findViewById(R.id.contextMenu_demo);
-        Btn_arrow = view.findViewById(R.id.Btn_arrow);
+        contextMenu_Code_arrow = view.findViewById(R.id.contextMenu_Code_arrow);
 
-        Btn_arrow.setOnClickListener(new View.OnClickListener() {
+        contextMenu_Code_arrow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Basic basic = new Basic();
                 getActivity().getSupportFragmentManager().beginTransaction()
                         .replace(R.id.frame_container, basic, "Back Button Basic")
-                        .addToBackStack(null)
                         .commit();
             }
         });
@@ -49,7 +48,6 @@ public class B_card_15_Fragment extends Fragment {
                 ContextMenuFragment contextMenuFragment = new ContextMenuFragment();
                 getActivity().getSupportFragmentManager().beginTransaction()
                         .replace(R.id.frame_container, contextMenuFragment, "Context Menu Demo")
-                        .addToBackStack(null)
                         .commit();
             }
         });

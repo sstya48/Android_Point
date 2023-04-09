@@ -103,7 +103,6 @@ public class SearchViewFragment extends Fragment {
                 B_card_11_Fragment SearchView= new B_card_11_Fragment();
                 getActivity().getSupportFragmentManager().beginTransaction()
                         .replace(R.id.frame_container, SearchView, "SearchView Demo Back")
-                        .addToBackStack(null)
                         .commit();
             }
         });

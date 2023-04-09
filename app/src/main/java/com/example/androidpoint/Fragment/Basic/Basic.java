@@ -231,9 +231,9 @@ public class Basic extends Fragment {
         card_view14.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                B_card_14_Fragment nextFrag= new B_card_14_Fragment();
+                B_card_14_Fragment OptionMenu= new B_card_14_Fragment();
                 getActivity().getSupportFragmentManager().beginTransaction()
-                        .replace(R.id.frame_container, nextFrag, "findThisFragment")
+                        .replace(R.id.frame_container, OptionMenu, "OptionMenu Code")
                         .addToBackStack(null)
                         .commit();
             }
@@ -241,9 +241,9 @@ public class Basic extends Fragment {
         card_view15.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                B_card_15_Fragment nextFrag= new B_card_15_Fragment();
+                B_card_15_Fragment ContextMenu= new B_card_15_Fragment();
                 getActivity().getSupportFragmentManager().beginTransaction()
-                        .replace(R.id.frame_container, nextFrag, "findThisFragment")
+                        .replace(R.id.frame_container, ContextMenu, "ContextMenu Code")
                         .addToBackStack(null)
                         .commit();
             }
@@ -251,9 +251,9 @@ public class Basic extends Fragment {
         card_view16.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                B_card_16_Fragment nextFrag= new B_card_16_Fragment();
+                B_card_16_Fragment PopupMenu= new B_card_16_Fragment();
                 getActivity().getSupportFragmentManager().beginTransaction()
-                        .replace(R.id.frame_container, nextFrag, "findThisFragment")
+                        .replace(R.id.frame_container, PopupMenu, "PopupMenu Code")
                         .addToBackStack(null)
                         .commit();
             }

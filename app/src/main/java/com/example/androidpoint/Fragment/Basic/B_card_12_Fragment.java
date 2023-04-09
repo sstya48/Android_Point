@@ -36,7 +36,6 @@ public class B_card_12_Fragment extends Fragment {
                 Basic basic = new Basic();
                 getActivity().getSupportFragmentManager().beginTransaction()
                         .replace(R.id.frame_container, basic, "Implicit Code Back")
-                        .addToBackStack(null)
                         .commit();
             }
         });
@@ -46,7 +45,6 @@ public class B_card_12_Fragment extends Fragment {
                 Implicit_Intent_Fragment implicit_intent_fragment = new Implicit_Intent_Fragment();
                 getActivity().getSupportFragmentManager().beginTransaction()
                         .replace(R.id.frame_container, implicit_intent_fragment, "Implicit DEMO")
-                        .addToBackStack(null)
                         .commit();
             }
         });

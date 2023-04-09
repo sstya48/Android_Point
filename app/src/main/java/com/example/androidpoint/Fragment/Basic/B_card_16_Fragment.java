@@ -16,7 +16,7 @@ import com.example.androidpoint.R;
 
 public class B_card_16_Fragment extends Fragment {
     TextView popup_java,popup_xml,popup_xml_menu;
-    AppCompatImageView popup_demo,Btn_arrow;
+    AppCompatImageView popup_demo,popUpMenu_Code_arrow;
     @SuppressLint({"SetTextI18n", "MissingInflatedId"})
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -33,15 +33,14 @@ public class B_card_16_Fragment extends Fragment {
         popup_xml_menu.setTextIsSelectable(true);
 
         popup_demo = view.findViewById(R.id.popup_demo);
-        Btn_arrow = view.findViewById(R.id.Btn_arrow);
+        popUpMenu_Code_arrow = view.findViewById(R.id.popUpMenu_Code_arrow);
 
-        Btn_arrow.setOnClickListener(new View.OnClickListener() {
+        popUpMenu_Code_arrow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Basic basic = new Basic();
                 getActivity().getSupportFragmentManager().beginTransaction()
                         .replace(R.id.frame_container, basic, "Back Button Basic")
-                        .addToBackStack(null)
                         .commit();
             }
         });
@@ -51,7 +50,6 @@ public class B_card_16_Fragment extends Fragment {
                 Popup_Menu_Fragment popupMenuFragment = new Popup_Menu_Fragment();
                 getActivity().getSupportFragmentManager().beginTransaction()
                         .replace(R.id.frame_container, popupMenuFragment, "Popup Menu Demo")
-                        .addToBackStack(null)
                         .commit();
             }
         });

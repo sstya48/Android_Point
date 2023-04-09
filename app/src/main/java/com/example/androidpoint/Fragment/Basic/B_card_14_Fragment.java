@@ -14,7 +14,7 @@ import com.example.androidpoint.DemoFragments.OptionMenuFragment;
 import com.example.androidpoint.R;
 
 public class B_card_14_Fragment extends Fragment {
-    AppCompatImageView optionMenu_demo, Btn_arrow;
+    AppCompatImageView optionMenu_demo, optionmenu_code_arrow;
     TextView optionMenu_java, option_xml_menu;
     @SuppressLint({"MissingInflatedId", "SetTextI18n"})
     @Override
@@ -30,14 +30,13 @@ public class B_card_14_Fragment extends Fragment {
         option_xml_menu.setTextIsSelectable(true);
 
         optionMenu_demo = view.findViewById(R.id.optionMenu_demo);
-        Btn_arrow = view.findViewById(R.id.Btn_arrow);
-        Btn_arrow.setOnClickListener(new View.OnClickListener() {
+        optionmenu_code_arrow = view.findViewById(R.id.optionmenu_code_arrow);
+        optionmenu_code_arrow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Basic basic = new Basic();
                 getActivity().getSupportFragmentManager().beginTransaction()
-                        .replace(R.id.frame_container, basic, "Back Button Basic")
-                        .addToBackStack(null)
+                        .replace(R.id.frame_container, basic, "Option Menu Code Back")
                         .commit();
             }
         });
@@ -47,7 +46,6 @@ public class B_card_14_Fragment extends Fragment {
                 OptionMenuFragment optionMenuFragment = new OptionMenuFragment();
                 getActivity().getSupportFragmentManager().beginTransaction()
                         .replace(R.id.frame_container, optionMenuFragment, "Option Menu Demo")
-                        .addToBackStack(null)
                         .commit();
             }
         });

@@ -12,15 +12,10 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.androidpoint.R;
-
-
 public class A_card_16_Fragment extends Fragment {
-
     TextView sms_java, sms_xml, sms_gridal_permission;
-
     AppCompatImageView Btn_arrow;
     ImageView sms_output;
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -38,13 +33,10 @@ public class A_card_16_Fragment extends Fragment {
             }
         });
 
-
         sms_output = view.findViewById(R.id.sms_output);
         sms_java = view.findViewById(R.id.sms_java);
         sms_xml = view.findViewById(R.id.sms_xml);
         sms_gridal_permission = view.findViewById(R.id.sms_gridal_permission);
-
-
         sms_output.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -60,13 +52,11 @@ public class A_card_16_Fragment extends Fragment {
         sms_java.setText("");
         sms_java.setTextIsSelectable(true);
 
-
         sms_xml.setText("");
         sms_xml.setTextIsSelectable(true);
 
         sms_gridal_permission.setText("");
         sms_gridal_permission.setTextIsSelectable(true);
-
 
         return view;
     }

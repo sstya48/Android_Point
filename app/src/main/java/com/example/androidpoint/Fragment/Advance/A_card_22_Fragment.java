@@ -13,16 +13,10 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.androidpoint.R;
-
 public class A_card_22_Fragment extends Fragment {
-
     ImageView rate_output;
-
     TextView rate_java,rate_xml, transparent_xml, rectangle_xml;
-
     AppCompatImageView Btn_arrow;
-
-
     @SuppressLint({"MissingInflatedId", "SetTextI18n"})
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -30,7 +24,6 @@ public class A_card_22_Fragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_a_card_22_, container, false);
 
         Btn_arrow=view.findViewById(R.id.Btn_arrow);
-
         Btn_arrow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -53,7 +46,6 @@ public class A_card_22_Fragment extends Fragment {
                         .replace(R.id.frame_container, scroll_demo, "SCROLL DEMO")
                         .addToBackStack(null)
                         .commit();
-
             }
         });
 
@@ -62,12 +54,10 @@ public class A_card_22_Fragment extends Fragment {
         transparent_xml= view.findViewById(R.id.transparent_xml);
         rectangle_xml= view.findViewById(R.id.rectangle_xml);
 
-
         rate_java.setTextIsSelectable(true);
         rate_java.setText("package example.androidalians.rating;\n" +
                 "\n" +
                 "import androidx.appcompat.app.AppCompatActivity;\n" +
-                "\n" +
                 "import android.os.Bundle;\n" +
                 "\n" +
                 "public class secpage extends AppCompatActivity {\n" +
@@ -81,7 +71,8 @@ public class A_card_22_Fragment extends Fragment {
 
         rate_xml.setTextIsSelectable(true);
         rate_xml.setText("<?xml version=\"1.0\" encoding=\"utf-8\"?>\n" +
-                "<RelativeLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\n" +
+                "<RelativeLayout xmlns:android=\"http://schemas.android.com\n" +
+                "                           /apk/res/android\"\n" +
                 "    xmlns:tools=\"http://schemas.android.com/tools\"\n" +
                 "    android:layout_width=\"match_parent\"\n" +
                 "    android:layout_height=\"match_parent\">\n" +
@@ -137,7 +128,8 @@ public class A_card_22_Fragment extends Fragment {
                 "            <TextView\n" +
                 "                android:layout_width=\"wrap_content\"\n" +
                 "                android:layout_height=\"wrap_content\"\n" +
-                "                android:text=\"If you are enjoy using our app. Would you mind rating us on the App Stare.\"\n" +
+                "                android:text=\"If you are enjoy using our app. \n" +
+                "                   Would you mind rating us on the App Stare.\"\n" +
                 "                android:textColor=\"#CC000000\"\n" +
                 "                android:textSize=\"16sp\"\n" +
                 "                android:gravity=\"center\"\n" +
@@ -199,7 +191,8 @@ public class A_card_22_Fragment extends Fragment {
 
         transparent_xml.setTextIsSelectable(true);
         transparent_xml.setText("<?xml version=\"1.0\" encoding=\"utf-8\"?>\n" +
-                "<shape xmlns:android=\"http://schemas.android.com/apk/res/android\"\n" +
+                "<shape xmlns:android=\"http://schemas.android.com\n" +
+                "                           /apk/res/android\"\n" +
                 "    android:shape=\"rectangle\">\n" +
                 "\n" +
                 "    <solid android:color=\"@android:color/transparent\"/>\n" +
@@ -211,7 +204,8 @@ public class A_card_22_Fragment extends Fragment {
 
         rectangle_xml.setTextIsSelectable(true);
         rectangle_xml.setText("<?xml version=\"1.0\" encoding=\"utf-8\"?>\n" +
-                "<shape xmlns:android=\"http://schemas.android.com/apk/res/android\"\n" +
+                "<shape xmlns:android=\"http://schemas.android.com\n" +
+                "                                   /apk/res/android\"\n" +
                 "    android:shape=\"rectangle\">\n" +
                 "\n" +
                 "    <solid\n" +
@@ -219,7 +213,6 @@ public class A_card_22_Fragment extends Fragment {
                 "    <corners android:radius=\"1000dp\"/>\n" +
                 "\n" +
                 "</shape>");
-
 
         return view;
     }

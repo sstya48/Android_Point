@@ -6,8 +6,10 @@
 
     <string name="HelloWord_Toast_Message">HelloWord \nToast Message</string>
     <string name="HelloWord_Toast">HelloWord Toast Message</string>
-    <string name="Activity_LifeCycle">Activity LifeCycle</string>
+    <string name="Activity_lLifeCycle">Activity \n LifeCycle</string>
+    <string name="Activity_LifeCycle">Activity \n LifeCycle</string>
     <string name="Hide_TitleBar">Hide TitleBar</string>
+    <string name="Screen_oOrientation">Screen \n Orientation</string>
     <string name="Screen_Orientation">Screen Orientation</string>
     <string name="Check_Box">Check Box</string>
     <string name="Radio_Button">Radio Button</string>
@@ -17,7 +19,8 @@
     <string name="ScrollView">ScrollView</string>
     <string name="SerchView">SerchView</string>
     <string name="Implicit_Intent">Implicit Intent</string>
-    <string name="Explicit_Intent">Explicit Intent</string>
+    <string name="Explicit_Intent">Explicit \n Intent</string>
+    <string name="Explicit_iIntent">Explicit Intent</string>
     <string name="Option_Manu">Option Menu</string>
     <string name="Context_Manu">Context Menu</string>
     <string name="Popup_Manu">Popup Menu</string>

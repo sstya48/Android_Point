@@ -13,16 +13,11 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.androidpoint.R;
-
-
 public class A_card_18_Fragment extends Fragment {
-
     TextView db_java, db_xml, db_gridal_permission,Item_Java, Update_Java,
             DatabaseHelper_java, Student_java, ArrayAdapter_java, activity_main,
             activityitem_main, activityitem_update, rowlist_xml;
-
     AppCompatImageView Btn_arrow;
-
     ImageView db_output;
     @SuppressLint({"MissingInflatedId", "SetTextI18n"})
     @Override
@@ -54,8 +49,6 @@ public class A_card_18_Fragment extends Fragment {
         ArrayAdapter_java = view.findViewById(R.id.ArrayAdapter_java);
         activityitem_update = view.findViewById(R.id.activityitem_update);
         Student_java = view.findViewById(R.id.Student_java);
-
-
         db_output.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -195,36 +188,36 @@ public class A_card_18_Fragment extends Fragment {
                 "            super.onCreate(savedInstanceState);\n" +
                 "            setContentView(R.layout.activity_update);\n" +
                 "\n" +
-                "                openHelper = new DatabaseHelper(this);\n" +
-                "                name = findViewById(R.id.name);\n" +
-                "                city = findViewById(R.id.city);\n" +
-                "                phone = findViewById(R.id.mobile);\n" +
-                "                update = findViewById(R.id.update);\n" +
+                "            openHelper = new DatabaseHelper(this);\n" +
+                "            name = findViewById(R.id.name);\n" +
+                "            city = findViewById(R.id.city);\n" +
+                "            phone = findViewById(R.id.mobile);\n" +
+                "            update = findViewById(R.id.update);\n" +
                 "\n" +
-                "                Intent i = getIntent();\n" +
-                "                String nameIntent = i.getStringExtra(\"name\");\n" +
-                "                name.setText(nameIntent);\n" +
+                "            Intent i = getIntent();\n" +
+                "            String nameIntent = i.getStringExtra(\"name\");\n" +
+                "            name.setText(nameIntent);\n" +
                 "\n" +
-                "                String cityIntent = i.getStringExtra(\"city\");\n" +
-                "                city.setText(cityIntent);\n" +
+                "            String cityIntent = i.getStringExtra(\"city\");\n" +
+                "            city.setText(cityIntent);\n" +
                 "\n" +
-                "                String phoneIntent = i.getStringExtra(\"phone\");\n" +
-                "                phone.setText(phoneIntent);\n" +
+                "            String phoneIntent = i.getStringExtra(\"phone\");\n" +
+                "            phone.setText(phoneIntent);\n" +
                 "\n" +
-                "                update.setOnClickListener(new View.OnClickListener() {\n" +
-                "                    @Override\n" +
-                "                    public void onClick(View view) {\n" +
+                "            update.setOnClickListener(new View.OnClickListener() {\n" +
+                "              @Override\n" +
+                "              public void onClick(View view) {\n" +
                 "\n" +
-                "                        Intent i = getIntent();\n" +
-                "                        int id = i.getIntExtra(\"id\", 0);\n" +
-                "                        String names = name.getText().toString();\n" +
-                "                        String citys = city.getText().toString();\n" +
-                "                        String phones = phone.getText().toString();\n" +
+                "                  Intent i = getIntent();\n" +
+                "                  int id = i.getIntExtra(\"id\", 0);\n" +
+                "                  String names = name.getText().toString();\n" +
+                "                  String citys = city.getText().toString();\n" +
+                "                  String phones = phone.getText().toString();\n" +
                 "\n" +
-                "                        openHelper.update(String.valueOf(id), names, citys, phones);\n" +
+                "                  openHelper.update(String.valueOf(id), names, citys, phones);\n" +
                 "\n" +
-                "                        Intent intent = new Intent(update.this, MainActivity.class);\n" +
-                "                        startActivity(intent);\n" +
+                "                  Intent intent = new Intent(update.this, MainActivity.class);\n" +
+                "                   startActivity(intent);\n" +
                 "\n" +
                 "                        Toast.makeText(update.this, \"Data Update\", Toast.LENGTH_SHORT).show();\n" +
                 "                    }\n" +
@@ -401,7 +394,8 @@ public class A_card_18_Fragment extends Fragment {
                 "        @Override\n" +
                 "        public View getView(int position, View convertView, ViewGroup parent) {\n" +
                 "\n" +
-                "            convertView = LayoutInflater.from(mcontext).inflate(R.layout.rowlist, parent, false);\n" +
+                "            convertView = LayoutInflater.from(mcontext).inflate\n" +
+                "                       (R.layout.rowlist, parent, false);\n" +
                 "\n" +
                 "            Studen studen= dataModel.get(position);\n" +
                 "\n" +
@@ -446,7 +440,8 @@ public class A_card_18_Fragment extends Fragment {
                 "    }");
         activity_main.setTextIsSelectable(true);
         activity_main.setText("<?xml version=\"1.0\" encoding=\"utf-8\"?>\n" +
-                "<RelativeLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\n" +
+                "<RelativeLayout xmlns:android=\"http://schemas.android.com\n" +
+                "                               /apk/res/android\"\n" +
                 "    xmlns:app=\"http://schemas.android.com/apk/res-auto\"\n" +
                 "    xmlns:tools=\"http://schemas.android.com/tools\"\n" +
                 "    android:layout_width=\"match_parent\"\n" +
@@ -464,7 +459,8 @@ public class A_card_18_Fragment extends Fragment {
                 "\n" +
                 "    </ListView>\n" +
                 "\n" +
-                "    <com.google.android.material.floatingactionbutton.FloatingActionButton\n" +
+                "    <com.google.android.material.floatingactionbutton\n" +
+                "                               .FloatingActionButton\n" +
                 "        android:id=\"@+id/fb\"\n" +
                 "        android:layout_width=\"wrap_content\"\n" +
                 "        android:layout_height=\"wrap_content\"\n" +
@@ -494,7 +490,8 @@ public class A_card_18_Fragment extends Fragment {
                 "</RelativeLayout>\n");
         activityitem_main.setTextIsSelectable(true);
         activityitem_main.setText("<?xml version=\"1.0\" encoding=\"utf-8\"?>\n" +
-                "<RelativeLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\n" +
+                "<RelativeLayout xmlns:android=\"http://schemas.android.com\n" +
+                "                                   /apk/res/android\"\n" +
                 "    xmlns:app=\"http://schemas.android.com/apk/res-auto\"\n" +
                 "    xmlns:tools=\"http://schemas.android.com/tools\"\n" +
                 "    android:layout_width=\"match_parent\"\n" +
@@ -567,7 +564,8 @@ public class A_card_18_Fragment extends Fragment {
                 "</RelativeLayout>\n");
         activityitem_update.setTextIsSelectable(true);
         activityitem_update.setText("<?xml version=\"1.0\" encoding=\"utf-8\"?>\n" +
-                "<RelativeLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\n" +
+                "<RelativeLayout xmlns:android=\"http://schemas.android.com\n" +
+                "                                       /apk/res/android\"\n" +
                 "    xmlns:app=\"http://schemas.android.com/apk/res-auto\"\n" +
                 "    xmlns:tools=\"http://schemas.android.com/tools\"\n" +
                 "    android:layout_width=\"match_parent\"\n" +
@@ -641,7 +639,8 @@ public class A_card_18_Fragment extends Fragment {
                 "</RelativeLayout>\n");
         rowlist_xml.setTextIsSelectable(true);
         rowlist_xml.setText("<?xml version=\"1.0\" encoding=\"utf-8\"?>\n" +
-                "<RelativeLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\n" +
+                "<RelativeLayout xmlns:android=\"http://schemas.android.com\n" +
+                "                                          /apk/res/android\"\n" +
                 "    android:layout_width=\"match_parent\"\n" +
                 "    android:layout_height=\"match_parent\">\n" +
                 "\n" +
@@ -705,9 +704,7 @@ public class A_card_18_Fragment extends Fragment {
                 "        android:layout_marginEnd=\"5dp\"\n" +
                 "        android:src=\"@drawable/ic_baseline_delete_24\"/>\n" +
                 "\n" +
-                "</RelativeLayout>\n" +
-                "\n");
-
+                "</RelativeLayout>\n");
 
         return view;
     }

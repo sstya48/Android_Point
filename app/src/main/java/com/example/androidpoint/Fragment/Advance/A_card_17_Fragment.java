@@ -13,12 +13,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.androidpoint.R;
-
-
 public class A_card_17_Fragment extends Fragment {
-
     TextView email_java, email_xml, email_manifest;
-
     AppCompatImageView Btn_arrow;
     ImageView email_output;
     @SuppressLint({"MissingInflatedId", "SetTextI18n"})
@@ -43,8 +39,6 @@ public class A_card_17_Fragment extends Fragment {
         email_java = view.findViewById(R.id.email_java);
         email_xml = view.findViewById(R.id.email_xml);
         email_manifest = view.findViewById(R.id.email_manifest);
-
-
         email_output.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -83,7 +77,7 @@ public class A_card_17_Fragment extends Fragment {
                 "         }\n" +
                 "      });\n" +
                 "   }\n" +
-                "\t\n" +
+                "\n" +
                 "   protected void sendEmail() {\n" +
                 "      String[] TO = {\"\"};\n" +
                 "      String[] CC = {\"\"};\n" +
@@ -94,19 +88,24 @@ public class A_card_17_Fragment extends Fragment {
                 "      emailIntent.putExtra(Intent.EXTRA_EMAIL, TO);\n" +
                 "      emailIntent.putExtra(Intent.EXTRA_CC, CC);\n" +
                 "      emailIntent.putExtra(Intent.EXTRA_SUBJECT, \"Your subject\");\n" +
-                "      emailIntent.putExtra(Intent.EXTRA_TEXT, \"Email message goes here\");\n" +
+                "      emailIntent.putExtra(Intent.EXTRA_TEXT, \"Email \n" +
+                "                               message goes here\");\n" +
                 "      \n" +
                 "      try {\n" +
-                "         startActivity(Intent.createChooser(emailIntent, \"Send mail...\"));\n" +
+                "         startActivity(Intent.createChooser(emailIntent, \n" +
+                "                                           \"Send mail...\"));\n" +
                 "         finish();\n" +
                 "      } catch (android.content.ActivityNotFoundException ex) {\n" +
-                "         Toast.makeText(MainActivity.this, \"There is no email client installed.\", Toast.LENGTH_SHORT).show();\n" +
+                "         Toast.makeText(MainActivity.this, \"There is no\n" +
+                "                   email client installed.\", Toast.LENGTH_SHORT)\n" +
+                "                                           .show();\n" +
                 "      }\n" +
                 "   }\n" +
                 "}");
         email_xml.setTextIsSelectable(true);
         email_xml.setText("<?xml version=\"1.0\" encoding=\"utf-8\"?>\n" +
-                "<LinearLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\n" +
+                "<LinearLayout xmlns:android=\"http://schemas.android.com\n" +
+                "                           /apk/res/android\"\n" +
                 "    xmlns:tools=\"http://schemas.android.com/tools\"\n" +
                 "    android:layout_width=\"match_parent\"\n" +
                 "    android:layout_height=\"match_parent\"\n" +
@@ -133,7 +132,8 @@ public class A_card_17_Fragment extends Fragment {
                 "</LinearLayout>");
         email_manifest.setTextIsSelectable(true);
         email_manifest.setText("<?xml version=\"1.0\" encoding=\"utf-8\"?>\n" +
-                "<manifest xmlns:android=\"http://schemas.android.com/apk/res/android\"\n" +
+                "<manifest xmlns:android=\"http://schemas.android.com\n" +
+                "                                   /apk/res/android\"\n" +
                 "   package=\"exaple.androidalians.emaildemo\" >\n" +
                 "   \n" +
                 "   <application\n" +
@@ -155,7 +155,6 @@ public class A_card_17_Fragment extends Fragment {
                 "      \n" +
                 "   </application>\n" +
                 "</manifest>");
-
 
         return view;
     }

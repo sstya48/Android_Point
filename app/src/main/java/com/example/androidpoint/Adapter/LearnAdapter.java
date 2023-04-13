@@ -59,7 +59,7 @@ public class LearnAdapter extends RecyclerView.Adapter<LearnAdapter.MyViewHolder
                         new DetailFragment(datalist.get(position).getTitle().toString(),
                                 datalist.get(position).getDescription(),
 //                                Picasso.get().load(datalist.get(position).getImage().toString()).into(image_learn),
-                                datalist.get(position).getImage())).addToBackStack(null).commit();
+                                datalist.get(position).getImage()))/*.addToBackStack(null)*/.commit();
 
 
 

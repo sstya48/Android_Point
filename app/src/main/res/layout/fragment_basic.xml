@@ -109,6 +109,7 @@
                                     android:layout_centerHorizontal="true"
                                     android:layout_marginTop="16dp"
                                     android:text="@string/HelloWord_Toast_Message"
+                                    android:gravity="center"
                                     android:textColor="#0B204C"
                                     android:textSize="16dp"
                                     android:textStyle="bold" />

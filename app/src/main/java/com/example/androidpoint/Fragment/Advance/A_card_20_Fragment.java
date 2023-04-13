@@ -12,14 +12,10 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.androidpoint.R;
-
 public class A_card_20_Fragment extends Fragment {
-
     TextView flash_java, flash_xml, Gridal_Permission;
     ImageView flash_output;
-
     AppCompatImageView Btn_arrow;
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -61,7 +57,6 @@ public class A_card_20_Fragment extends Fragment {
 
         Gridal_Permission.setTextIsSelectable(true);
         Gridal_Permission.setText("");
-
 
         return view;
     }

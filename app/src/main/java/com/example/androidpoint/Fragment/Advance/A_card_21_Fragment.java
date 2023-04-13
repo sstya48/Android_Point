@@ -13,17 +13,10 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.androidpoint.R;
-
-
 public class A_card_21_Fragment extends Fragment {
-
     ImageView fing_btn_output;
-
     TextView fing_java,fing_xml, SecondActivity_xml, gridal_xml;
-
     AppCompatImageView Btn_arrow;
-
-
     @SuppressLint({"MissingInflatedId", "SetTextI18n"})
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -67,8 +60,10 @@ public class A_card_21_Fragment extends Fragment {
 
         fing_java.setText("package example.androidalians.fingurprint;\n" +
                 "\n" +
-                "import static androidx.biometric.BiometricManager.Authenticators.BIOMETRIC_STRONG;\n" +
-                "import static androidx.biometric.BiometricManager.Authenticators.DEVICE_CREDENTIAL;\n" +
+                "import static androidx.biometric.BiometricManager\n" +
+                "                       .Authenticators.BIOMETRIC_STRONG;\n" +
+                "import static androidx.biometric.BiometricManager\n" +
+                "                   .Authenticators.DEVICE_CREDENTIAL;\n" +
                 "import androidx.annotation.NonNull;\n" +
                 "import androidx.appcompat.app.AppCompatActivity;\n" +
                 "import androidx.biometric.BiometricManager;\n" +
@@ -100,16 +95,20 @@ public class A_card_21_Fragment extends Fragment {
                 "        imageview = findViewById(R.id.imageview);\n" +
                 "\n" +
                 "\n" +
-                "        BiometricManager biometricManager = BiometricManager.from(this);\n" +
-                "        switch (biometricManager.canAuthenticate(BIOMETRIC_STRONG | DEVICE_CREDENTIAL)) {\n" +
+                "        BiometricManager biometricManager = BiometricManager\n" +
+                "                                   .from(this);\n" +
+                "        switch (biometricManager.canAuthenticate\n" +
+                "                   (BIOMETRIC_STRONG | DEVICE_CREDENTIAL)) {\n" +
                 "            case BiometricManager.BIOMETRIC_SUCCESS:\n" +
                 "                Log.d(\"MY_APP_TAG\", \"App can authenticate using biometrics.\");\n" +
                 "                break;\n" +
                 "            case BiometricManager.BIOMETRIC_ERROR_NO_HARDWARE:\n" +
-                "                Toast.makeText(this, \"No features available on your device\", Toast.LENGTH_LONG).show();\n" +
+                "                Toast.makeText(this, \"No features available on your device\",\n" +
+                "                                   Toast.LENGTH_LONG).show();\n" +
                 "                break;\n" +
                 "            case BiometricManager.BIOMETRIC_ERROR_HW_UNAVAILABLE:\n" +
-                "                Toast.makeText(this, \"Biometric features are currently unavailable\", Toast.LENGTH_LONG).show();\n" +
+                "                Toast.makeText(this, \"Biometric features are currently\n" +
+                "                   unavailable\", Toast.LENGTH_LONG).show();\n" +
                 "\n" +
                 "                break;\n" +
                 "            case BiometricManager.BIOMETRIC_ERROR_NONE_ENROLLED:\n" +
@@ -128,8 +127,8 @@ public class A_card_21_Fragment extends Fragment {
                 "                                              @NonNull CharSequence errString) {\n" +
                 "                super.onAuthenticationError(errorCode, errString);\n" +
                 "                Toast.makeText(getApplicationContext(),\n" +
-                "                                \"Authentication error: \" + errString, Toast.LENGTH_SHORT)\n" +
-                "                        .show();\n" +
+                "                          \"Authentication error: \" + errString, \n" +
+                "                               Toast.LENGTH_SHORT).show();\n" +
                 "            }\n" +
                 "            @Override\n" +
                 "            public void onAuthenticationSucceeded(\n" +
@@ -161,7 +160,8 @@ public class A_card_21_Fragment extends Fragment {
         fing_java.setTextIsSelectable(true);
 
         fing_xml.setText("<?xml version=\"1.0\" encoding=\"utf-8\"?>\n" +
-                "<LinearLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\n" +
+                "<LinearLayout xmlns:android=\"http://schemas.android.com\n" +
+                "                                         /apk/res/android\"\n" +
                 "    xmlns:tools=\"http://schemas.android.com/tools\"\n" +
                 "    android:layout_width=\"match_parent\"\n" +
                 "    android:layout_height=\"match_parent\"\n" +
@@ -188,7 +188,8 @@ public class A_card_21_Fragment extends Fragment {
         fing_xml.setTextIsSelectable(true);
 
         SecondActivity_xml.setText("<?xml version=\"1.0\" encoding=\"utf-8\"?>\n" +
-                "<LinearLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\n" +
+                "<LinearLayout xmlns:android=\"http://schemas.android.com\n" +
+                "                               /apk/res/android\"\n" +
                 "    xmlns:tools=\"http://schemas.android.com/tools\"\n" +
                 "    android:layout_width=\"match_parent\"\n" +
                 "    android:layout_height=\"match_parent\"\n" +
@@ -209,7 +210,7 @@ public class A_card_21_Fragment extends Fragment {
 
         gridal_xml.setText("dependencies {\n" +
                 "\n" +
-                "    implementation \"androidx.biometric:biometric:1.1.0\"\n" +
+                " implementation \"androidx.biometric:biometric:1.1.0\"\n" +
                 "}");
         gridal_xml.setTextIsSelectable(true);
 

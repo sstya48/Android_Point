@@ -6,7 +6,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".Fragment.Advance.Advance">
 
-
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -77,7 +76,8 @@
                                 android:text="@string/Splash_Screen"
                                 android:textColor="#0B204C"
                                 android:textSize="16dp"
-                                android:textStyle="bold" />
+                                android:gravity="center"
+                                android:fontFamily="@font/poppins_bold" />
                         </androidx.appcompat.widget.LinearLayoutCompat>
 
                     </FrameLayout>
@@ -129,7 +129,8 @@
                                 android:text="@string/Toggle_Button"
                                 android:textColor="#0B204C"
                                 android:textSize="16dp"
-                                android:textStyle="bold" />
+                                android:gravity="center"
+                                android:fontFamily="@font/poppins_bold" />
                         </androidx.appcompat.widget.LinearLayoutCompat>
 
                     </FrameLayout>
@@ -189,7 +190,8 @@
                                 android:text="@string/Radio_Group"
                                 android:textColor="#0B204C"
                                 android:textSize="16dp"
-                                android:textStyle="bold" />
+                                android:gravity="center"
+                                android:fontFamily="@font/poppins_bold" />
                         </androidx.appcompat.widget.LinearLayoutCompat>
 
                     </FrameLayout>
@@ -226,8 +228,8 @@
                                 <ImageView
                                     android:layout_width="50dp"
                                     android:layout_height="50dp"
-                                    android:src="@drawable/alert"
-                                    android:layout_gravity="center" />
+                                    android:layout_gravity="center"
+                                    android:src="@drawable/alert" />
 
                             </FrameLayout>
 
@@ -238,7 +240,8 @@
                                 android:text="@string/Alert_Dialog"
                                 android:textColor="#0B204C"
                                 android:textSize="16dp"
-                                android:textStyle="bold" />
+                                android:gravity="center"
+                                android:fontFamily="@font/poppins_bold"/>
                         </androidx.appcompat.widget.LinearLayoutCompat>
 
                     </FrameLayout>
@@ -298,7 +301,8 @@
                                 android:text="@string/Spinner"
                                 android:textColor="#0B204C"
                                 android:textSize="16dp"
-                                android:textStyle="bold" />
+                                android:gravity="center"
+                                android:fontFamily="@font/poppins_bold" />
                         </androidx.appcompat.widget.LinearLayoutCompat>
 
                     </FrameLayout>
@@ -348,7 +352,8 @@
                                 android:text="@string/Web_View"
                                 android:textColor="#0B204C"
                                 android:textSize="16dp"
-                                android:textStyle="bold" />
+                                android:gravity="center"
+                                android:fontFamily="@font/poppins_bold" />
                         </androidx.appcompat.widget.LinearLayoutCompat>
 
                     </FrameLayout>
@@ -409,7 +414,8 @@
                                 android:text="@string/Progress_Bar"
                                 android:textColor="#0B204C"
                                 android:textSize="16dp"
-                                android:textStyle="bold" />
+                                android:gravity="center"
+                                android:fontFamily="@font/poppins_bold" />
                         </androidx.appcompat.widget.LinearLayoutCompat>
 
                     </FrameLayout>
@@ -460,7 +466,8 @@
                                 android:text="@string/Image_Slider"
                                 android:textColor="#0B204C"
                                 android:textSize="16dp"
-                                android:textStyle="bold" />
+                                android:gravity="center"
+                                android:fontFamily="@font/poppins_bold" />
                         </androidx.appcompat.widget.LinearLayoutCompat>
 
                     </FrameLayout>
@@ -519,7 +526,8 @@
                                 android:text="@string/Curren_Location"
                                 android:textColor="#0B204C"
                                 android:textSize="16dp"
-                                android:textStyle="bold" />
+                                android:gravity="center"
+                                android:fontFamily="@font/poppins_bold" />
                         </androidx.appcompat.widget.LinearLayoutCompat>
 
                     </FrameLayout>
@@ -568,7 +576,8 @@
                                 android:text="@string/Registation_Page"
                                 android:textColor="#0B204C"
                                 android:textSize="16dp"
-                                android:textStyle="bold" />
+                                android:gravity="center"
+                                android:fontFamily="@font/poppins_bold" />
                         </androidx.appcompat.widget.LinearLayoutCompat>
 
                     </FrameLayout>
@@ -628,7 +637,8 @@
                                 android:text="@string/Bar_Chart"
                                 android:textColor="#0B204C"
                                 android:textSize="16dp"
-                                android:textStyle="bold" />
+                                android:gravity="center"
+                                android:fontFamily="@font/poppins_bold" />
                         </androidx.appcompat.widget.LinearLayoutCompat>
 
                     </FrameLayout>
@@ -679,7 +689,8 @@
                                 android:text="@string/Line_Chart"
                                 android:textColor="#0B204C"
                                 android:textSize="16dp"
-                                android:textStyle="bold" />
+                                android:gravity="center"
+                                android:fontFamily="@font/poppins_bold" />
                         </androidx.appcompat.widget.LinearLayoutCompat>
 
                     </FrameLayout>
@@ -741,7 +752,8 @@
                                 android:text="@string/Pie_Chart"
                                 android:textColor="#0B204C"
                                 android:textSize="16dp"
-                                android:textStyle="bold" />
+                                android:gravity="center"
+                                android:fontFamily="@font/poppins_bold" />
                         </androidx.appcompat.widget.LinearLayoutCompat>
 
                     </FrameLayout>
@@ -793,7 +805,8 @@
                                 android:text="@string/Instagram_Login"
                                 android:textColor="#0B204C"
                                 android:textSize="16dp"
-                                android:textStyle="bold" />
+                                android:gravity="center"
+                                android:fontFamily="@font/poppins_bold" />
                         </androidx.appcompat.widget.LinearLayoutCompat>
 
                     </FrameLayout>
@@ -852,7 +865,8 @@
                                 android:text="@string/Phone_Call"
                                 android:textColor="#0B204C"
                                 android:textSize="16dp"
-                                android:textStyle="bold" />
+                                android:gravity="center"
+                                android:fontFamily="@font/poppins_bold" />
                         </androidx.appcompat.widget.LinearLayoutCompat>
 
                     </FrameLayout>
@@ -902,7 +916,8 @@
                                 android:text="@string/Send_SMS"
                                 android:textColor="#0B204C"
                                 android:textSize="16dp"
-                                android:textStyle="bold" />
+                                android:gravity="center"
+                                android:fontFamily="@font/poppins_bold" />
                         </androidx.appcompat.widget.LinearLayoutCompat>
 
                     </FrameLayout>
@@ -961,7 +976,8 @@
                                                 android:text="@string/Send_Email"
                                                 android:textColor="#0B204C"
                                                 android:textSize="16dp"
-                                                android:textStyle="bold" />
+                                                android:gravity="center"
+                                                android:fontFamily="@font/poppins_bold" />
                                         </androidx.appcompat.widget.LinearLayoutCompat>
 
                                     </FrameLayout>
@@ -1011,7 +1027,8 @@
                                                 android:text="@string/SQLite_DB"
                                                 android:textColor="#0B204C"
                                                 android:textSize="16dp"
-                                                android:textStyle="bold" />
+                                                android:gravity="center"
+                                                android:fontFamily="@font/poppins_bold" />
                                         </androidx.appcompat.widget.LinearLayoutCompat>
 
                                     </FrameLayout>
@@ -1072,7 +1089,8 @@
                                 android:text="@string/Gallery"
                                 android:textColor="#0B204C"
                                 android:textSize="16dp"
-                                android:textStyle="bold" />
+                                android:gravity="center"
+                                android:fontFamily="@font/poppins_bold" />
                         </androidx.appcompat.widget.LinearLayoutCompat>
 
                     </FrameLayout>
@@ -1124,7 +1142,8 @@
                                 android:text="@string/flash"
                                 android:textColor="#0B204C"
                                 android:textSize="16dp"
-                                android:textStyle="bold" />
+                                android:gravity="center"
+                                android:fontFamily="@font/poppins_bold" />
                         </androidx.appcompat.widget.LinearLayoutCompat>
 
                     </FrameLayout>
@@ -1184,7 +1203,8 @@
                                 android:text="@string/FingurPrint"
                                 android:textColor="#0B204C"
                                 android:textSize="16dp"
-                                android:textStyle="bold" />
+                                android:gravity="center"
+                                android:fontFamily="@font/poppins_bold" />
                         </androidx.appcompat.widget.LinearLayoutCompat>
 
                     </FrameLayout>
@@ -1233,7 +1253,8 @@
                                 android:text="@string/Rating_App"
                                 android:textColor="#0B204C"
                                 android:textSize="16dp"
-                                android:textStyle="bold" />
+                                android:gravity="center"
+                                android:fontFamily="@font/poppins_bold" />
                         </androidx.appcompat.widget.LinearLayoutCompat>
 
                     </FrameLayout>

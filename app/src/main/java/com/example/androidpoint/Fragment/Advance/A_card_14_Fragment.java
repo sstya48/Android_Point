@@ -13,15 +13,10 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.androidpoint.R;
-
-
 public class A_card_14_Fragment extends Fragment {
-
     TextView insta_java, insta_xml, Drawable_Color, Drawable_Border, Drawable_arrow;
-
     AppCompatImageView Btn_arrow;
     ImageView insta_output;
-
     @SuppressLint({"MissingInflatedId", "SetTextI18n"})
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -29,7 +24,6 @@ public class A_card_14_Fragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_a_card_14_, container, false);
 
         Btn_arrow=view.findViewById(R.id.Btn_arrow);
-
         Btn_arrow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -40,15 +34,12 @@ public class A_card_14_Fragment extends Fragment {
                         .commit();
             }
         });
-
         insta_output = view.findViewById(R.id.insta_output);
         insta_java = view.findViewById(R.id.insta_java);
         insta_xml = view.findViewById(R.id.insta_xml);
         Drawable_Color = view.findViewById(R.id.Drawable_Color);
         Drawable_Border = view.findViewById(R.id.Drawable_Border);
         Drawable_arrow = view.findViewById(R.id.Drawable_arrow);
-
-
         insta_output.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -75,7 +66,8 @@ public class A_card_14_Fragment extends Fragment {
                 "}");
         insta_xml.setTextIsSelectable(true);
         insta_xml.setText("<?xml version=\"1.0\" encoding=\"utf-8\"?>\n" +
-                "<RelativeLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\n" +
+                "<RelativeLayout xmlns:android=\"http://schemas.android.com\n" +
+                "                                   /apk/res/android\"\n" +
                 "    xmlns:tools=\"http://schemas.android.com/tools\"\n" +
                 "    android:layout_width=\"match_parent\"\n" +
                 "    android:layout_height=\"match_parent\"\n" +
@@ -241,10 +233,10 @@ public class A_card_14_Fragment extends Fragment {
                 "<selector xmlns:android=\"http://schemas.android.com/apk/res/android\">\n" +
                 "    <item>\n" +
                 "        <shape android:shape=\"rectangle\">\n" +
-                "            <solid android:color=\"@android:color/transparent\"/>\n" +
-                "            <stroke android:width=\"1sp\"\n" +
-                "            android:color=\"@color/white\"/>\n" +
-                "            <corners android:radius=\"1sp\"/>\n" +
+                "          <solid android:color=\"@android:color/transparent\"/>\n" +
+                "          <stroke android:width=\"1sp\"\n" +
+                "          android:color=\"@color/white\"/>\n" +
+                "          <corners android:radius=\"1sp\"/>\n" +
                 "        </shape>\n" +
                 "    </item>\n" +
                 "</selector>");
@@ -259,7 +251,6 @@ public class A_card_14_Fragment extends Fragment {
                 "    <path android:fillColor=\"@android:color/white\" \n" +
                 "          android:pathData=\"M7.41,8.59L12,13.17l4.59,-4.58L18,10l-6,6 -6,-6 1.41,-1.41z\"/>\n" +
                 "</vector>\n");
-
 
         return view;
     }

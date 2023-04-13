@@ -66,6 +66,7 @@
     <color name="background">#F0F4F3</color>
     <color name="background1">#80F0F4F3</color>
     <color name="buttontext">#50C2C9</color>
+    <color name="onboard">#CCE9FF</color>
 
     //indicator color
     <color name="inactive">#C4C4C4</color>

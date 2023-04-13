@@ -32,11 +32,11 @@
                 <com.denzcoskun.imageslider.ImageSlider
                     android:id="@+id/imageslider"
                     android:layout_width="match_parent"
-                    android:layout_height="180dp"
+                    android:layout_height="170dp"
                     app:iss_auto_cycle="true"
-                    app:iss_delay="1000"
+                    app:iss_delay="1200"
                     android:background="@drawable/boder_sos"
-                    app:iss_period="1000" />
+                    app:iss_period="1200" />
 
             </RelativeLayout>
 
@@ -49,8 +49,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:scrollbars="none"
-            android:layout_marginTop="15dp"
-            >
+            android:layout_marginTop="15dp">
 
             <androidx.appcompat.widget.LinearLayoutCompat
                 android:id="@+id/cvholder"
@@ -112,7 +111,9 @@
                                     android:gravity="center"
                                     android:textColor="#0B204C"
                                     android:textSize="16dp"
-                                    android:textStyle="bold" />
+                                    android:gravity="center"
+                                    android:fontFamily="@font/poppins_bold" />
+
                             </androidx.appcompat.widget.LinearLayoutCompat>
 
                         </FrameLayout>
@@ -160,11 +161,12 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_centerHorizontal="true"
-                                    android:layout_marginTop="24dp"
-                                    android:text="@string/Activity_LifeCycle"
+                                    android:layout_marginTop="15dp"
+                                    android:text="@string/Activity_lLifeCycle"
                                     android:textColor="#0B204C"
                                     android:textSize="16dp"
-                                    android:textStyle="bold" />
+                                    android:gravity="center"
+                                    android:fontFamily="@font/poppins_bold"  />
                             </androidx.appcompat.widget.LinearLayoutCompat>
 
                         </FrameLayout>
@@ -219,11 +221,13 @@
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:layout_marginTop="24dp"
+                                    android:layout_marginTop="30dp"
                                     android:text="@string/Hide_TitleBar"
                                     android:textColor="#0B204C"
+                                    android:gravity="center"
+                                    android:fontFamily="@font/poppins_bold"
                                     android:textSize="16dp"
-                                    android:textStyle="bold" />
+                                     />
                             </androidx.appcompat.widget.LinearLayoutCompat>
 
                         </FrameLayout>
@@ -247,8 +251,8 @@
                             <androidx.appcompat.widget.LinearLayoutCompat
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:gravity="center"
                                 android:background="@drawable/cv4bg"
+                                android:gravity="center"
                                 android:orientation="vertical">
 
                                 <FrameLayout
@@ -260,19 +264,20 @@
                                     <ImageView
                                         android:layout_width="45dp"
                                         android:layout_height="45dp"
-                                        android:src="@drawable/screen"
-                                        android:layout_gravity="center" />
+                                        android:layout_gravity="center"
+                                        android:src="@drawable/screen" />
 
                                 </FrameLayout>
 
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:layout_marginTop="24dp"
-                                    android:text="@string/Screen_Orientation"
+                                    android:layout_marginTop="15dp"
+                                    android:text="@string/Screen_oOrientation"
                                     android:textColor="#0B204C"
                                     android:textSize="16dp"
-                                    android:textStyle="bold" />
+                                    android:gravity="center"
+                                    android:fontFamily="@font/poppins_bold"/>
                             </androidx.appcompat.widget.LinearLayoutCompat>
 
                         </FrameLayout>
@@ -328,11 +333,12 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_centerHorizontal="true"
-                                    android:layout_marginTop="24dp"
+                                    android:layout_marginTop="30dp"
                                     android:text="@string/Check_Box"
                                     android:textColor="#0B204C"
-                                    android:textSize="16dp"
-                                    android:textStyle="bold" />
+                                    android:gravity="center"
+                                    android:fontFamily="@font/poppins_bold"
+                                    android:textSize="16dp" />
                             </androidx.appcompat.widget.LinearLayoutCompat>
 
                         </FrameLayout>
@@ -378,11 +384,12 @@
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:layout_marginTop="24dp"
+                                    android:layout_marginTop="30dp"
                                     android:text="@string/Radio_Button"
                                     android:textColor="#0B204C"
                                     android:textSize="16dp"
-                                    android:textStyle="bold" />
+                                    android:gravity="center"
+                                    android:fontFamily="@font/poppins_bold" />
                             </androidx.appcompat.widget.LinearLayoutCompat>
 
                         </FrameLayout>
@@ -439,11 +446,12 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_centerHorizontal="true"
-                                    android:layout_marginTop="24dp"
+                                    android:layout_marginTop="30dp"
                                     android:text="@string/ListView"
+                                    android:gravity="center"
+                                    android:fontFamily="@font/poppins_bold"
                                     android:textColor="#0B204C"
-                                    android:textSize="16dp"
-                                    android:textStyle="bold" />
+                                    android:textSize="16dp" />
                             </androidx.appcompat.widget.LinearLayoutCompat>
 
                         </FrameLayout>
@@ -490,11 +498,12 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_centerHorizontal="true"
-                                    android:layout_marginTop="24dp"
+                                    android:layout_marginTop="30dp"
                                     android:text="@string/Date_Piker"
+                                    android:gravity="center"
+                                    android:fontFamily="@font/poppins_bold"
                                     android:textColor="#0B204C"
-                                    android:textSize="16dp"
-                                    android:textStyle="bold" />
+                                    android:textSize="16dp" />
                             </androidx.appcompat.widget.LinearLayoutCompat>
 
                         </FrameLayout>
@@ -548,11 +557,12 @@
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:layout_marginTop="24dp"
+                                    android:layout_marginTop="30dp"
                                     android:text="@string/Time_Piker"
                                     android:textColor="#0B204C"
-                                    android:textSize="16dp"
-                                    android:textStyle="bold" />
+                                    android:gravity="center"
+                                    android:fontFamily="@font/poppins_bold"
+                                    android:textSize="16dp" />
                             </androidx.appcompat.widget.LinearLayoutCompat>
 
                         </FrameLayout>
@@ -597,11 +607,12 @@
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:layout_marginTop="24dp"
+                                    android:layout_marginTop="30dp"
                                     android:text="@string/ScrollView"
                                     android:textColor="#0B204C"
-                                    android:textSize="16dp"
-                                    android:textStyle="bold" />
+                                    android:gravity="center"
+                                    android:fontFamily="@font/poppins_bold"
+                                    android:textSize="16dp" />
                             </androidx.appcompat.widget.LinearLayoutCompat>
 
                         </FrameLayout>
@@ -656,11 +667,12 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_centerHorizontal="true"
-                                    android:layout_marginTop="24dp"
+                                    android:layout_marginTop="30dp"
                                     android:text="@string/SerchView"
+                                    android:gravity="center"
+                                    android:fontFamily="@font/poppins_bold"
                                     android:textColor="#0B204C"
-                                    android:textSize="16dp"
-                                    android:textStyle="bold" />
+                                    android:textSize="16dp"  />
                             </androidx.appcompat.widget.LinearLayoutCompat>
 
                         </FrameLayout>
@@ -706,11 +718,12 @@
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:layout_marginTop="24dp"
+                                    android:layout_marginTop="30dp"
                                     android:text="@string/Implicit_Intent"
                                     android:textColor="#0B204C"
-                                    android:textSize="16dp"
-                                    android:textStyle="bold" />
+                                    android:gravity="center"
+                                    android:fontFamily="@font/poppins_bold"
+                                    android:textSize="16dp" />
                             </androidx.appcompat.widget.LinearLayoutCompat>
 
                         </FrameLayout>
@@ -768,10 +781,11 @@
                                     android:layout_height="wrap_content"
                                     android:layout_centerHorizontal="true"
                                     android:layout_marginTop="24dp"
-                                    android:text="@string/Explicit_Intent"
+                                    android:text="@string/Explicit_iIntent"
+                                    android:gravity="center"
+                                    android:fontFamily="@font/poppins_bold"
                                     android:textColor="#0B204C"
-                                    android:textSize="16dp"
-                                    android:textStyle="bold" />
+                                    android:textSize="16dp" />
                             </androidx.appcompat.widget.LinearLayoutCompat>
 
                         </FrameLayout>
@@ -818,11 +832,12 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_centerHorizontal="true"
-                                    android:layout_marginTop="24dp"
+                                    android:layout_marginTop="30dp"
                                     android:text="@string/Option_Manu"
                                     android:textColor="#0B204C"
-                                    android:textSize="16dp"
-                                    android:textStyle="bold" />
+                                    android:gravity="center"
+                                    android:fontFamily="@font/poppins_bold"
+                                    android:textSize="16dp" />
                             </androidx.appcompat.widget.LinearLayoutCompat>
 
                         </FrameLayout>
@@ -876,10 +891,12 @@
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:layout_marginTop="24dp"
+                                    android:layout_marginTop="30dp"
                                     android:text="@string/Context_Manu"
                                     android:textColor="#0B204C"
                                     android:textSize="16dp"
+                                    android:gravity="center"
+                                    android:fontFamily="@font/poppins_bold"
                                     android:textStyle="bold" />
                             </androidx.appcompat.widget.LinearLayoutCompat>
 
@@ -925,11 +942,12 @@
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:layout_marginTop="24dp"
+                                    android:layout_marginTop="30dp"
                                     android:text="@string/Popup_Manu"
                                     android:textColor="#0B204C"
                                     android:textSize="16dp"
-                                    android:textStyle="bold" />
+                                    android:gravity="center"
+                                    android:fontFamily="@font/poppins_bold" />
                             </androidx.appcompat.widget.LinearLayoutCompat>
 
                         </FrameLayout>
@@ -938,23 +956,8 @@
 
                 </androidx.appcompat.widget.LinearLayoutCompat>
 
-
-
             </androidx.appcompat.widget.LinearLayoutCompat>
 
         </ScrollView>
 
-       <!-- <com.google.android.gms.ads.AdView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/adView_basic"
-            android:layout_alignParentBottom="true"
-            app:adSize="BANNER"
-            android:layout_gravity="bottom"
-            app:adUnitId="ca-app-pub-3940256099942544/6300978111"
-            />-->
-
-<!--        app:adUnitId="@string/Banner_Ad_Basic_unit_id"-->
-
-<!--    </FrameLayout>-->
 </LinearLayout>

@@ -13,15 +13,10 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.androidpoint.R;
-
-
 public class A_card_7_Fragment extends Fragment {
-
     TextView progress_java, progress_xml;
     ImageView progress_output;
-
     AppCompatImageView Btn_arrow;
-
     @SuppressLint({"MissingInflatedId", "SetTextI18n"})
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -45,7 +40,6 @@ public class A_card_7_Fragment extends Fragment {
         progress_output = view.findViewById(R.id.progress_output);
         progress_java = view.findViewById(R.id.progress_java);
         progress_xml = view.findViewById(R.id.progress_xml);
-
         progress_output.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -76,14 +70,14 @@ public class A_card_7_Fragment extends Fragment {
                 "      button = (Button) findViewById(R.id.button);\n" +
                 "   \n" +
                 "button.setOnClickListener(new View.OnClickListener() { \n"+
-                "    @Override \n"+
-                 "   public void onClick(View view) { \n"+
-                "      progress=new ProgressDialog(this);\n" +
-                "      progress.setMessage(\"Downloading Music\");\n" +
-                "      progress.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);\n" +
-                "      progress.setIndeterminate(true);\n" +
-                "      progress.setProgress(0);\n" +
-                "      progress.show();\n" +
+                "@Override \n"+
+                "public void onClick(View view) { \n"+
+                " progress=new ProgressDialog(this);\n" +
+                " progress.setMessage(\"Downloading Music\");\n" +
+                " progress.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);\n" +
+                " progress.setIndeterminate(true);\n" +
+                " progress.setProgress(0);\n" +
+                " progress.show();\n" +
                 "      \n" +
                 "      final int totalProgressTime = 100;\n" +
                 "      final Thread t = new Thread() {\n" +
@@ -97,7 +91,6 @@ public class A_card_7_Fragment extends Fragment {
                 "                  jumpTime += 5;\n" +
                 "                  progress.setProgress(jumpTime);\n" +
                 "               } catch (InterruptedException e) {\n" +
-                "                  // TODO Auto-generated catch block\n" +
                 "                  e.printStackTrace();\n" +
                 "               }\n" +
                 "            }\n" +
@@ -108,7 +101,8 @@ public class A_card_7_Fragment extends Fragment {
                 "}");
         progress_xml.setTextIsSelectable(true);
         progress_xml.setText("<?xml version=\"1.0\" encoding=\"utf-8\"?>\n" +
-                "<RelativeLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\n" +
+                "<RelativeLayout xmlns:android=\"http://schemas.android.com\n" +
+                "                                         /apk/res/android\"\n" +
                 "    xmlns:tools=\"http://schemas.android.com/tools\"\n" +
                 "    android:layout_width=\"match_parent\"\n" +
                 "    android:layout_height=\"match_parent\">\n" +

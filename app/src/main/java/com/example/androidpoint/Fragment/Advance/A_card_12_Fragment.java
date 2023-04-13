@@ -13,14 +13,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.androidpoint.R;
-
-
 public class A_card_12_Fragment extends Fragment {
-
     TextView line_java, line_xml, line_gridal_permission;
-
     AppCompatImageView Btn_arrow;
-
     ImageView line_output;
     @SuppressLint("SetTextI18n")
     @Override
@@ -29,7 +24,6 @@ public class A_card_12_Fragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_a_card_12_, container, false);
 
         Btn_arrow=view.findViewById(R.id.Btn_arrow);
-
         Btn_arrow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -40,13 +34,10 @@ public class A_card_12_Fragment extends Fragment {
                         .commit();
             }
         });
-
-
         line_output = view.findViewById(R.id.line_output);
         line_java = view.findViewById(R.id.line_java);
         line_xml = view.findViewById(R.id.line_xml);
         line_gridal_permission = view.findViewById(R.id.line_gridal_permission);
-
 
         line_output.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -60,7 +51,7 @@ public class A_card_12_Fragment extends Fragment {
             }
         });
 
-        line_java.setText("package example.androidpoint.linechart;\n" +
+        line_java.setText("package example.androidalianslinechart;\n" +
                 "import android.annotation.SuppressLint;\n" +
                 "import android.os.Bundle;\n" +
                 "import androidx.appcompat.widget.AppCompatImageView;\n" +
@@ -72,22 +63,23 @@ public class A_card_12_Fragment extends Fragment {
                 "import com.github.mikephil.charting.data.Entry;\n" +
                 "import com.github.mikephil.charting.data.LineData;\n" +
                 "import com.github.mikephil.charting.data.LineDataSet;\n" +
-                "import com.github.mikephil.charting.interfaces.datasets.ILineDataSet;\n" +
                 "\n" +
                 "import java.lang.reflect.Array;\n" +
                 "import java.util.ArrayList;\n" +
 
                 "     \"public class MainActivity extends AppCompatActivity { +\n" +
-                "                 LineChart lineChart;\n" +
-                "                 AppCompatImageView Btn_arrow;" +
-                "                \"private PieChart pieChart;\" +\n" +
-                "                \"@Override\" +\n" +
-                "                \"protected void onCreate(Bundle savedInstanceState) {\" +\n" +
-                "                \"super.onCreate(savedInstanceState);\" +\n" +
-                "                \"setContentView(R.layout.activity_main);\" +" +
+                "        \"LineChart lineChart;\n" +
+                "        \"AppCompatImageView Btn_arrow;" +
+                "        \"private PieChart pieChart;\" +\n" +
+                "        \"@Override\" +\n" +
+                "        \"protected void onCreate(Bundle savedInstanceState) {\" +\n" +
+                "        \"super.onCreate(savedInstanceState);\" +\n" +
+                "        \"setContentView(R.layout.activity_main);\" +" +
+                " \n" +
                 "  lineChart=view.findViewById(R.id.lineChart);\n" +
                 "\n" +
-                "        LineDataSet lineDataSet= new LineDataSet(DataValue(),\"Data Set 1\");\n" +
+                "        LineDataSet lineDataSet= new LineDataSet\n" +
+                "                           (DataValue(),\"Data Set 1\");\n" +
                 "        ArrayList<ILineDataSet> datasets= new ArrayList<>();\n" +
                 "        datasets.add(lineDataSet);\n" +
                 "\n" +
@@ -100,9 +92,11 @@ public class A_card_12_Fragment extends Fragment {
                 "        Btn_arrow.setOnClickListener(new View.OnClickListener() {\n" +
                 "            @Override\n" +
                 "            public void onClick(View view) {\n" +
-                "                A_card_12_Fragment A_card_12_Fragment = new A_card_12_Fragment();\n" +
+                "                A_card_12_Fragment A_card_12_Fragment = new \n" +
+                "                               A_card_12_Fragment();\n" +
                 "                getActivity().getSupportFragmentManager().beginTransaction()\n" +
-                "                        .replace(R.id.frame_container, A_card_12_Fragment, \"Back Button Basic\")\n" +
+                "                        .replace(R.id.frame_container, A_card_12_Fragment,\n" +
+                "                                                        \"Back Button Basic\")\n" +
                 "                        .addToBackStack(null)\n" +
                 "                        .commit();\n" +
                 "            }\n" +
@@ -127,7 +121,8 @@ public class A_card_12_Fragment extends Fragment {
         line_java.setTextIsSelectable(true);
 
         line_xml.setText("<?xml version=\"1.0\" encoding=\"utf-8\"?>\n" +
-                "<LinearLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\n" +
+                "<LinearLayout xmlns:android=\"http://schemas.android.com\n" +
+                "                                           /apk/res/android\"\n" +
                 "    xmlns:tools=\"http://schemas.android.com/tools\"\n" +
                 "    android:layout_width=\"match_parent\"\n" +
                 "    android:layout_height=\"match_parent\"\n" +

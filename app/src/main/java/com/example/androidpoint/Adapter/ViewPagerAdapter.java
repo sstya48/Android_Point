@@ -18,18 +18,18 @@ public class ViewPagerAdapter extends PagerAdapter {
     Context context;
 
     int images[] = {
-            R.drawable.onboard4,
+            R.drawable.onboard1,
             R.drawable.onboard2,
             R.drawable.onboard3,
 //            R.drawable.onboard3,
     };
 
-    int heading[] = {
+/*    int heading[] = {
             R.string.heading_one,
             R.string.heading_two,
             R.string.heading_three,
-            /*R.string.heading_three,
-            R.string.heading_fourth*/
+            *//*R.string.heading_three,
+            R.string.heading_fourth*//*
     };
 
     int description[] = {
@@ -37,7 +37,7 @@ public class ViewPagerAdapter extends PagerAdapter {
             R.string.desc_two,
             R.string.desc_three,
 //            R.string.desc_fourth
-    };
+    };*/
 
 
     public ViewPagerAdapter(Context context) {
@@ -47,7 +47,8 @@ public class ViewPagerAdapter extends PagerAdapter {
 
     @Override
     public int getCount() {
-        return heading.length;
+//        return heading.length;
+        return images.length;
     }
 
     @Override
@@ -64,12 +65,12 @@ public class ViewPagerAdapter extends PagerAdapter {
             View view = layoutInflater.inflate(R.layout.slider_layout, container, false);
 
             ImageView slidetitleimage = (ImageView) view.findViewById(R.id.title_image);
-            TextView slideheading = (TextView) view.findViewById(R.id.text_title);
+//            TextView slideheading = (TextView) view.findViewById(R.id.text_title);
 //            TextView slideDesc = (TextView) view.findViewById(R.id.text_des);
 
 
             slidetitleimage.setImageResource(images[position]);
-            slideheading.setText(heading[position]);
+//            slideheading.setText(heading[position]);
 //            slideDesc.setText(description[position]);
 
 

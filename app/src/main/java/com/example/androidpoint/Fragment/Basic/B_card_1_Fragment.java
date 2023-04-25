@@ -1,22 +1,29 @@
 package com.example.androidpoint.Fragment.Basic;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.appcompat.widget.AppCompatImageView;
+import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 
 import com.example.androidpoint.DemoFragments.Hello_World_Fragment;
 import com.example.androidpoint.R;
 
+import org.checkerframework.checker.units.qual.s;
+
 public class B_card_1_Fragment extends Fragment {
     TextView hello_toast_java,hello_toast_xml;
     AppCompatImageView hello_toast_demo;
     AppCompatImageView Btn_arrow;
+    CardView helloworld_yt;
     @SuppressLint({"SetTextI18n", "MissingInflatedId"})
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -25,8 +32,10 @@ public class B_card_1_Fragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_b_card_1_, container, false);
 
         hello_toast_java= view.findViewById(R.id.hello_toast_java);
+        helloworld_yt= view.findViewById(R.id.helloworld_yt);
         hello_toast_java.setTextIsSelectable(true);
         hello_toast_xml= view.findViewById(R.id.hello_toast_xml);
+        hello_toast_xml.setTextIsSelectable(true);
         hello_toast_xml.setTextIsSelectable(true);
 
         hello_toast_demo= view.findViewById(R.id.hello_toast_demo);
@@ -39,6 +48,13 @@ public class B_card_1_Fragment extends Fragment {
                 getActivity().getSupportFragmentManager().beginTransaction()
                         .replace(R.id.frame_container, basic, "Back Button Basic")
                         .commit();
+            }
+        });
+
+        helloworld_yt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                gotoUrl("https://www.youtube.com/watch?v=q2IzQrwBBLo");
             }
         });
         hello_toast_demo.setOnClickListener(new View.OnClickListener() {
@@ -88,5 +104,10 @@ public class B_card_1_Fragment extends Fragment {
                 "</RelativeLayout>");
 
         return view;
+    }
+
+    private void gotoUrl(String s) {
+        Uri uri = Uri.parse(s);
+        startActivity(new Intent(Intent.ACTION_VIEW,uri));
     }
 }

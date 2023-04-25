@@ -209,16 +209,23 @@
                     android:scrollbars="vertical" />
 
 
-                <ImageView
-                    android:id="@+id/helloworld_yt"
-                    android:layout_width="60dp"
-                    android:layout_height="60dp"
-                    android:layout_gravity="center"
-                    android:src="@drawable/movie"
-                    android:clickable="true"
-                    android:focusable="true"
-                    android:visibility="visible"
-                    android:background="?android:attr/selectableItemBackgroundBorderless" />
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/screenorientation_yt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardElevation="10dp"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardMaxElevation="12dp"
+                    app:cardPreventCornerOverlap="true"
+                    app:cardUseCompatPadding="true">
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="80dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/yt"/>
+
+                </androidx.cardview.widget.CardView>
 
             </LinearLayout>
 

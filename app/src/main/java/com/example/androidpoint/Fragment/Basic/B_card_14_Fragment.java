@@ -1,6 +1,8 @@
 package com.example.androidpoint.Fragment.Basic;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -8,6 +10,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import androidx.appcompat.widget.AppCompatImageView;
+import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 
 import com.example.androidpoint.DemoFragments.OptionMenuFragment;
@@ -16,6 +19,8 @@ import com.example.androidpoint.R;
 public class B_card_14_Fragment extends Fragment {
     AppCompatImageView optionMenu_demo, Btn_arrow;
     TextView optionMenu_java, option_xml_menu;
+
+    CardView option_menu_yt;
     @SuppressLint({"MissingInflatedId", "SetTextI18n"})
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -31,6 +36,7 @@ public class B_card_14_Fragment extends Fragment {
 
         optionMenu_demo = view.findViewById(R.id.optionMenu_demo);
         Btn_arrow = view.findViewById(R.id.Btn_arrow);
+        option_menu_yt = view.findViewById(R.id.option_menu_yt);
         Btn_arrow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -39,6 +45,13 @@ public class B_card_14_Fragment extends Fragment {
                         .replace(R.id.frame_container, basic, "Back Button Basic")
                         .addToBackStack(null)
                         .commit();
+            }
+        });
+
+        option_menu_yt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                gotoUrl("https://www.youtube.com/watch?v=-aLpcYdeSbw");
             }
         });
         optionMenu_demo.setOnClickListener(new View.OnClickListener() {
@@ -96,5 +109,9 @@ public class B_card_14_Fragment extends Fragment {
                 "</menu>");
 
         return view;
+    }
+    private void gotoUrl(String s) {
+        Uri uri = Uri.parse(s);
+        startActivity(new Intent(Intent.ACTION_VIEW,uri));
     }
 }

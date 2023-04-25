@@ -1,9 +1,12 @@
 package com.example.androidpoint.Fragment.Basic;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.appcompat.widget.AppCompatImageView;
+import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
@@ -17,10 +20,10 @@ import com.example.androidpoint.R;
 public class B_card_8_Fragment extends Fragment {
 
     TextView datepicker_java,datepicker_xml;
-
+    CardView datepicker_yt;
     AppCompatImageView datepicker_demo,Btn_arrow;
 
-    @SuppressLint("SetTextI18n")
+    @SuppressLint({"SetTextI18n", "MissingInflatedId"})
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -37,6 +40,7 @@ public class B_card_8_Fragment extends Fragment {
         datepicker_demo=view.findViewById(R.id.datepicker_demo);
 
         Btn_arrow=view.findViewById(R.id.Btn_arrow);
+        datepicker_yt = view.findViewById(R.id.datepicker_yt);
 
         Btn_arrow.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -49,6 +53,12 @@ public class B_card_8_Fragment extends Fragment {
             }
         });
 
+        datepicker_yt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                gotoUrl("https://www.youtube.com/watch?v=NZLs_GeO00I");
+            }
+        });
         datepicker_demo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -156,4 +166,9 @@ public class B_card_8_Fragment extends Fragment {
 
         return  view;
     }
+    private void gotoUrl(String s) {
+        Uri uri = Uri.parse(s);
+        startActivity(new Intent(Intent.ACTION_VIEW,uri));
+    }
 }
+

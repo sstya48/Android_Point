@@ -1,6 +1,8 @@
 package com.example.androidpoint.Fragment.Basic;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -8,6 +10,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import androidx.appcompat.widget.AppCompatImageView;
+import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 
 import com.example.androidpoint.DemoFragments.TimePickerFragment;
@@ -19,7 +22,7 @@ public class B_card_9_Fragment extends Fragment {
 
     TextView timepicker_xml, timepicker_java;
 
-
+    CardView timepicker_yt;
     @SuppressLint({"MissingInflatedId", "SetTextI18n"})
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -37,6 +40,7 @@ public class B_card_9_Fragment extends Fragment {
         timepicker_demo = view.findViewById(R.id.timepicker_demo);
 
         Btn_arrow = view.findViewById(R.id.Btn_arrow);
+        timepicker_yt = view.findViewById(R.id.timepicker_yt);
 
         Btn_arrow.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -48,7 +52,12 @@ public class B_card_9_Fragment extends Fragment {
                         .commit();
             }
         });
-
+        timepicker_yt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                gotoUrl("https://www.youtube.com/watch?v=RMElbIO5cDc");
+            }
+        });
         timepicker_demo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -143,4 +152,9 @@ public class B_card_9_Fragment extends Fragment {
 
         return view;
     }
+    private void gotoUrl(String s) {
+        Uri uri = Uri.parse(s);
+        startActivity(new Intent(Intent.ACTION_VIEW,uri));
+    }
 }
+

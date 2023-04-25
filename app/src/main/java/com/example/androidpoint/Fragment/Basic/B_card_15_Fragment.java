@@ -1,9 +1,12 @@
 package com.example.androidpoint.Fragment.Basic;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.appcompat.widget.AppCompatImageView;
+import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
@@ -17,6 +20,8 @@ import com.example.androidpoint.R;
 public class B_card_15_Fragment extends Fragment {
     TextView contextMenu_java,contextMenu_xml;
     AppCompatImageView contextMenu_demo,Btn_arrow;
+
+    CardView context_menu_yt;
     @SuppressLint("SetTextI18n")
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -31,6 +36,7 @@ public class B_card_15_Fragment extends Fragment {
 
         contextMenu_demo = view.findViewById(R.id.contextMenu_demo);
         Btn_arrow = view.findViewById(R.id.Btn_arrow);
+        context_menu_yt = view.findViewById(R.id.context_menu_yt);
 
         Btn_arrow.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -40,6 +46,13 @@ public class B_card_15_Fragment extends Fragment {
                         .replace(R.id.frame_container, basic, "Back Button Basic")
                         .addToBackStack(null)
                         .commit();
+            }
+        });
+
+        context_menu_yt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                gotoUrl("https://www.youtube.com/watch?v=snqGURFJv2g");
             }
         });
 
@@ -122,5 +135,9 @@ public class B_card_15_Fragment extends Fragment {
                 "</LinearLayout>");
 
         return view;
+    }
+    private void gotoUrl(String s) {
+        Uri uri = Uri.parse(s);
+        startActivity(new Intent(Intent.ACTION_VIEW,uri));
     }
 }

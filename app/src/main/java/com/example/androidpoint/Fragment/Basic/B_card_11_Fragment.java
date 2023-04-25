@@ -1,9 +1,12 @@
 package com.example.androidpoint.Fragment.Basic;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.appcompat.widget.AppCompatImageView;
+import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
@@ -17,6 +20,8 @@ import com.example.androidpoint.R;
 public class B_card_11_Fragment extends Fragment {
     AppCompatImageView serchview_demo,Btn_arrow;
     TextView serchview_java,serchview_xml;
+
+    CardView serchview_yt;
     @SuppressLint({"MissingInflatedId", "SetTextI18n"})
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -33,6 +38,7 @@ public class B_card_11_Fragment extends Fragment {
         serchview_demo= view.findViewById(R.id.serchview_demo);
 
         Btn_arrow=view.findViewById(R.id.Btn_arrow);
+        serchview_yt=view.findViewById(R.id.serchview_yt);
 
         Btn_arrow.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -42,6 +48,13 @@ public class B_card_11_Fragment extends Fragment {
                         .replace(R.id.frame_container, basic, "Back Button Basic")
                         .addToBackStack(null)
                         .commit();
+            }
+        });
+
+        serchview_yt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                gotoUrl("https://www.youtube.com/watch?v=4ZbE8Nnet9k");
             }
         });
 
@@ -160,4 +173,8 @@ public class B_card_11_Fragment extends Fragment {
 
         return  view;
     }
+private void gotoUrl(String s) {
+    Uri uri = Uri.parse(s);
+    startActivity(new Intent(Intent.ACTION_VIEW,uri));
+}
 }

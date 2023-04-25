@@ -1,6 +1,8 @@
 package com.example.androidpoint.Fragment.Basic;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -8,6 +10,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import androidx.appcompat.widget.AppCompatImageView;
+import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 
 import com.example.androidpoint.R;
@@ -16,7 +19,7 @@ import com.example.androidpoint.R;
 public class B_card_2_Fragment extends Fragment {
 
     TextView activity_lifecycle_xml,activity_lifecycle_java;
-
+    CardView lifecycle_yt;
     AppCompatImageView Btn_arrow,activity_cycle_demo;
 
 
@@ -28,6 +31,7 @@ public class B_card_2_Fragment extends Fragment {
         View view= inflater.inflate(R.layout.fragment_b_card_2_, container, false);
 
         activity_lifecycle_xml= view.findViewById(R.id.activity_lifecycle_xml);
+        lifecycle_yt= view.findViewById(R.id.lifecycle_yt);
         activity_lifecycle_xml.setTextIsSelectable(true);
 
         activity_lifecycle_java= view.findViewById(R.id.activity_lifecycle_java);
@@ -49,6 +53,12 @@ public class B_card_2_Fragment extends Fragment {
             }
         });
 
+        lifecycle_yt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                gotoUrl("https://www.youtube.com/watch?v=bupEJSC3XmY");
+            }
+        });
         activity_cycle_demo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -122,5 +132,11 @@ public class B_card_2_Fragment extends Fragment {
 
         return view;
 
+    }
+
+
+    private void gotoUrl(String s) {
+        Uri uri = Uri.parse(s);
+        startActivity(new Intent(Intent.ACTION_VIEW,uri));
     }
 }

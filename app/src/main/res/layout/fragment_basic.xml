@@ -111,7 +111,6 @@
                                     android:gravity="center"
                                     android:textColor="#0B204C"
                                     android:textSize="16dp"
-                                    android:gravity="center"
                                     android:fontFamily="@font/poppins_bold" />
 
                             </androidx.appcompat.widget.LinearLayoutCompat>

@@ -5,6 +5,7 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -20,13 +21,14 @@ import com.google.android.material.imageview.ShapeableImageView;
 
 import java.util.ArrayList;
 
-public class LearnAdapter extends RecyclerView.Adapter<LearnAdapter.MyViewHolder>{
+public class LearnAdapter extends RecyclerView.Adapter<LearnAdapter.MyViewHolder> implements LearnAdapterInterface {
 
 
     Context context;
     ArrayList<LearnModel> datalist;
 //    ArrayList<News> newsArrayList;
 
+    static ProgressBar progressBar;
 
     public LearnAdapter(Context context, ArrayList<LearnModel> datalist) {
 
@@ -51,10 +53,15 @@ public class LearnAdapter extends RecyclerView.Adapter<LearnAdapter.MyViewHolder
 
 
         holder.card_learn.setOnClickListener(new View.OnClickListener() {
+
             @Override
             public void onClick(View view) {
 
+
                 AppCompatActivity appCompatActivity= (AppCompatActivity) view.getContext();
+
+
+
                 appCompatActivity.getSupportFragmentManager().beginTransaction().replace(R.id.frame_container,
                         new DetailFragment(datalist.get(position).getTitle().toString(),
                                 datalist.get(position).getDescription(),
@@ -98,10 +105,13 @@ public class LearnAdapter extends RecyclerView.Adapter<LearnAdapter.MyViewHolder
         AppCompatImageView image_learn;
         CardView card_learn;
 
+
+
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
 
 
+            progressBar= itemView.findViewById(R.id.progressBar);
             title_learn= itemView.findViewById(R.id.title_learn);
             des_learn= itemView.findViewById(R.id.des_learn);
             image_learn= itemView.findViewById(R.id.image_learn);
@@ -121,4 +131,12 @@ public class LearnAdapter extends RecyclerView.Adapter<LearnAdapter.MyViewHolder
         }
 
     }
+    @Override
+    public void onDataChanged(){
+        if (progressBar != null){
+            progressBar.setVisibility(View.GONE);
+        }
+    }
+
+
 }

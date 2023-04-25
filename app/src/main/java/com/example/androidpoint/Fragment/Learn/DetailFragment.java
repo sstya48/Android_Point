@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import androidx.appcompat.widget.AppCompatImageView;
@@ -14,7 +15,7 @@ import com.example.androidpoint.Model.LearnModel;
 import com.example.androidpoint.R;
 import com.squareup.picasso.Picasso;
 
-public class DetailFragment extends Fragment {
+public class DetailFragment extends Fragment implements LearnAdapterInterface {
 
 
     TextView des_learn,title_learn,des_title;
@@ -24,6 +25,8 @@ public class DetailFragment extends Fragment {
     String description,title,image;
 
     LearnModel learnModel;
+
+    static ProgressBar progressBar;
 
 
 
@@ -43,7 +46,7 @@ public class DetailFragment extends Fragment {
     }
 
 
-  public static DetailFragment newInstance() {
+  public static LearnAdapterInterface newInstance() {
         DetailFragment fragment = new DetailFragment();
         Bundle args = new Bundle();
         fragment.setArguments(args);
@@ -61,6 +64,8 @@ public class DetailFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view= inflater.inflate(R.layout.fragment_detail, container, false);
+
+        progressBar= view.findViewById(R.id.progressBarDetail);
 
 
         title_learn=view.findViewById(R.id.title_learn);
@@ -89,17 +94,17 @@ public class DetailFragment extends Fragment {
         });
 
 
-
-
-
-
-
-
-
 //        image.res(image);
 
         return view;
 
+    }
+
+    @Override
+    public void onDataChanged(){
+        if (progressBar != null){
+            progressBar.setVisibility(View.GONE);
+        }
     }
 }
 

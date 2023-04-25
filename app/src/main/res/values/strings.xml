@@ -4,10 +4,10 @@
 
     <!--    new my 2-  ==================================================================  -->
 
-    <string name="HelloWord_Toast_Message">HelloWord \nToast Message</string>
-    <string name="HelloWord_Toast">HelloWord Toast Message</string>
+    <string name="HelloWord_Toast_Message">HelloWorld \nToast Message</string>
+    <string name="HelloWord_Toast">HelloWorld Toast Message</string>
     <string name="Activity_lLifeCycle">Activity \n LifeCycle</string>
-    <string name="Activity_LifeCycle">Activity \n LifeCycle</string>
+    <string name="Activity_LifeCycle">Activity LifeCycle</string>
     <string name="Hide_TitleBar">Hide TitleBar</string>
     <string name="Screen_oOrientation">Screen \n Orientation</string>
     <string name="Screen_Orientation">Screen Orientation</string>
@@ -36,12 +36,14 @@
     <string name="Image_Slider">Image Slider</string>
     <string name="Search_View">Search View</string>
     <string name="Registation_Page">Registation Page</string>
+    <string name="Registation_Ppage">Registation Page</string>
     <string name="Gallery_Camera">Gallery and Camera</string>
     <string name="Bar_Chart">Bar Chart</string>
     <string name="Line_Chart">Line Chart</string>
     <string name="Pie_Chart">Pie Chart</string>
     <string name="Gallery">Gallery</string>
     <string name="Instagram_Login">Instagram Login</string>
+    <string name="Instagram_Llogin">Instagram Login</string>
     <string name="flash">Flash Lite</string>
     <string name="Phone_Call">Phone Call</string>
     <string name="Send_SMS">Send SMS</string>
@@ -68,6 +70,7 @@
     <string name="To">To:</string>
     <string name="Email_Address">Email Address</string>
     <string name="Curren_Location">Curren Location</string>
+    <string name="Curren_Llocation">Curren \n Location</string>
     <string name="Subject">Subject</string>
     <string name="Message">Message:</string>
     <string name="SEND">SEND</string>

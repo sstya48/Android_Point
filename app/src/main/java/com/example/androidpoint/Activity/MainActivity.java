@@ -1,7 +1,14 @@
 package com.example.androidpoint.Activity;
 
 import android.annotation.SuppressLint;
+import android.app.Notification;
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.Drawable;
+import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -9,6 +16,7 @@ import android.widget.FrameLayout;
 import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.res.ResourcesCompat;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
@@ -24,18 +32,11 @@ import com.google.android.material.tabs.TabLayout;
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     TabLayout included;
     FrameLayout frameLayout;
-
     Fragment fragment = null;
     public FragmentManager fragmentManager = getSupportFragmentManager();
-
     ImageView btnMenu;
-
-    private MainActivity mcontext;
-
     AdView adView_main_all;
-
-
-    FragmentTransaction fragmentTransaction;
+   FragmentTransaction fragmentTransaction;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -55,20 +56,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         fragmentTransaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
         fragmentTransaction.commit();
 
-
         //Banner Ad id====================================
         adView_main_all = findViewById(R.id.adView_main_all);
 
         //====================================================
-
         MobileAds.initialize(this);
 
         AdRequest adRequest = new AdRequest.Builder().build();
 
-
         //banner ad load
         adView_main_all.loadAd(adRequest);
-
 
         btnMenu.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -77,7 +74,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 startActivity(i);
             }
         });
-
         included.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
@@ -100,29 +96,22 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
                 ft.commit();
             }
-
             @Override
             public void onTabUnselected(TabLayout.Tab tab) {
 
             }
-
             @Override
             public void onTabReselected(TabLayout.Tab tab) {
-
             }
         });
     }
-
-
     @Override
     public void onClick(View view) {
-
         switch (view.getId()) {
           /*  case R.id.btn_menu:
                 Intent i= new Intent(MainActivity.this,MenuActivity.class);
                 startActivity(i);*/
-
-
         }
     }
 }
+

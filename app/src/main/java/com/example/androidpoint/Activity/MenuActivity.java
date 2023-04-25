@@ -4,12 +4,20 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
 import androidx.appcompat.widget.AppCompatImageView;
+import androidx.core.content.res.ResourcesCompat;
 import androidx.fragment.app.Fragment;
 
 import android.annotation.SuppressLint;
+import android.app.Notification;
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.Drawable;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
@@ -34,7 +42,9 @@ import com.google.android.gms.ads.interstitial.InterstitialAdLoadCallback;
 
 public class MenuActivity extends AppCompatActivity {
 
+/*    private static final String CHANNEL_ID = "Notification";
 
+    private static final int NOTIFICATION_ID = 100;*/
     LinearLayout shareapp,tips,feedback,rate_us,about_us,ads_show,game;
 
     FrameLayout frameLayout;
@@ -322,6 +332,42 @@ public class MenuActivity extends AppCompatActivity {
         sendIntent.setType("text/plain");
         context.startActivity(sendIntent);
     }
+
+
+/*
+    // Notifiction ----------------------------------------------------------
+    Drawable drawable = ResourcesCompat.getDrawable(getResources(),R.drawable.appicn,null);
+    BitmapDrawable bitmapDrawable = (BitmapDrawable) drawable;
+    Bitmap LargeIcon = bitmapDrawable.getBitmap();
+    NotificationManager nm= (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
+    Notification notification;
+
+    {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            notification = new Notification.Builder(this)
+                    .setLargeIcon(LargeIcon)
+                    .setSmallIcon(R.drawable.appicn)
+                    .setContentTitle("Android Point")
+                    .setSubText("Basic code in Android Studio")
+                    .setChannelId(CHANNEL_ID) // Aa che a version 8  mthi aai ti eeni pel nati atle teni mate uper if confition che & niche else mukyu che jema version 8 niche vala mate e condition lagse.
+                    .build();
+        }
+        // nm valu niche che e orio vala version ma use thay che.
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            nm.createNotificationChannel(new NotificationChannel(CHANNEL_ID, "new channel", NotificationManager.IMPORTANCE_HIGH));
+        }
+        else {
+            notification = new Notification.Builder(this)
+                    .setLargeIcon(LargeIcon)
+                    .setSmallIcon(R.drawable.appicn)
+                    .setContentTitle("Android Point")
+                    .setSubText("Basic code in Android Studio")
+                    .build();
+        }
+        nm.notify(NOTIFICATION_ID,notification);
+    }
+
+*/
 
 }
 

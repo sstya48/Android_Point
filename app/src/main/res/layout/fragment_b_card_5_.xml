@@ -49,7 +49,6 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
                     android:layout_marginStart="5dp"
                     android:layout_marginEnd="5dp"
                     android:padding="7dp"
@@ -62,6 +61,7 @@
                         android:layout_height="wrap_content"
                         android:paddingBottom="20dp"
                         android:padding="10dp"
+                        android:layout_marginTop="10dp"
                         android:gravity="clip_vertical"
                         android:text="@string/mainactivity"
                         android:textSize="16sp"
@@ -117,6 +117,18 @@
                         android:scrollbarStyle="insideInset"
                         android:layout_marginBottom="20dp"
                         android:scrollbars="vertical" />
+
+                    <ImageView
+                        android:id="@+id/helloworld_yt"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/movie"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:visibility="visible"
+                        android:background="?android:attr/selectableItemBackgroundBorderless" />
+
 
                 </LinearLayout>
 

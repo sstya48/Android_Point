@@ -16,9 +16,9 @@
             android:id="@+id/Btn_arrow"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:layout_marginTop="13dp"
-            android:layout_marginStart="10dp"
             android:layout_gravity="center_vertical"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="13dp"
             android:layout_marginBottom="12dp"
             android:padding="6dp"
             android:src="@drawable/arrow" />
@@ -26,11 +26,11 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="5dp"
-            android:text="@string/Screen_Orientation"
             android:layout_gravity="center_vertical"
-            android:textColor="#181A20"
+            android:layout_marginStart="5dp"
             android:fontFamily="@font/poppins_semibold"
+            android:text="@string/Screen_Orientation"
+            android:textColor="#181A20"
             android:textSize="20sp"
             android:textStyle="bold" />
     </LinearLayout>
@@ -41,14 +41,11 @@
 
         <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-
-            >
+            android:layout_height="wrap_content">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
                 android:layout_marginStart="5dp"
                 android:layout_marginEnd="5dp"
                 android:padding="7dp"
@@ -61,6 +58,7 @@
                     android:layout_height="wrap_content"
                     android:paddingBottom="20dp"
                     android:padding="10dp"
+                    android:layout_marginTop="10dp"
                     android:gravity="clip_vertical"
                     android:text="@string/mainactivity"
                     android:textSize="16sp"
@@ -211,7 +209,16 @@
                     android:scrollbars="vertical" />
 
 
-
+                <ImageView
+                    android:id="@+id/helloworld_yt"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/movie"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:visibility="visible"
+                    android:background="?android:attr/selectableItemBackgroundBorderless" />
 
             </LinearLayout>
 

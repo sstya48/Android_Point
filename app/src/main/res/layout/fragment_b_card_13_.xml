@@ -28,7 +28,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:layout_marginStart="5dp"
-            android:text="@string/Explicit_Intent"
+            android:text="@string/Explicit_iIntent"
             android:fontFamily="@font/poppins_semibold"
             android:textColor="#181A20"
             android:textSize="20sp"

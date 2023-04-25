@@ -48,25 +48,37 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="5dp"
-                android:layout_marginTop="10dp"
                 android:layout_marginEnd="5dp"
+                android:padding="7dp"
                 android:layout_marginBottom="20dp"
-                android:orientation="vertical"
-                android:padding="7dp">
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/helloworld_yt"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/movie"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:visibility="visible"
+                    android:background="?android:attr/selectableItemBackgroundBorderless" />
 
                 <TextView
                     android:id="@+id/java_code"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="15dp"
-                    android:background="@drawable/code_title_bg"
-                    android:fontFamily="@font/poppins_semibold"
-                    android:gravity="clip_vertical"
-                    android:padding="10dp"
                     android:paddingBottom="20dp"
+                    android:padding="10dp"
+                    android:layout_marginTop="10dp"
+                    android:gravity="clip_vertical"
                     android:text="@string/mainactivity"
+                    android:textSize="16sp"
+                    android:background="@drawable/code_title_bg"
                     android:textColor="@color/white"
-                    android:textSize="16sp" />
+                    android:fontFamily="@font/poppins_semibold"
+                    android:layout_marginBottom="15dp"
+                    />
 
                 <TextView
                     android:id="@+id/radio_java"

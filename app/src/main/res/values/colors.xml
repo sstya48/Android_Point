@@ -76,11 +76,42 @@
 
 
     <color name="skyblue">#BADAFB</color>
+    <color name="pink">#f498ad</color>
+    <color name="maroon">#9d2933</color>
+    <color name="dark_purple">#740d79</color>
+    <color name="navy_blue">#265369</color>
+    <color name="peach">#699475</color>
 
 
 
     <!--    <color name="transparent">#00000000</color>-->
 
+
+    <integer-array name="androidtext">
+        <item>@color/mango</item>
+        <item>@color/blue_light</item>
+        <item>@color/green</item>
+        <item>@color/lavender</item>
+        <item>@color/orange</item>
+        <item>@color/red</item>
+        <item>@color/blue</item>
+        <item>@color/yello</item>
+        <item>@color/green1</item>
+        <item>@color/lightpeach</item>
+        <item>@color/blue_dark</item>
+        <item>@color/active</item>
+    </integer-array>
+
+    <integer-array name="androidcolors">
+        <item>@color/red</item>
+        <item>@color/dark_purple</item>
+        <item>@color/mango</item>
+        <item>@color/green</item>
+        <item>@color/pink</item>
+        <item>@color/maroon</item>
+        <item>@color/navy_blue</item>
+        <item>@color/peach</item>
+    </integer-array>
 
 
 </resources>

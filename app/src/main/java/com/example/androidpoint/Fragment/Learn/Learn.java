@@ -81,6 +81,8 @@ public class Learn extends Fragment {
         recyclerView.setHasFixedSize(true);
         recyclerView.setAdapter(myAdapter);
 
+
+
         db= FirebaseFirestore.getInstance();
 
 

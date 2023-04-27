@@ -1,9 +1,12 @@
 package com.example.androidpoint.Fragment.Advance;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.appcompat.widget.AppCompatImageView;
+import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
@@ -17,6 +20,8 @@ public class A_card_14_Fragment extends Fragment {
     TextView insta_java, insta_xml, Drawable_Color, Drawable_Border, Drawable_arrow;
     AppCompatImageView Btn_arrow;
     ImageView insta_output;
+
+    CardView insta_login_yt;
     @SuppressLint({"MissingInflatedId", "SetTextI18n"})
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -24,6 +29,7 @@ public class A_card_14_Fragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_a_card_14_, container, false);
 
         Btn_arrow=view.findViewById(R.id.Btn_arrow);
+        insta_login_yt=view.findViewById(R.id.insta_login_yt);
         Btn_arrow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -34,6 +40,14 @@ public class A_card_14_Fragment extends Fragment {
                         .commit();
             }
         });
+
+        insta_login_yt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                gotoUrl("https://www.youtube.com/watch?v=2tmr6mlQ3H0");
+            }
+        });
+
         insta_output = view.findViewById(R.id.insta_output);
         insta_java = view.findViewById(R.id.insta_java);
         insta_xml = view.findViewById(R.id.insta_xml);
@@ -253,5 +267,9 @@ public class A_card_14_Fragment extends Fragment {
                 "</vector>\n");
 
         return view;
+    }
+    private void gotoUrl(String s) {
+        Uri uri = Uri.parse(s);
+        startActivity(new Intent(Intent.ACTION_VIEW,uri));
     }
 }

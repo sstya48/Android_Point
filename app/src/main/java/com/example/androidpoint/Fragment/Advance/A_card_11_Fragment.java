@@ -1,9 +1,12 @@
 package com.example.androidpoint.Fragment.Advance;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.appcompat.widget.AppCompatImageView;
+import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
@@ -17,7 +20,9 @@ public class A_card_11_Fragment extends Fragment {
     TextView bar_java, bar_xml, bar_gridal_permission;
     AppCompatImageView Btn_arrow;
     ImageView bar_output;
-    @SuppressLint("SetTextI18n")
+
+    CardView bar_chart_yt;
+    @SuppressLint({"SetTextI18n", "MissingInflatedId"})
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -38,6 +43,7 @@ public class A_card_11_Fragment extends Fragment {
         bar_output = view.findViewById(R.id.bar_output);
         bar_java = view.findViewById(R.id.bar_java);
         bar_xml = view.findViewById(R.id.bar_xml);
+        bar_chart_yt = view.findViewById(R.id.bar_chart_yt);
         bar_gridal_permission = view.findViewById(R.id.bar_gridal_permission);
 
 
@@ -53,7 +59,12 @@ public class A_card_11_Fragment extends Fragment {
             }
         });
 
-
+        bar_chart_yt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                gotoUrl("https://www.youtube.com/watch?v=DPP5Mq4oxAQ");
+            }
+        });
 
         bar_java.setText("import android.androidalians.barchart;\n" +
                 "import android.os.Bundle;\n" +
@@ -175,5 +186,9 @@ public class A_card_11_Fragment extends Fragment {
         bar_gridal_permission.setTextIsSelectable(true);
 
         return view;
+    }
+    private void gotoUrl(String s) {
+        Uri uri = Uri.parse(s);
+        startActivity(new Intent(Intent.ACTION_VIEW,uri));
     }
 }

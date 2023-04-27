@@ -1,9 +1,12 @@
 package com.example.androidpoint.Fragment.Advance;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.appcompat.widget.AppCompatImageView;
+import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
@@ -17,6 +20,8 @@ public class A_card_12_Fragment extends Fragment {
     TextView line_java, line_xml, line_gridal_permission;
     AppCompatImageView Btn_arrow;
     ImageView line_output;
+
+    CardView line_chart_yt;
     @SuppressLint("SetTextI18n")
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -37,6 +42,7 @@ public class A_card_12_Fragment extends Fragment {
         line_output = view.findViewById(R.id.line_output);
         line_java = view.findViewById(R.id.line_java);
         line_xml = view.findViewById(R.id.line_xml);
+        line_chart_yt = view.findViewById(R.id.line_chart_yt);
         line_gridal_permission = view.findViewById(R.id.line_gridal_permission);
 
         line_output.setOnClickListener(new View.OnClickListener() {
@@ -50,7 +56,12 @@ public class A_card_12_Fragment extends Fragment {
                         .commit();
             }
         });
-
+        line_chart_yt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                gotoUrl("https://www.youtube.com/watch?v=9gfp_nT8p7g");
+            }
+        });
         line_java.setText("package example.androidalianslinechart;\n" +
                 "import android.annotation.SuppressLint;\n" +
                 "import android.os.Bundle;\n" +
@@ -143,5 +154,9 @@ public class A_card_12_Fragment extends Fragment {
         line_gridal_permission.setTextIsSelectable(true);
 
         return view;
+    }
+    private void gotoUrl(String s) {
+        Uri uri = Uri.parse(s);
+        startActivity(new Intent(Intent.ACTION_VIEW,uri));
     }
 }

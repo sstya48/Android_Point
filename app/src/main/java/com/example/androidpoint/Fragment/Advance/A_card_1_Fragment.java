@@ -1,9 +1,12 @@
 package com.example.androidpoint.Fragment.Advance;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.appcompat.widget.AppCompatImageView;
+import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
@@ -14,6 +17,8 @@ import android.widget.TextView;
 
 import com.example.androidpoint.R;
 public class A_card_1_Fragment extends Fragment {
+
+    CardView splash_screen_yt;
     TextView splash_xml, splash_java, splash_main_java, splash_main_xml, gridal_permission;
     ImageView spalshscreen_output;
     AppCompatImageView Btn_arrow;
@@ -30,6 +35,7 @@ public class A_card_1_Fragment extends Fragment {
         spalshscreen_output= view.findViewById(R.id.spalshscreen_output);
         gridal_permission= view.findViewById(R.id.gridal_permission);
         Btn_arrow=view.findViewById(R.id.Btn_arrow);
+        splash_screen_yt=view.findViewById(R.id.splash_screen_yt);
         Btn_arrow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -38,6 +44,13 @@ public class A_card_1_Fragment extends Fragment {
                         .replace(R.id.frame_container, advance, "Back Button Basic")
                         .addToBackStack(null)
                         .commit();
+            }
+        });
+
+        splash_screen_yt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                gotoUrl("https://www.youtube.com/watch?v=zFuVohq_qvM");
             }
         });
         spalshscreen_output.setOnClickListener(new View.OnClickListener() {
@@ -149,5 +162,9 @@ public class A_card_1_Fragment extends Fragment {
         splash_main_xml.setTextIsSelectable(true);
 
         return view;
+    }
+    private void gotoUrl(String s) {
+        Uri uri = Uri.parse(s);
+        startActivity(new Intent(Intent.ACTION_VIEW,uri));
     }
 }

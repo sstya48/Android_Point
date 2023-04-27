@@ -267,7 +267,6 @@ public class Basic extends Fragment {
             }
         });
 
-
         return view;
     }
 }

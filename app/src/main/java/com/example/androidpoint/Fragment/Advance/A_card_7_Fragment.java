@@ -1,9 +1,12 @@
 package com.example.androidpoint.Fragment.Advance;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.appcompat.widget.AppCompatImageView;
+import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
@@ -17,6 +20,8 @@ public class A_card_7_Fragment extends Fragment {
     TextView progress_java, progress_xml;
     ImageView progress_output;
     AppCompatImageView Btn_arrow;
+
+    CardView progress_bar_yt;
     @SuppressLint({"MissingInflatedId", "SetTextI18n"})
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -25,6 +30,7 @@ public class A_card_7_Fragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_a_card_7_, container, false);
 
         Btn_arrow=view.findViewById(R.id.Btn_arrow);
+        progress_bar_yt=view.findViewById(R.id.progress_bar_yt);
 
         Btn_arrow.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -49,6 +55,13 @@ public class A_card_7_Fragment extends Fragment {
                         .replace(R.id.frame_container, scroll_demo, "SCROLL DEMO")
                         .addToBackStack(null)
                         .commit();
+            }
+        });
+
+        progress_bar_yt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                gotoUrl("https://www.youtube.com/watch?v=KkfGfrABE7o");
             }
         });
         progress_java.setTextIsSelectable(true);
@@ -119,5 +132,9 @@ public class A_card_7_Fragment extends Fragment {
                 "</RelativeLayout>");
 
         return view;
+    }
+    private void gotoUrl(String s) {
+        Uri uri = Uri.parse(s);
+        startActivity(new Intent(Intent.ACTION_VIEW,uri));
     }
 }

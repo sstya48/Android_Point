@@ -1,9 +1,12 @@
 package com.example.androidpoint.Fragment.Advance;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.appcompat.widget.AppCompatImageView;
+import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
@@ -17,6 +20,8 @@ public class A_card_10_Fragment extends Fragment {
     TextView reg_java, reg_xml, reg_gridal_permission;
     AppCompatImageView Btn_arrow;
     ImageView reg_output;
+
+    CardView reg_page_yt;
     @SuppressLint("SetTextI18n")
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -38,8 +43,15 @@ public class A_card_10_Fragment extends Fragment {
         reg_output = view.findViewById(R.id.reg_output);
         reg_java = view.findViewById(R.id.reg_java);
         reg_xml = view.findViewById(R.id.reg_xml);
+        reg_page_yt = view.findViewById(R.id.reg_page_yt);
         reg_gridal_permission = view.findViewById(R.id.reg_gridal_permission);
 
+        reg_page_yt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                gotoUrl("https://www.youtube.com/watch?v=y0FX0jLtFxE");
+            }
+        });
 
         reg_output.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -252,5 +264,9 @@ public class A_card_10_Fragment extends Fragment {
                 "}");
 
         return view;
+    }
+    private void gotoUrl(String s) {
+        Uri uri = Uri.parse(s);
+        startActivity(new Intent(Intent.ACTION_VIEW,uri));
     }
 }

@@ -1,9 +1,12 @@
 package com.example.androidpoint.Fragment.Advance;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.appcompat.widget.AppCompatImageView;
+import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
@@ -17,6 +20,7 @@ import com.example.androidpoint.R;
 
 public class A_card_4_Fragment extends Fragment {
 
+    CardView alert_dialog_yt;
     TextView alert_java, alert_xml, custom_alert_xml;
     ImageView alert_output;
 
@@ -29,6 +33,7 @@ public class A_card_4_Fragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_a_card_4_, container, false);
 
         Btn_arrow=view.findViewById(R.id.Btn_arrow);
+        alert_dialog_yt=view.findViewById(R.id.alert_dialog_yt);
 
         Btn_arrow.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -55,6 +60,13 @@ public class A_card_4_Fragment extends Fragment {
                         .replace(R.id.frame_container, scroll_demo, "SCROLL DEMO")
                         .addToBackStack(null)
                         .commit();
+            }
+        });
+
+        alert_dialog_yt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                gotoUrl("https://www.youtube.com/watch?v=QqaOM3y5PrM");
             }
         });
 
@@ -201,5 +213,9 @@ public class A_card_4_Fragment extends Fragment {
         custom_alert_xml.setTextIsSelectable(true);
 
         return view;
+    }
+    private void gotoUrl(String s) {
+        Uri uri = Uri.parse(s);
+        startActivity(new Intent(Intent.ACTION_VIEW,uri));
     }
 }

@@ -4,12 +4,14 @@ import static androidx.biometric.BiometricManager.Authenticators.BIOMETRIC_STRON
 import static androidx.biometric.BiometricManager.Authenticators.DEVICE_CREDENTIAL;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.widget.AppCompatImageView;
 import androidx.biometric.BiometricManager;
 import androidx.biometric.BiometricPrompt;
+import androidx.cardview.widget.CardView;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 
@@ -34,6 +36,7 @@ public class A_A21_Fragment extends Fragment {
     private BiometricPrompt biometricPrompt;
     private BiometricPrompt.PromptInfo promptInfo;
 
+    CardView fingur_print_yt;
     AppCompatImageView Btn_arrow;
 
     @Override
@@ -43,6 +46,7 @@ public class A_A21_Fragment extends Fragment {
 
 
         Btn_arrow=view.findViewById(R.id.Btn_arrow);
+        fingur_print_yt=view.findViewById(R.id.fingur_print_yt);
 
         Btn_arrow.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -52,6 +56,13 @@ public class A_A21_Fragment extends Fragment {
                         .replace(R.id.frame_container, A_card_21_Fragment, "Back Button Basic")
                         .addToBackStack(null)
                         .commit();
+            }
+        });
+
+        fingur_print_yt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                gotoUrl("https://www.youtube.com/watch?v=61eCsySkjH0&t=664s");
             }
         });
 
@@ -112,8 +123,10 @@ public class A_A21_Fragment extends Fragment {
             biometricPrompt.authenticate(promptInfo);
         });
 
-
-
         return view;
+    }
+    private void gotoUrl(String s) {
+        Uri uri = Uri.parse(s);
+        startActivity(new Intent(Intent.ACTION_VIEW,uri));
     }
 }

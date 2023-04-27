@@ -1,9 +1,12 @@
 package com.example.androidpoint.Fragment.Advance;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.appcompat.widget.AppCompatImageView;
+import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
@@ -19,6 +22,7 @@ public class A_card_6_Fragment extends Fragment {
     AppCompatImageView Btn_arrow;
     ImageView webview_output;
 
+    CardView web_view_yt;
     @SuppressLint({"SetTextI18n", "MissingInflatedId"})
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -41,6 +45,7 @@ public class A_card_6_Fragment extends Fragment {
         webview_java = view.findViewById(R.id.webview_java);
         webview_xml = view.findViewById(R.id.webview_xml);
         manifest_xml = view.findViewById(R.id.manifest_xml);
+        web_view_yt = view.findViewById(R.id.web_view_yt);
 
         webview_output.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -53,6 +58,13 @@ public class A_card_6_Fragment extends Fragment {
                         .commit();
             }
         });
+        web_view_yt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                gotoUrl("https://www.youtube.com/watch?v=545zjNc9tnY");
+            }
+        });
+
         manifest_xml.setTextIsSelectable(true);
         manifest_xml.setText("<?xml version=\"1.0\" encoding=\"utf-8\"?>\n" +
                 "<manifest xmlns:android=\"http://schemas.android.com/apk/res/android\"\n" +
@@ -171,5 +183,9 @@ public class A_card_6_Fragment extends Fragment {
                 "</LinearLayout>");
 
         return view;
+    }
+    private void gotoUrl(String s) {
+        Uri uri = Uri.parse(s);
+        startActivity(new Intent(Intent.ACTION_VIEW,uri));
     }
 }

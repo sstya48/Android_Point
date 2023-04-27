@@ -1,9 +1,12 @@
 package com.example.androidpoint.Fragment.Advance;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.appcompat.widget.AppCompatImageView;
+import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
@@ -17,6 +20,8 @@ public class A_card_13_Fragment extends Fragment {
     TextView pie_java, pie_xml, pie_gridal_permission;
     AppCompatImageView Btn_arrow;
     ImageView pie_output;
+
+    CardView pie_chart_yt;
     @SuppressLint("SetTextI18n")
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -24,6 +29,7 @@ public class A_card_13_Fragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_a_card_13_, container, false);
 
         Btn_arrow=view.findViewById(R.id.Btn_arrow);
+        pie_chart_yt=view.findViewById(R.id.pie_chart_yt);
         Btn_arrow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -32,6 +38,13 @@ public class A_card_13_Fragment extends Fragment {
                         .replace(R.id.frame_container, advance, "Back Button Basic")
                         .addToBackStack(null)
                         .commit();
+            }
+        });
+
+        pie_chart_yt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                gotoUrl("https://www.youtube.com/watch?v=bz6ax3rpK4Q");
             }
         });
 
@@ -145,5 +158,9 @@ public class A_card_13_Fragment extends Fragment {
                 "}");
         pie_gridal_permission.setTextIsSelectable(true);
         return view;
+    }
+    private void gotoUrl(String s) {
+        Uri uri = Uri.parse(s);
+        startActivity(new Intent(Intent.ACTION_VIEW,uri));
     }
 }

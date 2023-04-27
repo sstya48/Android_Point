@@ -3,9 +3,12 @@ package com.example.androidpoint.Fragment.Advance;
 import static com.example.androidpoint.R.*;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.appcompat.widget.AppCompatImageView;
+import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
@@ -19,6 +22,7 @@ import com.example.androidpoint.R;
 
 public class A_card_8_Fragment extends Fragment {
 
+    CardView image_slider_yt;
     TextView imageslider_java, imageslider_xml, manifest_xml;
     ImageView imageslider_output;
 
@@ -30,6 +34,7 @@ public class A_card_8_Fragment extends Fragment {
         View view = inflater.inflate(layout.fragment_a_card_8_, container, false);
 
         Btn_arrow=view.findViewById(R.id.Btn_arrow);
+        image_slider_yt=view.findViewById(R.id.image_slider_yt);
 
         Btn_arrow.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -39,6 +44,13 @@ public class A_card_8_Fragment extends Fragment {
                         .replace(R.id.frame_container, advance, "Back Button Basic")
                         .addToBackStack(null)
                         .commit();
+            }
+        });
+
+        image_slider_yt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                gotoUrl("https://www.youtube.com/watch?v=CXciks5lYm0");
             }
         });
 
@@ -163,5 +175,9 @@ public class A_card_8_Fragment extends Fragment {
                 "</LinearLayout>");
 
         return view;
+    }
+    private void gotoUrl(String s) {
+        Uri uri = Uri.parse(s);
+        startActivity(new Intent(Intent.ACTION_VIEW,uri));
     }
 }

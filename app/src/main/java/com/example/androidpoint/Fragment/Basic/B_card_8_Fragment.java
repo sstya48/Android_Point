@@ -21,9 +21,8 @@ public class B_card_8_Fragment extends Fragment {
 
     TextView datepicker_java,datepicker_xml;
     CardView datepicker_yt;
-    AppCompatImageView datepicker_demo,Btn_arrow;
+    AppCompatImageView datepicker_demo,Btn_arrow,datePicker_code_arrow;
 
-    AppCompatImageView datepicker_demo,datePicker_code_arrow;
 
     @SuppressLint({"SetTextI18n", "MissingInflatedId"})
     @Override

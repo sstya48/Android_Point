@@ -37,7 +37,6 @@ public class B_card_11_Fragment extends Fragment {
 
         serchview_demo= view.findViewById(R.id.serchview_demo);
 
-        Btn_arrow=view.findViewById(R.id.Btn_arrow);
         serchview_yt=view.findViewById(R.id.serchview_yt);
         search_code_arrow=view.findViewById(R.id.search_code_arrow);
 

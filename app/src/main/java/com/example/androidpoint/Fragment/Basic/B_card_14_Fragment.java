@@ -35,9 +35,8 @@ public class B_card_14_Fragment extends Fragment {
         option_xml_menu.setTextIsSelectable(true);
 
         optionMenu_demo = view.findViewById(R.id.optionMenu_demo);
-        Btn_arrow = view.findViewById(R.id.Btn_arrow);
         option_menu_yt = view.findViewById(R.id.option_menu_yt);
-        Btn_arrow.setOnClickListener(new View.OnClickListener() {
+
         optionmenu_code_arrow = view.findViewById(R.id.optionmenu_code_arrow);
         optionmenu_code_arrow.setOnClickListener(new View.OnClickListener() {
             @Override

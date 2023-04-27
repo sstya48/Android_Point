@@ -21,7 +21,6 @@ public class B_card_15_Fragment extends Fragment {
     TextView contextMenu_java,contextMenu_xml;
     AppCompatImageView contextMenu_demo,contextMenu_Code_arrow;
     @SuppressLint({"SetTextI18n", "MissingInflatedId"})
-    AppCompatImageView contextMenu_demo,Btn_arrow;
 
     CardView context_menu_yt;
     @SuppressLint("SetTextI18n")
@@ -37,7 +36,6 @@ public class B_card_15_Fragment extends Fragment {
         contextMenu_xml.setTextIsSelectable(true);
 
         contextMenu_demo = view.findViewById(R.id.contextMenu_demo);
-        Btn_arrow = view.findViewById(R.id.Btn_arrow);
         context_menu_yt = view.findViewById(R.id.context_menu_yt);
         contextMenu_Code_arrow = view.findViewById(R.id.contextMenu_Code_arrow);
 

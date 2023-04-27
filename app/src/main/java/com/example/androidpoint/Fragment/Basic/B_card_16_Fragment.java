@@ -20,7 +20,6 @@ import com.example.androidpoint.R;
 public class B_card_16_Fragment extends Fragment {
     TextView popup_java,popup_xml,popup_xml_menu;
     AppCompatImageView popup_demo,popUpMenu_Code_arrow;
-    AppCompatImageView popup_demo,Btn_arrow;
 
     CardView popup_menu_yt;
     @SuppressLint({"SetTextI18n", "MissingInflatedId"})
@@ -40,7 +39,6 @@ public class B_card_16_Fragment extends Fragment {
 
         popup_demo = view.findViewById(R.id.popup_demo);
         popUpMenu_Code_arrow = view.findViewById(R.id.popUpMenu_Code_arrow);
-        Btn_arrow = view.findViewById(R.id.Btn_arrow);
         popup_menu_yt = view.findViewById(R.id.popup_menu_yt);
 
         popUpMenu_Code_arrow.setOnClickListener(new View.OnClickListener() {

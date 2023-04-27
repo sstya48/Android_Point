@@ -22,9 +22,8 @@ public class B_card_2_Fragment extends Fragment {
 
     TextView activity_lifecycle_xml,activity_lifecycle_java;
     CardView lifecycle_yt;
-    AppCompatImageView Btn_arrow,activity_cycle_demo;
+    AppCompatImageView Btn_arrow,activity_cycle_demo, cycle_code_arrow;
 
-    AppCompatImageView cycle_code_arrow,activity_cycle_demo;
 
 
     @SuppressLint({"SetTextI18n", "MissingInflatedId"})

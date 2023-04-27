@@ -27,7 +27,6 @@ public class B_card_9_Fragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_b_card_9_, container, false);
 
 
@@ -39,7 +38,6 @@ public class B_card_9_Fragment extends Fragment {
 
         timepicker_demo = view.findViewById(R.id.timepicker_demo);
 
-        Btn_arrow = view.findViewById(R.id.Btn_arrow);
         timepicker_yt = view.findViewById(R.id.timepicker_yt);
         timePicker_code_arrow = view.findViewById(R.id.timePicker_code_arrow);
 

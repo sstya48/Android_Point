@@ -19,6 +19,8 @@ import com.example.androidpoint.R;
 
 public class B_card_15_Fragment extends Fragment {
     TextView contextMenu_java,contextMenu_xml;
+    AppCompatImageView contextMenu_demo,contextMenu_Code_arrow;
+    @SuppressLint({"SetTextI18n", "MissingInflatedId"})
     AppCompatImageView contextMenu_demo,Btn_arrow;
 
     CardView context_menu_yt;
@@ -37,14 +39,14 @@ public class B_card_15_Fragment extends Fragment {
         contextMenu_demo = view.findViewById(R.id.contextMenu_demo);
         Btn_arrow = view.findViewById(R.id.Btn_arrow);
         context_menu_yt = view.findViewById(R.id.context_menu_yt);
+        contextMenu_Code_arrow = view.findViewById(R.id.contextMenu_Code_arrow);
 
-        Btn_arrow.setOnClickListener(new View.OnClickListener() {
+        contextMenu_Code_arrow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Basic basic = new Basic();
                 getActivity().getSupportFragmentManager().beginTransaction()
                         .replace(R.id.frame_container, basic, "Back Button Basic")
-                        .addToBackStack(null)
                         .commit();
             }
         });
@@ -62,7 +64,6 @@ public class B_card_15_Fragment extends Fragment {
                 ContextMenuFragment contextMenuFragment = new ContextMenuFragment();
                 getActivity().getSupportFragmentManager().beginTransaction()
                         .replace(R.id.frame_container, contextMenuFragment, "Context Menu Demo")
-                        .addToBackStack(null)
                         .commit();
             }
         });

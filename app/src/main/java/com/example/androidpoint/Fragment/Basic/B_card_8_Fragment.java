@@ -23,6 +23,8 @@ public class B_card_8_Fragment extends Fragment {
     CardView datepicker_yt;
     AppCompatImageView datepicker_demo,Btn_arrow;
 
+    AppCompatImageView datepicker_demo,datePicker_code_arrow;
+
     @SuppressLint({"SetTextI18n", "MissingInflatedId"})
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -41,14 +43,14 @@ public class B_card_8_Fragment extends Fragment {
 
         Btn_arrow=view.findViewById(R.id.Btn_arrow);
         datepicker_yt = view.findViewById(R.id.datepicker_yt);
+        datePicker_code_arrow=view.findViewById(R.id.datePicker_code_arrow);
 
-        Btn_arrow.setOnClickListener(new View.OnClickListener() {
+        datePicker_code_arrow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Basic basic= new Basic();
                 getActivity().getSupportFragmentManager().beginTransaction()
-                        .replace(R.id.frame_container, basic, "Back Button Basic")
-                        .addToBackStack(null)
+                        .replace(R.id.frame_container, basic, "DatePicker Code Back")
                         .commit();
             }
         });
@@ -65,7 +67,6 @@ public class B_card_8_Fragment extends Fragment {
                 DatePickerFragment datePickerFragment= new DatePickerFragment();
                 getActivity().getSupportFragmentManager().beginTransaction()
                         .replace(R.id.frame_container, datePickerFragment, "Date Picker DEMO")
-                        .addToBackStack(null)
                         .commit();
             }
         });

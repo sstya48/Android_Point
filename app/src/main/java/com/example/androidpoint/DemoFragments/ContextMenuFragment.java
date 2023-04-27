@@ -12,12 +12,15 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import androidx.appcompat.widget.AppCompatImageView;
 import androidx.fragment.app.Fragment;
 
+import com.example.androidpoint.Fragment.Basic.B_card_15_Fragment;
 import com.example.androidpoint.R;
 
 public class ContextMenuFragment extends Fragment {
 
+    AppCompatImageView contextMenu_Demo_arrow;
     TextView textView;
     LinearLayout relativeLayout;
 
@@ -37,15 +40,28 @@ public class ContextMenuFragment extends Fragment {
         super.onCreate(savedInstanceState);
     }
 
+    @SuppressLint("MissingInflatedId")
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
         View view = inflater.inflate(R.layout.fragment_context_menu, container, false);
 
+        contextMenu_Demo_arrow = view.findViewById(R.id.contextMenu_Demo_arrow);
+
         textView = view.findViewById(R.id.textView);
         relativeLayout = view.findViewById(R.id.relLayout);
         registerForContextMenu(textView);
+
+        contextMenu_Demo_arrow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                B_card_15_Fragment ContextMenu= new B_card_15_Fragment();
+                getActivity().getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.frame_container, ContextMenu, "ContextMenu Demo Back")
+                        .commit();
+            }
+        });
         return view;
     }
 

@@ -24,6 +24,7 @@ public class B_card_1_Fragment extends Fragment {
     AppCompatImageView hello_toast_demo;
     AppCompatImageView Btn_arrow;
     CardView helloworld_yt;
+    AppCompatImageView Hello_code_arrow;
     @SuppressLint({"SetTextI18n", "MissingInflatedId"})
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -40,8 +41,8 @@ public class B_card_1_Fragment extends Fragment {
 
         hello_toast_demo= view.findViewById(R.id.hello_toast_demo);
 
-        Btn_arrow=view.findViewById(R.id.Btn_arrow);
-        Btn_arrow.setOnClickListener(new View.OnClickListener() {
+        Hello_code_arrow=view.findViewById(R.id.Hello_code_arrow);
+        Hello_code_arrow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Basic basic= new Basic();

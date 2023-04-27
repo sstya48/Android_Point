@@ -15,7 +15,7 @@ import com.example.androidpoint.DemoFragments.ListViewFragment;
 import com.example.androidpoint.R;
 
 public class B_card_7_Fragment extends Fragment {
-    AppCompatImageView listview_demo,Btn_arrow;
+    AppCompatImageView listview_demo,listView_code_arrow;
     TextView list_string,list_xml,list_java,mylist_xml;
 
     @SuppressLint({"MissingInflatedId", "SetTextI18n"})
@@ -39,15 +39,14 @@ public class B_card_7_Fragment extends Fragment {
 
         listview_demo=view.findViewById(R.id.listview_demo);
 
-        Btn_arrow=view.findViewById(R.id.Btn_arrow);
+        listView_code_arrow=view.findViewById(R.id.listView_code_arrow);
 
-        Btn_arrow.setOnClickListener(new View.OnClickListener() {
+        listView_code_arrow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Basic basic= new Basic();
                 getActivity().getSupportFragmentManager().beginTransaction()
-                        .replace(R.id.frame_container, basic, "Back Button Basic")
-                        .addToBackStack(null)
+                        .replace(R.id.frame_container, basic, "ListView Code Back")
                         .commit();
             }
         });
@@ -58,7 +57,6 @@ public class B_card_7_Fragment extends Fragment {
                 ListViewFragment listViewFragment= new ListViewFragment();
                 getActivity().getSupportFragmentManager().beginTransaction()
                         .replace(R.id.frame_container, listViewFragment, "ListView DEMO")
-                        .addToBackStack(null)
                         .commit();
             }
         });

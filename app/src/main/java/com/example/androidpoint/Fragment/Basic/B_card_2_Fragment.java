@@ -13,6 +13,8 @@ import androidx.appcompat.widget.AppCompatImageView;
 import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 
+import com.example.androidpoint.DemoFragments.ActivityLifeCycle_Fragment;
+import com.example.androidpoint.DemoFragments.Hello_World_Fragment;
 import com.example.androidpoint.R;
 
 
@@ -22,8 +24,10 @@ public class B_card_2_Fragment extends Fragment {
     CardView lifecycle_yt;
     AppCompatImageView Btn_arrow,activity_cycle_demo;
 
+    AppCompatImageView cycle_code_arrow,activity_cycle_demo;
 
-    @SuppressLint("SetTextI18n")
+
+    @SuppressLint({"SetTextI18n", "MissingInflatedId"})
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -40,15 +44,14 @@ public class B_card_2_Fragment extends Fragment {
 
         activity_cycle_demo= view.findViewById(R.id.activity_cycle_demo);
 
-        Btn_arrow=view.findViewById(R.id.Btn_arrow);
+        cycle_code_arrow=view.findViewById(R.id.cycle_code_arrow);
 
-        Btn_arrow.setOnClickListener(new View.OnClickListener() {
+        cycle_code_arrow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Basic basic= new Basic();
                 getActivity().getSupportFragmentManager().beginTransaction()
-                        .replace(R.id.frame_container, basic, "Back Button Basic")
-                        .addToBackStack(null)
+                        .replace(R.id.frame_container, basic, "Activity Code Back")
                         .commit();
             }
         });
@@ -63,6 +66,10 @@ public class B_card_2_Fragment extends Fragment {
             @Override
             public void onClick(View view) {
 
+                ActivityLifeCycle_Fragment activityCycle_demo= new ActivityLifeCycle_Fragment();
+                getActivity().getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.frame_container, activityCycle_demo, "activityCycle DEMO")
+                        .commit();
             }
         });
 

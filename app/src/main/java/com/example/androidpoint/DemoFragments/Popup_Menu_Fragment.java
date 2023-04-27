@@ -1,7 +1,9 @@
 package com.example.androidpoint.DemoFragments;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 
+import androidx.appcompat.widget.AppCompatImageView;
 import androidx.appcompat.widget.PopupMenu;
 import androidx.fragment.app.Fragment;
 
@@ -13,9 +15,11 @@ import android.widget.Button;
 import android.widget.Toast;
 
 import com.example.androidpoint.Activity.MainActivity;
+import com.example.androidpoint.Fragment.Basic.B_card_16_Fragment;
 import com.example.androidpoint.R;
 public class Popup_Menu_Fragment extends Fragment {
 
+    AppCompatImageView popUp_Demo_arrow;
     Button button;
 
     public Popup_Menu_Fragment() {
@@ -34,10 +38,13 @@ public class Popup_Menu_Fragment extends Fragment {
         super.onCreate(savedInstanceState);
     }
 
+    @SuppressLint("MissingInflatedId")
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view= inflater.inflate(R.layout.fragment_popup__menu_, container, false);
+
+        popUp_Demo_arrow=view.findViewById(R.id.popUp_Demo_arrow);
 
         button=view.findViewById(R.id.button);
 
@@ -56,6 +63,16 @@ public class Popup_Menu_Fragment extends Fragment {
                     }
                 });
                 popup.show();
+            }
+        });
+
+        popUp_Demo_arrow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                B_card_16_Fragment PopupMenu= new B_card_16_Fragment();
+                getActivity().getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.frame_container, PopupMenu, "PopupMenu Demo Back")
+                        .commit();
             }
         });
 

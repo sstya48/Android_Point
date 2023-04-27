@@ -10,17 +10,20 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.androidpoint.Fragment.Basic.B_card_14_Fragment;
+import com.example.androidpoint.Fragment.Basic.B_card_2_Fragment;
 import com.example.androidpoint.R;
 
-public class OptionMenuFragment extends Fragment {
 
-    AppCompatImageView optionMenu_demo_arrow;
-    public OptionMenuFragment() {
+public class ActivityLifeCycle_Fragment extends Fragment {
+
+    AppCompatImageView cycle_demo_arrow;
+
+    public ActivityLifeCycle_Fragment() {
         // Required empty public constructor
     }
-    public static OptionMenuFragment newInstance() {
-        OptionMenuFragment fragment = new OptionMenuFragment();
+
+  public static ActivityLifeCycle_Fragment newInstance() {
+        ActivityLifeCycle_Fragment fragment = new ActivityLifeCycle_Fragment();
         Bundle args = new Bundle();
         fragment.setArguments(args);
         return fragment;
@@ -35,22 +38,22 @@ public class OptionMenuFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view= inflater.inflate(R.layout.fragment_option_menu, container, false);
+
+        View view=inflater.inflate(R.layout.fragment_activity_life_cycle_, container, false);
 
 
-        optionMenu_demo_arrow=view.findViewById(R.id.optionMenu_demo_arrow);
+        cycle_demo_arrow=view.findViewById(R.id.cycle_demo_arrow);
 
-        optionMenu_demo_arrow.setOnClickListener(new View.OnClickListener() {
+        cycle_demo_arrow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                B_card_14_Fragment OptionMenu= new B_card_14_Fragment();
+                B_card_2_Fragment ActivityLifeBackFrag= new B_card_2_Fragment();
                 getActivity().getSupportFragmentManager().beginTransaction()
-                        .replace(R.id.frame_container, OptionMenu, "OptionMenu Demo Back")
+                        .replace(R.id.frame_container, ActivityLifeBackFrag, "ActivityLife Demo Back")
                         .commit();
             }
         });
 
         return view;
     }
-
 }

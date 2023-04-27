@@ -16,7 +16,7 @@ import com.example.androidpoint.R;
 public class B_card_5_Fragment extends Fragment {
 
     TextView checkbox_java,checkbox_xml;
-    AppCompatImageView Btn_arrow,checkbox_demo;
+    AppCompatImageView check_code_arrow,checkbox_demo;
     @SuppressLint({"MissingInflatedId", "SetTextI18n"})
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -32,15 +32,14 @@ public class B_card_5_Fragment extends Fragment {
 
         checkbox_demo=view.findViewById(R.id.checkbox_demo);
 
-        Btn_arrow=view.findViewById(R.id.Btn_arrow);
+        check_code_arrow=view.findViewById(R.id.check_code_arrow);
 
-        Btn_arrow.setOnClickListener(new View.OnClickListener() {
+        check_code_arrow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Basic basic= new Basic();
                 getActivity().getSupportFragmentManager().beginTransaction()
-                        .replace(R.id.frame_container, basic, "Back Button Basic")
-                        .addToBackStack(null)
+                        .replace(R.id.frame_container, basic, "CheckBox Code Back")
                         .commit();
             }
         });
@@ -51,7 +50,6 @@ public class B_card_5_Fragment extends Fragment {
                 CheckBox_Fragment checkBox_fragment= new CheckBox_Fragment();
                 getActivity().getSupportFragmentManager().beginTransaction()
                         .replace(R.id.frame_container, checkBox_fragment, "checkBox DEMO")
-                        .addToBackStack(null)
                         .commit();
             }
         });

@@ -39,6 +39,8 @@ public class Learn extends Fragment {
 
 
 
+
+
     @SuppressLint("MissingInflatedId")
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -79,7 +81,10 @@ public class Learn extends Fragment {
         recyclerView.setHasFixedSize(true);
         recyclerView.setAdapter(myAdapter);
 
+
+
         db= FirebaseFirestore.getInstance();
+
 
         db.collection("LearnAndroid").orderBy("id").get()
                 .addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {

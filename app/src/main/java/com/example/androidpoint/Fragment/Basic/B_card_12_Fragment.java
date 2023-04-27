@@ -15,8 +15,8 @@ import com.example.androidpoint.R;
 
 public class B_card_12_Fragment extends Fragment {
     TextView implicit_java, implicit_xml;
-    AppCompatImageView implicit_demo, Btn_arrow;
-    @SuppressLint("SetTextI18n")
+    AppCompatImageView implicit_demo, implicit_code_arrow;
+    @SuppressLint({"SetTextI18n", "MissingInflatedId"})
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -29,14 +29,13 @@ public class B_card_12_Fragment extends Fragment {
         implicit_xml.setTextIsSelectable(true);
 
         implicit_demo = view.findViewById(R.id.implicit_demo);
-        Btn_arrow = view.findViewById(R.id.Btn_arrow);
-        Btn_arrow.setOnClickListener(new View.OnClickListener() {
+        implicit_code_arrow = view.findViewById(R.id.implicit_code_arrow);
+        implicit_code_arrow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Basic basic = new Basic();
                 getActivity().getSupportFragmentManager().beginTransaction()
-                        .replace(R.id.frame_container, basic, "Back Button Basic")
-                        .addToBackStack(null)
+                        .replace(R.id.frame_container, basic, "Implicit Code Back")
                         .commit();
             }
         });
@@ -46,7 +45,6 @@ public class B_card_12_Fragment extends Fragment {
                 Implicit_Intent_Fragment implicit_intent_fragment = new Implicit_Intent_Fragment();
                 getActivity().getSupportFragmentManager().beginTransaction()
                         .replace(R.id.frame_container, implicit_intent_fragment, "Implicit DEMO")
-                        .addToBackStack(null)
                         .commit();
             }
         });

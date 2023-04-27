@@ -18,7 +18,7 @@ import com.example.androidpoint.R;
 
 public class B_card_9_Fragment extends Fragment {
 
-    AppCompatImageView timepicker_demo, Btn_arrow;
+    AppCompatImageView timepicker_demo, timePicker_code_arrow;
 
     TextView timepicker_xml, timepicker_java;
 
@@ -41,14 +41,14 @@ public class B_card_9_Fragment extends Fragment {
 
         Btn_arrow = view.findViewById(R.id.Btn_arrow);
         timepicker_yt = view.findViewById(R.id.timepicker_yt);
+        timePicker_code_arrow = view.findViewById(R.id.timePicker_code_arrow);
 
-        Btn_arrow.setOnClickListener(new View.OnClickListener() {
+        timePicker_code_arrow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Basic basic = new Basic();
                 getActivity().getSupportFragmentManager().beginTransaction()
-                        .replace(R.id.frame_container, basic, "Back Button Basic")
-                        .addToBackStack(null)
+                        .replace(R.id.frame_container, basic, "TimePicker Code Back")
                         .commit();
             }
         });
@@ -64,7 +64,6 @@ public class B_card_9_Fragment extends Fragment {
                 TimePickerFragment timePickerFragment = new TimePickerFragment();
                 getActivity().getSupportFragmentManager().beginTransaction()
                         .replace(R.id.frame_container, timePickerFragment, "Time Picker DEMO")
-                        .addToBackStack(null)
                         .commit();
 
 

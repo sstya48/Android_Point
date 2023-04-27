@@ -16,8 +16,8 @@ import com.example.androidpoint.R;
 
 public class B_card_10_Fragment extends Fragment {
     TextView scroll_java,scroll_xml;
-    AppCompatImageView Btn_arrow,scroll_demo;
-    @SuppressLint("SetTextI18n")
+    AppCompatImageView scrollView_code_arrow,scroll_demo;
+    @SuppressLint({"SetTextI18n", "MissingInflatedId"})
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -32,15 +32,14 @@ public class B_card_10_Fragment extends Fragment {
 
         scroll_demo=view.findViewById(R.id.scroll_demo);
 
-        Btn_arrow=view.findViewById(R.id.Btn_arrow);
+        scrollView_code_arrow=view.findViewById(R.id.scrollView_code_arrow);
 
-        Btn_arrow.setOnClickListener(new View.OnClickListener() {
+        scrollView_code_arrow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Basic basic= new Basic();
                 getActivity().getSupportFragmentManager().beginTransaction()
-                        .replace(R.id.frame_container, basic, "Back Button Basic")
-                        .addToBackStack(null)
+                        .replace(R.id.frame_container, basic, "ScrollView Code Back")
                         .commit();
             }
         });
@@ -52,7 +51,6 @@ public class B_card_10_Fragment extends Fragment {
                 Scroll_Demo_Fragment scroll_demo= new Scroll_Demo_Fragment();
                 getActivity().getSupportFragmentManager().beginTransaction()
                         .replace(R.id.frame_container, scroll_demo, "SCROLL DEMO")
-                        .addToBackStack(null)
                         .commit();
 
             }

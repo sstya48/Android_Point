@@ -17,7 +17,7 @@ import com.example.androidpoint.R;
 
 public class B_card_6_Fragment extends Fragment {
 
-    AppCompatImageView radio_demo,Btn_arrow;
+    AppCompatImageView radio_demo,Radio_Code_arrow;
 
     TextView radio_xml,radio_java,radio_string;
 
@@ -37,15 +37,14 @@ public class B_card_6_Fragment extends Fragment {
 
 
         radio_demo=view.findViewById(R.id.radio_demo);
-        Btn_arrow=view.findViewById(R.id.Btn_arrow);
+        Radio_Code_arrow=view.findViewById(R.id.Radio_Code_arrow);
 
-        Btn_arrow.setOnClickListener(new View.OnClickListener() {
+        Radio_Code_arrow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Basic basic= new Basic();
                 getActivity().getSupportFragmentManager().beginTransaction()
-                        .replace(R.id.frame_container, basic, "Back Button Basic")
-                        .addToBackStack(null)
+                        .replace(R.id.frame_container, basic, "Radio Code Back")
                         .commit();
             }
         });
@@ -56,7 +55,6 @@ public class B_card_6_Fragment extends Fragment {
                 RadioButtonFragment radioButtonFragment= new RadioButtonFragment();
                 getActivity().getSupportFragmentManager().beginTransaction()
                         .replace(R.id.frame_container, radioButtonFragment, "Radio DEMO")
-                        .addToBackStack(null)
                         .commit();
             }
         });

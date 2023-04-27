@@ -33,7 +33,6 @@ public class LandscapeActivity extends AppCompatActivity {
                 Screen_Orientation_Fragment screenpotrait= new Screen_Orientation_Fragment();
                 getSupportFragmentManager().beginTransaction()
                         .replace(R.id.frame_container, screenpotrait, "screen Landscape DEMO")
-                        .addToBackStack(null)
                         .commit();
 
             }

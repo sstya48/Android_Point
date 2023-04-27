@@ -18,7 +18,7 @@ import com.example.androidpoint.DemoFragments.SearchViewFragment;
 import com.example.androidpoint.R;
 
 public class B_card_11_Fragment extends Fragment {
-    AppCompatImageView serchview_demo,Btn_arrow;
+    AppCompatImageView serchview_demo,search_code_arrow;
     TextView serchview_java,serchview_xml;
 
     CardView serchview_yt;
@@ -39,14 +39,14 @@ public class B_card_11_Fragment extends Fragment {
 
         Btn_arrow=view.findViewById(R.id.Btn_arrow);
         serchview_yt=view.findViewById(R.id.serchview_yt);
+        search_code_arrow=view.findViewById(R.id.search_code_arrow);
 
-        Btn_arrow.setOnClickListener(new View.OnClickListener() {
+        search_code_arrow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Basic basic= new Basic();
                 getActivity().getSupportFragmentManager().beginTransaction()
-                        .replace(R.id.frame_container, basic, "Back Button Basic")
-                        .addToBackStack(null)
+                        .replace(R.id.frame_container, basic, "Search Code Back")
                         .commit();
             }
         });
@@ -64,7 +64,6 @@ public class B_card_11_Fragment extends Fragment {
                 SearchViewFragment searchViewFragment= new SearchViewFragment();
                 getActivity().getSupportFragmentManager().beginTransaction()
                         .replace(R.id.frame_container, searchViewFragment, "searchView DEMO")
-                        .addToBackStack(null)
                         .commit();
             }
         });

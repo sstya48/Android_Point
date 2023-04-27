@@ -4,8 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:gravity="center"
-    tools:context=".DemoFragments.Hide_Title_Demo_Fragment">
+    tools:context=".DemoFragments.ActivityLifeCycle_Fragment">
+
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -13,7 +13,7 @@
         android:background="@drawable/layout_bg">
 
         <androidx.appcompat.widget.AppCompatImageView
-            android:id="@+id/hide_demo_arrow"
+            android:id="@+id/cycle_demo_arrow"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_marginTop="13dp"
@@ -27,41 +27,30 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="5dp"
-            android:text="@string/Hide_TitleBar"
+            android:text="@string/Activity_LifeCycle"
             android:layout_gravity="center_vertical"
-            android:fontFamily="@font/poppins_semibold"
             android:textColor="#181A20"
             android:textSize="20sp"
+            android:fontFamily="@font/poppins_semibold"
             android:textStyle="bold" />
     </LinearLayout>
 
 
-    <ScrollView
+    <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center"
         >
 
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="vertical"
-    >
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/activity_cycle"
+            android:rotation="270"
+            android:scaleType="centerInside"
+            />
 
-    <androidx.appcompat.widget.AppCompatImageView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="-600dp"
-        android:layout_marginBottom="-100dp"
-        android:src="@drawable/hide_title_1" />
 
-    <androidx.appcompat.widget.AppCompatImageView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:src="@drawable/hide_title_2"
-        android:layout_marginTop="-1000dp"
-        android:layout_marginBottom="-600dp"/>
-
-</LinearLayout>
-    </ScrollView>
+    </androidx.appcompat.widget.LinearLayoutCompat>
 
 </LinearLayout>

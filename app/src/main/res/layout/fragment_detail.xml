@@ -36,6 +36,9 @@
             android:paddingTop="5dp"
             android:fontFamily="@font/poppins_semibold"
             android:textSize="22sp"
+            android:singleLine="true"
+            android:ellipsize="marquee"
+            android:marqueeRepeatLimit="marquee_forever"
             android:textStyle="bold" />
     </LinearLayout>
 
@@ -72,6 +75,7 @@
                 android:layout_centerVertical="true"
                 />
 
+
             <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/image_learn"
                 android:layout_width="match_parent"
@@ -86,7 +90,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/poppins_semibold"
                 android:padding="10dp"
-                android:textSize="20dp"
+                android:textSize="20sp"
                 android:text="Description"
                 android:textColor="@color/blackalpha" />
 

@@ -81,6 +81,13 @@
     <color name="dark_purple">#740d79</color>
     <color name="navy_blue">#265369</color>
     <color name="peach">#699475</color>
+    <color name="lightblue">#68B0AB</color>
+    <color name="lightpur">#C68FA9</color>
+    <color name="falsa">#958391</color>
+    <color name="mendi">#B9C46F</color>
+    <color name="skin">#FAF3DD</color>
+    <color name="orangelight">#FFB661</color>
+    <color name="seablue">#8EDAE6</color>
 
 
 
@@ -104,13 +111,17 @@
 
     <integer-array name="androidcolors">
         <item>@color/red</item>
-        <item>@color/dark_purple</item>
+        <item>@color/lightpur</item>
+        <!--        <item>@color/dark_purple</item>-->
         <item>@color/mango</item>
-        <item>@color/green</item>
         <item>@color/pink</item>
-        <item>@color/maroon</item>
         <item>@color/navy_blue</item>
         <item>@color/peach</item>
+        <item>@color/lightblue</item>
+        <item>@color/falsa</item>
+        <item>@color/mendi</item>
+        <item>@color/orangelight</item>
+        <item>@color/seablue</item>
     </integer-array>
 
 

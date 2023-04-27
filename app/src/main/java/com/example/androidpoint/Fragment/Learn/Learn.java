@@ -1,6 +1,7 @@
 package com.example.androidpoint.Fragment.Learn;
 
 import android.annotation.SuppressLint;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -74,6 +75,12 @@ public class Learn extends Fragment {
 
 
         progressBar= view.findViewById(R.id.progressBar);
+
+        @SuppressLint("UseCompatLoadingForDrawables")
+        Drawable progress_drawable = progressBar.getContext().getResources().getDrawable(R.drawable.progress_color);
+
+        progressBar.setProgressDrawable(progress_drawable);
+
 
         recyclerView= view.findViewById(R.id.recyclerview);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));

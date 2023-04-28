@@ -13,9 +13,10 @@ import androidx.fragment.app.Fragment;
 
 import com.example.androidpoint.Model.LearnModel;
 import com.example.androidpoint.R;
+import com.squareup.picasso.Callback;
 import com.squareup.picasso.Picasso;
 
-public class DetailFragment extends Fragment implements LearnAdapterInterface {
+public class DetailFragment extends Fragment  {
 
 
     TextView des_learn,title_learn,des_title;
@@ -26,7 +27,7 @@ public class DetailFragment extends Fragment implements LearnAdapterInterface {
 
     LearnModel learnModel;
 
-    static ProgressBar progressBar;
+    ProgressBar progressBar;
 
 
 
@@ -46,12 +47,12 @@ public class DetailFragment extends Fragment implements LearnAdapterInterface {
     }
 
 
-  public static LearnAdapterInterface newInstance() {
+ /* public static LearnAdapterInterface newInstance() {
         DetailFragment fragment = new DetailFragment();
         Bundle args = new Bundle();
         fragment.setArguments(args);
         return fragment;
-    }
+    }*/
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -76,10 +77,24 @@ public class DetailFragment extends Fragment implements LearnAdapterInterface {
 
         title_learn.setText(title.toString().replace("\n", "\n"));
         des_title.setText(title.toString().replace("\n", "\n"));
+        des_title.setSelected(true);
 
         des_learn.setText(description.toString().replace( "\\\\n", "\n  \n" ));
 
-        Picasso.get().load(image).into(Image);
+
+        Picasso.get().load(image).into(Image, new Callback() {
+            @Override
+            public void onSuccess() {
+                //Image loaded successfully, now dismiss progress bar.
+                progressBar.setVisibility(View.GONE);
+            }
+
+            @Override
+            public void onError(Exception e) {
+                progressBar.setVisibility(View.GONE);
+            }
+        }
+        );
 
 
 
@@ -100,11 +115,5 @@ public class DetailFragment extends Fragment implements LearnAdapterInterface {
 
     }
 
-    @Override
-    public void onDataChanged(){
-        if (progressBar != null){
-            progressBar.setVisibility(View.GONE);
-        }
-    }
 }
 

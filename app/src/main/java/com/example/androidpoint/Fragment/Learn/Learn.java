@@ -1,10 +1,12 @@
 package com.example.androidpoint.Fragment.Learn;
 
 import android.annotation.SuppressLint;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ProgressBar;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -37,6 +39,7 @@ public class Learn extends Fragment {
 
     FirebaseFirestore db;
 
+    ProgressBar progressBar;
 
 
 
@@ -71,6 +74,14 @@ public class Learn extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
 
+        progressBar= view.findViewById(R.id.progressBar);
+
+        @SuppressLint("UseCompatLoadingForDrawables")
+        Drawable progress_drawable = progressBar.getContext().getResources().getDrawable(R.drawable.progress_color);
+
+        progressBar.setProgressDrawable(progress_drawable);
+
+
         recyclerView= view.findViewById(R.id.recyclerview);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
 
@@ -82,7 +93,6 @@ public class Learn extends Fragment {
         recyclerView.setAdapter(myAdapter);
 
 
-
         db= FirebaseFirestore.getInstance();
 
 
@@ -90,7 +100,13 @@ public class Learn extends Fragment {
                 .addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
                     @Override
                     public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
+
+                        progressBar.setVisibility(View.VISIBLE);
+
                         List<DocumentSnapshot> list= queryDocumentSnapshots.getDocuments();
+
+                        progressBar.setVisibility(View.GONE);
+
 
                         for (DocumentSnapshot d:list)
                         {

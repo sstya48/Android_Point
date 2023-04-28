@@ -24,14 +24,13 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-public class LearnAdapter extends RecyclerView.Adapter<LearnAdapter.MyViewHolder> implements LearnAdapterInterface {
+public class LearnAdapter extends RecyclerView.Adapter<LearnAdapter.MyViewHolder> {
 
 
     Context context;
     ArrayList<LearnModel> datalist;
 //    ArrayList<News> newsArrayList;
 
-    static ProgressBar progressBar;
 
 
     public LearnAdapter(Context context, ArrayList<LearnModel> datalist) {
@@ -51,11 +50,9 @@ public class LearnAdapter extends RecyclerView.Adapter<LearnAdapter.MyViewHolder
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, @SuppressLint("RecyclerView") int position) {
 
-        String[] array = context.getResources().getStringArray(R.array.androidcolors);
-        String randomStr = array[new Random().nextInt(array.length)];
 
         int[] androidColors = context.getResources().getIntArray(R.array.androidcolors);
-        int randomAndroidColor = androidColors[new Random().nextInt(8 /*androidColors.length*/)];
+        int randomAndroidColor = androidColors[new Random().nextInt(/*13*/ androidColors.length)];
 
         holder.title_learn.setText(datalist.get(position).getTitle().trim());
         holder.title_learn.setTextColor(randomAndroidColor);
@@ -127,7 +124,6 @@ public class LearnAdapter extends RecyclerView.Adapter<LearnAdapter.MyViewHolder
             super(itemView);
 
 
-            progressBar= itemView.findViewById(R.id.progressBar);
             title_learn= itemView.findViewById(R.id.title_learn);
             des_learn= itemView.findViewById(R.id.des_learn);
             image_learn= itemView.findViewById(R.id.image_learn);
@@ -150,12 +146,12 @@ public class LearnAdapter extends RecyclerView.Adapter<LearnAdapter.MyViewHolder
         }
 
     }
-    @Override
+  /*  @Override
     public void onDataChanged(){
         if (progressBar != null){
             progressBar.setVisibility(View.GONE);
         }
-    }
+    }*/
 
 
 }

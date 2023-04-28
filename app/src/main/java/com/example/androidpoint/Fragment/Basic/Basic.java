@@ -28,7 +28,7 @@ import java.util.ArrayList;
 
 public class Basic extends Fragment {
     ImageSlider imageslider;
-    CardView card_view1, card_view2, card_view3, card_view4,card_view5,card_view6,card_view7,card_view8,card_view9,card_view10,card_view11,card_view12,card_view13,card_view14,card_view15,card_view16;
+    CardView card_view1, card_view2, card_view3, card_view4,card_view5,card_view6,card_view7,card_view8,card_view9,card_view10,card_view11,card_view12,card_view13,card_view14,card_view15,card_view16, card_view17, card_view18;
 
     AdView adView_basic;
 
@@ -103,6 +103,8 @@ public class Basic extends Fragment {
         card_view14 = view.findViewById(R.id.card_view14);
         card_view15 = view.findViewById(R.id.card_view15);
         card_view16 = view.findViewById(R.id.card_view16);
+        card_view17 = view.findViewById(R.id.card_view17);
+        card_view18 = view.findViewById(R.id.card_view18);
 
 
         card_view1.setOnClickListener(new View.OnClickListener() {
@@ -267,6 +269,26 @@ public class Basic extends Fragment {
             }
         });
 
+        card_view17.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                B_card_17_Fragment PopupMenu= new B_card_17_Fragment();
+                getActivity().getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.frame_container, PopupMenu, "PopupMenu Code")
+                        .addToBackStack(null)
+                        .commit();
+            }
+        });
+        card_view18.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                B_card_18_Fragment PopupMenu= new B_card_18_Fragment();
+                getActivity().getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.frame_container, PopupMenu, "PopupMenu Code")
+                        .addToBackStack(null)
+                        .commit();
+            }
+        });
         return view;
     }
 }

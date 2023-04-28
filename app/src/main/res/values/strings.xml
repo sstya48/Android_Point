@@ -12,6 +12,12 @@
     <string name="Screen_oOrientation">Screen \n Orientation</string>
     <string name="Screen_Orientation">Screen Orientation</string>
     <string name="Check_Box">Check Box</string>
+    <string name="text_to_speech">Text To Speech</string>
+    <string name="text_to_sspeech"> Text To \n Speech</string>
+    <string name="speech_to_text">Speech To Text</string>
+    <string name="speech_to_ttext"> Speech \n To Text</string>
+
+
     <string name="Radio_Button">Radio Button</string>
     <string name="ListView">ListView</string>
     <string name="Date_Piker">Date Picker</string>

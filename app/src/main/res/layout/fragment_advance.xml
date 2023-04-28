@@ -572,7 +572,7 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_marginTop="24dp"
+                                android:layout_marginTop="16dp"
                                 android:text="@string/Registation_Ppage"
                                 android:textColor="#0B204C"
                                 android:textSize="16dp"
@@ -801,7 +801,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_centerHorizontal="true"
-                                android:layout_marginTop="24dp"
+                                android:layout_marginTop="16dp"
                                 android:text="@string/Instagram_Llogin"
                                 android:textColor="#0B204C"
                                 android:textSize="16dp"

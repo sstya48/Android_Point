@@ -21,12 +21,13 @@
             android:layout_gravity="center_vertical"
             android:layout_marginBottom="12dp"
             android:padding="6dp"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
             android:src="@drawable/arrow" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="5dp"
+            android:layout_marginStart="10dp"
             android:text="@string/Activity_LifeCycle"
             android:layout_gravity="center_vertical"
             android:textColor="#181A20"

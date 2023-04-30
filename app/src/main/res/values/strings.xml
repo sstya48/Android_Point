@@ -12,6 +12,12 @@
     <string name="Screen_oOrientation">Screen \n Orientation</string>
     <string name="Screen_Orientation">Screen Orientation</string>
     <string name="Check_Box">Check Box</string>
+    <string name="text_to_speech">Text To Speech</string>
+    <string name="text_to_sspeech"> Text To \n Speech</string>
+    <string name="speech_to_text">Speech To Text</string>
+    <string name="speech_to_ttext"> Speech \n To Text</string>
+
+
     <string name="Radio_Button">Radio Button</string>
     <string name="ListView">ListView</string>
     <string name="Date_Piker">Date Picker</string>
@@ -21,6 +27,8 @@
     <string name="Implicit_Intent">Implicit Intent</string>
     <string name="Explicit_Intent">Explicit \n Intent</string>
     <string name="Explicit_iIntent">Explicit Intent</string>
+    <string name="Countdown_Timer">Countdown Timer</string>
+    <string name="Countdown_Ttimer">Countdown \n Timer</string>
     <string name="Option_Manu">Option Menu</string>
     <string name="Context_Manu">Context Menu</string>
     <string name="Popup_Manu">Popup Menu</string>
@@ -36,14 +44,14 @@
     <string name="Image_Slider">Image Slider</string>
     <string name="Search_View">Search View</string>
     <string name="Registation_Page">Registation Page</string>
-    <string name="Registation_Ppage">Registation Page</string>
+    <string name="Registation_Ppage">Registation \n Page</string>
     <string name="Gallery_Camera">Gallery and Camera</string>
     <string name="Bar_Chart">Bar Chart</string>
     <string name="Line_Chart">Line Chart</string>
     <string name="Pie_Chart">Pie Chart</string>
     <string name="Gallery">Gallery</string>
     <string name="Instagram_Login">Instagram Login</string>
-    <string name="Instagram_Llogin">Instagram Login</string>
+    <string name="Instagram_Llogin">Instagram \n Login</string>
     <string name="flash">Flash Lite</string>
     <string name="Phone_Call">Phone Call</string>
     <string name="Send_SMS">Send SMS</string>

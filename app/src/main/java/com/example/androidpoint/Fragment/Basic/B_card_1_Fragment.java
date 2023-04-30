@@ -22,7 +22,7 @@ import org.checkerframework.checker.units.qual.s;
 public class B_card_1_Fragment extends Fragment {
     TextView hello_toast_java,hello_toast_xml;
     AppCompatImageView hello_toast_demo;
-    AppCompatImageView Btn_arrow;
+
     CardView helloworld_yt;
     AppCompatImageView Hello_code_arrow;
     @SuppressLint({"SetTextI18n", "MissingInflatedId"})

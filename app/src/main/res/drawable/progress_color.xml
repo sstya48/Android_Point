@@ -31,3 +31,8 @@
     </shape>
 
 </rotate>
+<!--
+<animated-rotate xmlns:android="http://schemas.android.com/apk/res/android"
+    android:drawable="@raw/progress_logo"
+    android:pivotX="0%"
+    android:pivotY="0%" />-->

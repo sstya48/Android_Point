@@ -51,8 +51,11 @@ public class LearnAdapter extends RecyclerView.Adapter<LearnAdapter.MyViewHolder
     public void onBindViewHolder(@NonNull MyViewHolder holder, @SuppressLint("RecyclerView") int position) {
 
 
-        int[] androidColors = context.getResources().getIntArray(R.array.androidcolors);
+        int[] androidColors = context.getResources().getIntArray(R.array.listcolor);
         int randomAndroidColor = androidColors[new Random().nextInt(/*13*/ androidColors.length)];
+
+        /*int[] androidColors = context.getResources().getIntArray(R.array.androidcolors);
+        int randomAndroidColor = androidColors[new Random().nextInt(*//*13*//* androidColors.length)];*/
 
         holder.title_learn.setText(datalist.get(position).getTitle().trim());
         holder.title_learn.setTextColor(randomAndroidColor);

@@ -27,7 +27,7 @@ public class B_card_17_Fragment extends Fragment {
     CardView text_to_yt;
     AppCompatImageView text_to_speech_demo;
 
-    @SuppressLint("MissingInflatedId")
+    @SuppressLint({"MissingInflatedId", "SetTextI18n"})
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -73,10 +73,77 @@ public class B_card_17_Fragment extends Fragment {
             }
         });
 
+        text_to_java.setText("import androidx.appcompat.app.AppCompatActivity;\n" +
+                "import android.os.Bundle;\n" +
+                "import android.speech.tts.TextToSpeech;\n" +
+                "import android.view.View;\n" +
+                "import android.widget.Button;\n" +
+                "import android.widget.EditText;\n" +
+                "import java.util.Locale;\n" +
+                "  \n" +
+                "public class MainActivity extends AppCompatActivity {\n" +
+                "  \n" +
+                "    EditText Text;\n" +
+                "    Button btnText;\n" +
+                "    TextToSpeech textToSpeech;\n" +
+                "    @Override\n" +
+                "    protected void onCreate(Bundle savedInstanceState) {\n" +
+                "        super.onCreate(savedInstanceState);\n" +
+                "        setContentView(R.layout.activity_main);\n" +
+                "  \n" +
+                "        Text = findViewById(R.id.Text);\n" +
+                "        btnText = findViewById(R.id.btnText);\n" +
+                "  \n" +
+                "        textToSpeech = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {\n" +
+                "            @Override\n" +
+                "            public void onInit(int i) {\n" +
+                "                if(i!=TextToSpeech.ERROR){ \n" +
+                "                    textToSpeech.setLanguage(Locale.UK); \n" +
+                "                }\n" +
+                "            }\n" +
+                "        });\n" +
+                "  \n" +
+                "        btnText.setOnClickListener(new View.OnClickListener() {\n" +
+                "            @Override\n" +
+                "            public void onClick(View view) {\n" +
+                "                textToSpeech.speak(Text.getText().toString(),TextToSpeech.QUEUE_FLUSH,null);\n" +
+                "            }\n" +
+                "        });\n" +
+                "  \n" +
+                "    }\n" +
+                "}\n" +
+                    //  mnifest permission
+                "  \n" +
+                "<uses-permission android:name=\"android.permission.TTS_SERVICE\" /> ");
 
-        text_to_java.setText("");
-
-        text_to_xml.setText("");
+        text_to_xml.setText("<?xml version=\"1.0\" encoding=\"utf-8\"?>\n" +
+                "<LinearLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\n" +
+                "    xmlns:tools=\"http://schemas.android.com/tools\"\n" +
+                "    android:layout_width=\"match_parent\"\n" +
+                "    android:layout_height=\"match_parent\"\n" +
+                "    android:orientation=\"vertical\"\n" +
+                "    tools:context=\".DemoFragments.Text_to_speech_demo\">\n" +
+                "    \n" +
+                "    <EditText\n" +
+                "        android:id=\"@+id/Text\"\n" +
+                "        android:layout_width=\"match_parent\"\n" +
+                "        android:layout_height=\"wrap_content\"\n" +
+                "        android:layout_marginBottom=\"20dp\"\n" +
+                "        android:hint=\"Enter Any Sentence\"\n" +
+                "        android:layout_marginTop=\"200dp\"\n" +
+                "        android:layout_marginStart=\"30dp\"\n" +
+                "        android:layout_marginEnd=\"30dp\"\n" +
+                "        android:gravity=\"center\"\n" +
+                "        android:textSize=\"16dp\"/>\n" +
+                "\n" +
+                "    <Button\n" +
+                "        android:id=\"@+id/btnText\"\n" +
+                "        android:layout_width=\"wrap_content\"\n" +
+                "        android:layout_height=\"wrap_content\"\n" +
+                "        android:text=\"Speech Here\"\n" +
+                "        android:layout_gravity=\"center\"/>\n" +
+                "\n" +
+                "</LinearLayout>");
 
         return view;
     }

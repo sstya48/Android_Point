@@ -1,5 +1,8 @@
 package com.example.androidpoint.Fragment.Advance;
 
+import android.annotation.SuppressLint;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import androidx.appcompat.widget.AppCompatImageView;
 import androidx.fragment.app.Fragment;
@@ -12,9 +15,10 @@ import android.widget.Toast;
 import com.example.androidpoint.R;
 
 public class A_A15_Fragment extends Fragment {
-    EditText edittext1;
-    Button button1;
+    EditText etno;
+    Button call;
     AppCompatImageView Btn_arrow;
+    @SuppressLint("MissingInflatedId")
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -32,20 +36,31 @@ public class A_A15_Fragment extends Fragment {
             }
         });
 
-        edittext1 = view.findViewById(R.id.editText1);
-        button1 = view.findViewById(R.id.button);
-        button1.setOnClickListener(new View.OnClickListener() {
+        etno = view.findViewById(R.id.etno);
+        call = view.findViewById(R.id.call);
+       /* button1.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View arg0) {
                 String number = edittext1.getText().toString();
-               /* Intent callIntent = new Intent(Intent.ACTION_CALL);
+               *//* Intent callIntent = new Intent(Intent.ACTION_CALL);
                 callIntent.setData(Uri.parse("tel:" + number));
-                startActivity(callIntent);*/
+                startActivity(callIntent);*//*
                 Toast.makeText(getContext(),"Sorry this number can not enable",Toast.LENGTH_SHORT).show();
             }
         });
+*/
 
-        return view;
+
+        call.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                String no = "tel:" + etno.getText().toString();
+                Intent i = new Intent(Intent.ACTION_CALL, Uri.parse(no));
+                startActivity(i);
+            }
+        });
+
+
+            return view;
     }
 }

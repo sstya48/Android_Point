@@ -31,7 +31,6 @@ public class Speech_to_text_demo extends Fragment {
      ImageView iv_mic;
      TextView tv_Speech_to_text;
      static final int REQUEST_CODE_SPEECH_INPUT = 1;
-
     AppCompatImageView speech_code_arrow;
     @SuppressLint("MissingInflatedId")
     @Override

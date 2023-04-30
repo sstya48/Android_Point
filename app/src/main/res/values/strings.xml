@@ -27,6 +27,8 @@
     <string name="Implicit_Intent">Implicit Intent</string>
     <string name="Explicit_Intent">Explicit \n Intent</string>
     <string name="Explicit_iIntent">Explicit Intent</string>
+    <string name="Countdown_Timer">Countdown Timer</string>
+    <string name="Countdown_Ttimer">Countdown \n Timer</string>
     <string name="Option_Manu">Option Menu</string>
     <string name="Context_Manu">Context Menu</string>
     <string name="Popup_Manu">Popup Menu</string>

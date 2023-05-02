@@ -30,6 +30,7 @@
     <string name="Countdown_Timer">Countdown Timer</string>
     <string name="Countdown_Ttimer">Countdown \n Timer</string>
     <string name="Option_Manu">Option Menu</string>
+    <string name="Custem_Toast">Custom Toast</string>
     <string name="Context_Manu">Context Menu</string>
     <string name="Popup_Manu">Popup Menu</string>
     <string name="Splash_Screen">Splash Screen</string>
@@ -141,6 +142,7 @@
     <string name="strings">strings.xml</string>
     <string name="mylist"> mylist.xml</string>
     <string name="menu"> menu.xml</string>
+    <string name="cutem_toast"> cutem_toast.xml</string>
     <string name="gradle">build.gradle(Module:app)</string>
     <string name="transparent">Transparent Circle</string>
     <string name="rectangle">Rectangle Circle</string>

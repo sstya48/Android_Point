@@ -1156,7 +1156,7 @@
                                     <ImageView
                                         android:layout_width="40dp"
                                         android:layout_height="40dp"
-                                        android:src="@drawable/option"
+                                        android:src="@drawable/custem_toast"
                                         android:layout_gravity="center" />
 
                                 </FrameLayout>
@@ -1166,7 +1166,7 @@
                                     android:layout_height="wrap_content"
                                     android:layout_centerHorizontal="true"
                                     android:layout_marginTop="30dp"
-                                    android:text="@string/Option_Manu"
+                                    android:text="@string/Custem_Toast"
                                     android:textColor="#0B204C"
                                     android:gravity="center"
                                     android:fontFamily="@font/poppins_bold"

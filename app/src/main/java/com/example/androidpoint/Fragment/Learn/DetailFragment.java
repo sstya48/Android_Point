@@ -11,12 +11,13 @@ import android.widget.TextView;
 import androidx.appcompat.widget.AppCompatImageView;
 import androidx.fragment.app.Fragment;
 
+import com.example.androidpoint.Fragment.BaseFragment;
 import com.example.androidpoint.Model.LearnModel;
 import com.example.androidpoint.R;
 import com.squareup.picasso.Callback;
 import com.squareup.picasso.Picasso;
 
-public class DetailFragment extends Fragment  {
+public class DetailFragment extends BaseFragment {
 
 
     TextView des_learn,title_learn,des_title;
@@ -66,7 +67,7 @@ public class DetailFragment extends Fragment  {
         // Inflate the layout for this fragment
         View view= inflater.inflate(R.layout.fragment_detail, container, false);
 
-        progressBar= view.findViewById(R.id.progressBarDetail);
+//        progressBar= view.findViewById(R.id.progressBarDetail);
 
 
         title_learn=view.findViewById(R.id.title_learn);
@@ -74,6 +75,9 @@ public class DetailFragment extends Fragment  {
         des_learn=view.findViewById(R.id.des_learn);
         Image=view.findViewById(R.id.image_learn);
         back_learn_icon=view.findViewById(R.id.back_learn_icon);
+
+
+        showProgressDialog();
 
         title_learn.setText(title.toString().replace("\n", "\n"));
         des_title.setText(title.toString().replace("\n", "\n"));
@@ -86,12 +90,17 @@ public class DetailFragment extends Fragment  {
             @Override
             public void onSuccess() {
                 //Image loaded successfully, now dismiss progress bar.
-                progressBar.setVisibility(View.GONE);
+
+                dismissProgressDialog();
+
+//                progressBar.setVisibility(View.GONE);
             }
 
             @Override
             public void onError(Exception e) {
-                progressBar.setVisibility(View.GONE);
+
+                dismissProgressDialog();
+//                progressBar.setVisibility(View.GONE);
             }
         }
         );

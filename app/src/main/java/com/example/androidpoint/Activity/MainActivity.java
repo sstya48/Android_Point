@@ -23,6 +23,7 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import com.example.androidpoint.CustomProgressDialog;
 import com.example.androidpoint.Fragment.Advance.Advance;
 import com.example.androidpoint.Fragment.Basic.Basic;
 import com.example.androidpoint.Fragment.Learn.Learn;
@@ -38,11 +39,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public FragmentManager fragmentManager = getSupportFragmentManager();
     ImageView btnMenu;
     AdView adView_main_all;
-   FragmentTransaction fragmentTransaction;
+
+    private CustomProgressDialog progressDialog;
+
+    FragmentTransaction fragmentTransaction;
 
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        initialize();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
@@ -132,4 +137,25 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 .setNegativeButton("No", null)
                 .show();
     }
+
+    private void initialize(){
+
+        progressDialog = new CustomProgressDialog(this);
+    }
+
+    protected void showProgressDialog() {
+        progressDialog.setCancelable(false);
+        progressDialog.show();
+    }
+
+    protected void dismissProgressDialog() {
+        try {
+            if (progressDialog != null && progressDialog.isShowing()) {
+                progressDialog.dismiss();
+            }
+        } catch (Exception ex) {
+            Log.e("TAG", ex.getMessage(), ex);
+        }
+    }
+
 }

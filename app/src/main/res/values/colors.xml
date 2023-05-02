@@ -49,6 +49,9 @@
     <color name="lightyellow">#FFB80B</color>
     <color name="ssatoolbar">#ffe1aa</color>
     <color name="lightpeach">#EE7650</color>
+    <color name="trans">#00000000 </color>
+    <color name="pinklite">#e0004e </color>
+    <color name="bluelite">#04C692 </color>
 
     <color name="header">#ffe1aa</color>
     <color name="blue_dark">#3668D9</color>
@@ -121,8 +124,26 @@
         <item>@color/falsa</item>
         <item>@color/mendi</item>
         <item>@color/orangelight</item>
-        <item>@color/seablue</item>
+
     </integer-array>
+
+
+
+
+
+    <integer-array name="listcolor">
+        <item>@color/RED</item>
+        <item>@color/brightpurple</item>
+        <item>@color/dark_purple</item>
+        <item>@color/green</item>
+        <item>@color/lightpurple</item>
+        <item>@color/maroon</item>
+        <item>@color/orange</item>
+        <item>@color/teal_700</item>
+        <item>@color/pinklite</item>
+        <item>@color/bluelite</item>
+    </integer-array>
+
 
 
 </resources>

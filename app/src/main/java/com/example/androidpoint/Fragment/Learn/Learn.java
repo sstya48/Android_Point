@@ -15,6 +15,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.androidpoint.Adapter.LearnAdapter;
+import com.example.androidpoint.Fragment.BaseFragment;
 import com.example.androidpoint.Model.LearnModel;
 import com.example.androidpoint.R;
 import com.google.android.gms.ads.AdView;
@@ -27,7 +28,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class Learn extends Fragment {
+public class Learn  extends BaseFragment {
 
     AdView adView_learn;
 
@@ -39,7 +40,7 @@ public class Learn extends Fragment {
 
     FirebaseFirestore db;
 
-    ProgressBar progressBar;
+//    ProgressBar progressBar;
 
 
 
@@ -74,13 +75,13 @@ public class Learn extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
 
-        progressBar= view.findViewById(R.id.progressBar);
+//        progressBar= view.findViewById(R.id.progressBar);
 
-        @SuppressLint("UseCompatLoadingForDrawables")
+       /* @SuppressLint("UseCompatLoadingForDrawables")
         Drawable progress_drawable = progressBar.getContext().getResources().getDrawable(R.drawable.progress_color);
 
         progressBar.setProgressDrawable(progress_drawable);
-
+*/
 
         recyclerView= view.findViewById(R.id.recyclerview);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
@@ -92,6 +93,8 @@ public class Learn extends Fragment {
         recyclerView.setHasFixedSize(true);
         recyclerView.setAdapter(myAdapter);
 
+        showProgressDialog();
+
 
         db= FirebaseFirestore.getInstance();
 
@@ -101,11 +104,15 @@ public class Learn extends Fragment {
                     @Override
                     public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
 
-                        progressBar.setVisibility(View.VISIBLE);
+//                        c();
+
+//                        progressBar.setVisibility(View.VISIBLE);
 
                         List<DocumentSnapshot> list= queryDocumentSnapshots.getDocuments();
 
-                        progressBar.setVisibility(View.GONE);
+                        dismissProgressDialog();
+
+//                        progressBar.setVisibility(View.GONE);
 
 
                         for (DocumentSnapshot d:list)

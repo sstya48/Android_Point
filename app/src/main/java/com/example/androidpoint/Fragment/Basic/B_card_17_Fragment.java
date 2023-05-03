@@ -59,6 +59,7 @@ public class B_card_17_Fragment extends Fragment {
             @Override
             public void onClick(View view) {
                 gotoUrl("https://www.youtube.com/watch?v=c0s72KW6uTk");
+
             }
         });
         text_to_speech_demo.setOnClickListener(new View.OnClickListener() {
@@ -70,6 +71,7 @@ public class B_card_17_Fragment extends Fragment {
                         .replace(R.id.frame_container, Text_to_speech_demo, "Text To Speech DEMO")
                         .addToBackStack(null)
                         .commit();
+
             }
         });
 

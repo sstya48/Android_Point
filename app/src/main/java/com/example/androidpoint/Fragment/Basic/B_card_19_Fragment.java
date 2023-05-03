@@ -67,6 +67,7 @@ public class B_card_19_Fragment extends Fragment {
                         .replace(R.id.frame_container, Countdown_Timer, "Speech To Text DEMO")
                         .addToBackStack(null)
                         .commit();
+
             }
         });
 

@@ -70,6 +70,7 @@ public class Screen_Orientation_Fragment extends Fragment {
                 getActivity().getSupportFragmentManager().beginTransaction()
                         .replace(R.id.frame_container, orientationBackFrag, "ScreenOrientation Demo Back")
                         .commit();
+
             }
         });
 

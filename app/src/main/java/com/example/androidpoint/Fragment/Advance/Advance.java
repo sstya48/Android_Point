@@ -86,6 +86,7 @@ public class Advance extends Fragment {
                         .addToBackStack(null)
                         .commit();
 
+
             }
         });
         card_view2.setOnClickListener(new View.OnClickListener() {
@@ -107,6 +108,7 @@ public class Advance extends Fragment {
                         .replace(R.id.frame_container, nextFrag, "findThisFragment")
                         .addToBackStack(null)
                         .commit();
+
 
             }
         });
@@ -141,6 +143,7 @@ public class Advance extends Fragment {
                         .addToBackStack(null)
                         .commit();
 
+
             }
         });
         card_view7.setOnClickListener(new View.OnClickListener() {
@@ -163,6 +166,7 @@ public class Advance extends Fragment {
                         .addToBackStack(null)
                         .commit();
 
+
             }
         });
         card_view9.setOnClickListener(new View.OnClickListener() {
@@ -173,6 +177,7 @@ public class Advance extends Fragment {
                         .replace(R.id.frame_container, nextFrag, "findThisFragment")
                         .addToBackStack(null)
                         .commit();
+
 
             }
         });
@@ -185,6 +190,7 @@ public class Advance extends Fragment {
                         .addToBackStack(null)
                         .commit();
 
+
             }
         });
         card_view11.setOnClickListener(new View.OnClickListener() {
@@ -195,6 +201,7 @@ public class Advance extends Fragment {
                         .replace(R.id.frame_container, nextFrag, "findThisFragment")
                         .addToBackStack(null)
                         .commit();
+
 
             }
         });
@@ -207,6 +214,7 @@ public class Advance extends Fragment {
                         .addToBackStack(null)
                         .commit();
 
+
             }
         });
         card_view13.setOnClickListener(new View.OnClickListener() {
@@ -217,6 +225,7 @@ public class Advance extends Fragment {
                         .replace(R.id.frame_container, nextFrag, "findThisFragment")
                         .addToBackStack(null)
                         .commit();
+
 
             }
         });
@@ -229,6 +238,7 @@ public class Advance extends Fragment {
                         .addToBackStack(null)
                         .commit();
 
+
             }
         });
         card_view15.setOnClickListener(new View.OnClickListener() {
@@ -240,6 +250,7 @@ public class Advance extends Fragment {
                         .addToBackStack(null)
                         .commit();
 
+
             }
         });
         card_view16.setOnClickListener(new View.OnClickListener() {
@@ -250,6 +261,7 @@ public class Advance extends Fragment {
                         .replace(R.id.frame_container, nextFrag, "findThisFragment")
                         .addToBackStack(null)
                         .commit();
+
 
             }
         });
@@ -273,6 +285,7 @@ public class Advance extends Fragment {
                         .addToBackStack(null)
                         .commit();
 
+
             }
         });
 
@@ -284,6 +297,7 @@ public class Advance extends Fragment {
                         .replace(R.id.frame_container, nextFrag, "findThisFragment")
                         .addToBackStack(null)
                         .commit();
+
 
             }
         });
@@ -319,6 +333,7 @@ public class Advance extends Fragment {
                         .replace(R.id.frame_container, nextFrag, "findThisFragment")
                         .addToBackStack(null)
                         .commit();
+
 
             }
         });

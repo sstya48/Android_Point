@@ -48,12 +48,14 @@ public class B_card_9_Fragment extends Fragment {
                 getActivity().getSupportFragmentManager().beginTransaction()
                         .replace(R.id.frame_container, basic, "TimePicker Code Back")
                         .commit();
+
             }
         });
         timepicker_yt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 gotoUrl("https://www.youtube.com/watch?v=RMElbIO5cDc");
+
             }
         });
         timepicker_demo.setOnClickListener(new View.OnClickListener() {
@@ -63,8 +65,6 @@ public class B_card_9_Fragment extends Fragment {
                 getActivity().getSupportFragmentManager().beginTransaction()
                         .replace(R.id.frame_container, timePickerFragment, "Time Picker DEMO")
                         .commit();
-
-
             }
         });
 

@@ -49,6 +49,7 @@ public class B_card_1_Fragment extends Fragment {
                 getActivity().getSupportFragmentManager().beginTransaction()
                         .replace(R.id.frame_container, basic, "Back Button Basic")
                         .commit();
+
             }
         });
 

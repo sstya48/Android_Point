@@ -114,6 +114,7 @@ public class DetailFragment extends BaseFragment {
                 getActivity().getSupportFragmentManager().beginTransaction()
                         .replace(R.id.frame_container, learn, "Back To Learn Listing....")
                         .commit();
+
             }
         });
 

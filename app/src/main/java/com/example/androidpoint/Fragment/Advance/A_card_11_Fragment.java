@@ -56,6 +56,7 @@ public class A_card_11_Fragment extends Fragment {
                         .replace(R.id.frame_container, scroll_demo, "SCROLL DEMO")
                         .addToBackStack(null)
                         .commit();
+
             }
         });
 

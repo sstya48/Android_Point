@@ -53,6 +53,7 @@ public class B_card_15_Fragment extends Fragment {
             @Override
             public void onClick(View view) {
                 gotoUrl("https://www.youtube.com/watch?v=snqGURFJv2g");
+
             }
         });
 

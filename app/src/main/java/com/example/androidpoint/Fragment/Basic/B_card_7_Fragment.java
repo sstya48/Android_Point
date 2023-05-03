@@ -58,6 +58,7 @@ public class B_card_7_Fragment extends Fragment {
                 getActivity().getSupportFragmentManager().beginTransaction()
                         .replace(R.id.frame_container, listViewFragment, "ListView DEMO")
                         .commit();
+
             }
         });
 

@@ -16,6 +16,10 @@
     <string name="text_to_sspeech"> Text To \n Speech</string>
     <string name="speech_to_text">Speech To Text</string>
     <string name="speech_to_ttext"> Speech \n To Text</string>
+    <string name="Vibrate_Phone"> Vibrate Phone</string>
+    <string name="Vibrate_Pphone"> Vibrate \n Phone</string>
+    <string name="Sound_Bbutton"> Sound \n Button</string>
+    <string name="Sound_Button"> Sound Button</string>
 
 
     <string name="Radio_Button">Radio Button</string>
@@ -133,6 +137,7 @@
 
 
     <string name="mainactivity">MainActivity.java</string>
+    <string name="vibrateService">VibrateService.java</string>
     <string name="activity_main">activity_main.xml</string>
     <string name="activity_second">activity_second.xml</string>
     <string name="SecondActivity">SecondActivity.java</string>

@@ -31,6 +31,7 @@ public class A_card_9_Fragment extends Fragment {
                         .replace(R.id.frame_container, advance, "Back Button Basic")
                         .addToBackStack(null)
                         .commit();
+
             }
         });
         location_output = view.findViewById(R.id.location_output);

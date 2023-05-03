@@ -1180,7 +1180,7 @@
 
                 </androidx.appcompat.widget.LinearLayoutCompat>
 
-               <!-- <androidx.appcompat.widget.LinearLayoutCompat
+                <androidx.appcompat.widget.LinearLayoutCompat
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/ll1"
@@ -1299,7 +1299,7 @@
                     android:gravity="center_horizontal">
 
                     <androidx.cardview.widget.CardView
-                        android:id="@+id/card_view17"
+                        android:id="@+id/card_view21"
                         android:layout_width="0dp"
                         android:layout_height="160dp"
                         android:layout_weight="1"
@@ -1327,7 +1327,7 @@
                                     <ImageView
                                         android:layout_width="40dp"
                                         android:layout_height="40dp"
-                                        android:src="@drawable/text_to"
+                                        android:src="@drawable/vibrate"
                                         android:layout_gravity="center" />
 
                                 </FrameLayout>>
@@ -1337,7 +1337,7 @@
                                     android:layout_height="wrap_content"
                                     android:layout_centerHorizontal="true"
                                     android:layout_marginTop="16dp"
-                                    android:text="@string/text_to_sspeech"
+                                    android:text="@string/Vibrate_Pphone"
                                     android:textColor="#0B204C"
                                     android:gravity="center"
                                     android:fontFamily="@font/poppins_bold"
@@ -1349,7 +1349,7 @@
                     </androidx.cardview.widget.CardView>
 
                     <androidx.cardview.widget.CardView
-                        android:id="@+id/card_view18"
+                        android:id="@+id/card_view22"
                         android:layout_width="0dp"
                         android:layout_height="160dp"
                         android:layout_below="@id/card4"
@@ -1379,7 +1379,7 @@
                                     <ImageView
                                         android:layout_width="40dp"
                                         android:layout_height="40dp"
-                                        android:src="@drawable/speech"
+                                        android:src="@drawable/sound_button"
                                         android:layout_gravity="center" />
 
                                 </FrameLayout>
@@ -1388,7 +1388,7 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_marginTop="16dp"
-                                    android:text="@string/speech_to_ttext"
+                                    android:text="@string/Sound_Bbutton"
                                     android:textColor="#0B204C"
                                     android:textSize="16dp"
                                     android:gravity="center"
@@ -1399,7 +1399,7 @@
 
                     </androidx.cardview.widget.CardView>
 
-                </androidx.appcompat.widget.LinearLayoutCompat>-->
+                </androidx.appcompat.widget.LinearLayoutCompat>
 
 
             </androidx.appcompat.widget.LinearLayoutCompat>

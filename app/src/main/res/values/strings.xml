@@ -22,6 +22,15 @@
     <string name="Sound_Button"> Sound Button</string>
 
 
+    <string name="Layout"> Layout</string>
+    <string name="Frame_Layout"> Frame Layout</string>
+    <string name="Linear_Layout"> Linear Layout</string>
+    <string name="Relative_Layout"> Relative Layout</string>
+    <string name="Table_Layout"> Table Layout</string>
+    <string name="Constraint_Layout"> Constraint Layout</string>
+    <string name="GridView"> GridView</string>
+
+
     <string name="Radio_Button">Radio Button</string>
     <string name="ListView">ListView</string>
     <string name="Date_Piker">Date Picker</string>

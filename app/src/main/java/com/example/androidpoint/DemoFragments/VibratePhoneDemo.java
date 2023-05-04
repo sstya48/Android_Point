@@ -1,20 +1,20 @@
 package com.example.androidpoint.DemoFragments;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.appcompat.widget.AppCompatImageView;
 import androidx.fragment.app.Fragment;
 
+import android.os.Vibrator;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-
 import com.example.androidpoint.Fragment.Basic.B_card_21_Fragment;
-import com.example.androidpoint.Fragment.Basic.B_card_22_Fragment;
 import com.example.androidpoint.R;
-import com.example.androidpoint.VibrateService;
+
 
 public class VibratePhoneDemo extends Fragment {
     Button buttonVibrate;
@@ -31,8 +31,9 @@ public class VibratePhoneDemo extends Fragment {
         buttonVibrate.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View arg0) {
-                Intent intentVibrate = new Intent(getContext(), VibrateService.class);
-                startActivity(intentVibrate);
+
+                Vibrator vibrator = (Vibrator) getActivity().getSystemService(Context.VIBRATOR_SERVICE);
+                vibrator.vibrate(50);
 
             }
         });
@@ -47,4 +48,5 @@ public class VibratePhoneDemo extends Fragment {
         });
         return view;
     }
+
 }

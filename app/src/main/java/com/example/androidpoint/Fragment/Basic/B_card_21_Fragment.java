@@ -1,12 +1,16 @@
 package com.example.androidpoint.Fragment.Basic;
 
+import static android.content.Context.VIBRATOR_SERVICE;
+
 import android.annotation.SuppressLint;
+import android.content.Context;
 import android.os.Bundle;
 
 import androidx.appcompat.widget.AppCompatImageView;
 import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 
+import android.os.Vibrator;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -95,46 +99,24 @@ public class B_card_21_Fragment extends Fragment {
                 "        btn.setOnClickListener(new View.OnClickListener() {\n" +
                 " \n" +
                 "            public void onClick(View arg0) {\n" +
-                "                // TODO Auto-generated method stub\n" +
-                " \n" +
-                "                // Create a New Intent and start the service\n" +
-                "                Intent intentVibrate = new Intent(getApplicationContext(),\n" +
-                "                        VibrateService.class);\n" +
-                "                startService(intentVibrate);\n" +
-                " \n" +
+
+                "Vibrator vibrator = (Vibrator) getActivity().getSystemService(Context.VIBRATOR_SERVICE); \n"+
+                "vibrator.vibrate(50);\n"+
                 "            }\n" +
-                "        });\n" +
-                "    }\n" +
                 "}");
 
         model_java.setText("package com.androidalians.vibratephone;\n" +
                 " \n" +
                 "import android.app.Service;\n" +
                 "import android.content.Context;\n" +
-                "import android.content.Intent;\n" +
-                "import android.os.IBinder;\n" +
                 "import android.os.Vibrator;\n" +
                 " \n" +
-                "public class VibrateService extends Service {\n" +
-                " \n" +
-                "    @Override\n" +
-                "    public void onStart(Intent intent, int startId) {\n" +
-                "        // TODO Auto-generated method stub\n" +
-                "        super.onStart(intent, startId);\n" +
-                " \n" +
-                "        Vibrator v = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);\n" +
-                "        // Vibrating Pattern\n" +
-                "        long pattern[] = { 0, 800, 200, 1200, 300, 2000, 400, 4000 };\n" +
-                "        v.vibrate(pattern, -1);\n" +
-                "    }\n" +
-                " \n" +
-                "    @Override\n" +
-                "    public IBinder onBind(Intent intent) {\n" +
-                "        // TODO Auto-generated method stub\n" +
-                "        return null;\n" +
-                "    }\n" +
-                " \n" +
-                "}");
+                "public static void vibrate(VibratePhoneDemo fragment) {\n"+
+
+                 "Vibrator vibrator = (Vibrator) fragment.getContext().getSystemService(VIBRATOR_SERVICE);\n"+
+                 "vibrator.vibrate(50);\n"+
+                  " }\n"+
+                "}\n");
 
         vibrate_xml.setText("<?xml version=\"1.0\" encoding=\"utf-8\"?>\n" +
                 "<LinearLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\n" +

@@ -22,7 +22,7 @@ public class B_card_23_Fragment extends Fragment {
     TextView one_xml, two_xml, three_xml, four_xml, five_xml,  six_xml;
 
 
-    @SuppressLint("MissingInflatedId")
+    @SuppressLint({"MissingInflatedId", "SetTextI18n"})
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -44,7 +44,80 @@ public class B_card_23_Fragment extends Fragment {
         six_xml= view.findViewById(R.id.six_xml);
         six_xml.setTextIsSelectable(true);
 
-        one_xml.setText("");
+        one_xml.setText("<?xml version=\"1.0\" encoding=\"utf-8\"?>\n" +
+                "<FrameLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\n" +
+                "    xmlns:tools=\"http://schemas.android.com/tools\"\n" +
+                "    android:layout_width=\"match_parent\"\n" +
+                "    android:layout_height=\"wrap_content\"\n" +
+                "    android:layout_gravity=\"center\">\n" +
+                "    \n" +
+                "    <FrameLayout \n" +
+                "        android:layout_width=\"match_parent\"\n" +
+                "        android:layout_height=\"match_parent\">\n" +
+                "        \n" +
+                "    <ImageButton\n" +
+                "        android:layout_width=\"100dp\"\n" +
+                "        android:layout_height=\"100dp\"\n" +
+                "        android:layout_gravity=\"start\"/>\n" +
+                "\n" +
+                "    <ImageButton\n" +
+                "        android:layout_width=\"100dp\"\n" +
+                "        android:layout_height=\"100dp\"\n" +
+                "        android:layout_gravity=\"center_horizontal\" />\n" +
+                "\n" +
+                "    <ImageButton\n" +
+                "        android:layout_width=\"100dp\"\n" +
+                "        android:layout_height=\"100dp\"\n" +
+                "        android:layout_gravity=\"end\"/>\n" +
+                "\n" +
+                "    </FrameLayout>\n" +
+                "\n" +
+                "    <FrameLayout\n" +
+                "        android:layout_width=\"match_parent\"\n" +
+                "        android:layout_height=\"match_parent\"\n" +
+                "        android:layout_marginTop=\"150dp\">\n" +
+                "\n" +
+                "        <ImageButton\n" +
+                "            android:layout_width=\"100dp\"\n" +
+                "            android:layout_height=\"100dp\"\n" +
+                "            android:layout_gravity=\"start\"/>\n" +
+                "\n" +
+                "        <ImageButton\n" +
+                "            android:layout_width=\"100dp\"\n" +
+                "            android:layout_height=\"100dp\"\n" +
+                "            android:layout_gravity=\"center_horizontal\" />\n" +
+                "\n" +
+                "        <ImageButton\n" +
+                "            android:layout_width=\"100dp\"\n" +
+                "            android:layout_height=\"100dp\"\n" +
+                "            android:layout_gravity=\"end\"/>\n" +
+                "\n" +
+                "    </FrameLayout>\n" +
+                "\n" +
+                "    <FrameLayout\n" +
+                "        android:layout_width=\"match_parent\"\n" +
+                "        android:layout_height=\"match_parent\"\n" +
+                "        android:layout_marginTop=\"300dp\">\n" +
+                "\n" +
+                "        <ImageButton\n" +
+                "            android:layout_width=\"100dp\"\n" +
+                "            android:layout_height=\"100dp\"\n" +
+                "            android:layout_gravity=\"start\"/>\n" +
+                "\n" +
+                "        <ImageButton\n" +
+                "            android:layout_width=\"100dp\"\n" +
+                "            android:layout_height=\"100dp\"\n" +
+                "            android:layout_gravity=\"center_horizontal\" />\n" +
+                "\n" +
+                "        <ImageButton\n" +
+                "            android:layout_width=\"100dp\"\n" +
+                "            android:layout_height=\"100dp\"\n" +
+                "            android:layout_gravity=\"end\"/>\n" +
+                "\n" +
+                "    </FrameLayout>\n" +
+                "\n" +
+                "</FrameLayout>");
+
         two_xml.setText("");
         three_xml.setText("");
         four_xml.setText("");

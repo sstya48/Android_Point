@@ -46,7 +46,7 @@ public class AllLayout extends Fragment {
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                B_card_1_Fragment Helloworld= new B_card_1_Fragment();
+                FrameLayout_Demo Helloworld= new FrameLayout_Demo();
                 getActivity().getSupportFragmentManager().beginTransaction()
                         .replace(R.id.frame_container, Helloworld, "Helloworld Code")
                         .addToBackStack(null)
@@ -58,7 +58,7 @@ public class AllLayout extends Fragment {
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                B_card_1_Fragment Helloworld= new B_card_1_Fragment();
+                LinearLayout_Demo Helloworld= new LinearLayout_Demo();
                 getActivity().getSupportFragmentManager().beginTransaction()
                         .replace(R.id.frame_container, Helloworld, "Helloworld Code")
                         .addToBackStack(null)

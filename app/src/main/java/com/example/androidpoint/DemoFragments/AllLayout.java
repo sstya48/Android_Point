@@ -19,7 +19,7 @@ public class AllLayout extends Fragment {
 
     AppCompatImageView layout_demo_main;
 
-    Button button1, button2, button3, button4, button5, button6, button7;
+    Button button1, button2, button3, button4, button5 ;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -30,7 +30,7 @@ public class AllLayout extends Fragment {
         button3 = view.findViewById(R.id.button3);
         button4 = view.findViewById(R.id.button4);
         button5 = view.findViewById(R.id.button5);
-        button6 = view.findViewById(R.id.button6);
+
         layout_demo_main = view.findViewById(R.id.layout_demo_main);
 
         layout_demo_main.setOnClickListener(new View.OnClickListener() {
@@ -70,7 +70,7 @@ public class AllLayout extends Fragment {
         button3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                B_card_1_Fragment Helloworld= new B_card_1_Fragment();
+                RelativeLayout_Demo Helloworld= new RelativeLayout_Demo();
                 getActivity().getSupportFragmentManager().beginTransaction()
                         .replace(R.id.frame_container, Helloworld, "Helloworld Code")
                         .addToBackStack(null)
@@ -82,7 +82,7 @@ public class AllLayout extends Fragment {
         button4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                B_card_1_Fragment Helloworld= new B_card_1_Fragment();
+                TableLayout_Demo Helloworld= new TableLayout_Demo();
                 getActivity().getSupportFragmentManager().beginTransaction()
                         .replace(R.id.frame_container, Helloworld, "Helloworld Code")
                         .addToBackStack(null)
@@ -90,11 +90,10 @@ public class AllLayout extends Fragment {
 
             }
         });
-
         button5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                B_card_1_Fragment Helloworld= new B_card_1_Fragment();
+                ContaintLayout_Demo Helloworld= new ContaintLayout_Demo();
                 getActivity().getSupportFragmentManager().beginTransaction()
                         .replace(R.id.frame_container, Helloworld, "Helloworld Code")
                         .addToBackStack(null)
@@ -103,17 +102,6 @@ public class AllLayout extends Fragment {
             }
         });
 
-        button6.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                B_card_1_Fragment Helloworld= new B_card_1_Fragment();
-                getActivity().getSupportFragmentManager().beginTransaction()
-                        .replace(R.id.frame_container, Helloworld, "Helloworld Code")
-                        .addToBackStack(null)
-                        .commit();
-
-            }
-        });
 
 
 

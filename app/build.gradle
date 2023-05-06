@@ -84,4 +84,9 @@ dependencies {
     annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
 
 
+    //swiperefresh layout
+    implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.0.0'
+
+
+
 }

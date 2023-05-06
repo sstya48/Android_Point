@@ -13,6 +13,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import com.example.androidpoint.Adapter.LearnAdapter;
 import com.example.androidpoint.Fragment.BaseFragment;
@@ -34,6 +35,8 @@ public class Learn  extends BaseFragment {
 
 
     private ArrayList<LearnModel> datalist;
+
+    SwipeRefreshLayout mSwipeRefreshLayout;
 
 
     private RecyclerView recyclerView;
@@ -83,6 +86,10 @@ public class Learn  extends BaseFragment {
         progressBar.setProgressDrawable(progress_drawable);
 */
 
+        mSwipeRefreshLayout=view.findViewById(R.id.swipeToRefresh);
+        mSwipeRefreshLayout.setColorSchemeResources(R.color.lightyellow);
+
+
         recyclerView= view.findViewById(R.id.recyclerview);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
 
@@ -92,6 +99,15 @@ public class Learn  extends BaseFragment {
 
         recyclerView.setHasFixedSize(true);
         recyclerView.setAdapter(myAdapter);
+
+        mSwipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                recyclerView.setHasFixedSize(true);
+                recyclerView.setAdapter(myAdapter);
+                mSwipeRefreshLayout.setRefreshing(false);
+            }
+        });
 
         showProgressDialog();
 

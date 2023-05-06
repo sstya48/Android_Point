@@ -41,6 +41,7 @@ public class B_card_5_Fragment extends Fragment {
                 getActivity().getSupportFragmentManager().beginTransaction()
                         .replace(R.id.frame_container, basic, "CheckBox Code Back")
                         .commit();
+
             }
         });
 
@@ -51,6 +52,7 @@ public class B_card_5_Fragment extends Fragment {
                 getActivity().getSupportFragmentManager().beginTransaction()
                         .replace(R.id.frame_container, checkBox_fragment, "checkBox DEMO")
                         .commit();
+
             }
         });
 

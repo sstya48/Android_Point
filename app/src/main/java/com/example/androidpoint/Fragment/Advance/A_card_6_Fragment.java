@@ -38,6 +38,7 @@ public class A_card_6_Fragment extends Fragment {
                         .replace(R.id.frame_container, advance, "Back Button Basic")
                         .addToBackStack(null)
                         .commit();
+
             }
         });
 

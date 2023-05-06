@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="#FFFFFF"
+    tools:context=".Fragment.Basic.B_card_22_Fragment">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/layout_bg"
+            android:padding="13dp"
+            android:gravity="center_vertical">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/song_arrow"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center_vertical"
+                android:padding="6dp"
+                android:background="?android:attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/arrow" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="@string/Sound_Button"
+                android:layout_gravity="center"
+                android:fontFamily="@font/poppins_semibold"
+                android:textColor="#181A20"
+                android:textSize="20sp"/>
+
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:padding="7dp"
+                    android:layout_marginBottom="20dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/java_code"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:paddingBottom="20dp"
+                        android:padding="10dp"
+                        android:gravity="clip_vertical"
+                        android:text="@string/mainactivity"
+                        android:textSize="16sp"
+                        android:background="@drawable/code_title_bg"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:layout_marginBottom="15dp" />
+
+                    <TextView
+                        android:id="@+id/song_java"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:gravity="clip_vertical"
+                        android:text="hello"
+                        android:textSize="14sp"
+                        android:textColor="#333333"
+                        android:background="@drawable/boder_sos"
+                        android:overScrollMode="always"
+                        android:scrollbarStyle="insideInset"
+                        android:layout_marginBottom="20dp"
+                        android:scrollbars="vertical" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:paddingBottom="20dp"
+                        android:padding="10dp"
+                        android:gravity="clip_vertical"
+                        android:text="@string/activity_main"
+                        android:textSize="16sp"
+                        android:background="@drawable/code_title_bg"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:layout_marginBottom="15dp" />
+
+                    <TextView
+                        android:id="@+id/song_xml"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:gravity="clip_vertical"
+                        android:text="hello"
+                        android:textSize="14sp"
+                        android:textColor="#333333"
+                        android:background="@drawable/boder_sos"
+                        android:overScrollMode="always"
+                        android:scrollbarStyle="insideInset"
+                        android:layout_marginBottom="20dp"
+                        android:scrollbars="vertical" />
+
+                    <!--<TextView
+                        android:id="@+id/xml_code"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="20dp"
+                        android:padding="10dp"
+                        android:gravity="clip_vertical"
+                        android:text="@string/activity_main"
+                        android:textSize="16sp"
+                        android:background="@drawable/code_title_bg"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:layout_marginBottom="15dp" />
+
+                    <TextView
+                        android:id="@+id/vibrate_xml"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:gravity="clip_vertical"
+                        android:text="hello"
+                        android:textSize="14sp"
+                        android:textColor="#333333"
+                        android:background="@drawable/boder_sos"
+                        android:overScrollMode="always"
+                        android:scrollbarStyle="insideInset"
+                        android:layout_marginBottom="20dp"
+                        android:scrollbars="vertical" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="20dp"
+                        android:padding="10dp"
+                        android:gravity="clip_vertical"
+                        android:text="@string/manifest"
+                        android:textSize="16sp"
+                        android:background="@drawable/code_title_bg"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:layout_marginBottom="15dp" />
+
+                    <TextView
+                        android:id="@+id/manifest_xml"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:gravity="clip_vertical"
+                        android:text="hello"
+                        android:textSize="14sp"
+                        android:textColor="#333333"
+                        android:background="@drawable/boder_sos"
+                        android:overScrollMode="always"
+                        android:scrollbarStyle="insideInset"
+                        android:layout_marginBottom="20dp"
+                        android:scrollbars="vertical" />-->
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/vibrate_yt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:cardElevation="10dp"
+                        app:cardCornerRadius="10dp"
+                        app:cardBackgroundColor="@color/white"
+                        app:cardPreventCornerOverlap="true"
+                        app:cardUseCompatPadding="true">
+
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="80dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/yt"/>
+
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+
+            </ScrollView>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/song_demo"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="30dp"
+                android:layout_marginBottom="20dp"
+                android:background="?android:attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:focusable="true"
+                android:visibility="visible"
+                app:srcCompat="@drawable/codepart" />
+
+        </RelativeLayout>
+
+    </LinearLayout>

@@ -41,7 +41,6 @@ public class AboutUs extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 gotoUrl("https://www.youtube.com/@Androidalians/videos");
-
             }
         });
 

@@ -33,6 +33,7 @@ public class A_card_3_Fragment extends Fragment {
                         .replace(R.id.frame_container, advance, "Back Button Basic")
                         .addToBackStack(null)
                         .commit();
+
             }
         });
 
@@ -49,6 +50,7 @@ public class A_card_3_Fragment extends Fragment {
                         .replace(R.id.frame_container, scroll_demo, "SCROLL DEMO")
                         .addToBackStack(null)
                         .commit();
+
 
             }
         });

@@ -49,6 +49,7 @@ public class B_card_20_Fragment extends Fragment {
                 getActivity().getSupportFragmentManager().beginTransaction()
                         .replace(R.id.frame_container, basic, "Back Button Basic")
                         .commit();
+
             }
         });
 
@@ -61,6 +62,7 @@ public class B_card_20_Fragment extends Fragment {
                         .replace(R.id.frame_container, Custem_Toast, "Custem Toast DEMO")
                         .addToBackStack(null)
                         .commit();
+
             }
         });
           /*    speech_to_yt.setOnClickListener(new View.OnClickListener() {

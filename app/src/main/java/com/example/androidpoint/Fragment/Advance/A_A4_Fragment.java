@@ -63,6 +63,7 @@ A_A4_Fragment extends Fragment {
                     @Override
                     public void onClick(View view) {
                         alertDialog.dismiss();
+
                     }
                 });
                 btn_yes.setOnClickListener(new View.OnClickListener() {
@@ -72,6 +73,7 @@ A_A4_Fragment extends Fragment {
                     }
                 });
                 alertDialog.show();
+
             }
         });
 

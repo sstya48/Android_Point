@@ -69,6 +69,7 @@ public class B_card_2_Fragment extends Fragment {
                 getActivity().getSupportFragmentManager().beginTransaction()
                         .replace(R.id.frame_container, activityCycle_demo, "activityCycle DEMO")
                         .commit();
+
             }
         });
 

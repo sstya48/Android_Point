@@ -1,5 +1,6 @@
 package com.example.androidpoint.Fragment.Advance;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 
 import androidx.appcompat.widget.AppCompatImageView;
@@ -16,6 +17,7 @@ public class A_A16_Fragment extends Fragment {
 
     AppCompatImageView Btn_arrow;
 
+    @SuppressLint("MissingInflatedId")
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -31,6 +33,7 @@ public class A_A16_Fragment extends Fragment {
                         .replace(R.id.frame_container, A_card_16_Fragment, "Back Button Basic")
                         .addToBackStack(null)
                         .commit();
+
             }
         });
 

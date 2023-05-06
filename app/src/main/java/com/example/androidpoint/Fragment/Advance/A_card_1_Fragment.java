@@ -51,6 +51,7 @@ public class A_card_1_Fragment extends Fragment {
             @Override
             public void onClick(View view) {
                 gotoUrl("https://www.youtube.com/watch?v=zFuVohq_qvM");
+
             }
         });
         spalshscreen_output.setOnClickListener(new View.OnClickListener() {

@@ -47,6 +47,7 @@ public class B_card_13_Fragment extends Fragment {
                 getActivity().getSupportFragmentManager().beginTransaction()
                         .replace(R.id.frame_container, basic, "Explicit Code Back")
                         .commit();
+
             }
         });
         explicit_demo.setOnClickListener(new View.OnClickListener() {
@@ -56,6 +57,7 @@ public class B_card_13_Fragment extends Fragment {
                 getActivity().getSupportFragmentManager().beginTransaction()
                         .replace(R.id.frame_container, explicitIntent1Fragment, "Explicit Demo")
                         .commit();
+
             }
         });
 

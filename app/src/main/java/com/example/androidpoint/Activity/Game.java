@@ -65,13 +65,11 @@ public class Game extends AppCompatActivity implements View.OnClickListener {
 
                 {
 
-                    return;
 
                 }
 
                 else if(checkWinner())
                 {
-                    return;
                 }
 
                 String buttonID  = view.getResources().getResourceEntryName(view.getId());

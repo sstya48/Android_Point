@@ -45,6 +45,7 @@ public class B_card_14_Fragment extends Fragment {
                 getActivity().getSupportFragmentManager().beginTransaction()
                         .replace(R.id.frame_container, basic, "Option Menu Code Back")
                         .commit();
+
             }
         });
 
@@ -52,6 +53,7 @@ public class B_card_14_Fragment extends Fragment {
             @Override
             public void onClick(View view) {
                 gotoUrl("https://www.youtube.com/watch?v=-aLpcYdeSbw");
+
             }
         });
         optionMenu_demo.setOnClickListener(new View.OnClickListener() {

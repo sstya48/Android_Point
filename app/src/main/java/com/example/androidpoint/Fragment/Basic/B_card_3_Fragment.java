@@ -40,6 +40,7 @@ public class B_card_3_Fragment extends Fragment {
                 getActivity().getSupportFragmentManager().beginTransaction()
                         .replace(R.id.frame_container, basic, "Hide Title Code Back")
                         .commit();
+
             }
         });
 
@@ -50,6 +51,7 @@ public class B_card_3_Fragment extends Fragment {
                 getActivity().getSupportFragmentManager().beginTransaction()
                         .replace(R.id.frame_container, hideTitleDemoFragment, "Hide Title DEMO")
                         .commit();
+
             }
         });
 

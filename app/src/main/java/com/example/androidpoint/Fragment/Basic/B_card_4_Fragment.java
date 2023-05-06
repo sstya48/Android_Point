@@ -50,6 +50,7 @@ public class B_card_4_Fragment extends Fragment {
                 getActivity().getSupportFragmentManager().beginTransaction()
                         .replace(R.id.frame_container, basic, "Orientation Code Back")
                         .commit();
+
             }
         });
 
@@ -61,6 +62,7 @@ public class B_card_4_Fragment extends Fragment {
                 getActivity().getSupportFragmentManager().beginTransaction()
                         .replace(R.id.frame_container, screenOrientationFragment, "screen Orientation DEMO")
                         .commit();
+
 
             }
         });

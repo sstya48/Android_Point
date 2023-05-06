@@ -47,6 +47,7 @@ public class B_card_11_Fragment extends Fragment {
                 getActivity().getSupportFragmentManager().beginTransaction()
                         .replace(R.id.frame_container, basic, "Search Code Back")
                         .commit();
+
             }
         });
 

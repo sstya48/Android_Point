@@ -51,6 +51,7 @@ public class B_card_8_Fragment extends Fragment {
                 getActivity().getSupportFragmentManager().beginTransaction()
                         .replace(R.id.frame_container, basic, "DatePicker Code Back")
                         .commit();
+
             }
         });
 
@@ -58,6 +59,7 @@ public class B_card_8_Fragment extends Fragment {
             @Override
             public void onClick(View view) {
                 gotoUrl("https://www.youtube.com/watch?v=NZLs_GeO00I");
+
             }
         });
         datepicker_demo.setOnClickListener(new View.OnClickListener() {

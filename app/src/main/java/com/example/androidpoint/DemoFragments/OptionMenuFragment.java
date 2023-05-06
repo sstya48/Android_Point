@@ -47,6 +47,7 @@ public class OptionMenuFragment extends Fragment {
                 getActivity().getSupportFragmentManager().beginTransaction()
                         .replace(R.id.frame_container, OptionMenu, "OptionMenu Demo Back")
                         .commit();
+
             }
         });
 

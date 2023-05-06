@@ -19,13 +19,13 @@ public class FrameLayout_Demo extends Fragment {
 
     @SuppressLint("MissingInflatedId")
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_frame_layout__demo, container, false);
+        public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                Bundle savedInstanceState) {
+            View view = inflater.inflate(R.layout.fragment_frame_layout__demo, container, false);
 
-        Frame_Layout_arrow = view.findViewById(R.id.Frame_Layout_arrow);
+            Frame_Layout_arrow = view.findViewById(R.id.Frame_Layout_arrow);
 
-        Frame_Layout_arrow.setOnClickListener(new View.OnClickListener() {
+            Frame_Layout_arrow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 AllLayout ScrollView= new AllLayout();

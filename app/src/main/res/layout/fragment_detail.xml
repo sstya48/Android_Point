@@ -16,6 +16,7 @@
         android:paddingBottom="7dp"
         android:background="@color/skyblue">
 
+
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/back_learn_icon"
             android:layout_width="45dp"
@@ -67,14 +68,23 @@
                 android:textStyle="bold" />
 
 
-
-            <androidx.appcompat.widget.AppCompatImageView
+           <!-- <com.ortiz.touchview.TouchImageView
                 android:id="@+id/image_learn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                app:srcCompat="@drawable/ic_launcher_background"
                 android:layout_margin="10dp" />
+-->
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/image_learn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@mipmap/ic_launcher"
+                android:layout_margin="10dp" />
+
+<!--            android:src="@drawable/onboard1"-->
 
             <TextView
                 android:id="@+id/des_learn"

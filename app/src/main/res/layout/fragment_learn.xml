@@ -38,6 +38,8 @@
             android:queryHint="Search Here" />
 
     </androidx.cardview.widget.CardView>
+
+
 <RelativeLayout
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -93,6 +95,10 @@
         android:indeterminateDrawable="@drawable/progress_color"
         />-->
 
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeToRefresh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerview"
@@ -104,6 +110,8 @@
         tools:listitem="@layout/list_item"
 
         />
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 
 
     <!--    android:layout_above="@+id/adView_learn"-->

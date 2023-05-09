@@ -1,19 +1,25 @@
 package com.example.androidpoint.Fragment.Learn;
 
 import android.annotation.SuppressLint;
+import android.graphics.Color;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.view.Display;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import androidx.appcompat.widget.AppCompatImageView;
 import androidx.fragment.app.Fragment;
 
+import com.ceylonlabs.imageviewpopup.ImagePopup;
 import com.example.androidpoint.Fragment.BaseFragment;
 import com.example.androidpoint.Model.LearnModel;
 import com.example.androidpoint.R;
+import com.ortiz.touchview.TouchImageView;
 import com.squareup.picasso.Callback;
 import com.squareup.picasso.Picasso;
 
@@ -22,7 +28,11 @@ public class DetailFragment extends BaseFragment {
 
     TextView des_learn,title_learn,des_title;
 
-    AppCompatImageView Image,back_learn_icon;
+    AppCompatImageView back_learn_icon;
+
+//    TouchImageView Image;
+
+    AppCompatImageView Image;
 
     String description,title,image;
 
@@ -85,25 +95,44 @@ public class DetailFragment extends BaseFragment {
 
         des_learn.setText(description.toString().replace( "\\\\n", "\n  \n" ));
 
+        //list image
 
         Picasso.get().load(image).into(Image, new Callback() {
-            @Override
-            public void onSuccess() {
-                //Image loaded successfully, now dismiss progress bar.
+                    @Override
+                    public void onSuccess() {
+                        dismissProgressDialog();
+                    }
 
-                dismissProgressDialog();
-
-//                progressBar.setVisibility(View.GONE);
-            }
-
-            @Override
-            public void onError(Exception e) {
-
-                dismissProgressDialog();
-//                progressBar.setVisibility(View.GONE);
-            }
-        }
+                    @Override
+                    public void onError(Exception e) {
+                        dismissProgressDialog();
+                    }
+                }
         );
+
+
+
+
+//POPUP IMAGE=================================
+
+        final ImagePopup imagePopup = new ImagePopup(getContext());
+      /*  imagePopup.setWindowHeight(800); // Optional
+        imagePopup.setWindowWidth(800);*/ // Optional
+        imagePopup.setBackgroundColor(Color.WHITE);  // Optional
+        imagePopup.setFullScreen(true); // Optional
+        imagePopup.setHideCloseIcon(true);  // Optional
+        imagePopup.setImageOnClickClose(true);  // Optional
+
+
+        imagePopup.initiatePopupWithPicasso(image);
+
+        Image.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                imagePopup.viewPopup();
+
+            }
+        });
 
 
 
@@ -114,7 +143,6 @@ public class DetailFragment extends BaseFragment {
                 getActivity().getSupportFragmentManager().beginTransaction()
                         .replace(R.id.frame_container, learn, "Back To Learn Listing....")
                         .commit();
-
             }
         });
 

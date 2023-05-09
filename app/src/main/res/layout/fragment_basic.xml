@@ -1393,7 +1393,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_centerHorizontal="true"
                                 android:layout_marginTop="30dp"
-                                android:text="@string/Image_Switcher"
+                                android:text="@string/Image_Sswitcher"
                                 android:textColor="#0B204C"
                                 android:gravity="center"
                                 android:fontFamily="@font/poppins_bold"

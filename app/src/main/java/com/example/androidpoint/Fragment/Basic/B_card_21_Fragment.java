@@ -27,7 +27,7 @@ public class B_card_21_Fragment extends Fragment {
 
  //   CardView vibrate_yt;
 
-    TextView vibrate_xml, vibrate_java, manifest_xml, model_java;
+    TextView vibrate_xml, vibrate_java, manifest_xml;
 
     @SuppressLint({"MissingInflatedId", "SetTextI18n"})
     @Override
@@ -41,8 +41,6 @@ public class B_card_21_Fragment extends Fragment {
         vibrate_xml.setTextIsSelectable(true);
         manifest_xml= view.findViewById(R.id.manifest_xml);
         manifest_xml.setTextIsSelectable(true);
-        model_java= view.findViewById(R.id.model_java);
-        model_java.setTextIsSelectable(true);
 
         // vibrate_yt= view.findViewById(R.id.vibrate_yt);
 
@@ -79,44 +77,37 @@ public class B_card_21_Fragment extends Fragment {
             }
         });*/
 
-        vibrate_java.setText("package com.androidalians.vibratephone;\n" +
-                " \n" +
+        vibrate_java.setText("package com.example.vibreatedemo;\n" +
+                "import androidx.appcompat.app.AppCompatActivity;\n" +
+                "import android.annotation.SuppressLint;\n" +
                 "import android.app.Activity;\n" +
-                "import android.content.Intent;\n" +
+                "import android.content.Context;\n" +
                 "import android.os.Bundle;\n" +
+                "import android.os.Vibrator;\n" +
                 "import android.view.View;\n" +
                 "import android.widget.Button;\n" +
                 " \n" +
                 "public class MainActivity extends Activity {\n" +
+                "   Button btn;\n" +
+                "   @SuppressLint(&quot;MissingInflatedId&quot;)\n" +
                 " \n" +
-                "    @Override\n" +
-                "    public void onCreate(Bundle savedInstanceState) {\n" +
+                "   @Override\n" +
+                "   protected void onCreate(Bundle savedInstanceState) {\n" +
                 "        super.onCreate(savedInstanceState);\n" +
                 "        setContentView(R.layout.activity_main);\n" +
-                " \n" +
-                "        Button btn = (Button) findViewById(R.id.buttonVibrate);\n" +
-                " \n" +
+                "        btn = findViewById(R.id.btn);\n" +
                 "        btn.setOnClickListener(new View.OnClickListener() {\n" +
                 " \n" +
-                "            public void onClick(View arg0) {\n" +
-
-                "Vibrator vibrator = (Vibrator) getActivity().getSystemService(Context.VIBRATOR_SERVICE); \n"+
-                "vibrator.vibrate(50);\n"+
-                "            }\n" +
+                "      @Override\n" +
+                "      public void onClick(View arg0) {\n" +
+                "         Vibrator vibrator= (Vibrator)\n" +
+                "         getSystemService(Context.VIBRATOR_SERVICE);\n" +
+                "        vibrator.vibrate(2000);\n" +
+                "      }\n" +
+                "     });\n" +
+                "   }\n" +
                 "}");
 
-        model_java.setText("package com.androidalians.vibratephone;\n" +
-                " \n" +
-                "import android.app.Service;\n" +
-                "import android.content.Context;\n" +
-                "import android.os.Vibrator;\n" +
-                " \n" +
-                "public static void vibrate(VibratePhoneDemo fragment) {\n"+
-
-                 "Vibrator vibrator = (Vibrator) fragment.getContext().getSystemService(VIBRATOR_SERVICE);\n"+
-                 "vibrator.vibrate(50);\n"+
-                  " }\n"+
-                "}\n");
 
         vibrate_xml.setText("<?xml version=\"1.0\" encoding=\"utf-8\"?>\n" +
                 "<LinearLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\n" +
@@ -127,12 +118,9 @@ public class B_card_21_Fragment extends Fragment {
                 "\n" +
                 "    <Button\n" +
                 "        android:id=\"@+id/buttonVibrate\"\n" +
-                "        android:layout_width=\"200dp\"\n" +
+                "        android:layout_width=\"wrap_content\"\n" +
                 "        android:layout_height=\"wrap_content\"\n" +
-                "        android:layout_alignParentLeft=\"true\"\n" +
-                "        android:layout_below=\"@+id/textView1\"\n" +
                 "        android:layout_gravity=\"center\"\n" +
-                "        android:layout_marginTop=\"200dp\"\n" +
                 "        android:text=\"Vibrate\" />\n" +
                 "\n" +
                 "</LinearLayout>");

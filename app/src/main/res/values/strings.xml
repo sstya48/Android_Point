@@ -44,8 +44,8 @@
     <string name="Countdown_Ttimer">Countdown \n Timer</string>
     <string name="Option_Manu">Option Menu</string>
     <string name="Custem_Toast">Custom Toast</string>
-    <string name="Image_Switcher">Image Switcher</string>
-    <string name="Image_Sswitcher">Image \n Switcher</string>
+    <string name="blinking_text">Blinking Text</string>
+    <string name="blinking_ttext">Blinking \n Text</string>
     <string name="Context_Manu">Context Menu</string>
     <string name="Popup_Manu">Popup Menu</string>
     <string name="Splash_Screen">Splash Screen</string>
@@ -77,6 +77,7 @@
     <string name="Learn_Android_Studio">Learn Android</string>
     <string name="Account">Account</string>
     <string name="Dark_Theme">Dark Theme</string>
+    <string name="you_tube">Youtube</string>
     <string name="Game">Game</string>
     <string name="Tips">Tips</string>
     <string name="Support_US">Support US</string>

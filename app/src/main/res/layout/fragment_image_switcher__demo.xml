@@ -28,7 +28,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
-                android:text="@string/Image_Switcher"
+                android:text="@string/blinking_text"
                 android:layout_gravity="center"
                 android:fontFamily="@font/poppins_semibold"
                 android:textColor="#181A20"
@@ -36,43 +36,43 @@
 
         </LinearLayout>
 
-    <androidx.coordinatorlayout.widget.CoordinatorLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:fitsSystemWindows="true">
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="50dp"
+        android:orientation="vertical" >
 
-     <!--   <include layout="@layout/content_main_demo" />-->
+        <Button
+            android:id="@+id/startBlinkTextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="Start Blinking Text" />
 
-    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+        <Button
+            android:id="@+id/stopBlinkTextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/startBlinkTextButton"
+            android:layout_centerHorizontal="true"
+            android:text="Stop Blinking Text" />
 
+        <TextView
+            android:id="@+id/blinkTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/stopBlinkTextButton"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="70dp"
+            android:paddingTop="10dp"
+            android:textColor="@color/red"
+            android:text="Hello Android Alians"
+            android:textSize="40sp" />
+
+    </RelativeLayout>
 
 </LinearLayout>
 
 
 
-<!--
 
-    <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-android:layout_width="match_parent"
-android:layout_height="match_parent"
-xmlns:tools="http://schemas.android.com/tools"
-    >
-&lt;!&ndash;    tools:showIn="@layout/fragment_image_switcher__demo"&ndash;&gt;
-<ImageSwitcher
-    android:id="@+id/imageSwitcher"
-    android:layout_width="match_parent"
-    android:layout_height="250dp"
-    android:layout_marginBottom="28dp"
-    android:layout_marginTop="140dp" />
-
-<Button
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="Next"
-    android:id="@+id/button"
-    android:layout_marginBottom="47dp"
-    android:layout_alignParentBottom="true"
-    android:layout_centerHorizontal="true" />
-
-</RelativeLayout>-->

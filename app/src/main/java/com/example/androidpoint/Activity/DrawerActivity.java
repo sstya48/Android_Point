@@ -4,30 +4,19 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
 import androidx.appcompat.widget.AppCompatImageView;
-import androidx.core.content.res.ResourcesCompat;
 import androidx.fragment.app.Fragment;
 
 import android.annotation.SuppressLint;
-import android.app.Notification;
-import android.app.NotificationChannel;
-import android.app.NotificationManager;
 import android.content.Context;
 import android.content.Intent;
-import android.graphics.Bitmap;
-import android.graphics.drawable.BitmapDrawable;
-import android.graphics.drawable.Drawable;
 import android.net.Uri;
-import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
 import android.view.View;
-import android.widget.CompoundButton;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
-import android.widget.Switch;
 import android.widget.TextView;
 
 import com.example.androidpoint.BuildConfig;
@@ -40,19 +29,16 @@ import com.google.android.gms.ads.LoadAdError;
 import com.google.android.gms.ads.interstitial.InterstitialAd;
 import com.google.android.gms.ads.interstitial.InterstitialAdLoadCallback;
 
-public class MenuActivity extends AppCompatActivity {
+public class DrawerActivity extends AppCompatActivity {
 
-/*    private static final String CHANNEL_ID = "Notification";
-
-    private static final int NOTIFICATION_ID = 100;*/
     LinearLayout shareapp,tips,feedback,rate_us,about_us,ads_show,game;
 
     FrameLayout frameLayout;
 
     MainActivity mContext;
     Fragment fragment = null;
-    Switch mode_dark;
-    LinearLayout mode_change;
+    //Switch mode_dark;
+    LinearLayout youtube_link;
     ImageView light;
 
 
@@ -78,7 +64,7 @@ public class MenuActivity extends AppCompatActivity {
             getDelegate().setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
         }
 
-        setContentView(R.layout.activity_menu);
+        setContentView(R.layout.activity_drawer);
 
 /*
         if (AppCompatDelegate.getDefaultNightMode() == AppCompatDelegate.MODE_NIGHT_YES) {
@@ -95,8 +81,8 @@ public class MenuActivity extends AppCompatActivity {
         about_us = findViewById(R.id.about_us);
         rate_us = findViewById(R.id.rate_us);
 
-        mode_dark = findViewById(R.id.mode_dark);
-        mode_change = findViewById(R.id.mode_change);
+        //mode_dark = findViewById(R.id.mode_dark);
+        youtube_link = findViewById(R.id.youtube_link);
         light = findViewById(R.id.light);
         close_menu = findViewById(R.id.close_menu);
 
@@ -116,12 +102,20 @@ public class MenuActivity extends AppCompatActivity {
         version2.setText("Version : " + BuildConfig.VERSION_NAME);
 //=======================================================================================================
 
+        youtube_link.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.youtube.com/@Androidalians"));
+                startActivity(i);
+            }
+        });
+
         tips.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
 
-                Intent tips = new Intent(MenuActivity.this, TipsActivity.class);
+                Intent tips = new Intent(DrawerActivity.this, TipsActivity.class);
                 startActivity(tips);
             }
         });
@@ -139,7 +133,7 @@ public class MenuActivity extends AppCompatActivity {
             public void onClick(View view) {
 
 
-                Intent i = new Intent(MenuActivity.this, Feedback.class);
+                Intent i = new Intent(DrawerActivity.this, Feedback.class);
                 startActivity(i);
             }
         });
@@ -152,7 +146,7 @@ public class MenuActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                InterstitialAd.load(MenuActivity.this, getString(R.string.Interstitial_AdOne_unit_id), adRequest, new InterstitialAdLoadCallback() {
+                InterstitialAd.load(DrawerActivity.this, getString(R.string.Interstitial_AdOne_unit_id), adRequest, new InterstitialAdLoadCallback() {
                     @Override
                     public void onAdFailedToLoad(@NonNull LoadAdError loadAdError) {
                         super.onAdFailedToLoad(loadAdError);
@@ -199,7 +193,7 @@ public class MenuActivity extends AppCompatActivity {
                             public void run() {
 
                                 if (mInterstitialAd!= null) {
-                                    mInterstitialAd.show(MenuActivity.this);
+                                    mInterstitialAd.show(DrawerActivity.this);
                                 }
                                 else {
                                     Log.e("AdPending","Ad is not ready yet!");
@@ -222,7 +216,7 @@ public class MenuActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                ShareApp(MenuActivity.this);
+                ShareApp(DrawerActivity.this);
 
             }
         });
@@ -231,7 +225,7 @@ public class MenuActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                Intent i = new Intent(MenuActivity.this, AboutUs.class);
+                Intent i = new Intent(DrawerActivity.this, AboutUs.class);
                 startActivity(i);
 
             }
@@ -240,7 +234,7 @@ public class MenuActivity extends AppCompatActivity {
         game.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(MenuActivity.this, Game.class);
+                Intent i = new Intent(DrawerActivity.this, Game.class);
                 startActivity(i);
 
             }
@@ -281,7 +275,7 @@ public class MenuActivity extends AppCompatActivity {
 
         //dark mode===========================================================================================
 
-        if (saveState.getState() == true) {
+    /*    if (saveState.getState() == true) {
             mode_dark.setChecked(true);
         }
         mode_dark.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
@@ -304,7 +298,7 @@ public class MenuActivity extends AppCompatActivity {
 
                 }
             }
-        });
+        });*/
 
 
         //======================================================================

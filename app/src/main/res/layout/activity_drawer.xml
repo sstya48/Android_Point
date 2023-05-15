@@ -4,7 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".Activity.MenuActivity"
+    tools:context=".Activity.DrawerActivity"
+    android:id="@+id/drawer"
     android:background="@android:color/transparent">
 
     <com.google.android.material.navigation.NavigationView
@@ -23,73 +24,7 @@
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                >
-
-               <!-- <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp">
-
-                    <LinearLayout
-                        android:id="@+id/navigation_profile"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="30dp"
-                        android:orientation="horizontal"
-                        android:layout_marginBottom="30dp">
-
-                        <ImageView
-                            android:id="@+id/img_user"
-                            android:layout_width="70dp"
-                            android:layout_height="70dp"
-                            android:layout_marginStart="20dp"
-                            android:scaleType="centerCrop"
-                            android:src="@drawable/app_icon" />
-
-
-                        <LinearLayout
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:gravity="center"
-                            android:layout_marginStart="20dp"
-                            android:orientation="vertical">
-
-                            <TextView
-                                android:id="@+id/user_name"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="@string/Learn_Android_Studio"
-                                android:textColor="@color/lightbalck"
-                                android:textSize="20sp"
-                                android:fontFamily="@font/poppins_semibold"
-                                android:textStyle="bold" />
-
-                            <TextView
-                                android:id="@+id/version1"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="Version 2"
-                                android:gravity="center"
-                                android:fontFamily="@font/poppins_semibold"
-                                android:textColor="@color/alphaback"
-                                android:textSize="16sp" />
-
-
-
-                        </LinearLayout>
-
-                        <androidx.appcompat.widget.AppCompatImageView
-                            android:id="@+id/close_menu"
-                            android:layout_width="40dp"
-                            android:layout_height="40dp"
-                            android:layout_gravity="end|center_vertical"
-                            android:layout_marginStart="50dp"
-                            android:layout_marginEnd="20dp"
-                            android:src="@drawable/remove" />
-
-                    </LinearLayout>
-                </LinearLayout>-->
+                android:layout_height="wrap_content">
 
                 <RelativeLayout
                     android:id="@+id/navigation_profile"
@@ -98,27 +33,18 @@
                     android:layout_marginTop="40dp"
                     android:layout_marginBottom="30dp">
 
-                    <androidx.cardview.widget.CardView
-                        android:id="@+id/iv_user"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="16dp">
-
                         <ImageView
-                            android:id="@+id/img_user"
-                            android:layout_width="55dp"
-                            android:layout_height="55dp"
+                            android:id="@+id/iv_user"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_marginStart="16dp"
                             android:scaleType="centerCrop"
                             android:src="@drawable/app_icon" />
 
-
-                    </androidx.cardview.widget.CardView>
-
-
                     <androidx.appcompat.widget.AppCompatImageView
                         android:id="@+id/close_menu"
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
                         android:layout_alignParentEnd="true"
                         android:layout_centerVertical="true"
                         android:layout_marginEnd="15dp"
@@ -132,7 +58,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_centerVertical="true"
-                        android:layout_marginStart="10dp"
+                        android:layout_marginStart="15dp"
                         android:layout_toEndOf="@id/iv_user"
                         android:orientation="vertical">
 
@@ -183,13 +109,13 @@
                             android:includeFontPadding="false"
                             android:text="@string/Account"
                             android:textColor="@color/alphaback"
-                            android:textSize="22sp" />
+                            android:textSize="20sp" />
                     </LinearLayout>
 
 
 
                     <LinearLayout
-                        android:id="@+id/mode_change"
+                        android:id="@+id/youtube_link"
                         android:layout_width="match_parent"
                         android:layout_height="55dp"
                         android:orientation="horizontal"
@@ -208,7 +134,7 @@
                                 android:id="@+id/light"
                                 android:layout_width="30dp"
                                 android:layout_height="30dp"
-                                android:src="@drawable/sun"
+                                android:src="@drawable/youtube_drawer"
                                 android:layout_gravity="center"
                                 />
 
@@ -217,14 +143,14 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="@string/Dark_Theme"
+                            android:text="@string/you_tube"
                             android:layout_marginStart="20dp"
-                            android:textSize="20dp"
+                            android:textSize="20sp"
                             android:fontFamily="@font/poppins_regular"
                             android:textColor="@color/alphaback"
                             />
 
-                        <RelativeLayout
+                      <!--  <RelativeLayout
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
 
@@ -237,7 +163,7 @@
                                 android:layout_alignParentEnd="true"
                                 />
 
-                        </RelativeLayout>
+                        </RelativeLayout>-->
 
 
                     </LinearLayout>
@@ -282,7 +208,7 @@
                             android:layout_height="wrap_content"
                             android:text="@string/Game"
                             android:layout_marginStart="20dp"
-                            android:textSize="20dp"
+                            android:textSize="20sp"
                             android:fontFamily="@font/poppins_regular"
                             android:textColor="@color/alphaback"
                             />
@@ -319,22 +245,18 @@
                                 android:layout_width="30dp"
                                 android:layout_height="30dp"
                                 android:src="@drawable/chat"
-                                android:layout_gravity="center"
-                                />
+                                android:layout_gravity="center"/>
 
                         </FrameLayout>
-
-
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/Tips"
                             android:layout_marginStart="20dp"
-                            android:textSize="20dp"
+                            android:textSize="20sp"
                             android:fontFamily="@font/poppins_regular"
-                            android:textColor="@color/alphaback"
-                            />
+                            android:textColor="@color/alphaback"/>
 
                     </LinearLayout>
 
@@ -357,7 +279,7 @@
                             android:layout_marginStart="15dp"
                             android:text="@string/Support_US"
                             android:includeFontPadding="false"
-                            android:textSize="22sp"
+                            android:textSize="20sp"
                             tools:ignore="MissingClass"  />
 
                     </LinearLayout>
@@ -372,35 +294,30 @@
                         android:gravity="start|center"
                         android:paddingEnd="10dp"
                         android:clickable="true"
-                        android:paddingStart="10dp"
-                        >
+                        android:paddingStart="10dp" >
 
                         <FrameLayout
                             android:layout_width="40dp"
                             android:layout_height="40dp"
                             android:background="@drawable/menu_icon_bg"
                             android:backgroundTint="#D6DEE3"
-                            android:layout_gravity="center"
-                            >
+                            android:layout_gravity="center" >
+
                             <ImageView
                                 android:layout_width="30dp"
                                 android:layout_height="30dp"
                                 android:src="@drawable/share"
                                 android:layout_gravity="center"
-                                android:paddingEnd="3dp"
-
-                                />
+                                android:paddingEnd="3dp"/>
 
                         </FrameLayout>
-
-
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/Share"
                             android:layout_marginStart="20dp"
-                            android:textSize="20dp"
+                            android:textSize="20sp"
                             android:fontFamily="@font/poppins_regular"
                             android:textColor="@color/alphaback"
                             />
@@ -445,16 +362,14 @@
                         <!--        </FrameLayout>-->
 
 
-
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="@string/Rate_US"
                             android:layout_marginStart="20dp"
-                            android:textSize="20dp"
                             android:fontFamily="@font/poppins_regular"
+                            android:text="@string/Rate_US"
                             android:textColor="@color/alphaback"
-                            />
+                            android:textSize="20sp" />
 
                     </LinearLayout>
 
@@ -502,7 +417,7 @@
                             android:layout_height="wrap_content"
                             android:text="@string/Ads"
                             android:layout_marginStart="20dp"
-                            android:textSize="20dp"
+                            android:textSize="20sp"
                             android:fontFamily="@font/poppins_regular"
                             android:textColor="@color/alphaback"
                             />
@@ -526,7 +441,7 @@
                             android:layout_marginEnd="3dp"
                             android:text="@string/About_US"
                             android:includeFontPadding="false"
-                            android:textSize="22sp"
+                            android:textSize="20sp"
                             tools:ignore="MissingClass"  />
 
                     </LinearLayout>
@@ -569,7 +484,7 @@
                             android:layout_height="wrap_content"
                             android:text="@string/FeedBack"
                             android:layout_marginStart="20dp"
-                            android:textSize="20dp"
+                            android:textSize="20sp"
                             android:fontFamily="@font/poppins_regular"
                             android:textColor="@color/alphaback" />
 
@@ -616,7 +531,7 @@
                             android:layout_height="wrap_content"
                             android:text="@string/About_US"
                             android:layout_marginStart="20dp"
-                            android:textSize="20dp"
+                            android:textSize="20sp"
                             android:fontFamily="@font/poppins_regular"
                             android:textColor="@color/alphaback" />
 

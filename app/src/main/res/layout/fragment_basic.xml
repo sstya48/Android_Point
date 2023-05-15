@@ -1383,7 +1383,7 @@
                                 <ImageView
                                     android:layout_width="40dp"
                                     android:layout_height="40dp"
-                                    android:src="@drawable/image_switcher"
+                                    android:src="@drawable/texticon"
                                     android:layout_gravity="center" />
 
                             </FrameLayout>
@@ -1392,8 +1392,8 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_centerHorizontal="true"
-                                android:layout_marginTop="30dp"
-                                android:text="@string/Image_Sswitcher"
+                                android:layout_marginTop="14dp"
+                                android:text="@string/blinking_ttext"
                                 android:textColor="#0B204C"
                                 android:gravity="center"
                                 android:fontFamily="@font/poppins_bold"

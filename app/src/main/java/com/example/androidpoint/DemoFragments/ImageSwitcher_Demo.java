@@ -1,7 +1,11 @@
 package com.example.androidpoint.DemoFragments;
 
+import android.animation.ArgbEvaluator;
+import android.animation.ObjectAnimator;
+import android.animation.ValueAnimator;
 import android.annotation.SuppressLint;
 import android.app.ActionBar;
+import android.graphics.Color;
 import android.os.Bundle;
 
 import androidx.appcompat.widget.AppCompatImageView;
@@ -16,6 +20,7 @@ import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.ImageSwitcher;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.ViewSwitcher;
 
 import com.example.androidpoint.Fragment.Basic.B_card_24_Fragment;
@@ -23,16 +28,13 @@ import com.example.androidpoint.R;
 
 public class ImageSwitcher_Demo extends Fragment {
 
-   /* ImageSwitcher imageSwitcher;
-
-    Button nextButton;
-
-    int imageSwitcherImages[] =
-            {R.drawable.pc1, R.drawable.pc2, R.drawable.pc3, R.drawable.pc4, R.drawable.pc5};
-
-    int switcherImageLength = imageSwitcherImages.length;
-    int counter = -1;*/
     AppCompatImageView switcher_arrow;
+
+    private static final String TAG = "AnimationStarter";
+    ObjectAnimator textColorAnim;
+    Button stopBlinkTextButton, startBlinkTextButton;
+    TextView blinkTextView;
+
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -41,10 +43,9 @@ public class ImageSwitcher_Demo extends Fragment {
         View view = inflater.inflate(R.layout.fragment_image_switcher__demo, container, false);
 
         switcher_arrow= view.findViewById(R.id.switcher_arrow);
-
-//        imageSwitcher = (ImageSwitcher)  view.findViewById(R.id.imageSwitcher);
-//        nextButton = (Button) view.findViewById(R.id.button);
-
+         startBlinkTextButton =  view.findViewById(R.id.startBlinkTextButton);
+         stopBlinkTextButton =  view.findViewById(R.id.stopBlinkTextButton);
+        blinkTextView  = view.findViewById(R.id.blinkTextView);
 
         switcher_arrow.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -56,39 +57,37 @@ public class ImageSwitcher_Demo extends Fragment {
             }
         });
 
-/*        imageSwitcher.setFactory(new ViewSwitcher.ViewFactory() {
-            public ImageView makeView() {
-                ImageView switcherImageView = new ImageView(getContext());
-                switcherImageView.setLayoutParams(new ImageSwitcher.LayoutParams(
-                        ActionBar.LayoutParams.FILL_PARENT, ActionBar.LayoutParams.FILL_PARENT
-                ));
-                switcherImageView.setScaleType(ImageView.ScaleType.FIT_CENTER);
-              //  switcherImageView.setImageResource(R.drawable.hadoop);
-                //switcherImageView.setMaxHeight(100);
-                return switcherImageView;
-            }
-        });
+        startBlinkTextButton.setOnClickListener(new View.OnClickListener() {
 
-        Animation aniOut = AnimationUtils.loadAnimation(getContext(), android.R.anim.slide_out_right);
-        Animation aniIn = AnimationUtils.loadAnimation(getContext(), android.R.anim.slide_in_left);
-
-        imageSwitcher.setOutAnimation(aniOut);
-        imageSwitcher.setInAnimation(aniIn);
-
-        nextButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                counter++;
-                if (counter == switcherImageLength){
-                    counter = 0;
-                    imageSwitcher.setImageResource(imageSwitcherImages[counter]);
-                }
-                else{
-                    imageSwitcher.setImageResource(imageSwitcherImages[counter]);
+                textColorAnim = ObjectAnimator.ofInt(blinkTextView, "textColor", Color.RED, Color.TRANSPARENT);
+                textColorAnim.setDuration(1000);
+                textColorAnim.setEvaluator(new ArgbEvaluator());
+                textColorAnim.setRepeatCount(ValueAnimator.INFINITE);
+                textColorAnim.setRepeatMode(ValueAnimator.REVERSE);
+                textColorAnim.start();
+            }
+        });
+        stopBlinkTextButton.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                if(textColorAnim != null) {
+                    textColorAnim.cancel();
+                    blinkTextView.setTextColor(Color.RED);
                 }
             }
-        });*/
+        });
 
         return view;
     }
 }
+
+
+
+
+
+
+
+

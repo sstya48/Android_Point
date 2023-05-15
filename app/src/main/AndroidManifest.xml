@@ -80,7 +80,7 @@
             android:name=".Activity.AboutUs"
             android:exported="false" />
         <activity
-            android:name=".Activity.MenuActivity"
+            android:name=".Activity.DrawerActivity"
             android:exported="false"
             android:theme="@style/Theme.AndroidPoint.TransparentCompat">
             <meta-data

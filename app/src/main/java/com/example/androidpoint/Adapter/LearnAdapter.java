@@ -57,7 +57,7 @@ public class LearnAdapter extends RecyclerView.Adapter<LearnAdapter.MyViewHolder
         /*int[] androidColors = context.getResources().getIntArray(R.array.androidcolors);
         int randomAndroidColor = androidColors[new Random().nextInt(*//*13*//* androidColors.length)];*/
 
-        holder.title_learn.setText(datalist.get(position).getTitle().trim());
+        holder.title_learn.setText(datalist.get(position).getTitle()/*.trim()*/);
         holder.title_learn.setTextColor(randomAndroidColor);
         holder.title_learn.setSelected(true);
         holder.card_title.setText(datalist.get(position).getTitle().substring(0,1));

@@ -16,16 +16,12 @@ import com.example.androidpoint.DemoFragments.VibratePhoneDemo;
 import com.example.androidpoint.R;
 
 public class B_card_23_Fragment extends Fragment {
-
     AppCompatImageView layout_demo, layout_arrow;
-
-    TextView one_xml, two_xml, three_xml, four_xml, five_xml;
-
+    TextView one_xml, two_xml, three_xml, four_xml, five_xml, six_xml;
 
     @SuppressLint({"MissingInflatedId", "SetTextI18n"})
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_b_card_23_, container, false);
 
         layout_demo= view.findViewById(R.id.layout_demo);
@@ -41,6 +37,8 @@ public class B_card_23_Fragment extends Fragment {
         four_xml.setTextIsSelectable(true);
         five_xml= view.findViewById(R.id.five_xml);
         five_xml.setTextIsSelectable(true);
+        six_xml= view.findViewById(R.id.six_xml);
+        six_xml.setTextIsSelectable(true);
 
 
         one_xml.setText("<?xml version=\"1.0\" encoding=\"utf-8\"?>\n" +
@@ -406,6 +404,77 @@ public class B_card_23_Fragment extends Fragment {
                 "\n" +
                 "</androidx.constraintlayout.widget.ConstraintLayout>\n");
 
+        six_xml.setText("<?xml version=\"1.0\" encoding=\"utf-8\"?>\n" +
+                "<GridLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\n" +
+                "    xmlns:tools=\"http://schemas.android.com/tools\"\n" +
+                "    android:layout_width=\"match_parent\"\n" +
+                "    android:layout_height=\"match_parent\"\n" +
+                "    android:rowCount=\"4\"\n" +
+                "    android:columnCount=\"2\"\n" +
+                "    android:layout_marginStart=\"25dp\"\n" +
+                "    tools:context=\".DemoFragments.GridLayoutFragment\">\n" +
+                "\n" +
+                "        <ImageView\n" +
+                "            android:layout_height=\"90dp\"\n" +
+                "            android:layout_width=\"130dp\"\n" +
+                "            android:layout_margin=\"10dp\"\n" +
+                "            android:src=\"@drawable/image_1\" />\n" +
+                "\n" +
+                "        <ImageView\n" +
+                "            android:layout_height=\"90dp\"\n" +
+                "            android:layout_width=\"200dp\"\n" +
+                "            android:layout_margin=\"10dp\"\n" +
+                "            android:src=\"@drawable/image_2\" />\n" +
+                "\n" +
+                "        <ImageView\n" +
+                "            android:layout_height=\"90dp\"\n" +
+                "            android:layout_width=\"130dp\"\n" +
+                "            android:layout_margin=\"10dp\"\n" +
+                "            android:src=\"@drawable/image_3\" />\n" +
+                "\n" +
+                "        <ImageView\n" +
+                "            android:layout_height=\"90dp\"\n" +
+                "            android:layout_width=\"200dp\"\n" +
+                "            android:layout_margin=\"10dp\"\n" +
+                "            android:src=\"@drawable/image_4\" />\n" +
+                "\n" +
+                "        <ImageView\n" +
+                "            android:layout_height=\"90dp\"\n" +
+                "            android:layout_width=\"130dp\"\n" +
+                "            android:layout_margin=\"10dp\"\n" +
+                "            android:src=\"@drawable/image_5\" />\n" +
+                "\n" +
+                "        <ImageView\n" +
+                "            android:layout_height=\"90dp\"\n" +
+                "            android:layout_width=\"220dp\"\n" +
+                "            android:layout_margin=\"10dp\"\n" +
+                "            android:src=\"@drawable/image_6\" />\n" +
+                "\n" +
+                "        <ImageView\n" +
+                "            android:layout_height=\"90dp\"\n" +
+                "            android:layout_width=\"130dp\"\n" +
+                "            android:layout_margin=\"10dp\"\n" +
+                "            android:src=\"@drawable/image_7\" />\n" +
+                "\n" +
+                "        <ImageView\n" +
+                "            android:layout_height=\"90dp\"\n" +
+                "            android:layout_width=\"200dp\"\n" +
+                "            android:layout_margin=\"10dp\"\n" +
+                "            android:src=\"@drawable/image_8\" />\n" +
+                "        <ImageView\n" +
+                "            android:layout_height=\"90dp\"\n" +
+                "            android:layout_width=\"130dp\"\n" +
+                "            android:layout_margin=\"10dp\"\n" +
+                "            android:src=\"@drawable/image_9\" />\n" +
+                "    \n" +
+                "        <ImageView\n" +
+                "            android:layout_height=\"90dp\"\n" +
+                "            android:layout_width=\"130dp\"\n" +
+                "            android:layout_margin=\"10dp\"\n" +
+                "            android:layout_marginLeft=\"40dp\"\n" +
+                "            android:src=\"@drawable/image_10\" />\n" +
+                "\n" +
+                "    </GridLayout>");
 
         layout_arrow.setOnClickListener(new View.OnClickListener() {
             @Override

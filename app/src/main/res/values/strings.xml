@@ -28,7 +28,7 @@
     <string name="Relative_Layout"> Relative Layout</string>
     <string name="Table_Layout"> Table Layout</string>
     <string name="Constraint_Layout"> Constraint Layout</string>
-    <string name="GridView"> GridView</string>
+    <string name="GridLayout"> Grid Layout</string>
 
 
     <string name="Radio_Button">Radio Button</string>

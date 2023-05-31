@@ -42,7 +42,6 @@ public class A_card_18_Fragment extends Fragment {
         activity_main = view.findViewById(R.id.activity_main);
         activityitem_main = view.findViewById(R.id.activityitem_main);
         db_java = view.findViewById(R.id.db_java);
-        db_xml = view.findViewById(R.id.db_xml);
         Item_Java = view.findViewById(R.id.Item_Java);
         Update_Java = view.findViewById(R.id.Update_Java);
         DatabaseHelper_java = view.findViewById(R.id.DatabaseHelper_java);

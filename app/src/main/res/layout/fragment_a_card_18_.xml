@@ -85,7 +85,7 @@
                     android:layout_marginBottom="20dp"
                     android:scrollbars="vertical" />
 
-                <TextView
+               <!-- <TextView
                     android:id="@+id/xml_code"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -112,7 +112,7 @@
                     android:overScrollMode="always"
                     android:scrollbarStyle="insideInset"
                     android:layout_marginBottom="20dp"
-                    android:scrollbars="vertical" />
+                    android:scrollbars="vertical" />-->
 
                 <TextView
                     android:layout_width="match_parent"

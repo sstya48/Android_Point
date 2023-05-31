@@ -175,8 +175,8 @@
                                     android:backgroundTint="#28FFA94D">
 
                                     <ImageView
-                                        android:layout_width="50dp"
-                                        android:layout_height="50dp"
+                                        android:layout_width="45dp"
+                                        android:layout_height="45dp"
                                         android:layout_gravity="center"
                                         android:src="@drawable/radiogroup" />
 
@@ -285,8 +285,8 @@
                                     android:backgroundTint="#25FFB80B">
 
                                     <ImageView
-                                        android:layout_width="50dp"
-                                        android:layout_height="50dp"
+                                        android:layout_width="45dp"
+                                        android:layout_height="45dp"
                                         android:layout_gravity="center"
                                         android:src="@drawable/spinner" />
 
@@ -398,8 +398,8 @@
                                     android:backgroundTint="#3644CB7F">
 
                                     <ImageView
-                                        android:layout_width="45dp"
-                                        android:layout_height="45dp"
+                                        android:layout_width="40dp"
+                                        android:layout_height="40dp"
                                         android:layout_gravity="center"
                                         android:src="@drawable/progress" />
 
@@ -450,8 +450,8 @@
                                     android:backgroundTint="#1D7A26FF">
 
                                     <ImageView
-                                        android:layout_width="45dp"
-                                        android:layout_height="45dp"
+                                        android:layout_width="40dp"
+                                        android:layout_height="40dp"
                                         android:layout_gravity="center"
                                         android:src="@drawable/slider" />
 
@@ -511,8 +511,8 @@
                                     android:backgroundTint="#28FFA94D">
 
                                     <ImageView
-                                        android:layout_width="50dp"
-                                        android:layout_height="50dp"
+                                        android:layout_width="40dp"
+                                        android:layout_height="40dp"
                                         android:layout_gravity="center"
                                         android:src="@drawable/currenlocation" />
 
@@ -561,8 +561,8 @@
                                     android:backgroundTint="#2C1BC3FF">
 
                                     <ImageView
-                                        android:layout_width="40dp"
-                                        android:layout_height="40dp"
+                                        android:layout_width="45dp"
+                                        android:layout_height="45dp"
                                         android:layout_gravity="center"
                                         android:src="@drawable/registration" />
 
@@ -621,8 +621,8 @@
                                     android:backgroundTint="#25FFB80B">
 
                                     <ImageView
-                                        android:layout_width="45dp"
-                                        android:layout_height="45dp"
+                                        android:layout_width="40dp"
+                                        android:layout_height="40dp"
                                         android:layout_gravity="center"
                                         android:src="@drawable/barchart" />
 
@@ -736,8 +736,8 @@
                                     android:backgroundTint="#3644CB7F">
 
                                     <ImageView
-                                        android:layout_width="50dp"
-                                        android:layout_height="50dp"
+                                        android:layout_width="45dp"
+                                        android:layout_height="45dp"
                                         android:layout_gravity="center"
                                         android:src="@drawable/piechart" />
 
@@ -1073,8 +1073,8 @@
                                     android:backgroundTint="#3644CB7F">
 
                                     <ImageView
-                                        android:layout_width="45dp"
-                                        android:layout_height="45dp"
+                                        android:layout_width="40dp"
+                                        android:layout_height="40dp"
                                         android:layout_gravity="center"
                                         android:src="@drawable/galleryicon" />
 
@@ -1126,8 +1126,8 @@
                                     android:backgroundTint="#1D7A26FF">
 
                                     <ImageView
-                                        android:layout_width="45dp"
-                                        android:layout_height="45dp"
+                                        android:layout_width="40dp"
+                                        android:layout_height="40dp"
                                         android:layout_gravity="center"
                                         android:src="@drawable/flashlighticon" />
 
@@ -1187,8 +1187,8 @@
                                     android:backgroundTint="#28FFA94D">
 
                                     <ImageView
-                                        android:layout_width="50dp"
-                                        android:layout_height="50dp"
+                                        android:layout_width="45dp"
+                                        android:layout_height="45dp"
                                         android:layout_gravity="center"
                                         android:src="@drawable/fingerprint" />
 
@@ -1296,10 +1296,10 @@
                                     android:backgroundTint="#25FFB80B">
 
                                     <ImageView
-                                        android:layout_width="45dp"
-                                        android:layout_height="45dp"
+                                        android:layout_width="40dp"
+                                        android:layout_height="40dp"
                                         android:layout_gravity="center"
-                                        android:src="@drawable/sendemailicon" />
+                                        android:src="@drawable/calculater" />
 
                                 </FrameLayout>
 
@@ -1348,10 +1348,10 @@
                                     android:backgroundTint="#52FAFA33">
 
                                     <ImageView
-                                        android:layout_width="45dp"
-                                        android:layout_height="45dp"
+                                        android:layout_width="40dp"
+                                        android:layout_height="40dp"
                                         android:layout_gravity="center"
-                                        android:src="@drawable/databaseicon" />
+                                        android:src="@drawable/picasso" />
 
                                 </FrameLayout>
 

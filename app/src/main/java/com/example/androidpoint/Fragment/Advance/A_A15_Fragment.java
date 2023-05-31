@@ -55,7 +55,7 @@ public class A_A15_Fragment extends Fragment {
         call.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 String no = "tel:" + etno.getText().toString();
-                Intent i = new Intent(Intent.ACTION_CALL, Uri.parse(no));
+                Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse(no));
                 startActivity(i);
             }
         });

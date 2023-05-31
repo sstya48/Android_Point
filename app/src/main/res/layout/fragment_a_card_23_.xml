@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".Fragment.Advance.A_card_16_Fragment">
+    tools:context=".Fragment.Advance.A_card_23_Fragment">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -29,11 +29,10 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:layout_marginStart="10dp"
-            android:text="@string/Send_SMS"
+            android:text="@string/Calculator"
             android:textColor="#181A20"
             android:textSize="20sp"
             android:textStyle="bold" />
-
     </LinearLayout>
 
     <RelativeLayout
@@ -55,7 +54,6 @@
                 android:padding="7dp">
 
                 <TextView
-                    android:id="@+id/java_code"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="15dp"
@@ -69,7 +67,7 @@
                     android:textSize="16sp" />
 
                 <TextView
-                    android:id="@+id/sms_java"
+                    android:id="@+id/calculator_java"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="20dp"
@@ -83,8 +81,8 @@
                     android:textColor="#333333"
                     android:textSize="14sp" />
 
+
                 <TextView
-                    android:id="@+id/xml_code"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="15dp"
@@ -98,7 +96,7 @@
                     android:textSize="16sp" />
 
                 <TextView
-                    android:id="@+id/sms_xml"
+                    android:id="@+id/calculator_xml"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="20dp"
@@ -113,7 +111,7 @@
                     android:textSize="14sp" />
 
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/send_sms_yt"
+                    android:id="@+id/calculator_app_yt"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     app:cardBackgroundColor="@color/white"
@@ -135,7 +133,7 @@
         </ScrollView>
 
         <androidx.appcompat.widget.AppCompatImageView
-            android:id="@+id/sms_output"
+            android:id="@+id/calculator_output"
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:layout_alignParentEnd="true"
@@ -146,9 +144,9 @@
             android:clickable="true"
             android:focusable="true"
             android:visibility="visible"
-            app:srcCompat="@drawable/codepart"
-            tools:ignore="ExtraText" />
+            app:srcCompat="@drawable/codepart" />
 
     </RelativeLayout>
+
 
 </LinearLayout>

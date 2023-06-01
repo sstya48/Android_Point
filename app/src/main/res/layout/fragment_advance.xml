@@ -225,8 +225,8 @@
                                     android:backgroundTint="#2C1BC3FF">
 
                                     <ImageView
-                                        android:layout_width="50dp"
-                                        android:layout_height="50dp"
+                                        android:layout_width="45dp"
+                                        android:layout_height="45dp"
                                         android:layout_gravity="center"
                                         android:src="@drawable/alert" />
 
@@ -285,8 +285,8 @@
                                     android:backgroundTint="#25FFB80B">
 
                                     <ImageView
-                                        android:layout_width="45dp"
-                                        android:layout_height="45dp"
+                                        android:layout_width="40dp"
+                                        android:layout_height="40dp"
                                         android:layout_gravity="center"
                                         android:src="@drawable/spinner" />
 

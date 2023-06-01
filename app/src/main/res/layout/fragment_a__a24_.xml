@@ -67,7 +67,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="centrecrop"
+                android:text="centercrop"
                 android:textSize="15sp" />
 
             <Button
@@ -75,7 +75,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="centreinside"
+                android:text="centerinside"
                 android:textSize="15sp" />
 
 

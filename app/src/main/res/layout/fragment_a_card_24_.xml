@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    tools:context=".Fragment.Advance.A_card_16_Fragment">
+    tools:context=".Fragment.Advance.A_card_24_Fragment">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -16,24 +16,23 @@
             android:id="@+id/Btn_arrow"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:layout_gravity="center_vertical"
-            android:layout_marginStart="10dp"
             android:layout_marginTop="13dp"
+            android:layout_marginStart="10dp"
+            android:layout_gravity="center_vertical"
             android:layout_marginBottom="12dp"
-            android:background="?android:attr/selectableItemBackgroundBorderless"
             android:padding="6dp"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
             android:src="@drawable/arrow" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
             android:layout_marginStart="10dp"
-            android:text="@string/Send_SMS"
+            android:text="@string/Picasso"
+            android:layout_gravity="center_vertical"
             android:textColor="#181A20"
             android:textSize="20sp"
             android:textStyle="bold" />
-
     </LinearLayout>
 
     <RelativeLayout
@@ -47,78 +46,79 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="5dp"
                 android:layout_marginTop="10dp"
+                android:layout_marginStart="5dp"
                 android:layout_marginEnd="5dp"
+                android:padding="7dp"
                 android:layout_marginBottom="20dp"
-                android:orientation="vertical"
-                android:padding="7dp">
+                android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/java_code"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="15dp"
-                    android:background="@drawable/code_title_bg"
-                    android:fontFamily="@font/poppins_semibold"
-                    android:gravity="clip_vertical"
-                    android:padding="10dp"
                     android:paddingBottom="20dp"
+                    android:padding="10dp"
+                    android:gravity="clip_vertical"
                     android:text="@string/mainactivity"
-                    android:textColor="@color/white"
-                    android:textSize="16sp" />
-
-                <TextView
-                    android:id="@+id/sms_java"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="20dp"
-                    android:background="@drawable/boder_sos"
-                    android:gravity="clip_vertical"
-                    android:overScrollMode="always"
-                    android:padding="10dp"
-                    android:scrollbarStyle="insideInset"
-                    android:scrollbars="vertical"
-                    android:text="hello"
-                    android:textColor="#333333"
-                    android:textSize="14sp" />
-
-                <TextView
-                    android:id="@+id/xml_code"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="15dp"
+                    android:textSize="16sp"
                     android:background="@drawable/code_title_bg"
-                    android:fontFamily="@font/poppins_semibold"
-                    android:gravity="clip_vertical"
-                    android:padding="10dp"
-                    android:paddingBottom="20dp"
-                    android:text="@string/activity_main"
                     android:textColor="@color/white"
-                    android:textSize="16sp" />
+                    android:fontFamily="@font/poppins_semibold"
+                    android:layout_marginBottom="15dp" />
 
                 <TextView
-                    android:id="@+id/sms_xml"
+                    android:id="@+id/Picasso_java"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="20dp"
-                    android:background="@drawable/boder_sos"
-                    android:gravity="clip_vertical"
-                    android:overScrollMode="always"
                     android:padding="10dp"
-                    android:scrollbarStyle="insideInset"
-                    android:scrollbars="vertical"
+                    android:gravity="clip_vertical"
                     android:text="hello"
+                    android:textSize="14sp"
                     android:textColor="#333333"
-                    android:textSize="14sp" />
+                    android:background="@drawable/boder_sos"
+                    android:overScrollMode="always"
+                    android:scrollbarStyle="insideInset"
+                    android:layout_marginBottom="20dp"
+                    android:scrollbars="vertical" />
+
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="20dp"
+                    android:padding="10dp"
+                    android:gravity="clip_vertical"
+                    android:text="@string/activity_main"
+                    android:textSize="16sp"
+                    android:background="@drawable/code_title_bg"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:layout_marginBottom="15dp" />
+
+                <TextView
+                    android:id="@+id/Picasso_xml"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:gravity="clip_vertical"
+                    android:text="hello"
+                    android:textSize="14sp"
+                    android:textColor="#333333"
+                    android:background="@drawable/boder_sos"
+                    android:overScrollMode="always"
+                    android:scrollbarStyle="insideInset"
+                    android:layout_marginBottom="20dp"
+                    android:scrollbars="vertical" />
+
 
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/send_sms_yt"
+                    android:id="@+id/Rating_app_yt"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    app:cardBackgroundColor="@color/white"
-                    app:cardCornerRadius="10dp"
                     app:cardElevation="10dp"
+                    app:cardCornerRadius="10dp"
+                    app:cardBackgroundColor="@color/white"
                     app:cardPreventCornerOverlap="true"
                     app:cardUseCompatPadding="true">
 
@@ -126,7 +126,7 @@
                         android:layout_width="100dp"
                         android:layout_height="80dp"
                         android:layout_gravity="center"
-                        android:src="@drawable/yt" />
+                        android:src="@drawable/yt"/>
 
                 </androidx.cardview.widget.CardView>
 
@@ -135,7 +135,8 @@
         </ScrollView>
 
         <androidx.appcompat.widget.AppCompatImageView
-            android:id="@+id/sms_output"
+            android:id="@+id/Picasso_output"
+            app:srcCompat="@drawable/codepart"
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:layout_alignParentEnd="true"
@@ -145,10 +146,9 @@
             android:background="?android:attr/selectableItemBackgroundBorderless"
             android:clickable="true"
             android:focusable="true"
-            android:visibility="visible"
-            app:srcCompat="@drawable/codepart"
-            tools:ignore="ExtraText" />
+            android:visibility="visible" />
 
     </RelativeLayout>
+
 
 </LinearLayout>

@@ -5,9 +5,7 @@ import static androidx.biometric.BiometricManager.Authenticators.DEVICE_CREDENTI
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
-
 import androidx.annotation.NonNull;
 import androidx.appcompat.widget.AppCompatImageView;
 import androidx.biometric.BiometricManager;
@@ -15,7 +13,6 @@ import androidx.biometric.BiometricPrompt;
 import androidx.cardview.widget.CardView;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
-
 import android.provider.Settings;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -61,12 +58,6 @@ public class A_A21_Fragment extends Fragment {
             }
         });
 
-        fingur_print_yt.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                gotoUrl("https://www.youtube.com/watch?v=61eCsySkjH0&t=664s");
-            }
-        });
 
         imageview = view.findViewById(R.id.imageview);
 
@@ -126,9 +117,5 @@ public class A_A21_Fragment extends Fragment {
         });
 
         return view;
-    }
-    private void gotoUrl(String s) {
-        Uri uri = Uri.parse(s);
-        startActivity(new Intent(Intent.ACTION_VIEW,uri));
     }
 }

@@ -51,7 +51,10 @@
     <string name="Splash_Screen">Splash Screen</string>
     <string name="Toggle_Button">Toggle Button</string>
     <string name="FingurPrint">FingurPrint</string>
+
     <string name="Rating_App">Rating App</string>
+    <string name="Picasso">Picasso</string>
+    <string name="Calculator">Calculator</string>
     <string name="Radio_Group">Radio Group</string>
     <string name="Alert_Dialog">Alert Dialog</string>
     <string name="Spinner">Spinner</string>

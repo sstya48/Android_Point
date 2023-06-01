@@ -36,7 +36,6 @@ public class A_card_22_Fragment extends Fragment {
         });
 
         rate_output = view.findViewById(R.id.rate_output);
-
         rate_output.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

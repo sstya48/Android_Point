@@ -1,9 +1,12 @@
 package com.example.androidpoint.Fragment.Advance;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.appcompat.widget.AppCompatImageView;
+import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
@@ -15,6 +18,8 @@ import android.widget.TextView;
 import com.example.androidpoint.R;
 public class A_card_21_Fragment extends Fragment {
     ImageView fing_btn_output;
+
+    CardView fingur_print_yt;
     TextView fing_java,fing_xml, SecondActivity_xml, gridal_xml;
     AppCompatImageView Btn_arrow;
     @SuppressLint({"MissingInflatedId", "SetTextI18n"})
@@ -24,7 +29,6 @@ public class A_card_21_Fragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_a_card_21_, container, false);
 
         Btn_arrow=view.findViewById(R.id.Btn_arrow);
-
         Btn_arrow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -48,6 +52,15 @@ public class A_card_21_Fragment extends Fragment {
                         .addToBackStack(null)
                         .commit();
 
+            }
+        });
+
+        fingur_print_yt=view.findViewById(R.id.fingur_print_yt);
+
+        fingur_print_yt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                gotoUrl("https://www.youtube.com/watch?v=61eCsySkjH0&t=664s");
             }
         });
 
@@ -209,11 +222,14 @@ public class A_card_21_Fragment extends Fragment {
         SecondActivity_xml.setTextIsSelectable(true);
 
         gridal_xml.setText("dependencies {\n" +
-                "\n" +
                 " implementation \"androidx.biometric:biometric:1.1.0\"\n" +
                 "}");
         gridal_xml.setTextIsSelectable(true);
 
         return view;
+    }
+    private void gotoUrl(String s) {
+        Uri uri = Uri.parse(s);
+        startActivity(new Intent(Intent.ACTION_VIEW,uri));
     }
 }

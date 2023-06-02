@@ -7,13 +7,21 @@
     android:gravity="center"
     android:background="#BADAFB"
     tools:context=".Activity.SplashScreenActivity">
+   <!-- android:background="#E4ECF4"-->
 
-    <com.airbnb.lottie.LottieAnimationView
+   <!-- <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/lottie"
         android:layout_width="400dp"
         android:layout_height="400dp"
         android:elevation="5dp"
         app:lottie_autoPlay="true"
-        app:lottie_rawRes="@raw/splashsreen" />
+        app:lottie_rawRes="@raw/splashsreen"/>-->
+
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/lottie"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/screen_sp"
+        />
 
 </RelativeLayout>

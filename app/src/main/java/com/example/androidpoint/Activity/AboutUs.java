@@ -1,6 +1,7 @@
 package com.example.androidpoint.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.AppCompatImageView;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
@@ -14,14 +15,25 @@ import com.example.androidpoint.R;
 public class AboutUs extends AppCompatActivity {
 
     ImageView insta_btn,youtube_btn, facebook_btn;
+
+    AppCompatImageView aboutus_back_arrow;
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_about_us);
-        insta_btn = (ImageView) findViewById(R.id.insta_btn);
-        youtube_btn = (ImageView) findViewById(R.id.youtube_btn);
-        facebook_btn = (ImageView) findViewById(R.id.facebook_btn);
+        insta_btn = findViewById(R.id.insta_btn);
+        youtube_btn = findViewById(R.id.youtube_btn);
+        facebook_btn = findViewById(R.id.facebook_btn);
+        aboutus_back_arrow = findViewById(R.id.aboutus_back_arrow);
+
+        aboutus_back_arrow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(AboutUs.this, MainActivity.class);
+                startActivity(intent);
+            }
+        });
 
         insta_btn.setOnClickListener(new View.OnClickListener() {
             @Override

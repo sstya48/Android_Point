@@ -34,7 +34,7 @@ public class Feedback extends AppCompatActivity {
         feed_back_arrow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(Feedback.this, DrawerActivity.class);
+                Intent intent = new Intent(Feedback.this, MainActivity.class);
                 startActivity(intent);
             }
         });

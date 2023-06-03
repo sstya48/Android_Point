@@ -18,7 +18,7 @@ public class SplashScreenActivity extends AppCompatActivity {
         setContentView(R.layout.activity_splash_screen);
 
 
-        lottie=findViewById(R.id.lottie);
+        /*lottie=findViewById(R.id.lottie);
 
 
         new Handler().postDelayed(new Runnable() {
@@ -29,5 +29,17 @@ public class SplashScreenActivity extends AppCompatActivity {
                 finish();
             }
         },2000);
+    }
+}*/
+
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+
+                Intent mainIntent = new Intent(getApplicationContext(), OnBoardingScreenActivity.class);
+                startActivity(mainIntent);
+                finish();
+            }
+        }, 3000);
     }
 }

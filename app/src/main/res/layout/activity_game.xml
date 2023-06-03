@@ -7,7 +7,40 @@
     android:background="@color/tripcardbck"
     tools:context=".Activity.Game">
 
+
     <LinearLayout
+        android:id="@+id/header1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:background="@color/white"
+        android:padding="10dp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/game_back_arrow"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="2dp"
+            android:padding="6dp"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/arrow" />
+
+        <TextView
+            android:id="@+id/texttitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tic Tac Toe"
+            android:layout_centerHorizontal="true"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:layout_marginStart="10dp"
+            android:layout_gravity="center"
+            android:textColor="#03A9F4"
+            android:fontFamily="cursive" />
+
+    </LinearLayout>
+   <!-- <LinearLayout
         android:id="@+id/header1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -37,7 +70,9 @@
             android:textColor="#FFFD234C"
             android:fontFamily="cursive" />
 
-    </LinearLayout>
+    </LinearLayout>-->
+
+
     <!--<LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

@@ -9,13 +9,14 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.AppCompatImageView;
 
 import com.example.androidpoint.R;
 
 public class Feedback extends AppCompatActivity {
     EditText feedBack,name;
     Button sendBtn;
-
+    AppCompatImageView feed_back_arrow;
     boolean isAllFieldsChecked = false;
 
 
@@ -28,6 +29,15 @@ public class Feedback extends AppCompatActivity {
         feedBack = findViewById(R.id.feedBack);
         name = findViewById(R.id.name);
         sendBtn = findViewById(R.id.sendBtn);
+        feed_back_arrow = findViewById(R.id.feed_back_arrow);
+
+        feed_back_arrow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Feedback.this, DrawerActivity.class);
+                startActivity(intent);
+            }
+        });
 
         sendBtn.setOnClickListener(new View.OnClickListener() {
             @Override

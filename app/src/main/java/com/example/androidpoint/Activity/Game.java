@@ -1,7 +1,10 @@
 package com.example.androidpoint.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.AppCompatImageView;
 
+import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
@@ -9,6 +12,7 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.androidpoint.Fragment.Advance.Advance;
 import com.example.androidpoint.R;
 
 public class Game extends AppCompatActivity implements View.OnClickListener {
@@ -22,8 +26,11 @@ public class Game extends AppCompatActivity implements View.OnClickListener {
             {1,4,7}, {2,5,8}, {0,4,8}, {2,4,6}};
 
     int rounds;
+
+    AppCompatImageView game_back_arrow;
     private int playerOneScoreCount, playerTwoScoreCount;
 
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,7 +41,16 @@ public class Game extends AppCompatActivity implements View.OnClickListener {
                 playerStatus = findViewById(R.id.textStatus);
                 reset = findViewById(R.id.btn_reset);
                 playagain = findViewById(R.id.btn_play_again);
+                game_back_arrow = findViewById(R.id.game_back_arrow);
 
+
+        game_back_arrow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Game.this, DrawerActivity.class);
+                startActivity(intent);
+            }
+        });
 
                 buttons[0] = findViewById(R.id.btn0);
                 buttons[1] = findViewById(R.id.btn1);

@@ -1,16 +1,13 @@
 package com.example.androidpoint.Fragment.Learn;
 
 import android.annotation.SuppressLint;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ProgressBar;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
@@ -29,30 +26,20 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class Learn  extends BaseFragment {
+public class Learn extends BaseFragment {
 
     AdView adView_learn;
-
-
-    private ArrayList<LearnModel> datalist;
-
     SwipeRefreshLayout mSwipeRefreshLayout;
-
-
-    private RecyclerView recyclerView;
-
     FirebaseFirestore db;
-
+    private ArrayList<LearnModel> datalist;
+    private RecyclerView recyclerView;
 //    ProgressBar progressBar;
-
-
-
 
     @SuppressLint("MissingInflatedId")
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view= inflater.inflate(R.layout.fragment_learn, container, false);
+        View view = inflater.inflate(R.layout.fragment_learn, container, false);
 
       /*  //Adss=============================================
         //Banner Ad id====================================
@@ -86,16 +73,16 @@ public class Learn  extends BaseFragment {
         progressBar.setProgressDrawable(progress_drawable);
 */
 
-        mSwipeRefreshLayout=view.findViewById(R.id.swipeToRefresh);
+        mSwipeRefreshLayout = view.findViewById(R.id.swipeToRefresh);
         mSwipeRefreshLayout.setColorSchemeResources(R.color.lightyellow);
 
 
-        recyclerView= view.findViewById(R.id.recyclerview);
+        recyclerView = view.findViewById(R.id.recyclerview);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
 
-        datalist =new ArrayList<>();
+        datalist = new ArrayList<>();
 
-        LearnAdapter myAdapter=new LearnAdapter(getContext(),datalist);
+        LearnAdapter myAdapter = new LearnAdapter(getContext(), datalist);
 
         recyclerView.setHasFixedSize(true);
         recyclerView.setAdapter(myAdapter);
@@ -112,7 +99,7 @@ public class Learn  extends BaseFragment {
         showProgressDialog();
 
 
-        db= FirebaseFirestore.getInstance();
+        db = FirebaseFirestore.getInstance();
 
 
         db.collection("LearnAndroid").orderBy("id").get()
@@ -124,16 +111,15 @@ public class Learn  extends BaseFragment {
 
 //                        progressBar.setVisibility(View.VISIBLE);
 
-                        List<DocumentSnapshot> list= queryDocumentSnapshots.getDocuments();
+                        List<DocumentSnapshot> list = queryDocumentSnapshots.getDocuments();
 
                         dismissProgressDialog();
 
 //                        progressBar.setVisibility(View.GONE);
 
 
-                        for (DocumentSnapshot d:list)
-                        {
-                            LearnModel learnModel=d.toObject(LearnModel.class);
+                        for (DocumentSnapshot d : list) {
+                            LearnModel learnModel = d.toObject(LearnModel.class);
                             datalist.add(learnModel);
                         }
                         myAdapter.notifyDataSetChanged();
@@ -141,5 +127,4 @@ public class Learn  extends BaseFragment {
                     }
                 });
     }
-
 }

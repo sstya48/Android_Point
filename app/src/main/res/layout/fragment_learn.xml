@@ -9,7 +9,7 @@
     android:background="@color/lightgrey"
     tools:context=".Fragment.Learn.Learn">
 
-    <androidx.cardview.widget.CardView
+<!--    <androidx.cardview.widget.CardView
         android:id="@+id/searchview"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -22,17 +22,17 @@
             android:id="@+id/searchView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginStart="20dp"
-            android:layout_marginEnd="20dp"
             android:queryHint="Search Here" />
 
-    </androidx.cardview.widget.CardView>
+    </androidx.cardview.widget.CardView>-->
 
 
+<!--
 <RelativeLayout
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginTop="60dp">
+-->
 
 <!--    <RelativeLayout
         android:id="@+id/card1"
@@ -118,7 +118,7 @@
 
     <!--        app:adUnitId="@string/Banner_Ad_Learn_unit_id"-->
 
-</RelativeLayout>
+<!--</RelativeLayout>-->
 
 
 </RelativeLayout>

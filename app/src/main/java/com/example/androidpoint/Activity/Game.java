@@ -47,7 +47,7 @@ public class Game extends AppCompatActivity implements View.OnClickListener {
         game_back_arrow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(Game.this, DrawerActivity.class);
+                Intent intent = new Intent(Game.this, MainActivity.class);
                 startActivity(intent);
             }
         });

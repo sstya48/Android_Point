@@ -31,7 +31,7 @@ import com.google.android.gms.ads.interstitial.InterstitialAdLoadCallback;
 
 public class DrawerActivity extends AppCompatActivity {
 
-    LinearLayout shareapp,tips,feedback,rate_us,about_us,ads_show,game;
+    LinearLayout shareapp, tips, feedback, rate_us, about_us, ads_show, game;
 
     FrameLayout frameLayout;
 
@@ -47,7 +47,7 @@ public class DrawerActivity extends AppCompatActivity {
     boolean isNightModeOn;
     SaveState saveState;
 
-    TextView version1,version2;
+    TextView version1, version2;
 
     InterstitialAd mInterstitialAd;
 
@@ -139,7 +139,7 @@ public class DrawerActivity extends AppCompatActivity {
         });
 
 
-        AdRequest adRequest=new AdRequest.Builder().build();
+        AdRequest adRequest = new AdRequest.Builder().build();
 
 
         ads_show.setOnClickListener(new View.OnClickListener() {
@@ -150,7 +150,7 @@ public class DrawerActivity extends AppCompatActivity {
                     @Override
                     public void onAdFailedToLoad(@NonNull LoadAdError loadAdError) {
                         super.onAdFailedToLoad(loadAdError);
-                        Log.e("Error",loadAdError.toString());
+                        Log.e("Error", loadAdError.toString());
                     }
 
                     @Override
@@ -184,7 +184,7 @@ public class DrawerActivity extends AppCompatActivity {
                             public void onAdShowedFullScreenContent() {
                                 super.onAdShowedFullScreenContent();
 
-                                mInterstitialAd= null;
+                                mInterstitialAd = null;
                             }
                         });
 
@@ -192,16 +192,15 @@ public class DrawerActivity extends AppCompatActivity {
                             @Override
                             public void run() {
 
-                                if (mInterstitialAd!= null) {
+                                if (mInterstitialAd != null) {
                                     mInterstitialAd.show(DrawerActivity.this);
-                                }
-                                else {
-                                    Log.e("AdPending","Ad is not ready yet!");
+                                } else {
+                                    Log.e("AdPending", "Ad is not ready yet!");
 
                                 }
 
                             }
-                        },10000 );
+                        }, 10000);
 
                     }
                 });
@@ -318,7 +317,7 @@ public class DrawerActivity extends AppCompatActivity {
         });*/
     }
 
-    private void ShareApp(Context context){
+    private void ShareApp(Context context) {
         final String appPakageName = context.getPackageName();
         Intent sendIntent = new Intent();
         sendIntent.setAction(Intent.ACTION_SEND);
@@ -365,7 +364,7 @@ public class DrawerActivity extends AppCompatActivity {
 
 }
 
- // Dark mode==========================================================================================================
+// Dark mode==========================================================================================================
 
       /*  saveState = new SaveState(this);
         if (saveState.getState()==true) {
@@ -403,7 +402,6 @@ public class DrawerActivity extends AppCompatActivity {
 
             }
         });*/
-
 
 
 /// for dakr mode=========================================================================================

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_learn"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    app:cardElevation="4dp"
     android:orientation="vertical"
     android:padding="10dp"
     app:cardCornerRadius="15dp"
-    android:id="@+id/card_learn"
+    app:cardElevation="4dp"
     app:cardUseCompatPadding="true">
 
 
@@ -20,81 +20,81 @@
         >-->
 
 
-
-       <!-- <com.google.android.material.imageview.ShapeableImageView
-            android:id="@+id/item_image"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="10dp"
-            android:src="@drawable/ic_launcher_background" />
+    <!-- <com.google.android.material.imageview.ShapeableImageView
+         android:id="@+id/item_image"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:padding="10dp"
+         android:src="@drawable/ic_launcher_background" />
 -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="70dp"
-            android:orientation="horizontal"
-            android:gravity="center_vertical"
-            android:padding="20dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="20dp">
 
 
+        <androidx.cardview.widget.CardView
+            android:id="@+id/title_letter"
+            android:layout_width="37dp"
+            android:layout_height="37dp"
+            android:layout_gravity="center"
+            app:cardBackgroundColor="@color/black"
+            app:cardCornerRadius="7dp"
+            app:cardUseCompatPadding="true"
 
-            <androidx.cardview.widget.CardView
-                android:id="@+id/title_letter"
-                android:layout_width="45dp"
-                android:layout_height="45dp"
-                android:layout_gravity="center"
-                app:cardUseCompatPadding="true"
-                app:cardCornerRadius="10dp"
-                >
-
-                <TextView
-                    android:id="@+id/card_title"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textStyle="bold"
-                    android:textSize="25sp"
-                    android:textAlignment="center"
-                    android:fontFamily="@font/poppins_regular"
-                    android:textColor="@color/white"
-                    android:text="T" />
-
-            </androidx.cardview.widget.CardView>
-<!--
-            <androidx.appcompat.widget.AppCompatImageView
-                android:id="@+id/image_learn"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:layout_gravity="center"
-                app:srcCompat="@drawable/ic_launcher_background"
-                android:layout_margin="20dp" />-->
-
+            >
 
             <TextView
-                android:id="@+id/title_learn"
+                android:id="@+id/card_title"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textStyle="bold"
-                android:layout_gravity="center_vertical"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:textSize="20sp"
-                android:singleLine="true"
-                android:ellipsize="marquee"
-                android:marqueeRepeatLimit="marquee_forever"
-                android:fontFamily="@font/poppins_semibold"
-                android:textColor="@color/blackalpha"
-                android:text="Title" />
+                android:layout_height="match_parent"
+                android:fontFamily="@font/poppins_regular"
+                android:gravity="center"
+                android:paddingTop="3dp"
+                android:text="T"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+        </androidx.cardview.widget.CardView>
+        <!--
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/image_learn"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+                        app:srcCompat="@drawable/ic_launcher_background"
+                        android:layout_margin="20dp" />-->
 
 
-           <!-- <TextView
-                android:id="@+id/des_learn"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Description"
-                android:marqueeRepeatLimit="marquee_forever"
-                android:singleLine="true"
-                android:textSize="15sp"
-                android:maxLines="2"/>-->
+        <TextView
+            android:id="@+id/title_learn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:ellipsize="marquee"
+            android:fontFamily="@font/poppins_semibold"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:singleLine="true"
+            android:text="Title"
+            android:textColor="@color/blackalpha"
+            android:textSize="20sp"
+            android:textStyle="bold" />
 
+
+        <!-- <TextView
+             android:id="@+id/des_learn"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="Description"
+             android:marqueeRepeatLimit="marquee_forever"
+             android:singleLine="true"
+             android:textSize="15sp"
+             android:maxLines="2"/>-->
 
 
     </LinearLayout>

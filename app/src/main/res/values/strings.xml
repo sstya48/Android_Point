@@ -50,7 +50,7 @@
     <string name="Popup_Manu">Popup Menu</string>
     <string name="Splash_Screen">Splash Screen</string>
     <string name="Toggle_Button">Toggle Button</string>
-    <string name="FingurPrint">FingurPrint</string>
+    <string name="FingurPrint">FingerPrint</string>
 
     <string name="Rating_App">Rating App</string>
     <string name="Picasso">Picasso</string>
@@ -62,8 +62,8 @@
     <string name="Progress_Bar">Progress Bar</string>
     <string name="Image_Slider">Image Slider</string>
     <string name="Search_View">Search View</string>
-    <string name="Registation_Page">Registation Page</string>
-    <string name="Registation_Ppage">Registation \n Page</string>
+    <string name="Registation_Page">Registration Page</string>
+    <string name="Registation_Ppage">Registration \n Page</string>
     <string name="Gallery_Camera">Gallery and Camera</string>
     <string name="Bar_Chart">Bar Chart</string>
     <string name="Line_Chart">Line Chart</string>
@@ -97,8 +97,8 @@
     <string name="Follow_me_on">Follow me on...</string>
     <string name="To">To:</string>
     <string name="Email_Address">Email Address</string>
-    <string name="Curren_Location">Curren Location</string>
-    <string name="Curren_Llocation">Curren \n Location</string>
+    <string name="Curren_Location">Current Location</string>
+    <string name="Curren_Llocation">Current \n Location</string>
     <string name="Subject">Subject</string>
     <string name="Message">Message:</string>
     <string name="SEND">SEND</string>

@@ -31,7 +31,6 @@ public class B_card_18_Fragment extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_b_card_18_, container, false);
 
-
         speech_to_java= view.findViewById(R.id.speech_to_java);
         speech_to_yt= view.findViewById(R.id.speech_to_yt);
         speech_to_java.setTextIsSelectable(true);
@@ -48,7 +47,6 @@ public class B_card_18_Fragment extends Fragment {
                 getActivity().getSupportFragmentManager().beginTransaction()
                         .replace(R.id.frame_container, basic, "Back Button Basic")
                         .commit();
-
             }
         });
 

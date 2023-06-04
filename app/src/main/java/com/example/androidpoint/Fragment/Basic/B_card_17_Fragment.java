@@ -20,9 +20,8 @@ import com.example.androidpoint.R;
 
 public class B_card_17_Fragment extends Fragment {
 
-    TextView text_to_java,text_to_xml;
+    TextView text_to_java, text_to_xml;
     AppCompatImageView hello_toast_demo;
-
     AppCompatImageView Text_code_arrow;
     CardView text_to_yt;
     AppCompatImageView text_to_speech_demo;
@@ -34,21 +33,20 @@ public class B_card_17_Fragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_b_card_17_, container, false);
 
 
-
-        text_to_java= view.findViewById(R.id.text_to_java);
-        text_to_yt= view.findViewById(R.id.text_to_yt);
+        text_to_java = view.findViewById(R.id.text_to_java);
+        text_to_yt = view.findViewById(R.id.text_to_yt);
         text_to_java.setTextIsSelectable(true);
-        text_to_xml= view.findViewById(R.id.text_to_xml);
-        Text_code_arrow= view.findViewById(R.id.Text_code_arrow);
+        text_to_xml = view.findViewById(R.id.text_to_xml);
+        Text_code_arrow = view.findViewById(R.id.Text_code_arrow);
         text_to_xml.setTextIsSelectable(true);
 
-        hello_toast_demo= view.findViewById(R.id.hello_toast_demo);
+        hello_toast_demo = view.findViewById(R.id.hello_toast_demo);
 
-        text_to_speech_demo=view.findViewById(R.id.text_to_speech_demo);
+        text_to_speech_demo = view.findViewById(R.id.text_to_speech_demo);
         Text_code_arrow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Basic basic= new Basic();
+                Basic basic = new Basic();
                 getActivity().getSupportFragmentManager().beginTransaction()
                         .replace(R.id.frame_container, basic, "Back Button Basic")
                         .commit();
@@ -66,7 +64,7 @@ public class B_card_17_Fragment extends Fragment {
             @Override
             public void onClick(View view) {
 
-                Text_to_speech_demo Text_to_speech_demo= new Text_to_speech_demo();
+                Text_to_speech_demo Text_to_speech_demo = new Text_to_speech_demo();
                 getActivity().getSupportFragmentManager().beginTransaction()
                         .replace(R.id.frame_container, Text_to_speech_demo, "Text To Speech DEMO")
                         .addToBackStack(null)
@@ -114,7 +112,7 @@ public class B_card_17_Fragment extends Fragment {
                 "  \n" +
                 "    }\n" +
                 "}\n" +
-                    //  mnifest permission
+                //  mnifest permission
                 "  \n" +
                 "<uses-permission android:name=\"android.permission.TTS_SERVICE\" /> ");
 
@@ -152,6 +150,6 @@ public class B_card_17_Fragment extends Fragment {
 
     private void gotoUrl(String s) {
         Uri uri = Uri.parse(s);
-        startActivity(new Intent(Intent.ACTION_VIEW,uri));
+        startActivity(new Intent(Intent.ACTION_VIEW, uri));
     }
 }

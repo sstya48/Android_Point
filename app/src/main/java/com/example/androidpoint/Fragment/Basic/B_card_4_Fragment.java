@@ -111,16 +111,15 @@ public class B_card_4_Fragment extends Fragment {
                 "        super.onCreate(savedInstanceState);  \n" +
                 "        setContentView(R.layout.activity_main);  \n" +
                 "  \n" +
-                "        button1=(Button)findViewById(R.id.button1);  \n" +
+                "        button1=(Button)findViewById(R.id.button1);\n" +
                 "    }  \n" +
                 "         public void onClick(View v) {  \n" +
-                "         Intent intent = new Intent(MainActivity.this,\n"+
-                "                                   SecondActivity.class);  \n" +
+                "         Intent intent = new Intent(MainActivity.this,SecondActivity.class);\n" +
                 "         startActivity(intent);  \n" +
                 "    }  \n" +
                 "}  ");
 
-        screen_orientation_second_java.setText("package example.androidalians.screenorientation;  \n" +
+        screen_orientation_second_java.setText("package example.androidalians.screenorientation;\n" +
                 "  \n" +
                 "import android.support.v7.app.AppCompatActivity;  \n" +
                 "import android.os.Bundle;  \n" +
@@ -136,8 +135,7 @@ public class B_card_4_Fragment extends Fragment {
                 "}  ");
 
         screen_orientation_second_xml.setText("<?xml version=\"1.0\" encoding=\"utf-8\"?>\n" +
-                "<LinearLayout xmlns:android=\"http://schemas.android.com\"\n" +
-                "                                        /apk/res/android\"\n" +
+                "<LinearLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\n" +
                 "    xmlns:tools=\"http://schemas.android.com/tools\"\n" +
                 "    android:layout_width=\"match_parent\"\n" +
                 "    android:layout_height=\"match_parent\"\n" +
@@ -155,26 +153,24 @@ public class B_card_4_Fragment extends Fragment {
                 "</LinearLayout>\n");
 
         manifest_xml_code.setText("<?xml version=\"1.0\" encoding=\"utf-8\"?>  \n" +
-                "<manifest xmlns:android=\"http://schemas.android.com/apk\"   \n" +
-                "                                            /res/android\"  \n" +
+                "<manifest xmlns:android=\"http://schemas.android.com/apk/res/android\"  \n" +
                 "    package=\"example.androidalians.com.screenorientation\">  \n" +
                 "  \n" +
                 "    <application  \n" +
                 "        android:allowBackup=\"true\"  \n" +
                 "        android:icon=\"@mipmap/ic_launcher\"  \n" +
                 "        android:label=\"@string/app_name\"  \n" +
-                "        android:roundIcon=\"@mipmap/ic_launcher_round\"  \n" +
+                "        android:roundIcon=\"@mipmap/ic_launcher_round\"\n" +
                 "        android:supportsRtl=\"true\"  \n" +
-                "        android:theme=\"@style/AppTheme\">  \n" +
+                "        android:theme=\"@style/AppTheme\">\n" +
                 "      <activity  \n" +
-                "         android:name=\"example.androidalians.com.screenorientation.\"  \n" +
-                "                                                       MainActivity\"  \n" +
+                "         android:name=\"example.androidalians.com.screenorientation.MainActivity\"\n" +
                 "         android:screenOrientation=\"portrait\">  \n" +
                 "         <intent-filter>  \n" +
-                "       <action android:name=\"android.intent.action.MAIN\" />  \n" +
+                "     <action android:name=\"android.intent.action.MAIN\"/>\n" +
                 "  \n" +
-                "       <category android:name=\"android.intent.category.LAUNCHER\" />  \n" +
-                "            </intent-filter>  \n" +
+                "     <category android:name=\"android.intent.category.LAUNCHER\"/>\n" +
+                "         </intent-filter>  \n" +
                 "       </activity>  \n" +
                 "       <activity android:name=\".SecondActivity\"  \n" +
                 "            android:screenOrientation=\"landscape\">  \n" +
@@ -182,8 +178,6 @@ public class B_card_4_Fragment extends Fragment {
                 "    </application>  \n" +
                 "  \n" +
                 "</manifest>  \n");
-
         return  view;
-
     }
 }

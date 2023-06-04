@@ -20,7 +20,6 @@ public class A_card_12_Fragment extends Fragment {
     TextView line_java, line_xml, line_gridal_permission;
     AppCompatImageView Btn_arrow;
     ImageView line_output;
-
     CardView line_chart_yt;
     @SuppressLint("SetTextI18n")
     @Override
@@ -44,7 +43,6 @@ public class A_card_12_Fragment extends Fragment {
         line_xml = view.findViewById(R.id.line_xml);
         line_chart_yt = view.findViewById(R.id.line_chart_yt);
         line_gridal_permission = view.findViewById(R.id.line_gridal_permission);
-
         line_output.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -74,26 +72,23 @@ public class A_card_12_Fragment extends Fragment {
                 "import com.github.mikephil.charting.data.Entry;\n" +
                 "import com.github.mikephil.charting.data.LineData;\n" +
                 "import com.github.mikephil.charting.data.LineDataSet;\n" +
-                "\n" +
                 "import java.lang.reflect.Array;\n" +
                 "import java.util.ArrayList;\n" +
-
-                "     \"public class MainActivity extends AppCompatActivity { +\n" +
-                "        \"LineChart lineChart;\n" +
-                "        \"AppCompatImageView Btn_arrow;" +
-                "        \"private PieChart pieChart;\" +\n" +
-                "        \"@Override\" +\n" +
-                "        \"protected void onCreate(Bundle savedInstanceState) {\" +\n" +
-                "        \"super.onCreate(savedInstanceState);\" +\n" +
-                "        \"setContentView(R.layout.activity_main);\" +" +
+                " \n" +
+                "   \"public class MainActivity extends AppCompatActivity { +\n" +
+                "      \"LineChart lineChart;\n" +
+                "      \"AppCompatImageView Btn_arrow;\n" +
+                "      \"private PieChart pieChart;\n" +
+                "      \"@Override\n" +
+                "      \"protected void onCreate(Bundle savedInstanceState) {\n" +
+                "      \"super.onCreate(savedInstanceState);\n" +
+                "      \"setContentView(R.layout.activity_main);\n" +
                 " \n" +
                 "  lineChart=view.findViewById(R.id.lineChart);\n" +
                 "\n" +
-                "        LineDataSet lineDataSet= new LineDataSet\n" +
-                "                           (DataValue(),\"Data Set 1\");\n" +
-                "        ArrayList<ILineDataSet> datasets= new ArrayList<>();\n" +
-                "        datasets.add(lineDataSet);\n" +
-                "\n" +
+                "     LineDataSet lineDataSet= new LineDataSet(DataValue(),\"Data Set 1\");\n" +
+                "       ArrayList<ILineDataSet> datasets= new ArrayList<>();\n" +
+                "       datasets.add(lineDataSet);\n" +
                 "        LineData data=new LineData(datasets);\n" +
                 "        lineChart.setData(data);\n" +
                 "        lineChart.invalidate();\n" +
@@ -103,22 +98,18 @@ public class A_card_12_Fragment extends Fragment {
                 "        Btn_arrow.setOnClickListener(new View.OnClickListener() {\n" +
                 "            @Override\n" +
                 "            public void onClick(View view) {\n" +
-                "                A_card_12_Fragment A_card_12_Fragment = new \n" +
-                "                               A_card_12_Fragment();\n" +
-                "                getActivity().getSupportFragmentManager().beginTransaction()\n" +
-                "                        .replace(R.id.frame_container, A_card_12_Fragment,\n" +
-                "                                                        \"Back Button Basic\")\n" +
-                "                        .addToBackStack(null)\n" +
-                "                        .commit();\n" +
+                "              A_card_12_Fragment A_card_12_Fragment = new A_card_12_Fragment();\n" +
+                "              getActivity().getSupportFragmentManager().beginTransaction()\n" +
+                "                   .replace(R.id.frame_container, A_card_12_Fragment,\"Back Button Basic\")\n" +
+                "                   .addToBackStack(null)\n" +
+                "                   .commit();\n" +
                 "            }\n" +
                 "        });\n" +
-                "\n" +
                 "        return view;\n" +
                 "    }\n" +
                 "\n" +
                 "   private ArrayList<Entry> DataValue()\n" +
                 "    {\n" +
-                "\n" +
                 "        ArrayList<Entry> dataval = new ArrayList<Entry>();\n" +
                 "        dataval.add(new Entry(0, 20));\n" +
                 "        dataval.add(new Entry(1, 25));\n" +
@@ -126,14 +117,12 @@ public class A_card_12_Fragment extends Fragment {
                 "        dataval.add(new Entry(3, 24));\n" +
                 "        dataval.add(new Entry(4, 30));\n" +
                 "        dataval.add(new Entry(5, 28));\n" +
-                "\n" +
                 "    }\n" +
                 "}");
         line_java.setTextIsSelectable(true);
 
         line_xml.setText("<?xml version=\"1.0\" encoding=\"utf-8\"?>\n" +
-                "<LinearLayout xmlns:android=\"http://schemas.android.com\n" +
-                "                                           /apk/res/android\"\n" +
+                "<LinearLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\n" +
                 "    xmlns:tools=\"http://schemas.android.com/tools\"\n" +
                 "    android:layout_width=\"match_parent\"\n" +
                 "    android:layout_height=\"match_parent\"\n" +
@@ -149,7 +138,7 @@ public class A_card_12_Fragment extends Fragment {
         line_xml.setTextIsSelectable(true);
 
         line_gridal_permission.setText("dependencies {\n" +
-                " implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'\n" +
+                "   implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'\n" +
                 "}");
         line_gridal_permission.setTextIsSelectable(true);
 

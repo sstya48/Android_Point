@@ -64,6 +64,7 @@ public class A_card_16_Fragment extends Fragment {
                 "import androidx.core.content.ContextCompat;\n" +
                 "\n" +
                 "public class MainActivity extends Activity {\n" +
+                " \n" +
                 "   private static final int PERMISSION_RQST_SEND = 0;\n" +
                 "   Button send;\n" +
                 "   EditText call;\n" +
@@ -89,6 +90,7 @@ public class A_card_16_Fragment extends Fragment {
                 "       phoneNo = phoneNo.getText().toString(); \n" +
                 "       message = myMessage.getText().toString();\n" +
                 "       if (ContextCompat.checkSelfPermission(this,Manifest.permission.SEND_SMS) != PackageManager.PERMISSION_GRANTED) {\n" +
+                " \n" +
                 "           if (ActivityCompat.shouldShowRequestPermissionRationale(this,Manifest.permission.SEND_SMS)) {\n" +
                 "           }\n" +
                 "        else { ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.SEND_SMS}, PERMISSION_RQST_SEND);\n" +
@@ -100,10 +102,15 @@ public class A_card_16_Fragment extends Fragment {
                 "       switch (requestCode) {\n" +
                 "           case PERMISSION_RQST_SEND: {\n" +
                 "               if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {\n" +
+                " \n" +
                 "                   SmsManager smsManager = SmsManager.getDefault();\n" +
+                " \n" +
                 "                   smsManager.sendTextMessage(phoneNo, null, message, null, null);\n" +
+                " \n" +
                 "                   Toast.makeText(getApplicationContext(), \"SMS sent.\",Toast.LENGTH_LONG).show();\n" +
+                " \n" +
                 "               } else {Toast.makeText(getApplicationContext(), \"SMS failed, you may try again later.\", Toast.LENGTH_LONG).show();\n" +
+                " \n" +
                 "                   return;\n" +
                 "               }\n" +
                 "           }\n" +

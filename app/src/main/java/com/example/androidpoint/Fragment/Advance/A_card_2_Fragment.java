@@ -51,40 +51,42 @@ public class A_card_2_Fragment extends Fragment {
         toggle_java= view.findViewById(R.id.toggle_java);
         toggle_xml= view.findViewById(R.id.toggle_xml);
 
-        toggle_java.setText("package example.androidalians.togglebutton;  \n" +
+        toggle_java.setText("package example.androidalians.togglebutton;\n" +
                 "  \n" +
-                "import android.support.v7.app.AppCompatActivity;  \n" +
+                "import android.support.v7.app.AppCompatActivity;\n" +
                 "import android.os.Bundle;  \n" +
                 "import android.view.View;  \n" +
                 "import android.widget.Button;  \n" +
                 "import android.widget.Toast;  \n" +
-                "import android.widget.ToggleButton;  \n" +
+                "import android.widget.ToggleButton;\n" +
                 "  \n" +
-                "public class MainActivity extends AppCompatActivity {  \n" +
-                "    private ToggleButton toggleButton1, toggleButton2;  \n" +
-                "    private Button buttonSubmit;  \n" +
-                "    @Override  \n" +
-                "    protected void onCreate(Bundle savedInstanceState) {  \n" +
-                "        super.onCreate(savedInstanceState);  \n" +
-                "        setContentView(R.layout.activity_main);  \n" +
+                "public class MainActivity extends AppCompatActivity {\n" +
                 "  \n" +
-                "        addListenerOnButtonClick();  \n" +
+                "  private ToggleButton toggleButton1, toggleButton2;\n" +
+                "  private Button buttonSubmit;\n" +
+                "  \n" +
+                "  @Override  \n" +
+                "  protected void onCreate(Bundle savedInstanceState) {\n" +
+                "    super.onCreate(savedInstanceState);  \n" +
+                "    setContentView(R.layout.activity_main);  \n" +
+                "  \n" +
+                "        addListenerOnButtonClick();\n" +
                 "    }  \n" +
                 "  \n" +
-                "    public void addListenerOnButtonClick(){  \n" +
+                "    public void addListenerOnButtonClick(){\n" +
                 "  \n" +
-                "        toggleButton1=(ToggleButton)findViewById(R.id.toggleButton);  \n" +
-                "        toggleButton2=(ToggleButton)findViewById(R.id.toggleButton2);  \n" +
-                "        buttonSubmit=(Button)findViewById(R.id.button);  \n" +
+                "      toggleButton1 = findViewById(R.id.toggleButton);\n" +
+                "      toggleButton2 = findViewById(R.id.toggleButton2);\n" +
+                "      buttonSubmit = findViewById(R.id.button);\n" +
                 "  \n" +
-                "   buttonSubmit.setOnClickListener(new View.  OnClickListener(){  \n" +
+                "   buttonSubmit.setOnClickListener(new View.OnClickListener(){\n" +
                 "    @Override  \n" +
-                "    public void onClick(View view) {  \n" +
-                "     StringBuilder result = new StringBuilder();  \n" +
-                "      result.append(\"ToggleButton1:\") .append(toggleButton1.getText());\n" +
-                "      result.append(\"\\nToggleButton2:\") .append(toggleButton2.getText());\n" +
+                "    public void onClick(View view) {\n" +
+                "     StringBuilder result = new StringBuilder();\n" +
+                "      result.append(\"ToggleButton1:\").append(toggleButton1.getText());\n" +
+                "      result.append(\"ToggleButton2:\").append(toggleButton2.getText());\n" +
                 "  \n" +
-                "      Toast.makeText(getApplicationContext(),result.toString(),  Toast.LENGTH_LONG).show();  \n" +
+                "      Toast.makeText(getApplicationContext(),result.toString(),Toast.LENGTH_LONG).show();  \n" +
                 "          }  \n" +
                 "        });  \n" +
                 "    }  \n" +
@@ -92,8 +94,7 @@ public class A_card_2_Fragment extends Fragment {
         toggle_java.setTextIsSelectable(true);
 
         toggle_xml.setText("<?xml version=\"1.0\" encoding=\"utf-8\"?>\n" +
-                "<RelativeLayout xmlns:android=\"http://schemas.android.com\"\n" +
-                "                                                   /apk/res/android\"\n" +
+                "<RelativeLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\n" +
                 "    xmlns:tools=\"http://schemas.android.com/tools\"\n" +
                 "    android:layout_width=\"match_parent\"\n" +
                 "    android:layout_height=\"match_parent\">\n" +

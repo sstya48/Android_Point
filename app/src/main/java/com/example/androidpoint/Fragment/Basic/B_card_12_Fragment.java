@@ -16,6 +16,7 @@ import com.example.androidpoint.R;
 public class B_card_12_Fragment extends Fragment {
     TextView implicit_java, implicit_xml;
     AppCompatImageView implicit_demo, implicit_code_arrow;
+
     @SuppressLint({"SetTextI18n", "MissingInflatedId"})
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -50,8 +51,7 @@ public class B_card_12_Fragment extends Fragment {
         });
 
         implicit_xml.setText("<?xml version=\"1.0\" encoding=\"utf-8\"?>\n" +
-                "<LinearLayout xmlns:android=\"http://schemas.android.com\"\n" +
-                "                                       /apk/res/android\"\n" +
+                "<LinearLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\n" +
                 "    xmlns:tools=\"http://schemas.android.com/tools\"\n" +
                 "    android:layout_width=\"match_parent\"\n" +
                 "    android:layout_height=\"match_parent\"\n" +
@@ -67,7 +67,6 @@ public class B_card_12_Fragment extends Fragment {
                 "        android:text=\"IMPLICIT INTENT\" />\n" +
                 "\n" +
                 "</LinearLayout>");
-
 
         implicit_java.setText("package example.androidalians.implicitintent;\n" +
                 "\n" +
@@ -96,11 +95,9 @@ public class B_card_12_Fragment extends Fragment {
                 "        @Override\n" +
                 "        public void onClick(View view) {\n" +
                 "          Intent intent = new Intent(Intent.ACTION_VIEW);\n" +
-                "          intent.setData(Uri.parse(\"https://www.youtube.com\n" +
-                "                                               /@Androidalians\"));\n" +
+                "          intent.setData(Uri.parse(\"https://www.youtube.com/@Androidalians\"));\n" +
                 "          startActivity(intent);\n" +
-                "          Toast.makeText(getContext(), \"Implicit Intent\",\n" +
-                "                                       Toast.LENGTH_SHORT).show();\n" +
+                "          Toast.makeText(getContext(), \"Implicit Intent\",Toast.LENGTH_SHORT).show();\n" +
                 "            }\n" +
                 "        });\n" +
                 "    }\n" +

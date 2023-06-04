@@ -21,11 +21,9 @@ import com.example.androidpoint.R;
 
 
 public class A_card_8_Fragment extends Fragment {
-
     CardView image_slider_yt;
     TextView imageslider_java, imageslider_xml, manifest_xml;
     ImageView imageslider_output;
-
     AppCompatImageView Btn_arrow;
     @SuppressLint({"SetTextI18n", "MissingInflatedId"})
     @Override
@@ -77,25 +75,21 @@ public class A_card_8_Fragment extends Fragment {
                 "import android.support.v7.app.AppCompatActivity;  \n" +
                 "import android.os.Bundle;\n" +
                 "\n" +
-                "        public class MainActivity extends AppCompatActivity {\n" +
+                "    public class MainActivity extends AppCompatActivity {\n" +
                 "\n" +
-                "            @Override\n" +
-                "            protected void onCreate(Bundle savedInstanceState) {\n" +
-                "            super.onCreate(savedInstanceState);\n" +
-                "            setContentView(R.layout.activity_main);\n" +
+                "       @Override\n" +
+                "       protected void onCreate(Bundle savedInstanceState) {\n" +
+                "        super.onCreate(savedInstanceState);\n" +
+                "        setContentView(R.layout.activity_main);\n" +
                 "\n" +
                 "        imageslider = view.findViewById(R.id.imageslider);\n" +
                 "\n" +
                 "        ArrayList<SlideModel> slideModels = new ArrayList<>();\n" +
                 "\n" +
-                "        slideModels.add(new SlideModel(\" YOUR GOOGLE IMAGE ADDRESS \"\n" +
-                "                                                           , ScaleTypes.FIT));\n" +
-                "        slideModels.add(new SlideModel(\" YOUR GOOGLE IMAGE ADDRESS \"\n" +
-                "                                                           , ScaleTypes.FIT));\n" +
-                "        slideModels.add(new SlideModel(\" YOUR GOOGLE IMAGE ADDRESS \"\n" +
-                "                                                           , ScaleTypes.FIT));\n" +
-                "        slideModels.add(new SlideModel(\" YOUR GOOGLE IMAGE ADDRESS \"\n" +
-                "                                                           , ScaleTypes.FIT));\n" +
+                "        slideModels.add(new SlideModel(\" YOUR GOOGLE IMAGE ADDRESS\", ScaleTypes.FIT));\n" +
+                "        slideModels.add(new SlideModel(\" YOUR GOOGLE IMAGE ADDRESS\", ScaleTypes.FIT));\n" +
+                "        slideModels.add(new SlideModel(\" YOUR GOOGLE IMAGE ADDRESS\", ScaleTypes.FIT));\n" +
+                "        slideModels.add(new SlideModel(\" YOUR GOOGLE IMAGE ADDRESS\", ScaleTypes.FIT));\n" +
                 "\n" +
                 "        imageslider.setImageList(slideModels, ScaleTypes.FIT);\n" +
                 "\n" +
@@ -104,15 +98,14 @@ public class A_card_8_Fragment extends Fragment {
                 "}");
         manifest_xml.setTextIsSelectable(true);
         manifest_xml.setText("<?xml version=\"1.0\" encoding=\"utf-8\"?>\n" +
-                "<manifest xmlns:android=\"http://schemas.android.com\n" +
-                "                                       /apk/res/android\"\n" +
+                "<manifest xmlns:android=\"http://schemas.android.com/apk/res/android\"\n" +
                 "    xmlns:tools=\"http://schemas.android.com/tools\"\n" +
                 "    package=\"com.example.geeksforgeeks\"\n" +
                 "    android:versionCode=\"1\"\n" +
                 "    android:versionName=\"1.0\"\n" +
                 "    android:installLocation=\"preferExternal\">\n" +
                 "   \n" +
-                "       <uses-permission android:name=\"android.permission.INTERNET\" /> \n" +
+                "     <uses-permission android:name=\"android.permission.INTERNET\" /> \n" +
                 " \n" +
                 "    <application\n" +
                 "        android:allowBackup=\"true\"\n" +
@@ -128,9 +121,9 @@ public class A_card_8_Fragment extends Fragment {
                 "            android:name=\".MainActivity\"\n" +
                 "            android:exported=\"true\">\n" +
                 "            <intent-filter>\n" +
-                "<action android:name=\"android.intent.action. MAIN\" />\n" +
+                "<action android:name=\"android.intent.action. MAIN\"/>\n" +
                 " \n" +
-                "<category android:name=\"android.intent.category. LAUNCHER\" />\n" +
+                "<category android:name=\"android.intent.category.LAUNCHER\" />\n" +
                 "            </intent-filter>\n" +
                 "        </activity>\n" +
                 "    </application>\n" +

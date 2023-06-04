@@ -22,7 +22,6 @@ import org.checkerframework.checker.units.qual.s;
 public class B_card_1_Fragment extends Fragment {
     TextView hello_toast_java,hello_toast_xml;
     AppCompatImageView hello_toast_demo;
-
     CardView helloworld_yt;
     AppCompatImageView Hello_code_arrow;
     @SuppressLint({"SetTextI18n", "MissingInflatedId"})
@@ -83,14 +82,12 @@ public class B_card_1_Fragment extends Fragment {
                 "      super.onCreate(savedInstanceState);\n" +
                 "      setContentView(R.layout.activity_main);\n" +
                 "\n" +
-                "        Toast.makeText(getApplicationContext(), \"Hello world!!, \n" +
-                "                                   Toast.LENGTH_LONG).show();\n"+
+                "        Toast.makeText(getApplicationContext(), \"Hello world!!,Toast.LENGTH_LONG).show();\n"+
                 "   }\n" +
                 "}");
 
         hello_toast_xml.setText("<?xml version=\\\"1.0\\\" encoding=\\\"utf-8\\\"?>\"\n" +
-                "<RelativeLayout xmlns:android=\"http://schemas.android.com \n" +
-                "                                                      /apk/res/android\"\n" +
+                "<RelativeLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\n" +
                 "   xmlns:tools=\"http://schemas.android.com/tools\"\n" +
                 "   android:layout_width=\"match_parent\"\n" +
                 "   android:layout_height=\"match_parent\" >\n" +

@@ -20,7 +20,6 @@ public class A_card_10_Fragment extends Fragment {
     TextView reg_java, reg_xml, reg_gridal_permission;
     AppCompatImageView Btn_arrow;
     ImageView reg_output;
-
     CardView reg_page_yt;
     @SuppressLint("SetTextI18n")
     @Override
@@ -52,7 +51,6 @@ public class A_card_10_Fragment extends Fragment {
                 gotoUrl("https://www.youtube.com/watch?v=y0FX0jLtFxE");
             }
         });
-
         reg_output.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -108,19 +106,17 @@ public class A_card_10_Fragment extends Fragment {
                 "    private View.OnClickListener mMyListener = new View.OnClickListener() {\n" +
                 "        public void onClick(View v) {\n" +
                 "            switch (v.getId()) {\n" +
-                "                case R.id.buttonSubmit:\n" +
-                "                 if (awesomeValidation.validate()) {\n" +
-                "                   Toast.makeText(getApplicationContext(), \"Its Working!\",\n" +
-                "                               Toast.LENGTH_LONG).show();\n" +
-                "                    }\n" +
-                "                    break;\n" +
-                "                case R.id.already_signin:\n" +
-                "                    Intent i = new Intent(getApplicationContext(), \n" +
-                "                                   LoginActivity.class);\n" +
-                "                    startActivity(i);\n" +
-                "                    break;\n" +
-                "                default:\n" +
-                "                    break;\n" +
+                "              case R.id.buttonSubmit:\n" +
+                "               if (awesomeValidation.validate()) {\n" +
+                "                Toast.makeText(getApplicationContext(), \"Its Working!\",Toast.LENGTH_LONG).show();\n" +
+                "                 }\n" +
+                "                  break;\n" +
+                "              case R.id.already_signin:\n" +
+                "              Intent i = new Intent(getApplicationContext(),LoginActivity.class);\n" +
+                "              startActivity(i);\n" +
+                "                 break;\n" +
+                "              default:\n" +
+                "                  break;\n" +
                 "            }\n" +
                 "        }\n" +
                 "    };\n" +
@@ -129,8 +125,7 @@ public class A_card_10_Fragment extends Fragment {
 
         reg_xml.setTextIsSelectable(true);
         reg_xml.setText("<?xml version=\"1.0\" encoding=\"utf-8\"?>\n" +
-                "<LinearLayout xmlns:android=\"http://schemas.android.com\n" +
-                "                                   /apk/res/android\"\n" +
+                "<LinearLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\n" +
                 "    xmlns:tools=\"http://schemas.android.com/tools\"\n" +
                 "    android:layout_width=\"match_parent\"\n" +
                 "    android:layout_height=\"match_parent\"\n" +

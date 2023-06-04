@@ -20,7 +20,6 @@ public class A_card_7_Fragment extends Fragment {
     TextView progress_java, progress_xml;
     ImageView progress_output;
     AppCompatImageView Btn_arrow;
-
     CardView progress_bar_yt;
     @SuppressLint({"MissingInflatedId", "SetTextI18n"})
     @Override
@@ -74,23 +73,24 @@ public class A_card_7_Fragment extends Fragment {
                 "import android.widget.Button;\n" +
                 "\n" +
                 "public class MainActivity extends ActionBarActivity {\n" +
-                "   Button button;\n" +
-                "   private ProgressDialog progress;\n" +
+                "\n" +
+                " Button button;\n" +
+                " private ProgressDialog progress;\n" +
                 "   \n" +
-                "   protected void onCreate(Bundle savedInstanceState) {\n" +
-                "      super.onCreate(savedInstanceState);\n" +
-                "      setContentView(R.layout.activity_main);\n" +
-                "      button = (Button) findViewById(R.id.button);\n" +
+                " protected void onCreate(Bundle savedInstanceState) {\n" +
+                "    super.onCreate(savedInstanceState);\n" +
+                "    setContentView(R.layout.activity_main);\n" +
+                "    button = findViewById(R.id.button);\n" +
                 "   \n" +
-                "button.setOnClickListener(new View.OnClickListener() { \n"+
-                "@Override \n"+
-                "public void onClick(View view) { \n"+
-                " progress=new ProgressDialog(this);\n" +
-                " progress.setMessage(\"Downloading Music\");\n" +
-                " progress.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);\n" +
-                " progress.setIndeterminate(true);\n" +
-                " progress.setProgress(0);\n" +
-                " progress.show();\n" +
+                "   button.setOnClickListener(new View.OnClickListener() { \n"+
+                "   @Override \n"+
+                "   public void onClick(View view) { \n"+
+                "   progress=new ProgressDialog(this);\n" +
+                "   progress.setMessage(\"Downloading Music\");\n" +
+                "   progress.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);\n" +
+                "   progress.setIndeterminate(true);\n" +
+                "   progress.setProgress(0);\n" +
+                "   progress.show();\n" +
                 "      \n" +
                 "      final int totalProgressTime = 100;\n" +
                 "      final Thread t = new Thread() {\n" +
@@ -114,8 +114,7 @@ public class A_card_7_Fragment extends Fragment {
                 "}");
         progress_xml.setTextIsSelectable(true);
         progress_xml.setText("<?xml version=\"1.0\" encoding=\"utf-8\"?>\n" +
-                "<RelativeLayout xmlns:android=\"http://schemas.android.com\n" +
-                "                                         /apk/res/android\"\n" +
+                "<RelativeLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\n" +
                 "    xmlns:tools=\"http://schemas.android.com/tools\"\n" +
                 "    android:layout_width=\"match_parent\"\n" +
                 "    android:layout_height=\"match_parent\">\n" +

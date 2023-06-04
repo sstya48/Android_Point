@@ -20,15 +20,11 @@ import com.example.androidpoint.DemoFragments.Custem_Toast;
 import com.example.androidpoint.DemoFragments.VibratePhoneDemo;
 import com.example.androidpoint.R;
 
-
 public class B_card_21_Fragment extends Fragment {
-
     AppCompatImageView vaibrat_arrow, vibrate_demo;
 
  //   CardView vibrate_yt;
-
     TextView vibrate_xml, vibrate_java, manifest_xml;
-
     @SuppressLint({"MissingInflatedId", "SetTextI18n"})
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,

@@ -45,7 +45,6 @@ public class A_card_22_Fragment extends Fragment {
                         .replace(R.id.frame_container, scroll_demo, "SCROLL DEMO")
                         .addToBackStack(null)
                         .commit();
-
             }
         });
 
@@ -71,8 +70,7 @@ public class A_card_22_Fragment extends Fragment {
 
         rate_xml.setTextIsSelectable(true);
         rate_xml.setText("<?xml version=\"1.0\" encoding=\"utf-8\"?>\n" +
-                "<RelativeLayout xmlns:android=\"http://schemas.android.com\n" +
-                "                           /apk/res/android\"\n" +
+                "<RelativeLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\n" +
                 "    xmlns:tools=\"http://schemas.android.com/tools\"\n" +
                 "    android:layout_width=\"match_parent\"\n" +
                 "    android:layout_height=\"match_parent\">\n" +
@@ -191,23 +189,18 @@ public class A_card_22_Fragment extends Fragment {
 
         transparent_xml.setTextIsSelectable(true);
         transparent_xml.setText("<?xml version=\"1.0\" encoding=\"utf-8\"?>\n" +
-                "<shape xmlns:android=\"http://schemas.android.com\n" +
-                "                           /apk/res/android\"\n" +
+                "<shape xmlns:android=\"http://schemas.android.com/apk/res/android\"\n" +
                 "    android:shape=\"rectangle\">\n" +
-                "\n" +
                 "    <solid android:color=\"@android:color/transparent\"/>\n" +
                 "        <stroke android:width=\"2dp\"\n" +
                 "        android:color=\"@color/white\"/>\n" +
                 "    <corners android:radius=\"1000dp\"/>\n" +
-                "\n" +
                 "</shape>");
 
         rectangle_xml.setTextIsSelectable(true);
         rectangle_xml.setText("<?xml version=\"1.0\" encoding=\"utf-8\"?>\n" +
-                "<shape xmlns:android=\"http://schemas.android.com\n" +
-                "                                   /apk/res/android\"\n" +
+                "<shape xmlns:android=\"http://schemas.android.com/apk/res/android\"\n" +
                 "    android:shape=\"rectangle\">\n" +
-                "\n" +
                 "    <solid\n" +
                 "        android:color=\"@color/white\"/>\n" +
                 "    <corners android:radius=\"1000dp\"/>\n" +

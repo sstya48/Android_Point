@@ -18,7 +18,6 @@ import android.widget.TextView;
 import com.example.androidpoint.R;
 public class A_card_21_Fragment extends Fragment {
     ImageView fing_btn_output;
-
     CardView fingur_print_yt;
     TextView fing_java,fing_xml, SecondActivity_xml, gridal_xml;
     AppCompatImageView Btn_arrow;
@@ -56,7 +55,6 @@ public class A_card_21_Fragment extends Fragment {
         });
 
         fingur_print_yt=view.findViewById(R.id.fingur_print_yt);
-
         fingur_print_yt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -107,55 +105,43 @@ public class A_card_21_Fragment extends Fragment {
                 "\n" +
                 "        imageview = findViewById(R.id.imageview);\n" +
                 "\n" +
+                "        BiometricManager biometricManager = BiometricManager.from(this);\n" +
+                "        switch (biometricManager.canAuthenticate(BIOMETRIC_STRONG | DEVICE_CREDENTIAL)) {\n" +
+                "         case BiometricManager.BIOMETRIC_SUCCESS:\n" +
+                "           break;\n" +
                 "\n" +
-                "        BiometricManager biometricManager = BiometricManager\n" +
-                "                                   .from(this);\n" +
-                "        switch (biometricManager.canAuthenticate\n" +
-                "                   (BIOMETRIC_STRONG | DEVICE_CREDENTIAL)) {\n" +
-                "            case BiometricManager.BIOMETRIC_SUCCESS:\n" +
-                "                Log.d(\"MY_APP_TAG\", \"App can authenticate using biometrics.\");\n" +
-                "                break;\n" +
-                "            case BiometricManager.BIOMETRIC_ERROR_NO_HARDWARE:\n" +
-                "                Toast.makeText(this, \"No features available on your device\",\n" +
-                "                                   Toast.LENGTH_LONG).show();\n" +
-                "                break;\n" +
-                "            case BiometricManager.BIOMETRIC_ERROR_HW_UNAVAILABLE:\n" +
-                "                Toast.makeText(this, \"Biometric features are currently\n" +
-                "                   unavailable\", Toast.LENGTH_LONG).show();\n" +
+                "         case BiometricManager.BIOMETRIC_ERROR_NO_HARDWARE:\n" +
+                "          Toast.makeText(this,\"No features available on your device\",Toast.LENGTH_LONG).show();\n" +
+                "            break;\n" +
                 "\n" +
-                "                break;\n" +
-                "            case BiometricManager.BIOMETRIC_ERROR_NONE_ENROLLED:\n" +
-                "                // Prompts the user to create credentials that your app accepts.\n" +
-                "                final Intent enrollIntent = new Intent(Settings.ACTION_BIOMETRIC_ENROLL);\n" +
-                "                enrollIntent.putExtra(Settings.EXTRA_BIOMETRIC_AUTHENTICATORS_ALLOWED, BIOMETRIC_STRONG | DEVICE_CREDENTIAL);\n" +
-                "                startActivityForResult(enrollIntent, REQUEST_CODE);\n" +
-                "                break;\n" +
+                "         case BiometricManager.BIOMETRIC_ERROR_HW_UNAVAILABLE:\n" +
+                "           Toast.makeText(this, \"Biometric features are currentlyunavailable\",Toast.LENGTH_LONG).show();\n" +
+                "            break;\n" +
+                "\n" +
+                "         case BiometricManager.BIOMETRIC_ERROR_NONE_ENROLLED:\n" +
+                "            final Intent enrollIntent = new Intent(Settings.ACTION_BIOMETRIC_ENROLL);\n" +
+                "            enrollIntent.putExtra(Settings.EXTRA_BIOMETRIC_AUTHENTICATORS_ALLOWED, BIOMETRIC_STRONG | DEVICE_CREDENTIAL);\n" +
+                "            startActivityForResult(enrollIntent, REQUEST_CODE);\n" +
+                "            break;\n" +
                 "        }\n" +
                 "\n" +
                 "        executor = ContextCompat.getMainExecutor(this);\n" +
-                "        biometricPrompt = new BiometricPrompt(MainActivity.this,\n" +
-                "                executor, new BiometricPrompt.AuthenticationCallback() {\n" +
+                "        biometricPrompt = new BiometricPrompt(MainActivity.this,executor, new BiometricPrompt.AuthenticationCallback() {\n" +
                 "            @Override\n" +
-                "            public void onAuthenticationError(int errorCode,\n" +
-                "                                              @NonNull CharSequence errString) {\n" +
-                "                super.onAuthenticationError(errorCode, errString);\n" +
-                "                Toast.makeText(getApplicationContext(),\n" +
-                "                          \"Authentication error: \" + errString, \n" +
-                "                               Toast.LENGTH_SHORT).show();\n" +
+                "            public void onAuthenticationError(int errorCode,@NonNull CharSequence errString) {\n" +
+                "              super.onAuthenticationError(errorCode, errString);\n" +
+                "              Toast.makeText(getApplicationContext(), \"Authentication error: \" + errString,Toast.LENGTH_SHORT).show();\n" +
                 "            }\n" +
                 "            @Override\n" +
-                "            public void onAuthenticationSucceeded(\n" +
-                "                    @NonNull BiometricPrompt.AuthenticationResult result) {\n" +
+                "            public void onAuthenticationSucceeded(@NonNull BiometricPrompt.AuthenticationResult result) {\n" +
                 "                super.onAuthenticationSucceeded(result);\n" +
-                "                Toast.makeText(getApplicationContext(),\n" +
-                "                        \"Authentication succeeded!\", Toast.LENGTH_SHORT).show();\n" +
+                "                Toast.makeText(getApplicationContext(),\"Authentication succeeded!\",Toast.LENGTH_SHORT).show();\n" +
                 "            }\n" +
-                "            @Override\n" +
-                "            public void onAuthenticationFailed() {\n" +
-                "                super.onAuthenticationFailed();\n" +
-                "        startActivity(new Intent(MainActivity.this, secpage.class));\n" +
-                "                Toast.makeText(getApplicationContext(), \"Authentication failed\",\n" +
-                "                                Toast.LENGTH_SHORT).show();\n" +
+                "          @Override\n" +
+                "          public void onAuthenticationFailed() {\n" +
+                "            super.onAuthenticationFailed();\n" +
+                "            startActivity(new Intent(MainActivity.this, secpage.class));\n" +
+                "            Toast.makeText(getApplicationContext(), \"Authentication failed\",Toast.LENGTH_SHORT).show();\n" +
                 "            }\n" +
                 "        });\n" +
                 "\n" +

@@ -19,8 +19,8 @@ import com.example.androidpoint.R;
 public class B_card_14_Fragment extends Fragment {
     AppCompatImageView optionMenu_demo, optionmenu_code_arrow;
     TextView optionMenu_java, option_xml_menu;
-
     CardView option_menu_yt;
+
     @SuppressLint({"MissingInflatedId", "SetTextI18n"})
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -88,8 +88,7 @@ public class B_card_14_Fragment extends Fragment {
                 "    }\n" +
                 "    @Override\n" +
                 "    public boolean onOptionsItemSelected(MenuItem item) {\n" +
-                "        Toast.makeText(this, \"Selected Item: \" + item.getTitle(), \n" +
-                "                                           Toast.LENGTH_SHORT).show();\n" +
+                "        Toast.makeText(this, \"Selected Item: \" + item.getTitle(),Toast.LENGTH_SHORT).show();\n" +
                 "        return true;\n" +
                 "    }\n" +
                 "}");
@@ -97,7 +96,6 @@ public class B_card_14_Fragment extends Fragment {
 
         option_xml_menu.setText("<?xml version=\"1.0\" encoding=\"utf-8\"?>\n" +
                 "<menu xmlns:android=\"http://schemas.android.com\">\n" +
-                "                               /apk/res/android\">\n" +
                 "    <item\n" +
                 "        android:id=\"@+id/upload\"\n" +
                 "        android:title=\"Upload\"/>\n" +
@@ -111,8 +109,9 @@ public class B_card_14_Fragment extends Fragment {
 
         return view;
     }
+
     private void gotoUrl(String s) {
         Uri uri = Uri.parse(s);
-        startActivity(new Intent(Intent.ACTION_VIEW,uri));
+        startActivity(new Intent(Intent.ACTION_VIEW, uri));
     }
 }

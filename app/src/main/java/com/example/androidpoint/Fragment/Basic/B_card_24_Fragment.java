@@ -64,36 +64,36 @@ public class B_card_24_Fragment extends Fragment {
                 "\n" +
                 "    </RelativeLayout>");
         image_switcher_java.setText("package example.androidalians.animationdemo;\n" +
-                "        import android.animation.ArgbEvaluator;\n" +
-                "        import android.animation.ObjectAnimator;\n" +
-                "        import android.animation.ValueAnimator;\n" +
-                "        import android.app.Activity;\n" +
-                "        import android.graphics.Color;\n" +
-                "        import android.os.Bundle;\n" +
-                "        import android.view.View;\n" +
-                "        import android.view.View.OnClickListener;\n" +
-                "        import android.widget.Button;\n" +
-                "        import android.widget.TextView;\n" +
+                "     import android.animation.ArgbEvaluator;\n" +
+                "     import android.animation.ObjectAnimator;\n" +
+                "     import android.animation.ValueAnimator;\n" +
+                "     import android.app.Activity;\n" +
+                "     import android.graphics.Color;\n" +
+                "     import android.os.Bundle;\n" +
+                "     import android.view.View;\n" +
+                "     import android.view.View.OnClickListener;\n" +
+                "     import android.widget.Button;\n" +
+                "     import android.widget.TextView;\n" +
                 "\n" +
                 "public class AnimationStarter extends Activity {\n" +
                 "\n" +
-                "    private static final String TAG = \"AnimationStarter\";\n" +
-                "    ObjectAnimator textColorAnim;\n" +
+                "  private static final String TAG = \"AnimationStarter\";\n" +
+                "  ObjectAnimator textColorAnim;\n" +
                 "\n" +
-                "    @Override\n" +
-                "    protected void onCreate(Bundle savedInstanceState) {\n" +
-                "        super.onCreate(savedInstanceState);\n" +
-                "        setContentView(R.layout.blinking_text_layout);\n" +
+                "  @Override\n" +
+                "  protected void onCreate(Bundle savedInstanceState) {\n" +
+                "     super.onCreate(savedInstanceState);\n" +
+                "     setContentView(R.layout.blinking_text_layout);\n" +
                 "\n" +
-                "        Button startBlinkTextButton = (Button) findViewById(R.id.startBlinkTextButton);\n" +
-                "        Button stopBlinkTextButton = (Button) findViewById(R.id.stopBlinkTextButton);\n" +
-                "        final TextView blinkText = (TextView) findViewById(R.id.blinkTextView);\n" +
+                "     Button startBlinkTextButton = findViewById(R.id.startBlinkTextButton);\n" +
+                "     Button stopBlinkTextButton = findViewById(R.id.stopBlinkTextButton);\n" +
+                "     final TextView blinkText = findViewById(R.id.blinkTextView);\n" +
                 "\n" +
                 "        startBlinkTextButton.setOnClickListener(new OnClickListener() {\n" +
                 "\n" +
                 "            @Override\n" +
                 "            public void onClick(View v) {\n" +
-                "                textColorAnim = ObjectAnimator.ofInt(blinkText, \"textColor\", Color.BLACK, Color.TRANSPARENT);\n" +
+                "                textColorAnim = ObjectAnimator.ofInt(blinkText,\"textColor\",Color.BLACK, Color.TRANSPARENT);\n" +
                 "                textColorAnim.setDuration(1000);\n" +
                 "                textColorAnim.setEvaluator(new ArgbEvaluator());\n" +
                 "                textColorAnim.setRepeatCount(ValueAnimator.INFINITE);\n" +

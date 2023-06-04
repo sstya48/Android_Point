@@ -70,7 +70,7 @@ public class A_card_4_Fragment extends Fragment {
             }
         });
 
-        alert_java.setText("package example.androidalians.alert_dialog_custom;\n" +
+        alert_java.setText("package example.androidalians.alertdialog;\n" +
                 "\n" +
                 "import androidx.appcompat.app.AlertDialog;\n" +
                 "import androidx.appcompat.app.AppCompatActivity;\n" +
@@ -83,45 +83,43 @@ public class A_card_4_Fragment extends Fragment {
                 "\n" +
                 "public class MainActivity extends AppCompatActivity {\n" +
                 "\n" +
-                "    Button b1;\n" +
+                "  Button b1;\n" +
                 "\n" +
-                "    @SuppressLint(\"MissingInflatedId\")\n" +
-                "    @Override\n" +
-                "    protected void onCreate(Bundle savedInstanceState) {\n" +
-                "        super.onCreate(savedInstanceState);\n" +
-                "        setContentView(R.layout.activity_main);\n" +
+                "  @SuppressLint(\"MissingInflatedId\")\n" +
+                "  @Override\n" +
+                "  protected void onCreate(Bundle savedInstanceState) {\n" +
+                "     super.onCreate(savedInstanceState);\n" +
+                "     setContentView(R.layout.activity_main);\n" +
                 "\n" +
-                "        b1= findViewById(R.id.b1);\n" +
+                "     b1= findViewById(R.id.b1);\n" +
                 "\n" +
-                "        b1.setOnClickListener(new View.OnClickListener() {\n" +
+                "     b1.setOnClickListener(new View.OnClickListener() {\n" +
+                "        @Override\n" +
+                "        public void onClick(View view) {\n" +
+                "\n" +
+                "        final AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this,R.style.CustomAlertDialog);\n" +
+                "       ViewGroup viewGroup= findViewById(android.R.id.content);\n" +
+                "       View dialog = LayoutInflater.from(view.getContext()).inflate(R.layout.custom_alert,viewGroup,false);\n" +
+                " \n" +
+                "         Button btn_no = dialog.findViewById(R.id.btn_no);\n" +
+                "         Button btn_yes = dialog.findViewById(R.id.btn_yes);\n" +
+                " \n" +
+                "         builder.setView(dialog);\n" +
+                "\n" +
+                "         final  AlertDialog alertDialog= builder.create();\n" +
+                "         btn_no.setOnClickListener(new View.OnClickListener() {\n" +
                 "            @Override\n" +
                 "            public void onClick(View view) {\n" +
-                "\n" +
-                "            final AlertDialog.Builder builder = new AlertDialog\n" +
-                "                     .Builder(MainActivity.this,R.style.CustomAlertDialog);\n" +
-                "       ViewGroup viewGroup= findViewById(android.R.id.content);\n" +
-                "       View dialog = LayoutInflater.from(view.getContext()).inflate\n" +
-                "                      (R.layout.custom_alert,viewGroup,false);\n" +
-                " \n" +
-                "            Button btn_no = dialog.findViewById(R.id.btn_no);\n" +
-                "            Button btn_yes = dialog.findViewById(R.id.btn_yes);\n" +
-                " \n" +
-                "            builder.setView(dialog);\n" +
-                "\n" +
-                "            final  AlertDialog alertDialog= builder.create();\n" +
-                "            btn_no.setOnClickListener(new View.OnClickListener() {\n" +
-                "                @Override\n" +
-                "                public void onClick(View view) {\n" +
-                "                   alertDialog.dismiss();\n" +
-                "                }\n" +
+                "               alertDialog.dismiss();\n" +
+                "             }\n" +
+                "         });\n" +
+                "       btn_yes.setOnClickListener(new View.OnClickListener() {\n" +
+                "         @Override\n" +
+                "         public void onClick(View view) {\n" +
+                "             alertDialog.dismiss();\n" +
+                "             }\n" +
                 "            });\n" +
-                "           btn_yes.setOnClickListener(new View.OnClickListener() {\n" +
-                "             @Override\n" +
-                "             public void onClick(View view) {\n" +
-                "                    alertDialog.dismiss();\n" +
-                "                 }\n" +
-                "             });\n" +
-                "             alertDialog.show();\n" +
+                "         alertDialog.show();\n" +
                 "          }\n" +
                 "      });\n" +
                 "   }\n" +
@@ -129,8 +127,7 @@ public class A_card_4_Fragment extends Fragment {
         alert_java.setTextIsSelectable(true);
 
         alert_xml.setText("<?xml version=\"1.0\" encoding=\"utf-8\"?>\n" +
-                "<LinearLayout xmlns:android=\"http://schemas.android.com\"\n" +
-                "                                               /apk/res/android\"\n" +
+                "<LinearLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\n" +
                 "    xmlns:tools=\"http://schemas.android.com/tools\"\n" +
                 "    android:layout_width=\"match_parent\"\n" +
                 "    android:layout_height=\"match_parent\"\n" +
@@ -147,8 +144,7 @@ public class A_card_4_Fragment extends Fragment {
         alert_xml.setTextIsSelectable(true);
 
         custom_alert_xml.setText("<?xml version=\"1.0\" encoding=\"utf-8\"?>\n" +
-                "<LinearLayout xmlns:android=\"http://schemas.android.com\"\n" +
-                "                                         /apk/res/android\"\n" +
+                "<LinearLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\n" +
                 "    xmlns:tools=\"http://schemas.android.com/tools\"\n" +
                 "    android:layout_width=\"match_parent\"\n" +
                 "    android:layout_height=\"match_parent\"\n" +

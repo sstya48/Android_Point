@@ -17,11 +17,8 @@ import com.example.androidpoint.DemoFragments.TimePickerFragment;
 import com.example.androidpoint.R;
 
 public class B_card_9_Fragment extends Fragment {
-
     AppCompatImageView timepicker_demo, timePicker_code_arrow;
-
     TextView timepicker_xml, timepicker_java;
-
     CardView timepicker_yt;
     @SuppressLint({"MissingInflatedId", "SetTextI18n"})
     @Override
@@ -92,31 +89,27 @@ public class B_card_9_Fragment extends Fragment {
                 "        pickTimeBtn = findViewById(R.id.idBtnPickTime);\n" +
                 "        selectedTimeTV = findViewById(R.id.idTVSelectedTime);\n" +
                 "        pickTimeBtn.setOnClickListener(new View.OnClickListener() {\n" +
-                "            @Override\n" +
-                "            public void onClick(View v) {\n" +
-                "                final Calendar c = Calendar.getInstance();\n" +
+                "         @Override\n" +
+                "         public void onClick(View v) {\n" +
+                "            final Calendar c = Calendar.getInstance();\n" +
                 "\n" +
-                "                int hour = c.get(Calendar.HOUR_OF_DAY);\n" +
-                "                int minute = c.get(Calendar.MINUTE);\n" +
+                "            int hour = c.get(Calendar.HOUR_OF_DAY);\n" +
+                "            int minute = c.get(Calendar.MINUTE);\n" +
                 "\n" +
-                "                TimePickerDialog timePickerDialog = new TimePickerDialog\n" +
-                "                       (MainActivity.this, new TimePickerDialog.\n" +
-                "                                           OnTimeSetListener() {\n" +
-                "                  @Override\n" +
-                "                  public void onTimeSet(TimePicker view, int hourOfDay,\n" +
-                "                                                        int minute) {\n" +
-                "                    selectedTimeTV.setText(hourOfDay + \":\" + minute);\n" +
-                "                    }\n" +
-                "                }, hour, minute, false);\n" +
-                "                timePickerDialog.show();\n" +
-                "            }\n" +
+                "            TimePickerDialog timePickerDialog = new TimePickerDialog(MainActivity.this, new TimePickerDialog.OnTimeSetListener() {\n" +
+                "              @Override\n" +
+                "              public void onTimeSet(TimePicker view, int hourOfDay,int minute) {\n" +
+                "                selectedTimeTV.setText(hourOfDay + \":\" + minute);\n" +
+                "                }\n" +
+                "             }, hour, minute, false);\n" +
+                "            timePickerDialog.show();\n" +
+                "           }\n" +
                 "        });\n" +
                 "    }\n" +
                 "}");
 
         timepicker_xml.setText("<?xml version=\"1.0\" encoding=\"utf-8\"?>\n" +
-                "<LinearLayout xmlns:android=\"http://schemas.android.com\"\n" +
-                "                                   /apk/res/android\"\n" +
+                "<LinearLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\n" +
                 "    xmlns:tools=\"http://schemas.android.com/tools\"\n" +
                 "    android:layout_width=\"match_parent\"\n" +
                 "    android:layout_height=\"match_parent\"\n" +

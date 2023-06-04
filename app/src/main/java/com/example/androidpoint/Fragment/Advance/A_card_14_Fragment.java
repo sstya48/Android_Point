@@ -20,7 +20,6 @@ public class A_card_14_Fragment extends Fragment {
     TextView insta_java, insta_xml, Drawable_Color, Drawable_Border, Drawable_arrow;
     AppCompatImageView Btn_arrow;
     ImageView insta_output;
-
     CardView insta_login_yt;
     @SuppressLint({"MissingInflatedId", "SetTextI18n"})
     @Override
@@ -40,7 +39,6 @@ public class A_card_14_Fragment extends Fragment {
                         .commit();
             }
         });
-
         insta_login_yt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -69,19 +67,18 @@ public class A_card_14_Fragment extends Fragment {
         insta_java.setText("package example.androidalians.instagram;\n" +
                 "\n" +
                 "import androidx.appcompat.app.AppCompatActivity;\n" +
-                "\n" +
                 "import android.os.Bundle;\n" +
+                " \n" +
                 "public class MainActivity extends AppCompatActivity {\n" +
                 "    @Override\n" +
                 "    protected void onCreate(Bundle savedInstanceState) {\n" +
-                "        super.onCreate(savedInstanceState);\n" +
-                "        setContentView(R.layout.activity_main);\n" +
+                "       super.onCreate(savedInstanceState);\n" +
+                "       setContentView(R.layout.activity_main);\n" +
                 "    }\n" +
                 "}");
         insta_xml.setTextIsSelectable(true);
         insta_xml.setText("<?xml version=\"1.0\" encoding=\"utf-8\"?>\n" +
-                "<RelativeLayout xmlns:android=\"http://schemas.android.com\n" +
-                "                                   /apk/res/android\"\n" +
+                "<RelativeLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\n" +
                 "    xmlns:tools=\"http://schemas.android.com/tools\"\n" +
                 "    android:layout_width=\"match_parent\"\n" +
                 "    android:layout_height=\"match_parent\"\n" +
@@ -233,13 +230,13 @@ public class A_card_14_Fragment extends Fragment {
         Drawable_Color.setTextIsSelectable(true);
         Drawable_Color.setText("<?xml version=\"1.0\" encoding=\"utf-8\"?>\n" +
                 "<shape\n" +
-                "    android:shape = \"rectangle\"\n" +
-                "    xmlns:android = \"http://schemas.android.com/apk/res/android\" >\n" +
-                "    <gradient\n" +
-                "        android:startColor = \"#2B7EAA\"\n" +
-                "        android:endColor = \"#A850A2\"\n" +
-                "        android:angle = \"70\"\n" +
-                "        android:type = \"linear\" />\n" +
+                "   android:shape = \"rectangle\"\n" +
+                "   xmlns:android = \"http://schemas.android.com/apk/res/android\">\n" +
+                "   <gradient\n" +
+                "       android:startColor = \"#2B7EAA\"\n" +
+                "       android:endColor = \"#A850A2\"\n" +
+                "       android:angle = \"70\"\n" +
+                "       android:type = \"linear\" />\n" +
                 "</shape>");
 
         Drawable_Border.setTextIsSelectable(true);

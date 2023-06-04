@@ -91,16 +91,17 @@ public class A_card_6_Fragment extends Fragment {
                 "            android:name=\".MainActivity\"\n" +
                 "            android:exported=\"true\">\n" +
                 "            <intent-filter>\n" +
-                "                <action android:name=\"android.intent.action.MAIN\" />\n" +
+                "             <action android:name=\"android.intent.action.MAIN\"/>\n" +
                 " \n" +
-                "                <category android:name=\"android.intent.category.LAUNCHER\" />\n" +
+                "             <category android:name=\"android.intent.category.LAUNCHER\"/>\n" +
                 "            </intent-filter>\n" +
                 "        </activity>\n" +
                 "    </application>\n" +
                 " \n" +
                 "</manifest>");
         webview_java.setTextIsSelectable(true);
-        webview_java.setText("package com.example.krishna.webviewdemo;\n" +
+        webview_java.setText("package com.example.androidalians.webviewdemo;\n" +
+                "\n" +
                 "import android.app.Activity;\n" +
                 "import android.os.Bundle;\n" +
                 "import android.view.View;\n" +
@@ -109,49 +110,46 @@ public class A_card_6_Fragment extends Fragment {
                 "import android.widget.Button;\n" +
                 "import android.widget.EditText;\n" +
                 "\n" +
-                "\n" +
                 "public class MainActivity extends Activity  {\n" +
+                "\n" +
                 "   Button button;\n" +
                 "   EditText editText;\n" +
                 "   WebView webview;\n" +
                 "\n" +
                 "   @Override\n" +
                 "   protected void onCreate(Bundle savedInstanceState) {\n" +
-                "      super.onCreate(savedInstanceState);\n" +
-                "      setContentView(R.layout.activity_main);\n" +
+                "    super.onCreate(savedInstanceState);\n" +
+                "    setContentView(R.layout.activity_main);\n" +
                 "\n" +
-                "      button = (Button)findViewById(R.id.button);\n" +
-                "      editText = (EditText)findViewById(R.id.editText);\n" +
-                "      webview = (WebView)findViewById(R.id.webView);\n" +
-                "      webview.setWebViewClient(new MyBrowser());\n" +
+                "    button = findViewById(R.id.button);\n" +
+                "    editText = findViewById(R.id.editText);\n" +
+                "    webview = findViewById(R.id.webView);\n" +
+                "    webview.setWebViewClient(new MyBrowser());\n" +
                 "\n" +
                 "    button.setOnClickListener(new View.OnClickListener() {\n" +
-                "      @Override\n" +
-                "      public void onClick(View v) {\n" +
-                "         String url = edittext.getText().toString();\n" +
+                "     @Override\n" +
+                "     public void onClick(View v) {\n" +
+                "       String url = edittext.getText().toString();\n" +
                 "\n" +
-                "         webview.getSettings().setLoadsImagesAutomatically(true);\n" +
-                "         webview.getSettings().setJavaScriptEnabled(true);\n" +
-                "         webview.setScrollBarStyle(View.SCROLLBARS_INSIDE\n" +
-                "                                       _OVERLAY);\n" +
-                "         webview.loadUrl(url);\n" +
+                "       webview.getSettings().setLoadsImagesAutomatically(true);\n" +
+                "       webview.getSettings().setJavaScriptEnabled(true);\n" +
+                "       webview.setScrollBarStyle(View.SCROLLBARS_INSIDE_OVERLAY);\n" +
+                "       webview.loadUrl(url);\n" +
                 "         }\n" +
                 "      });\n" +
                 "   }\n" +
                 "\n" +
-                "   private class MyBrowser extends WebViewClient {\n" +
-                "      @Override\n" +
-                "      public boolean shouldOverrideUrlLoading(WebView view,\n" +
-                "                                                String url) {\n" +
-                "         view.loadUrl(url);\n" +
-                "         return true;\n" +
+                "  private class MyBrowser extends WebViewClient {\n" +
+                "    @Override\n" +
+                "    public boolean shouldOverrideUrlLoading(WebView view,String url) {\n" +
+                "       view.loadUrl(url);\n" +
+                "       return true;\n" +
                 "      }\n" +
                 "   }\n" +
                 "}");
         webview_xml.setTextIsSelectable(true);
         webview_xml.setText("<?xml version=\"1.0\" encoding=\"utf-8\"?>\n" +
-                "<LinearLayout xmlns:android=\"http://schemas.android.com\n" +
-                "                               /apk/res/android\"\n" +
+                "<LinearLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\n" +
                 "    xmlns:tools=\"http://schemas.android.com/tools\"\n" +
                 "    android:layout_width=\"match_parent\"\n" +
                 "    android:layout_height=\"match_parent\"\n" +

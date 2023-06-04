@@ -76,10 +76,10 @@ public class A_card_1_Fragment extends Fragment {
                 "import android.os.Bundle;\n" +
                 "\n" +
                 "public class MainActivity extends AppCompatActivity {\n" +
-                "    @Override\n" +
-                "    protected void onCreate(Bundle savedInstanceState) {\n" +
-                "    super.onCreate(savedInstanceState);\n" +
-                "    setContentView(R.layout.activity_main);\n" +
+                "  @Override\n" +
+                "  protected void onCreate(Bundle savedInstanceState) {\n" +
+                "  super.onCreate(savedInstanceState);\n" +
+                "  setContentView(R.layout.activity_main);\n" +
                 "\n" +
                 "    }\n" +
                 "}");
@@ -87,8 +87,7 @@ public class A_card_1_Fragment extends Fragment {
 
 
         splash_xml.setText("<?xml version=\"1.0\" encoding=\"utf-8\"?>\n" +
-                "<RelativeLayout xmlns:android=\"http://schemas.android.com\"\n" +
-                "                                                 /apk/res/android\"\n" +
+                "<RelativeLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\n" +
                 "    xmlns:tools=\"http://schemas.android.com/tools\"\n" +
                 "    android:id=\"@+id/activity_main\"\n" +
                 "    android:layout_width=\"match_parent\"\n" +
@@ -100,6 +99,7 @@ public class A_card_1_Fragment extends Fragment {
                 "        android:text=\"Hello World by AndroidAlians!\"\n" +
                 "        android:textSize=\"20sp\"\n" +
                 "        android:layout_centerInParent=\"true\"/>\n" +
+                "\n" +
                 "</RelativeLayout>");
         splash_xml.setTextIsSelectable(true);
 
@@ -113,20 +113,21 @@ public class A_card_1_Fragment extends Fragment {
                 "\n" +
                 "public class SplashActivity extends Activity {\n" +
                 "\n" +
-                "    Handler handler;\n" +
-                "    @Override\n" +
-                "    protected void onCreate(Bundle savedInstanceState) {\n" +
-                "        super.onCreate(savedInstanceState);\n" +
-                "        setContentView(R.layout.splashfile);\n" +
+                "  Handler handler;\n" +
+                "  \n" +
+                "  @Override\n" +
+                "  protected void onCreate(Bundle savedInstanceState) {\n" +
+                "      super.onCreate(savedInstanceState);\n" +
+                "      setContentView(R.layout.splashfile);\n" +
                 "\n" +
                 "        handler=new Handler();\n" +
                 "        handler.postDelayed(new Runnable() {\n" +
                 "          @Override\n" +
                 "          public void run() {\n" +
                 "           Intent intent=new Intent(SplashActivity.this,\n" +
-                "                                               MainActivity.class);\n" +
+                "                                                MainActivity.class);\n" +
                 "           startActivity(intent);\n" +
-                "            finish();\n" +
+                "           finish();\n" +
                 "          }\n" +
                 "     },3000);\n" +
                 "   }\n" +
@@ -136,8 +137,7 @@ public class A_card_1_Fragment extends Fragment {
 
 
         splash_main_xml.setText("<?xml version=\"1.0\" encoding=\"utf-8\"?>\n" +
-                "<RelativeLayout xmlns:android=\"http://schemas.android.com\"\n" +
-                "                                         /apk/res/android\"\n" +
+                "<RelativeLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\n" +
                 "android:layout_width=\"match_parent\"\n" +
                 "android:layout_height=\"match_parent\"\n" +
                 "android:gravity=\"center\"\n" +

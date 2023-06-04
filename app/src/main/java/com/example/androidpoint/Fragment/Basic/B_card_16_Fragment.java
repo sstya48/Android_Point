@@ -18,15 +18,16 @@ import com.example.androidpoint.DemoFragments.Popup_Menu_Fragment;
 import com.example.androidpoint.R;
 
 public class B_card_16_Fragment extends Fragment {
-    TextView popup_java,popup_xml,popup_xml_menu;
-    AppCompatImageView popup_demo,popUpMenu_Code_arrow;
+    TextView popup_java, popup_xml, popup_xml_menu;
+    AppCompatImageView popup_demo, popUpMenu_Code_arrow;
 
     CardView popup_menu_yt;
+
     @SuppressLint({"SetTextI18n", "MissingInflatedId"})
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view= inflater.inflate(R.layout.fragment_b_card_16_, container, false);
+        View view = inflater.inflate(R.layout.fragment_b_card_16_, container, false);
 
         popup_java = view.findViewById(R.id.popup_java);
         popup_java.setTextIsSelectable(true);
@@ -68,8 +69,6 @@ public class B_card_16_Fragment extends Fragment {
             }
         });
 
-
-
         popup_java.setText("package com.example.popup;\n" +
                 "\n" +
                 "import android.os.Bundle;\n" +
@@ -81,6 +80,7 @@ public class B_card_16_Fragment extends Fragment {
                 "import androidx.appcompat.widget.PopupMenu;\n" +
                 "\n" +
                 "public class MainActivity extends AppCompatActivity {\n" +
+                "\n" +
                 "    Button button;\n" +
                 "\n" +
                 "    @Override\n" +
@@ -96,15 +96,13 @@ public class B_card_16_Fragment extends Fragment {
                 "        PopupMenu popup = new PopupMenu(MainActivity.this, button);\n" +
                 "        popup.getMenuInflater().inflate(R.menu.menu, popup.getMenu());\n" +
                 "\n" +
-                "        popup.setOnMenuItemClickListener(new PopupMenu.\n" +
-                "                                       OnMenuItemClickListener() {\n" +
+                "        popup.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {\n" +
                 "        public boolean onMenuItemClick(MenuItem item) {\n" +
-                "          Toast.makeText(MainActivity.this, \"You Clicked : \" \n" +
-                "                       + item.getTitle(), Toast.LENGTH_SHORT).show();\n" +
-                "                        return true;\n" +
-                "                    }\n" +
-                "                });\n" +
-                "                popup.show();\n" +
+                "          Toast.makeText(MainActivity.this, \"You Clicked : + item.getTitle(), Toast.LENGTH_SHORT).show();\n" +
+                "                 return true;\n" +
+                "                }\n" +
+                "               });\n" +
+                "             popup.show();\n" +
                 "            }\n" +
                 "        });\n" +
                 "    }\n" +
@@ -129,8 +127,7 @@ public class B_card_16_Fragment extends Fragment {
                 "</LinearLayout>");
 
         popup_xml_menu.setText("<?xml version=\"1.0\" encoding=\"utf-8\"?>\n" +
-                "<menu xmlns:android=\"http://schemas.android.com\n" +
-                "                                   /apk/res/android\">\n" +
+                "<menu xmlns:android=\"http://schemas.android.com/apk/res/android\">\n" +
                 "    <item\n" +
                 "        android:id=\"@+id/upload\"\n" +
                 "        android:title=\"Upload\"/>\n" +
@@ -144,8 +141,9 @@ public class B_card_16_Fragment extends Fragment {
 
         return view;
     }
+
     private void gotoUrl(String s) {
         Uri uri = Uri.parse(s);
-        startActivity(new Intent(Intent.ACTION_VIEW,uri));
+        startActivity(new Intent(Intent.ACTION_VIEW, uri));
     }
 }

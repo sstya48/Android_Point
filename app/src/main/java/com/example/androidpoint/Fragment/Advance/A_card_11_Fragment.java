@@ -181,9 +181,9 @@ public class A_card_11_Fragment extends Fragment {
                 "</RelativeLayout>");
         bar_xml.setTextIsSelectable(true);
 
-        bar_gridal_permission.setText("dependencies { +\n" +
-                "                \" implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0' \n" +
-                "                \"}");
+        bar_gridal_permission.setText("dependencies {\n" +
+                "     \" implementation'com.github.PhilJay:MPAndroidChart:v3.1.0'\n" +
+                "     \"}");
         bar_gridal_permission.setTextIsSelectable(true);
 
         return view;

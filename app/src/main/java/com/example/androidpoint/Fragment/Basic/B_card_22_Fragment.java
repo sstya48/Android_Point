@@ -19,9 +19,7 @@ public class B_card_22_Fragment extends Fragment {
     AppCompatImageView song_arrow, song_demo;
 
     //   CardView vibrate_yt;
-
     TextView song_xml, song_java;
-
     @SuppressLint({"MissingInflatedId", "SetTextI18n"})
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -33,10 +31,6 @@ public class B_card_22_Fragment extends Fragment {
         song_java.setTextIsSelectable(true);
         song_xml= view.findViewById(R.id.song_xml);
         song_xml.setTextIsSelectable(true);
-      /*  manifest_xml= view.findViewById(R.id.manifest_xml);
-        manifest_xml.setTextIsSelectable(true);
-        model_java= view.findViewById(R.id.model_java);
-        model_java.setTextIsSelectable(true);*/
 
         // vibrate_yt= view.findViewById(R.id.vibrate_yt);
 
@@ -85,7 +79,7 @@ public class B_card_22_Fragment extends Fragment {
                 "public class MainActivity extends Activity {\n" +
                 " \n" +
                 "    MediaPlayer button_sound;\n" +
-                "     Button Button1,Button2,Button3,Button4;\n" +
+                "    Button Button1,Button2,Button3,Button4;\n" +
                 " \n" +
                 "    @Override\n" +
                 "    protected void onCreate(Bundle savedInstanceState) {\n" +
@@ -100,7 +94,6 @@ public class B_card_22_Fragment extends Fragment {
                 " \n" +
                 "            @Override\n" +
                 "            public void onClick(View v) {\n" +
-                "                // TODO Auto-generated method stub\n" +
                 "                button_sound = MediaPlayer.create(MainActivity.this,\n" +
                 "                        R.raw.but_click);\n" +
                 "                button_sound.start();\n" +
@@ -110,7 +103,6 @@ public class B_card_22_Fragment extends Fragment {
                 " \n" +
                 "            @Override\n" +
                 "            public void onClick(View v) {\n" +
-                "                // TODO Auto-generated method stub\n" +
                 "                button_sound = MediaPlayer.create(MainActivity.this,\n" +
                 "                        R.raw.sound1);\n" +
                 "                button_sound.start();\n" +
@@ -120,7 +112,6 @@ public class B_card_22_Fragment extends Fragment {
                 " \n" +
                 "            @Override\n" +
                 "            public void onClick(View v) {\n" +
-                "                // TODO Auto-generated method stub\n" +
                 "                button_sound = MediaPlayer.create(MainActivity.this,\n" +
                 "                        R.raw.sound2);\n" +
                 "                button_sound.start();\n" +

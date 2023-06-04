@@ -61,7 +61,7 @@ public class B_card_13_Fragment extends Fragment {
             }
         });
 
-        explicit_java.setText("package example.com.explicitintent;\n" +
+        explicit_java.setText("package example.androidalians.explicitintent;\n" +
                 "\n" +
                 "import androidx.appcompat.app.AppCompatActivity;\n" +
                 "import android.content.Intent;\n" +
@@ -81,8 +81,7 @@ public class B_card_13_Fragment extends Fragment {
                 "        btn.setOnClickListener(new View.OnClickListener() {\n" +
                 "         @Override\n" +
                 "         public void onClick(View view) {\n" +
-                "           Intent i = new Intent(getApplicationContext(), \n" +
-                "                               SecondActivity.class);\n" +
+                "           Intent i = new Intent(getApplicationContext(),SecondActivity.class);\n" +
                 "           startActivity(i);\n" +
                 "            }\n" +
                 "        });\n" +
@@ -90,8 +89,7 @@ public class B_card_13_Fragment extends Fragment {
                 "}");
 
         explicit_xml.setText("<?xml version=\"1.0\" encoding=\"utf-8\"?>\n" +
-                "<LinearLayout xmlns:android=\"http://schemas.android.com\"\n" +
-                "                                       /apk/res/android\"\n" +
+                "<LinearLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\n" +
                 "    xmlns:tools=\"http://schemas.android.com/tools\"\n" +
                 "    android:layout_width=\"match_parent\"\n" +
                 "    android:layout_height=\"match_parent\"\n" +
@@ -114,7 +112,7 @@ public class B_card_13_Fragment extends Fragment {
                 "</LinearLayout>");
 
 
-        explicit2_java.setText("package example.com.explicitintent;\n" +
+        explicit2_java.setText("package example.androidalians.explicitintent;\n" +
                 "\n" +
                 "import androidx.appcompat.app.AppCompatActivity;\n" +
                 "import android.content.Intent;\n" +
@@ -143,8 +141,7 @@ public class B_card_13_Fragment extends Fragment {
                 "}");
 
         explicit2_xml.setText("<?xml version=\"1.0\" encoding=\"utf-8\"?>\n" +
-                "<LinearLayout xmlns:android=\"http://schemas.android.com\"\n" +
-                "                                       /apk/res/android\"\n" +
+                "<LinearLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\n" +
                 "    xmlns:tools=\"http://schemas.android.com/tools\"\n" +
                 "    android:layout_width=\"match_parent\"\n" +
                 "    android:layout_height=\"match_parent\"\n" +

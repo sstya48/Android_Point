@@ -56,9 +56,8 @@ public class A_card_23_Fragment extends Fragment {
 
 
         calculator_java.setTextIsSelectable(true);
-        calculator_java.setText("\n" +
+        calculator_java.setText("package example.androidalians.calender;\n" +
                 "import androidx.appcompat.app.AppCompatActivity;\n" +
-                "\n" +
                 "import android.os.Bundle;\n" +
                 "import android.util.TypedValue;\n" +
                 "import android.view.View;\n" +

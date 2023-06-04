@@ -64,7 +64,7 @@ public class A_card_13_Fragment extends Fragment {
             }
         });
 
-        pie_java.setText("\tpackage com.androidalians.piechart;\n" +
+        pie_java.setText("package com.androidalians.piechart;\n" +
                 "import androidx.appcompat.app.AppCompatActivity;\n" +
                 "import android.graphics.Color;\n" +
                 "import android.os.Bundle;\n" +
@@ -78,15 +78,17 @@ public class A_card_13_Fragment extends Fragment {
                 "import java.util.ArrayList;\n" +
                 "\n" +
                 "  public class MainActivity extends AppCompatActivity {\n" +
+                " \n" +
                 "   private PieChart pieChart;\n" +
+                " \n" +
                 "   @Override\n" +
-                "    protected void onCreate(Bundle savedInstanceState) {\n" +
-                "        super.onCreate(savedInstanceState);\n" +
-                "        setContentView(R.layout.activity_main);\n" +
+                "   protected void onCreate(Bundle savedInstanceState) {\n" +
+                "      super.onCreate(savedInstanceState);\n" +
+                "      setContentView(R.layout.activity_main);\n" +
                 "\n" +
-                "        pieChart = findViewById(R.id.activity_main_piechart);\n" +
-                "        setupPieChart();\n" +
-                "        loadPieChartData();\n" +
+                "      pieChart = findViewById(R.id.activity_main_piechart);\n" +
+                "      setupPieChart();\n" +
+                "      loadPieChartData();\n" +
                 "     }\n" +
                 "       private void setupPieChart() {\n" +
                 "          pieChart.setDrawHoleEnabled(true);\n" +
@@ -113,8 +115,8 @@ public class A_card_13_Fragment extends Fragment {
                 "          entries.add(new PieEntry(0.25f, \"Flutter\"));\n" +
                 "          entries.add(new PieEntry(0.3f, \"Kotlin\"));\n" +
                 "          ArrayList<Integer> colors = new ArrayList<>();\n" +
-                "            for (int color: ColorTemplate.MATERIAL_COLORS) {\n" +
-                "            colors.add(color);\n" +
+                "           for (int color: ColorTemplate.MATERIAL_COLORS) {\n" +
+                "           colors.add(color);\n" +
                 "         }\n" +
                 "        for (int color: ColorTemplate.VORDIPLOM_COLORS) {\n" +
                 "        colors.add(color);\n" +
@@ -153,8 +155,8 @@ public class A_card_13_Fragment extends Fragment {
                 "</androidx.constraintlayout.widget.ConstraintLayout>");
         pie_xml.setTextIsSelectable(true);
 
-        pie_gridal_permission.setText("\tdependencies {\n" +
-                "implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'\n" +
+        pie_gridal_permission.setText("dependencies {\n" +
+                "   implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'\n" +
                 "}");
         pie_gridal_permission.setTextIsSelectable(true);
         return view;

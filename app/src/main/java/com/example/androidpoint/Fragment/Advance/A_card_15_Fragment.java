@@ -13,15 +13,10 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.androidpoint.R;
-
-
 public class A_card_15_Fragment extends Fragment {
-
     TextView phone_java, phone_xml, phone_manifest;
-
     AppCompatImageView Btn_arrow;
     ImageView phone_output;
-
     @SuppressLint({"MissingInflatedId", "SetTextI18n"})
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -80,7 +75,6 @@ public class A_card_15_Fragment extends Fragment {
                 "    super.onCreate(savedInstanceState);  \n" +
                 "    setContentView(R.layout.activity_main);  \n" +
                 "  \n" +
-                "        //Getting the edittext and button instance  \n" +
                 "        edittext=(EditText)findViewById(R.id.editText);  \n" +
                 "        button=(Button)findViewById(R.id.button);  \n" +
                 "  \n" +

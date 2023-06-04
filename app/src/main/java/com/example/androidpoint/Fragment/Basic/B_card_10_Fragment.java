@@ -21,7 +21,6 @@ public class B_card_10_Fragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
         View view= inflater.inflate(R.layout.fragment_b_card_10_, container, false);
 
         scroll_java=view.findViewById(R.id.scroll_java);
@@ -63,17 +62,16 @@ public class B_card_10_Fragment extends Fragment {
                 "  \n" +
                 "public class MainActivity extends AppCompatActivity {  \n" +
                 "  \n" +
-                "    @Override  \n" +
-                "    protected void onCreate(Bundle savedInstanceState) {  \n" +
-                "        super.onCreate(savedInstanceState);  \n" +
-                "        setContentView(R.layout.activity_main);  \n" +
+                "   @Override  \n" +
+                "   protected void onCreate(Bundle savedInstanceState) {  \n" +
+                "      super.onCreate(savedInstanceState);  \n" +
+                "      setContentView(R.layout.activity_main);  \n" +
                 "    }  \n" +
                 "}  ");
 
 
         scroll_xml.setText("<?xml version=\"1.0\" encoding=\"utf-8\"?>\n" +
-                "<LinearLayout xmlns:android=\"http://schemas.android.com\"\n" +
-                "                                   /apk/res/android\"\n" +
+                "<LinearLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\n" +
                 "    xmlns:tools=\"http://schemas.android.com/tools\"\n" +
                 "    android:layout_width=\"match_parent\"\n" +
                 "    android:layout_height=\"match_parent\"\n" +
@@ -266,12 +264,6 @@ public class B_card_10_Fragment extends Fragment {
                 "\n" +
                 "</LinearLayout>");
 
-
-
-
-
-
         return view;
-
     }
 }

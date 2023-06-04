@@ -14,7 +14,6 @@ import android.widget.TextView;
 import com.example.androidpoint.DemoFragments.CheckBox_Fragment;
 import com.example.androidpoint.R;
 public class B_card_5_Fragment extends Fragment {
-
     TextView checkbox_java,checkbox_xml;
     AppCompatImageView check_code_arrow,checkbox_demo;
     @SuppressLint({"MissingInflatedId", "SetTextI18n"})
@@ -22,7 +21,6 @@ public class B_card_5_Fragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view= inflater.inflate(R.layout.fragment_b_card_5_, container, false);
-
 
         checkbox_java=view.findViewById(R.id.checkbox_java);
         checkbox_java.setTextIsSelectable(true);
@@ -142,8 +140,7 @@ public class B_card_5_Fragment extends Fragment {
                "                    totalamount+=120;  \n" +
                "                }  \n" +
                "                result.append(\"\\nTotal: \"+totalamount+\"Rs\");  \n" +
-               "                Toast.makeText(getApplicationContext(),result.toString(),\n" +
-               "                                                Toast.LENGTH_LONG).show();\n" +
+               "                Toast.makeText(getApplicationContext(),result.toString(),Toast.LENGTH_LONG).show();\n" +
                "            }  \n" +
                "        });  \n" +
                "    }  \n" +

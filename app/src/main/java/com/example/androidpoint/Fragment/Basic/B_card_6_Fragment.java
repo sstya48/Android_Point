@@ -16,16 +16,12 @@ import com.example.androidpoint.R;
 
 
 public class B_card_6_Fragment extends Fragment {
-
     AppCompatImageView radio_demo,Radio_Code_arrow;
-
     TextView radio_xml,radio_java,radio_string;
-
     @SuppressLint({"MissingInflatedId", "SetTextI18n"})
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
         View view= inflater.inflate(R.layout.fragment_b_card_6_, container, false);
 
         radio_xml=view.findViewById(R.id.radio_xml);
@@ -34,8 +30,6 @@ public class B_card_6_Fragment extends Fragment {
         radio_java.setTextIsSelectable(true);
         radio_string=view.findViewById(R.id.radio_string);
         radio_string.setTextIsSelectable(true);
-
-
         radio_demo=view.findViewById(R.id.radio_demo);
         Radio_Code_arrow=view.findViewById(R.id.Radio_Code_arrow);
 
@@ -48,7 +42,6 @@ public class B_card_6_Fragment extends Fragment {
                         .commit();
             }
         });
-
         radio_demo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -139,18 +132,12 @@ public class B_card_6_Fragment extends Fragment {
                 "       if (answerRadioButtonId != -1) {\n" +
                 "          RadioButton answer = findViewById(answerRadioButtonId);\n" +
                 "          if (answer.getText().equals(getResources().getString(R.string.answer3))) {\n" +
-                "            Toast.makeText(getApplicationContext(), getResources()\n" +
-                "                               .getString(R.string.correct_answer), \n" +
-                "                                          Toast.LENGTH_SHORT).show();\n" +
+                "            Toast.makeText(getApplicationContext(), getResources().getString(R.string.correct_answer),Toast.LENGTH_SHORT).show();\n" +
                 "        } else {\n" +
-                "             Toast.makeText(getApplicationContext(), getResources()\n" +
-                "                               .getString(R.string.incorrect_answer), \n" +
-                "                                           Toast.LENGTH_SHORT).show();\n" +
+                "             Toast.makeText(getApplicationContext(), getResources().getString(R.string.incorrect_answer),Toast.LENGTH_SHORT).show();\n" +
                 "                    }\n" +
                 "        } else {\n" +
-                "              Toast.makeText(getApplicationContext(), getResources()\n" +
-                "                               .getString(R.string.missing_answer),\n" +
-                "                                           Toast.LENGTH_SHORT).show();\n" +
+                "              Toast.makeText(getApplicationContext(), getResources().getString(R.string.missing_answer),Toast.LENGTH_SHORT).show();\n" +
                 "                }\n" +
                 "            }\n" +
                 "        });\n" +

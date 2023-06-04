@@ -22,10 +22,8 @@ import com.example.androidpoint.R;
 public class B_card_19_Fragment extends Fragment {
 
     TextView countdown_timer_java,countdown_timer_xml;
-
    // CardView speech_to_yt;
     AppCompatImageView Countdown_Timer_code_arrow, countdown_timer_demo;
-
     @SuppressLint("SetTextI18n")
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -71,7 +69,7 @@ public class B_card_19_Fragment extends Fragment {
             }
         });
 
-        countdown_timer_java.setText("package com.example.andy.myapplication;\n" +
+        countdown_timer_java.setText("package example.androidalians.myapplication;\n" +
                 "import android.annotation.TargetApi;\n" +
                 "import android.os.Build;\n" +
                 "import android.os.Bundle;\n" +
@@ -92,6 +90,7 @@ public class B_card_19_Fragment extends Fragment {
                 "   protected void onCreate(Bundle savedInstanceState) {\n" +
                 "      super.onCreate(savedInstanceState);\n" +
                 "      setContentView(R.layout.activity_main);\n" +
+                "\n" +
                 "      final TextView counttime=findViewById(R.id.counttime);\n" +
                 "      new CountDownTimer(30000,1000) {\n" +
                 "         @Override\n" +

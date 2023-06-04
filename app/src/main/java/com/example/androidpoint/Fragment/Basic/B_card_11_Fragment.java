@@ -18,36 +18,34 @@ import com.example.androidpoint.DemoFragments.SearchViewFragment;
 import com.example.androidpoint.R;
 
 public class B_card_11_Fragment extends Fragment {
-    AppCompatImageView serchview_demo,search_code_arrow;
-    TextView serchview_java,serchview_xml;
-
+    AppCompatImageView serchview_demo, search_code_arrow;
+    TextView serchview_java, serchview_xml;
     CardView serchview_yt;
+
     @SuppressLint({"MissingInflatedId", "SetTextI18n"})
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        View view= inflater.inflate(R.layout.fragment_b_card_11_, container, false);
+        View view = inflater.inflate(R.layout.fragment_b_card_11_, container, false);
 
-        serchview_java= view.findViewById(R.id.serchview_java);
+        serchview_java = view.findViewById(R.id.serchview_java);
         serchview_java.setTextIsSelectable(true);
 
-        serchview_xml= view.findViewById(R.id.serchview_xml);
+        serchview_xml = view.findViewById(R.id.serchview_xml);
         serchview_xml.setTextIsSelectable(true);
 
-        serchview_demo= view.findViewById(R.id.serchview_demo);
+        serchview_demo = view.findViewById(R.id.serchview_demo);
 
-        serchview_yt=view.findViewById(R.id.serchview_yt);
-        search_code_arrow=view.findViewById(R.id.search_code_arrow);
+        serchview_yt = view.findViewById(R.id.serchview_yt);
+        search_code_arrow = view.findViewById(R.id.search_code_arrow);
 
         search_code_arrow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Basic basic= new Basic();
+                Basic basic = new Basic();
                 getActivity().getSupportFragmentManager().beginTransaction()
                         .replace(R.id.frame_container, basic, "Search Code Back")
                         .commit();
-
             }
         });
 
@@ -61,7 +59,7 @@ public class B_card_11_Fragment extends Fragment {
         serchview_demo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                SearchViewFragment searchViewFragment= new SearchViewFragment();
+                SearchViewFragment searchViewFragment = new SearchViewFragment();
                 getActivity().getSupportFragmentManager().beginTransaction()
                         .replace(R.id.frame_container, searchViewFragment, "searchView DEMO")
                         .commit();
@@ -69,8 +67,7 @@ public class B_card_11_Fragment extends Fragment {
         });
 
         serchview_xml.setText("<?xml version=\"1.0\" encoding=\"utf-8\"?>\n" +
-                "<RelativeLayout xmlns:android=\"http://schemas.android.com\"\n" +
-                "                                       /apk/res/android\"\n" +
+                "<RelativeLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\n" +
                 "    xmlns:app=\"http://schemas.android.com/apk/res-auto\"\n" +
                 "    xmlns:tools=\"http://schemas.android.com/tools\"\n" +
                 "    android:layout_width=\"match_parent\"\n" +
@@ -144,36 +141,33 @@ public class B_card_11_Fragment extends Fragment {
                 "        list.add(\"Rhinoceros\");\n" +
                 "        list.add(\"Hippopotamus\");\n" +
                 "\n" +
-                "        adapter = new ArrayAdapter<String>(this, android.R.layout\n" +
-                "                                       .simple_list_item_1,list);\n" +
+                "        adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1,list);\n" +
                 "        listView.setAdapter(adapter);\n" +
                 "\n" +
-                "        searchView.setOnQueryTextListener(new SearchView \n" +
-                "                                           .OnQueryTextListener() {\n" +
-                "            @Override\n" +
-                "            public boolean onQueryTextSubmit(String query) {\n" +
+                "        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {\n" +
+                "         @Override\n" +
+                "         public boolean onQueryTextSubmit(String query) {\n" +
                 "\n" +
-                "                if(list.contains(query)){\n" +
-                "                    adapter.getFilter().filter(query);\n" +
-                "                }else{\n" +
-                "                    Toast.makeText(MainActivity.this, \"No Match found\", \n" +
-                "                                           Toast.LENGTH_LONG).show();\n" +
-                "                }\n" +
-                "                return false;\n" +
-                "            }\n" +
-                "            @Override\n" +
-                "            public boolean onQueryTextChange(String newText) {\n" +
-                "                //    adapter.getFilter().filter(newText);\n" +
-                "                return false;\n" +
+                "          if(list.contains(query)){\n" +
+                "             adapter.getFilter().filter(query);\n" +
+                "              }else{\n" +
+                "            Toast.makeText(MainActivity.this, \"No Match found\",Toast.LENGTH_LONG).show();\n" +
+                "             }\n" +
+                "              return false;\n" +
+                "         }\n" +
+                "         @Override\n" +
+                "         public boolean onQueryTextChange(String newText) {\n" +
+                "             return false;\n" +
                 "            }\n" +
                 "        });\n" +
                 "    }\n" +
                 "}");
 
-        return  view;
+        return view;
     }
-private void gotoUrl(String s) {
-    Uri uri = Uri.parse(s);
-    startActivity(new Intent(Intent.ACTION_VIEW,uri));
-}
+
+    private void gotoUrl(String s) {
+        Uri uri = Uri.parse(s);
+        startActivity(new Intent(Intent.ACTION_VIEW, uri));
+    }
 }

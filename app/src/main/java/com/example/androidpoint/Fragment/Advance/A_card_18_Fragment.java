@@ -69,16 +69,15 @@ public class A_card_18_Fragment extends Fragment {
                 "import android.view.View;\n" +
                 "import android.widget.ListView;\n" +
                 "import android.widget.TextView;\n" +
-                "\n" +
                 "import com.google.android.material.floatingactionbutton.FloatingActionButton;\n" +
-                "\n" +
                 "import java.util.ArrayList;\n" +
+                "\n" +
                 "public class MainActivity extends AppCompatActivity {\n" +
+                "\n" +
                 "    FloatingActionButton fb;\n" +
                 "    DatabaseHelper db;\n" +
                 "    ListView lv;\n" +
                 "    ArrayList<Studen> dataModels;\n" +
-                "\n" +
                 "    TextView name,city,phone;\n" +
                 "    private A_Adapter adapter;\n" +
                 "\n" +
@@ -122,6 +121,7 @@ public class A_card_18_Fragment extends Fragment {
                 "import android.widget.Button;\n" +
                 "import android.widget.EditText;\n" +
                 "import android.widget.Toast;\n" +
+                "\n" +
                 "public class item extends AppCompatActivity {\n" +
                 "    EditText name, city, phone;\n" +
                 "    Button insert;\n" +
@@ -131,33 +131,32 @@ public class A_card_18_Fragment extends Fragment {
                 "        super.onCreate(savedInstanceState);\n" +
                 "        setContentView(R.layout.activity_item);\n" +
                 "\n" +
-                "                openHelper = new DatabaseHelper(this);\n" +
+                "          openHelper = new DatabaseHelper(this);\n" +
                 "\n" +
-                "                name = findViewById(R.id.name);\n" +
-                "                city = findViewById(R.id.city);\n" +
-                "                phone = findViewById(R.id.mobile);\n" +
-                "                insert = findViewById(R.id.btn1);\n" +
+                "          name = findViewById(R.id.name);\n" +
+                "          city = findViewById(R.id.city);\n" +
+                "          phone = findViewById(R.id.mobile);\n" +
+                "          insert = findViewById(R.id.btn1);\n" +
                 "\n" +
-                "                insert.setOnClickListener(new View.OnClickListener() {\n" +
-                "                    @Override\n" +
-                "                    public void onClick(View view) {\n" +
+                "         insert.setOnClickListener(new View.OnClickListener() {\n" +
+                "          @Override\n" +
+                "          public void onClick(View view) {\n" +
                 "\n" +
-                "                        String uname = name.getText().toString();\n" +
-                "                        String ucity = city.getText().toString();\n" +
-                "                        String uphone = phone.getText().toString();\n" +
+                "           String uname = name.getText().toString();\n" +
+                "           String ucity = city.getText().toString();\n" +
+                "           String uphone = phone.getText().toString();\n" +
                 "\n" +
-                "                        openHelper.insertData(uname, ucity, uphone);\n" +
-                "                        Intent i = new Intent(item.this, MainActivity.class);\n" +
-                "                        startActivity(i);\n" +
-                "                        Toast.makeText(item.this, \"Data Added\",\n" +
-                "                                Toast.LENGTH_SHORT).show();\n" +
-                "                    }\n" +
-                "                });\n" +
+                "           openHelper.insertData(uname, ucity, uphone);\n" +
+                "           Intent i = new Intent(item.this, MainActivity.class);\n" +
+                "           startActivity(i);\n" +
+                "           Toast.makeText(item.this, \"Data Added\",Toast.LENGTH_SHORT).show();\n" +
+                "          }\n" +
+                "        });\n" +
                 "    }\n" +
                 "\n" +
                 "}");
         Update_Java.setTextIsSelectable(true);
-        Update_Java.setText("package com.example.database;\n" +
+        Update_Java.setText("package com.androidalians.database;\n" +
                 "\n" +
                 "import androidx.appcompat.app.AppCompatActivity;\n" +
                 "import android.annotation.SuppressLint;\n" +
@@ -197,31 +196,31 @@ public class A_card_18_Fragment extends Fragment {
                 "            String nameIntent = i.getStringExtra(\"name\");\n" +
                 "            name.setText(nameIntent);\n" +
                 "\n" +
-                "            String cityIntent = i.getStringExtra(\"city\");\n" +
-                "            city.setText(cityIntent);\n" +
+                "           String cityIntent = i.getStringExtra(\"city\");\n" +
+                "           city.setText(cityIntent);\n" +
                 "\n" +
-                "            String phoneIntent = i.getStringExtra(\"phone\");\n" +
-                "            phone.setText(phoneIntent);\n" +
+                "           String phoneIntent = i.getStringExtra(\"phone\");\n" +
+                "           phone.setText(phoneIntent);\n" +
                 "\n" +
-                "            update.setOnClickListener(new View.OnClickListener() {\n" +
-                "              @Override\n" +
-                "              public void onClick(View view) {\n" +
+                "           update.setOnClickListener(new View.OnClickListener() {\n" +
+                "            @Override\n" +
+                "            public void onClick(View view) {\n" +
                 "\n" +
-                "                  Intent i = getIntent();\n" +
-                "                  int id = i.getIntExtra(\"id\", 0);\n" +
-                "                  String names = name.getText().toString();\n" +
-                "                  String citys = city.getText().toString();\n" +
-                "                  String phones = phone.getText().toString();\n" +
+                "              Intent i = getIntent();\n" +
+                "              int id = i.getIntExtra(\"id\", 0);\n" +
+                "              String names = name.getText().toString();\n" +
+                "              String citys = city.getText().toString();\n" +
+                "              String phones = phone.getText().toString();\n" +
                 "\n" +
-                "                  openHelper.update(String.valueOf(id), names, citys, phones);\n" +
+                "              openHelper.update(String.valueOf(id), names, citys, phones);\n" +
                 "\n" +
-                "                  Intent intent = new Intent(update.this, MainActivity.class);\n" +
-                "                   startActivity(intent);\n" +
+                "              Intent intent = new Intent(update.this, MainActivity.class);\n" +
+                "              startActivity(intent);\n" +
                 "\n" +
-                "                        Toast.makeText(update.this, \"Data Update\", Toast.LENGTH_SHORT).show();\n" +
-                "                    }\n" +
-                "                });\n" +
-                "        }\n" +
+                "              Toast.makeText(update.this,\"Data Update\",Toast.LENGTH_SHORT).show();\n" +
+                "            }\n" +
+                "        });\n" +
+                "   }\n" +
                 "}");
         DatabaseHelper_java.setTextIsSelectable(true);
         DatabaseHelper_java.setText("package com.example.database;\n" +

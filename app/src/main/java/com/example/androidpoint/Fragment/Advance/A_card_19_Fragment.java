@@ -58,7 +58,6 @@ public class A_card_19_Fragment extends Fragment {
                 "\n" +
                 "import androidx.annotation.Nullable;\n" +
                 "import androidx.appcompat.app.AppCompatActivity;\n" +
-                "\n" +
                 "import android.content.Intent;\n" +
                 "import android.net.Uri;\n" +
                 "import android.os.Bundle;\n" +
@@ -68,7 +67,9 @@ public class A_card_19_Fragment extends Fragment {
                 "import android.widget.ImageButton;\n" +
                 "import android.widget.ImageView;\n" +
                 "public class MainActivity extends AppCompatActivity {\n" +
+                "\n" +
                 "    Button Button1, Button2;\n" +
+                "\n" +
                 "    @Override\n" +
                 "    protected void onCreate(Bundle savedInstanceState) {\n" +
                 "        super.onCreate(savedInstanceState);\n" +
@@ -93,10 +94,9 @@ public class A_card_19_Fragment extends Fragment {
                 "    Button2.setOnClickListener(new View.OnClickListener() {\n" +
                 "        @Override\n" +
                 "        public void onClick(View view) {\n" +
-                "            Intent iGallery = new Intent(Intent.ACTION_PICK,MediaStore.Images.Media.EXTERNAL_CONTENT_URI);\n" +
+                "          Intent iGallery = new Intent(Intent.ACTION_PICK,MediaStore.Images.Media.EXTERNAL_CONTENT_URI);\n" +
                 "\n" +
-                "         //   startActivityForResult(iGallery, GALLERY_REQ_CODE);\n" +
-                "            startActivityForResult(iGallery, 3);\n" +
+                "          startActivityForResult(iGallery, 3);\n" +
                 "\n" +
                 "        }\n" +
                 "     });\n" +

@@ -51,10 +51,8 @@ public class B_card_3_Fragment extends Fragment {
                 getActivity().getSupportFragmentManager().beginTransaction()
                         .replace(R.id.frame_container, hideTitleDemoFragment, "Hide Title DEMO")
                         .commit();
-
             }
         });
-
 
         hide_title_java.setText("package example.androidalians.hidetitlebar;  \n" +
                 "  \n" +
@@ -65,18 +63,17 @@ public class B_card_3_Fragment extends Fragment {
                 "  \n" +
                 "public class MainActivity extends AppCompatActivity {  \n" +
                 "  \n" +
-                "    @Override  \n" +
-                "    protected void onCreate(Bundle savedInstanceState) {  \n" +
-                "        super.onCreate(savedInstanceState);  \n" +
+                "   @Override  \n" +
+                "   protected void onCreate(Bundle savedInstanceState) {  \n" +
+                "      super.onCreate(savedInstanceState);  \n" +
                 "  \n" +
-                "        requestWindowFeature(Window.FEATURE_NO_TITLE);    \n" +
+                "      requestWindowFeature(Window.FEATURE_NO_TITLE);    \n" +
                 "  \n" +
-                "        getSupportActionBar().hide();  \n" +
+                "      getSupportActionBar().hide();  \n" +
                 "  \n" +
-                "        this.getWindow().setFlags(WindowManager.LayoutParams. \n" +
-                "                                              FLAG_FULLSCREEN,  \n" +
-                "        WindowManager.LayoutParams.FLAG_FULLSCREEN);  \n" +
-                "        setContentView(R.layout.activity_main);  \n" +
+                "      this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,  \n" +
+                "      WindowManager.LayoutParams.FLAG_FULLSCREEN);  \n" +
+                "      setContentView(R.layout.activity_main);  \n" +
                 "  \n" +
                 "    }  \n" +
                 "}  ");
@@ -99,12 +96,6 @@ public class B_card_3_Fragment extends Fragment {
                 "        app:layout_constraintTop_toTopOf=\"parent\" />  \n" +
                 "  \n" +
                 "</android.support.constraint.ConstraintLayout>  \n");
-
-
         return view;
-
-
-
-
     }
 }

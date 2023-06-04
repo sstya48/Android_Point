@@ -64,26 +64,23 @@ public class A_card_3_Fragment extends Fragment {
                 "  \n" +
                 "public class MainActivity extends AppCompatActivity {\n" +
                 "  \n" +
-                "    private RadioGroup radioGroup;\n" +
+                "  private RadioGroup radioGroup;\n" +
                 "  \n" +
-                "    @Override\n" +
-                "    protected void onCreate(Bundle savedInstanceState) {\n" +
-                "        super.onCreate(savedInstanceState);\n" +
-                "        setContentView(R.layout.activity_main);\n" +
+                "  @Override\n" +
+                "  protected void onCreate(Bundle savedInstanceState) {\n" +
+                "     super.onCreate(savedInstanceState);\n" +
+                "     setContentView(R.layout.activity_main);\n" +
+                "      \n" +
+                "     radioGroup = findViewById(R.id.idRVLanguages);\n" +
                 "          \n" +
-                "        radioGroup = findViewById(R.id.idRVLanguages);\n" +
-                "          \n" +
-                "        radioGroup.setOnCheckedChangeListener(new RadioGroup\n" +
-                "                                  .OnCheckedChangeListener() {\n" +
-                "          @Override\n" +
-                "          public void onCheckedChanged(RadioGroup group, int\n" +
-                "                                                      checkedId) {\n" +
-                "                  \n" +
-                "            RadioButton radioButton = findViewById(checkedId);\n" +
-                "                  \n" +
-                "            Toast.makeText(MainActivity.this, \"Selected Radio \n" +
+                "     radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {\n" +
+                "       @Override\n" +
+                "       public void onCheckedChanged(RadioGroup group, int checkedId) {\n" +
+                "        RadioButton radioButton = findViewById(checkedId);\n" +
+                "            \n" +
+                "        Toast.makeText(MainActivity.this, \"Selected Radio \n" +
                 "                                   Button is : \" + radioButton.getText(),\n" +
-                "                                   Toast.LENGTH_SHORT).show();\n" +
+                "        Toast.LENGTH_SHORT).show();\n" +
                 "            }\n" +
                 "        });\n" +
                 "    }\n" +
@@ -93,8 +90,7 @@ public class A_card_3_Fragment extends Fragment {
 
 
         radio_xml.setText("<?xml version=\"1.0\" encoding=\"utf-8\"?>\n" +
-                "<RelativeLayout xmlns:android=\"http://schemas.android.com\"\n" +
-                "                                               /apk/res/android\"\n" +
+                "<RelativeLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\n" +
                 "    xmlns:tools=\"http://schemas.android.com/tools\"\n" +
                 "    android:layout_width=\"match_parent\"\n" +
                 "    android:layout_height=\"match_parent\"\n" +

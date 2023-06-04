@@ -22,7 +22,6 @@ public class B_card_20_Fragment extends Fragment {
     TextView custem_toast_java,custem_toast_xml, custem_toast_class_xml;
 
     // CardView speech_to_yt;
-
     AppCompatImageView custem_toast_code_arrow, custem_toast_demo;
 
     @SuppressLint({"MissingInflatedId", "SetTextI18n"})
@@ -94,8 +93,9 @@ public class B_card_20_Fragment extends Fragment {
                 "            public void onClick(View v) {\n" +
                 "                LayoutInflater inflater = getLayoutInflater();\n" +
                 "                View layout = inflater.inflate(R.layout.custom_toast, (ViewGroup) findViewById(R.id.custom_toast_layout));\n" +
-                "                TextView tv = (TextView) layout.findViewById(R.id.txtvw);\n" +
+                "                TextView tv =  layout.findViewById(R.id.txtvw);\n" +
                 "                tv.setText(\"Custom Toast Notification\");\n" +
+                "\n" +
                 "                Toast toast = new Toast(getApplicationContext());\n" +
                 "                toast.setGravity(Gravity.CENTER_VERTICAL, 0, 100);\n" +
                 "                toast.setDuration(Toast.LENGTH_LONG);\n" +

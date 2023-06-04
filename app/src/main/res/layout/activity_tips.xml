@@ -235,7 +235,6 @@
                     android:text="@string/layout_large"
                     android:textSize="17sp" />
 
-
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -250,7 +249,5 @@
         </LinearLayout>
 
     </ScrollView>
-
-
 
 </LinearLayout>

@@ -64,40 +64,34 @@ public class A_card_5_Fragment extends Fragment {
                 "\n" +
                 "public class MainActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener{\n" +
                 "\n" +
-                "       String[] bankNames={\"Your Bank \"BOI \",\"SBI \",\"HDFC \",\"PNB \",\n" +
-                "                        \"OBC \",\"BOB \",\"ICICI \",\"BOA \"};\n" +
+                "    String[] bankNames={\"Your Bank \"BOI \",\"SBI \",\"HDFC \",\"PNB \",\"OBC \",\"BOB \",\"ICICI \",\"BOA \"};\n" +
                 "\n" +
-                "       @Override\n" +
-                "       protected void onCreate(Bundle savedInstanceState) {\n" +
-                "       super.onCreate(savedInstanceState);\n" +
-                "       setContentView(R.layout.activity_main);\n" +
+                "    @Override\n" +
+                "    protected void onCreate(Bundle savedInstanceState) {\n" +
+                "    super.onCreate(savedInstanceState);\n" +
+                "    setContentView(R.layout.activity_main);\n" +
                 "\n" +
-                "       Spinner spin = (Spinner) findViewById(R.id.simpleSpinner);\n" +
-                "        spin.setOnItemSelectedListener(this);\n" +
+                "    Spinner spin = (Spinner) findViewById(R.id.simpleSpinner);\n" +
+                "    spin.setOnItemSelectedListener(this);\n" +
                 "\n" +
-                "       ArrayAdapter aa = new ArrayAdapter(this,android.R.layout\n" +
-                "                          .simple_spinner_item,bankNames);\n" +
-                "       aa.setDropDownViewResource(android.R.layout\n" +
-                "                         .simple_spinner_dropdown_item);\n" +
-                "           spin.setAdapter(aa);\n" +
-                "       }\n" +
+                "    ArrayAdapter aa = new ArrayAdapter(this,android.R.layout .simple_spinner_item,bankNames);\n" +
+                "    aa.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);\n" +
+                "       spin.setAdapter(aa);\n" +
+                "      }\n" +
                 "\n" +
-                "         @Override\n" +
-                "         public void onItemSelected(AdapterView<?> arg0, View \n" +
-                "                                     arg1, int position,long id) {\n" +
-                "               Toast.makeText(getApplicationContext(), bankNames\n" +
-                "                           [position], Toast.LENGTH_LONG).show();\n" +
-                "           }\n" +
+                "    @Override\n" +
+                "    public void onItemSelected(AdapterView<?> arg0, View  arg1, int position,long id) {\n" +
+                "     Toast.makeText(getApplicationContext(), bankNames[position], Toast.LENGTH_LONG).show();\n" +
+                "         }\n" +
                 "\n" +
-                "       @Override\n" +
-                "       public void onNothingSelected(AdapterView<?> arg0) {\n" +
+                "    @Override\n" +
+                "    public void onNothingSelected(AdapterView<?> arg0) {\n" +
                 "\n" +
                 "     }\n" +
                 "}");
         spinner_xml.setTextIsSelectable(true);
         spinner_xml.setText("<?xml version=\"1.0\" encoding=\"utf-8\"?>\n" +
-                "<LinearLayout xmlns:android=\"http://schemas.android.com\n" +
-                "                               /apk/res/android\"\n" +
+                "<LinearLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\n" +
                 "    xmlns:tools=\"http://schemas.android.com/tools\"\n" +
                 "    android:layout_width=\"match_parent\"\n" +
                 "    android:layout_height=\"match_parent\"\n" +

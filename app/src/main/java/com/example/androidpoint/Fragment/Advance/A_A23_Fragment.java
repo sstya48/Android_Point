@@ -1,7 +1,9 @@
 package com.example.androidpoint.Fragment.Advance;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 
+import androidx.appcompat.widget.AppCompatImageView;
 import androidx.fragment.app.Fragment;
 
 import android.util.TypedValue;
@@ -14,6 +16,8 @@ import android.widget.TextView;
 import com.example.androidpoint.R;
 public class A_A23_Fragment extends Fragment {
 
+
+    AppCompatImageView Calculator_Btn_arrow;
     private Button b1;
     private Button b2;
     private Button b3;
@@ -32,7 +36,7 @@ public class A_A23_Fragment extends Fragment {
     private Button b_clear;
     private Button b_dot;
     private Button b_para1;
-    private Button b_para2;
+   // private Button b_para2;
     private TextView t1;
     private TextView t2;
     private final char ADDITION = '+';
@@ -46,6 +50,7 @@ public class A_A23_Fragment extends Fragment {
     private double val1 = Double.NaN;
     private double val2;
 
+    @SuppressLint("MissingInflatedId")
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -71,9 +76,21 @@ public class A_A23_Fragment extends Fragment {
         b_clear = view.findViewById(R.id.button_clear);
         b_dot = view.findViewById(R.id.button_dot);
         b_para1 = view.findViewById(R.id.button_para1);
-        b_para2 = view.findViewById(R.id.button_para2);
+       // b_para2 = view.findViewById(R.id.button_para2);
         t1 = view.findViewById(R.id.input);
         t2 = view.findViewById(R.id.output);
+        Calculator_Btn_arrow = view.findViewById(R.id.Calculator_Btn_arrow);
+
+        Calculator_Btn_arrow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                A_card_23_Fragment A_card_23_Fragment= new A_card_23_Fragment();
+                getActivity().getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.frame_container, A_card_23_Fragment, "Back Button Basic")
+                        .addToBackStack(null)
+                        .commit();
+            }
+        });
 
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -264,7 +281,7 @@ public class A_A23_Fragment extends Fragment {
             }
         });
 
-        b_para2.setOnClickListener(new View.OnClickListener() {
+     /*   b_para2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 if (!t2.getText().toString().isEmpty() || !t1.getText().toString().isEmpty()) {
@@ -276,7 +293,7 @@ public class A_A23_Fragment extends Fragment {
                     t2.setText("Error");
                 }
             }
-        });
+        });*/
 
         b_equal.setOnClickListener(new View.OnClickListener() {
             @Override

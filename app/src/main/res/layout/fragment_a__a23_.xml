@@ -6,6 +6,35 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".Fragment.Advance.A_A23_Fragment">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/layout_bg">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/Calculator_Btn_arrow"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="13dp"
+            android:layout_marginStart="10dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginBottom="12dp"
+            android:padding="6dp"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/arrow" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="@string/Calculator"
+            android:layout_gravity="center_vertical"
+            android:textColor="#181A20"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+
     <Button
         android:id="@+id/button1"
         android:layout_width="70dp"
@@ -234,7 +263,7 @@
 
     <Button
         android:id="@+id/button_clear"
-        android:layout_width="70dp"
+        android:layout_width="170dp"
         android:layout_height="70dp"
         android:background="@color/blue"
         android:text="AC"
@@ -262,7 +291,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.406" />
 
-    <Button
+    <!--<Button
         android:id="@+id/button_para2"
         android:layout_width="70dp"
         android:layout_height="70dp"
@@ -275,7 +304,7 @@
         app:layout_constraintHorizontal_bias="0.349"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.406" />
+        app:layout_constraintVertical_bias="0.406" />-->
 
     <Button
         android:id="@+id/button_dot"

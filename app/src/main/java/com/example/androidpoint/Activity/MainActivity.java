@@ -5,10 +5,13 @@ import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Looper;
 import android.util.Log;
 import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
@@ -36,10 +39,25 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     FragmentTransaction fragmentTransaction;
 
+    boolean isPressed =  false;
+
+   /* boolean doubleBackToExitPressedOnce = false;
+
+    private static final long delay = 2000L;
+    private boolean mRecentlyBackPressed = false;
+    private Handler mExitHandler = new Handler();
+    private Runnable mExitRunnable = new Runnable() {
+
+        @Override
+        public void run() {
+            mRecentlyBackPressed=false;
+        }
+    };*/
+
+
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        initialize();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
@@ -114,7 +132,58 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
     @Override
     public void onBackPressed() {
-        new AlertDialog.Builder(this)
+
+        if (isPressed){
+            finishAffinity();
+
+            System.exit(0);
+        }
+        else {
+            Toast.makeText(getApplicationContext(), "Please click BACK again to exit", Toast.LENGTH_SHORT).show();
+
+            isPressed = true;
+        }
+        Runnable runnable = new Runnable() {
+            @Override
+            public void run() {
+                isPressed = false;
+            }
+        };
+        new Handler().postDelayed(runnable,2000);
+
+      /*  if (mRecentlyBackPressed) {
+            mExitHandler.removeCallbacks(mExitRunnable);
+            mExitHandler = null;
+            super.onBackPressed();
+        }
+        else
+        {
+            mRecentlyBackPressed = true;
+            Toast.makeText(this, "press again to exit", Toast.LENGTH_SHORT).show();
+            mExitHandler.postDelayed(mExitRunnable, delay);
+        }*/
+
+       /* if (doubleBackToExitPressedOnce) {
+            super.onBackPressed();
+            return;
+        }
+
+        this.doubleBackToExitPressedOnce = true;
+        Toast.makeText(this, "Please click BACK again to exit", Toast.LENGTH_LONG).show();
+
+        new Handler(Looper.getMainLooper()).postDelayed(new Runnable() {
+
+            @Override
+            public void run() {
+                doubleBackToExitPressedOnce=false;
+            }
+        }, 2000);
+
+
+  //Alret Dialog=======================================================================
+
+*/
+       /* new AlertDialog.Builder(this)
                 .setIcon(R.drawable.applogo)
                 .setTitle("Closing Android Point")
                 .setMessage("Are you sure you want to close this Android Point?")
@@ -127,27 +196,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
                 })
                 .setNegativeButton("No", null)
-                .show();
-    }
-
-    private void initialize(){
-
-        progressDialog = new CustomProgressDialog(this);
-    }
-
-    protected void showProgressDialog() {
-        progressDialog.setCancelable(false);
-        progressDialog.show();
-    }
-
-    protected void dismissProgressDialog() {
-        try {
-            if (progressDialog != null && progressDialog.isShowing()) {
-                progressDialog.dismiss();
-            }
-        } catch (Exception ex) {
-            Log.e("TAG", ex.getMessage(), ex);
-        }
+                .show();*/
     }
 
 }

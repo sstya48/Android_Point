@@ -1,46 +1,44 @@
 package com.example.androidpoint.Fragment.Basic;
 
+import static androidx.constraintlayout.helper.widget.MotionEffect.TAG;
+
 import android.annotation.SuppressLint;
-import android.app.Notification;
-import android.app.NotificationChannel;
-import android.app.NotificationManager;
-import android.graphics.Bitmap;
-import android.graphics.drawable.BitmapDrawable;
-import android.graphics.drawable.Drawable;
-import android.os.Build;
+import android.content.Context;
 import android.os.Bundle;
-
-import androidx.cardview.widget.CardView;
-import androidx.core.content.res.ResourcesCompat;
-import androidx.fragment.app.Fragment;
-
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.cardview.widget.CardView;
+import androidx.fragment.app.Fragment;
 
 import com.denzcoskun.imageslider.ImageSlider;
 import com.denzcoskun.imageslider.constants.ScaleTypes;
 import com.denzcoskun.imageslider.models.SlideModel;
 import com.example.androidpoint.R;
 import com.google.android.gms.ads.AdView;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.QueryDocumentSnapshot;
+import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.ArrayList;
 
 public class Basic extends Fragment {
     ImageSlider imageslider;
-    CardView card_view1, card_view2, card_view3, card_view4,card_view5,card_view6,card_view7,
-            card_view8,card_view9,card_view10,card_view11,card_view12,card_view13,card_view14,
-            card_view15,card_view16, card_view17, card_view18, card_view19, card_view20, card_view21,
+    CardView card_view1, card_view2, card_view3, card_view4, card_view5, card_view6, card_view7,
+            card_view8, card_view9, card_view10, card_view11, card_view12, card_view13, card_view14,
+            card_view15, card_view16, card_view17, card_view18, card_view19, card_view20, card_view21,
             card_view22, card_view23, card_view24;
 
     AdView adView_basic;
 
-    @SuppressLint("MissingInflatedId")
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-
-    }
+    FirebaseFirestore db = FirebaseFirestore.getInstance();
 
     public Basic() {
         // Required empty public constructor
@@ -55,11 +53,17 @@ public class Basic extends Fragment {
 
     @SuppressLint("MissingInflatedId")
     @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+    }
+
+    @SuppressLint("MissingInflatedId")
+    @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
         View view = inflater.inflate(R.layout.fragment_basic, container, false);
-
 
 
         imageslider = view.findViewById(R.id.imageslider);
@@ -83,12 +87,37 @@ public class Basic extends Fragment {
 
         ArrayList<SlideModel> slideModels = new ArrayList<>();
 
+        db.collection("SliderImages")
+                .get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                    @Override
+                    public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                        if (task.isSuccessful()) {
+                            for (QueryDocumentSnapshot queryDocumentSnapshot : task.getResult()) {
+                                slideModels.add(new SlideModel(queryDocumentSnapshot.getString("url"), ScaleTypes.FIT));
+                                imageslider.setImageList(slideModels, ScaleTypes.FIT);
+                            }
+
+                        } else {
+                            Toast.makeText(getContext(), "Can't load Images", Toast.LENGTH_SHORT).show();
+                            Log.w(TAG, "Error getting documents.", task.getException());
+                        }
+                    }
+                })
+                .addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        Toast.makeText(getActivity(), "Can't load Images", Toast.LENGTH_SHORT).show();
+                    }
+                });
+
+/*
         slideModels.add(new SlideModel("https://c1.wallpaperflare.com/preview/595/1003/783/code-coder-coding-computer.jpg", ScaleTypes.FIT));
         slideModels.add(new SlideModel("https://images.pexels.com/photos/1181271/pexels-photo-1181271.jpeg?auto=compress&cs=tinysrgb&w=600", ScaleTypes.FIT));
         slideModels.add(new SlideModel("https://images.pexels.com/photos/2653362/pexels-photo-2653362.jpeg?auto=compress&cs=tinysrgb&w=600", ScaleTypes.FIT));
         slideModels.add(new SlideModel("https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&w=600", ScaleTypes.FIT));
 
         imageslider.setImageList(slideModels, ScaleTypes.FIT);
+*/
 
         card_view1 = view.findViewById(R.id.card_view1);
         card_view2 = view.findViewById(R.id.card_view2);
@@ -119,7 +148,7 @@ public class Basic extends Fragment {
         card_view1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                B_card_1_Fragment Helloworld= new B_card_1_Fragment();
+                B_card_1_Fragment Helloworld = new B_card_1_Fragment();
                 getActivity().getSupportFragmentManager().beginTransaction()
                         .replace(R.id.frame_container, Helloworld, "Helloworld Code")
                         .addToBackStack(null)
@@ -130,7 +159,7 @@ public class Basic extends Fragment {
         card_view2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                B_card_2_Fragment ActivityLife= new B_card_2_Fragment();
+                B_card_2_Fragment ActivityLife = new B_card_2_Fragment();
                 getActivity().getSupportFragmentManager().beginTransaction()
                         .replace(R.id.frame_container, ActivityLife, "ActivityLife Code")
                         .addToBackStack(null)
@@ -141,7 +170,7 @@ public class Basic extends Fragment {
         card_view3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                B_card_3_Fragment HideTitle= new B_card_3_Fragment();
+                B_card_3_Fragment HideTitle = new B_card_3_Fragment();
                 getActivity().getSupportFragmentManager().beginTransaction()
                         .replace(R.id.frame_container, HideTitle, "HideTitle Code")
                         .addToBackStack(null)
@@ -152,7 +181,7 @@ public class Basic extends Fragment {
         card_view4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                B_card_4_Fragment ScreenOrientation= new B_card_4_Fragment();
+                B_card_4_Fragment ScreenOrientation = new B_card_4_Fragment();
                 getActivity().getSupportFragmentManager().beginTransaction()
                         .replace(R.id.frame_container, ScreenOrientation, "ScreenOrientation Code")
                         .addToBackStack(null)
@@ -162,7 +191,7 @@ public class Basic extends Fragment {
         card_view5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                B_card_5_Fragment CheckBox= new B_card_5_Fragment();
+                B_card_5_Fragment CheckBox = new B_card_5_Fragment();
                 getActivity().getSupportFragmentManager().beginTransaction()
                         .replace(R.id.frame_container, CheckBox, "CheckBox Code")
                         .addToBackStack(null)
@@ -172,16 +201,17 @@ public class Basic extends Fragment {
         card_view6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                B_card_6_Fragment RadioBtn= new B_card_6_Fragment();
+                B_card_6_Fragment RadioBtn = new B_card_6_Fragment();
                 getActivity().getSupportFragmentManager().beginTransaction()
                         .replace(R.id.frame_container, RadioBtn, "RadioBtn Code")
                         .addToBackStack(null)
-                        .commit();}
+                        .commit();
+            }
         });
         card_view7.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                B_card_7_Fragment ListView= new B_card_7_Fragment();
+                B_card_7_Fragment ListView = new B_card_7_Fragment();
                 getActivity().getSupportFragmentManager().beginTransaction()
                         .replace(R.id.frame_container, ListView, "ListView Code")
                         .addToBackStack(null)
@@ -191,7 +221,7 @@ public class Basic extends Fragment {
         card_view8.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                B_card_8_Fragment DatePicker= new B_card_8_Fragment();
+                B_card_8_Fragment DatePicker = new B_card_8_Fragment();
                 getActivity().getSupportFragmentManager().beginTransaction()
                         .replace(R.id.frame_container, DatePicker, "DatePicker Code")
                         .addToBackStack(null)
@@ -201,16 +231,17 @@ public class Basic extends Fragment {
         card_view9.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                B_card_9_Fragment TimePicker= new B_card_9_Fragment();
+                B_card_9_Fragment TimePicker = new B_card_9_Fragment();
                 getActivity().getSupportFragmentManager().beginTransaction()
                         .replace(R.id.frame_container, TimePicker, "TimePicker Code")
                         .addToBackStack(null)
-                        .commit();}
+                        .commit();
+            }
         });
         card_view10.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                B_card_10_Fragment ScrollView= new B_card_10_Fragment();
+                B_card_10_Fragment ScrollView = new B_card_10_Fragment();
                 getActivity().getSupportFragmentManager().beginTransaction()
                         .replace(R.id.frame_container, ScrollView, "ScrollView Code")
                         .addToBackStack(null)
@@ -220,7 +251,7 @@ public class Basic extends Fragment {
         card_view11.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                B_card_11_Fragment SearchView= new B_card_11_Fragment();
+                B_card_11_Fragment SearchView = new B_card_11_Fragment();
                 getActivity().getSupportFragmentManager().beginTransaction()
                         .replace(R.id.frame_container, SearchView, "SearchView Code")
                         .addToBackStack(null)
@@ -230,7 +261,7 @@ public class Basic extends Fragment {
         card_view12.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                B_card_12_Fragment ImplicitIntent= new B_card_12_Fragment();
+                B_card_12_Fragment ImplicitIntent = new B_card_12_Fragment();
                 getActivity().getSupportFragmentManager().beginTransaction()
                         .replace(R.id.frame_container, ImplicitIntent, "ImplicitIntent Code")
                         .addToBackStack(null)
@@ -240,7 +271,7 @@ public class Basic extends Fragment {
         card_view13.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                B_card_13_Fragment ExplicitIntent= new B_card_13_Fragment();
+                B_card_13_Fragment ExplicitIntent = new B_card_13_Fragment();
                 getActivity().getSupportFragmentManager().beginTransaction()
                         .replace(R.id.frame_container, ExplicitIntent, "ExplicitIntent Code")
                         .addToBackStack(null)
@@ -250,7 +281,7 @@ public class Basic extends Fragment {
         card_view14.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                B_card_14_Fragment OptionMenu= new B_card_14_Fragment();
+                B_card_14_Fragment OptionMenu = new B_card_14_Fragment();
                 getActivity().getSupportFragmentManager().beginTransaction()
                         .replace(R.id.frame_container, OptionMenu, "OptionMenu Code")
                         .addToBackStack(null)
@@ -260,7 +291,7 @@ public class Basic extends Fragment {
         card_view15.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                B_card_15_Fragment ContextMenu= new B_card_15_Fragment();
+                B_card_15_Fragment ContextMenu = new B_card_15_Fragment();
                 getActivity().getSupportFragmentManager().beginTransaction()
                         .replace(R.id.frame_container, ContextMenu, "ContextMenu Code")
                         .addToBackStack(null)
@@ -270,7 +301,7 @@ public class Basic extends Fragment {
         card_view16.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                B_card_16_Fragment PopupMenu= new B_card_16_Fragment();
+                B_card_16_Fragment PopupMenu = new B_card_16_Fragment();
                 getActivity().getSupportFragmentManager().beginTransaction()
                         .replace(R.id.frame_container, PopupMenu, "PopupMenu Code")
                         .addToBackStack(null)
@@ -281,7 +312,7 @@ public class Basic extends Fragment {
         card_view17.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                B_card_17_Fragment PopupMenu= new B_card_17_Fragment();
+                B_card_17_Fragment PopupMenu = new B_card_17_Fragment();
                 getActivity().getSupportFragmentManager().beginTransaction()
                         .replace(R.id.frame_container, PopupMenu, "PopupMenu Code")
                         .addToBackStack(null)
@@ -291,7 +322,7 @@ public class Basic extends Fragment {
         card_view18.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                B_card_18_Fragment PopupMenu= new B_card_18_Fragment();
+                B_card_18_Fragment PopupMenu = new B_card_18_Fragment();
                 getActivity().getSupportFragmentManager().beginTransaction()
                         .replace(R.id.frame_container, PopupMenu, "PopupMenu Code")
                         .addToBackStack(null)
@@ -302,7 +333,7 @@ public class Basic extends Fragment {
         card_view19.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                B_card_19_Fragment PopupMenu= new B_card_19_Fragment();
+                B_card_19_Fragment PopupMenu = new B_card_19_Fragment();
                 getActivity().getSupportFragmentManager().beginTransaction()
                         .replace(R.id.frame_container, PopupMenu, "Code")
                         .addToBackStack(null)
@@ -313,7 +344,7 @@ public class Basic extends Fragment {
         card_view20.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                B_card_20_Fragment PopupMenu= new B_card_20_Fragment();
+                B_card_20_Fragment PopupMenu = new B_card_20_Fragment();
                 getActivity().getSupportFragmentManager().beginTransaction()
                         .replace(R.id.frame_container, PopupMenu, "Code")
                         .addToBackStack(null)
@@ -324,7 +355,7 @@ public class Basic extends Fragment {
         card_view21.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                B_card_21_Fragment PopupMenu= new B_card_21_Fragment();
+                B_card_21_Fragment PopupMenu = new B_card_21_Fragment();
                 getActivity().getSupportFragmentManager().beginTransaction()
                         .replace(R.id.frame_container, PopupMenu, "Code")
                         .addToBackStack(null)
@@ -335,7 +366,7 @@ public class Basic extends Fragment {
         card_view22.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                B_card_22_Fragment PopupMenu= new B_card_22_Fragment();
+                B_card_22_Fragment PopupMenu = new B_card_22_Fragment();
                 getActivity().getSupportFragmentManager().beginTransaction()
                         .replace(R.id.frame_container, PopupMenu, "Code")
                         .addToBackStack(null)
@@ -345,7 +376,7 @@ public class Basic extends Fragment {
         card_view23.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                B_card_23_Fragment PopupMenu= new B_card_23_Fragment();
+                B_card_23_Fragment PopupMenu = new B_card_23_Fragment();
                 getActivity().getSupportFragmentManager().beginTransaction()
                         .replace(R.id.frame_container, PopupMenu, "Code")
                         .addToBackStack(null)
@@ -356,7 +387,7 @@ public class Basic extends Fragment {
         card_view24.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                B_card_24_Fragment PopupMenu= new B_card_24_Fragment();
+                B_card_24_Fragment PopupMenu = new B_card_24_Fragment();
                 getActivity().getSupportFragmentManager().beginTransaction()
                         .replace(R.id.frame_container, PopupMenu, "Code")
                         .addToBackStack(null)

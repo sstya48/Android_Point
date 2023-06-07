@@ -35,8 +35,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     ImageView btnMenu;
     AdView adView_main_all;
 
-    private CustomProgressDialog progressDialog;
-
     FragmentTransaction fragmentTransaction;
 
     boolean isPressed =  false;

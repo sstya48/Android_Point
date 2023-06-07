@@ -32,6 +32,7 @@
             android:textColor="#03A9F4"
             android:includeFontPadding="false"
             android:textSize="22sp"
+            android:fontFamily="@font/poppins_semibold"
             android:textStyle="bold" />
 
     </LinearLayout>
@@ -46,11 +47,11 @@
         android:background="@color/offwhite">
 
         <ImageView
-            android:layout_width="150dp"
-            android:layout_height="150dp"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
             android:layout_marginTop="50dp"
             android:layout_gravity="center"
-            android:src="@drawable/iconapp"
+            android:src="@drawable/logo_about"
             />
 
 
@@ -88,7 +89,8 @@
                         android:gravity="center"
                         android:layout_gravity="center_vertical"
                         android:textStyle="bold"
-                        android:textColor="@color/alphaback"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:textColor="@color/logouttext"
                         android:textSize="20sp" />
 
                 </LinearLayout>
@@ -110,17 +112,20 @@
                         android:gravity="center"
                         android:includeFontPadding="false"
                         android:text="@string/version"
-                        android:textColor="@color/alphaback"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:textColor="@color/logouttext"
                         android:textSize="18sp"
                         android:textStyle="bold"
                         />
 
                     <TextView
+                        android:id="@+id/version_tv"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_marginStart="50dp"
-                        android:text="1.0"
+                        android:text="2"
                         android:gravity="center"
+                        android:fontFamily="@font/poppins_regular"
                         android:layout_gravity="center_vertical"
                         android:textSize="18sp" />
 
@@ -143,16 +148,18 @@
                         android:includeFontPadding="false"
                         android:gravity="center"
                         android:text="@string/Devloper"
-                        android:textColor="@color/alphaback"
+                        android:textColor="@color/logouttext"
                         android:textSize="18sp"
+                        android:fontFamily="@font/poppins_semibold"
                         android:textStyle="bold" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_marginStart="50dp"
-                        android:text="Androiod Alians"
+                        android:text="Android Alians"
                         android:gravity="center"
+                        android:fontFamily="@font/poppins_regular"
                         android:layout_gravity="center_vertical"
                         android:textSize="18sp" />
 
@@ -174,7 +181,8 @@
                         android:layout_marginStart="50dp"
                         android:includeFontPadding="false"
                         android:text="@string/Social_Media"
-                        android:textColor="@color/alphaback"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:textColor="@color/logouttext"
                         android:textSize="18sp"
                         android:textStyle="bold"
                         />
@@ -185,6 +193,7 @@
                         android:layout_marginStart="15dp"
                         android:gravity="center"
                         android:text="@string/Android_Alians"
+                        android:fontFamily="@font/poppins_regular"
                         android:layout_gravity="center_vertical"
                         android:textSize="18sp" />
 
@@ -197,13 +206,14 @@
                     android:layout_marginTop="15dp"
                     android:gravity="center"
                     android:textSize="15sp"
-                    android:textColor="@color/trip01"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:textColor="@color/alphaback"
                     android:layout_gravity="center_vertical"/>
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="100dp"
-                    android:gravity="center">
+                    android:gravity="center_vertical|center_horizontal|center">
 
                     <ImageView
                         android:id="@+id/insta_btn"
@@ -249,7 +259,8 @@
                     android:textSize="15sp"
                     android:layout_marginTop="10dp"
                     android:layout_marginBottom="10dp"
-                    android:textColor="@color/trip01"
+                    android:textColor="@color/alphaback"
+                    android:fontFamily="@font/poppins_semibold"
                     android:layout_gravity="center_vertical"/>
 
             </LinearLayout>

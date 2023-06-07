@@ -19,15 +19,14 @@ import java.util.ArrayList;
 
 public class A_A8_Fragment extends Fragment {
     ImageSlider imageslider;
-
     AppCompatImageView Btn_arrow;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_a__a8_, container, false);
 
-
-        Btn_arrow=view.findViewById(R.id.Btn_arrow);
+        Btn_arrow = view.findViewById(R.id.Btn_arrow);
 
         Btn_arrow.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -40,16 +39,14 @@ public class A_A8_Fragment extends Fragment {
             }
         });
 
-
-
         imageslider = view.findViewById(R.id.imageslider);
 
         ArrayList<SlideModel> slideModels = new ArrayList<>();
 
-        slideModels.add(new SlideModel("https://www.pexels.com/photo/couple-under-hut-beside-sea-and-infinity-pool-1024967/", ScaleTypes.FIT));
-        slideModels.add(new SlideModel("https://www.pexels.com/photo/lake-and-mountain-under-white-sky-443446/", ScaleTypes.FIT));
-        slideModels.add(new SlideModel("https://www.pexels.com/photo/architectural-photography-of-bridge-459203/", ScaleTypes.FIT));
-        slideModels.add(new SlideModel("https://www.pexels.com/photo/red-and-black-bird-on-red-flowers-36762/", ScaleTypes.FIT));
+        slideModels.add(new SlideModel("https://wallpaperaccess.com/full/4294242.jpg", ScaleTypes.FIT));
+        slideModels.add(new SlideModel("https://wallpaperaccess.com/full/2653151.jpg", ScaleTypes.FIT));
+        slideModels.add(new SlideModel("https://wallpaperaccess.com/full/4293252.jpg", ScaleTypes.FIT));
+        slideModels.add(new SlideModel("https://wallpaperaccess.com/full/261882.jpg", ScaleTypes.FIT));
 
         imageslider.setImageList(slideModels, ScaleTypes.FIT);
 

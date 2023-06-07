@@ -3,9 +3,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".Activity.DrawerActivity"
     android:id="@+id/drawer"
     android:background="@android:color/transparent">
+
+    <ImageView
+        android:id="@+id/back_menu"
+        android:layout_width="45dp"
+        android:layout_height="match_parent"
+        android:foregroundGravity="right"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@android:color/transparent"/>
 
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/nav_view"
@@ -29,24 +38,24 @@
                     android:id="@+id/navigation_profile"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="40dp"
+                    android:layout_marginTop="30dp"
                     android:layout_marginBottom="30dp">
 
                         <ImageView
                             android:id="@+id/iv_user"
-                            android:layout_width="65dp"
-                            android:layout_height="65dp"
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
                             android:layout_marginStart="16dp"
                             android:scaleType="centerCrop"
                             android:src="@drawable/img" />
 
                     <androidx.appcompat.widget.AppCompatImageView
                         android:id="@+id/close_menu"
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
                         android:layout_alignParentEnd="true"
                         android:layout_centerVertical="true"
-                        android:layout_marginEnd="15dp"
+                        android:layout_marginEnd="12dp"
                         android:background="?android:attr/selectableItemBackgroundBorderless"
                         android:clickable="true"
                         android:focusable="true"
@@ -85,6 +94,8 @@
 
 
                 </RelativeLayout>
+
+
                 <LinearLayout
                     android:id="@+id/abc"
                     android:layout_width="match_parent"
@@ -121,8 +132,7 @@
                         android:gravity="start|center"
                         android:paddingEnd="10dp"
                         android:paddingStart="10dp"
-                        android:foreground="?android:attr/selectableItemBackground"
-                        >
+                        android:foreground="?android:attr/selectableItemBackground">
 
                         <FrameLayout
                             android:layout_width="40dp"
@@ -150,23 +160,23 @@
                             android:textColor="@color/alphaback"
                             />
 
-                      <!--  <RelativeLayout
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="55dp"
+                            android:orientation="horizontal"
+                            android:gravity="end|center"
+                            android:paddingEnd="10dp"
+                            android:paddingStart="10dp">
 
-                            >
+                            <ImageView
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:src="@drawable/right_back_drower"
+                                android:layout_gravity="center" />
 
-                            <Switch
-                                android:id="@+id/mode_dark"
-                                android:layout_width="50dp"
-                                android:layout_height="50dp"
-                                android:layout_alignParentEnd="true"
-                                />
+                        </LinearLayout>
 
-                        </RelativeLayout>-->
-
-
-                    </LinearLayout>
+                        </LinearLayout>
 
                     <View
                         android:layout_width="match_parent"
@@ -185,25 +195,21 @@
                         android:clickable="true"
                         android:paddingEnd="10dp"
                         android:paddingStart="10dp"
-                        android:foreground="?android:attr/selectableItemBackground"
-                        >
+                        android:foreground="?android:attr/selectableItemBackground">
 
                         <FrameLayout
                             android:layout_width="40dp"
                             android:layout_height="40dp"
                             android:background="@drawable/menu_icon_bg"
-                            android:backgroundTint="#8FD991"
+                            android:backgroundTint="#8FD991">
 
-                            >
                             <ImageView
                                 android:layout_width="30dp"
                                 android:layout_height="30dp"
                                 android:src="@drawable/game"
-                                android:layout_gravity="center"
-                                />
+                                android:layout_gravity="center" />
 
                         </FrameLayout>
-
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -212,8 +218,23 @@
                             android:layout_marginStart="20dp"
                             android:textSize="20sp"
                             android:fontFamily="@font/poppins_regular"
-                            android:textColor="@color/alphaback"
-                            />
+                            android:textColor="@color/alphaback" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="55dp"
+                            android:orientation="horizontal"
+                            android:gravity="end|center"
+                            android:paddingEnd="6dp"
+                            android:paddingStart="10dp">
+
+                            <ImageView
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:layout_gravity="center"
+                                android:src="@drawable/play" />
+
+                        </LinearLayout>
 
                     </LinearLayout>
 
@@ -260,6 +281,22 @@
                             android:textSize="20sp"
                             android:fontFamily="@font/poppins_regular"
                             android:textColor="@color/alphaback"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="55dp"
+                            android:orientation="horizontal"
+                            android:gravity="end|center"
+                            android:paddingEnd="10dp"
+                            android:paddingStart="10dp">
+
+                            <ImageView
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:src="@drawable/right_back_drower"
+                                android:layout_gravity="center" />
+
+                        </LinearLayout>
 
                     </LinearLayout>
 
@@ -324,8 +361,23 @@
                             android:layout_marginStart="20dp"
                             android:textSize="20sp"
                             android:fontFamily="@font/poppins_regular"
-                            android:textColor="@color/alphaback"
-                            />
+                            android:textColor="@color/alphaback" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="55dp"
+                            android:orientation="horizontal"
+                            android:gravity="end|center"
+                            android:paddingEnd="10dp"
+                            android:paddingStart="10dp">
+
+                            <ImageView
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:src="@drawable/right_back_drower"
+                                android:layout_gravity="center" />
+
+                        </LinearLayout>
 
                     </LinearLayout>
 
@@ -377,6 +429,22 @@
                             android:textColor="@color/alphaback"
                             android:textSize="20sp" />
 
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="55dp"
+                            android:orientation="horizontal"
+                            android:gravity="end|center"
+                            android:paddingEnd="10dp"
+                            android:paddingStart="10dp">
+
+                            <ImageView
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:src="@drawable/right_back_drower"
+                                android:layout_gravity="center" />
+
+                        </LinearLayout>
+
                     </LinearLayout>
 
 
@@ -426,8 +494,23 @@
                             android:layout_marginStart="20dp"
                             android:textSize="20sp"
                             android:fontFamily="@font/poppins_regular"
-                            android:textColor="@color/alphaback"
-                            />
+                            android:textColor="@color/alphaback" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="55dp"
+                            android:orientation="horizontal"
+                            android:gravity="end|center"
+                            android:paddingEnd="10dp"
+                            android:paddingStart="10dp">
+
+                            <ImageView
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:src="@drawable/right_back_drower"
+                                android:layout_gravity="center" />
+
+                        </LinearLayout>
 
                     </LinearLayout>
 
@@ -497,6 +580,22 @@
                             android:fontFamily="@font/poppins_regular"
                             android:textColor="@color/alphaback" />
 
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="55dp"
+                            android:orientation="horizontal"
+                            android:gravity="end|center"
+                            android:paddingEnd="10dp"
+                            android:paddingStart="10dp">
+
+                            <ImageView
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:src="@drawable/right_back_drower"
+                                android:layout_gravity="center" />
+
+                        </LinearLayout>
+
                     </LinearLayout>
 
 
@@ -546,6 +645,22 @@
                             android:fontFamily="@font/poppins_regular"
                             android:textColor="@color/alphaback" />
 
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="55dp"
+                            android:orientation="horizontal"
+                            android:gravity="end|center"
+                            android:paddingEnd="10dp"
+                            android:paddingStart="10dp">
+
+                            <ImageView
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:src="@drawable/right_back_drower"
+                                android:layout_gravity="center" />
+
+                        </LinearLayout>
+
                     </LinearLayout>
 
                     <View
@@ -568,7 +683,6 @@
                     android:fontFamily="@font/poppins_semibold"
                     android:textColor="@color/alphaback"
                     android:textSize="16sp" />
-
 
             </RelativeLayout>
 

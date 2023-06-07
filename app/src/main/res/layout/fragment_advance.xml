@@ -39,7 +39,8 @@
                         android:layout_gravity="center_vertical"
                         android:layout_weight="1"
                         app:cardCornerRadius="14dp"
-                        app:cardUseCompatPadding="true">
+                        app:cardUseCompatPadding="true"
+                        android:foreground="?android:attr/selectableItemBackground">
 
                         <FrameLayout
                             android:layout_width="match_parent"
@@ -92,7 +93,8 @@
                         android:layout_marginStart="12dp"
                         android:layout_weight="1"
                         app:cardCornerRadius="14dp"
-                        app:cardUseCompatPadding="true">
+                        app:cardUseCompatPadding="true"
+                        android:foreground="?android:attr/selectableItemBackground">
 
                         <FrameLayout
                             android:layout_width="match_parent"
@@ -153,7 +155,8 @@
                         android:layout_height="160dp"
                         android:layout_weight="1"
                         app:cardCornerRadius="14dp"
-                        app:cardUseCompatPadding="true">
+                        app:cardUseCompatPadding="true"
+                        android:foreground="?android:attr/selectableItemBackground">
 
                         <FrameLayout
                             android:layout_width="match_parent"
@@ -204,7 +207,8 @@
                         android:layout_marginStart="12dp"
                         android:layout_weight="1"
                         app:cardCornerRadius="14dp"
-                        app:cardUseCompatPadding="true">
+                        app:cardUseCompatPadding="true"
+                        android:foreground="?android:attr/selectableItemBackground">
 
                         <FrameLayout
                             android:layout_width="match_parent"
@@ -264,7 +268,8 @@
                         android:layout_height="160dp"
                         android:layout_weight="1"
                         app:cardCornerRadius="14dp"
-                        app:cardUseCompatPadding="true">
+                        app:cardUseCompatPadding="true"
+                        android:foreground="?android:attr/selectableItemBackground">
 
                         <FrameLayout
                             android:layout_width="match_parent"
@@ -316,7 +321,8 @@
                         android:layout_marginStart="12dp"
                         android:layout_weight="1"
                         app:cardCornerRadius="14dp"
-                        app:cardUseCompatPadding="true">
+                        app:cardUseCompatPadding="true"
+                        android:foreground="?android:attr/selectableItemBackground">
 
                         <FrameLayout
                             android:layout_width="match_parent"
@@ -376,7 +382,8 @@
                         android:layout_gravity="center_vertical"
                         android:layout_weight="1"
                         app:cardCornerRadius="14dp"
-                        app:cardUseCompatPadding="true">
+                        app:cardUseCompatPadding="true"
+                        android:foreground="?android:attr/selectableItemBackground">
 
                         <FrameLayout
                             android:layout_width="match_parent"
@@ -429,7 +436,8 @@
                         android:layout_marginStart="12dp"
                         android:layout_weight="1"
                         app:cardCornerRadius="14dp"
-                        app:cardUseCompatPadding="true">
+                        app:cardUseCompatPadding="true"
+                        android:foreground="?android:attr/selectableItemBackground">
 
                         <FrameLayout
                             android:layout_width="match_parent"
@@ -489,7 +497,8 @@
                         android:layout_height="160dp"
                         android:layout_weight="1"
                         app:cardCornerRadius="14dp"
-                        app:cardUseCompatPadding="true">
+                        app:cardUseCompatPadding="true"
+                        android:foreground="?android:attr/selectableItemBackground">
 
                         <FrameLayout
                             android:layout_width="match_parent"
@@ -540,7 +549,8 @@
                         android:layout_marginStart="12dp"
                         android:layout_weight="1"
                         app:cardCornerRadius="14dp"
-                        app:cardUseCompatPadding="true">
+                        app:cardUseCompatPadding="true"
+                        android:foreground="?android:attr/selectableItemBackground">
 
                         <FrameLayout
                             android:layout_width="match_parent"
@@ -599,7 +609,8 @@
                         android:layout_height="160dp"
                         android:layout_weight="1"
                         app:cardCornerRadius="14dp"
-                        app:cardUseCompatPadding="true">
+                        app:cardUseCompatPadding="true"
+                        android:foreground="?android:attr/selectableItemBackground">
 
                         <FrameLayout
                             android:layout_width="match_parent"
@@ -652,7 +663,8 @@
                         android:layout_marginStart="12dp"
                         android:layout_weight="1"
                         app:cardCornerRadius="14dp"
-                        app:cardUseCompatPadding="true">
+                        app:cardUseCompatPadding="true"
+                        android:foreground="?android:attr/selectableItemBackground">
 
                         <FrameLayout
                             android:layout_width="match_parent"
@@ -713,7 +725,8 @@
                         android:layout_gravity="center_vertical"
                         android:layout_weight="1"
                         app:cardCornerRadius="14dp"
-                        app:cardUseCompatPadding="true">
+                        app:cardUseCompatPadding="true"
+                        android:foreground="?android:attr/selectableItemBackground">
 
                         <FrameLayout
                             android:layout_width="match_parent"
@@ -767,7 +780,8 @@
                         android:layout_marginStart="12dp"
                         android:layout_weight="1"
                         app:cardCornerRadius="14dp"
-                        app:cardUseCompatPadding="true">
+                        app:cardUseCompatPadding="true"
+                        android:foreground="?android:attr/selectableItemBackground">
 
                         <FrameLayout
                             android:layout_width="match_parent"
@@ -828,7 +842,8 @@
                         android:layout_height="160dp"
                         android:layout_weight="1"
                         app:cardCornerRadius="14dp"
-                        app:cardUseCompatPadding="true">
+                        app:cardUseCompatPadding="true"
+                        android:foreground="?android:attr/selectableItemBackground">
 
                         <FrameLayout
                             android:layout_width="match_parent"
@@ -879,7 +894,8 @@
                         android:layout_marginStart="12dp"
                         android:layout_weight="1"
                         app:cardCornerRadius="14dp"
-                        app:cardUseCompatPadding="true">
+                        app:cardUseCompatPadding="true"
+                        android:foreground="?android:attr/selectableItemBackground">
 
                         <FrameLayout
                             android:layout_width="match_parent"
@@ -939,7 +955,8 @@
                         android:layout_height="160dp"
                         android:layout_weight="1"
                         app:cardCornerRadius="14dp"
-                        app:cardUseCompatPadding="true">
+                        app:cardUseCompatPadding="true"
+                        android:foreground="?android:attr/selectableItemBackground">
 
                         <FrameLayout
                             android:layout_width="match_parent"
@@ -991,7 +1008,8 @@
                         android:layout_marginStart="12dp"
                         android:layout_weight="1"
                         app:cardCornerRadius="14dp"
-                        app:cardUseCompatPadding="true">
+                        app:cardUseCompatPadding="true"
+                        android:foreground="?android:attr/selectableItemBackground">
 
                         <FrameLayout
                             android:layout_width="match_parent"
@@ -1051,7 +1069,8 @@
                         android:layout_gravity="center_vertical"
                         android:layout_weight="1"
                         app:cardCornerRadius="14dp"
-                        app:cardUseCompatPadding="true">
+                        app:cardUseCompatPadding="true"
+                        android:foreground="?android:attr/selectableItemBackground">
 
                         <FrameLayout
                             android:layout_width="match_parent"
@@ -1104,7 +1123,8 @@
                         android:layout_marginStart="12dp"
                         android:layout_weight="1"
                         app:cardCornerRadius="14dp"
-                        app:cardUseCompatPadding="true">
+                        app:cardUseCompatPadding="true"
+                        android:foreground="?android:attr/selectableItemBackground">
 
                         <FrameLayout
                             android:layout_width="match_parent"
@@ -1165,7 +1185,8 @@
                         android:layout_height="160dp"
                         android:layout_weight="1"
                         app:cardCornerRadius="14dp"
-                        app:cardUseCompatPadding="true">
+                        app:cardUseCompatPadding="true"
+                        android:foreground="?android:attr/selectableItemBackground">
 
                         <FrameLayout
                             android:layout_width="match_parent"
@@ -1216,7 +1237,8 @@
                         android:layout_marginStart="12dp"
                         android:layout_weight="1"
                         app:cardCornerRadius="14dp"
-                        app:cardUseCompatPadding="true">
+                        app:cardUseCompatPadding="true"
+                        android:foreground="?android:attr/selectableItemBackground">
 
                         <FrameLayout
                             android:layout_width="match_parent"
@@ -1275,7 +1297,8 @@
                         android:layout_height="160dp"
                         android:layout_weight="1"
                         app:cardCornerRadius="14dp"
-                        app:cardUseCompatPadding="true">
+                        app:cardUseCompatPadding="true"
+                        android:foreground="?android:attr/selectableItemBackground">
 
                         <FrameLayout
                             android:layout_width="match_parent"
@@ -1327,7 +1350,8 @@
                         android:layout_marginStart="12dp"
                         android:layout_weight="1"
                         app:cardCornerRadius="14dp"
-                        app:cardUseCompatPadding="true">
+                        app:cardUseCompatPadding="true"
+                        android:foreground="?android:attr/selectableItemBackground">
 
                         <FrameLayout
                             android:layout_width="match_parent"

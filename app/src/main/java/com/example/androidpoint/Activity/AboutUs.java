@@ -15,7 +15,6 @@ import com.example.androidpoint.R;
 public class AboutUs extends AppCompatActivity {
 
     ImageView insta_btn,youtube_btn, facebook_btn;
-
     AppCompatImageView aboutus_back_arrow;
     @SuppressLint("MissingInflatedId")
     @Override
@@ -24,7 +23,7 @@ public class AboutUs extends AppCompatActivity {
         setContentView(R.layout.activity_about_us);
         insta_btn = findViewById(R.id.insta_btn);
         youtube_btn = findViewById(R.id.youtube_btn);
-        facebook_btn = findViewById(R.id.facebook_btn);
+        // facebook_btn = findViewById(R.id.facebook_btn);
         aboutus_back_arrow = findViewById(R.id.aboutus_back_arrow);
 
         aboutus_back_arrow.setOnClickListener(new View.OnClickListener() {
@@ -49,12 +48,12 @@ public class AboutUs extends AppCompatActivity {
             }
         });
 
-        facebook_btn.setOnClickListener(new View.OnClickListener() {
+     /*   facebook_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 gotoUrl("https://www.youtube.com/@Androidalians/videos");
             }
-        });
+        });*/
 
     }
     private void gotoUrl(String s){

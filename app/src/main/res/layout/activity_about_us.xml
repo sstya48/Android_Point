@@ -42,6 +42,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
+        android:gravity="center"
         android:background="@color/offwhite">
 
         <ImageView
@@ -66,9 +67,8 @@
                 android:orientation="vertical"
                 android:layout_marginStart="10dp"
                 android:layout_marginEnd="10dp"
+                android:gravity="center"
                 android:background="@drawable/drawer">
-                <!--            androd:divider="#ad5"-->
-                <!--            android:background="@color/white"-->
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -88,7 +88,6 @@
                         android:gravity="center"
                         android:layout_gravity="center_vertical"
                         android:textStyle="bold"
-
                         android:textColor="@color/alphaback"
                         android:textSize="20sp" />
 
@@ -204,15 +203,13 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="100dp"
-                    android:layout_gravity="center_horizontal"
-                    android:orientation="horizontal">
+                    android:gravity="center">
 
                     <ImageView
                         android:id="@+id/insta_btn"
                         android:layout_width="55dp"
                         android:layout_height="55dp"
                         android:src="@drawable/instaicon"
-                        android:layout_marginStart="47dp"
                         android:layout_marginTop="30dp"
                         android:clickable="true"
                         android:background="?android:attr/selectableItemBackgroundBorderless"
@@ -224,12 +221,12 @@
                         android:layout_height="80dp"
                         android:src="@drawable/youtubeicon"
                         android:layout_marginStart="30dp"
-                        android:layout_marginTop="19dp"
+                        android:layout_marginTop="30dp"
                         android:background="?android:attr/selectableItemBackgroundBorderless"
                         android:clickable="true"
                         android:layout_marginBottom="30dp"/>
 
-                    <ImageView
+                   <!-- <ImageView
                         android:id="@+id/facebook_btn"
                         android:layout_width="60dp"
                         android:layout_height="60dp"
@@ -238,7 +235,7 @@
                         android:clickable="true"
                         android:background="?android:attr/selectableItemBackgroundBorderless"
                         android:layout_marginTop="27dp"
-                        android:layout_marginBottom="30dp"/>
+                        android:layout_marginBottom="30dp"/>-->
 
 
 

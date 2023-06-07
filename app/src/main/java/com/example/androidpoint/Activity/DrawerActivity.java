@@ -34,6 +34,7 @@ public class DrawerActivity extends AppCompatActivity {
     LinearLayout shareapp, tips, feedback, rate_us, about_us, ads_show, game;
 
     FrameLayout frameLayout;
+    ImageView back_menu;
 
     MainActivity mContext;
     Fragment fragment = null;
@@ -85,6 +86,7 @@ public class DrawerActivity extends AppCompatActivity {
         youtube_link = findViewById(R.id.youtube_link);
         light = findViewById(R.id.light);
         close_menu = findViewById(R.id.close_menu);
+        back_menu = findViewById(R.id.back_menu);
 
         shareapp = (LinearLayout) findViewById(R.id.shareapp);
         feedback = (LinearLayout) findViewById(R.id.feedback);
@@ -110,11 +112,16 @@ public class DrawerActivity extends AppCompatActivity {
             }
         });
 
+        back_menu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent tips = new Intent(DrawerActivity.this, MainActivity.class);
+                startActivity(tips);
+            }
+        });
         tips.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-
                 Intent tips = new Intent(DrawerActivity.this, TipsActivity.class);
                 startActivity(tips);
             }

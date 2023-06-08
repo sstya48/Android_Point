@@ -31,6 +31,7 @@
             android:layout_gravity="center_vertical"
             android:textColor="#181A20"
             android:textSize="20sp"
+            android:fontFamily="@font/poppins_semibold"
             android:textStyle="bold" />
     </LinearLayout>
 
@@ -60,6 +61,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="resize"
+                android:fontFamily="@font/poppins_semibold"
                 android:textSize="15sp" />
 
             <Button
@@ -68,6 +70,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="centercrop"
+                android:fontFamily="@font/poppins_semibold"
                 android:textSize="15sp" />
 
             <Button
@@ -76,6 +79,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="centerinside"
+                android:fontFamily="@font/poppins_semibold"
                 android:textSize="15sp" />
 
 
@@ -94,6 +98,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="fit"
+                android:fontFamily="@font/poppins_semibold"
                 android:textSize="15sp" />
 
             <Button
@@ -102,6 +107,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="placeholder"
+                android:fontFamily="@font/poppins_semibold"
                 android:textSize="15sp" />
 
             <Button
@@ -110,6 +116,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="error"
+                android:fontFamily="@font/poppins_semibold"
                 android:textSize="15sp" />
 
 
@@ -128,6 +135,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="no fade"
+                android:fontFamily="@font/poppins_semibold"
                 android:textSize="15sp" />
 
             <Button
@@ -136,6 +144,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="callback"
+                android:fontFamily="@font/poppins_semibold"
                 android:textSize="15sp" />
 
             <Button
@@ -144,6 +153,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="rotate"
+                android:fontFamily="@font/poppins_semibold"
                 android:textSize="15sp" />
 
         </LinearLayout>
@@ -159,6 +169,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Complex Rotation"
+                android:fontFamily="@font/poppins_semibold"
                 android:textSize="15sp" />
         </LinearLayout>
 

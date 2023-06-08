@@ -25,6 +25,17 @@ public class A_A22_Fragment extends Fragment {
 
         Btn_arrow=view.findViewById(R.id.Btn_arrow);
 
+        Btn_arrow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                A_card_22_Fragment a_card_22_fragment = new A_card_22_Fragment();
+                getActivity().getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.frame_container, a_card_22_fragment, "Back Button Basic")
+                        .addToBackStack(null)
+                        .commit();
+            }
+        });
+
         return view;
     }
 }

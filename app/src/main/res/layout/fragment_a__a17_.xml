@@ -31,6 +31,7 @@
             android:layout_gravity="center_vertical"
             android:textColor="#181A20"
             android:textSize="20sp"
+            android:fontFamily="@font/poppins_semibold"
             android:textStyle="bold" />
     </LinearLayout>
 
@@ -42,6 +43,7 @@
         android:layout_marginTop="50dp"
         android:gravity="center"
         android:text="Sending Email Example"
+        android:fontFamily="@font/poppins_regular"
         android:textColor="@color/black"
         android:textSize="30dp" />
 
@@ -51,6 +53,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="90dp"
-        android:text="compose_email"/>
+        android:fontFamily="@font/poppins_semibold"
+        android:text="Send Email"/>
 
 </LinearLayout>

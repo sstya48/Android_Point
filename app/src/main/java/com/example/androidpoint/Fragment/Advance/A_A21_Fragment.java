@@ -106,7 +106,7 @@ public class A_A21_Fragment extends Fragment {
         });
 
         promptInfo = new BiometricPrompt.PromptInfo.Builder()
-                .setTitle("Biometric login for my app")
+                .setTitle("Biometric login for My App")
                 .setSubtitle("Log in using your biometric credential")
                 .setNegativeButtonText("Use account password")
                 .build();

@@ -31,16 +31,18 @@
             android:layout_gravity="center_vertical"
             android:textColor="#181A20"
             android:textSize="20sp"
+            android:fontFamily="@font/poppins_semibold"
             android:textStyle="bold" />
     </LinearLayout>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Click Fingurprint"
+        android:text="Click FingerPrint"
         android:textSize="25sp"
         android:layout_gravity="center"
         android:layout_marginTop="170dp"
+        android:fontFamily="@font/poppins_semibold"
         android:textColor="@color/black"/>
 
     <ImageView

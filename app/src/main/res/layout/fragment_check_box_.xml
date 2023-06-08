@@ -35,11 +35,14 @@
             android:textStyle="bold" />
     </LinearLayout>
 
-
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginTop="100dp"
         android:gravity="center">
 
     <CheckBox
@@ -48,21 +51,23 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:text="Pizza"
-        android:paddingLeft="10dp" />
+        android:paddingLeft="5dp" />
 
     <CheckBox
         android:id="@+id/checkBox2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
-        android:text="Coffee" />
+        android:text="Coffee"
+        android:paddingLeft="5dp"/>
 
     <CheckBox
         android:id="@+id/checkBox3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="70dp"
-        android:text="Burger" />
+        android:text="Burger"
+        android:paddingLeft="5dp"/>
 
     <Button
         android:id="@+id/button"
@@ -72,6 +77,8 @@
         android:text="Order" />
 
     </RelativeLayout>
+
+    </ScrollView>
 
 </LinearLayout>
 

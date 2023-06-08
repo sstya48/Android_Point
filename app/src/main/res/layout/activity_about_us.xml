@@ -37,24 +37,24 @@
 
     </LinearLayout>
 
-
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:gravity="center"
-        android:background="@color/offwhite">
+        android:background="@drawable/feedback_bg_button">
 
         <ImageView
             android:layout_width="120dp"
             android:layout_height="120dp"
             android:layout_marginTop="50dp"
             android:layout_gravity="center"
-            android:src="@drawable/logo_about"
-            />
+            android:src="@drawable/logo_about" />
 
-
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -266,5 +266,9 @@
             </LinearLayout>
 
         </LinearLayout>
+
+        </ScrollView>
+
     </LinearLayout>
+
 </LinearLayout>

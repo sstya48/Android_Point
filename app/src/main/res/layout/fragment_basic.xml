@@ -141,7 +141,6 @@
                                 android:gravity="center"
                                 android:orientation="vertical">
 
-
                                 <FrameLayout
                                     android:layout_width="60dp"
                                     android:layout_height="60dp"

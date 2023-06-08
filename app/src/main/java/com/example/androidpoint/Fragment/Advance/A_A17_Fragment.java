@@ -20,7 +20,7 @@ import com.example.androidpoint.R;
 public class A_A17_Fragment extends Fragment {
 
     AppCompatImageView Btn_arrow;
- Button sendEmail;
+    Button sendEmail;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {

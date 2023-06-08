@@ -200,7 +200,6 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
                         android:layout_marginTop="15dp"
                         android:fontFamily="@font/poppins_semibold"
                         android:gravity="center"
@@ -245,17 +244,14 @@
                              android:layout_marginTop="27dp"
                              android:layout_marginBottom="30dp"/>-->
 
-
                     </LinearLayout>
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:layout_marginTop="10dp"
+                        android:gravity="center"
                         android:layout_marginBottom="10dp"
                         android:fontFamily="@font/poppins_semibold"
-                        android:gravity="center"
                         android:text="Thank You"
                         android:textColor="@color/alphaback"
                         android:textSize="15sp" />

@@ -33,6 +33,7 @@
             android:layout_gravity="center_vertical"
             android:textColor="#181A20"
             android:textSize="20sp"
+            android:fontFamily="@font/poppins_semibold"
             android:textStyle="bold" />
     </LinearLayout>
 
@@ -50,9 +51,10 @@
             android:orientation="vertical">
 
             <ImageView
-                android:layout_width="150dp"
-                android:layout_height="150dp"
-                android:src="@drawable/appicn"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:src="@drawable/logo_about"
+                android:layout_marginTop="15dp"
                 android:layout_gravity="center_horizontal" />
 
             <TextView
@@ -62,14 +64,15 @@
                 android:textColor="@color/black"
                 android:textSize="25sp"
                 android:textAlignment="center"
+                android:fontFamily="@font/poppins_semibold"
                 android:text="Registration Form"/>
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
-                android:textColor="@color/white"
                 android:textAlignment="center"
+                android:fontFamily="@font/poppins_regular"
                 android:text="SIGN UP TO LEARN QUICKLY"/>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -83,6 +86,7 @@
                     android:layout_height="wrap_content"
                     android:inputType="text"
                     android:layout_margin="10dp"
+                    android:fontFamily="@font/poppins_regular"
                     android:ems="10" />
 
             </com.google.android.material.textfield.TextInputLayout>
@@ -98,6 +102,7 @@
                     android:layout_height="wrap_content"
                     android:inputType="textEmailAddress"
                     android:layout_margin="10dp"
+                    android:fontFamily="@font/poppins_regular"
                     android:ems="10" />
 
             </com.google.android.material.textfield.TextInputLayout>
@@ -113,6 +118,7 @@
                     android:layout_height="wrap_content"
                     android:inputType="phone"
                     android:layout_margin="10dp"
+                    android:fontFamily="@font/poppins_regular"
                     android:ems="10" />
 
             </com.google.android.material.textfield.TextInputLayout>
@@ -129,6 +135,7 @@
                     android:layout_height="wrap_content"
                     android:inputType="textPassword"
                     android:layout_margin="10dp"
+                    android:fontFamily="@font/poppins_regular"
                     android:ems="10" />
 
             </com.google.android.material.textfield.TextInputLayout>
@@ -139,6 +146,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="@color/black"
+                android:fontFamily="@font/poppins_semibold"
                 android:text="Sign Up" />
 
             <TextView
@@ -148,7 +156,9 @@
                 android:layout_marginTop="7dp"
                 android:textColor="@color/blue"
                 android:textAlignment="center"
-                android:text="Singin"/>
+                android:fontFamily="@font/poppins_semibold"
+                android:layout_marginBottom="10dp"
+                android:text="Sign In"/>
 
         </LinearLayout>
 

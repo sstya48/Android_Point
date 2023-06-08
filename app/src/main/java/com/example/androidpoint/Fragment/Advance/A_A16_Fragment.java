@@ -1,13 +1,8 @@
 package com.example.androidpoint.Fragment.Advance;
 
-import android.Manifest;
 import android.annotation.SuppressLint;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
-import androidx.appcompat.widget.AppCompatImageView;
-import androidx.core.app.ActivityCompat;
-import androidx.core.content.ContextCompat;
-import androidx.fragment.app.Fragment;
 import android.telephony.SmsManager;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -16,11 +11,15 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import androidx.appcompat.widget.AppCompatImageView;
+import androidx.fragment.app.Fragment;
+
 import com.example.androidpoint.R;
+
 public class A_A16_Fragment extends Fragment {
 
-    AppCompatImageView Btn_arrow;
     private static final int PERMISSION_RQST_SEND = 0;
+    AppCompatImageView Btn_arrow;
     Button btnSendSMS;
     String phone;
     EditText myMessage, phoneNo;
@@ -33,9 +32,7 @@ public class A_A16_Fragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_a__a16_, container, false);
 
 
-
-
-        Btn_arrow=view.findViewById(R.id.Btn_arrow);
+        Btn_arrow = view.findViewById(R.id.Btn_arrow);
 
         Btn_arrow.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -54,22 +51,25 @@ public class A_A16_Fragment extends Fragment {
         myMessage = view.findViewById(R.id.sms);
         btnSendSMS.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
-                sendSMSMessage();
+                sendSMS(phoneNo.getText().toString(), myMessage.getText().toString());
             }
         });
         return view;
     }
-    protected void sendSMSMessage() {
-        phone = phoneNo.getText().toString();
-        message = myMessage.getText().toString();
 
-        if (ContextCompat.checkSelfPermission(getActivity(),Manifest.permission.SEND_SMS) != PackageManager.PERMISSION_GRANTED) {
-            if (ActivityCompat.shouldShowRequestPermissionRationale(getActivity(),Manifest.permission.SEND_SMS)) {
-            }
-            else { ActivityCompat.requestPermissions(getActivity(), new String[]{Manifest.permission.SEND_SMS}, PERMISSION_RQST_SEND);
-            }
+    public void sendSMS(String phoneNo, String msg) {
+        try {
+            SmsManager smsManager = SmsManager.getDefault();
+            smsManager.sendTextMessage(phoneNo, null, msg, null, null);
+            Toast.makeText(getActivity(), "Message Sent Successfully!!",
+                    Toast.LENGTH_LONG).show();
+        } catch (Exception ex) {
+            Toast.makeText(getActivity(), ex.getMessage().toString(),
+                    Toast.LENGTH_LONG).show();
+            ex.printStackTrace();
         }
     }
+
     @Override
     public void onRequestPermissionsResult(int requestCode, String permissions[], int[] grantResults) {
         switch (requestCode) {
@@ -77,8 +77,9 @@ public class A_A16_Fragment extends Fragment {
                 if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                     SmsManager smsManager = SmsManager.getDefault();
                     smsManager.sendTextMessage(String.valueOf(phoneNo), null, message, null, null);
-                    Toast.makeText(getActivity(), "SMS sent.",Toast.LENGTH_LONG).show();
-                } else {Toast.makeText(getActivity(), "SMS failed, you may try again later.", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getActivity(), "SMS sent.", Toast.LENGTH_LONG).show();
+                } else {
+                    Toast.makeText(getActivity(), "SMS failed, you may try again later.", Toast.LENGTH_LONG).show();
                     return;
                 }
             }

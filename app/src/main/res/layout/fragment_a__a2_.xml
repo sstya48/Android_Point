@@ -31,6 +31,7 @@
             android:layout_gravity="center_vertical"
             android:textColor="#181A20"
             android:textSize="20sp"
+            android:fontFamily="@font/poppins_semibold"
             android:textStyle="bold" />
     </LinearLayout>
 
@@ -47,6 +48,7 @@
         android:layout_height="wrap_content"
         android:text="ToggleButton"
         android:textOff="Off"
+        android:fontFamily="@font/poppins_semibold"
         android:textOn="On" />
 
     <ToggleButton
@@ -55,6 +57,7 @@
         android:layout_height="wrap_content"
         android:text="ToggleButton"
         android:textOff="Off"
+        android:fontFamily="@font/poppins_semibold"
         android:textOn="On" />
 
     </LinearLayout>
@@ -69,7 +72,8 @@
             android:id="@+id/button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Submit" />
+            android:text="Submit"
+            android:fontFamily="@font/poppins_semibold"/>
 
     </LinearLayout>
 

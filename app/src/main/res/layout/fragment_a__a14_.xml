@@ -8,6 +8,7 @@
     tools:context=".Fragment.Advance.A_A14_Fragment">
 
     <LinearLayout
+        android:id="@+id/ll1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/layout_bg">
@@ -32,18 +33,30 @@
             android:layout_gravity="center_vertical"
             android:textColor="#181A20"
             android:textSize="20sp"
+            android:fontFamily="@font/poppins_semibold"
             android:textStyle="bold" />
     </LinearLayout>
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll1"
+        >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="60dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="3dp"
         android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_down_24"
         android:text="English (India)"
         android:textColor="@color/white"
         android:textSize="14sp"
+        android:fontFamily="@font/poppins_regular"
         tools:ignore="HardcodedText,UseCompatTextViewDrawableXml" />
 
     <LinearLayout
@@ -70,6 +83,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
             android:background="@drawable/edittext_background"
+            android:fontFamily="@font/poppins_regular"
             android:hint="username"
             android:inputType="text"
             android:padding="15dp"
@@ -83,6 +97,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:background="@drawable/edittext_background"
+            android:fontFamily="@font/poppins_regular"
             android:hint="Password"
             android:inputType="textPassword"
             android:padding="15dp"
@@ -95,6 +110,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="25dp"
             android:background="@drawable/button_border"
+            android:fontFamily="@font/poppins_semibold"
             android:text="Log In"
             android:textAllCaps="false"
             android:textColor="@color/white"
@@ -107,6 +123,7 @@
             android:layout_marginTop="20dp"
             android:text="Forgot your login detail? Get help signing in."
             android:textColor="@color/white"
+            android:fontFamily="@font/poppins_regular"
             android:textSize="14sp" />
 
         <LinearLayout
@@ -130,6 +147,7 @@
                 android:layout_marginTop="5sp"
                 android:layout_marginEnd="8dp"
                 android:text="OR"
+                android:fontFamily="@font/poppins_semibold"
                 android:textColor="#9a9a9a"
                 android:textSize="14sp"
                 android:textStyle="bold" />
@@ -144,14 +162,15 @@
         </LinearLayout>
 
         <TextView
-            android:layout_width="150dp"
-            android:layout_height="38dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:gravity="center"
             android:padding="4dp"
             android:text="Log in with Facebook"
             android:textColor="@color/white"
             android:textSize="15sp"
+            android:fontFamily="@font/poppins_regular"
             android:textStyle="bold" />
 
     </LinearLayout>
@@ -160,20 +179,24 @@
         android:layout_width="match_parent"
         android:layout_height="1.5dp"
         android:background="#e2e2e2"
+        android:layout_marginTop="40dp"
         android:layout_marginBottom="8dp"/>
 
     <TextView
         android:id="@+id/sign_up"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="0dp"
+        android:layout_marginBottom="5dp"
         android:background="@drawable/edittext_background"
-        android:gravity="center_horizontal"
+        android:gravity="center_horizontal|bottom"
         android:padding="15sp"
         android:text="Don't have an account? sing up."
         android:textAlignment="center"
         android:textColor="@color/white"
+        android:fontFamily="@font/poppins_regular"
         android:textSize="12sp" />
 
+    </LinearLayout>
+
+    </ScrollView>
 </RelativeLayout>

@@ -117,7 +117,9 @@
                     android:layout_alignParentBottom="true"
                     android:layout_gravity="bottom"
                     app:adSize="BANNER"
-                    app:adUnitId="ca-app-pub-3940256099942544/6300978111" />
+                    app:adUnitId="@string/Banner_AdOne_unit_id"
+                    />
+<!--                    app:adUnitId="ca-app-pub-3940256099942544/6300978111" />-->
 
             </RelativeLayout>
 

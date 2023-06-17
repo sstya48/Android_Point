@@ -217,13 +217,11 @@
 
     <string name="app_id">ca-app-pub-3471867131564882~3012371608</string>
 
-    // publish id Interstitial ad
-    one==================================================================================================
-    <!--    <string name="Interstitial_AdOne_unit_id">ca-app-pub-3471867131564882/1430577060</string>-->
+    // publish id Interstitial ad one==================================================================================================
+        <string name="Interstitial_AdOne_unit_id">ca-app-pub-3471867131564882/1430577060</string>
 
-    // test id Interstitial ad
-    one==================================================================================================
-    <string name="Interstitial_AdOne_unit_id">ca-app-pub-3940256099942544/1033173712</string>
+    // test id Interstitial ad one==================================================================================================
+<!--    <string name="Interstitial_AdOne_unit_id">ca-app-pub-3940256099942544/1033173712</string>-->
 
 
     //Banner
@@ -233,10 +231,9 @@
 
     <!--    <string name="Banner_Ad_Advance_unit_id">ca-app-pub-3471867131564882/6540816409</string>-->
 
-    //BannerAdBasic ==> Basic publish
-    id========================================================================================================================
+    //BannerAdBasic ==> Basic publish id For all Banner in one========================================================================================================================
 
-    <!--    <string name="Banner_Ad_Basic_unit_id">ca-app-pub-3471867131564882/7545393426</string>-->
+        <string name="Banner_AdOne_unit_id">ca-app-pub-3471867131564882/7545393426</string>
 
 
     //BannerAdLearn ==> Learn Publish
@@ -248,7 +245,7 @@
     // test id BannerAdOne ad
     one==================================================================================================
 
-    <string name="Banner_AdOne_unit_id">ca-app-pub-3940256099942544/6300978111</string>
+<!--    <string name="Banner_AdOne_unit_id">ca-app-pub-3940256099942544/6300978111</string>-->
 
 
     //=======================================================================================================================

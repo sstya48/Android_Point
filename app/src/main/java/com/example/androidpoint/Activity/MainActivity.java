@@ -1,14 +1,9 @@
 package com.example.androidpoint.Activity;
 
 import android.annotation.SuppressLint;
-import android.app.AlertDialog;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
-import android.os.Looper;
-import android.util.Log;
-import android.view.KeyEvent;
 import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
@@ -19,7 +14,6 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
-import com.example.androidpoint.CustomProgressDialog;
 import com.example.androidpoint.Fragment.Advance.Advance;
 import com.example.androidpoint.Fragment.Basic.Basic;
 import com.example.androidpoint.Fragment.Learn.Learn;
@@ -28,17 +22,18 @@ import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.MobileAds;
 import com.google.android.material.tabs.TabLayout;
+
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+    public FragmentManager fragmentManager = getSupportFragmentManager();
     TabLayout included;
     FrameLayout frameLayout;
     Fragment fragment = null;
-    public FragmentManager fragmentManager = getSupportFragmentManager();
     ImageView btnMenu;
     AdView adView_main_all;
 
     FragmentTransaction fragmentTransaction;
 
-    boolean isPressed =  false;
+    boolean isPressed = false;
 
    /* boolean doubleBackToExitPressedOnce = false;
 
@@ -71,6 +66,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         fragmentTransaction.replace(R.id.frame_container, fragment);
         fragmentTransaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
         fragmentTransaction.commit();
+
 
         //Banner Ad id====================================
         adView_main_all = findViewById(R.id.adView_main_all);
@@ -112,15 +108,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
                 ft.commit();
             }
+
             @Override
             public void onTabUnselected(TabLayout.Tab tab) {
 
             }
+
             @Override
             public void onTabReselected(TabLayout.Tab tab) {
             }
         });
     }
+
     @Override
     public void onClick(View view) {
         switch (view.getId()) {
@@ -129,15 +128,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 startActivity(i);*/
         }
     }
+
     @Override
     public void onBackPressed() {
 
-        if (isPressed){
+        if (isPressed) {
             finishAffinity();
 
             System.exit(0);
-        }
-        else {
+        } else {
             Toast.makeText(getApplicationContext(), "Please click BACK again to exit", Toast.LENGTH_SHORT).show();
 
             isPressed = true;
@@ -148,7 +147,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 isPressed = false;
             }
         };
-        new Handler().postDelayed(runnable,2000);
+        new Handler().postDelayed(runnable, 2000);
 
       /*  if (mRecentlyBackPressed) {
             mExitHandler.removeCallbacks(mExitRunnable);
@@ -201,7 +200,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     public void checkFirstRun() {
         boolean isFirstRun = getSharedPreferences("PREFERENCE", MODE_PRIVATE).getBoolean("isFirstRun", true);
-        if (isFirstRun){
+        if (isFirstRun) {
             // Place your dialog code here to display the dialog
 
             getSharedPreferences("PREFERENCE", MODE_PRIVATE)

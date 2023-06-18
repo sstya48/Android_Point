@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace 'com.example.androidpoint'
+    namespace 'com.androidalians.androidpoint'
     compileSdk 33
 
     defaultConfig {
-        applicationId "com.example.androidpoint"
+        applicationId "com.androidalians.androidpoint"
         minSdk 28
         targetSdk 33
         versionCode 1
@@ -96,7 +96,7 @@ dependencies {
 
     implementation 'com.github.chrisbanes.photoview:library:1.2.4'
 
-    implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.17'
+    implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.22'
 
 
 

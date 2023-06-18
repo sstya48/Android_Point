@@ -9,7 +9,7 @@
       "client_info": {
         "mobilesdk_app_id": "1:295742521148:android:3c23fbe697e53a5967a839",
         "android_client_info": {
-          "package_name": "com.example.androidpoint"
+          "package_name": "com.androidalians.androidpoint"
         }
       },
       "oauth_client": [
@@ -17,7 +17,7 @@
           "client_id": "295742521148-libcf45u6bms2otd01o70fft2ossossn.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.example.androidpoint",
+            "package_name": "com.androidalians.androidpoint",
             "certificate_hash": "1613867032247367788ccf1b8a6bfb0059aafd3c"
           }
         },

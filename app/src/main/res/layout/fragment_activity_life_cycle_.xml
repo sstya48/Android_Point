@@ -16,23 +16,23 @@
             android:id="@+id/cycle_demo_arrow"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:layout_marginTop="13dp"
-            android:layout_marginStart="10dp"
             android:layout_gravity="center_vertical"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="13dp"
             android:layout_marginBottom="12dp"
-            android:padding="6dp"
             android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:padding="6dp"
             android:src="@drawable/arrow" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:text="@string/Activity_LifeCycle"
             android:layout_gravity="center_vertical"
+            android:layout_marginStart="10dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="@string/Activity_LifeCycle"
             android:textColor="#181A20"
             android:textSize="20sp"
-            android:fontFamily="@font/poppins_semibold"
             android:textStyle="bold" />
     </LinearLayout>
 
@@ -43,12 +43,13 @@
         android:gravity="center"
         >
 
-        <androidx.appcompat.widget.AppCompatImageView
+        <ImageView
+            android:id="@+id/img1"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:src="@drawable/activity_cycle"
             android:rotation="270"
             android:scaleType="centerInside"
+            android:src="@drawable/activity_cycle"
             />
 
 

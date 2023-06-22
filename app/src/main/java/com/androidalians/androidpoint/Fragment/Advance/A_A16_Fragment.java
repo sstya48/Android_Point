@@ -46,7 +46,7 @@ public class A_A16_Fragment extends Fragment {
         });
 
 
-        btnSendSMS = view.findViewById(R.id.send);
+     /*   btnSendSMS = view.findViewById(R.id.send);
         phoneNo = view.findViewById(R.id.call);
         myMessage = view.findViewById(R.id.sms);
         btnSendSMS.setOnClickListener(new View.OnClickListener() {
@@ -84,5 +84,7 @@ public class A_A16_Fragment extends Fragment {
                 }
             }
         }
+    }*/
+        return view;
     }
 }

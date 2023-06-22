@@ -338,7 +338,7 @@ public class DrawerActivity extends AppCompatActivity {
         final String appPakageName = context.getPackageName();
         Intent sendIntent = new Intent();
         sendIntent.setAction(Intent.ACTION_SEND);
-        sendIntent.putExtra(Intent.EXTRA_TEXT, "Download Now : https://play.google.com/store/apps/details?id=" + appPakageName);
+        sendIntent.putExtra(Intent.EXTRA_TEXT, "For Quick Learn Android App Development From Basic to Advance Download the App And Start Learning... https://play.google.com/store/apps/details?id=" + appPakageName);
         sendIntent.setType("text/plain");
         context.startActivity(sendIntent);
         Log.d("Package name Share App",appPakageName);

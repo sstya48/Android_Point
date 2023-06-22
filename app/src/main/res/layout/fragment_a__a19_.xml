@@ -36,6 +36,13 @@
             android:textStyle="bold" />
     </LinearLayout>
 
+
+    <SurfaceView
+        android:id="@+id/PREVIEW"
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        />
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

@@ -32,7 +32,7 @@ public class VibratePhoneDemo extends Fragment {
             public void onClick(View arg0) {
 
                 Vibrator vibrator = (Vibrator) getActivity().getSystemService(Context.VIBRATOR_SERVICE);
-                vibrator.vibrate(50);
+                vibrator.vibrate(500);
 
             }
         });

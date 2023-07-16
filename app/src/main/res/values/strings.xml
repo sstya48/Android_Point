@@ -188,6 +188,20 @@
     <string name="DatabaseHelper_java">DatabaseHelper.java</string>
     <string name="Student_java">StudentModel.java</string>
     <string name="ArrayAdapter_java">ArrayAdapter.java</string>
+    <string name="offline_ludo">Offline Ludo</string>
+    <string name="tic">Tic Tac Tic</string>
+    <string name="chess">Chess 3D</string>
+    <string name="ball_Pool">8 Ball Pool</string>
+    <string name="archery">Archery</string>
+    <string name="om">Om Nom Run</string>
+    <string name="paste">Paste</string>
+    <string name="translate">Translate</string>
+    <string name="camera">Camera</string>
+    <string name="play_again">Play Again</string>
+    <string name="reset_game">Reset Game</string>
+    <string name="winer_player">Winer Player</string>
+
+
 
 
     <!-- TODO: Remove or change this placeholder text -->

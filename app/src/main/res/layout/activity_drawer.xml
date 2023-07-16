@@ -41,13 +41,13 @@
                     android:layout_marginTop="30dp"
                     android:layout_marginBottom="30dp">
 
-                        <ImageView
-                            android:id="@+id/iv_user"
-                            android:layout_width="70dp"
-                            android:layout_height="70dp"
-                            android:layout_marginStart="16dp"
-                            android:scaleType="centerCrop"
-                            android:src="@drawable/img" />
+                    <ImageView
+                        android:id="@+id/iv_user"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_marginStart="16dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/img" />
 
                     <androidx.appcompat.widget.AppCompatImageView
                         android:id="@+id/close_menu"
@@ -92,9 +92,7 @@
 
                     </LinearLayout>
 
-
                 </RelativeLayout>
-
 
                 <LinearLayout
                     android:id="@+id/abc"
@@ -120,9 +118,8 @@
                             android:text="@string/Account"
                             android:textColor="@color/alphaback"
                             android:textSize="20sp" />
+
                     </LinearLayout>
-
-
 
                     <LinearLayout
                         android:id="@+id/youtube_link"
@@ -145,8 +142,7 @@
                                 android:layout_width="30dp"
                                 android:layout_height="30dp"
                                 android:src="@drawable/youtube_drawer"
-                                android:layout_gravity="center"
-                                />
+                                android:layout_gravity="center"/>
 
                         </FrameLayout>
 
@@ -176,7 +172,7 @@
 
                         </LinearLayout>
 
-                        </LinearLayout>
+                    </LinearLayout>
 
                     <View
                         android:layout_width="match_parent"
@@ -214,7 +210,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="@string/Game"
+                            android:text="@string/game"
                             android:layout_marginStart="20dp"
                             android:textSize="20sp"
                             android:fontFamily="@font/poppins_regular"
@@ -237,7 +233,6 @@
                         </LinearLayout>
 
                     </LinearLayout>
-
 
                     <View
                         android:layout_width="match_parent"
@@ -300,10 +295,6 @@
 
                     </LinearLayout>
 
-
-
-
-
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -324,8 +315,6 @@
 
                     </LinearLayout>
 
-
-
                     <LinearLayout
                         android:id="@+id/shareapp"
                         android:layout_width="match_parent"
@@ -335,8 +324,7 @@
                         android:paddingEnd="10dp"
                         android:clickable="true"
                         android:paddingStart="10dp"
-                        android:foreground="?android:attr/selectableItemBackground"
-                        >
+                        android:foreground="?android:attr/selectableItemBackground">
 
                         <FrameLayout
                             android:layout_width="40dp"
@@ -398,24 +386,21 @@
                         android:paddingEnd="10dp"
                         android:paddingStart="10dp"
                         android:clickable="true"
-                        android:foreground="?android:attr/selectableItemBackground"
-                        >
-                        <!--
-                                <FrameLayout
+                        android:foreground="?android:attr/selectableItemBackground">
+
+                        <!-- <FrameLayout
                                     android:layout_width="40dp"
                                     android:layout_height="40dp"
                                     android:background="@drawable/menu_icon_bg"
                                     android:backgroundTint="#1F8ACF"
-                                    android:layout_gravity="center"
-                                    >-->
+                                    android:layout_gravity="center" >-->
+
                         <ImageView
                             android:layout_width="40dp"
                             android:layout_height="40dp"
                             android:src="@drawable/rateus"
                             android:layout_gravity="center"
-                            android:paddingEnd="3dp"
-
-                            />
+                            android:paddingEnd="3dp" />
 
                         <!--        </FrameLayout>-->
 
@@ -447,7 +432,6 @@
 
                     </LinearLayout>
 
-
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
@@ -464,28 +448,23 @@
                         android:paddingEnd="10dp"
                         android:paddingStart="10dp"
                         android:clickable="true"
-                        android:foreground="?android:attr/selectableItemBackground"
-                        >
+                        android:foreground="?android:attr/selectableItemBackground">
 
                         <FrameLayout
                             android:layout_width="40dp"
                             android:layout_height="40dp"
                             android:background="@drawable/menu_icon_bg"
                             android:backgroundTint="#1F8ACF"
-                            android:layout_gravity="center"
-                            >
+                            android:layout_gravity="center">
+
                             <ImageView
                                 android:layout_width="30dp"
                                 android:layout_height="30dp"
                                 android:src="@drawable/videoad"
                                 android:layout_gravity="center"
-                                android:paddingEnd="3dp"
-
-                                />
+                                android:paddingEnd="3dp" />
 
                         </FrameLayout>
-
-
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -513,7 +492,6 @@
                         </LinearLayout>
 
                     </LinearLayout>
-
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -598,15 +576,12 @@
 
                     </LinearLayout>
 
-
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
                         android:background="#c4c4c4"
                         android:layout_marginLeft="10dp"
                         android:layout_marginRight="10dp"/>
-
-
 
                     <LinearLayout
                         android:id="@+id/about_us"
@@ -617,8 +592,7 @@
                         android:clickable="true"
                         android:paddingEnd="10dp"
                         android:paddingStart="10dp"
-                        android:foreground="?android:attr/selectableItemBackground"
-                        >
+                        android:foreground="?android:attr/selectableItemBackground">
 
                         <FrameLayout
                             android:layout_width="40dp"
@@ -670,6 +644,65 @@
                         android:layout_marginLeft="10dp"
                         android:layout_marginRight="10dp"/>
 
+                    <LinearLayout
+                        android:id="@+id/matirial"
+                        android:layout_width="match_parent"
+                        android:layout_height="55dp"
+                        android:orientation="horizontal"
+                        android:gravity="start|center"
+                        android:clickable="true"
+                        android:paddingEnd="10dp"
+                        android:paddingStart="10dp"
+                        android:foreground="?android:attr/selectableItemBackground">
+
+                        <FrameLayout
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:background="@drawable/menu_icon_bg"
+                            android:backgroundTint="#9AF2FD">
+
+                            <ImageView
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:src="@drawable/matirial"
+                                android:layout_gravity="center"/>
+
+                        </FrameLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/matirials"
+                            android:layout_marginStart="20dp"
+                            android:textSize="20sp"
+                            android:fontFamily="@font/poppins_regular"
+                            android:textColor="@color/alphaback"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="55dp"
+                            android:orientation="horizontal"
+                            android:gravity="end|center"
+                            android:paddingEnd="10dp"
+                            android:paddingStart="10dp">
+
+                            <ImageView
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:src="@drawable/right_back_drower"
+                                android:layout_gravity="center" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#c4c4c4"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"/>
+
                 </LinearLayout>
 
                 <TextView
@@ -689,6 +722,5 @@
         </ScrollView>
 
     </com.google.android.material.navigation.NavigationView>
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -2,6 +2,7 @@ package com.androidalians.androidpoint.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatImageView;
+import androidx.cardview.widget.CardView;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
@@ -14,171 +15,75 @@ import android.widget.Toast;
 
 import com.androidalians.androidpoint.R;
 
-public class Game extends AppCompatActivity implements View.OnClickListener {
-    boolean playerOneActive;
-    private TextView playerOneScore, playerTwoScore, playerStatus;
-    private Button[] buttons = new Button[9];
-    private Button reset, playagain;
-    int[] gameState = {2,2,2,2,2,2,2,2,2};
-    int[][] winningPositions = {{0,1,2}, {3,4,5}, {6,7,8}, {0,3,6},
-
-            {1,4,7}, {2,5,8}, {0,4,8}, {2,4,6}};
-
-    int rounds;
-
-    AppCompatImageView game_back_arrow;
-    private int playerOneScoreCount, playerTwoScoreCount;
-
-    @SuppressLint("MissingInflatedId")
+public class Game extends AppCompatActivity {
+    AppCompatImageView feed_back_arrow;
+    CardView game1, game2, game3, game4, game5, game6;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game);
 
-                playerOneScore = findViewById(R.id.score_Player1);
-                playerTwoScore = findViewById(R.id.score_Player2);
-                playerStatus = findViewById(R.id.textStatus);
-                reset = findViewById(R.id.btn_reset);
-                playagain = findViewById(R.id.btn_play_again);
-                game_back_arrow = findViewById(R.id.game_back_arrow);
+        feed_back_arrow = findViewById(R.id.feed_back_arrow);
+        game1 = findViewById(R.id.game1);
+        game2 = findViewById(R.id.game2);
+        game3 = findViewById(R.id.game3);
+        game4 = findViewById(R.id.game4);
+        game5 = findViewById(R.id.game5);
+        game6 = findViewById(R.id.game6);
 
-
-        game_back_arrow.setOnClickListener(new View.OnClickListener() {
+        feed_back_arrow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(Game.this, MainActivity.class);
                 startActivity(intent);
             }
         });
-
-                buttons[0] = findViewById(R.id.btn0);
-                buttons[1] = findViewById(R.id.btn1);
-                buttons[2] = findViewById(R.id.btn2);
-                buttons[3] = findViewById(R.id.btn3);
-                buttons[4] = findViewById(R.id.btn4);
-                buttons[5] = findViewById(R.id.btn5);
-                buttons[6] = findViewById(R.id.btn6);
-                buttons[7] = findViewById(R.id.btn7);
-                buttons[8] = findViewById(R.id.btn8);
-
-                for(int i=0; i<buttons.length; i++)
-
-                {
-                    buttons[i].setOnClickListener(this);
-                }
-
-                playerOneScoreCount = 0;
-                playerTwoScoreCount = 0;
-                playerOneActive = true;
-                rounds = 0;
-            }
-
+        game1.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view)
-            {
-                if(!((Button)view).getText().toString().equals(""))
-
-                {
-
-
-                }
-
-                else if(checkWinner())
-                {
-                }
-
-                String buttonID  = view.getResources().getResourceEntryName(view.getId());
-                int gameStatePointer = Integer.parseInt(buttonID.substring(buttonID.length()-1,buttonID.length()));
-
-
-                if(playerOneActive)
-                {
-                    ((Button)view).setText("✖");
-                    ((Button)view).setTextColor(Color.parseColor("#FF0000"));
-                    gameState[gameStatePointer] = 0;
-                }
-
-                else
-                {
-                    ((Button)view).setText("O");
-                    ((Button)view).setTextColor(Color.parseColor("#FF58DD5D"));
-                    gameState[gameStatePointer] = 1;
-                }
-                rounds++;
-                if(checkWinner())
-                {
-                    if(playerOneActive)
-                    {
-                        playerOneScoreCount++;
-                        updatePlayerScore();
-                        playerStatus.setText("Player-1 has won");
-                        Toast.makeText(getApplicationContext(),"Player-1 has won",Toast.LENGTH_SHORT).show();
-                    }else
-                    {
-                        playerTwoScoreCount++;
-                        updatePlayerScore();
-                        playerStatus.setText("Player-2 has won");
-                        Toast.makeText(getApplicationContext(),"Player-2 has won",Toast.LENGTH_SHORT).show();
-
-                    }
-
-                }
-
-                else if(rounds==9)
-                {
-                    playerStatus.setText("No Winner");
-                }
-                else
-                {
-                    playerOneActive = !playerOneActive;
-                }
-
-                reset.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        playAgain();
-                        playerOneScoreCount= 0;
-                        playerTwoScoreCount= 0;
-                        updatePlayerScore();
-                    }
-                });
-
-                playagain.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        playAgain();
-                    }
-                });
+            public void onClick(View view) {
+                Intent intent = new Intent(Game.this, LudoGame.class);
+                startActivity(intent);
             }
-            private boolean checkWinner()
-            {
-                boolean winnerResults  = false;
-                for (int[] winningPositions: winningPositions)
-                {
-                    if(gameState[winningPositions[0]]==gameState[winningPositions[1]]&&
-                            gameState[winningPositions[1]]==gameState[winningPositions[2]] &&
-                            gameState[winningPositions[0]]!=2)
-                    {
-                        winnerResults = true;
-                    }
-                }
-                return winnerResults;
-            }
+        });
 
-            private void playAgain()
-            {
-                rounds = 0;
-                playerOneActive = true;
-                for (int i=0; i<buttons.length; i++)
-                {
-                    gameState[i] = 2;
-                    buttons[i].setText("");
-                }
-                playerStatus.setText("Status");
+        game2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Game.this, TicTocTic.class);
+                startActivity(intent);
             }
-            private void updatePlayerScore()
-            {
-                playerOneScore.setText(Integer.toString(playerOneScoreCount));
-                playerTwoScore.setText(Integer.toString(playerTwoScoreCount));
+        });
+
+        game3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent chess = new Intent(Game.this, ChessGame.class);
+                startActivity(chess);
             }
-        }
+        });
+
+
+        game4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent ballpool = new Intent(Game.this, BallPoolGame.class);
+                startActivity(ballpool);
+            }
+        });
+
+        game5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent arcy = new Intent(Game.this, ArcheryGame.class);
+                startActivity(arcy);
+            }
+        });
+        game6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent run = new Intent(Game.this, NomRunGame.class);
+                startActivity(run);
+            }
+        });
+    }
+}

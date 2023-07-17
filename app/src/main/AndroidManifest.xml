@@ -59,7 +59,26 @@
             android:exported="false"
             android:screenOrientation="landscape" />
         <activity
+            android:name=".Activity.LudoGame"
+            android:exported="false"
+            android:screenOrientation="landscape" />
+        <activity
             android:name=".Activity.Game"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.TicTocTic"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.ChessGame"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.BallPoolGame"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.ArcheryGame"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.NomRunGame"
             android:exported="false" />
         <activity
             android:name=".Activity.AdsActivity"
@@ -73,6 +92,9 @@
         </activity>
         <activity
             android:name=".Activity.Feedback"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.MatirialWeb"
             android:exported="false" />
         <activity
             android:name=".Activity.OnBoardingScreenActivity"

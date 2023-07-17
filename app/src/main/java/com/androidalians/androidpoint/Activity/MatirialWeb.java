@@ -18,12 +18,8 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 public class MatirialWeb extends AppCompatActivity {
-
     WebView matirial;
-
     Timer timer;
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
 import androidx.appcompat.widget.AppCompatImageView;
 import androidx.fragment.app.Fragment;
-
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
@@ -17,11 +16,9 @@ import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
-import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-
 import com.androidalians.androidpoint.BuildConfig;
 import com.androidalians.androidpoint.R;
 import com.androidalians.androidpoint.SaveState;
@@ -31,30 +28,17 @@ import com.google.android.gms.ads.FullScreenContentCallback;
 import com.google.android.gms.ads.LoadAdError;
 import com.google.android.gms.ads.interstitial.InterstitialAd;
 import com.google.android.gms.ads.interstitial.InterstitialAdLoadCallback;
-
 public class DrawerActivity extends AppCompatActivity {
 
-    LinearLayout shareapp, tips, feedback, rate_us, about_us, ads_show, game;
-
-    FrameLayout frameLayout;
+    LinearLayout shareapp, tips, feedback, rate_us, about_us, ads_show, game, matirial;
     ImageView back_menu;
-
-    MainActivity mContext;
     Fragment fragment = null;
-    //Switch mode_dark;
     LinearLayout youtube_link;
     ImageView light;
-
-
     AppCompatImageView close_menu;
-    //dark mode
-    boolean isNightModeOn;
     SaveState saveState;
-
     TextView version1, version2;
-
     InterstitialAd mInterstitialAd;
-
 
     @SuppressLint({"MissingInflatedId", "SetTextI18n"})
     @Override
@@ -69,47 +53,31 @@ public class DrawerActivity extends AppCompatActivity {
         }
 
         setContentView(R.layout.activity_drawer);
-
-
         if (Build.VERSION.SDK_INT >= 21) {
             Window window = this.getWindow();
             window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
             window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
             window.setStatusBarColor(this.getResources().getColor(R.color.skyblue));
         }
-/*
-        if (AppCompatDelegate.getDefaultNightMode() == AppCompatDelegate.MODE_NIGHT_YES) {
-            isNightModeOn = false;
-
-        } else if (AppCompatDelegate.getDefaultNightMode() == AppCompatDelegate.MODE_NIGHT_NO) {
-            isNightModeOn = true;
-        } else {
-            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
-
-        }*/
-
 
         about_us = findViewById(R.id.about_us);
         rate_us = findViewById(R.id.rate_us);
-
-        //mode_dark = findViewById(R.id.mode_dark);
         youtube_link = findViewById(R.id.youtube_link);
         light = findViewById(R.id.light);
         close_menu = findViewById(R.id.close_menu);
         back_menu = findViewById(R.id.back_menu);
-
-        shareapp = (LinearLayout) findViewById(R.id.shareapp);
-        feedback = (LinearLayout) findViewById(R.id.feedback);
-        tips = (LinearLayout) findViewById(R.id.tips);
-        ads_show = (LinearLayout) findViewById(R.id.ads_show);
-        game = (LinearLayout) findViewById(R.id.game);
+        matirial = findViewById(R.id.matirial);
+        shareapp = findViewById(R.id.shareapp);
+        feedback = findViewById(R.id.feedback);
+        tips = findViewById(R.id.tips);
+        ads_show = findViewById(R.id.ads_show);
+        game = findViewById(R.id.game);
 
 
 //getversion=========================================================================================
 
         version1 = findViewById(R.id.version1);
         version1.setText("Version : " + BuildConfig.VERSION_NAME);
-
         version2 = findViewById(R.id.version2);
         version2.setText("Version : " + BuildConfig.VERSION_NAME);
 //=======================================================================================================
@@ -127,6 +95,13 @@ public class DrawerActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent tips = new Intent(DrawerActivity.this, MainActivity.class);
                 startActivity(tips);
+            }
+        });
+        matirial.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent mati = new Intent(DrawerActivity.this, MatirialWeb.class);
+                startActivity(mati);
             }
         });
         tips.setOnClickListener(new View.OnClickListener() {
@@ -157,8 +132,6 @@ public class DrawerActivity extends AppCompatActivity {
 
 
         AdRequest adRequest = new AdRequest.Builder().build();
-
-
         ads_show.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -221,19 +194,13 @@ public class DrawerActivity extends AppCompatActivity {
 
                     }
                 });
-
-
-               /* Intent ads = new Intent(MenuActivity.this, AdsActivity.class);
-                startActivity(ads);*/
             }
         });
 
         shareapp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
                 ShareApp(DrawerActivity.this);
-
             }
         });
 
@@ -258,80 +225,10 @@ public class DrawerActivity extends AppCompatActivity {
         rate_us.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-              /*  Intent i = new Intent(MenuActivity.this, RatingActivity.class);
-                startActivity(i);*/
-
-//                Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=com.androidappdevelopment.learnandroidstudio"));
-
                 Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=com.androidalians.androidpoint"));
                 startActivity(i);
-
-
             }
         });
-
-        /*mode_change.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                if (isNightModeOn) {
-                    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
-                    isNightModeOn = false;
-
-
-                } else {
-                    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
-                    isNightModeOn = true;
-                }
-
-            }
-        });*/
-
-
-        //dark mode===========================================================================================
-
-    /*    if (saveState.getState() == true) {
-            mode_dark.setChecked(true);
-        }
-        mode_dark.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked) {
-                    saveState.setState(true);
-//                    getDelegate().setLocalNightMode(AppCompatDelegate.MODE_NIGHT_YES);
-                    getDelegate().setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
-                    Intent i = new Intent(MenuActivity.this, MainActivity.class);
-                    startActivity(i);
-//                    mContext.btnMenu.setImageDrawable(getResources().getDrawable(R.drawable.menu_dark));
-
-                } else {
-                    saveState.setState(false);
-//                    getDelegate().setLocalNightMode(AppCompatDelegate.MODE_NIGHT_NO);
-                    getDelegate().setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
-                    Intent i = new Intent(MenuActivity.this, MainActivity.class);
-                    startActivity(i);
-
-                }
-            }
-        });*/
-
-
-        //======================================================================
-
-        /*mode_dark.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (mode_dark.isChecked())
-                {
-                    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
-                }
-                else{
-                    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
-
-                }
-            }
-        });*/
     }
 
     private void ShareApp(Context context) {
@@ -341,129 +238,6 @@ public class DrawerActivity extends AppCompatActivity {
         sendIntent.putExtra(Intent.EXTRA_TEXT, "For Quick Learn Android App Development From Basic to Advance Download the App And Start Learning... https://play.google.com/store/apps/details?id=" + appPakageName);
         sendIntent.setType("text/plain");
         context.startActivity(sendIntent);
-        Log.d("Package name Share App",appPakageName);
+        Log.d("Package name Share App", appPakageName);
     }
-
-
-/*
-    // Notifiction ----------------------------------------------------------
-    Drawable drawable = ResourcesCompat.getDrawable(getResources(),R.drawable.appicn,null);
-    BitmapDrawable bitmapDrawable = (BitmapDrawable) drawable;
-    Bitmap LargeIcon = bitmapDrawable.getBitmap();
-    NotificationManager nm= (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
-    Notification notification;
-
-    {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            notification = new Notification.Builder(this)
-                    .setLargeIcon(LargeIcon)
-                    .setSmallIcon(R.drawable.appicn)
-                    .setContentTitle("Android Point")
-                    .setSubText("Basic code in Android Studio")
-                    .setChannelId(CHANNEL_ID) // Aa che a version 8  mthi aai ti eeni pel nati atle teni mate uper if confition che & niche else mukyu che jema version 8 niche vala mate e condition lagse.
-                    .build();
-        }
-        // nm valu niche che e orio vala version ma use thay che.
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            nm.createNotificationChannel(new NotificationChannel(CHANNEL_ID, "new channel", NotificationManager.IMPORTANCE_HIGH));
-        }
-        else {
-            notification = new Notification.Builder(this)
-                    .setLargeIcon(LargeIcon)
-                    .setSmallIcon(R.drawable.appicn)
-                    .setContentTitle("Android Point")
-                    .setSubText("Basic code in Android Studio")
-                    .build();
-        }
-        nm.notify(NOTIFICATION_ID,notification);
-    }
-
-*/
-
 }
-
-// Dark mode==========================================================================================================
-
-      /*  saveState = new SaveState(this);
-        if (saveState.getState()==true) {
-            getDelegate().setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
-        }else{
-            getDelegate().setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
-        }
-*/
-
-/*
-        if (AppCompatDelegate.getDefaultNightMode() == AppCompatDelegate.MODE_NIGHT_YES) {
-            isNightModeOn = false;
-
-        } else if (AppCompatDelegate.getDefaultNightMode() == AppCompatDelegate.MODE_NIGHT_NO) {
-            isNightModeOn = true;
-        } else {
-            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
-
-        }*/
-
-
-        /*mode_change.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                if (isNightModeOn) {
-                    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
-                    isNightModeOn = false;
-
-
-                } else {
-                    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
-                    isNightModeOn = true;
-                }
-
-            }
-        });*/
-
-
-/// for dakr mode=========================================================================================
-
-        /*if (saveState.getState()==true) {
-            mode_dark.setChecked(true);
-        }*/
-
-
-/*
-        mode_dark.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked) {
-                    saveState.setState(true);
-//                    getDelegate().setLocalNightMode(AppCompatDelegate.MODE_NIGHT_YES);
-                    getDelegate().setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
-                    Intent i= new Intent(MenuActivity.this,MainActivity.class);
-                    startActivity(i);
-//                    mContext.btnMenu.setImageDrawable(getResources().getDrawable(R.drawable.menu_dark));
-
-                }
-                else{
-                    saveState.setState(false);
-//                    getDelegate().setLocalNightMode(AppCompatDelegate.MODE_NIGHT_NO);
-                    getDelegate().setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
-                    Intent i= new Intent(MenuActivity.this,MainActivity.class);
-                    startActivity(i);
-
-                }
-            }
-        });
-*/
-
-        /*mode_dark.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (mode_dark.isChecked())
-                {
-                    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
-                }
-                else{
-                    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
-
-                }
-            }
-        });*/

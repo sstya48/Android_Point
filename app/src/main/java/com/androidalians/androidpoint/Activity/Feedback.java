@@ -15,7 +15,7 @@ import com.androidalians.androidpoint.R;
 public class Feedback extends AppCompatActivity {
     EditText feedBack,name;
     Button sendBtn;
-    AppCompatImageView feed_back_arrow;
+    AppCompatImageView feed_back_arrow, project;
     boolean isAllFieldsChecked = false;
 
 

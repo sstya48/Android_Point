@@ -38,7 +38,7 @@
                         android:layout_width="25dp"
                         android:layout_height="25dp"
                         android:layout_gravity="center_vertical"
-                        android:layout_marginStart="3dp"
+
                         android:background="?android:attr/selectableItemBackgroundBorderless"
                         android:backgroundTint="@color/green"
                         android:src="@drawable/drower_open" />

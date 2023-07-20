@@ -135,8 +135,9 @@ public class DrawerActivity extends AppCompatActivity {
         ads_show.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-                InterstitialAd.load(DrawerActivity.this, getString(R.string.Interstitial_AdOne_unit_id), adRequest, new InterstitialAdLoadCallback() {
+                Intent i = new Intent(DrawerActivity.this, ProjectList.class);
+                startActivity(i);
+              /*  InterstitialAd.load(DrawerActivity.this, getString(R.string.Interstitial_AdOne_unit_id), adRequest, new InterstitialAdLoadCallback() {
                     @Override
                     public void onAdFailedToLoad(@NonNull LoadAdError loadAdError) {
                         super.onAdFailedToLoad(loadAdError);
@@ -193,7 +194,7 @@ public class DrawerActivity extends AppCompatActivity {
                         }, 10000);
 
                     }
-                });
+                });*/
             }
         });
 
@@ -207,10 +208,8 @@ public class DrawerActivity extends AppCompatActivity {
         about_us.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
                 Intent i = new Intent(DrawerActivity.this, AboutUs.class);
                 startActivity(i);
-
             }
         });
 

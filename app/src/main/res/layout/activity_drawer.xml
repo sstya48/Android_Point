@@ -38,8 +38,8 @@
                     android:id="@+id/navigation_profile"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="30dp"
-                    android:layout_marginBottom="30dp">
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp">
 
                     <ImageView
                         android:id="@+id/iv_user"
@@ -242,7 +242,68 @@
                         android:layout_marginRight="10dp"/>
 
                     <LinearLayout
-                        android:id="@+id/tips"
+                        android:id="@+id/ads_show"
+                        android:layout_width="match_parent"
+                        android:layout_height="55dp"
+                        android:orientation="horizontal"
+                        android:gravity="start|center"
+                        android:paddingEnd="10dp"
+                        android:paddingStart="10dp"
+                        android:clickable="true"
+                        android:foreground="?android:attr/selectableItemBackground">
+
+                        <FrameLayout
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:background="@drawable/menu_icon_bg"
+                            android:backgroundTint="#1F8ACF"
+                            android:layout_gravity="center">
+
+                            <ImageView
+                                android:layout_width="32dp"
+                                android:layout_height="32dp"
+                                android:src="@drawable/project"
+                                android:layout_gravity="center"
+                                android:paddingEnd="3dp" />
+
+                        </FrameLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/project"
+                            android:layout_marginStart="20dp"
+                            android:textSize="20sp"
+                            android:fontFamily="@font/poppins_regular"
+                            android:textColor="@color/alphaback" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="55dp"
+                            android:orientation="horizontal"
+                            android:gravity="end|center"
+                            android:paddingEnd="10dp"
+                            android:paddingStart="10dp">
+
+                            <ImageView
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:src="@drawable/right_back_drower"
+                                android:layout_gravity="center" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#c4c4c4"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"/>
+
+                    <LinearLayout
+                        android:id="@+id/matirial"
                         android:layout_width="match_parent"
                         android:layout_height="55dp"
                         android:orientation="horizontal"
@@ -250,20 +311,18 @@
                         android:clickable="true"
                         android:paddingEnd="10dp"
                         android:paddingStart="10dp"
-                        android:foreground="?android:attr/selectableItemBackground"
-                        >
+                        android:foreground="?android:attr/selectableItemBackground">
 
                         <FrameLayout
                             android:layout_width="40dp"
                             android:layout_height="40dp"
                             android:background="@drawable/menu_icon_bg"
-                            android:backgroundTint="#EFEF29"
+                            android:backgroundTint="#9AF2FD">
 
-                            >
                             <ImageView
                                 android:layout_width="30dp"
                                 android:layout_height="30dp"
-                                android:src="@drawable/chat"
+                                android:src="@drawable/matirial"
                                 android:layout_gravity="center"/>
 
                         </FrameLayout>
@@ -271,7 +330,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="@string/Tips"
+                            android:text="@string/matirials"
                             android:layout_marginStart="20dp"
                             android:textSize="20sp"
                             android:fontFamily="@font/poppins_regular"
@@ -440,40 +499,40 @@
                         android:layout_marginRight="10dp"/>
 
                     <LinearLayout
-                        android:id="@+id/ads_show"
+                        android:id="@+id/tips"
                         android:layout_width="match_parent"
                         android:layout_height="55dp"
                         android:orientation="horizontal"
                         android:gravity="start|center"
+                        android:clickable="true"
                         android:paddingEnd="10dp"
                         android:paddingStart="10dp"
-                        android:clickable="true"
-                        android:foreground="?android:attr/selectableItemBackground">
+                        android:foreground="?android:attr/selectableItemBackground"
+                        >
 
                         <FrameLayout
                             android:layout_width="40dp"
                             android:layout_height="40dp"
                             android:background="@drawable/menu_icon_bg"
-                            android:backgroundTint="#1F8ACF"
-                            android:layout_gravity="center">
+                            android:backgroundTint="#EFEF29"
 
+                            >
                             <ImageView
                                 android:layout_width="30dp"
                                 android:layout_height="30dp"
-                                android:src="@drawable/videoad"
-                                android:layout_gravity="center"
-                                android:paddingEnd="3dp" />
+                                android:src="@drawable/chat"
+                                android:layout_gravity="center"/>
 
                         </FrameLayout>
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="@string/Ads"
+                            android:text="@string/Tips"
                             android:layout_marginStart="20dp"
                             android:textSize="20sp"
                             android:fontFamily="@font/poppins_regular"
-                            android:textColor="@color/alphaback" />
+                            android:textColor="@color/alphaback"/>
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -618,65 +677,6 @@
                             android:textSize="20sp"
                             android:fontFamily="@font/poppins_regular"
                             android:textColor="@color/alphaback" />
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="55dp"
-                            android:orientation="horizontal"
-                            android:gravity="end|center"
-                            android:paddingEnd="10dp"
-                            android:paddingStart="10dp">
-
-                            <ImageView
-                                android:layout_width="15dp"
-                                android:layout_height="15dp"
-                                android:src="@drawable/right_back_drower"
-                                android:layout_gravity="center" />
-
-                        </LinearLayout>
-
-                    </LinearLayout>
-
-                    <View
-                        android:layout_width="match_parent"
-                        android:layout_height="1dp"
-                        android:background="#c4c4c4"
-                        android:layout_marginLeft="10dp"
-                        android:layout_marginRight="10dp"/>
-
-                    <LinearLayout
-                        android:id="@+id/matirial"
-                        android:layout_width="match_parent"
-                        android:layout_height="55dp"
-                        android:orientation="horizontal"
-                        android:gravity="start|center"
-                        android:clickable="true"
-                        android:paddingEnd="10dp"
-                        android:paddingStart="10dp"
-                        android:foreground="?android:attr/selectableItemBackground">
-
-                        <FrameLayout
-                            android:layout_width="40dp"
-                            android:layout_height="40dp"
-                            android:background="@drawable/menu_icon_bg"
-                            android:backgroundTint="#9AF2FD">
-
-                            <ImageView
-                                android:layout_width="30dp"
-                                android:layout_height="30dp"
-                                android:src="@drawable/matirial"
-                                android:layout_gravity="center"/>
-
-                        </FrameLayout>
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="@string/matirials"
-                            android:layout_marginStart="20dp"
-                            android:textSize="20sp"
-                            android:fontFamily="@font/poppins_regular"
-                            android:textColor="@color/alphaback"/>
 
                         <LinearLayout
                             android:layout_width="match_parent"

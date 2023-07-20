@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Activity.ProjectList">
+
+    <LinearLayout
+        android:id="@+id/header1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/skyblue"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/feed_back_arrow"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="2dp"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:padding="6dp"
+            android:src="@drawable/arrow" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="10dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:includeFontPadding="false"
+            android:text="@string/project_list"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_marginTop="50dp"
+        android:layout_height="40dp"
+        android:textSize="25sp"
+        android:gravity="center"
+        android:layout_marginEnd="10dp"
+        android:text="Top 10 Projects"
+        android:fontFamily="@font/poppins_regular"/>
+
+    <TextView
+        android:id="@+id/title_project"
+        android:layout_width="match_parent"
+        android:layout_marginTop="50dp"
+        android:layout_height="40dp"
+        android:textSize="12sp"
+        android:gravity="right|center"
+        android:text="150+ projects"
+        android:textColor="@color/blue"
+        android:layout_marginEnd="10dp"
+        android:fontFamily="@font/poppins_regular"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="90dp"
+        tools:context=".MainActivity">
+
+
+        <ListView
+            android:id="@+id/list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/poppins_regular"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

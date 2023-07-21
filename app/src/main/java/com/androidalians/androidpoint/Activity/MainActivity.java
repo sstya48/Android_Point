@@ -3,8 +3,11 @@ package com.androidalians.androidpoint.Activity;
 import android.annotation.SuppressLint;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
+import android.preference.PreferenceManager;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
@@ -22,9 +25,16 @@ import com.androidalians.androidpoint.Fragment.Advance.Advance;
 import com.androidalians.androidpoint.Fragment.Basic.Basic;
 import com.androidalians.androidpoint.Fragment.Learn.Learn;
 import com.androidalians.androidpoint.R;
+import com.google.android.gms.ads.AdError;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.FullScreenContentCallback;
+import com.google.android.gms.ads.LoadAdError;
 import com.google.android.gms.ads.MobileAds;
+import com.google.android.gms.ads.OnUserEarnedRewardListener;
+import com.google.android.gms.ads.rewarded.RewardItem;
+import com.google.android.gms.ads.rewarded.RewardedAd;
+import com.google.android.gms.ads.rewarded.RewardedAdLoadCallback;
 import com.google.android.material.tabs.TabLayout;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
@@ -40,6 +50,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     boolean isPressed = false;
 
     private int backPressCount = 0;
+
+    private RewardedAd rewardedAd;
+    private boolean isRewardedAdLoaded = false;
+
+    private Handler adHandler;
+    private int adCount = 0;
+    private boolean isAppRunning;
+
 
 
    /* boolean doubleBackToExitPressedOnce = false;
@@ -61,6 +79,65 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        //Video Ad Implement==========================================================================================
+
+        // Initialize AdMob
+        MobileAds.initialize(this, initializationStatus -> {
+            loadRewardedAd();
+        });
+
+        // Set isAppRunning to true when the app is open
+        isAppRunning = true;
+
+
+        // Load the rewarded ad
+//        loadRewardedAd();
+
+        // Check if it's the first app launch
+        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
+        boolean isFirstLaunch = preferences.getBoolean("isFirstLaunch", true);
+
+        if (isFirstLaunch) {
+            // Show rewarded ad once within 10 seconds
+            Handler handler = new Handler();
+            handler.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    showRewardedAdIfNeeded();
+                }
+            }, 10000); // 10 seconds
+
+            // Set isFirstLaunch to false
+            SharedPreferences.Editor editor = preferences.edit();
+            editor.putBoolean("isFirstLaunch", false);
+            editor.apply();
+        }
+
+        /*// Set up the ad handler to trigger ad automatically
+        adHandler = new Handler();
+        adHandler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                showRewardedAdIfNeeded();
+            }
+        }, 0);*/
+
+        // Set up the ad handler to trigger ad automatically every 20 minutes (1 time)
+
+        if (isAppRunning) {
+            adHandler = new Handler();
+            adHandler.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    showRewardedAdIfNeeded();
+                }
+            }, 5 * 60 * 1000);
+        }
+        // 20 minutes in milliseconds
+
+//complete ad implement=====================================================================================
+
 
         included = (TabLayout) findViewById(R.id.included);
         frameLayout = (FrameLayout) findViewById(R.id.frame_container);
@@ -126,6 +203,110 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
         });
     }
+
+    private void showRewardedAdIfNeeded() {
+        if (adCount < 1) {
+            if (isRewardedAdLoaded) {
+                rewardedAd.show(MainActivity.this, new OnUserEarnedRewardListener() {
+                    @Override
+                    public void onUserEarnedReward(RewardItem rewardItem) {
+                        // User earned reward callback
+                        // Handle the reward given to the user
+                    }
+                });
+
+                rewardedAd.setFullScreenContentCallback(new FullScreenContentCallback() {
+                    @Override
+                    public void onAdDismissedFullScreenContent() {
+                        // Ad dismissed callback
+                        loadRewardedAd(); // Load the next rewarded ad
+                        adCount++;
+
+                        // Schedule the next ad to show after an hour
+                        adHandler.postDelayed(new Runnable() {
+                            @Override
+                            public void run() {
+                                showRewardedAdIfNeeded();
+                            }
+                        },  5 * 60 * 1000); // 1 hour in milliseconds
+//                        }, 3600000); // 1 hour in milliseconds
+                    }
+                    @Override
+                    public void onAdFailedToShowFullScreenContent(AdError adError) {
+                        // Ad failed to show full-screen content
+                        // Load the next rewarded ad and show it if needed
+                        loadRewardedAd();
+                        adCount = 0;
+                    }
+                });
+                adCount++; // Increment the ad count when the ad is shown
+            } else {
+                // If the rewarded ad is not loaded, try again after a short delay
+                adHandler.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        showRewardedAdIfNeeded();
+                    }
+                }, 5000); // 5 seconds delay before trying again
+            }
+        }
+    }
+
+
+
+    private void loadRewardedAd() {
+        AdRequest adRequest = new AdRequest.Builder().build();
+        RewardedAd.load(this, "ca-app-pub-3940256099942544/5224354917", adRequest, new RewardedAdLoadCallback() {
+            @Override
+            public void onAdLoaded(RewardedAd ad) {
+                super.onAdLoaded(ad);
+                // Rewarded ad loaded callback
+                rewardedAd = ad;
+                isRewardedAdLoaded = true;
+            }
+
+            @Override
+            public void onAdFailedToLoad(LoadAdError adError) {
+                super.onAdFailedToLoad(adError);
+                // Rewarded ad failed to load callback
+                rewardedAd = null;
+                Log.d("AdError", adError.getMessage());
+                isRewardedAdLoaded = false;
+            }
+        });
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        // App is in foreground, set isAppRunning to true
+        isAppRunning = true;
+        // Start the ad countdown
+        if (adHandler == null) {
+            adHandler = new Handler();
+            showRewardedAdIfNeeded();
+        }
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        // App is in background, set isAppRunning to false and remove ad callbacks
+        isAppRunning = false;
+        if (adHandler != null) {
+            adHandler.removeCallbacksAndMessages(null);
+        }
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        // Remove any pending callbacks to prevent memory leaks
+        if (adHandler != null) {
+            adHandler.removeCallbacksAndMessages(null);
+        }
+    }
+
 
     @Override
     public void onClick(View view) {

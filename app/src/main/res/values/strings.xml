@@ -239,11 +239,11 @@
 
     // publish id Interstitial ad
     one==================================================================================================
-    <string name="Interstitial_AdOne_unit_id">ca-app-pub-3471867131564882/1430577060</string>
+<!--    <string name="Interstitial_AdOne_unit_id">ca-app-pub-3471867131564882/1430577060</string>-->
 
     // test id Interstitial ad
     one==================================================================================================
-    <!--    <string name="Interstitial_AdOne_unit_id">ca-app-pub-3940256099942544/1033173712</string>-->
+        <string name="Interstitial_AdOne_unit_id">ca-app-pub-3940256099942544/1033173712</string>
 
 
     //Banner

@@ -72,6 +72,9 @@ A_A4_Fragment extends Fragment {
                         alertDialog.dismiss();
                     }
                 });
+
+                alertDialog.getWindow().setBackgroundDrawableResource(android.R.color.transparent);
+                alertDialog.setCancelable(false);
                 alertDialog.show();
 
             }

@@ -1,14 +1,18 @@
 package com.androidalians.androidpoint.Activity;
 
 import android.annotation.SuppressLint;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
@@ -34,6 +38,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     FragmentTransaction fragmentTransaction;
 
     boolean isPressed = false;
+
+    private int backPressCount = 0;
+
 
    /* boolean doubleBackToExitPressedOnce = false;
 
@@ -129,6 +136,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
     }
 
+    /*
     @Override
     public void onBackPressed() {
 
@@ -149,7 +157,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         };
         new Handler().postDelayed(runnable, 2000);
 
-      /*  if (mRecentlyBackPressed) {
+      *//*  if (mRecentlyBackPressed) {
             mExitHandler.removeCallbacks(mExitRunnable);
             mExitHandler = null;
             super.onBackPressed();
@@ -159,9 +167,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             mRecentlyBackPressed = true;
             Toast.makeText(this, "press again to exit", Toast.LENGTH_SHORT).show();
             mExitHandler.postDelayed(mExitRunnable, delay);
-        }*/
+        }*//*
 
-       /* if (doubleBackToExitPressedOnce) {
+       *//* if (doubleBackToExitPressedOnce) {
             super.onBackPressed();
             return;
         }
@@ -180,8 +188,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
   //Alret Dialog=======================================================================
 
-*/
-       /* new AlertDialog.Builder(this)
+*//*
+       *//* new AlertDialog.Builder(this)
                 .setIcon(R.drawable.applogo)
                 .setTitle("Closing Android Point")
                 .setMessage("Are you sure you want to close this Android Point?")
@@ -194,8 +202,87 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
                 })
                 .setNegativeButton("No", null)
-                .show();*/
+                .show();*//*
     }
+    */
+
+    @Override
+    public void onBackPressed() {
+        backPressCount++;
+
+        if (backPressCount == 2) {
+            // Show the custom alert dialog on the second back press
+            showExitConfirmationDialog();
+        } else if (backPressCount == 1) {
+            // Show a toast or any other feedback to indicate that another back press will exit the app
+            Toast.makeText(this, "Press back again to exit", Toast.LENGTH_SHORT).show();
+
+            // Reset the back press count after a certain delay (e.g., 2 seconds)
+            new Handler().postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    backPressCount = 0;
+                }
+            }, 2000); // Delay in milliseconds (2 seconds)
+        } else {
+            // If the user presses the back button multiple times quickly, reset the count
+            backPressCount = 0;
+        }
+    }
+
+
+ /*   private void showExitConfirmationDialog() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setMessage("Are you sure you want to exit?");
+        builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                // If the user clicks "Yes," exit the application
+                finishAffinity();
+            }
+        });
+        builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                // If the user clicks "No," dismiss the dialog and reset the back press count
+                backPressCount = 1; // Set it to 1 to allow for one more back press
+                dialog.dismiss();
+            }
+        });
+        builder.setCancelable(false);
+        builder.show();
+    }*/
+
+    private void showExitConfirmationDialog() {
+        // Create the custom dialog builder
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+
+        // Inflate the custom layout for the dialog
+        View dialog = getLayoutInflater().inflate(R.layout.fragment_a__a4_1_, null);
+        builder.setView(dialog);
+        Button btn_no = dialog.findViewById(R.id.btn_no);
+        Button btn_yes = dialog.findViewById(R.id.btn_yes);
+
+        final AlertDialog alertDialog= builder.create();
+        btn_no.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                backPressCount = 1;
+                alertDialog.dismiss();
+            }
+        });
+        btn_yes.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finishAffinity();
+            }
+        });
+        alertDialog.getWindow().setBackgroundDrawableResource(android.R.color.transparent);
+        alertDialog.setCancelable(false);
+        alertDialog.show();
+    }
+
+
 
 
     public void checkFirstRun() {

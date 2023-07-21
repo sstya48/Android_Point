@@ -256,7 +256,7 @@
     //BannerAdBasic ==> Basic publish id For all Banner in
     one========================================================================================================================
 
-    <string name="Banner_AdOne_unit_id">ca-app-pub-3471867131564882/7545393426</string>
+<!--    <string name="Banner_AdOne_unit_id">ca-app-pub-3471867131564882/7545393426</string>-->
 
 
     //BannerAdLearn ==> Learn Publish
@@ -268,7 +268,7 @@
     // test id BannerAdOne ad
     one==================================================================================================
 
-    <!--    <string name="Banner_AdOne_unit_id">ca-app-pub-3940256099942544/6300978111</string>-->
+        <string name="Banner_AdOne_unit_id">ca-app-pub-3940256099942544/6300978111</string>
 
 
     //=======================================================================================================================

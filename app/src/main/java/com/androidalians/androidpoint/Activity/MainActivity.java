@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     FrameLayout frameLayout;
     Fragment fragment = null;
     ImageView btnMenu;
-    AdView adView_main_all;
+//    AdView adView_main_all;
 
     FragmentTransaction fragmentTransaction;
 
@@ -68,7 +68,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         fragmentTransaction.commit();
 
 
-        //Banner Ad id====================================
+       /* //Banner Ad id====================================
         adView_main_all = findViewById(R.id.adView_main_all);
 
         //====================================================
@@ -77,7 +77,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         AdRequest adRequest = new AdRequest.Builder().build();
 
         //banner ad load
-        adView_main_all.loadAd(adRequest);
+        adView_main_all.loadAd(adRequest);*/
 
         btnMenu.setOnClickListener(new View.OnClickListener() {
             @Override

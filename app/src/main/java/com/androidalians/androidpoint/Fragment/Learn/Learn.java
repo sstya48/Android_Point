@@ -86,12 +86,15 @@ public class Learn extends BaseFragment {
 
         recyclerView.setHasFixedSize(true);
         recyclerView.setAdapter(myAdapter);
+        myAdapter.loadNativeAds();
+
 
         mSwipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
             public void onRefresh() {
                 recyclerView.setHasFixedSize(true);
                 recyclerView.setAdapter(myAdapter);
+                myAdapter.loadNativeAds();
                 mSwipeRefreshLayout.setRefreshing(false);
             }
         });

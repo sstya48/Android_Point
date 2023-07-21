@@ -179,11 +179,14 @@ public class LearnAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
     private static final int AD_INTERVAL_2 = 12; // Show the second ad after 10 list items
     private static final int AD_INTERVAL_3 = 19; // Show the third ad after 15 list items
 
+    private String nativeAdUnitId;
+
 
     public LearnAdapter(Context context, ArrayList<LearnModel> datalist) {
 
         this.context= context;
         this.datalist= datalist;
+        nativeAdUnitId = context.getString(R.string.NativeLearn3Ad_unit_id);
     }
 
     @NonNull
@@ -334,7 +337,7 @@ public class LearnAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
     // Declare the adLoadedCount variable as an instance variable
     private int adLoadedCount = 0;
     public void loadNativeAds() {
-        AdLoader.Builder builder = new AdLoader.Builder(context, "ca-app-pub-3940256099942544/2247696110");
+        AdLoader.Builder builder = new AdLoader.Builder(context, /*nativeAdUnitId*/"ca-app-pub-3940256099942544/2247696110");
         builder.forNativeAd(new NativeAd.OnNativeAdLoadedListener() {
 //            private int adLoadedCount = 0; // Counter for loaded ads
 

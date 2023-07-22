@@ -1,6 +1,7 @@
 package com.androidalians.androidpoint.Fragment.Advance;
 
 import android.annotation.SuppressLint;
+import android.content.Context;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -390,6 +391,7 @@ public class Advance extends Fragment {
         if (getActivity() == null) {
             return;
         }
+        Context appContext = getActivity().getApplicationContext();
         AdLoader adLoader = new AdLoader.Builder(getActivity(), "ca-app-pub-3940256099942544/2247696110")
                 .forNativeAd(new NativeAd.OnNativeAdLoadedListener() {
                     @Override
@@ -397,7 +399,7 @@ public class Advance extends Fragment {
                         // The native ad is loaded. Now, let's add it to the native_ad_container.
 
                         // Inflate the native ad layout
-                        View adView = LayoutInflater.from(getActivity()).inflate(R.layout.item_native_ad, null);
+                        View adView = LayoutInflater.from(appContext).inflate(R.layout.item_native_ad, null);
 
                         // Populate the ad view components with the native ad's assets
                         NativeAdView nativeAdView = adView.findViewById(R.id.nativeAdView);
@@ -432,6 +434,7 @@ public class Advance extends Fragment {
         if (getActivity() == null) {
             return;
         }
+        Context appContext = getActivity().getApplicationContext();
         AdLoader adLoader = new AdLoader.Builder(getActivity(), "ca-app-pub-3940256099942544/2247696110")
                 .forNativeAd(new NativeAd.OnNativeAdLoadedListener() {
                     @Override
@@ -439,7 +442,7 @@ public class Advance extends Fragment {
                         // The native ad is loaded. Now, let's add it to the native_ad_container.
 
                         // Inflate the native ad layout
-                        View adView = LayoutInflater.from(getActivity()).inflate(R.layout.item_native_ad, null);
+                        View adView = LayoutInflater.from(appContext).inflate(R.layout.item_native_ad, null);
 
                         // Populate the ad view components with the native ad's assets
                         NativeAdView nativeAdView = adView.findViewById(R.id.nativeAdView);

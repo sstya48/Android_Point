@@ -8,9 +8,13 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.FrameLayout;
+import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.widget.LinearLayoutCompat;
 import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 
@@ -18,7 +22,14 @@ import com.denzcoskun.imageslider.ImageSlider;
 import com.denzcoskun.imageslider.constants.ScaleTypes;
 import com.denzcoskun.imageslider.models.SlideModel;
 import com.androidalians.androidpoint.R;
+import com.google.android.gms.ads.AdListener;
+import com.google.android.gms.ads.AdLoader;
+import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.LoadAdError;
+import com.google.android.gms.ads.MobileAds;
+import com.google.android.gms.ads.nativead.NativeAd;
+import com.google.android.gms.ads.nativead.NativeAdView;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.Task;
@@ -83,6 +94,12 @@ public class Basic extends Fragment {
 //========================================================
 
 */
+
+        // Initialize AdMob SDK (only once in your app)
+        MobileAds.initialize(requireContext());
+        loadNativeAd();
+        loadNativeAd2();
+
 
         ArrayList<SlideModel> slideModels = new ArrayList<>();
 
@@ -396,5 +413,125 @@ public class Basic extends Fragment {
 
         return view;
     }
+
+    private void loadNativeAd2() {
+        AdLoader adLoader = new AdLoader.Builder(requireContext(), "ca-app-pub-3940256099942544/2247696110")
+                .forNativeAd(new NativeAd.OnNativeAdLoadedListener() {
+                    @Override
+                    public void onNativeAdLoaded(@NonNull NativeAd nativeAd) {
+                        // The native ad is loaded. Now, let's add it to the native_ad_container.
+
+                        // Inflate the native ad layout
+                        View adView = LayoutInflater.from(requireContext()).inflate(R.layout.item_native_ad, null);
+
+                        // Populate the ad view components with the native ad's assets
+                        NativeAdView nativeAdView = adView.findViewById(R.id.nativeAdView);
+                        populateNativeAdView(nativeAd, nativeAdView);
+
+                        // Get the root view of the fragment's layout
+                        View rootView = getView();
+
+                        if (rootView != null) {
+                            // Get the native_ad_container
+                            LinearLayoutCompat nativeAdContainer2 = rootView.findViewById(R.id.native_ad_container2);
+
+                            // Add the native ad view to the native_ad_container
+                            nativeAdContainer2.removeAllViews();
+                            nativeAdContainer2.addView(adView);
+                        }
+                    }
+                })
+                .withAdListener(new AdListener() {
+                    @Override
+                    public void onAdFailedToLoad(LoadAdError loadAdError) {
+                        // Handle ad loading failure if needed
+                    }
+                })
+                .build();
+
+        // Load the native ad
+        adLoader.loadAd(new AdRequest.Builder().build());
+    }
+
+    private void loadNativeAd() {
+        AdLoader adLoader = new AdLoader.Builder(requireContext(), "ca-app-pub-3940256099942544/2247696110")
+                .forNativeAd(new NativeAd.OnNativeAdLoadedListener() {
+                    @Override
+                    public void onNativeAdLoaded(@NonNull NativeAd nativeAd) {
+                        // The native ad is loaded. Now, let's add it to the native_ad_container.
+
+                        // Inflate the native ad layout
+                        View adView = LayoutInflater.from(requireContext()).inflate(R.layout.item_native_ad, null);
+
+                        // Populate the ad view components with the native ad's assets
+                        NativeAdView nativeAdView = adView.findViewById(R.id.nativeAdView);
+                        populateNativeAdView(nativeAd, nativeAdView);
+
+                        // Get the root view of the fragment's layout
+                        View rootView = getView();
+
+                        if (rootView != null) {
+                            // Get the native_ad_container
+                            LinearLayoutCompat nativeAdContainer = rootView.findViewById(R.id.native_ad_container);
+
+                            // Add the native ad view to the native_ad_container
+                            nativeAdContainer.removeAllViews();
+                            nativeAdContainer.addView(adView);
+                        }
+                    }
+                })
+                .withAdListener(new AdListener() {
+                    @Override
+                    public void onAdFailedToLoad(LoadAdError loadAdError) {
+                        // Handle ad loading failure if needed
+                    }
+                })
+                .build();
+
+        // Load the native ad
+        adLoader.loadAd(new AdRequest.Builder().build());
+    }
+
+
+    private void populateNativeAdView(NativeAd nativeAd, NativeAdView adView) {
+        // Set the media view. Media view is mandatory for Native Ad.
+       /* MediaView mediaView = adView.findViewById(R.id.ad_media);
+        adView.setMediaView(mediaView);*/
+
+        // Set other assets from the NativeAd to the ad view.
+        adView.setHeadlineView(adView.findViewById(R.id.nativeAdTitle));
+        adView.setBodyView(adView.findViewById(R.id.nativeAdDescription));
+//        adView.setCallToActionView(adView.findViewById(R.id.ad_call_to_action));
+        adView.setIconView(adView.findViewById(R.id.nativeAdIcon));
+
+        // Register the ad asset views with the NativeAd, so they can be automatically populated.
+        adView.setNativeAd(nativeAd);
+
+        // Set the text of the headline, body, and call-to-action button from the ad.
+        ((TextView) adView.getHeadlineView()).setText(nativeAd.getHeadline());
+        ((TextView) adView.getBodyView()).setText(nativeAd.getBody());
+//        ((Button) adView.getCallToActionView()).setText(nativeAd.getCallToAction());
+
+        // Download and set the ad icon.
+        NativeAd.Image icon = nativeAd.getIcon();
+        if (icon == null) {
+            adView.getIconView().setVisibility(View.GONE);
+        } else {
+            ((ImageView) adView.getIconView()).setImageDrawable(icon.getDrawable());
+            adView.getIconView().setVisibility(View.VISIBLE);
+        }
+
+        // Add click action to the ad.
+        adView.setClickable(true);
+        adView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Perform desired action when the ad is clicked.
+                // For example, you can open a webpage or an in-app view.
+            }
+        });
+    }
+
+
 }
 

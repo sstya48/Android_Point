@@ -328,7 +328,7 @@
                                         android:src="@drawable/checkbox"
                                         android:layout_gravity="center" />
 
-                                </FrameLayout>>
+                                </FrameLayout>
 
                                 <TextView
                                     android:layout_width="wrap_content"
@@ -399,6 +399,17 @@
                     </androidx.cardview.widget.CardView>
 
                 </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/native_ad_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ll3"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginTop="12dp"
+                    android:background="@android:color/transparent"
+                    android:gravity="center_horizontal"/>
+
 
                 <androidx.appcompat.widget.LinearLayoutCompat
                     android:layout_width="match_parent"
@@ -967,6 +978,15 @@
                     </androidx.cardview.widget.CardView>
 
                 </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/native_ad_container2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginTop="12dp"
+                    android:background="@android:color/transparent"
+                    android:gravity="center_horizontal"/>
 
                 <androidx.appcompat.widget.LinearLayoutCompat
                     android:layout_width="match_parent"

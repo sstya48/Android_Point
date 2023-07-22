@@ -50,7 +50,7 @@ public class Advance extends Fragment {
 
         // Initialize AdMob SDK (only once in your app)
         MobileAds.initialize(requireContext());
-        loadNativeAd();
+//        loadNativeAd();
         loadNativeAd2();
 
         card_view1 = view.findViewById(R.id.card1);
@@ -423,7 +423,7 @@ public class Advance extends Fragment {
         adLoader.loadAd(new AdRequest.Builder().build());
     }
 
-    private void loadNativeAd() {
+  /*  private void loadNativeAd() {
         AdLoader adLoader = new AdLoader.Builder(requireContext(), "ca-app-pub-3940256099942544/2247696110")
                 .forNativeAd(new NativeAd.OnNativeAdLoadedListener() {
                     @Override
@@ -460,7 +460,7 @@ public class Advance extends Fragment {
 
         // Load the native ad
         adLoader.loadAd(new AdRequest.Builder().build());
-    }
+    }*/
 
 
     private void populateNativeAdView(NativeAd nativeAd, NativeAdView adView) {

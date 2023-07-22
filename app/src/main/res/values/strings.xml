@@ -36,7 +36,7 @@
     <string name="Date_Piker">Date Picker</string>
     <string name="Time_Piker">Time Picker</string>
     <string name="ScrollView">ScrollView</string>
-    <string name="SerchView">SerchView</string>
+    <string name="SerchView">SearchView</string>
     <string name="Implicit_Intent">Implicit Intent</string>
     <string name="Explicit_Intent">Explicit \n Intent</string>
     <string name="Explicit_iIntent">Explicit Intent</string>

@@ -1,7 +1,5 @@
 package com.androidalians.androidpoint.Activity;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
@@ -9,6 +7,8 @@ import android.preference.PreferenceManager;
 import android.util.Log;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.androidalians.androidpoint.R;
 import com.google.android.gms.ads.AdRequest;
@@ -26,9 +26,9 @@ public class BallPoolGame extends AppCompatActivity {
 
     private RewardedAd rewardedAd;
     private boolean isRewardedAdLoaded = false;
-
     private Handler adHandler;
     private int adCount = 0;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

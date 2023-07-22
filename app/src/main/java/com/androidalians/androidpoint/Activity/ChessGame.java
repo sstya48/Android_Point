@@ -26,7 +26,6 @@ public class ChessGame extends AppCompatActivity {
 
     private RewardedAd rewardedAd;
     private boolean isRewardedAdLoaded = false;
-
     private Handler adHandler;
     private int adCount = 0;
 
@@ -41,8 +40,7 @@ public class ChessGame extends AppCompatActivity {
         chess_id.setWebViewClient(new WebViewClient());
 
         // Initialize AdMob
-        MobileAds.initialize(this, initializationStatus -> {
-        });
+        MobileAds.initialize(this, initializationStatus -> {});
 
         // Load the rewarded ad
         loadRewardedAd();

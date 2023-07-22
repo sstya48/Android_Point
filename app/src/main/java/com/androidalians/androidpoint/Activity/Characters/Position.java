@@ -1,31 +1,24 @@
 package com.androidalians.androidpoint.Activity.Characters;
 
-/**
- * Created by Win on 24-04-2018.
- */
-
 public class Position {
 
-        private int X,Y;
+    private int X, Y;
 
-        public Position(int x,int y)
-        {
-            this.X = x;
-            this.Y = y;
-        }
+    public Position(int x, int y) {
+        this.X = x;
+        this.Y = y;
+    }
 
-        public  int getX()
-        {
-            return X;
-        }
+    public int getX() {
+        return X;
+    }
 
-        public int getY()
-        {
-            return Y;
-        }
+    public int getY() {
+        return Y;
+    }
 
     @Override
     public String toString() {
-        return String.format("X is %d, Y is %d",X,Y);
+        return String.format("X is %d, Y is %d", X, Y);
     }
 }

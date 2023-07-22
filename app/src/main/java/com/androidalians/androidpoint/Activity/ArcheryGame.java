@@ -26,10 +26,8 @@ public class ArcheryGame extends AppCompatActivity {
 
     private RewardedAd rewardedAd;
     private boolean isRewardedAdLoaded = false;
-
     private Handler adHandler;
     private int adCount = 0;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,8 +40,7 @@ public class ArcheryGame extends AppCompatActivity {
         archery_id.setWebViewClient(new WebViewClient());
 
         // Initialize AdMob
-        MobileAds.initialize(this, initializationStatus -> {
-        });
+        MobileAds.initialize(this, initializationStatus -> { });
 
         // Load the rewarded ad
         loadRewardedAd();

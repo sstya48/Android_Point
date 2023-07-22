@@ -1,14 +1,12 @@
 package com.androidalians.androidpoint.Activity;
 
 import android.annotation.SuppressLint;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
 import android.preference.PreferenceManager;
 import android.util.Log;
-import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.FrameLayout;
@@ -27,7 +25,6 @@ import com.androidalians.androidpoint.Fragment.Learn.Learn;
 import com.androidalians.androidpoint.R;
 import com.google.android.gms.ads.AdError;
 import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.FullScreenContentCallback;
 import com.google.android.gms.ads.LoadAdError;
 import com.google.android.gms.ads.MobileAds;
@@ -58,29 +55,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private int adCount = 0;
     private boolean isAppRunning;
 
-
-
-   /* boolean doubleBackToExitPressedOnce = false;
-
-    private static final long delay = 2000L;
-    private boolean mRecentlyBackPressed = false;
-    private Handler mExitHandler = new Handler();
-    private Runnable mExitRunnable = new Runnable() {
-
-        @Override
-        public void run() {
-            mRecentlyBackPressed=false;
-        }
-    };*/
-
-
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //Video Ad Implement==========================================================================================
+//Video Ad Implement==========================================================================================
 
         // Initialize AdMob
         MobileAds.initialize(this, initializationStatus -> {
@@ -114,15 +95,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             editor.apply();
         }
 
-        /*// Set up the ad handler to trigger ad automatically
-        adHandler = new Handler();
-        adHandler.postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                showRewardedAdIfNeeded();
-            }
-        }, 0);*/
-
         // Set up the ad handler to trigger ad automatically every 20 minutes (1 time)
 
         if (isAppRunning) {
@@ -134,7 +106,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 }
             }, 5 * 60 * 1000);
         }
-        // 20 minutes in milliseconds
+        // 5 minutes in milliseconds
 
 //complete ad implement=====================================================================================
 
@@ -150,18 +122,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         fragmentTransaction.replace(R.id.frame_container, fragment);
         fragmentTransaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
         fragmentTransaction.commit();
-
-
-       /* //Banner Ad id====================================
-        adView_main_all = findViewById(R.id.adView_main_all);
-
-        //====================================================
-        MobileAds.initialize(this);
-
-        AdRequest adRequest = new AdRequest.Builder().build();
-
-        //banner ad load
-        adView_main_all.loadAd(adRequest);*/
 
         btnMenu.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -195,7 +155,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
             @Override
             public void onTabUnselected(TabLayout.Tab tab) {
-
             }
 
             @Override
@@ -228,9 +187,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                             public void run() {
                                 showRewardedAdIfNeeded();
                             }
-                        },  5 * 60 * 1000); // 1 hour in milliseconds
+                        }, 5 * 60 * 1000); // 1 hour in milliseconds
 //                        }, 3600000); // 1 hour in milliseconds
                     }
+
                     @Override
                     public void onAdFailedToShowFullScreenContent(AdError adError) {
                         // Ad failed to show full-screen content
@@ -251,7 +211,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
         }
     }
-
 
 
     private void loadRewardedAd() {
@@ -311,81 +270,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View view) {
         switch (view.getId()) {
-          /*  case R.id.btn_menu:
-                Intent i= new Intent(MainActivity.this,MenuActivity.class);
-                startActivity(i);*/
         }
     }
-
-    /*
-    @Override
-    public void onBackPressed() {
-
-        if (isPressed) {
-            finishAffinity();
-
-            System.exit(0);
-        } else {
-            Toast.makeText(getApplicationContext(), "Please click BACK again to exit", Toast.LENGTH_SHORT).show();
-
-            isPressed = true;
-        }
-        Runnable runnable = new Runnable() {
-            @Override
-            public void run() {
-                isPressed = false;
-            }
-        };
-        new Handler().postDelayed(runnable, 2000);
-
-      *//*  if (mRecentlyBackPressed) {
-            mExitHandler.removeCallbacks(mExitRunnable);
-            mExitHandler = null;
-            super.onBackPressed();
-        }
-        else
-        {
-            mRecentlyBackPressed = true;
-            Toast.makeText(this, "press again to exit", Toast.LENGTH_SHORT).show();
-            mExitHandler.postDelayed(mExitRunnable, delay);
-        }*//*
-
-       *//* if (doubleBackToExitPressedOnce) {
-            super.onBackPressed();
-            return;
-        }
-
-        this.doubleBackToExitPressedOnce = true;
-        Toast.makeText(this, "Please click BACK again to exit", Toast.LENGTH_LONG).show();
-
-        new Handler(Looper.getMainLooper()).postDelayed(new Runnable() {
-
-            @Override
-            public void run() {
-                doubleBackToExitPressedOnce=false;
-            }
-        }, 2000);
-
-
-  //Alret Dialog=======================================================================
-
-*//*
-       *//* new AlertDialog.Builder(this)
-                .setIcon(R.drawable.applogo)
-                .setTitle("Closing Android Point")
-                .setMessage("Are you sure you want to close this Android Point?")
-                .setPositiveButton("Yes", new DialogInterface.OnClickListener()
-                {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        finish();
-                    }
-
-                })
-                .setNegativeButton("No", null)
-                .show();*//*
-    }
-    */
 
     @Override
     public void onBackPressed() {
@@ -411,29 +297,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
     }
 
-
- /*   private void showExitConfirmationDialog() {
-        AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setMessage("Are you sure you want to exit?");
-        builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                // If the user clicks "Yes," exit the application
-                finishAffinity();
-            }
-        });
-        builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                // If the user clicks "No," dismiss the dialog and reset the back press count
-                backPressCount = 1; // Set it to 1 to allow for one more back press
-                dialog.dismiss();
-            }
-        });
-        builder.setCancelable(false);
-        builder.show();
-    }*/
-
     private void showExitConfirmationDialog() {
         // Create the custom dialog builder
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
@@ -444,7 +307,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Button btn_no = dialog.findViewById(R.id.btn_no);
         Button btn_yes = dialog.findViewById(R.id.btn_yes);
 
-        final AlertDialog alertDialog= builder.create();
+        final AlertDialog alertDialog = builder.create();
         btn_no.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -462,20 +325,4 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         alertDialog.setCancelable(false);
         alertDialog.show();
     }
-
-
-
-
-    public void checkFirstRun() {
-        boolean isFirstRun = getSharedPreferences("PREFERENCE", MODE_PRIVATE).getBoolean("isFirstRun", true);
-        if (isFirstRun) {
-            // Place your dialog code here to display the dialog
-
-            getSharedPreferences("PREFERENCE", MODE_PRIVATE)
-                    .edit()
-                    .putBoolean("isFirstRun", false)
-                    .apply();
-        }
-    }
-
 }

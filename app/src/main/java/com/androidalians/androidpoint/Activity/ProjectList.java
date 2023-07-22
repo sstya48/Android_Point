@@ -1,35 +1,32 @@
 package com.androidalians.androidpoint.Activity;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.AppCompatImageView;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import android.widget.Spinner;
 import android.widget.TextView;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.AppCompatImageView;
 
 import com.androidalians.androidpoint.R;
 
 public class ProjectList extends AppCompatActivity {
     AppCompatImageView feed_back_arrow;
-
     TextView title_project;
     ListView l;
     String tutorials[] =
             {
-            "(1)  Tuition Notes Application",
-            "(2)  Intermediate Android Projects",
-            "(3)  Online voting system",
-            "(4)  Train Food Application",
-            "(5)  Women Safety Application",
-            "(6)  Online Vaccination",
-            "(7)  Women Jobs Application",
-            "(8)  E-banking",
-            "(9)  Hostel Management Application",
-            "(10) Ayurvedic Remedies Application",
+                    "(1)  Tuition Notes Application",
+                    "(2)  Intermediate Android Projects",
+                    "(3)  Online voting system",
+                    "(4)  Train Food Application",
+                    "(5)  Women Safety Application",
+                    "(6)  Online Vaccination",
+                    "(7)  Women Jobs Application",
+                    "(8)  E-banking",
+                    "(9)  Hostel Management Application",
+                    "(10) Ayurvedic Remedies Application",
                     "Photo Management Application",
                     "Women's Security SMS Alert based Appliction",
                     "A Food Wastage Reduction Appliction",
@@ -118,7 +115,7 @@ public class ProjectList extends AppCompatActivity {
                     "Android General Knowledge Chatbot",
                     "Android Vehicle Toll Payment System",
                     "Android Task Monitoring",
-                   " Automated Canteen Ordering System using Android",
+                    " Automated Canteen Ordering System using Android",
                     "RFID Based Automatic Traffic Violation Ticketing",
                     "Android Based Visual Product Identification For The Blind",
                     "Android Offloading Computation Over Cloud",
@@ -145,9 +142,8 @@ public class ProjectList extends AppCompatActivity {
                     "Android Text Encryption Using Various Algorithms",
                     "Android Smart Ticketing Using Rfid",
                     "Android Battery Saver System",
-                   "Android Based Encrypted SMS System",
-
-    };
+                    "Android Based Encrypted SMS System",
+            };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -162,7 +158,6 @@ public class ProjectList extends AppCompatActivity {
         arr = new ArrayAdapter<String>(this,
                 com.airbnb.lottie.R.layout.support_simple_spinner_dropdown_item, tutorials);
         l.setAdapter(arr);
-
 
         feed_back_arrow.setOnClickListener(new View.OnClickListener() {
             @Override

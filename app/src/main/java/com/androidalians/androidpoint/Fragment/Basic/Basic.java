@@ -3,6 +3,7 @@ package com.androidalians.androidpoint.Fragment.Basic;
 import static androidx.constraintlayout.helper.widget.MotionEffect.TAG;
 
 import android.annotation.SuppressLint;
+import android.content.Context;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -14,6 +15,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.widget.LinearLayoutCompat;
 import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
@@ -96,9 +98,12 @@ public class Basic extends Fragment {
 */
 
         // Initialize AdMob SDK (only once in your app)
-        MobileAds.initialize(requireContext());
-        loadNativeAd();
-        loadNativeAd2();
+//        MobileAds.initialize(requireContext());
+
+        if (getActivity() != null) {
+            MobileAds.initialize(getActivity());
+        }
+
 
 
         ArrayList<SlideModel> slideModels = new ArrayList<>();
@@ -415,14 +420,20 @@ public class Basic extends Fragment {
     }
 
     private void loadNativeAd2() {
-        AdLoader adLoader = new AdLoader.Builder(requireContext(), "ca-app-pub-3940256099942544/2247696110")
+        if (getActivity() == null) {
+            return;
+        }
+        // Use the application context to avoid issues with a null activity context
+        Context appContext = getActivity().getApplicationContext();
+
+        AdLoader adLoader = new AdLoader.Builder(getActivity(), "ca-app-pub-3940256099942544/2247696110")
                 .forNativeAd(new NativeAd.OnNativeAdLoadedListener() {
                     @Override
                     public void onNativeAdLoaded(@NonNull NativeAd nativeAd) {
                         // The native ad is loaded. Now, let's add it to the native_ad_container.
 
                         // Inflate the native ad layout
-                        View adView = LayoutInflater.from(requireContext()).inflate(R.layout.item_native_ad, null);
+                        View adView = LayoutInflater.from(appContext).inflate(R.layout.item_native_ad, null);
 
                         // Populate the ad view components with the native ad's assets
                         NativeAdView nativeAdView = adView.findViewById(R.id.nativeAdView);
@@ -454,14 +465,20 @@ public class Basic extends Fragment {
     }
 
     private void loadNativeAd() {
-        AdLoader adLoader = new AdLoader.Builder(requireContext(), "ca-app-pub-3940256099942544/2247696110")
+
+        if (getActivity() == null) {
+            return;
+        }
+        // Use the application context to avoid issues with a null activity context
+        Context appContext = getActivity().getApplicationContext();
+        AdLoader adLoader = new AdLoader.Builder(getActivity(), "ca-app-pub-3940256099942544/2247696110")
                 .forNativeAd(new NativeAd.OnNativeAdLoadedListener() {
                     @Override
                     public void onNativeAdLoaded(@NonNull NativeAd nativeAd) {
                         // The native ad is loaded. Now, let's add it to the native_ad_container.
 
                         // Inflate the native ad layout
-                        View adView = LayoutInflater.from(requireContext()).inflate(R.layout.item_native_ad, null);
+                        View adView = LayoutInflater.from(appContext).inflate(R.layout.item_native_ad, null);
 
                         // Populate the ad view components with the native ad's assets
                         NativeAdView nativeAdView = adView.findViewById(R.id.nativeAdView);
@@ -532,6 +549,15 @@ public class Basic extends Fragment {
         });
     }
 
+
+    @Override
+    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+
+        // Load the native ad after the activity is created and the fragment is attached
+        loadNativeAd();
+        loadNativeAd2();
+    }
 
 }
 

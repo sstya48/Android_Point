@@ -168,6 +168,7 @@ import java.util.Random;
 
 public class LearnAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
+    private int adLoadedCount = 0;
     Context context;
     ArrayList<LearnModel> datalist;
 
@@ -334,8 +335,7 @@ public class LearnAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
         }
     }
 
-    // Declare the adLoadedCount variable as an instance variable
-    private int adLoadedCount = 0;
+
     public void loadNativeAds() {
         AdLoader.Builder builder = new AdLoader.Builder(context, /*nativeAdUnitId*/"ca-app-pub-3940256099942544/2247696110");
         builder.forNativeAd(new NativeAd.OnNativeAdLoadedListener() {
@@ -373,7 +373,7 @@ public class LearnAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
         builder.withNativeAdOptions(adOptions);
 
         AdLoader adLoader = builder.build();
-        adLoader.loadAds(new AdRequest.Builder().addKeyword("user search keyword").build(), MAX_ADS - adLoadedCount);
+        adLoader.loadAds(new AdRequest.Builder().build(), MAX_ADS - adLoadedCount);
 
     }
 }

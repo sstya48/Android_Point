@@ -49,8 +49,12 @@ public class Advance extends Fragment {
         View view = inflater.inflate(R.layout.fragment_advance, container, false);
 
         // Initialize AdMob SDK (only once in your app)
-        MobileAds.initialize(requireContext());
-//        loadNativeAd();
+//        MobileAds.initialize(getActivity());
+        if (getActivity() != null) {
+            MobileAds.initialize(getActivity());
+        }
+
+        loadNativeAd();
         loadNativeAd2();
 
         card_view1 = view.findViewById(R.id.card1);
@@ -385,14 +389,14 @@ public class Advance extends Fragment {
     }
 
     private void loadNativeAd2() {
-        AdLoader adLoader = new AdLoader.Builder(requireContext(), "ca-app-pub-3940256099942544/2247696110")
+        AdLoader adLoader = new AdLoader.Builder(getActivity(), "ca-app-pub-3940256099942544/2247696110")
                 .forNativeAd(new NativeAd.OnNativeAdLoadedListener() {
                     @Override
                     public void onNativeAdLoaded(@NonNull NativeAd nativeAd) {
                         // The native ad is loaded. Now, let's add it to the native_ad_container.
 
                         // Inflate the native ad layout
-                        View adView = LayoutInflater.from(requireContext()).inflate(R.layout.item_native_ad, null);
+                        View adView = LayoutInflater.from(getActivity()).inflate(R.layout.item_native_ad, null);
 
                         // Populate the ad view components with the native ad's assets
                         NativeAdView nativeAdView = adView.findViewById(R.id.nativeAdView);
@@ -406,7 +410,7 @@ public class Advance extends Fragment {
                             LinearLayoutCompat nativeAdContainer2 = rootView.findViewById(R.id.native_ad_containerAdvance2);
 
                             // Add the native ad view to the native_ad_container
-                            nativeAdContainer2.removeAllViews();
+//                            nativeAdContainer2.removeAllViews();
                             nativeAdContainer2.addView(adView);
                         }
                     }
@@ -423,15 +427,15 @@ public class Advance extends Fragment {
         adLoader.loadAd(new AdRequest.Builder().build());
     }
 
-  /*  private void loadNativeAd() {
-        AdLoader adLoader = new AdLoader.Builder(requireContext(), "ca-app-pub-3940256099942544/2247696110")
+    private void loadNativeAd() {
+        AdLoader adLoader = new AdLoader.Builder(getActivity(), "ca-app-pub-3940256099942544/2247696110")
                 .forNativeAd(new NativeAd.OnNativeAdLoadedListener() {
                     @Override
                     public void onNativeAdLoaded(@NonNull NativeAd nativeAd) {
                         // The native ad is loaded. Now, let's add it to the native_ad_container.
 
                         // Inflate the native ad layout
-                        View adView = LayoutInflater.from(requireContext()).inflate(R.layout.item_native_ad, null);
+                        View adView = LayoutInflater.from(getActivity()).inflate(R.layout.item_native_ad, null);
 
                         // Populate the ad view components with the native ad's assets
                         NativeAdView nativeAdView = adView.findViewById(R.id.nativeAdView);
@@ -460,8 +464,7 @@ public class Advance extends Fragment {
 
         // Load the native ad
         adLoader.loadAd(new AdRequest.Builder().build());
-    }*/
-
+    }
 
     private void populateNativeAdView(NativeAd nativeAd, NativeAdView adView) {
         // Set the media view. Media view is mandatory for Native Ad.

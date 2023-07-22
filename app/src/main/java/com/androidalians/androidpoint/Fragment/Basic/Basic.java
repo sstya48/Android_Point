@@ -96,7 +96,11 @@ public class Basic extends Fragment {
 */
 
         // Initialize AdMob SDK (only once in your app)
-        MobileAds.initialize(requireContext());
+//        MobileAds.initialize(requireContext());
+
+        if (getActivity() != null) {
+            MobileAds.initialize(getActivity());
+        }
         loadNativeAd();
         loadNativeAd2();
 
@@ -454,14 +458,14 @@ public class Basic extends Fragment {
     }
 
     private void loadNativeAd() {
-        AdLoader adLoader = new AdLoader.Builder(requireContext(), "ca-app-pub-3940256099942544/2247696110")
+        AdLoader adLoader = new AdLoader.Builder(getActivity(), "ca-app-pub-3940256099942544/2247696110")
                 .forNativeAd(new NativeAd.OnNativeAdLoadedListener() {
                     @Override
                     public void onNativeAdLoaded(@NonNull NativeAd nativeAd) {
                         // The native ad is loaded. Now, let's add it to the native_ad_container.
 
                         // Inflate the native ad layout
-                        View adView = LayoutInflater.from(requireContext()).inflate(R.layout.item_native_ad, null);
+                        View adView = LayoutInflater.from(getActivity()).inflate(R.layout.item_native_ad, null);
 
                         // Populate the ad view components with the native ad's assets
                         NativeAdView nativeAdView = adView.findViewById(R.id.nativeAdView);

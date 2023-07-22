@@ -13,11 +13,10 @@ import androidx.appcompat.widget.AppCompatImageView;
 import com.androidalians.androidpoint.R;
 
 public class Feedback extends AppCompatActivity {
-    EditText feedBack,name;
+    EditText feedBack, name;
     Button sendBtn;
     AppCompatImageView feed_back_arrow, project;
     boolean isAllFieldsChecked = false;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,57 +44,20 @@ public class Feedback extends AppCompatActivity {
                 isAllFieldsChecked = CheckAllFields();
 
                 if (isAllFieldsChecked) {
-
                     Intent i = new Intent(Intent.ACTION_SEND);
                     i.setType("message/html");
                     i.putExtra(Intent.EXTRA_EMAIL, new String[]{"aalians940@gmail.com"});
                     i.putExtra(Intent.EXTRA_SUBJECT, "Feedback From App");
-                    i.putExtra(Intent.EXTRA_TEXT, "Name:"+name.getText()+"\n Message:" + feedBack.getText());
+                    i.putExtra(Intent.EXTRA_TEXT, "Name:" + name.getText() + "\n Message:" + feedBack.getText());
 
                     try {
                         startActivity(Intent.createChooser(i, "Please select Email"));
-                    }
-                    catch (android.content.ActivityNotFoundException ex)
-                    {
+                    } catch (android.content.ActivityNotFoundException ex) {
                         Toast.makeText(Feedback.this, "There are no Email Clients", Toast.LENGTH_SHORT).show();
                     }
-
-                }
-
-            }
-        });
-
-       /* sendBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if (!validateUsername() | !validatePassword()) {
-                } else {
-                    checkUser();
                 }
             }
         });
-
-        public Boolean validateUsername() {
-            String val = name.getText().toString();
-            if (val.isEmpty()) {
-                name.setError("Username cannot be empty");
-                return false;
-            } else {
-                name.setError(null);
-                return true;
-            }
-        }
-        public Boolean validatePassword(){
-            String val = loginPassword.getText().toString();
-            if (val.isEmpty()) {
-                loginPassword.setError("Password cannot be empty");
-                return false;
-            } else {
-                loginPassword.setError(null);
-                return true;
-            }
-        }*/
-
     }
 
     private boolean CheckAllFields() {

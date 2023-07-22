@@ -1,7 +1,5 @@
 package com.androidalians.androidpoint.Activity;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -24,6 +22,8 @@ import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 import android.view.WindowManager;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.androidalians.androidpoint.Activity.Characters.Ludo.Piece.Piece;
 import com.androidalians.androidpoint.Activity.Characters.Ludo.Player.Player;
 import com.androidalians.androidpoint.Activity.Characters.PathPostion;
@@ -42,14 +42,13 @@ import java.util.Random;
 
 public class LudoGame extends AppCompatActivity {
 
-    private LudoGameView ludoGameView;
     public static PathPostion[] romPath;
-
+    private LudoGameView ludoGameView;
     private RewardedAd rewardedAd;
     private boolean isRewardedAdLoaded = false;
-
     private Handler adHandler;
     private int adCount = 0;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -117,8 +116,7 @@ public class LudoGame extends AppCompatActivity {
                 rewardedAd.show(LudoGame.this, new OnUserEarnedRewardListener() {
                     @Override
                     public void onUserEarnedReward(RewardItem rewardItem) {
-                        // User earned reward callback
-                        // Handle the reward given to the user
+
                     }
                 });
 
@@ -170,22 +168,23 @@ public class LudoGame extends AppCompatActivity {
             }
         });
     }
+
     @Override
     protected void onResume() {
         super.onResume();
         ludoGameView.onResume();
     }
+
     @Override
     protected void onPause() {
         super.onPause();
         ludoGameView.onPause();
     }
+
     enum Turn {
-        RED,
-        GREEN,
-        BLUE,
-        YELLOW;
+        RED,GREEN,BLUE,YELLOW;
     }
+
     class PieceChoice {
         public int PlayerId;
 
@@ -196,37 +195,26 @@ public class LudoGame extends AppCompatActivity {
 
     private class LudoGameView extends SurfaceView implements Runnable {
 
+        Turn t;
         private Context context;
         private Thread gameThread;
         private SurfaceHolder holder;
         private Canvas canvas;
         private Paint paint;
-
         private int ScreenWidth, ScreenHeight;
         private boolean isPlaying, gameFinished = false;
-
         private Position[] red, blue, yellow, green;
-
         private Position[] redPath, bluePath, yellowPath, greenPath;
-
         private int CircleSize;
-
         private Bitmap bmpStar, bmpStarWhite, bmpMap, bmpDice;
-
         private Bitmap bmpRedPiece, bmpGreenPiece, bmpYellowPiece, bmpBluePiece;
-
         private Player playerRed, playerBlue, playerGreen, playerYellow;
-
         private boolean initRed, initBlue, initGreen, initYellow, moveRed, moveGreen, moveYellow, moveBlue;
         private int placeToMove = 0;
-
         private String redPieceColor = "#710f01",
                 bluePieceColor = "#515DDA",
                 greenPieceColor = "#094702",
                 yellowPieceColor = "#b5b00b";
-
-        Turn t;
-
         private int suffleDice = 30;
         private int nextDrawTime = 0, totalPlayers = 0;
         private boolean isShuffling = false, isMoving = false, toSuffle = false, toMove = false, isFactSet = false, toHome = false;
@@ -392,7 +380,6 @@ public class LudoGame extends AppCompatActivity {
             map.drawCircle((float) rightX, (float) bottomLeftY, (circleWidth - 4) / 2, paint);
 
             //Bottom Part(Yellow)
-
             int topY = ScreenHeight - blockWidthHight;
             paint.setColor(Color.BLACK);
             map.drawRect(left - 2, topY, blockWidthHight + left - 2, ScreenHeight, paint);
@@ -461,9 +448,7 @@ public class LudoGame extends AppCompatActivity {
             paint.setColor(Color.YELLOW);
             map.drawCircle((float) rightX, (float) bottomLeftY, (circleWidth - 4) / 2, paint);
 
-
             //Top right (GREEN)
-
             int topRightX = ScreenHeight - blockWidthHight + left;
             paint.setColor(Color.BLACK);
             map.drawRect(topRightX - 2, 0, ScreenHeight + left, blockWidthHight, paint);
@@ -482,7 +467,6 @@ public class LudoGame extends AppCompatActivity {
                     redBorderWidth + 4,
                     left + ScreenHeight - redBorderWidth - 2,
                     blockWidthHight - 4 - redBorderWidth, paint);
-
 
             //GREEN Circle
             leftX = (topRightX + redBorderWidth + 2 + circleWidth - 2);
@@ -532,9 +516,7 @@ public class LudoGame extends AppCompatActivity {
             paint.setColor(Color.GREEN);
             map.drawCircle((float) rightX, (float) bottomLeftY, (circleWidth - 4) / 2, paint);
 
-
             //BottomRight (Blue)
-
             paint.setColor(Color.BLACK);
             map.drawRect(topRightX - 2, topY, ScreenHeight + left, ScreenHeight, paint);
             paint.setColor(Color.BLUE);
@@ -1424,11 +1406,8 @@ public class LudoGame extends AppCompatActivity {
                             winText = "Player YELLOW Lost";
                     }
                 }
-
             }
-
             gameFinished = true;
-
         }
 
         private void SetNextTurn() {
@@ -1664,7 +1643,6 @@ public class LudoGame extends AppCompatActivity {
                     c.drawCircle(80, 50, 10, paint);
                     break;
             }
-
             return next;
         }
 
@@ -1674,11 +1652,8 @@ public class LudoGame extends AppCompatActivity {
                 Piece[] pieces = playerRed.getRedPiecePositions();
                 for (int i = 0; i < pieces.length; i++) {
                     Piece p = pieces[i];
-                    //canvas.drawBitmap(playerRed.getBmpPiece(),p.getX() - (playerRed.getPieceSize() / 2), p.getY() - (playerRed.getPieceSize()),null);
                     paint.setColor(Color.parseColor(redPieceColor));
                     canvas.drawBitmap(bmpRedPiece, p.getX() - bmpRedPiece.getWidth() / 2, p.getY() - bmpRedPiece.getHeight(), null);
-                    //canvas.drawCircle(p.getX(),p.getY(),(CircleSize - 8) / 2,paint);
-                    //canvas.drawRect(p.getCollision(),paint);
                 }
 
                 if (t == Turn.RED) {
@@ -1696,7 +1671,6 @@ public class LudoGame extends AppCompatActivity {
                     Piece p = pieces[i];
                     paint.setColor(Color.parseColor(yellowPieceColor));
                     canvas.drawBitmap(bmpYellowPiece, p.getX() - bmpYellowPiece.getWidth() / 2, p.getY() - bmpYellowPiece.getHeight(), null);
-                    //canvas.drawRect(p.getCollision(),paint);
                 }
 
                 if (t == Turn.YELLOW) {
@@ -1760,10 +1734,6 @@ public class LudoGame extends AppCompatActivity {
                             playerRed.getArrows(i).setY();
 
                             paint.setColor(Color.parseColor("#be5c46"));
-//                    paint.setShader(new LinearGradient(0f,0f,
-//                            0,
-//                            getHeight(),
-//                            Color.RED,Color.WHITE, Shader.TileMode.MIRROR));
                             canvas.drawPath(playerRed.getArrows(i).getPath(), paint);
                         }
                     }
@@ -1779,10 +1749,6 @@ public class LudoGame extends AppCompatActivity {
                             playerGreen.getArrows(i).setY();
 
                             paint.setColor(Color.parseColor("#2f7d24"));
-//                    paint.setShader(new LinearGradient(0f,0f,
-//                            0,
-//                            getHeight(),
-//                            Color.GREEN,Color.WHITE, Shader.TileMode.MIRROR));
                             canvas.drawPath(playerGreen.getArrows(i).getPath(), paint);
                         }
                     }
@@ -1796,10 +1762,6 @@ public class LudoGame extends AppCompatActivity {
                         if (pieces[i].getIsKilled()) {
                             playerBlue.getArrows(i).setY();
                             paint.setColor(Color.parseColor("#051850"));
-//                    paint.setShader(new LinearGradient(0f,0f,
-//                            0,
-//                            getHeight(),
-//                            Color.BLUE,Color.WHITE, Shader.TileMode.MIRROR));
                             canvas.drawPath(playerBlue.getArrows(i).getPath(), paint);
                         }
                     }
@@ -1814,10 +1776,6 @@ public class LudoGame extends AppCompatActivity {
                             playerYellow.getArrows(i).setY();
 
                             paint.setColor(Color.parseColor("#9b942c"));
-//                    paint.setShader(new LinearGradient(0f,0f,
-//                            0,
-//                            getHeight(),
-//                            Color.YELLOW,Color.WHITE, Shader.TileMode.MIRROR));
                             canvas.drawPath(playerYellow.getArrows(i).getPath(), paint);
                         }
                     }

@@ -1,23 +1,19 @@
 package com.androidalians.androidpoint.Activity;
 
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatImageView;
 import androidx.cardview.widget.CardView;
-
-import android.annotation.SuppressLint;
-import android.content.Intent;
-import android.graphics.Color;
-import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
-import android.widget.TextView;
-import android.widget.Toast;
 
 import com.androidalians.androidpoint.R;
 
 public class Game extends AppCompatActivity {
     AppCompatImageView feed_back_arrow;
     CardView game1, game2, game3, game4, game5, game6;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -61,7 +57,6 @@ public class Game extends AppCompatActivity {
                 startActivity(chess);
             }
         });
-
 
         game4.setOnClickListener(new View.OnClickListener() {
             @Override

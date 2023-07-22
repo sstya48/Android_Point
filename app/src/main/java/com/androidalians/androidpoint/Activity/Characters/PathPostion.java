@@ -1,35 +1,30 @@
 package com.androidalians.androidpoint.Activity.Characters;
 
-/**
- * Created by Win on 23-04-2018.
- */
-
 public class PathPostion {
 
-    private int X,Y;
+    private int X, Y;
     private boolean isStar;
 
-    public PathPostion(int x, int y, boolean isStar)
-    {
+    public PathPostion(int x, int y, boolean isStar) {
         this.X = x;
         this.Y = y;
         this.isStar = isStar;
     }
 
-    public int getX()
-    {
+    public int getX() {
         return X;
     }
 
-    public int getY() { return Y; }
+    public int getY() {
+        return Y;
+    }
 
-    public boolean getIsStar()
-    {
+    public boolean getIsStar() {
         return isStar;
     }
 
     @Override
     public String toString() {
-        return String.format("X : %d, Y : %d: ",X,Y);
+        return String.format("X : %d, Y : %d: ", X, Y);
     }
 }

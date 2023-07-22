@@ -12,9 +12,7 @@ import com.androidalians.androidpoint.DemoFragments.Screen_Orientation_Fragment;
 import com.androidalians.androidpoint.R;
 
 public class LandscapeActivity extends AppCompatActivity {
-
     TextView landscape;
-
     Button Landscape1;
 
     @SuppressLint("MissingInflatedId")
@@ -34,17 +32,7 @@ public class LandscapeActivity extends AppCompatActivity {
                 getSupportFragmentManager().beginTransaction()
                         .replace(R.id.frame_container, screenpotrait, "screen Landscape DEMO")
                         .commit();
-
             }
         });
-
     }
-   /* @Override
-    public void onBackPressed() {
-        if (getFragmentManager().getBackStackEntryCount() == 0) {
-            this.finish();
-        } else {
-            getFragmentManager().popBackStack();
-        }
-    }*/
 }

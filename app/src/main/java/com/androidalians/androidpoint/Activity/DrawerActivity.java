@@ -1,17 +1,11 @@
 package com.androidalians.androidpoint.Activity;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.app.AppCompatDelegate;
-import androidx.appcompat.widget.AppCompatImageView;
-import androidx.fragment.app.Fragment;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
-import android.os.Handler;
 import android.util.Log;
 import android.view.View;
 import android.view.Window;
@@ -19,26 +13,25 @@ import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
+import androidx.appcompat.widget.AppCompatImageView;
+
 import com.androidalians.androidpoint.BuildConfig;
 import com.androidalians.androidpoint.R;
 import com.androidalians.androidpoint.SaveState;
-import com.google.android.gms.ads.AdError;
 import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.FullScreenContentCallback;
-import com.google.android.gms.ads.LoadAdError;
-import com.google.android.gms.ads.interstitial.InterstitialAd;
-import com.google.android.gms.ads.interstitial.InterstitialAdLoadCallback;
+
 public class DrawerActivity extends AppCompatActivity {
 
     LinearLayout shareapp, tips, feedback, rate_us, about_us, ads_show, game, matirial;
     ImageView back_menu;
-    Fragment fragment = null;
     LinearLayout youtube_link;
     ImageView light;
     AppCompatImageView close_menu;
     SaveState saveState;
     TextView version1, version2;
-    InterstitialAd mInterstitialAd;
 
     @SuppressLint({"MissingInflatedId", "SetTextI18n"})
     @Override
@@ -115,7 +108,6 @@ public class DrawerActivity extends AppCompatActivity {
         close_menu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
                 finish();
             }
         });
@@ -123,8 +115,6 @@ public class DrawerActivity extends AppCompatActivity {
         feedback.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-
                 Intent i = new Intent(DrawerActivity.this, Feedback.class);
                 startActivity(i);
             }
@@ -137,64 +127,6 @@ public class DrawerActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent i = new Intent(DrawerActivity.this, ProjectList.class);
                 startActivity(i);
-              /*  InterstitialAd.load(DrawerActivity.this, getString(R.string.Interstitial_AdOne_unit_id), adRequest, new InterstitialAdLoadCallback() {
-                    @Override
-                    public void onAdFailedToLoad(@NonNull LoadAdError loadAdError) {
-                        super.onAdFailedToLoad(loadAdError);
-                        Log.e("Error", loadAdError.toString());
-                    }
-
-                    @Override
-                    public void onAdLoaded(@NonNull InterstitialAd interstitialAd) {
-                        super.onAdLoaded(interstitialAd);
-
-                        mInterstitialAd = interstitialAd;
-
-                        mInterstitialAd.setFullScreenContentCallback(new FullScreenContentCallback() {
-                            @Override
-                            public void onAdClicked() {
-                                super.onAdClicked();
-                            }
-
-                            @Override
-                            public void onAdDismissedFullScreenContent() {
-                                super.onAdDismissedFullScreenContent();
-                            }
-
-                            @Override
-                            public void onAdFailedToShowFullScreenContent(@NonNull AdError adError) {
-                                super.onAdFailedToShowFullScreenContent(adError);
-                            }
-
-                            @Override
-                            public void onAdImpression() {
-                                super.onAdImpression();
-                            }
-
-                            @Override
-                            public void onAdShowedFullScreenContent() {
-                                super.onAdShowedFullScreenContent();
-
-                                mInterstitialAd = null;
-                            }
-                        });
-
-                        new Handler().postDelayed(new Runnable() {
-                            @Override
-                            public void run() {
-
-                                if (mInterstitialAd != null) {
-                                    mInterstitialAd.show(DrawerActivity.this);
-                                } else {
-                                    Log.e("AdPending", "Ad is not ready yet!");
-
-                                }
-
-                            }
-                        }, 10000);
-
-                    }
-                });*/
             }
         });
 

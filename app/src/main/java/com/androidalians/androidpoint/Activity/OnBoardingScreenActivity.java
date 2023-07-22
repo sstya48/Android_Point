@@ -19,18 +19,38 @@ import com.androidalians.androidpoint.Adapter.ViewPagerAdapter;
 import com.androidalians.androidpoint.R;
 
 public class OnBoardingScreenActivity extends AppCompatActivity {
-
     ViewPager mslideviewPager;
-
     LinearLayout mDotLayout;
     Button backbtn, nextbtn, skipbtn;
-
     ImageView img_btn;
-
     TextView[] dots;
     ViewPagerAdapter viewPagerAdapter;
-
     String prevStarted = "yes";
+    ViewPager.OnPageChangeListener viewListener = new ViewPager.OnPageChangeListener() {
+        @Override
+        public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+        }
+
+        @Override
+        public void onPageSelected(int position) {
+
+            setUpindicator(position);
+
+            if (position > 0) {
+                backbtn.setVisibility(View.VISIBLE);
+                img_btn.setVisibility(View.VISIBLE);
+
+            } else {
+                backbtn.setVisibility(View.INVISIBLE);
+                img_btn.setVisibility(View.INVISIBLE);
+            }
+        }
+
+        @Override
+        public void onPageScrollStateChanged(int state) {
+
+        }
+    };
 
     @Override
     protected void onResume() {
@@ -45,31 +65,10 @@ public class OnBoardingScreenActivity extends AppCompatActivity {
         }
     }
 
-
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_on_boarding_screen);
-
-
-
-      /*  SharedPreferences preferences= getSharedPreferences("PREFERENCE",MODE_PRIVATE);
-        String FirstTime= preferences.getString("FirstTimeInstall","");
-
-        if (FirstTime.equals("yes"))
-        {
-            Intent i = new Intent(OnBoardingScreenActivity.this, MainActivity.class);
-            startActivity(i);
-//            finish();
-        }
-        else {
-            SharedPreferences.Editor editor=preferences.edit();
-            editor.putString("FirstTimeInstall","Yes");
-            editor.apply();
-        }
-*/
 
         backbtn = findViewById(R.id.btn_back);
         nextbtn = findViewById(R.id.btn_next);
@@ -83,7 +82,6 @@ public class OnBoardingScreenActivity extends AppCompatActivity {
                 if (getitem(0) > 0) {
                     mslideviewPager.setCurrentItem(getitem(-1), true);
                 }
-
             }
         });
 
@@ -99,21 +97,17 @@ public class OnBoardingScreenActivity extends AppCompatActivity {
                     startActivity(i);
                     finish();
                 }
-
             }
         });
 
         skipbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 Intent i = new Intent(OnBoardingScreenActivity.this, MainActivity.class);
                 startActivity(i);
                 finish();
-
             }
         });
-
 
         mslideviewPager = (ViewPager) findViewById(R.id.slideViewpage);
 
@@ -130,7 +124,6 @@ public class OnBoardingScreenActivity extends AppCompatActivity {
         dots = new TextView[3];
         mDotLayout.removeAllViews();
 
-
         for (int i = 0; i < dots.length; i++) {
             dots[i] = new TextView(this);
             dots[i].setText(Html.fromHtml("&#8226"));
@@ -146,45 +139,13 @@ public class OnBoardingScreenActivity extends AppCompatActivity {
         }
     }
 
-    ViewPager.OnPageChangeListener viewListener = new ViewPager.OnPageChangeListener() {
-        @Override
-        public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
-
-        }
-
-        @Override
-        public void onPageSelected(int position) {
-
-            setUpindicator(position);
-
-            if (position > 0) {
-                backbtn.setVisibility(View.VISIBLE);
-                img_btn.setVisibility(View.VISIBLE);
-
-            } else {
-                backbtn.setVisibility(View.INVISIBLE);
-                img_btn.setVisibility(View.INVISIBLE);
-            }
-
-        }
-
-        @Override
-        public void onPageScrollStateChanged(int state) {
-
-        }
-    };
-
     private int getitem(int i) {
-
         return mslideviewPager.getCurrentItem() + i;
-
     }
 
     private void moveToSecondary() {
-
         Intent i = new Intent(OnBoardingScreenActivity.this, MainActivity.class);
         startActivity(i);
         finish();
-
     }
 }

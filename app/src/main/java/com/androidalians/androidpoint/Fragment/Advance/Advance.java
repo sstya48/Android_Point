@@ -4,6 +4,7 @@ import android.annotation.SuppressLint;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.widget.LinearLayoutCompat;
 import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
@@ -53,9 +54,6 @@ public class Advance extends Fragment {
         if (getActivity() != null) {
             MobileAds.initialize(getActivity());
         }
-
-        loadNativeAd();
-        loadNativeAd2();
 
         card_view1 = view.findViewById(R.id.card1);
         card_view2 = view.findViewById(R.id.card2);
@@ -389,6 +387,9 @@ public class Advance extends Fragment {
     }
 
     private void loadNativeAd2() {
+        if (getActivity() == null) {
+            return;
+        }
         AdLoader adLoader = new AdLoader.Builder(getActivity(), "ca-app-pub-3940256099942544/2247696110")
                 .forNativeAd(new NativeAd.OnNativeAdLoadedListener() {
                     @Override
@@ -428,6 +429,9 @@ public class Advance extends Fragment {
     }
 
     private void loadNativeAd() {
+        if (getActivity() == null) {
+            return;
+        }
         AdLoader adLoader = new AdLoader.Builder(getActivity(), "ca-app-pub-3940256099942544/2247696110")
                 .forNativeAd(new NativeAd.OnNativeAdLoadedListener() {
                     @Override
@@ -503,5 +507,14 @@ public class Advance extends Fragment {
                 // For example, you can open a webpage or an in-app view.
             }
         });
+    }
+
+    @Override
+    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+
+        // Load the native ad after the activity is created and the fragment is attached
+        loadNativeAd();
+        loadNativeAd2();
     }
 }

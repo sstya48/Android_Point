@@ -1,7 +1,5 @@
 package com.androidalians.androidpoint.Activity;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
@@ -9,7 +7,7 @@ import android.preference.PreferenceManager;
 import android.util.Log;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
-
+import androidx.appcompat.app.AppCompatActivity;
 import com.androidalians.androidpoint.R;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.FullScreenContentCallback;
@@ -25,7 +23,6 @@ public class NomRunGame extends AppCompatActivity {
     WebView run_id;
     private RewardedAd rewardedAd;
     private boolean isRewardedAdLoaded = false;
-
     private Handler adHandler;
     private int adCount = 0;
     @Override
@@ -38,8 +35,7 @@ public class NomRunGame extends AppCompatActivity {
         run_id.getSettings().setJavaScriptEnabled(true);
         run_id.setWebViewClient(new WebViewClient());
         // Initialize AdMob
-        MobileAds.initialize(this, initializationStatus -> {
-        });
+        MobileAds.initialize(this, initializationStatus -> { });
 
         // Load the rewarded ad
         loadRewardedAd();

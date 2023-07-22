@@ -14,6 +14,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.widget.LinearLayoutCompat;
 import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
@@ -101,8 +102,7 @@ public class Basic extends Fragment {
         if (getActivity() != null) {
             MobileAds.initialize(getActivity());
         }
-        loadNativeAd();
-        loadNativeAd2();
+
 
 
         ArrayList<SlideModel> slideModels = new ArrayList<>();
@@ -419,6 +419,9 @@ public class Basic extends Fragment {
     }
 
     private void loadNativeAd2() {
+        if (getActivity() == null) {
+            return;
+        }
         AdLoader adLoader = new AdLoader.Builder(requireContext(), "ca-app-pub-3940256099942544/2247696110")
                 .forNativeAd(new NativeAd.OnNativeAdLoadedListener() {
                     @Override
@@ -458,6 +461,10 @@ public class Basic extends Fragment {
     }
 
     private void loadNativeAd() {
+
+        if (getActivity() == null) {
+            return;
+        }
         AdLoader adLoader = new AdLoader.Builder(getActivity(), "ca-app-pub-3940256099942544/2247696110")
                 .forNativeAd(new NativeAd.OnNativeAdLoadedListener() {
                     @Override
@@ -536,6 +543,15 @@ public class Basic extends Fragment {
         });
     }
 
+
+    @Override
+    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+
+        // Load the native ad after the activity is created and the fragment is attached
+        loadNativeAd();
+        loadNativeAd2();
+    }
 
 }
 

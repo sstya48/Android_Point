@@ -12,6 +12,7 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 
+import com.androidalians.androidpoint.Fragment.Advance.Cards.A_card_5_Fragment;
 import com.androidalians.androidpoint.R;
 
 public class A_A5_Fragment extends Fragment {

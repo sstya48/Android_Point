@@ -1,4 +1,4 @@
-package com.androidalians.androidpoint.Fragment.Advance;
+package com.androidalians.androidpoint.Fragment.Advance.Cards;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
@@ -15,6 +15,8 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.androidalians.androidpoint.Fragment.Advance.A_A14_Fragment;
+import com.androidalians.androidpoint.Fragment.Advance.Advance;
 import com.androidalians.androidpoint.R;
 public class A_card_14_Fragment extends Fragment {
     TextView insta_java, insta_xml, Drawable_Color, Drawable_Border, Drawable_arrow;

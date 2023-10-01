@@ -10,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.androidalians.androidpoint.Fragment.Advance.Cards.A_card_12_Fragment;
 import com.androidalians.androidpoint.R;
 import com.github.mikephil.charting.charts.LineChart;
 import com.github.mikephil.charting.data.Entry;

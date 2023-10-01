@@ -1,4 +1,4 @@
-package com.androidalians.androidpoint.Fragment.Advance;
+package com.androidalians.androidpoint.Fragment.Advance.Cards;
 
 import static com.androidalians.androidpoint.R.*;
 
@@ -17,6 +17,8 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.androidalians.androidpoint.Fragment.Advance.A_A8_Fragment;
+import com.androidalians.androidpoint.Fragment.Advance.Advance;
 import com.androidalians.androidpoint.R;
 
 

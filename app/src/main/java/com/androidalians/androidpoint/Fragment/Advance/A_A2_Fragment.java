@@ -12,6 +12,7 @@ import android.widget.Button;
 import android.widget.Toast;
 import android.widget.ToggleButton;
 
+import com.androidalians.androidpoint.Fragment.Advance.Cards.A_card_2_Fragment;
 import com.androidalians.androidpoint.R;
 
 public class A_A2_Fragment extends Fragment {

@@ -1,4 +1,4 @@
-package com.androidalians.androidpoint.Fragment.Advance;
+package com.androidalians.androidpoint.Fragment.Advance.Cards;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
@@ -12,6 +12,8 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.androidalians.androidpoint.Fragment.Advance.A_A2_Fragment;
+import com.androidalians.androidpoint.Fragment.Advance.Advance;
 import com.androidalians.androidpoint.R;
 public class A_card_2_Fragment extends Fragment {
     ImageView toggle_btn_output;

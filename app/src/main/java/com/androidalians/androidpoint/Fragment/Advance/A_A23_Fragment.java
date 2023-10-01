@@ -13,9 +13,9 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.androidalians.androidpoint.Fragment.Advance.Cards.A_card_23_Fragment;
 import com.androidalians.androidpoint.R;
 public class A_A23_Fragment extends Fragment {
-
 
     AppCompatImageView Calculator_Btn_arrow;
     private Button b1;

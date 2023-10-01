@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
+import com.androidalians.androidpoint.Fragment.Advance.Cards.A_card_7_Fragment;
 import com.androidalians.androidpoint.R;
 
 

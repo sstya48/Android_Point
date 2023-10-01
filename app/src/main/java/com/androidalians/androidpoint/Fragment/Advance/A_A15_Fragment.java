@@ -12,6 +12,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.androidalians.androidpoint.Fragment.Advance.Cards.A_card_15_Fragment;
 import com.androidalians.androidpoint.R;
 
 public class A_A15_Fragment extends Fragment {

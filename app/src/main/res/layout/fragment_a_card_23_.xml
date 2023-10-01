@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".Fragment.Advance.A_card_23_Fragment">
+    tools:context=".Fragment.Advance.Cards.A_card_23_Fragment">
 
     <LinearLayout
         android:layout_width="match_parent"

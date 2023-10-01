@@ -17,6 +17,7 @@ import androidx.appcompat.widget.AppCompatImageView;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 
+import com.androidalians.androidpoint.Fragment.Advance.Cards.A_card_20_Fragment;
 import com.androidalians.androidpoint.R;
 
 import java.io.IOException;

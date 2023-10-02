@@ -78,7 +78,7 @@
                                     android:gravity="center"
                                     android:text="@string/Splash_Screen"
                                     android:textColor="#0B204C"
-                                    android:textSize="16dp" />
+                                    android:textSize="13dp" />
                             </androidx.appcompat.widget.LinearLayoutCompat>
 
                         </FrameLayout>
@@ -132,7 +132,7 @@
                                     android:gravity="center"
                                     android:text="@string/Toggle_Button"
                                     android:textColor="#0B204C"
-                                    android:textSize="16dp" />
+                                    android:textSize="13dp" />
                             </androidx.appcompat.widget.LinearLayoutCompat>
 
                         </FrameLayout>
@@ -193,7 +193,7 @@
                                     android:gravity="center"
                                     android:text="@string/Radio_Group"
                                     android:textColor="#0B204C"
-                                    android:textSize="16dp" />
+                                    android:textSize="13dp" />
                             </androidx.appcompat.widget.LinearLayoutCompat>
 
                         </FrameLayout>
@@ -244,7 +244,7 @@
                                     android:gravity="center"
                                     android:text="@string/Alert_Dialog"
                                     android:textColor="#0B204C"
-                                    android:textSize="16dp" />
+                                    android:textSize="13dp" />
                             </androidx.appcompat.widget.LinearLayoutCompat>
 
                         </FrameLayout>
@@ -306,7 +306,7 @@
                                     android:gravity="center"
                                     android:text="@string/Spinner"
                                     android:textColor="#0B204C"
-                                    android:textSize="16dp" />
+                                    android:textSize="13dp" />
                             </androidx.appcompat.widget.LinearLayoutCompat>
 
                         </FrameLayout>
@@ -358,7 +358,7 @@
                                     android:gravity="center"
                                     android:text="@string/Web_View"
                                     android:textColor="#0B204C"
-                                    android:textSize="16dp" />
+                                    android:textSize="13dp" />
                             </androidx.appcompat.widget.LinearLayoutCompat>
 
                         </FrameLayout>
@@ -430,7 +430,7 @@
                                     android:gravity="center"
                                     android:text="@string/Progress_Bar"
                                     android:textColor="#0B204C"
-                                    android:textSize="16dp" />
+                                    android:textSize="13dp" />
                             </androidx.appcompat.widget.LinearLayoutCompat>
 
                         </FrameLayout>
@@ -483,7 +483,7 @@
                                     android:gravity="center"
                                     android:text="@string/Image_Slider"
                                     android:textColor="#0B204C"
-                                    android:textSize="16dp" />
+                                    android:textSize="13dp" />
                             </androidx.appcompat.widget.LinearLayoutCompat>
 
                         </FrameLayout>
@@ -544,7 +544,7 @@
                                     android:gravity="center"
                                     android:text="@string/Curren_Llocation"
                                     android:textColor="#0B204C"
-                                    android:textSize="16dp" />
+                                    android:textSize="13dp" />
                             </androidx.appcompat.widget.LinearLayoutCompat>
 
                         </FrameLayout>
@@ -595,7 +595,7 @@
                                     android:gravity="center"
                                     android:text="@string/Registation_Ppage"
                                     android:textColor="#0B204C"
-                                    android:textSize="16dp" />
+                                    android:textSize="13dp" />
                             </androidx.appcompat.widget.LinearLayoutCompat>
 
                         </FrameLayout>
@@ -657,7 +657,7 @@
                                     android:gravity="center"
                                     android:text="@string/Bar_Chart"
                                     android:textColor="#0B204C"
-                                    android:textSize="16dp" />
+                                    android:textSize="13dp" />
                             </androidx.appcompat.widget.LinearLayoutCompat>
 
                         </FrameLayout>
@@ -710,7 +710,7 @@
                                     android:gravity="center"
                                     android:text="@string/Line_Chart"
                                     android:textColor="#0B204C"
-                                    android:textSize="16dp" />
+                                    android:textSize="13dp" />
                             </androidx.appcompat.widget.LinearLayoutCompat>
 
                         </FrameLayout>
@@ -774,7 +774,7 @@
                                     android:gravity="center"
                                     android:text="@string/Pie_Chart"
                                     android:textColor="#0B204C"
-                                    android:textSize="16dp" />
+                                    android:textSize="13dp" />
                             </androidx.appcompat.widget.LinearLayoutCompat>
 
                         </FrameLayout>
@@ -828,7 +828,7 @@
                                     android:gravity="center"
                                     android:text="@string/Instagram_Llogin"
                                     android:textColor="#0B204C"
-                                    android:textSize="16dp" />
+                                    android:textSize="13dp" />
                             </androidx.appcompat.widget.LinearLayoutCompat>
 
                         </FrameLayout>
@@ -889,7 +889,7 @@
                                     android:gravity="center"
                                     android:text="@string/Phone_Call"
                                     android:textColor="#0B204C"
-                                    android:textSize="16dp" />
+                                    android:textSize="13dp" />
                             </androidx.appcompat.widget.LinearLayoutCompat>
 
                         </FrameLayout>
@@ -941,7 +941,7 @@
                                     android:gravity="center"
                                     android:text="@string/Send_SMS"
                                     android:textColor="#0B204C"
-                                    android:textSize="16dp" />
+                                    android:textSize="13dp" />
                             </androidx.appcompat.widget.LinearLayoutCompat>
 
                         </FrameLayout>
@@ -1002,7 +1002,7 @@
                                     android:gravity="center"
                                     android:text="@string/Send_Email"
                                     android:textColor="#0B204C"
-                                    android:textSize="16dp" />
+                                    android:textSize="13dp" />
                             </androidx.appcompat.widget.LinearLayoutCompat>
 
                         </FrameLayout>
@@ -1054,7 +1054,7 @@
                                     android:gravity="center"
                                     android:text="@string/SQLite_DB"
                                     android:textColor="#0B204C"
-                                    android:textSize="16dp" />
+                                    android:textSize="13dp" />
                             </androidx.appcompat.widget.LinearLayoutCompat>
 
                         </FrameLayout>
@@ -1127,7 +1127,7 @@
                                     android:gravity="center"
                                     android:text="@string/Gallery"
                                     android:textColor="#0B204C"
-                                    android:textSize="16dp" />
+                                    android:textSize="13dp" />
                             </androidx.appcompat.widget.LinearLayoutCompat>
 
                         </FrameLayout>
@@ -1181,7 +1181,7 @@
                                     android:gravity="center"
                                     android:text="@string/flash"
                                     android:textColor="#0B204C"
-                                    android:textSize="16dp" />
+                                    android:textSize="13dp" />
                             </androidx.appcompat.widget.LinearLayoutCompat>
 
                         </FrameLayout>
@@ -1242,7 +1242,7 @@
                                     android:gravity="center"
                                     android:text="@string/FingurPrint"
                                     android:textColor="#0B204C"
-                                    android:textSize="16dp" />
+                                    android:textSize="13dp" />
                             </androidx.appcompat.widget.LinearLayoutCompat>
 
                         </FrameLayout>
@@ -1293,7 +1293,7 @@
                                     android:gravity="center"
                                     android:text="@string/Rating_App"
                                     android:textColor="#0B204C"
-                                    android:textSize="16dp" />
+                                    android:textSize="13dp" />
                             </androidx.appcompat.widget.LinearLayoutCompat>
 
                         </FrameLayout>
@@ -1354,7 +1354,7 @@
                                     android:gravity="center"
                                     android:text="@string/Calculator"
                                     android:textColor="#0B204C"
-                                    android:textSize="16dp" />
+                                    android:textSize="13dp" />
                             </androidx.appcompat.widget.LinearLayoutCompat>
 
                         </FrameLayout>
@@ -1406,7 +1406,7 @@
                                     android:gravity="center"
                                     android:text="@string/Picasso"
                                     android:textColor="#0B204C"
-                                    android:textSize="16dp" />
+                                    android:textSize="13dp" />
                             </androidx.appcompat.widget.LinearLayoutCompat>
 
                         </FrameLayout>
@@ -1468,7 +1468,7 @@
                                     android:gravity="center"
                                     android:text="@string/Chronometer"
                                     android:textColor="#0B204C"
-                                    android:textSize="16dp" />
+                                    android:textSize="13dp" />
                             </androidx.appcompat.widget.LinearLayoutCompat>
 
                         </FrameLayout>
@@ -1522,7 +1522,7 @@
                                     android:gravity="center"
                                     android:text="@string/Snackbar"
                                     android:textColor="#0B204C"
-                                    android:textSize="16dp" />
+                                    android:textSize="13dp" />
                             </androidx.appcompat.widget.LinearLayoutCompat>
 
                         </FrameLayout>

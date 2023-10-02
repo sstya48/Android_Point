@@ -5,9 +5,6 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFF</color>
     <color name="blue_light">#3153FD</color>
-
-    <!-- shirish-->
-
     <color name="orange">#EF7222</color>
     <color name="red">#E45959</color>
     <color name="light_gray">#D1D1D1</color>
@@ -52,20 +49,13 @@
     <color name="trans">#00000000 </color>
     <color name="pinklite">#e0004e </color>
     <color name="bluelite">#04C692 </color>
-
     <color name="header">#ffe1aa</color>
     <color name="blue_dark">#3668D9</color>
     <color name="menu_text">#333333</color>
-<!--    <color name="sub_toolbar">#DCDCDC</color>-->
-<!--    <color name="btn">#DCDCDC</color>-->
     <color name="selected_menu">#DCDCDC</color>
-
-
     <color name="primaryTitleColor">#212121</color>
     <color name="primaryTitleColorNight">#FFFFFF</color>
     <color name="colorPrimaryNight">#80050505</color>
-
-
     <color name="background">#F0F4F3</color>
     <color name="background1">#80F0F4F3</color>
     <color name="buttontext">#50C2C9</color>
@@ -75,9 +65,6 @@
     <color name="inactive">#C4C4C4</color>
     <color name="active">#50C2C9</color>
     <color name="lavender">#8692f7</color>
-
-
-
     <color name="skyblue">#BADAFB</color>
     <color name="pink">#f498ad</color>
     <color name="maroon">#9d2933</color>
@@ -93,9 +80,19 @@
     <color name="seablue">#8EDAE6</color>
 
 
-
-    <!--    <color name="transparent">#00000000</color>-->
-
+    <color name="Red">#FF0000</color>
+    <color name="Cyan">#00FFFF</color>
+    <color name="Blue">#0000FF</color>
+    <color name="DarkBlue">#00008B</color>
+    <color name="Purple">#800080</color>
+    <color name="Lime">#00FF00</color>
+    <color name="Magenta">#FF00FF</color>
+    <color name="Gray">#808080</color>
+    <color name="Black">#000000</color>
+    <color name="Orange">#FFA500</color>
+    <color name="Brown">#A52A2A</color>
+    <color name="Green">#008000</color>
+    <color name="Olive">#008000</color>
 
     <integer-array name="androidtext">
         <item>@color/mango</item>
@@ -115,7 +112,6 @@
     <integer-array name="androidcolors">
         <item>@color/red</item>
         <item>@color/lightpur</item>
-        <!--        <item>@color/dark_purple</item>-->
         <item>@color/mango</item>
         <item>@color/pink</item>
         <item>@color/navy_blue</item>
@@ -124,26 +120,26 @@
         <item>@color/falsa</item>
         <item>@color/mendi</item>
         <item>@color/orangelight</item>
-
     </integer-array>
-
-
-
-
 
     <integer-array name="listcolor">
-        <item>@color/RED</item>
-        <item>@color/brightpurple</item>
-        <item>@color/dark_purple</item>
-        <item>@color/green</item>
+
         <item>@color/lightpurple</item>
-        <item>@color/maroon</item>
-        <item>@color/orange</item>
         <item>@color/teal_700</item>
         <item>@color/pinklite</item>
-        <item>@color/bluelite</item>
+        <item>@color/Red</item>
+        <item>@color/Cyan</item>
+        <item>@color/Blue</item>
+        <item>@color/DarkBlue</item>
+        <item>@color/Purple</item>
+        <item>@color/Lime</item>
+        <item>@color/Magenta</item>
+        <item>@color/Gray</item>
+        <item>@color/Black</item>
+        <item>@color/Orange</item>
+        <item>@color/Brown</item>
+        <item>@color/Green</item>
+        <item>@color/Olive</item>
     </integer-array>
-
-
 
 </resources>

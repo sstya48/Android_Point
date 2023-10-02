@@ -35,26 +35,26 @@
 
                     <ImageView
                         android:id="@+id/btn_menu"
-                        android:layout_width="25dp"
-                        android:layout_height="25dp"
+                        android:layout_width="30dp"
+                        android:layout_height="28dp"
                         android:layout_gravity="center_vertical"
-
                         android:background="?android:attr/selectableItemBackgroundBorderless"
                         android:backgroundTint="@color/green"
                         android:src="@drawable/drower_open" />
 
                     <TextView
+                        android:id="@+id/title_android"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="80dp"
                         android:ellipsize="marquee"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:includeFontPadding="false"
                         android:marqueeRepeatLimit="marquee_forever"
                         android:singleLine="true"
                         android:text="Android Point"
-                        android:textColor="#03A9F4"
+                        android:textColor="#009688"
                         android:textSize="20sp"
-                        android:fontFamily="@font/poppins_semibold"
-                        android:includeFontPadding="false"
                         android:textStyle="bold" />
 
                 </LinearLayout>
@@ -69,27 +69,24 @@
                     android:id="@+id/included"
                     android:layout_width="match_parent"
                     android:layout_height="?attr/actionBarSize"
-                    android:layout_marginTop="0dp"
                     android:backgroundTint="@color/white"
-                    app:tabIndicatorColor="#03A9F4"
+                    app:tabIndicatorColor="#009688"
                     app:tabIndicatorHeight="3.5dp"
                     app:tabMode="fixed"
-                    app:tabSelectedTextColor="#03A9F4"
+                    app:tabSelectedTextColor="#009688"
                     app:tabTextAppearance="@style/tab_text"
-                    app:tabTextColor="#618C8F">
+                    app:tabTextColor="#808080">
 
                     <com.google.android.material.tabs.TabItem
                         android:id="@+id/basic"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-
                         android:text="Basic" />
 
                     <com.google.android.material.tabs.TabItem
                         android:id="@+id/advance"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center"
                         android:text="Advance" />
 
                     <com.google.android.material.tabs.TabItem
@@ -109,20 +106,20 @@
                     app:layout_constraintStart_toStartOf="parent"
                     tools:ignore="NotSibling">
 
-<!--                    android:layout_above="@+id/adView_main_all"-->
+                    <!--                    android:layout_above="@+id/adView_main_all"-->
 
                 </FrameLayout>
 
-               <!-- <com.google.android.gms.ads.AdView
-                    android:id="@+id/adView_main_all"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentBottom="true"
-                    android:layout_gravity="bottom"
-                    app:adSize="BANNER"
-                    app:adUnitId="@string/Banner_AdOne_unit_id"
-                    />-->
-<!--                    app:adUnitId="ca-app-pub-3940256099942544/6300978111" />-->
+                <!-- <com.google.android.gms.ads.AdView
+                     android:id="@+id/adView_main_all"
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:layout_alignParentBottom="true"
+                     android:layout_gravity="bottom"
+                     app:adSize="BANNER"
+                     app:adUnitId="@string/Banner_AdOne_unit_id"
+                     />-->
+                <!--                    app:adUnitId="ca-app-pub-3940256099942544/6300978111" />-->
 
             </RelativeLayout>
 

@@ -1419,7 +1419,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="20dp"
-                    android:layout_marginTop="20dp"
+                    android:layout_marginTop="12dp"
                     android:gravity="center_horizontal">
 
                     <androidx.cardview.widget.CardView
@@ -1530,8 +1530,6 @@
                     </androidx.cardview.widget.CardView>
 
                 </androidx.appcompat.widget.LinearLayoutCompat>
-
-
 
 
 

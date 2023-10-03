@@ -16,6 +16,32 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.androidalians.androidpoint.Fragment.Advance.Cards.A_card_10_Fragment;
+import com.androidalians.androidpoint.Fragment.Advance.Cards.A_card_11_Fragment;
+import com.androidalians.androidpoint.Fragment.Advance.Cards.A_card_12_Fragment;
+import com.androidalians.androidpoint.Fragment.Advance.Cards.A_card_13_Fragment;
+import com.androidalians.androidpoint.Fragment.Advance.Cards.A_card_14_Fragment;
+import com.androidalians.androidpoint.Fragment.Advance.Cards.A_card_15_Fragment;
+import com.androidalians.androidpoint.Fragment.Advance.Cards.A_card_16_Fragment;
+import com.androidalians.androidpoint.Fragment.Advance.Cards.A_card_17_Fragment;
+import com.androidalians.androidpoint.Fragment.Advance.Cards.A_card_18_Fragment;
+import com.androidalians.androidpoint.Fragment.Advance.Cards.A_card_19_Fragment;
+import com.androidalians.androidpoint.Fragment.Advance.Cards.A_card_1_Fragment;
+import com.androidalians.androidpoint.Fragment.Advance.Cards.A_card_20_Fragment;
+import com.androidalians.androidpoint.Fragment.Advance.Cards.A_card_21_Fragment;
+import com.androidalians.androidpoint.Fragment.Advance.Cards.A_card_22_Fragment;
+import com.androidalians.androidpoint.Fragment.Advance.Cards.A_card_23_Fragment;
+import com.androidalians.androidpoint.Fragment.Advance.Cards.A_card_24_Fragment;
+import com.androidalians.androidpoint.Fragment.Advance.Cards.A_card_25_Fragment;
+import com.androidalians.androidpoint.Fragment.Advance.Cards.A_card_26_Fragment;
+import com.androidalians.androidpoint.Fragment.Advance.Cards.A_card_2_Fragment;
+import com.androidalians.androidpoint.Fragment.Advance.Cards.A_card_3_Fragment;
+import com.androidalians.androidpoint.Fragment.Advance.Cards.A_card_4_Fragment;
+import com.androidalians.androidpoint.Fragment.Advance.Cards.A_card_5_Fragment;
+import com.androidalians.androidpoint.Fragment.Advance.Cards.A_card_6_Fragment;
+import com.androidalians.androidpoint.Fragment.Advance.Cards.A_card_7_Fragment;
+import com.androidalians.androidpoint.Fragment.Advance.Cards.A_card_8_Fragment;
+import com.androidalians.androidpoint.Fragment.Advance.Cards.A_card_9_Fragment;
 import com.androidalians.androidpoint.R;
 import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdLoader;
@@ -28,10 +54,7 @@ import com.google.android.gms.ads.nativead.NativeAdView;
 
 public class Advance extends Fragment {
 
-    CardView card_view1, card_view2, card_view3, card_view4,card_view5,card_view6,
-            card_view7,card_view8,card_view9,card_view10,card_view11,card_view12,
-            card_view13,card_view14,card_view15,card_view16,card_view17,card_view18, card_view19,
-            card_view20, card_view21, card_view22, card_view23, card_view24;
+    CardView card_view1, card_view2, card_view3, card_view4, card_view5, card_view6, card_view7, card_view8, card_view9, card_view10, card_view11, card_view12, card_view13, card_view14, card_view15, card_view16, card_view17, card_view18, card_view19, card_view20, card_view21, card_view22, card_view23, card_view24, card_view25, card_view26;
 
 
     AdView adView_advance;
@@ -45,8 +68,7 @@ public class Advance extends Fragment {
 
     @SuppressLint("MissingInflatedId")
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
         View view = inflater.inflate(R.layout.fragment_advance, container, false);
 
@@ -80,6 +102,8 @@ public class Advance extends Fragment {
         card_view22 = view.findViewById(R.id.card22);
         card_view23 = view.findViewById(R.id.card23);
         card_view24 = view.findViewById(R.id.card24);
+        card_view25 = view.findViewById(R.id.card25);
+        card_view26 = view.findViewById(R.id.card26);
 
 
       /*  //Adss=============================================
@@ -101,11 +125,8 @@ public class Advance extends Fragment {
         card_view1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                A_card_1_Fragment nextFrag= new A_card_1_Fragment();
-                getActivity().getSupportFragmentManager().beginTransaction()
-                        .replace(R.id.frame_container, nextFrag, "findThisFragment")
-                        .addToBackStack(null)
-                        .commit();
+                A_card_1_Fragment nextFrag = new A_card_1_Fragment();
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.frame_container, nextFrag, "findThisFragment").addToBackStack(null).commit();
 
 
             }
@@ -113,56 +134,39 @@ public class Advance extends Fragment {
         card_view2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                A_card_2_Fragment nextFrag= new A_card_2_Fragment();
-                getActivity().getSupportFragmentManager().beginTransaction()
-                        .replace(R.id.frame_container, nextFrag, "findThisFragment")
-                        .addToBackStack(null)
-                        .commit();
+                A_card_2_Fragment nextFrag = new A_card_2_Fragment();
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.frame_container, nextFrag, "findThisFragment").addToBackStack(null).commit();
 
             }
         });
         card_view3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                A_card_3_Fragment nextFrag= new A_card_3_Fragment();
-                getActivity().getSupportFragmentManager().beginTransaction()
-                        .replace(R.id.frame_container, nextFrag, "findThisFragment")
-                        .addToBackStack(null)
-                        .commit();
-
-
+                A_card_3_Fragment nextFrag = new A_card_3_Fragment();
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.frame_container, nextFrag, "findThisFragment").addToBackStack(null).commit();
             }
         });
         card_view4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                A_card_4_Fragment nextFrag= new A_card_4_Fragment();
-                getActivity().getSupportFragmentManager().beginTransaction()
-                        .replace(R.id.frame_container, nextFrag, "findThisFragment")
-                        .addToBackStack(null)
-                        .commit();
+                A_card_4_Fragment nextFrag = new A_card_4_Fragment();
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.frame_container, nextFrag, "findThisFragment").addToBackStack(null).commit();
 
             }
         });
         card_view5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                A_card_5_Fragment nextFrag= new A_card_5_Fragment();
-                getActivity().getSupportFragmentManager().beginTransaction()
-                        .replace(R.id.frame_container, nextFrag, "findThisFragment")
-                        .addToBackStack(null)
-                        .commit();
+                A_card_5_Fragment nextFrag = new A_card_5_Fragment();
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.frame_container, nextFrag, "findThisFragment").addToBackStack(null).commit();
 
             }
         });
         card_view6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                A_card_6_Fragment nextFrag= new A_card_6_Fragment();
-                getActivity().getSupportFragmentManager().beginTransaction()
-                        .replace(R.id.frame_container, nextFrag, "findThisFragment")
-                        .addToBackStack(null)
-                        .commit();
+                A_card_6_Fragment nextFrag = new A_card_6_Fragment();
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.frame_container, nextFrag, "findThisFragment").addToBackStack(null).commit();
 
 
             }
@@ -170,22 +174,16 @@ public class Advance extends Fragment {
         card_view7.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                A_card_7_Fragment nextFrag= new A_card_7_Fragment();
-                getActivity().getSupportFragmentManager().beginTransaction()
-                        .replace(R.id.frame_container, nextFrag, "findThisFragment")
-                        .addToBackStack(null)
-                        .commit();
+                A_card_7_Fragment nextFrag = new A_card_7_Fragment();
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.frame_container, nextFrag, "findThisFragment").addToBackStack(null).commit();
 
             }
         });
         card_view8.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                A_card_8_Fragment nextFrag= new A_card_8_Fragment();
-                getActivity().getSupportFragmentManager().beginTransaction()
-                        .replace(R.id.frame_container, nextFrag, "findThisFragment")
-                        .addToBackStack(null)
-                        .commit();
+                A_card_8_Fragment nextFrag = new A_card_8_Fragment();
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.frame_container, nextFrag, "findThisFragment").addToBackStack(null).commit();
 
 
             }
@@ -193,11 +191,8 @@ public class Advance extends Fragment {
         card_view9.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                A_card_9_Fragment nextFrag= new A_card_9_Fragment();
-                getActivity().getSupportFragmentManager().beginTransaction()
-                        .replace(R.id.frame_container, nextFrag, "findThisFragment")
-                        .addToBackStack(null)
-                        .commit();
+                A_card_9_Fragment nextFrag = new A_card_9_Fragment();
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.frame_container, nextFrag, "findThisFragment").addToBackStack(null).commit();
 
 
             }
@@ -205,11 +200,8 @@ public class Advance extends Fragment {
         card_view10.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                A_card_10_Fragment nextFrag= new A_card_10_Fragment();
-                getActivity().getSupportFragmentManager().beginTransaction()
-                        .replace(R.id.frame_container, nextFrag, "findThisFragment")
-                        .addToBackStack(null)
-                        .commit();
+                A_card_10_Fragment nextFrag = new A_card_10_Fragment();
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.frame_container, nextFrag, "findThisFragment").addToBackStack(null).commit();
 
 
             }
@@ -217,11 +209,8 @@ public class Advance extends Fragment {
         card_view11.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                A_card_11_Fragment nextFrag= new A_card_11_Fragment();
-                getActivity().getSupportFragmentManager().beginTransaction()
-                        .replace(R.id.frame_container, nextFrag, "findThisFragment")
-                        .addToBackStack(null)
-                        .commit();
+                A_card_11_Fragment nextFrag = new A_card_11_Fragment();
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.frame_container, nextFrag, "findThisFragment").addToBackStack(null).commit();
 
 
             }
@@ -229,11 +218,8 @@ public class Advance extends Fragment {
         card_view12.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                A_card_12_Fragment nextFrag= new A_card_12_Fragment();
-                getActivity().getSupportFragmentManager().beginTransaction()
-                        .replace(R.id.frame_container, nextFrag, "findThisFragment")
-                        .addToBackStack(null)
-                        .commit();
+                A_card_12_Fragment nextFrag = new A_card_12_Fragment();
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.frame_container, nextFrag, "findThisFragment").addToBackStack(null).commit();
 
 
             }
@@ -241,11 +227,8 @@ public class Advance extends Fragment {
         card_view13.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                A_card_13_Fragment nextFrag= new A_card_13_Fragment();
-                getActivity().getSupportFragmentManager().beginTransaction()
-                        .replace(R.id.frame_container, nextFrag, "findThisFragment")
-                        .addToBackStack(null)
-                        .commit();
+                A_card_13_Fragment nextFrag = new A_card_13_Fragment();
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.frame_container, nextFrag, "findThisFragment").addToBackStack(null).commit();
 
 
             }
@@ -253,11 +236,8 @@ public class Advance extends Fragment {
         card_view14.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                A_card_14_Fragment nextFrag= new A_card_14_Fragment();
-                getActivity().getSupportFragmentManager().beginTransaction()
-                        .replace(R.id.frame_container, nextFrag, "findThisFragment")
-                        .addToBackStack(null)
-                        .commit();
+                A_card_14_Fragment nextFrag = new A_card_14_Fragment();
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.frame_container, nextFrag, "findThisFragment").addToBackStack(null).commit();
 
 
             }
@@ -265,11 +245,8 @@ public class Advance extends Fragment {
         card_view15.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                A_card_15_Fragment nextFrag= new A_card_15_Fragment();
-                getActivity().getSupportFragmentManager().beginTransaction()
-                        .replace(R.id.frame_container, nextFrag, "findThisFragment")
-                        .addToBackStack(null)
-                        .commit();
+                A_card_15_Fragment nextFrag = new A_card_15_Fragment();
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.frame_container, nextFrag, "findThisFragment").addToBackStack(null).commit();
 
 
             }
@@ -277,11 +254,8 @@ public class Advance extends Fragment {
         card_view16.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                A_card_16_Fragment nextFrag= new A_card_16_Fragment();
-                getActivity().getSupportFragmentManager().beginTransaction()
-                        .replace(R.id.frame_container, nextFrag, "findThisFragment")
-                        .addToBackStack(null)
-                        .commit();
+                A_card_16_Fragment nextFrag = new A_card_16_Fragment();
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.frame_container, nextFrag, "findThisFragment").addToBackStack(null).commit();
 
 
             }
@@ -289,35 +263,25 @@ public class Advance extends Fragment {
         card_view17.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                A_card_17_Fragment nextFrag= new A_card_17_Fragment();
-                getActivity().getSupportFragmentManager().beginTransaction()
-                        .replace(R.id.frame_container, nextFrag, "findThisFragment")
-                        .addToBackStack(null)
-                        .commit();
+                A_card_17_Fragment nextFrag = new A_card_17_Fragment();
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.frame_container, nextFrag, "findThisFragment").addToBackStack(null).commit();
 
             }
         });
         card_view18.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                A_card_18_Fragment nextFrag= new A_card_18_Fragment();
-                getActivity().getSupportFragmentManager().beginTransaction()
-                        .replace(R.id.frame_container, nextFrag, "findThisFragment")
-                        .addToBackStack(null)
-                        .commit();
+                A_card_18_Fragment nextFrag = new A_card_18_Fragment();
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.frame_container, nextFrag, "findThisFragment").addToBackStack(null).commit();
 
 
             }
         });
-
         card_view19.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                A_card_19_Fragment nextFrag= new A_card_19_Fragment();
-                getActivity().getSupportFragmentManager().beginTransaction()
-                        .replace(R.id.frame_container, nextFrag, "findThisFragment")
-                        .addToBackStack(null)
-                        .commit();
+                A_card_19_Fragment nextFrag = new A_card_19_Fragment();
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.frame_container, nextFrag, "findThisFragment").addToBackStack(null).commit();
 
 
             }
@@ -325,61 +289,58 @@ public class Advance extends Fragment {
         card_view20.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                A_card_20_Fragment nextFrag= new A_card_20_Fragment();
-                getActivity().getSupportFragmentManager().beginTransaction()
-                        .replace(R.id.frame_container, nextFrag, "findThisFragment")
-                        .addToBackStack(null)
-                        .commit();
+                A_card_20_Fragment nextFrag = new A_card_20_Fragment();
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.frame_container, nextFrag, "findThisFragment").addToBackStack(null).commit();
 
             }
         });
-
         card_view21.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                A_card_21_Fragment nextFrag= new A_card_21_Fragment();
-                getActivity().getSupportFragmentManager().beginTransaction()
-                        .replace(R.id.frame_container, nextFrag, "findThisFragment")
-                        .addToBackStack(null)
-                        .commit();
+                A_card_21_Fragment nextFrag = new A_card_21_Fragment();
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.frame_container, nextFrag, "findThisFragment").addToBackStack(null).commit();
 
             }
         });
-
         card_view22.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                A_card_22_Fragment nextFrag= new A_card_22_Fragment();
-                getActivity().getSupportFragmentManager().beginTransaction()
-                        .replace(R.id.frame_container, nextFrag, "findThisFragment")
-                        .addToBackStack(null)
-                        .commit();
+                A_card_22_Fragment nextFrag = new A_card_22_Fragment();
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.frame_container, nextFrag, "findThisFragment").addToBackStack(null).commit();
 
 
             }
         });
-
         card_view23.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                A_card_23_Fragment nextFrag= new A_card_23_Fragment();
-                getActivity().getSupportFragmentManager().beginTransaction()
-                        .replace(R.id.frame_container, nextFrag, "findThisFragment")
-                        .addToBackStack(null)
-                        .commit();
+                A_card_23_Fragment nextFrag = new A_card_23_Fragment();
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.frame_container, nextFrag, "findThisFragment").addToBackStack(null).commit();
 
 
             }
         });
-
         card_view24.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                A_card_24_Fragment nextFrag= new A_card_24_Fragment();
-                getActivity().getSupportFragmentManager().beginTransaction()
-                        .replace(R.id.frame_container, nextFrag, "findThisFragment")
-                        .addToBackStack(null)
-                        .commit();
+                A_card_24_Fragment nextFrag = new A_card_24_Fragment();
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.frame_container, nextFrag, "findThisFragment").addToBackStack(null).commit();
+            }
+        });
+
+        card_view25.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                A_card_25_Fragment nextFrag = new A_card_25_Fragment();
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.frame_container, nextFrag, "findThisFragment").addToBackStack(null).commit();
+            }
+        });
+
+        card_view26.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                A_card_26_Fragment nextFrag = new A_card_26_Fragment();
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.frame_container, nextFrag, "findThisFragment").addToBackStack(null).commit();
 
 
             }

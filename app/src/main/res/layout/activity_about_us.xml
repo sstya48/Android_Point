@@ -22,7 +22,7 @@
             android:layout_marginStart="2dp"
             android:background="?android:attr/selectableItemBackgroundBorderless"
             android:padding="6dp"
-            android:src="@drawable/arrow" />
+            android:src="@drawable/back_detail_icon" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -46,11 +46,34 @@
         android:orientation="vertical">
 
         <ImageView
-            android:layout_width="120dp"
-            android:layout_height="120dp"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
             android:layout_gravity="center"
             android:layout_marginTop="50dp"
             android:src="@drawable/logo_about" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center_vertical|center_horizontal|center">
+
+            <ImageView
+                android:id="@+id/insta_btn"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="?android:attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:src="@drawable/instaicon" />
+
+            <ImageView
+                android:id="@+id/youtube_btn"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginStart="20dp"
+                android:background="?android:attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:src="@drawable/youtubeicon" />
+
+        </LinearLayout>
 
         <ScrollView
             android:layout_width="match_parent"
@@ -60,7 +83,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="40dp"
+                android:layout_marginTop="10dp"
                 android:orientation="vertical">
 
                 <LinearLayout
@@ -199,6 +222,7 @@
                     </LinearLayout>
 
                     <TextView
+                        android:id="@+id/more_app"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="15dp"
@@ -210,40 +234,29 @@
 
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="100dp"
+                        android:layout_height="match_parent"
                         android:gravity="center_vertical|center_horizontal|center">
 
                         <ImageView
-                            android:id="@+id/insta_btn"
-                            android:layout_width="55dp"
-                            android:layout_height="55dp"
-                            android:layout_marginTop="30dp"
-                            android:layout_marginBottom="30dp"
-                            android:background="?android:attr/selectableItemBackgroundBorderless"
+                            android:id="@+id/apoint_link"
+                            android:layout_width="100dp"
+                            android:layout_height="120dp"
                             android:clickable="true"
-                            android:src="@drawable/instaicon" />
+                            android:src="@drawable/apoint_app_link" />
 
                         <ImageView
-                            android:id="@+id/youtube_btn"
-                            android:layout_width="80dp"
-                            android:layout_height="80dp"
-                            android:layout_marginStart="30dp"
-                            android:layout_marginTop="30dp"
-                            android:layout_marginBottom="30dp"
-                            android:background="?android:attr/selectableItemBackgroundBorderless"
+                            android:id="@+id/lenuguage_link"
+                            android:layout_width="100dp"
+                            android:layout_height="120dp"
                             android:clickable="true"
-                            android:src="@drawable/youtubeicon" />
+                            android:src="@drawable/lenguage_app_link" />
 
-                        <!-- <ImageView
-                             android:id="@+id/facebook_btn"
-                             android:layout_width="60dp"
-                             android:layout_height="60dp"
-                             android:src="@drawable/facebookicon"
-                             android:layout_marginStart="30dp"
-                             android:clickable="true"
-                             android:background="?android:attr/selectableItemBackgroundBorderless"
-                             android:layout_marginTop="27dp"
-                             android:layout_marginBottom="30dp"/>-->
+                        <ImageView
+                            android:id="@+id/recipe_link"
+                            android:layout_width="100dp"
+                            android:layout_height="120dp"
+                            android:clickable="true"
+                            android:src="@drawable/recipe_app_link" />
 
                     </LinearLayout>
 
@@ -251,6 +264,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center"
+                        android:layout_marginTop="20dp"
                         android:layout_marginBottom="10dp"
                         android:fontFamily="@font/poppins_semibold"
                         android:text="Thank You"

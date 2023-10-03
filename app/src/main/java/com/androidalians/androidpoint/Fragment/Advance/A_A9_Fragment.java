@@ -9,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.androidalians.androidpoint.Fragment.Advance.Cards.A_card_9_Fragment;
 import com.androidalians.androidpoint.R;
 
 

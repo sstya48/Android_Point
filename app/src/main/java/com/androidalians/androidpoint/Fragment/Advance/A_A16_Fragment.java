@@ -1,19 +1,17 @@
 package com.androidalians.androidpoint.Fragment.Advance;
 
 import android.annotation.SuppressLint;
-import android.content.pm.PackageManager;
 import android.os.Bundle;
-import android.telephony.SmsManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Toast;
 
 import androidx.appcompat.widget.AppCompatImageView;
 import androidx.fragment.app.Fragment;
 
+import com.androidalians.androidpoint.Fragment.Advance.Cards.A_card_16_Fragment;
 import com.androidalians.androidpoint.R;
 
 public class A_A16_Fragment extends Fragment {

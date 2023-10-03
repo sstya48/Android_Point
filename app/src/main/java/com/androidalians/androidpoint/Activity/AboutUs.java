@@ -5,6 +5,8 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -16,9 +18,9 @@ import com.androidalians.androidpoint.R;
 
 public class AboutUs extends AppCompatActivity {
 
-    ImageView insta_btn, youtube_btn;
+    ImageView insta_btn, youtube_btn, apoint_link, lenuguage_link, recipe_link;
     AppCompatImageView aboutus_back_arrow;
-    TextView version_tv;
+    TextView version_tv, more_app ;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -27,10 +29,16 @@ public class AboutUs extends AppCompatActivity {
         setContentView(R.layout.activity_about_us);
 
         version_tv = findViewById(R.id.version_tv);
-
+        more_app = findViewById(R.id.more_app);
         insta_btn = findViewById(R.id.insta_btn);
+        recipe_link = findViewById(R.id.recipe_link);
+        lenuguage_link = findViewById(R.id.lenuguage_link);
+        apoint_link = findViewById(R.id.apoint_link);
         youtube_btn = findViewById(R.id.youtube_btn);
         aboutus_back_arrow = findViewById(R.id.aboutus_back_arrow);
+
+        Animation animation = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.blink);
+        more_app.startAnimation(animation);
 
         aboutus_back_arrow.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -54,6 +62,27 @@ public class AboutUs extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 gotoUrl("https://www.youtube.com/@Androidalians/videos");
+            }
+        });
+
+        apoint_link.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                gotoUrl("https://play.google.com/store/apps/details?id=com.androidalians.androidpoint&hl=en_IN");
+            }
+        });
+
+        lenuguage_link.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                gotoUrl("https://play.google.com/store/apps/details?id=com.androidalians.languagetranslator&hl=en_IN");
+            }
+        });
+
+        recipe_link.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                gotoUrl("https://play.google.com/store/apps/details?id=com.urva.gujaratirecipes&hl=en&gl=US");
             }
         });
     }

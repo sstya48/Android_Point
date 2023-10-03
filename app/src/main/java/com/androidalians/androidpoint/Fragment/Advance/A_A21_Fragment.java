@@ -21,6 +21,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.androidalians.androidpoint.Fragment.Advance.Cards.A_card_21_Fragment;
 import com.androidalians.androidpoint.Fragment.Fingurprint;
 import com.androidalians.androidpoint.R;
 

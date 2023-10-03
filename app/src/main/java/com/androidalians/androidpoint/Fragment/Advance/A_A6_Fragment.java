@@ -13,6 +13,7 @@ import android.webkit.WebViewClient;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.androidalians.androidpoint.Fragment.Advance.Cards.A_card_6_Fragment;
 import com.androidalians.androidpoint.R;
 
 public class A_A6_Fragment extends Fragment {

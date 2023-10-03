@@ -23,7 +23,7 @@
             android:layout_marginStart="2dp"
             android:padding="6dp"
             android:background="?android:attr/selectableItemBackgroundBorderless"
-            android:src="@drawable/arrow" />
+            android:src="@drawable/back_detail_icon" />
 
         <TextView
             android:id="@+id/texttitle"

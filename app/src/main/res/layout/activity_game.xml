@@ -22,7 +22,7 @@
             android:layout_marginStart="2dp"
             android:background="?android:attr/selectableItemBackgroundBorderless"
             android:padding="6dp"
-            android:src="@drawable/arrow" />
+            android:src="@drawable/back_detail_icon" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -63,134 +63,6 @@
                 <androidx.appcompat.widget.LinearLayoutCompat
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginHorizontal="20dp"
-                    android:gravity="center">
-
-                    <androidx.cardview.widget.CardView
-                        android:id="@+id/game1"
-                        android:layout_width="0dp"
-                        android:layout_height="170dp"
-                        android:layout_gravity="center_vertical"
-                        android:layout_weight="1"
-                        android:foreground="?android:attr/selectableItemBackground"
-                        app:cardCornerRadius="14dp"
-                        app:cardUseCompatPadding="true">
-
-                        <FrameLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:background="#FFFBF6C9">
-
-                            <androidx.appcompat.widget.LinearLayoutCompat
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:layout_gravity="center"
-                                android:gravity="center"
-                                android:orientation="vertical">
-
-                                <androidx.cardview.widget.CardView
-                                    android:layout_width="100dp"
-                                    android:layout_height="100dp"
-                                    android:layout_gravity="center"
-                                    android:layout_weight="1"
-                                    android:layout_marginTop="10dp"
-                                    android:foreground="?android:attr/selectableItemBackground"
-                                    app:cardCornerRadius="14dp"
-                                    app:cardUseCompatPadding="true">
-
-                                    <ImageView
-                                        android:layout_width="60dp"
-                                        android:layout_height="60dp"
-                                        android:layout_gravity="center"
-                                        android:src="@drawable/ludo" />
-
-                                </androidx.cardview.widget.CardView>
-
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_centerHorizontal="true"
-                                    android:layout_marginTop="10dp"
-                                    android:fontFamily="@font/poppins_bold"
-                                    android:gravity="center"
-                                    android:text="@string/offline_ludo"
-                                    android:layout_marginBottom="10dp"
-                                    android:textColor="#0B204C"
-                                    android:textSize="16dp" />
-
-                            </androidx.appcompat.widget.LinearLayoutCompat>
-
-                        </FrameLayout>
-
-                    </androidx.cardview.widget.CardView>
-
-                    <androidx.cardview.widget.CardView
-                        android:id="@+id/game2"
-                        android:layout_width="0dp"
-                        android:layout_height="170dp"
-                        android:layout_gravity="center_vertical"
-                        android:layout_weight="1"
-                        android:layout_marginStart="25dp"
-                        android:foreground="?android:attr/selectableItemBackground"
-                        app:cardCornerRadius="14dp"
-                        app:cardUseCompatPadding="true">
-
-                        <FrameLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:background="#FFFBF6C9">
-
-                            <androidx.appcompat.widget.LinearLayoutCompat
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:layout_gravity="center"
-                                android:gravity="center"
-                                android:orientation="vertical">
-
-                                <androidx.cardview.widget.CardView
-                                    android:layout_width="100dp"
-                                    android:layout_height="100dp"
-                                    android:layout_gravity="center"
-                                    android:layout_weight="1"
-                                    android:layout_marginTop="10dp"
-                                    android:foreground="?android:attr/selectableItemBackground"
-                                    app:cardCornerRadius="14dp"
-                                    app:cardUseCompatPadding="true">
-
-                                    <ImageView
-                                        android:layout_width="65dp"
-                                        android:layout_height="65dp"
-                                        android:layout_gravity="center"
-                                        android:src="@drawable/tictactic" />
-
-                                </androidx.cardview.widget.CardView>
-
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_centerHorizontal="true"
-                                    android:layout_marginTop="10dp"
-                                    android:fontFamily="@font/poppins_bold"
-                                    android:gravity="center"
-                                    android:text="@string/tic"
-                                    android:layout_marginBottom="10dp"
-                                    android:textColor="#0B204C"
-                                    android:textSize="16dp" />
-
-                            </androidx.appcompat.widget.LinearLayoutCompat>
-
-                        </FrameLayout>
-
-                    </androidx.cardview.widget.CardView>
-
-                </androidx.appcompat.widget.LinearLayoutCompat>
-
-                <androidx.appcompat.widget.LinearLayoutCompat
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="23dp"
                     android:layout_marginHorizontal="20dp"
                     android:gravity="center">
 
@@ -430,6 +302,134 @@
                                     android:fontFamily="@font/poppins_bold"
                                     android:gravity="center"
                                     android:text="@string/om"
+                                    android:layout_marginBottom="10dp"
+                                    android:textColor="#0B204C"
+                                    android:textSize="16dp" />
+
+                            </androidx.appcompat.widget.LinearLayoutCompat>
+
+                        </FrameLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="23dp"
+                    android:layout_marginHorizontal="20dp"
+                    android:gravity="center">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/game1"
+                        android:layout_width="0dp"
+                        android:layout_height="170dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        app:cardCornerRadius="14dp"
+                        app:cardUseCompatPadding="true">
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="#FFFBF6C9">
+
+                            <androidx.appcompat.widget.LinearLayoutCompat
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="100dp"
+                                    android:layout_height="100dp"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="1"
+                                    android:layout_marginTop="10dp"
+                                    android:foreground="?android:attr/selectableItemBackground"
+                                    app:cardCornerRadius="14dp"
+                                    app:cardUseCompatPadding="true">
+
+                                    <ImageView
+                                        android:layout_width="60dp"
+                                        android:layout_height="60dp"
+                                        android:layout_gravity="center"
+                                        android:src="@drawable/ludo" />
+
+                                </androidx.cardview.widget.CardView>
+
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_marginTop="10dp"
+                                    android:fontFamily="@font/poppins_bold"
+                                    android:gravity="center"
+                                    android:text="@string/offline_ludo"
+                                    android:layout_marginBottom="10dp"
+                                    android:textColor="#0B204C"
+                                    android:textSize="16dp" />
+
+                            </androidx.appcompat.widget.LinearLayoutCompat>
+
+                        </FrameLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/game2"
+                        android:layout_width="0dp"
+                        android:layout_height="170dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:layout_marginStart="25dp"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        app:cardCornerRadius="14dp"
+                        app:cardUseCompatPadding="true">
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="#FFFBF6C9">
+
+                            <androidx.appcompat.widget.LinearLayoutCompat
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="100dp"
+                                    android:layout_height="100dp"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="1"
+                                    android:layout_marginTop="10dp"
+                                    android:foreground="?android:attr/selectableItemBackground"
+                                    app:cardCornerRadius="14dp"
+                                    app:cardUseCompatPadding="true">
+
+                                    <ImageView
+                                        android:layout_width="65dp"
+                                        android:layout_height="65dp"
+                                        android:layout_gravity="center"
+                                        android:src="@drawable/tictactic" />
+
+                                </androidx.cardview.widget.CardView>
+
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_marginTop="10dp"
+                                    android:fontFamily="@font/poppins_bold"
+                                    android:gravity="center"
+                                    android:text="@string/tic"
                                     android:layout_marginBottom="10dp"
                                     android:textColor="#0B204C"
                                     android:textSize="16dp" />

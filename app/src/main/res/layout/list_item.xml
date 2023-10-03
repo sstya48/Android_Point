@@ -13,7 +13,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="70dp"
+        android:layout_height="55dp"
         android:gravity="center_vertical"
         android:orientation="horizontal"
         android:padding="15dp">
@@ -31,7 +31,7 @@
                 android:id="@+id/card_title"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:fontFamily="@font/poppins_regular"
+                android:fontFamily="@font/poppins_bold"
                 android:gravity="center"
                 android:paddingTop="3dp"
                 android:text="T"
@@ -49,12 +49,12 @@
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:ellipsize="marquee"
-            android:fontFamily="@font/poppins_semibold"
+            android:fontFamily="@font/poppins_regular"
             android:marqueeRepeatLimit="marquee_forever"
             android:singleLine="true"
             android:text="Title"
             android:textColor="@color/blackalpha"
-            android:textSize="20sp"
+            android:textSize="18sp"
             android:textStyle="bold" />
 
     </LinearLayout>

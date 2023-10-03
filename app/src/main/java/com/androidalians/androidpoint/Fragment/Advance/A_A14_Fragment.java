@@ -8,6 +8,7 @@ import android.view.ViewGroup;
 import androidx.appcompat.widget.AppCompatImageView;
 import androidx.fragment.app.Fragment;
 
+import com.androidalians.androidpoint.Fragment.Advance.Cards.A_card_14_Fragment;
 import com.androidalians.androidpoint.R;
 
 public class A_A14_Fragment extends Fragment {

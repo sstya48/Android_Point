@@ -49,6 +49,8 @@
     <string name="Context_Manu">Context Menu</string>
     <string name="Popup_Manu">Popup Menu</string>
     <string name="Splash_Screen">Splash Screen</string>
+    <string name="Chronometer">Chronometer</string>
+    <string name="Snackbar">Snackbar</string>
     <string name="Toggle_Button">Toggle Button</string>
     <string name="FingurPrint">FingerPrint</string>
 
@@ -81,7 +83,7 @@
     <string name="Account">Account</string>
     <string name="Dark_Theme">Dark Theme</string>
     <string name="you_tube">Youtube</string>
-    <string name="game">Game</string>
+    <string name="game">Games</string>
     <string name="Tips">Tips</string>
     <string name="Support_US">Support US</string>
     <string name="Share">Share</string>
@@ -96,7 +98,7 @@
     <string name="Devloper">Developer</string>
     <string name="Social_Media">Social Media</string>
     <string name="Android_Alians">Android_Alians</string>
-    <string name="Follow_me_on">Follow me on...</string>
+    <string name="Follow_me_on">More App...</string>
     <string name="To">To:</string>
     <string name="Email_Address">Email Address</string>
     <string name="Curren_Location">Current Location</string>
@@ -236,14 +238,13 @@
     <string name="NativeLearn3Ad_unit_id">ca-app-pub-3471867131564882/4877785910</string>
 
 
-
     // publish id Interstitial ad
     one==================================================================================================
-<!--    <string name="Interstitial_AdOne_unit_id">ca-app-pub-3471867131564882/1430577060</string>-->
+    <!--    <string name="Interstitial_AdOne_unit_id">ca-app-pub-3471867131564882/1430577060</string>-->
 
     // test id Interstitial ad
     one==================================================================================================
-        <string name="Interstitial_AdOne_unit_id">ca-app-pub-3940256099942544/1033173712</string>
+    <string name="Interstitial_AdOne_unit_id">ca-app-pub-3940256099942544/1033173712</string>
 
 
     //Banner
@@ -256,7 +257,7 @@
     //BannerAdBasic ==> Basic publish id For all Banner in
     one========================================================================================================================
 
-<!--    <string name="Banner_AdOne_unit_id">ca-app-pub-3471867131564882/7545393426</string>-->
+    <!--    <string name="Banner_AdOne_unit_id">ca-app-pub-3471867131564882/7545393426</string>-->
 
 
     //BannerAdLearn ==> Learn Publish
@@ -268,7 +269,7 @@
     // test id BannerAdOne ad
     one==================================================================================================
 
-        <string name="Banner_AdOne_unit_id">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="Banner_AdOne_unit_id">ca-app-pub-3940256099942544/6300978111</string>
 
 
     //=======================================================================================================================

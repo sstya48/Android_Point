@@ -10,6 +10,8 @@ import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -31,7 +33,7 @@ public class DrawerActivity extends AppCompatActivity {
     ImageView light;
     AppCompatImageView close_menu;
     SaveState saveState;
-    TextView version1, version2;
+    TextView version1, version2, title_android;
 
     @SuppressLint({"MissingInflatedId", "SetTextI18n"})
     @Override
@@ -65,6 +67,7 @@ public class DrawerActivity extends AppCompatActivity {
         tips = findViewById(R.id.tips);
         ads_show = findViewById(R.id.ads_show);
         game = findViewById(R.id.game);
+        title_android = findViewById(R.id.title_android);
 
 
 //getversion=========================================================================================
@@ -74,6 +77,9 @@ public class DrawerActivity extends AppCompatActivity {
         version2 = findViewById(R.id.version2);
         version2.setText("Version : " + BuildConfig.VERSION_NAME);
 //=======================================================================================================
+
+        Animation animation = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.blink);
+        title_android.startAnimation(animation);
 
         youtube_link.setOnClickListener(new View.OnClickListener() {
             @Override

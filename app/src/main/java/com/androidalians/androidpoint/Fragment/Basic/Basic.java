@@ -426,7 +426,7 @@ public class Basic extends Fragment {
         // Use the application context to avoid issues with a null activity context
         Context appContext = getActivity().getApplicationContext();
 
-        AdLoader adLoader = new AdLoader.Builder(getActivity(), "ca-app-pub-3940256099942544/2247696110")
+        AdLoader adLoader = new AdLoader.Builder(getActivity(), "ca-app-pub-3471867131564882/8639937841")
                 .forNativeAd(new NativeAd.OnNativeAdLoadedListener() {
                     @Override
                     public void onNativeAdLoaded(@NonNull NativeAd nativeAd) {
@@ -471,7 +471,7 @@ public class Basic extends Fragment {
         }
         // Use the application context to avoid issues with a null activity context
         Context appContext = getActivity().getApplicationContext();
-        AdLoader adLoader = new AdLoader.Builder(getActivity(), "ca-app-pub-3940256099942544/2247696110")
+        AdLoader adLoader = new AdLoader.Builder(getActivity(), "ca-app-pub-3471867131564882/5088485892")
                 .forNativeAd(new NativeAd.OnNativeAdLoadedListener() {
                     @Override
                     public void onNativeAdLoaded(@NonNull NativeAd nativeAd) {

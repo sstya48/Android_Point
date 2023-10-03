@@ -337,7 +337,7 @@ public class LearnAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
 
 
     public void loadNativeAds() {
-        AdLoader.Builder builder = new AdLoader.Builder(context, /*nativeAdUnitId*/"ca-app-pub-3940256099942544/2247696110");
+        AdLoader.Builder builder = new AdLoader.Builder(context, /*nativeAdUnitId*/"ca-app-pub-3471867131564882/4877785910");
         builder.forNativeAd(new NativeAd.OnNativeAdLoadedListener() {
 //            private int adLoadedCount = 0; // Counter for loaded ads
 

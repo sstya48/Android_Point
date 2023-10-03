@@ -110,7 +110,7 @@ public class NomRunGame extends AppCompatActivity {
 
     private void loadRewardedAd() {
         AdRequest adRequest = new AdRequest.Builder().build();
-        RewardedAd.load(this, "ca-app-pub-3940256099942544/5224354917", adRequest, new RewardedAdLoadCallback() {
+        RewardedAd.load(this, "ca-app-pub-3471867131564882/6114627103", adRequest, new RewardedAdLoadCallback() {
             @Override
             public void onAdLoaded(RewardedAd ad) {
                 super.onAdLoaded(ad);

@@ -93,6 +93,7 @@
     <string name="About_US">About US</string>
     <string name="About__US">About US</string>
     <string name="matirials">Material </string>
+    <string name="certificate">Test-Certificate </string>
     <string name="FeedBack">FeedBack</string>
     <string name="Android_Studio_Point">Android Studio Point</string>
     <string name="Devloper">Developer</string>
@@ -207,6 +208,7 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="press_back_again_exit">Press back again to exit</string>
 
     //list-view===========================================================================================================
     <string-array name="Planets">

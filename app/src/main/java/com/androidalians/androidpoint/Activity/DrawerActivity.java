@@ -27,10 +27,8 @@ import com.google.android.gms.ads.AdRequest;
 
 public class DrawerActivity extends AppCompatActivity {
 
-    LinearLayout shareapp, tips, feedback, rate_us, about_us, ads_show, game, matirial;
-    ImageView back_menu;
-    LinearLayout youtube_link;
-    ImageView light;
+    LinearLayout shareapp, tips, feedback, rate_us, about_us, ads_show, game, matirial, test_certificate,youtube_link;
+    ImageView back_menu, light;
     AppCompatImageView close_menu;
     SaveState saveState;
     TextView version1, version2, title_android;
@@ -66,6 +64,7 @@ public class DrawerActivity extends AppCompatActivity {
         feedback = findViewById(R.id.feedback);
         tips = findViewById(R.id.tips);
         ads_show = findViewById(R.id.ads_show);
+        test_certificate = findViewById(R.id.test_certificate);
         game = findViewById(R.id.game);
         title_android = findViewById(R.id.title_android);
 
@@ -133,6 +132,14 @@ public class DrawerActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent i = new Intent(DrawerActivity.this, ProjectList.class);
                 startActivity(i);
+            }
+        });
+
+        test_certificate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent c = new Intent(DrawerActivity.this, CertificateActivity.class);
+                startActivity(c);
             }
         });
 

@@ -7,7 +7,10 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.preference.PreferenceManager;
 import android.util.Log;
+import android.view.Gravity;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
@@ -246,14 +249,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
     }
 
-
     @Override
     public void onClick(View view) {
         switch (view.getId()) {
         }
     }
 
-    @Override
+   /* @Override
     public void onBackPressed() {
         backPressCount++;
 
@@ -261,7 +263,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             showExitConfirmationDialog();
         } else if (backPressCount == 1) {
             Toast.makeText(this, "Press back again to exit", Toast.LENGTH_SHORT).show();
-
             new Handler().postDelayed(new Runnable() {
                 @Override
                 public void run() {
@@ -271,13 +272,36 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         } else {
             backPressCount = 0;
         }
+    }*/
+
+    @Override
+    public void onBackPressed() {
+        backPressCount++;
+
+        if (backPressCount == 2) {
+            showExitConfirmationDialog();
+        } else if (backPressCount == 1) {
+            LayoutInflater inflater = getLayoutInflater();
+            View layout = inflater.inflate(R.layout.custom_toast, (ViewGroup) findViewById(R.id.custom_toast_layout));
+            Toast toast = new Toast(this);
+            toast.setGravity(Gravity.BOTTOM, 0, 100);
+            toast.setDuration(Toast.LENGTH_SHORT);
+            toast.setView(layout);
+            toast.show();
+            new Handler().postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    backPressCount = 0;
+                }
+            }, 500);
+        } else {
+            backPressCount = 0;
+        }
     }
 
-    private void showExitConfirmationDialog() {
-        // Create the custom dialog builder
-        AlertDialog.Builder builder = new AlertDialog.Builder(this);
 
-        // Inflate the custom layout for the dialog
+    private void showExitConfirmationDialog() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
         View dialog = getLayoutInflater().inflate(R.layout.fragment_a__a4_1_, null);
         builder.setView(dialog);
         Button btn_no = dialog.findViewById(R.id.btn_no);

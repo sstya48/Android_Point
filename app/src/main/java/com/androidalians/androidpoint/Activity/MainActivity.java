@@ -89,7 +89,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         // Set up the ad handler to trigger ad automatically every 20 minutes (1 time)
 
-        if (isAppRunning) {
+        /*if (isAppRunning) {
             adHandler = new Handler();
             adHandler.postDelayed(new Runnable() {
                 @Override
@@ -97,7 +97,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     showRewardedAdIfNeeded();
                 }
             }, 5 * 60 * 1000);
-        }
+        }*/
         // 5 minutes in milliseconds
 
 //complete ad implement=====================================================================================
@@ -225,7 +225,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         isAppRunning = true;
         if (adHandler == null) {
             adHandler = new Handler();
-            showRewardedAdIfNeeded();
+//            showRewardedAdIfNeeded();
         }
     }
 
@@ -255,6 +255,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onBackPressed() {
+        super.onBackPressed();
         backPressCount++;
 
         if (backPressCount == 2) {
